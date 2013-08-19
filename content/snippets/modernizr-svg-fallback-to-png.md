@@ -7,7 +7,7 @@ Keywords: CodeIgniter, generator, Github, laravel, module, open source, PHP, Pyr
 */
 
 <div class="center">
-  <img src="http://localhost:8888/james2doyle/content/images/githubgistlogo.png" alt="Github Gists Logo">
+  <img src="http://ohdoylerules.com/content/images/githubgistlogo.png" alt="Github Gists Logo">
 </div>
 
 I have been building a small project boilerplate for when I am starting new projects. I wrote this small snippet based on [this article](http://toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script/ "Todd Motto - mastering-svg-use-for-a-retina-web-fallbacks-with-png-script").

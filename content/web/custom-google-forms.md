@@ -8,7 +8,7 @@ Keywords: CSS, custom, drive, forms, Github, google, less, node, open source, pr
 */
 
 <div class="center">
-  <img src="http://localhost:8888/james2doyle/content/images/googleforms.png" alt="" align="middle">
+  <img src="http://ohdoylerules.com/content/images/googleforms.png" alt="" align="middle">
 </div>
 
 I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something. After a bit of research I have found a way to create custom forms rather easily.
