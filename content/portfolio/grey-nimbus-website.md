@@ -3,7 +3,7 @@ Title: Grey Nimbus website
 Date: 2013-04-11
 Category: Portfolio,Web
 Template: post
-Keywords:
+Keywords: grey, nimbus, design, updates, retina, js, no jquery, fuelphp, php, static, single page, parallax
 */
 
 Finally took the time and initiative to launch [Grey Nimbus](http://greynimbus.com "Grey Nimbus Website"), my business. The website itself is built using [FuelPHP](http://fuelphp.com "FuelPHP"). The reason I chose it was because I was curious and it was pretty light weight.
@@ -12,8 +12,7 @@ The website has no database so that was pretty much ignored. But I wanted easy v
 
 I knew I wanted parallax and responsive. I found [a fork](https://github.com/spencerbaynton/cool-kitten "spencerbaynton/cool kitten") of the [cool-kitten](http://www.jalxob.com/cool-kitten/ "cool-kitten homepage") framework that I liked and created [my own fork](https://github.com/james2doyle/cool-kitten "james2doyle/cool kitten").
 
-In my fork, the first thing I did was add [retina.js](http://retinajs.com/ "Retina.js Homepage"). I know some people knock retina.js because it uses
-[javascript](http://mir.aculo.us/2012/09/22/dont-use-javascript-for-retinafying/ "Thomas Fuchs - Don’t use JavaScript for Retinafying") to replace images with an @2x version.
+In my fork, the first thing I did was add [retina.js](http://retinajs.com/ "Retina.js Homepage"). I know some people knock retina.js because it uses [javascript](http://mir.aculo.us/2012/09/22/dont-use-javascript-for-retinafying/ "Thomas Fuchs - Don’t use JavaScript for Retinafying") to replace images with an @2x version.
 
 > Maybe in the next update I will switch to SVG images, but I digress.
 
