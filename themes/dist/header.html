@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ site_title }}{% if meta.title %} | {{ meta.title }}{% endif %}</title>
+  <meta itemprop="name" content="{{ meta.title }}">
+  <meta itemprop="description" content="{{ meta.description }}">
+  <meta itemprop="keywords" content="{{ meta.keywords }}">
+  <meta itemprop="image logo" content="{{ theme_url }}/images/logo.png">
+  <meta itemprop="url" content="{{ current_page.url }}">
+  <meta itemprop="email" content="{{ config.email }}">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta property="og:keywords" content="{{ meta.keywords }}">
+  <meta property="og:image" content="{{ theme_url }}/images/logo.png">
+  <meta property="og:url" content="{{ base_url }}">
+  <meta property="og:site_name" content="{{ site_title }}">
+  {% if type == 'post' %}
+  <meta property="og:type" content="article" />
+  <meta property="article:author" content="{{ site_title }}" />
+  <meta property="article:section" content="{{ current_page.category }}" />
+  <meta property="article:tag" content="{{ meta.keywords }}" />
+  {% if meta.updated %}
+  <meta itemprop="dateModified" content="{{ meta.updated }}" />
+  {% endif %}
+  {% else %}
+  <meta property="og:type" content="website" />
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="http://twitter.com/james2doyle">
+  <meta name="twitter:title" content="{{ meta.title }}">
+  <meta name="twitter:description" content="{{ meta.description }}">
+  <meta name="twitter:creator" content="http://twitter.com/james2doyle">
+  <meta name="twitter:image:src" content="{{ theme_url }}/images/logo.png">
+  <meta name="twitter:domain" content="james2doyle.com">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link href="http://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ theme_url }}/styles/main.css">
+  <script src="{{ theme_url }}/scripts/vendor/modernizr.js"></script>
+</head>
+<body onload="prettyPrint()" class="{{ type }}">
+  <!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+  <div class="container">

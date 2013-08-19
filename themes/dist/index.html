@@ -1,0 +1,22 @@
+{% include 'header.html' with {'type': 'home'} %}
+<header>
+  <div class="header-logo">
+    <img src="{{ theme_url }}/images/logo.svg" alt="James Doyle Logo">
+    <h1><a href="{{ base_url }}" title="{{ site_title }}">{{ site_title }}</a></h1>
+  </div>
+</header>
+<div class="the-loop">
+  {% for page in pages %}
+  {% if page.filename != 'index' %}
+  <article>
+    <h2><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h2>
+    <div class="post-info"><span class="post-date"><i class="icon icon-time"></i> {{ page.date|date(config.date_format) }}</span>&nbsp;&nbsp;&nbsp;<span class="post-category"><i class="icon icon-tag"></i> {{ page.category }}</span></div>
+    <div class="post-intro">
+     <p>{{ page.excerpt }}</p>
+     <p><a href="{{ page.url }}" class="read-more" title="Read {{ page.title }}">Read More <i class="icon icon-arrow-right"></i></a></p>
+   </div>
+ </article>
+ {% endif %}
+ {% endfor %}
+</div>
+{% include 'footer.html' %}
