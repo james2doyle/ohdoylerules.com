@@ -3,7 +3,7 @@ Title: NPM logo SVG
 Date: 2013-07-07
 Category: Personal Project
 Template: post
-Keywords: 
+Keywords:
 */
 
 I made a vector version of the logo for
@@ -11,4 +11,4 @@ I made a vector version of the logo for
 SVG.
 
 [![npm vector svg
-logo](http://192.241.188.69/ohdoylerules.com/wp-content/uploads/2013/07/npm-logo.svg)](http://192.241.188.69/ohdoylerules.com/wp-content/uploads/2013/07/npm-logo.svg)
+logo](http://ohdoylerules.com/content/images/npm-logo.svg)](http://ohdoylerules.com/content/images/npm-logo.svg)
