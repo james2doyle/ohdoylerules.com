@@ -3,7 +3,7 @@ Title: Generated content in CSS
 Date: 2012-07-27
 Category: Fiddle,Web
 Template: post
-Keywords: 
+Keywords:
 */
 
 I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for
@@ -41,7 +41,7 @@ notifications button.
 
 [caption id="attachment\_604" align="aligncenter"
 width="206"][![notifications
-button](http://ohdoylerules.com/wp-content/uploads/2012/07/54368011.png "notifications button")](http://jsfiddle.net/james2doyle/LjgzD/)
+button](http://ohdoylerules.com/content/images/54368011.png "notifications button")](http://jsfiddle.net/james2doyle/LjgzD/)
 The number is css generated content.[/caption]
 
 ~~~~ {.lang:css .decode:1}

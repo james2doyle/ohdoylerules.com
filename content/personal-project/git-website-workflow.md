@@ -3,11 +3,11 @@ Title: git-website-workflow
 Date: 2013-03-13
 Category: Personal Project,Web
 Template: post
-Keywords: 
+Keywords:
 */
 
 ![Amazon Web Services
-Logo](http://192.241.188.69/ohdoylerules.com/wp-content/uploads/2013/03/awslogo.png)
+Logo](http://ohdoylerules.com/content/images/awslogo.png)
 I recently switched to using Amazon Web Services for my hosting. It is
 awesome. Because it(EC2) is just a cloud computer, I can install
 anything I want and set up any workflow I desire. I recently found [an

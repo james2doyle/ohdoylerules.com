@@ -3,7 +3,7 @@ Title: No-Js Image Preview
 Date: 2012-08-27
 Category: Fiddle,Web
 Template: post
-Keywords: 
+Keywords:
 */
 
 Using css transforms, I was able to build a little image previewer.
@@ -12,7 +12,7 @@ does wonders.
 
 [caption id="attachment\_715" align="aligncenter" width="667"][![No Js
 Image
-Preview](http://ohdoylerules.com/wp-content/uploads/2012/08/No-Js-Image-Preview-·-CodePen11.png "No Js Image Preview · CodePen")](http://codepen.io/james2doyle/pen/fChbD)
+Preview](http://ohdoylerules.com/content/images/No-Js-Image-Preview-·-CodePen11.png "No Js Image Preview · CodePen")](http://codepen.io/james2doyle/pen/fChbD)
 No-Js Image Preview[/caption]
 
 I created this guy in

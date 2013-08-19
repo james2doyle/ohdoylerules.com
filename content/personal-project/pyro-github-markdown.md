@@ -3,7 +3,7 @@ Title: Pyro Github Markdown Field Type
 Date: 2013-06-23
 Category: Personal Project,Web
 Template: post
-Keywords: 
+Keywords:
 */
 
 Github flavoured markdown field type for PyroCMS.
@@ -77,7 +77,7 @@ for the original lib.
 I added the ability to preview your results too!
 
 [![pyro github markdown write
-preview](http://192.241.188.69/ohdoylerules.com/wp-content/uploads/2013/06/write.png)](https://github.com/james2doyle/pyro-github-markdown)
+preview](http://ohdoylerules.com/content/images/write.png)](https://github.com/james2doyle/pyro-github-markdown)
 [![pyro github markdown
-preview](http://192.241.188.69/ohdoylerules.com/wp-content/uploads/2013/06/preview.png)](https://github.com/james2doyle/pyro-github-markdown)
+preview](http://ohdoylerules.com/content/images/preview.png)](https://github.com/james2doyle/pyro-github-markdown)
 Go check out this badboy!

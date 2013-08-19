@@ -3,7 +3,7 @@ Title: Mozilla Dev Derby
 Date: 2012-08-29
 Category: Demo,Web
 Template: post
-Keywords: 
+Keywords:
 */
 
 I have just submitted my demo for the [Mozzila Dev
@@ -12,7 +12,7 @@ If you like it, please vote. Thank you!
 
 [caption id="attachment\_724" align="aligncenter" width="517"][![Photo
 Shake
-Demo](http://ohdoylerules.com/wp-content/uploads/2012/08/james2doyle-Camera-Api-Demo2111.png "Camera Api Demo")](https://developer.mozilla.org/en-US/demos/detail/photo-shake)
+Demo](http://ohdoylerules.com/content/images/james2doyle-Camera-Api-Demo2111.png "Camera Api Demo")](https://developer.mozilla.org/en-US/demos/detail/photo-shake)
 Photo Shake Demo[/caption]
 
 It uses the HTML5 File Api and also uses the device orientation API.

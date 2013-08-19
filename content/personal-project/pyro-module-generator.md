@@ -3,7 +3,7 @@ Title: PyroCMS Module Generator
 Date: 2013-04-14
 Category: Personal Project,Web
 Template: post
-Keywords: 
+Keywords:
 */
 
 ##### UPDATE
@@ -34,6 +34,6 @@ learning it and it was pretty easy to use. Sp please [check it
 out](https://github.com/james2doyle/pyro-module-generator "james2doyle/pyro-module-generator")
 and help clean it up if you can. Some little screenshots: ![pyro module
 generator
-image](http://192.241.188.69/ohdoylerules.com/wp-content/uploads/2013/04/module.png)
+image](http://ohdoylerules.com/content/images/module.png)
 ![pyro module generator
-fields](http://192.241.188.69/ohdoylerules.com/wp-content/uploads/2013/04/fields.png)
+fields](http://ohdoylerules.com/content/images/fields.png)
