@@ -7,7 +7,7 @@ Keywords: dom, html5, javascript, js, micro, mini, $, querySelectorAll, sizzle, 
 */
 
 <div class="center">
-  <img src="http://localhost:8888/james2doye/content/images/slatjs.png" alt="Slat.js Logo">
+  <img src="http://ohdoylerules.com/content/images/slatjs.png" alt="Slat.js Logo">
 </div>
 
 I made a tiny dom selector library called [Salt.js](https://github.com/james2doyle/saltjs "james2doyle/saltjs").
