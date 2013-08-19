@@ -6,7 +6,7 @@ $config['base_url'] = 'http://ohdoylerules.com'; 				// Override base URL (e.g. 
 $config['theme'] = 'dist'; 			// Set the theme (defaults to "default")
 $config['date_format'] = 'F jS, Y';		// Set the PHP date format
 $config['twig_config'] = array(			// Twig settings
-	'cache' => 'cache',					// To enable Twig caching change this to CACHE_DIR
+	'cache' => '/cache',					// To enable Twig caching change this to CACHE_DIR
 	'autoescape' => false,				// Autoescape Twig vars
 	'debug' => false					// Enable Twig debug
   );
