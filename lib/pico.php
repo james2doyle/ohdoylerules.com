@@ -244,7 +244,7 @@ class Pico {
 			// start custom metas
 			$data = array();
 			foreach ($page_meta as $key => $value) {
-				$data[$key] = isset($page_meta[$key]) ? $page_meta[$key] : null;
+				$data[$key] = isset($page_meta[$key]) ? $value : null;
 			}
 			// these are special fields
 			$extras = array(
