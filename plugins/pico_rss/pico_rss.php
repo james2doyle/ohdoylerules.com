@@ -12,25 +12,25 @@ class Pico_Rss {
 
 	private $is_feed;
 	private $plugin_path;
-	
+
 	public function __construct()
 	{
 		$this->is_feed = false;
 		$this->plugin_path = dirname(__FILE__);
 	}
-	
+
 	public function request_url(&$url)
 	{
 		// Are we looking for /feed?
 		if($url == 'feed') $this->is_feed = true;
 	}
-	
+
 	public function get_pages(&$pages, &$current_page, &$prev_page, &$next_page)
 	{
 		// Limit feed to latest 10 posts
-		if($this->is_feed) $pages = array_slice($pages, 0, 10);
+		if($this->is_feed) $pages = array_slice($pages, 0, 20);
 	}
-	
+
 	public function before_render(&$twig_vars, &$twig)
 	{
 		if($this->is_feed){
@@ -42,7 +42,7 @@ class Pico_Rss {
 			exit; // Don't continue to render template
 		}
 	}
-	
+
 }
 
 ?>
