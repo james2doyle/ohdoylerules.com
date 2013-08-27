@@ -7,7 +7,7 @@
   </header>
   <div class="the-loop">
     <div class="post-info"><span class="post-date" itemprop="datePublished"><i class="icon icon-time"></i> {{ current_page.date|date(config.date_format) }}</span>&nbsp;&nbsp;&nbsp;<span class="post-category" itemprop="genre about"><i class="icon icon-tag"></i> {{ current_page.category }}</span></div>
-    <div itemprop="ArticleBody text">{{ content }}</div>
+    <div itemprop="ArticleBody text" class="main-content">{{ content }}</div>
     <hr>
     <div class="post-author">
       <a href="http://twitter.com/{{ config.twitter }}" target="_blank"><img src="{{ config.gravatar }}" alt="{{ site_title }} Profile Picture" width="100" height="100"></a>
