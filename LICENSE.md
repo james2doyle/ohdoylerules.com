@@ -5,12 +5,15 @@ to copy, distribute, display, and perform the work to make derivative works
 ### Under the following conditions:
 
 *Attribution* — You must give the original author credit.
+
 *Non-Commercial* — You may not use this work for commercial purposes.
 
 ### With the understanding that:
 
 *Waiver* — Any of the above conditions can be waived if you get permission from the copyright holder.
+
 *Public Domain* — Where the work or any of its elements is in the public domain under applicable law, that status is in no way affected by the licence.
+
 *Other Rights* — In no way are any of the following rights affected by the licence:
 
 * Your fair dealing or fair use rights, or other applicable copyright exceptions and limitations;
