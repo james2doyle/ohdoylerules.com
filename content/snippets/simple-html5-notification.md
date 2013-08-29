@@ -1,9 +1,9 @@
 /*
-Title: Detect Animation Events in Javascript
+Title: Simple HTML5 Notifications
 Date: 2013-08-29
 Category: Snippets,Web
 Template: post
-Keywords: detect, animation, events, javascript
+Keywords: html5, notification, notify, growl, javascript, api
 */
 
 I was playing around with HTML5 Notifications the other day. They are pretty slick! It allows you to essentially send growl notifications to your desktop from the browser.
