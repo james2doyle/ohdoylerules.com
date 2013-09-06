@@ -27,7 +27,7 @@ Would render as [Website (www.example.com/)](www.example.com/)
 So with that in mind, I thought it would be cool to have a button that would render a count. So in practical applications it might be used for something like an inbox button. In the case I built it is a notifications button.
 
 <div class="center">
-  <img src="http://ohdoylerules.com/wp-content/uploads/2012/07/54368011.png" alt="notifications button" >
+  <img src="http://ohdoylerules.com/content/images/54368011.png" alt="notifications button" >
 </div>
 
 
