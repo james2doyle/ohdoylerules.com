@@ -1,7 +1,7 @@
 /*
 Title: Generated Content Article Title
 Date: 2012-10-18
-Category: Demo,Web
+Category: Demo, Web
 Template: post
 Keywords: generated, content, article, title, jsfiddle, title, button, work
 */
@@ -11,11 +11,11 @@ I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototypi
 Since it is just a repeating template, I built the classes and styles in jsFiddle and thenjust dropped in the php echos. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:
 
 
-    /* styles for printing */
+    /*! styles for printing */
     @media print{
-      /* all a tags with an href attribute */
+      /*! all a tags with an href attribute */
       a[href]:after{
-        /* display that href after the value */
+        /*! display that href after the value */
         content: " (" attr(href) ")";
       }
     }
