@@ -6,9 +6,9 @@ Template: post
 Keywords: grunt, sundown, markdown, plugin, node, robotskirt, c, library
 */
 
-> grunt-sundown is a wrapper for [robotskirt](https://github.com/benmills/robotskirt)([Sundown](https://github.com/vmg/sundown)) - a C implementation of [Markdown](http://daringfireball.net/projects/markdown/)
+**grunt-sundown** is a wrapper for [robotskirt](https://github.com/benmills/robotskirt)([Sundown](https://github.com/vmg/sundown)) - a C implementation of [Markdown](http://daringfireball.net/projects/markdown/)
 
-## Getting Started
+### Getting Started
 This plugin requires Grunt `~0.4.1`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
@@ -21,9 +21,9 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 
 You can find the project [on Github](https://github.com/james2doyle/grunt-sundown "grunt-sundown on Github").
 
-## The "sundown" task
+### The "sundown" task
 
-### Overview
+#### Overview
 In your project's Gruntfile, add a section named `sundown` to the data object passed into `grunt.initConfig()`.
 
     grunt.initConfig({
@@ -44,7 +44,7 @@ In your project's Gruntfile, add a section named `sundown` to the data object pa
       }
     });
 
-### Options
+#### Options
 
     options: {
       extensions: {
@@ -71,6 +71,6 @@ In your project's Gruntfile, add a section named `sundown` to the data object pa
       separator: '\n\n' // concat option for multiple files
     }
 
-### More Information
+#### More Information
 
 You can try your luck on the [Sundown](https://github.com/vmg/sundown) homepage. Or check out some of the [other wrappers](https://github.com/vmg/sundown#bindings).
