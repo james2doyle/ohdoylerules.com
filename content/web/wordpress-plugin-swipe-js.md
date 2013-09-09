@@ -1,5 +1,5 @@
 /*
-Title: WordPress Plugin: Swipe.js
+Title: WordPress Plugin Swipe.js
 Date: 2012-08-14
 Category: Web
 Template: post
