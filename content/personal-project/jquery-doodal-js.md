@@ -37,3 +37,5 @@ Now trigger an `open` to see it:
 * *onfalse*: - for confirms no button
 * *close*: - when the close is clicked
 * *afterclose*: - after the animation is over and it is hidden
+
+You can also view the [project on Github](https://github.com/james2doyle/jquery.doodal.js).
