@@ -8,7 +8,7 @@
 		{% for page in pages %}
 			{% if page.date %}
 			<item>
-				<title>{{ page.title }}</title>
+				<title>{{ page.title|e }}</title>
 				<description><![CDATA[{{ page.content }}]]></description>
 				<link>{{ page.url }}</link>
 				<keywords>{{ page.keywords }}</keywords>
