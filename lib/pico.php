@@ -1,5 +1,5 @@
 <?php
-use \Michelf\MarkdownExtra;
+// use \Michelf\MarkdownExtra;
 /**
  * Pico
  *
@@ -95,7 +95,7 @@ class Pico {
 			'current_page' => $current_page,
 			'next_page' => $next_page,
 			'is_front_page' => $url ? false : true,
-		);
+			);
 		// use a custom template if specified Template: [filename] in page meta e.g. Template: spesh to try and use spesh.html in theme folder
 		$template = ((isset($meta['template']) && file_exists($twig_vars['theme_dir'].'/'.$meta['template'].'.html')) ? $meta['template'].'.html' : 'index.html');
 
@@ -134,8 +134,15 @@ class Pico {
 	{
 		$content = preg_replace('#/\*.+?\*/#s', '', $content); // Remove comments and meta
 		$content = str_replace('%base_url%', $this->base_url(), $content);
-		$content = MarkdownExtra::defaultTransform($content);
-
+		$extensions = array(
+			'fenced_code_blocks' => true,
+			'tables' => false,
+			'autolink' => false,
+			'space_after_headers' => false,
+			'lax_html_blocks' => true
+			);
+		$markdown = new \Sundown\Markdown(\Sundown\Render\HTML, $extensions);
+		$content = $markdown->render($content);
 		return $content;
 	}
 
@@ -167,7 +174,7 @@ class Pico {
 		if(empty($headers['title'])){
 			preg_match('/^(.+?)[ ]*\n(=+|-+)[ ]*\n+/imu',$content,$matches);
 			if(count($matches) > 0){
-					$headers['title'] = $matches[1];
+				$headers['title'] = $matches[1];
 			}else{
 				preg_match('/^\#{1}([^\#].*)$/imu',$content,$matches);
 				if(count($matches) > 0){
@@ -198,7 +205,7 @@ class Pico {
 			'pages_order_by' => 'alpha',
 			'pages_order' => 'asc',
 			'excerpt_length' => 50
-		);
+			);
 
 		if(is_array($config)) $config = array_merge($defaults, $config);
 		else $config = $defaults;
@@ -252,7 +259,7 @@ class Pico {
 				'date_formatted' => isset($page_meta['date']) ? date($config['date_format'], strtotime($page_meta['date'])) : null,
 				'content' => $page_content,
 				'excerpt' => $this->limit_words(strip_tags($page_content), $excerpt_length)
-			);
+				);
 			$data = array_merge($data, $extras);
 			// end custom metas
 			if($order_by == 'date' && isset($page_meta['date'])){
@@ -324,21 +331,21 @@ class Pico {
 	 */
 	private function get_files($directory, $ext = '')
 	{
-	    $array_items = array();
-	    if($handle = opendir($directory)){
-	        while(false !== ($file = readdir($handle))){
-	            if(preg_match("/^(^\.)/", $file) === 0){
-	                if(is_dir($directory. "/" . $file)){
-	                    $array_items = array_merge($array_items, $this->get_files($directory. "/" . $file, $ext));
-	                } else {
-	                    $file = $directory . "/" . $file;
-	                    if(!$ext || strstr($file, $ext)) $array_items[] = preg_replace("/\/\//si", "/", $file);
-	                }
-	            }
-	        }
-	        closedir($handle);
-	    }
-	    return $array_items;
+		$array_items = array();
+		if($handle = opendir($directory)){
+			while(false !== ($file = readdir($handle))){
+				if(preg_match("/^(^\.)/", $file) === 0){
+					if(is_dir($directory. "/" . $file)){
+						$array_items = array_merge($array_items, $this->get_files($directory. "/" . $file, $ext));
+					} else {
+						$file = $directory . "/" . $file;
+						if(!$ext || strstr($file, $ext)) $array_items[] = preg_replace("/\/\//si", "/", $file);
+					}
+				}
+			}
+			closedir($handle);
+		}
+		return $array_items;
 	}
 
 	/**
