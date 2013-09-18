@@ -1,5 +1,5 @@
 /*
-Title: pico_download plugin
+Title: pico-download plugin
 Date: 2013-09-18
 Category: Personal Project, Snippets, Web
 Template: post
