@@ -20,11 +20,11 @@ Place your files in the content folder. Then replace the word `content/` in the 
 
 If you wanted to render the file in the browser:
 
-    http://localhost:8888/Pico/content/sub/page.md
+**http://localhost:8888/Pico/content/sub/page.md**
 
 Now with this plugin installed, you can force a download:
 
-    http://localhost:8888/Pico/download/sub/page.md
+**http://localhost:8888/Pico/download/sub/page.md**
 
 ### More info
 
