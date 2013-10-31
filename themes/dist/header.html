@@ -8,13 +8,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ site_title }}{% if meta.title %} | {{ meta.title }}{% endif %}</title>
   <meta itemprop="name" content="{{ meta.title }}">
+  {% if meta.description %}
   <meta itemprop="description" content="{{ meta.description }}">
+  {% else %}
+  <meta itemprop="description" content="{{ meta.title }}">
+  {% endif %}
   <meta itemprop="keywords" content="{{ meta.keywords }}">
   <meta itemprop="image logo" content="{{ theme_url }}/images/logo.png">
   <meta itemprop="url" content="{{ current_page.url }}">
   <meta itemprop="email" content="{{ config.email }}">
   <meta property="og:title" content="{{ meta.title }}">
+  {% if meta.description %}
   <meta property="og:description" content="{{ meta.description }}">
+  {% else %}
+  <meta property="og:description" content="{{ meta.title }}">
+  {% endif %}
   <meta property="og:keywords" content="{{ meta.keywords }}">
   <meta property="og:image" content="{{ theme_url }}/images/logo.png">
   <meta property="og:url" content="{{ base_url }}">
@@ -34,7 +42,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="http://twitter.com/james2doyle">
   <meta name="twitter:title" content="{{ meta.title }}">
+  {% if meta.description %}
   <meta name="twitter:description" content="{{ meta.description }}">
+  {% else %}
+  <meta name="twitter:description" content="{{ meta.title }}">
+  {% endif %}
   <meta name="twitter:creator" content="http://twitter.com/james2doyle">
   <meta name="twitter:image:src" content="{{ theme_url }}/images/logo.png">
   <meta name="twitter:domain" content="james2doyle.com">
