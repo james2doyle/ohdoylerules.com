@@ -1,5 +1,6 @@
 /*
 Title: Salt.js micro selector library
+Description: Salt.js micro selector library
 Date: 2013-05-12
 Category: Personal Project, Snippets, Web
 Template: post
@@ -20,20 +21,22 @@ Here are some examples of how you would use the library:
 
 #### Salt.js Examples
 
-    // get by id
-    $('#iddiv');
-    // get by class name
-    $('.classdiv');
-    // get by element name
-    $('@namediv');
-    // get by element tag name
-    $('=div');
-    // get element using querySelectorAll
-    $('*div div.inside');
-    // getAttribute of name
-    $('#iddiv').getAttribute('name');
-    // getAttribute of name from nodelist
-    $('.classdiv')[0].getAttribute('name');
+```javascript
+// get by id
+$('#iddiv');
+// get by class name
+$('.classdiv');
+// get by element name
+$('@namediv');
+// get by element tag name
+$('=div');
+// get element using querySelectorAll
+$('*div div.inside');
+// getAttribute of name
+$('#iddiv').getAttribute('name');
+// getAttribute of name from nodelist
+$('.classdiv')[0].getAttribute('name');
+```
 
 [Check out the library on Github](https://github.com/james2doyle/saltjs "james2doyle/saltjs").
 

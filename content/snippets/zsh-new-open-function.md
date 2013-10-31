@@ -1,5 +1,6 @@
 /*
 Title: zsh new file && open file function
+Description: zsh new file && open file function
 Date: 2012-10-13
 Category: Snippets, Uncategorized
 Template: post

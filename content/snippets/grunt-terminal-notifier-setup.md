@@ -1,5 +1,6 @@
 /*
 Title: grunt terminal-notifier setup
+Description: grunt terminal-notifier setup
 Date: 2013-06-07
 Category: Snippets,Web
 Template: post
@@ -10,30 +11,34 @@ I just downloaded the new Mountain Lion, finally. One of the biggest new things 
 
 There is a ruby gem and a standalone ".app". Once this is installed, you will need to grab the [grunt-growl](https://github.com/alextucker/grunt-growl "alextucker/grunt-growl") plugin. There are more instructions there for the terminal-notifier app. Now you will need to setup a new task in your gruntfile:
 
-    growl: {
-      css: {
-        title: 'STYLUS BUILT',
-        message: 'css/style.css has been created'
-      },
-      js: {
-        title: 'JAVASCRIPT BUILT',
-        message: 'dist/js/scripts.js has been created'
-      }
-    }
+```javascript
+growl: {
+  css: {
+    title: 'STYLUS BUILT',
+    message: 'css/style.css has been created'
+  },
+  js: {
+    title: 'JAVASCRIPT BUILT',
+    message: 'dist/js/scripts.js has been created'
+  }
+}
+```
 
 Now my watch task looks like this:
 
-    watch: {
-      scripts: {
-        files: ['<%= concat.dist.src %>'],
-        tasks: ['jshint', 'concat', 'growl:js'],
-        options: {}
-      },
-      styles: {
-        files: ['css/*.styl'],
-        tasks: ['stylus', 'growl:css'],
-        options: {}
-      }
-    }
+```javascript
+watch: {
+  scripts: {
+    files: ['<%= concat.dist.src %>'],
+    tasks: ['jshint', 'concat', 'growl:js'],
+    options: {}
+  },
+  styles: {
+    files: ['css/*.styl'],
+    tasks: ['stylus', 'growl:css'],
+    options: {}
+  }
+}
+```
 
 You can see that the growl task runs after the initial stylus and javascript watch tasks.

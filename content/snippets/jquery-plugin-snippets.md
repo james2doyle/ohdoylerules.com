@@ -1,5 +1,6 @@
 /*
 Title: jQuery Plugin Snippets for Sublime Text 2
+Description: jQuery Plugin Snippets for Sublime Text 2
 Date: 2013-03-28
 Category: Snippets, Personal Project, Web
 Template: post

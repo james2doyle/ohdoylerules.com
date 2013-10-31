@@ -1,5 +1,6 @@
 /*
 Title: No Javascript CSS Accordion
+Description: No Javascript CSS Accordion
 Date: 2012-10-17
 Category: Demo,Web
 Template: post

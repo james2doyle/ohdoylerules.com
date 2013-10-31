@@ -1,5 +1,6 @@
 /*
 Title: compare multiple md5 hashes
+Description: compare multiple md5 hashes
 Date: 2013-09-15
 Category: Snippets, Personal Project, Web
 Template: post

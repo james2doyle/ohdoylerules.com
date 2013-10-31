@@ -4,6 +4,7 @@ Date: 2012-08-29
 Category: Demo,Web
 Template: post
 Keywords: mozilla, dev, derby, 2012, photo, shake, runner, up, august, camera, api
+Description: James Doyle runner up in Mozilla Dev Derby September 2012
 */
 
 I have just submitted my demo for the [Mozzila Dev Derby](https://developer.mozilla.org/en-US/demos/detail/photo-shake "Photo Shake Page"). If you like it, please vote. Thank you!

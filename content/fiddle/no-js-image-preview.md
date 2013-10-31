@@ -1,5 +1,6 @@
 /*
 Title: No-Js Image Preview
+Description: No-Js Image Preview
 Date: 2012-08-27
 Category: Fiddle,Web
 Template: post

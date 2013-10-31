@@ -1,5 +1,6 @@
 /*
 Title: nodelist.each
+Description: nodelist.prototype.each in javascript
 Date: 2012-09-06
 Category: Snippets,Web
 Template: post
@@ -10,21 +11,23 @@ I was doing a project in vanilla javascript that used querySelectorAll, which re
 
 Here is the result:
 
-    Object.prototype.each = function(callback) {
-      // new empty array
-      var a = [];
-      // iterate through the nodelist
-      for (var i = 0; i < this.length; i++) {
-        // put the objects into the array
-        a[i] = this[i];
-        // callback the new array
-        callback(a[i]);
-      }
-    }
-    // USAGE
-    var x = document.querySelectorAll('li');
-    x.each(function(elem) {
-        elem.style.background = 'red';
-    });
+```javascript
+Object.prototype.each = function(callback) {
+  // new empty array
+  var a = [];
+  // iterate through the nodelist
+  for (var i = 0; i < this.length; i++) {
+    // put the objects into the array
+    a[i] = this[i];
+    // callback the new array
+    callback(a[i]);
+  }
+}
+// USAGE
+var x = document.querySelectorAll('li');
+x.each(function(elem) {
+    elem.style.background = 'red';
+});
+```
 
 Pretty cool. [Here is the fiddle](http://jsfiddle.net/james2doyle/nrhgr/ "each prototype")

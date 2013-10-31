@@ -1,9 +1,10 @@
 /*
 Title: CSS Date Card
+Description: CSS Date Card
 Date: 2012-09-18
 Category: Fiddle,Web
 Template: post
-Keywords:
+Keywords: css, date, card, animations, gradients, dabblet
 */
 
 I am trying to make up for not posting in the last few days. Here is another thing I have been working on. It is a replication of [another dribbble post](http://dribbble.com/shots/713807-Extended "Event Card").

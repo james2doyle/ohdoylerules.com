@@ -1,5 +1,6 @@
 /*
 Title: Assemble Starter
+Description: Assemble for Grunt.js Starter template
 Date: 2013-10-17
 Category: Personal Project,Snippets,Web
 Template: post

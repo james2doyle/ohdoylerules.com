@@ -1,5 +1,6 @@
 /*
 Title: Simple HTML5 Notifications
+Description: Simple HTML5 Notifications
 Date: 2013-08-29
 Category: Snippets,Web
 Template: post
@@ -10,22 +11,24 @@ I was playing around with HTML5 Notifications the other day. They are pretty sli
 
 This little function would be used during an event to request permission for notifications and then display it with a simple abstraction of the native API.
 
-    function notify(title, body, timeout) {
-      timeout = (timeout) ? timeout : 3000;
-      Notification.requestPermission(function () {
-        var nf = new Notification(title, {
-          body: body,
-          iconUrl: "test.png"
-        });
-        nf.onshow = function () {
-          setTimeout(function () {
-            nf.close()
-          }, timeout)
-        };
-      });
-    }
-    // usage
-    notify('My Title', 'My hot body with a bunch of lorem in it');
+```javascript
+function notify(title, body, timeout) {
+  timeout = (timeout) ? timeout : 3000;
+  Notification.requestPermission(function () {
+    var nf = new Notification(title, {
+      body: body,
+      iconUrl: "test.png"
+    });
+    nf.onshow = function () {
+      setTimeout(function () {
+        nf.close()
+      }, timeout)
+    };
+  });
+}
+// usage
+notify('My Title', 'My hot body with a bunch of lorem in it');
+```
 
 It will then ask for permission, if your page doesn't have it already, then show the notification. Right now it just shows a small grey box for the test image.
 

@@ -1,21 +1,15 @@
 /*
 Title: Generated content in CSS
+Description: Generated content in CSS
 Date: 2012-07-27
 Category: Fiddle,Web
 Template: post
-Keywords:
+Keywords: generated, content, css, css3, attr, pseduo, elements
 */
 
-I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for
-prototyping. I might want to see what I can make in css or maybe I want
-to build a little template. A perfect example, I used it to mockup my
-[work](http://ohdoylerules.com/work/ "Work") section. Since it is just a
-repeating template, I built the classes and styles in jsFiddle and then
-just dropped in the php echos. Anyway, here is something I made. It uses
-generated content. You can use HTML attributes in CSS. This is a classic
-example:
+I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my [work](http://ohdoylerules.com/work/ "Work") section. Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the php echos. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:
 
-~~~~ {.lang:css .decode:1}
+```css
 /* styles for printing */
 @media print{
     /* all a tags with an href attribute */
@@ -24,13 +18,13 @@ example:
         content: " (" attr(href) ")";
     }
 }
-~~~~
+```
 
 What does this look like?
 
-~~~~ {.lang:xhtml .decode:1}
+```html
 Website
-~~~~
+```
 
 Would render as [Website (www.example.com/)](www.example.com/)
 
@@ -39,12 +33,11 @@ would render a count. So in practical applications it might be used for
 something like an inbox button. In the case I built it is a
 notifications button.
 
-[caption id="attachment\_604" align="aligncenter"
-width="206"][![notifications
-button](http://ohdoylerules.com/content/images/54368011.png "notifications button")](http://jsfiddle.net/james2doyle/LjgzD/)
-The number is css generated content.[/caption]
+<div class="center">
+  <a href="http://jsfiddle.net/james2doyle/LjgzD" target="_blank" title="notifications button"><img src="http://ohdoylerules.com/content/images/54368011.png" alt="notifications button"></a>
+</div>
 
-~~~~ {.lang:css .decode:1}
+```css
 button {
     color: #333;
     padding: 4px 10px;
@@ -74,11 +67,11 @@ button:after {
         inset 0 -1px 2px rgba(0,0,0,0.5);
     text-shadow: 0 1px 0 rgba(0,0,0,0.6);
 }​
-~~~~
+```
 
-~~~~ {.lang:xhtml .decode:1}
+```html
 Notifications​
-~~~~
+```
 
 If you would like to see that bad boy in action check out [this
 fiddle](http://jsfiddle.net/james2doyle/LjgzD/ "jsFiddle css content").

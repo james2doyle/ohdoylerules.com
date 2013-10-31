@@ -1,5 +1,6 @@
 /*
 Title: Modernizr SVG Fallback to PNG
+Description: Modernizr SVG Fallback to PNG
 Date: 2013-05-27
 Category: Snippets, Web
 Template: post
@@ -18,17 +19,19 @@ The only changes I made were wrapping it in a closure and combining all the vars
 
 Or you can copy the current version from right here.
 
-    if (!Modernizr.svg) {
-      // wrap this in a closure to not expose any conflicts
-      (function() {
-        // grab all images. getElementsByTagName works with IE5.5 and up
-        var imgs = document.getElementsByTagName('img'),endsWithDotSvg = /.*\.svg$/,i = 0,l = imgs.length;
-        // quick for loop
-        for(; i < l; ++i) {
-          if(imgs[i].src.match(endsWithDotSvg)) {
-            // replace the png suffix with the svg one
-            imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-          }
-        }
-      })();
+```javascript
+if (!Modernizr.svg) {
+  // wrap this in a closure to not expose any conflicts
+  (function() {
+    // grab all images. getElementsByTagName works with IE5.5 and up
+    var imgs = document.getElementsByTagName('img'),endsWithDotSvg = /.*\.svg$/,i = 0,l = imgs.length;
+    // quick for loop
+    for(; i < l; ++i) {
+      if(imgs[i].src.match(endsWithDotSvg)) {
+        // replace the png suffix with the svg one
+        imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+      }
     }
+  })();
+}
+```

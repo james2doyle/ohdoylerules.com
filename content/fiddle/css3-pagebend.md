@@ -3,7 +3,7 @@ Title: CSS3 Pagebend
 Date: 2012-09-18
 Category: Fiddle,Web
 Template: post
-Keywords:
+Keywords: css3, page, bend, flip, fold, animation, transition, 3d
 */
 
 I crafted [this lil' beauty](http://codepen.io/james2doyle/pen/HpbrL "css3-pagebend") in class today. It turns out that it is really hard to make transforming elements intersect. At least, I couldn't figure it out.

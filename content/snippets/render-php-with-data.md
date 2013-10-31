@@ -1,5 +1,6 @@
 /*
 Title: Render PHP File With Data
+Description: Render PHP File With Data
 Date: 2013-08-29
 Category: Snippets,Web
 Template: post
@@ -12,17 +13,18 @@ It is a very simple CMS which previously would just echo out compiled HTML. But 
 
 Here is that function:
 
-    function renderPhpFile($filename, $vars = null) {
-      if (is_array($vars) && !empty($vars)) {
-        extract($vars);
-      }
-      ob_start();
-      include $filename;
-      return ob_get_clean();
-    }
-
-    // usage
-    echo renderPhpFile('views/templates/index.php', $view_data);
+```php
+function renderPhpFile($filename, $vars = null) {
+  if (is_array($vars) && !empty($vars)) {
+    extract($vars);
+  }
+  ob_start();
+  include $filename;
+  return ob_get_clean();
+}
+// usage
+echo renderPhpFile('views/templates/index.php', $view_data);
+```
 
 This works! It is a handy little function for passing data into a PHP file.
 
