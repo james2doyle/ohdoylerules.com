@@ -1,18 +1,20 @@
 <?php
+
+// try to figure out the install path
+$config['install_path'] = pathinfo(dirname(__FILE__))['basename'].'/';
 // Override any of the default settings below:
 
-$config['site_title'] = 'James Doyle';			// Site title
-$config['base_url'] = 'http://ohdoylerules.com'; 				// Override base URL (e.g. http://example.com)
-$config['theme'] = 'dist'; 			// Set the theme (defaults to "default")
-$config['date_format'] = 'F jS, Y';		// Set the PHP date format
-$config['twig_config'] = array(			// Twig settings
-	'cache' => CACHE_DIR,					// To enable Twig caching change this to CACHE_DIR
-	'autoescape' => false,				// Autoescape Twig vars
-	'debug' => false					// Enable Twig debug
-  );
-$config['pages_order_by'] = 'date';	// Order pages by "alpha" or "date"
-$config['pages_order'] = 'desc';			// Order pages "asc" or "desc"
-$config['excerpt_length'] = 50;			// The pages excerpt length (in words)
+$config['site_title'] = 'James Doyle';                 // Site title
+$config['base_url'] = 'http://localhost:8888/james2doyle'; // Override base URL (e.g. http://example.com)
+$config['theme'] = 'dist'; // Set the theme (defaults to "default")
+$config['date_format'] = 'F jS, Y'; // Set the PHP date format
+$config['twig_config'] = array( // Twig settings
+        'cache' => false, // To enable Twig caching change this to CACHE_DIR
+        'autoescape' => false, // Autoescape Twig vars
+        'debug' => true // Enable Twig debug
+        );
+$config['pages_order_by'] = 'date'; // Order pages by "alpha" or "date"
+$config['pages_order'] = 'desc'; // Order pages "asc" or "desc"
 
 // To add a custom config setting:
 
@@ -48,6 +50,7 @@ function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts
   return $url;
 }
 
-$config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);  // Can be accessed by {{ config.custom_setting }} in a theme
+$config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);
 
-// End of file
+$config['plugins']['phileSundown'] = array('active' => true);
+$config['plugins']['phileTwigFilters'] = array('active' => true);

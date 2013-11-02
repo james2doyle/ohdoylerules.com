@@ -1,7 +1,7 @@
 /*=================================*/
-/* Pico Default Theme
-/* By: Gilbert Pellegrom
-/* http: //dev7studios.com
+/* Phile Template Theme
+/* By: PhileCMS Community
+/* https://github.com/PhileCMS/Phile
 /*=================================*/
 
 /* Reset Styles
@@ -61,8 +61,8 @@ label, input[type=button], input[type=submit], button {
 	cursor: pointer;
 }
 
-/* make buttons play nice in IE:	 
-		www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+/* make buttons play nice in IE:
+www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
 button {
 	width: auto;
 	overflow: visible;
@@ -82,7 +82,7 @@ select {
 	font: 400 1em Verdana, Sans-serif;
 	color: #666;
 	background: #fff;
-	border: 1px solid #999999;
+	border: 1px solid #999;
 	margin: 0 0 1em 0;
 }
 
@@ -91,30 +91,30 @@ textarea:focus,
 select:focus {
 	color: #000;
 	background: #fff;
-	border: 1px solid #666666;
+	border: 1px solid #666;
 }
 
 /* Main Styles
 /*---------------------------------------------*/
 body {
-	font: 14px/1.8em 'Open Sans', Helvetica, Arial, Helvetica, sans-serif;
+	font: 14px/1.8em Lucida, sans-serif;
 	color: #444;
 	background: #fff;
 	-webkit-font-smoothing: antialiased;
 }
 
 a, a:visited {
-	color: #2EAE9B;
+	color: #b44646;
 	text-decoration: none;
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-ms-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
+	-webkit-transition: color 0.2s ease;
+	-moz-transition: color 0.2s ease;
+	-ms-transition: color 0.2s ease;
+	-o-transition: color 0.2s ease;
+	transition: color 0.2s ease;
 }
 
 a:hover, a:active {
-	color: #000;
+	color: #e2595b;
 	text-decoration: none;
 }
 
@@ -177,25 +177,32 @@ sup {
 	font-size: smaller;
 }
 
-code {
-	font-family: Courier, "Courier New", Monaco, Tahoma;
+code, pre {
+	font-family: Courier;
+	padding: 0 3px 1px;
 	background: #eee;
-	color: #333;
-	padding: 0px 2px;
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+p code, li code {
+	margin: 0;
+	border: 1px solid #ddd;
 }
 
 pre {
-	background: #eee;
 	padding: 20px;
 	margin-bottom: 1em;
 	overflow: auto;
+	border: 1px solid #ddd;
+	line-height: 1.2;
 }
 
 blockquote {
 	font-style: italic;
 	margin: 0 0 1em 15px;
 	padding-left: 10px;
-	border-left: 5px solid #dddddd;
+	border-left: 5px solid #ddd;
 }
 
 /* Structure Styles
@@ -206,17 +213,17 @@ blockquote {
 }
 
 #header {
-	background: #2EAE9B;
+	background: #424242;
 	padding: 60px 0;
 	margin-bottom: 80px;
-	color: #afe1da;
+	color: #b44646;
 }
-#header a { color: #afe1da; }
+#header a { color: #b44646; }
 #header h1 a,
 #header a:hover { color: #fff; }
-#header h1 { 
+#header h1 {
 	font-weight: bold;
-	margin: 0; 
+	margin: 0;
 	float: left;
 }
 #header .nav {
@@ -244,13 +251,13 @@ blockquote {
 /*---------------------------------------------*/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+	content: " ";
+	display: table;
 }
 .clearfix:after {
-    clear: both;
+	clear: both;
 }
 .clearfix {
-    *zoom: 1;
+	*zoom: 1;
 }
 

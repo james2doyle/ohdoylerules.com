@@ -336,21 +336,21 @@ abstract class Twig_Template implements Twig_TemplateInterface
      */
     protected function getAttribute($object, $item, array $arguments = array(), $type = Twig_TemplateInterface::ANY_CALL, $isDefinedTest = false, $ignoreStrictCheck = false)
     {
+        $item = ctype_digit((string) $item) ? (int) $item : (string) $item;
+
         // array
         if (Twig_TemplateInterface::METHOD_CALL !== $type) {
-            $arrayItem = is_bool($item) || is_float($item) ? (int) $item : $item;
-
-            if ((is_array($object) && array_key_exists($arrayItem, $object))
-                || ($object instanceof ArrayAccess && isset($object[$arrayItem]))
+            if ((is_array($object) && array_key_exists($item, $object))
+                || ($object instanceof ArrayAccess && isset($object[$item]))
             ) {
                 if ($isDefinedTest) {
                     return true;
                 }
 
-                return $object[$arrayItem];
+                return $object[$item];
             }
 
-            if (Twig_TemplateInterface::ARRAY_CALL === $type || !is_object($object)) {
+            if (Twig_TemplateInterface::ARRAY_CALL === $type) {
                 if ($isDefinedTest) {
                     return false;
                 }
@@ -360,13 +360,11 @@ abstract class Twig_Template implements Twig_TemplateInterface
                 }
 
                 if (is_object($object)) {
-                    throw new Twig_Error_Runtime(sprintf('Key "%s" in object (with ArrayAccess) of type "%s" does not exist', $arrayItem, get_class($object)), -1, $this->getTemplateName());
+                    throw new Twig_Error_Runtime(sprintf('Key "%s" in object (with ArrayAccess) of type "%s" does not exist', $item, get_class($object)), -1, $this->getTemplateName());
                 } elseif (is_array($object)) {
-                    throw new Twig_Error_Runtime(sprintf('Key "%s" for array with keys "%s" does not exist', $arrayItem, implode(', ', array_keys($object))), -1, $this->getTemplateName());
-                } elseif (Twig_TemplateInterface::ARRAY_CALL === $type) {
-                    throw new Twig_Error_Runtime(sprintf('Impossible to access a key ("%s") on a %s variable ("%s")', $item, gettype($object), $object), -1, $this->getTemplateName());
+                    throw new Twig_Error_Runtime(sprintf('Key "%s" for array with keys "%s" does not exist', $item, implode(', ', array_keys($object))), -1, $this->getTemplateName());
                 } else {
-                    throw new Twig_Error_Runtime(sprintf('Impossible to access an attribute ("%s") on a %s variable ("%s")', $item, gettype($object), $object), -1, $this->getTemplateName());
+                    throw new Twig_Error_Runtime(sprintf('Impossible to access a key ("%s") on a "%s" variable', $item, gettype($object)), -1, $this->getTemplateName());
                 }
             }
         }
@@ -380,14 +378,14 @@ abstract class Twig_Template implements Twig_TemplateInterface
                 return null;
             }
 
-            throw new Twig_Error_Runtime(sprintf('Impossible to invoke a method ("%s") on a %s variable ("%s")', $item, gettype($object), $object), -1, $this->getTemplateName());
+            throw new Twig_Error_Runtime(sprintf('Item "%s" for "%s" does not exist', $item, is_array($object) ? 'Array' : $object), -1, $this->getTemplateName());
         }
 
         $class = get_class($object);
 
         // object property
         if (Twig_TemplateInterface::METHOD_CALL !== $type) {
-            if (isset($object->$item) || array_key_exists((string) $item, $object)) {
+            if (isset($object->$item) || array_key_exists($item, $object)) {
                 if ($isDefinedTest) {
                     return true;
                 }
@@ -407,13 +405,13 @@ abstract class Twig_Template implements Twig_TemplateInterface
 
         $lcItem = strtolower($item);
         if (isset(self::$cache[$class]['methods'][$lcItem])) {
-            $method = (string) $item;
+            $method = $item;
         } elseif (isset(self::$cache[$class]['methods']['get'.$lcItem])) {
             $method = 'get'.$item;
         } elseif (isset(self::$cache[$class]['methods']['is'.$lcItem])) {
             $method = 'is'.$item;
         } elseif (isset(self::$cache[$class]['methods']['__call'])) {
-            $method = (string) $item;
+            $method = $item;
         } else {
             if ($isDefinedTest) {
                 return false;

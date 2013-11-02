@@ -38,6 +38,8 @@ class Twig_TokenParser_Extends extends Twig_TokenParser
         $this->parser->setParent($this->parser->getExpressionParser()->parseExpression());
 
         $this->parser->getStream()->expect(Twig_Token::BLOCK_END_TYPE);
+
+        return null;
     }
 
     /**
