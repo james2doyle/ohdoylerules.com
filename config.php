@@ -1,7 +1,7 @@
 <?php
 
 // try to figure out the install path
-$config['install_path'] = pathinfo(dirname(__FILE__))['basename'].'/';
+$config['install_path'] = '../';
 // Override any of the default settings below:
 
 $config['site_title'] = 'James Doyle';                 // Site title
