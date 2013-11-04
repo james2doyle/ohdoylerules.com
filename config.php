@@ -9,13 +9,15 @@ $config['base_url'] = 'http://ohdoylerules.com'; // Override base URL (e.g. http
 $config['theme'] = 'dist'; // Set the theme (defaults to "default")
 $config['date_format'] = 'F jS, Y'; // Set the PHP date format
 $config['twig_config'] = array( // Twig settings
-        'cache' => CACHE_DIR, // To enable Twig caching change this to CACHE_DIR
+        'cache' => false, // To enable Twig caching change this to CACHE_DIR
         'autoescape' => false, // Autoescape Twig vars
         'debug' => false // Enable Twig debug
         );
 $config['pages_order_by'] = 'date'; // Order pages by "alpha" or "date"
 $config['pages_order'] = 'desc'; // Order pages "asc" or "desc"
-
+// figure out the timezone
+$timezone = (ini_get('date.timezone')) ? ini_get('date.timezone') : 'UTC';
+$config['timezone'] = $timezone; // The default timezone
 // To add a custom config setting:
 
 $config['email'] = 'james2doyle@gmail.com';
@@ -37,20 +39,27 @@ $config['author_blurb'] = 'I am the director and head developer at <a href="http
  * @return String containing either just a URL or a complete image tag
  * @source http://gravatar.com/site/implement/images/php/
  */
+
 function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
-  $url = 'http://www.gravatar.com/avatar/';
-  $url .= md5( strtolower( trim( $email ) ) );
-  $url .= "?s=$s&d=$d&r=$r";
-  if ( $img ) {
-    $url = '<img src="' . $url . '"';
-    foreach ( $atts as $key => $val )
-      $url .= ' ' . $key . '="' . $val . '"';
-    $url .= ' />';
-  }
-  return $url;
+	$url = 'http://www.gravatar.com/avatar/';
+	$url .= md5( strtolower( trim( $email ) ) );
+	$url .= "?s=$s&d=$d&r=$r";
+	if ( $img ) {
+		$url = '<img src="' . $url . '"';
+		foreach ( $atts as $key => $val )
+			$url .= ' ' . $key . '="' . $val . '"';
+		$url .= ' />';
+	}
+	return $url;
 }
 
 $config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);
 
-$config['plugins']['phileSundown'] = array('active' => true);
-$config['plugins']['phileTwigFilters'] = array('active' => true);
+$config['plugins'] = array(
+	'phileDemoPlugin' => array('active' => true),
+	'phileParserMarkdown' => array('active' => false), // the default parser
+	'phileSundown' => array('active' => true),
+	'phileTwigFilters' => array('active' => true)
+	);
+
+return $config;
