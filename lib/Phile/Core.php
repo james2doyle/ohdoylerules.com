@@ -41,15 +41,11 @@ class Core {
 		// Load the settings
 		$this->initConfiguration();
 
-		// Load Parser, we use Markdown parser as default
-		// to use an other parse, register a plugin and within the plugin, register a new
-		// service for "Phile_Parser" which implements the \Phile\Parser\ParserInterface
-		\Phile\ServiceLocator::registerService('Phile_Parser', new \Phile\Parser\Markdown());
-
 		// Load plugins
 		$this->initPlugins();
 		/**
 		 * @triggerEvent plugins_loaded this event is triggered after the plugins loaded
+		 * This is also where we load the parser, since it is a plugin also. We use the Markdown parser as default. See it in the plugins folder and lib/Phile/Parser/Markdown.php
 		 */
 		Event::triggerEvent('plugins_loaded');
 
@@ -131,32 +127,16 @@ class Core {
 	 * init configuration
 	 */
 	protected function initConfiguration() {
-		// @TODO: refactor: maybe introduce configuration object
-		global $config;
-		@include_once(ROOT_DIR . 'config.php');
-
-		$defaults = array(
-			'site_title' => 'Phile',
-			'base_url' => \Phile\Utility::getBaseUrl(),
-			'theme' => 'default',
-			'date_format' => 'jS M Y',
-			'twig_config' => array('cache' => false, 'autoescape' => false, 'debug' => false),
-			'pages_order_by' => 'alpha',
-			'pages_order' => 'asc',
-			'excerpt_length' => 50,
-			'timezone' => date_default_timezone_get() // use system time if avaliable
-			);
-
-		if(is_array($config)) {
-			$config = array_merge($defaults, $config);
+		$defaults       = Utility::load(ROOT_DIR . '/default_config.php');
+		$localSettings  = Utility::load(ROOT_DIR . '/config.php');
+		if (is_array($localSettings)) {
+			$this->settings = array_merge($defaults, $localSettings);
 		} else {
-			$config = $defaults;
+			$this->settings = $defaults;
 		}
 
-		$this->settings = $config;
-		\Phile\Registry::set('Phile_Settings', $config);
-
-		date_default_timezone_set($config['timezone']);
+		\Phile\Registry::set('Phile_Settings', $this->settings);
+		date_default_timezone_set($this->settings['timezone']);
 	}
 
 	protected function initTemplate() {
@@ -165,7 +145,6 @@ class Core {
 		 * @triggerEvent before_twig_register this event is triggered before the the twig template engine is registered
 		 */
 		Event::triggerEvent('before_twig_register');
-		\Twig_Autoloader::register();
 		// default output
 		$output = 'no template found';
 		if (file_exists(THEMES_DIR . $this->settings['theme'])) {
@@ -182,6 +161,7 @@ class Core {
 				'theme_dir' => THEMES_DIR . $this->settings['theme'],
 				'theme_url' => $this->settings['base_url'] .'/'. basename(THEMES_DIR) .'/'. $this->settings['theme'],
 				'site_title' => $this->settings['site_title'],
+				'current_page' => $this->page,
 				'meta' => $this->page->getMeta(),
 				'content' => $this->page->getContent(),
 				'pages' => $this->pageRepository->findAll($this->settings),

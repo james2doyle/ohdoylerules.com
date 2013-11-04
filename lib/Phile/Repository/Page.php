@@ -56,6 +56,7 @@ class Page {
 			}
 			$pages[]    = new \Phile\Model\Page($file[0]);
 		}
+
 		if ($options !== null && isset($options['pages_order_by'])) {
 			switch (strtolower($options['pages_order_by'])) {
 				case 'date':
@@ -107,8 +108,8 @@ class Page {
 
 	// usort function for Titles Asc
 	protected function compareByTitleAsc($a, $b) {
-		$al = strtolower($a->getMeta()->getTitle());
-		$bl = strtolower($b->getMeta()->getTitle());
+		$al = strtolower($a->getMeta()->get('title'));
+		$bl = strtolower($b->getMeta()->get('title'));
 		if ($al == $bl) {
 			return 0;
 		}
@@ -116,8 +117,8 @@ class Page {
 	}
 	// usort function for Titles Desc
 	protected function compareByTitleDesc($a, $b) {
-		$al = strtolower($a->getMeta()->getTitle());
-		$bl = strtolower($b->getMeta()->getTitle());
+		$al = strtolower($a->getMeta()->get('title'));
+		$bl = strtolower($b->getMeta()->get('title'));
 		if ($al == $bl) {
 			return 0;
 		}
