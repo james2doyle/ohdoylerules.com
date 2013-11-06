@@ -6,17 +6,16 @@
  */
 class PhileTwigFilters extends \Phile\Plugin\AbstractPlugin implements \Phile\EventObserverInterface {
 	public function __construct() {
-		\Phile\Event::registerEvent('before_render', $this);
+		\Phile\Event::registerEvent('template_engine_registered', $this);
 	}
 
 	public function on($eventKey, $data = null) {
-		if ($eventKey == 'before_render') {
+		if ($eventKey == 'template_engine_registered') {
 			$filter = new Twig_SimpleFilter('first_paragraph', function ($string){
-				// grab the first paragraph
-				// now remove all the html code
+				// grab the first paragraph and now remove all the html code
 				return strip_tags(substr($string, 0, strpos($string, "</p>") + 4));
 			});
-			$data['twig']->addFilter($filter);
+			$data['engine']->addFilter($filter);
 		}
 	}
 }
