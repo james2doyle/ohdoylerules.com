@@ -1,8 +1,11 @@
 <?php
 
 namespace Phile\Repository;
+use Phile\Cache\CacheInterface;
 use Phile\Exception;
 use Phile\Registry;
+use Phile\ServiceLocator;
+use Phile\Utility;
 
 
 /**
@@ -15,14 +18,24 @@ class Page {
 	const ORDER_DESC  = 'desc';
 
 	/**
+	 * @var CacheInterface
+	 */
+	protected $cache = null;
+
+	public function __construct() {
+		if (ServiceLocator::hasService('Phile_Cache')) {
+			$this->cache  = ServiceLocator::getService('Phile_Cache');
+		}
+	}
+
+	/**
 	 * find a page by path
 	 *
 	 * @param $path
 	 * @return null|\Phile\Model\Page
 	 */
 	public function findByPath($path) {
-		$config     = Registry::get('Phile_Settings');
-		$path       = str_replace($config['install_path'], '', $path);
+		$path   = str_replace(Utility::getInstallPath(), '', $path);
 		$file = null;
 		if (file_exists(CONTENT_DIR . $path . CONTENT_EXT)) {
 			$file = CONTENT_DIR . $path . CONTENT_EXT;
@@ -34,7 +47,7 @@ class Page {
 		}
 
 		if ($file !== null) {
-			return new \Phile\Model\Page($file);
+			return $this->getPage($file);
 		}
 
 		return null;
@@ -54,7 +67,7 @@ class Page {
 				// jump to next page if file is the 404 page
 				continue;
 			}
-			$pages[]    = new \Phile\Model\Page($file[0]);
+			$pages[]    = $this->getPage($file[0]);
 		}
 
 		if ($options !== null && isset($options['pages_order_by'])) {
@@ -104,6 +117,26 @@ class Page {
 			}
 		}
 		return $pages;
+	}
+
+	/**
+	 * get page from cache or filepath
+	 * @param $filePath
+	 * @return \Phile\Model\Page
+	 */
+	protected function getPage($filePath) {
+		if ($this->cache !== null) {
+			$key    = 'Phile_Model_Page_' . md5($filePath);
+			if ($this->cache->has($key)) {
+				return $this->cache->get($key);
+			} else {
+				$page   = new \Phile\Model\Page($filePath);
+				$this->cache->set($key, $page);
+			}
+		} else {
+			$page   = new \Phile\Model\Page($filePath);
+		}
+		return $page;
 	}
 
 	// usort function for Titles Asc

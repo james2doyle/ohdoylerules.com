@@ -65,6 +65,14 @@ class Core {
 	 * @return null|\Phile\Model\Page
 	 */
 	protected function initCurrentPage() {
+		$uri    = $_SERVER['REQUEST_URI'];
+		$uri    = str_replace('/' . \Phile\Utility::getInstallPath() . '/', '', $uri);
+		/**
+		 * @triggerEvent request_uri this event is triggered after the request uri is detected.
+		 * @param uri the uri
+		 */
+		Event::triggerEvent('request_uri', array('uri' => $uri));
+
 		// use the current url to find the page
 		$page = $this->pageRepository->findByPath($_SERVER['REQUEST_URI']);
 		if ($page instanceof \Phile\Model\Page) {
@@ -130,7 +138,7 @@ class Core {
 		$defaults       = Utility::load(ROOT_DIR . '/default_config.php');
 		$localSettings  = Utility::load(ROOT_DIR . '/config.php');
 		if (is_array($localSettings)) {
-			$this->settings = array_merge($defaults, $localSettings);
+			$this->settings = array_replace_recursive($defaults, $localSettings);
 		} else {
 			$this->settings = $defaults;
 		}
@@ -140,52 +148,28 @@ class Core {
 	}
 
 	protected function initTemplate() {
-		// Load the theme
 		/**
-		 * @triggerEvent before_twig_register this event is triggered before the the twig template engine is registered
+		 * @triggerEvent before_init_template this event is triggered before the template engine is init
 		 */
-		Event::triggerEvent('before_twig_register');
-		// default output
-		$output = 'no template found';
-		if (file_exists(THEMES_DIR . $this->settings['theme'])) {
-			$loader = new \Twig_Loader_Filesystem(THEMES_DIR . $this->settings['theme']);
-			$twig = new \Twig_Environment($loader, $this->settings['twig_config']);
-			// load the twig debug extension if required
-			if ($this->settings['twig_config']['debug']) {
-				$twig->addExtension(new \Twig_Extension_Debug());
-			}
-			$twig_vars = array(
-				'config' => $this->settings,
-				'base_dir' => rtrim(ROOT_DIR, '/'),
-				'base_url' => $this->settings['base_url'],
-				'theme_dir' => THEMES_DIR . $this->settings['theme'],
-				'theme_url' => $this->settings['base_url'] .'/'. basename(THEMES_DIR) .'/'. $this->settings['theme'],
-				'site_title' => $this->settings['site_title'],
-				'current_page' => $this->page,
-				'meta' => $this->page->getMeta(),
-				'content' => $this->page->getContent(),
-				'pages' => $this->pageRepository->findAll($this->settings),
-#				'prev_page' => $prev_page,
-#				'current_page' => $current_page,
-#				'next_page' => $next_page,
-//				'is_front_page' => $url ? false : true,
-				);
+		Event::triggerEvent('before_init_template');
 
-			$template = ($this->page->getMeta()->get('template') !== null) ? $this->page->getMeta()->get('template') : 'index';
-			/**
-			 * @triggerEvent before_render this event is triggered before the template is rendered
-			 * @param array twig_vars the twig vars
-			 * @param object twig the template engine
-			 * @param string template the template which will be used
-			 */
-			Event::triggerEvent('before_render', array('twig_vars' => &$twig_vars, 'twig' => &$twig, 'template' => &$template));
-			$output = $twig->render($template .'.html', $twig_vars);
-			/**
-			 * @triggerEvent after_render this event is triggered after the templates is rendered
-			 * @param string output the parsed and ready output
-			 */
-			Event::triggerEvent('after_render', array('output' => &$output));
-		}
+		$templateEngine   = ServiceLocator::getService('Phile_Template');
+
+		/**
+		 * @triggerEvent before_render_template this event is triggered before the template is rendered
+		 * @param \Phile\Template\TemplateInterface the template engine
+		 */
+		Event::triggerEvent('before_render_template', array('templateEngine' => &$templateEngine));
+
+		$templateEngine->setCurrentPage($this->page);
+		$output = $templateEngine->render();
+
+		/**
+		 * @triggerEvent after_render_template this event is triggered after the template is rendered
+		 * @param \Phile\Template\TemplateInterface the template engine
+		 * @param string the generated ouput
+		 */
+		Event::triggerEvent('after_render_template', array('templateEngine' => &$templateEngine, 'output' => &$output));
 		return $output;
 	}
 }
