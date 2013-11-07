@@ -1,5 +1,3 @@
 <?php
 
-return array(
-	'test' => true
-);
+return array('limit' => 55);
