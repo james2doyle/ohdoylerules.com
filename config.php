@@ -5,7 +5,7 @@ $config['install_path'] = 'james2doyle/';
 // Override any of the default settings below:
 
 $config['site_title'] = 'James Doyle';                 // Site title
-// $config['base_url'] = 'http://ohdoylerules.com'; // Override base URL (e.g. http://example.com)
+$config['base_url'] = 'http://ohdoylerules.com'; // Override base URL (e.g. http://example.com)
 $config['theme'] = 'dist'; // Set the theme (defaults to "default")
 $config['date_format'] = 'F jS, Y'; // Set the PHP date format
 
@@ -53,8 +53,9 @@ $config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);
 
 $config['plugins'] = array(
 	'phileDemoPlugin' => array('active' => true),
-	'phileParserMarkdown' => array('active' => false), // the default parser
+	'phileParserMarkdown' => array('active' => false),
 	'phileSundown' => array('active' => true),
+	'phileXMLSitemap' => array('active' => true),
 	'phileTwigFilters' => array('active' => true)
 	);
 
