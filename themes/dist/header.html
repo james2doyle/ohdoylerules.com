@@ -21,7 +21,7 @@
   {% if meta.description %}
   <meta property="og:description" content="{{ meta.description }}">
   {% else %}
-  <meta property="og:description" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ content|excerpt }}">
   {% endif %}
   <meta property="og:keywords" content="{{ meta.keywords }}">
   <meta property="og:image" content="{{ theme_url }}/images/logo.png">
