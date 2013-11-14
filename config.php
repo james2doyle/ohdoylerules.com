@@ -1,7 +1,5 @@
 <?php
 
-// try to figure out the install path
-$config['install_path'] = 'james2doyle/';
 // Override any of the default settings below:
 
 $config['site_title'] = 'James Doyle'; // Site title
