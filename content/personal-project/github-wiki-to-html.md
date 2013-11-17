@@ -30,7 +30,7 @@ for file in *.md
   do
     # convert each file to html and place it in the html directory
     # --gfm == use github flavoured markdown
-    marked -o html/$f.html $f --gfm
+    marked -o html/$file.html $file --gfm
 done
 ```
 
