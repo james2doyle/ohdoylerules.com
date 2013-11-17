@@ -54,7 +54,8 @@ $config['plugins'] = array(
 	'phileParserMarkdown' => array('active' => false),
 	'phileSundown' => array('active' => true),
 	'phileXMLSitemap' => array('active' => true),
-	'phileTwigFilters' => array('active' => true)
+	'phileTwigFilters' => array('active' => true),
+	'phileRSSFeed' => array('active' => true)
 	);
 
 return $config;
