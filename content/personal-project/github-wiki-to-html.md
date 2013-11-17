@@ -36,4 +36,4 @@ done
 
 Now if you look in the `html` directory, you will see all the markdown files have been converted and are in that folder.
 
-In the next week or so, I will write a new post about how to use this method and the [grunt assemble](https://github.com/assemble/assemble) plugin to make simple pages.
+In the next week or so, I will write a new post about how to use this method and the [grunt assemble](https://github.com/assemble/assemble "Grunt Assemble Project") plugin to make simple pages.
