@@ -19,7 +19,7 @@ class PhileRSSFeed extends \Phile\Plugin\AbstractPlugin implements \Phile\EventO
 			extract($vars);
 		}
 		ob_start();
-		include \Phile\Utility::resolveFilePath("MOD:PhileRSSFeed/".$filename);
+		include \Phile\Utility::resolveFilePath("MOD:phileRSSFeed/".$filename);
 		return ob_get_clean();
 	}
 
