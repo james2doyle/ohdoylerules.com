@@ -1,6 +1,6 @@
 /*
 Title: GoDaddy Email on Digital Ocean
-Date: 2012-11-18
+Date: 2013-11-18
 Category: Demo,Web
 Template: post
 Keywords: godaddy, email, digital ocean, hosting, mx, records, dns, settings
