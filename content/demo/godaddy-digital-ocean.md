@@ -6,7 +6,7 @@ Template: post
 Keywords: godaddy, email, digital ocean, hosting, mx, records, dns, settings
 */
 
-I was recently trying to send an email to a domain I had purchased on GoDaddy but had hosting on Digital Ocean.
+I was recently trying to send an email to a domain I had purchased on GoDaddy but had hosting on [Digital Ocean](https://www.digitalocean.com/?refcode=802f151adea5).
 
 I sent the email and a couple hours later it bounced. This wasn't good. My email was going to GoDadddy but I want the site *hosted* on Digital Ocean.
 
