@@ -52,7 +52,6 @@ $config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);
 $config['plugins'] = array(
 	'phileDemoPlugin' => array('active' => false),
 	'phileParserMarkdown' => array('active' => false),
-	'philePhpFastCache' => array('active' => false),
 	'phileSundown' => array('active' => true),
 	'phileXMLSitemap' => array('active' => true),
 	'phileTwigFilters' => array('active' => true),
