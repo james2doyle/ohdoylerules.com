@@ -19,7 +19,7 @@ $config['twitter'] = 'james2doyle';
 $config['github'] = 'james2doyle';
 $config['googleplus'] = '109231487156400680487';
 
-$config['author_blurb'] = 'I am the director and head developer at <a href="http://warpaintmedia.ca" target="_blank" title="WARPAINT Media">WARPAINT Media</a>. I create a lot of open source projects. Check me out on Github.';
+$config['author_blurb'] = 'I am the director and lead developer at <a href="http://warpaintmedia.ca" target="_blank" title="WARPAINT Media">WARPAINT Media</a>. I am a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I am trying to perfect some other skill.';
 
 /**
  * Get either a Gravatar URL or complete image tag for a specified email address.
@@ -50,8 +50,9 @@ function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts
 $config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);
 
 $config['plugins'] = array(
-	'phileDemoPlugin' => array('active' => true),
+	'phileDemoPlugin' => array('active' => false),
 	'phileParserMarkdown' => array('active' => false),
+	'philePhpFastCache' => array('active' => false),
 	'phileSundown' => array('active' => true),
 	'phileXMLSitemap' => array('active' => true),
 	'phileTwigFilters' => array('active' => true),
