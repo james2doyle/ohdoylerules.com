@@ -10,5 +10,9 @@
   })();
 </script>
 <script src="{{ theme_url }}/scripts/main.js"></script>
+{% if type == 'post' %}
+<script src="{{ theme_url }}/scripts/highlight.custom.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{% endif %}
 </body>
 </html>
