@@ -11,7 +11,7 @@ All the cool kids are using the command line these days. This allows you to run 
 
 A while ago I added this little code snippet to be .bashrc file. It means I can run `download-wordpress` in an empty folder and then it will go and grab the latest archive, unzip it, and remove the junk.
 
-```shell
+```bash
 download-wordpress () {
   wget http://wordpress.org/latest.tar.gz # get wordpress
   tar xfz latest.tar.gz # unzip the archive
