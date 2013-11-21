@@ -22,4 +22,4 @@ download-wordpress () {
 }
 ```
 
-This is a handy function. You can really use it for any CMS or Zip file you have to grab on the regular. Just remember to use an *empty directory*, or it will overwrite everything and it will make a huge mess.
+This is a handy function. You can really use it for any CMS or Zip file you have to grab on the regular. Just remember to run this in an *empty directory*, or it will overwrite everything and it will make a huge mess.
