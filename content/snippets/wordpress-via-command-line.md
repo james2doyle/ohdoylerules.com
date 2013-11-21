@@ -1,7 +1,7 @@
 /*
 Title: Get Wordpress via Command Line
 Description: Download and unzip the latest Wordpress version, all via command line
-Date: 2013-11-19
+Date: 2013-11-21
 Category: Snippets,Web
 Template: post
 Keywords: wordpress, install, bash, shell, cli, command, line, script
