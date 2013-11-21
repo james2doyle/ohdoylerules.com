@@ -8,49 +8,54 @@
   <base href="{{ base_url }}/" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ site_title }}{% if meta.title %} | {{ meta.title }}{% endif %}</title>
-  <meta itemprop="name" content="{{ meta.title }}">
-  {% if meta.description %}
-  <meta itemprop="description" content="{{ meta.description }}">
-  {% else %}
-  <meta itemprop="description" content="{{ meta.title }}">
-  {% endif %}
-  <meta itemprop="keywords" content="{{ meta.keywords }}">
-  <meta itemprop="image logo" content="{{ theme_url }}/images/logo.png">
+  <link href="https://plus.google.com/{{ config.googleplus }}" rel="author publisher" />
+  <meta property="og:site_name" content="ohdoylerules">
   <meta itemprop="url" content="{{ current_page.url }}">
   <meta itemprop="email" content="{{ config.email }}">
-  <meta property="og:title" content="{{ meta.title }}">
-  {% if meta.description %}
-  <meta property="og:description" content="{{ meta.description }}">
-  {% else %}
-  <meta property="og:description" content="{{ content|excerpt }}">
-  {% endif %}
-  <meta property="og:keywords" content="{{ meta.keywords }}">
-  <meta property="og:image" content="{{ theme_url }}/images/logo.png">
   <meta property="og:url" content="{{ base_url }}">
-  <meta property="og:site_name" content="{{ site_title }}">
-  {% if type == 'post' %}
-  <meta property="og:type" content="article" />
-  <meta property="article:author" content="{{ site_title }}" />
-  <meta property="article:section" content="{{ current_page.category }}" />
-  <meta property="article:tag" content="{{ meta.keywords }}" />
-  {% if meta.updated %}
-  <meta itemprop="dateModified" content="{{ meta.updated }}" />
-  {% endif %}
-  {% else %}
-  <link href="https://plus.google.com/{{ config.googleplus }}" rel="author publisher" />
+  {% if current_page.title = 'Homepage' %}
   <meta property="og:type" content="website" />
-  {% endif %}
+  <meta property="og:title" content="{{ site_title }}">
+  <meta itemprop="name" content="{{ site_title }}">
+  <meta name="twitter:title" content="{{ site_title }}">
+  <meta itemprop="description" content="{{ meta.description }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta name="twitter:description" content="{{ meta.description }}">
+  <meta itemprop="keywords" content="{{ meta.keywords }}">
+  <meta property="og:keywords" content="{{ meta.keywords }}">
+  <meta itemprop="image logo" content="{{ theme_url }}/images/logo.png">
+  <meta property="og:image" content="{{ theme_url }}/images/logo.png">
+  <meta name="twitter:image:src" content="{{ theme_url }}/images/logo.png">
+  <meta name="twitter:domain" content="{{ base_url }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="http://twitter.com/james2doyle">
-  <meta name="twitter:title" content="{{ meta.title }}">
-  {% if meta.description %}
-  <meta name="twitter:description" content="{{ meta.description }}">
-  {% else %}
-  <meta name="twitter:description" content="{{ meta.title }}">
-  {% endif %}
   <meta name="twitter:creator" content="http://twitter.com/james2doyle">
-  <meta name="twitter:image:src" content="{{ theme_url }}/images/logo.png">
-  <meta name="twitter:domain" content="james2doyle.com">
+  {% endif %}
+  {% if type == 'post' %}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ meta.title }}">
+    <meta property="article:author" content="{{ site_title }}" />
+    <meta property="article:section" content="{{ current_page.category }}" />
+    <meta property="article:tag" content="{{ meta.keywords }}" />
+    {% if meta.updated %}
+    <meta itemprop="dateModified" content="{{ meta.updated }}" />
+    {% endif %}
+    {% if meta.description %}
+    <meta itemprop="description" content="{{ meta.description }}">
+    <meta property="og:description" content="{{ meta.description }}">
+    <meta name="twitter:description" content="{{ meta.description }}">
+    {% else %}
+    <meta itemprop="description" content="{{ content|excerpt }}">
+    <meta name="twitter:description" content="{{ content|excerpt }}">
+    <meta property="og:description" content="{{ content|excerpt }}">
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://twitter.com/james2doyle">
+    <meta name="twitter:title" content="{{ meta.title }}">
+    <meta name="twitter:creator" content="http://twitter.com/james2doyle">
+    <meta name="twitter:image:src" content="{{ theme_url }}/images/logo.png">
+    <meta name="twitter:domain" content="{{ base_url }}">
+  {% endif %}
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="{{ theme_url }}/favicon.ico" />
   <link href="http://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
