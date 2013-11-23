@@ -1,4 +1,4 @@
-{% include 'header.html' with {'type': 'post'} %}
+{% include 'partial/header.html' with {'type': 'post'} %}
 <div itemscope itemtype="http://schema.org/BlogPosting">
   <header class="header-post">
     <h1 itemprop="name headline">{{ meta.title }}</h1>
@@ -38,4 +38,4 @@
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
   </div>
 </div>
-{% include 'footer.html' with {'type': 'post'} %}
+{% include 'partial/footer.html' with {'type': 'post'} %}

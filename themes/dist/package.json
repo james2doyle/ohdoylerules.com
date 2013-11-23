@@ -1,0 +1,24 @@
+{
+  "name": "pico-grunt-themeing",
+  "description": "pico-grunt-themeing template",
+  "version": "1.0.0",
+  "homepage": "http://ohdoylerules.com",
+  "author": {
+    "name": "James Doyle",
+    "email": "james2doyle@gmail.com",
+    "url": "http://ohdoylerules.com/"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  }],
+  "dependencies": {
+    "grunt": "~0.4.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "*",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-autoprefixer": "~0.3.0"
+  }
+}
