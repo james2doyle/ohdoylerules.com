@@ -33,7 +33,7 @@ Thumbs.db
 # User themes
 themes/*
 !themes/index.html
-!themes/default/*
+!themes/dist
 
 # PHPStorm settings
 .idea
