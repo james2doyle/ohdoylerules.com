@@ -1,9 +1,14 @@
-if ('ontouchstart' in window) {
-  var header = document.getElementsByTagName("header")[0];
-  header.addEventListener("touchend", function () {
-    this.classList.toggle("active");
-  }, !0);
-} else {
-  document.getElementsByTagName("html")[0].className += " no-touch";
+var header = document.getElementsByTagName('header')[0];
+
+function toggleActive() {
+  this.classList.toggle('active');
 }
-// document.addEventListener('DOMContentLoaded', function() {});
+
+function init() {
+  if ('ontouchstart' in window) {
+    header.addEventListener('touchstart', toggleActive, false);
+  } else {
+    header.classList.toggle('no-touch');
+  }
+}
+document.addEventListener('DOMContentLoaded', init());

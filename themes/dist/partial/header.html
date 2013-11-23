@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <base href="{{ base_url }}/" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <title>{{ site_title }}{% if meta.title %} | {{ meta.title }}{% endif %}</title>
   <link href="https://plus.google.com/{{ config.googleplus }}" rel="author publisher" />
   <meta property="og:site_name" content="ohdoylerules">
@@ -59,9 +60,9 @@
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="{{ theme_url }}/favicon.ico" />
   <link href="http://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{{ theme_url }}/styles/main.css">
+  <link rel="stylesheet" href="{{ theme_url }}/css/main.css">
   {% if type == 'post' %}
-  <link rel="stylesheet" href="{{ theme_url }}/styles/tomorrow-night.css">
+  <link rel="stylesheet" href="{{ theme_url }}/css/tomorrow-night.css">
   {% endif %}
   <!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
