@@ -1,5 +1,5 @@
 /*
-Title: Grunt Highlight
+Title: Grunt Highlight Plugin
 Description: Grunt task for running Highlight.js over files or blocks of code
 Date: 2013-11-25
 Category: Personal Project,Web
