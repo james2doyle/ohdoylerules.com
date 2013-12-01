@@ -2138,10 +2138,14 @@ a:active {
 blockquote {
   border-left: 2px solid #eb694b;
   margin: 0;
-  padding: 0.5em 0 1em 2em;
+  padding: 0.5em 0 0.5em 1em;
   font-family: Georgia;
   font-style: italic;
   font-weight: 700;
+}
+
+blockquote p {
+  margin: 0;
 }
 
 p img {
