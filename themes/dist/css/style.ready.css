@@ -1649,7 +1649,8 @@ header {
     border-bottom: 1px solid #dddddd;
     padding-bottom: 3em; }
     .the-loop article h2 {
-      font-size: 4em; }
+      font-size: 4em;
+      line-height: 1; }
     .the-loop article h2 a {
       color: inherit;
       transform: color 0.4s ease; }
