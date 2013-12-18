@@ -1709,6 +1709,10 @@ header {
   text-align: center;
   margin: 1em 0; }
 
+.center img {
+  max-width: 100%;
+  height: auto; }
+
 .cf:before, .cf:after {
   content: " ";
   display: table; }
