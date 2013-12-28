@@ -3,7 +3,7 @@
 // Override any of the default settings below:
 
 $config['site_title'] = 'James Doyle'; // Site title
-$config['base_url'] = 'http://ohdoylerules.com'; // Override base URL (e.g. http://example.com)
+// $config['base_url'] = 'http://ohdoylerules.com'; // Override base URL (e.g. http://example.com)
 $config['theme'] = 'dist'; // Set the theme (defaults to "default")
 $config['date_format'] = 'F jS, Y'; // Set the PHP date format
 
@@ -20,6 +20,9 @@ $config['github'] = 'james2doyle';
 $config['googleplus'] = '109231487156400680487';
 
 $config['author_blurb'] = 'I am the director and lead developer at <a href="http://warpaintmedia.ca" target="_blank" title="WARPAINT Media">WARPAINT Media</a>. I am a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I am trying to perfect some other skill.';
+
+$config['author_helpline_title'] = 'Need Help?';
+$config['author_helpline'] = 'Are you having trouble with something? I can give you some advice, instruction, or <em>even look at your code</em>! All of this, for only <a href="http://bitcoin.com/" target="_blank" title="What is BitCoin?"><strong>0.02btc/hour</strong></a>. Or we can work something out.';
 
 /**
  * Get either a Gravatar URL or complete image tag for a specified email address.
