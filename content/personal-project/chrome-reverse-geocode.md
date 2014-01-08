@@ -13,7 +13,7 @@ In the process of building the site for [Textbooks For Change](http://textbooksf
 The site is built on [PhileCMS](http://philecms.github.io/Phile/) so it is very fast, but requires a little more savvy-ness than normal. I added the static Google Map that is based on the list of coordinates they enter in.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/reverse-geocode.png" target="_blank"><img alt="chrome reverse geocode app screenshot" src="http://ohdoylerules.com/content/images/reverse-geocode.png" ></a>
+  <a href="http://goo.gl/Z15Teh" target="_blank"><img alt="chrome reverse geocode app screenshot" src="http://ohdoylerules.com/content/images/reverse-geocode.png" ></a>
 </div>
 
 It is very easy to update, but not quite that easy to get the coordinates. There is a Google tool to do this, but it is actually not as nice (but I have an obvious bias).
