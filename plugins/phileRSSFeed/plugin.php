@@ -39,9 +39,18 @@ class PhileRSSFeed extends \Phile\Plugin\AbstractPlugin implements \Phile\EventO
 						'title' => $pages[$i]->getTitle(),
 						'url' => $pages[$i]->getUrl(),
 						'content' => $pages[$i]->getContent(),
-						'meta' => $pages[$i]->getMeta()
+						'meta' => $pages[$i]->getMeta(),
+						'date' => $pages[$i]->getMeta()['date']
 						);
 				}
+
+				function build_sorter($key) {
+					return function ($a, $b) use ($key) {
+						return strnatcmp($b[$key], $a[$key]);
+					};
+				}
+
+				usort($this->config['pages'], build_sorter($this->settings['post_key']));
 				// set the appropriate headers to RSS feeds
 				header($_SERVER['SERVER_PROTOCOL'].' 200 OK');
 				header("Content-Type: application/rss+xml; charset=UTF-8");
