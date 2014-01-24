@@ -1,6 +1,6 @@
 /*
 Title: Groupon SVG logo
-Date: 2013-10-31
+Date: 2014-01-24
 Category: Personal Project,Web
 Template: post
 Keywords: groupon, svg, vector, ai, image, logo
