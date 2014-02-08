@@ -1,6 +1,9 @@
 <?php
 
-// Override any of the default settings below:
+// use this config file to overwrite the defaults from default_config.php
+// or to make local config changes.
+$config = array();
+$config['encryptionKey'] = '';
 
 $config['site_title'] = 'James Doyle'; // Site title
 // $config['base_url'] = 'http://ohdoylerules.com'; // Override base URL (e.g. http://example.com)
