@@ -12,9 +12,9 @@
   <title>{{ site_title }}{% if meta.title %} | {{ meta.title }}{% endif %}</title>
   <link href="https://plus.google.com/{{ config.googleplus }}" rel="author publisher" />
   <meta property="og:site_name" content="ohdoylerules">
-  <meta itemprop="url" content="{{ current_page.url }}">
+  <meta itemprop="url" content="{{ base_url }}/{{ current_page.url }}">
   <meta itemprop="email" content="{{ config.email }}">
-  <meta property="og:url" content="{{ base_url }}">
+  <meta property="og:url" content="{{ base_url }}/{{ current_page.url }}">
   {% if current_page.title == 'Homepage' %}
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ site_title }}">
