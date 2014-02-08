@@ -22,7 +22,7 @@ If you want a technically in-depth overview, checkout [websocket.org](http://www
 Anyway, I made a [little chat app](https://github.com/james2doyle/php-socket-chat) with [Ratchet](http://socketo.me/). People knock PHP for all the bad things it does. But getting the WebSocket example running, actually wasn't that bad. Apparently Apache doesn't play nice with Ratchet (not sure about *pure* WebSockets) so you have to use the [built-in PHP server](http://www.php.net/manual/en/features.commandline.webserver.php) which comes with PHP 5.4.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/php-socket-form.png" target="_blank" title="php ratchet socket server form example"><img alt="php ratchet socket server form example" src="http://ohdoylerules.com/content/images/php-socket-form.png" width="197" height="111" ></a>
+  <a href="http://ohdoylerules.com/content/images/php-socket-animation.gif" target="_blank" title="php ratchet socket server form example"><img alt="php ratchet socket server form example" src="http://ohdoylerules.com/content/images/php-socket-animation.gif" width="252" height="246" ></a>
 </div>
 
 The app I made is pretty much a copy paste from the [Rachet Hello World Example](http://socketo.me/docs/hello-world) but tried to make the simplest chat app I could. The server is actually pretty close the Hello World code, just with a bunch of extra client-side javascript.
