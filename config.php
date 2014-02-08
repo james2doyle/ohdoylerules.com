@@ -3,7 +3,7 @@
 // use this config file to overwrite the defaults from default_config.php
 // or to make local config changes.
 $config = array();
-$config['encryptionKey'] = '';
+$config['encryptionKey'] = 'P6K5CYb6RRXwRL3O?}b8JvRjhydM2Ltnw=L4uyYmp46tNUkMTVTKCJ?/RiT/HAq7';
 
 $config['site_title'] = 'James Doyle'; // Site title
 // $config['base_url'] = 'http://ohdoylerules.com'; // Override base URL (e.g. http://example.com)
@@ -53,7 +53,10 @@ function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts
 	return $url;
 }
 
-$config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);
+// $config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);
+$config['gravatar'] = 'http://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=100&d=mm&r=g';
+
+define('PRODUCTION', false);
 
 $config['plugins'] = array(
 	'phileDemoPlugin' => array('active' => false),
@@ -61,7 +64,9 @@ $config['plugins'] = array(
 	'phileSundown' => array('active' => true),
 	'phileXMLSitemap' => array('active' => true),
 	'phileTwigFilters' => array('active' => true),
-	'phileRSSFeed' => array('active' => true)
+	'phileRSSFeed' => array('active' => true),
+	'philePhpFastCache' => array('active' => PRODUCTION),
+	'phileSimpleFileDataPersistence' => array('active' => PRODUCTION)
 	);
 
 return $config;
