@@ -13,16 +13,12 @@ I know why this is, but I always end up looking around for some random password 
 
 Yes there is. If you have the magical [OpenSSL](https://www.openssl.org/ "OpenSSL Website") installed, which most do, you can use it to generate a random string.
 
-I found a [article online](http://osxdaily.com/2011/05/10/generate-random-passwords-command-line/ "Generate Random Passwords from the Command Line") that uses base64 to generate a string of a certain length. The only thing is that base64 is padded with 8 bits. Which means that if you want 32 then you need to use 24. You can figure out the simple math.
-
-So I included a subtraction step in the function. Whatever number I put in as the argument, **it will subtract 8 from it**.
-
-If you **do not want this**, then just swap the commented code on that line!
+I found a [article online](http://osxdaily.com/2011/05/10/generate-random-passwords-command-line/ "Generate Random Passwords from the Command Line") that uses base64 to generate a string of a certain length. The only thing is that base64 is padded with 8 bits. Which means that if you want 32 then you need to use 24. This goes up exponentially as the number gets bigger. So there is a trim part of the function that clips off the extra characters.
 
 Here is the function broken down into steps:
 
 * pass a number to the function
-* subtract 8 (if you leave that code in)
+* cut the resulting string
 * generate a base64 string using that number
 * echo out the result
 * copy the output to the clipboard with a newline
@@ -45,15 +41,15 @@ Now for the actual shell function:
 
 ```shell
 # if the argument is a number
-# remove 8 so that there is no base64 padding
+# cut the string so that there is no base64 padding
 # generate a random password of the specified length
 # then copy it to the clipboard without a newline
 # usage: password 32
 password() {
-  LENGTH=`expr $1 - 8` # LENGTH="$1"
+  LENGTH="$1"
   REGEX='^[0-9]+$'
   if [[ $LENGTH =~ $REGEX ]] ; then
-    PASSWD=$(openssl rand -base64 $LENGTH)
+    PASSWD=$(openssl rand -base64 $LENGTH | head -c$LENGTH)
     echo $PASSWD
     echo $PASSWD | tr -d '\n' | pbcopy
     echo "Password copied to clipboard"
