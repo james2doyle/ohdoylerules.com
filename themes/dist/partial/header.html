@@ -11,15 +11,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <title>{{ site_title }}{% if meta.title %} | {{ meta.title }}{% endif %}</title>
   <link href="https://plus.google.com/{{ config.googleplus }}" rel="author publisher" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ site_title }}">
+  <meta itemprop="name" content="{{ site_title }}">
   <meta property="og:site_name" content="ohdoylerules">
   <meta itemprop="url" content="{{ base_url }}/{{ current_page.url }}">
   <meta itemprop="email" content="{{ config.email }}">
   <meta property="og:url" content="{{ base_url }}/{{ current_page.url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ config.twitter }}">
+  <meta name="twitter:title" content="{{ meta.title }}">
+  <meta name="twitter:creator" content="@{{ config.twitter }}">
+  <meta name="twitter:image:src" content="{{ theme_url }}/images/logo.png">
+  <meta name="twitter:domain" content="{{ base_url }}">
   {% if current_page.title == 'Homepage' %}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ site_title }}">
-  <meta itemprop="name" content="{{ site_title }}">
-  <meta name="twitter:title" content="{{ site_title }}">
   <meta itemprop="description" content="{{ meta.description }}">
   <meta property="og:description" content="{{ meta.description }}">
   <meta name="twitter:description" content="{{ meta.description }}">
@@ -27,11 +32,6 @@
   <meta property="og:keywords" content="{{ meta.keywords }}">
   <meta itemprop="image logo" content="{{ theme_url }}/images/logo.png">
   <meta property="og:image" content="{{ theme_url }}/images/logo.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="{{ config.twitter }}">
-  <meta name="twitter:creator" content="{{ config.twitter }}">
-  <meta name="twitter:image:src" content="{{ theme_url }}/images/logo.png">
-  <meta name="twitter:domain" content="{{ base_url }}">
   {% endif %}
   {% if type == 'post' %}
     <meta property="og:type" content="article" />
