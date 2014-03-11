@@ -40,18 +40,18 @@ $config['author_helpline'] = 'Are you having trouble with something? I can give 
  * @source http://gravatar.com/site/implement/images/php/
  */
 
-function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
-	$url = 'http://www.gravatar.com/avatar/';
-	$url .= md5( strtolower( trim( $email ) ) );
-	$url .= "?s=$s&d=$d&r=$r";
-	if ( $img ) {
-		$url = '<img src="' . $url . '"';
-		foreach ( $atts as $key => $val )
-			$url .= ' ' . $key . '="' . $val . '"';
-		$url .= ' />';
-	}
-	return $url;
-}
+// function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
+// 	$url = 'http://www.gravatar.com/avatar/';
+// 	$url .= md5( strtolower( trim( $email ) ) );
+// 	$url .= "?s=$s&d=$d&r=$r";
+// 	if ( $img ) {
+// 		$url = '<img src="' . $url . '"';
+// 		foreach ( $atts as $key => $val )
+// 			$url .= ' ' . $key . '="' . $val . '"';
+// 		$url .= ' />';
+// 	}
+// 	return $url;
+// }
 
 // $config['gravatar'] = get_gravatar('james2doyle@gmail.com', 100);
 $config['gravatar'] = 'http://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=100&d=mm&r=g';
