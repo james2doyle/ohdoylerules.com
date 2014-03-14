@@ -22,9 +22,11 @@ As you can see, you must have a *data-model* and a *data-controller* set on your
 
 This would be the javascript for this element:
 
+```
 var sb = SimpleBinder('number', function(input, model) {
   console.log(input.value);
 });
+```
 
 Now the `sb` variable it a simplebinder object. It has a few nice methods that you can use now:
 
