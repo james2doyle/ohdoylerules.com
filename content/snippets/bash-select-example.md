@@ -11,12 +11,12 @@ I recently bought to [raspberry pi computers](http://raspberrypi.org). One is fo
 
 Since we have dynamic IPs setup in the office, and I have the same at my house, I needed to be able to connect using the MAc address of the pi. I ended up writing a little script to get the IP based on the MAC Address and then ssh into the computer. Pretty slick.
 
-To make my life easier I used the `select` command in bash. The [documentation for select](http://www.gnu.org/software/bash/manual/bashref.html#Conditional-Constructs) leave a lot to be desired. So I had to fiddle with it until I got it right. Here is a simple boilerplate for a bash script using select:
+To make my life easier I used the `select` command in bash. The [documentation for select](http://www.gnu.org/software/bash/manual/bashref.html#Conditional-Constructs) leaves a lot to be desired. So I had to fiddle with it until I got it right. Here is a simple boilerplate for a bash script using select:
 
 #### Function
 
 ```shell
-#!/bin/sh
+#!/usr/bin/env bash
 
 speak() {
   echo "$1 $2"
@@ -28,7 +28,7 @@ do
   case $ab in
     "Hello") speak "Hello" "my friend";;
     "Bonjour") speak "Bonjour" "mon ami";;
-    *) echo "invalid option";; # you picked neither 1 nor 2
+    *) echo "invalid option";; # you picked anything but 1 or 2
   esac
 done
 ```
@@ -37,7 +37,7 @@ Save that in a file called `say-hello.sh` and change the rights to allow executi
 
 #### Output:
 
-```shell
+```
 $ ./say-hello.sh
   1) Hello
   2) Bonjour
@@ -46,4 +46,4 @@ $ ./say-hello.sh
 $
 ```
 
-You can see that in this example I push `1`. You can run it again and push `2` to see the French words show up.
+You can see that in this example I push `1`. If I run it again and push `2`, you will see the French words show up.
