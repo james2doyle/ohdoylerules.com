@@ -7,7 +7,7 @@ Template: post
 Keywords: select, bash, command, line, cli, terminal, function, arguments
 */
 
-I recently bought to [raspberry pi computers](http://raspberrypi.org). One is for home and one is for the office.
+I recently bought 2 [raspberry pi computers](http://raspberrypi.org). One is for home and one is for the office.
 
 Since we have dynamic IPs setup in the office, and I have the same at my house, I needed to be able to connect using the MAc address of the pi. I ended up writing a little script to get the IP based on the MAC Address and then ssh into the computer. Pretty slick.
 
