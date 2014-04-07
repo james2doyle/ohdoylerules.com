@@ -1,5 +1,5 @@
 /*
-Title: Basc select example
+Title: Bash select example
 Description: An example of how to use the select command in bash to pass arguments to functions
 Date: 2014-04-07
 Category: Snippets,Web
@@ -7,9 +7,9 @@ Template: post
 Keywords: select, bash, command, line, cli, terminal, function, arguments
 */
 
-I recently bought 2 [raspberry pi computers](http://raspberrypi.org). One is for home and one is for the office.
+I recently bought 2 [raspberry pi computers](http://raspberrypi.org). One is for home, and one is for the office.
 
-Since we have dynamic IPs setup in the office, and I have the same at my house, I needed to be able to connect using the MAc address of the pi. I ended up writing a little script to get the IP based on the MAC Address and then ssh into the computer. Pretty slick.
+Since we have dynamic IPs setup in the office, and I have the same at my house, I needed to be able to connect using the MAC address of the pi. I ended up writing a little script to get the IP based on the MAC Address, and then ssh into the computer. Pretty slick.
 
 To make my life easier I used the `select` command in bash. The [documentation for select](http://www.gnu.org/software/bash/manual/bashref.html#Conditional-Constructs) leaves a lot to be desired. So I had to fiddle with it until I got it right. Here is a simple boilerplate for a bash script using select:
 
