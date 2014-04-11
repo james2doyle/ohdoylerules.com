@@ -7,7 +7,7 @@ Template: post
 Keywords: grunt, highlight.js, prettyprint, plugin, node,
 */
 
-Over the weekend, in a couple hours, I wrote this grunt plugin for [Highlight.js](highlightjs.org). I know that [marked](https://github.com/chjj/marked) does an excellent job of parsing markdown, and can also use highlight, but I wanted something I could use in [assemble](https://github.com/assemble/assemble/) for HTML parsing or full css/js files.
+Over the weekend, in a couple hours, I wrote this grunt plugin for [Highlight.js](http://highlightjs.org). I know that [marked](https://github.com/chjj/marked) does an excellent job of parsing markdown, and can also use highlight, but I wanted something I could use in [assemble](https://github.com/assemble/assemble/) for HTML parsing or full css/js files.
 
 This was made much easier thanks to the [yeoman-gruntplugin](https://github.com/yeoman/generator-gruntplugin) project.
 
