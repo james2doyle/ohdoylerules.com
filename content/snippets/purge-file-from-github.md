@@ -12,6 +12,7 @@ Ever wanted to permanently remove a file from a repo and it's history?
 Add this snippet to the end of your `.bashrc` (or `.zshrc` if you are a cool guy developer):
 
 ```sh
+# remove a file from the repo and from the history
 git-purge() {
   FN="git rm --cached --ignore-unmatch $1"
   git filter-branch --force --index-filter $FN --prune-empty --tag-name-filter cat -- --all
@@ -32,4 +33,4 @@ git commit -m "Add MYFILE to .gitignore"
 
 Then to update the live repo, run `git push origin master --force`.
 
-This process will remove the file from your repo, and from the history. This is in-case you committed a sensitive file.
+This process will remove the file from your repo, and from the history. This is in-case you committed a sensitive file. If you get in a real pickle, you can use the [BFG Repo-Cleaner](http://rtyley.github.io/bfg-repo-cleaner/ "BFG Repo-Cleaner")
