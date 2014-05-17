@@ -1,6 +1,6 @@
 /*
 Title: Tips For Using SVGs
-Date: 2014-05-15
+Date: 2014-05-17
 Category: Web
 Template: post
 Keywords: svg, image, pattern, base64, embed, object, safari, issues, viewbox, requestAnimationFrame, mask, animations, transitions
