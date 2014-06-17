@@ -1,6 +1,7 @@
 /*
 Title: Vim Vector Logo
 Date: 2014-03-04
+Updated: 2014-17-06
 Category: Personal Project,Web
 Template: post
 Desctiption: The Vim logo in a vector SVG format. Also includes a ICNS file for OSX.
@@ -24,3 +25,8 @@ If you happen to use this for anything, it would be nice to recieve some credit 
 I made a icns version for OSX. You can [download it here](http://ohdoylerules.com/content/images/vim.icns).
 
 You can change the MacVim icon if you want. I happen to think this one is a little nicer.
+
+#### Update 2
+
+I have found another person who wanted a new vim icon. They added it to the fork of [MacVim](https://code.google.com/p/macvim/). Here is the [commit from his repo](https://github.com/kaishin/macvim/commit/fedcb4579b68439dba85b9d7fa4b076faac7ebad) with the new icon.
+
