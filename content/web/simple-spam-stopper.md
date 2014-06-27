@@ -6,7 +6,7 @@ Template: post
 Keywords: spam, email, contact, form, captcha, recaptcha, fields, validation, honey, pot
 */
 
-For the last year at [WARPAINT Media](http://warpaintmedia.ca) we have been getting assaulted with spam. Everything from "Chinese Jerseys" and "Super SEO Ultra Elite Package Extreme" offers.
+For the last year at [WARPAINT Media](http://warpaintmedia.ca), we have been getting assaulted with spam. Everything from "Chinese Jerseys" and "Super SEO Ultra Elite Package Extreme" offers.
 
 We are using [PyroCMS](http://pyrocms.com) for the website. The default contact plugin is pretty awesome. It has some really great features and couldn't be easier to use. There is a little [honeypot](http://www.sitepoint.com/forums/showthread.php?946120-Spam-Honey-Pot-trap&s=9cfd3419319d5c9bd1f5d597cdfa6113&p=5278832&viewfull=1#post5278832) for spam bots, but it seems to not be doing a great job, at least for us.
 
