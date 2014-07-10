@@ -63,3 +63,11 @@ Click on that item and make sure it is checked off, it should be by default. The
 </div>
 
 You can use these steps to run any AppleScript on a file you choose. Pretty slick!
+
+Now when you have a file of folder selected in the Finder, you can right-click, go to Services, and select `Copy Path To Clipboard`!
+
+<div class="center">
+  <a href="http://ohdoylerules.com/content/images/clipboard-4.png" target="_blank" >
+    <img src="http://ohdoylerules.com/content/images/clipboard-4.png" width="646" />
+  </a>
+</div>
