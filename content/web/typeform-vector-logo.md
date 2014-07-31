@@ -13,3 +13,7 @@ Another difficult logo to find. This one is for the fun new Typeform service. Ty
 </div>
 
 If you are a photoshopper, you can also <a href="http://ohdoylerules.com/content/images/typeform.eps" title="typeform eps vector" target="_blank">grab the EPS file</a>.
+
+### Update
+
+Here is the [official repository of Typeform branding graphics](http://bit.ly/WPjXfZ).
