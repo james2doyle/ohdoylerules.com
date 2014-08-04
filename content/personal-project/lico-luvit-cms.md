@@ -50,3 +50,7 @@ I did some other testing against my other project, [PhileCMS](https://github.com
 ### There are issues!
 
 Yeah I bet. I am not a Lua developer. I made this over a week-long period trying to learn Lua. If you notice some funky stuff or clean n00b issues, please create issues or pull requests.
+
+### Repo?
+
+Here is the [link to the Github repository](https://github.com/james2doyle/Lico).
