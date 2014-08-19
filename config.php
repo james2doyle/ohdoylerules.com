@@ -21,6 +21,7 @@ $config['email'] = 'james2doyle@gmail.com';
 $config['twitter'] = 'james2doyle';
 $config['github'] = 'james2doyle';
 $config['googleplus'] = '109231487156400680487';
+$config['referral_code'] = "https://www.digitalocean.com/?refcode=baa9cb97566c";
 
 $config['author_blurb'] = 'I am the director and lead developer at <a href="http://warpaintmedia.ca" target="_blank" title="WARPAINT Media">WARPAINT Media</a>. I am a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I am trying to perfect some other skill.';
 
