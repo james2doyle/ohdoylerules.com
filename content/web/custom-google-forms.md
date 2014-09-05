@@ -28,6 +28,8 @@ This is just the normal way to make a new google form. If you have made one befo
 
 ### Hosting the form
 
+**Edit: This feature is [no longer avaliable](https://support.google.com/drive/answer/2881970?hl=en) to the new google drive.**
+
 Something relatively new to Google drive is the ability to host static HTML pages.
 
 * Create a public shared folder
