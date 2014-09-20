@@ -2,7 +2,7 @@
 Title: Custom Google Forms
 Author: James Doyle
 Date: 2013-05-22
-Updated: 2014-09-05
+Updated: 2014-09-20
 Category: Personal Project, Web
 Template: post
 Keywords: CSS, custom, drive, forms, Github, google, less, node, open source, preprocessors
@@ -11,6 +11,8 @@ Keywords: CSS, custom, drive, forms, Github, google, less, node, open source, pr
 <div class="center">
   <img src="http://ohdoylerules.com/content/images/googleforms.png" alt="" align="middle">
 </div>
+
+**Update: Google has added the tools to customize a form with logos, colours, fonts, and backgrounds. Use this guide if you want even more custom styles, or if you want to embed the form within another page.**
 
 I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something. After a bit of research I have found a way to create custom forms rather easily.
 
