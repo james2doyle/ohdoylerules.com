@@ -23,7 +23,7 @@ Now this isn't going to work when you try to import it into 1Password. You will 
 
 Here is an export example:
 
-> ODR PW,super_cool_guy,ilovepuppies5000,http://ohdoylerules.com,"This is a fake entry"
+> ODR PW,super_cool_guy,ilovepuppies5000,http\://ohdoylerules\.com,"This is a fake entry"
 
 Here is one that is less ideal, or maybe had some info missing:
 
@@ -37,7 +37,7 @@ Now we need to put our CSV in this format. We need to *wrap the sections in quot
 
 Here is how we would arrange those 2 examples from before.
 
-> "ODR PW","http://ohdoylerules.com","super_cool_guy","ilovepuppies5000","This is a fake entry"
+> "ODR PW","http\://ohdoylerules\.com","super_cool_guy","ilovepuppies5000","This is a fake entry"
 
 Here is the ugly one, and how to fix it:
 
