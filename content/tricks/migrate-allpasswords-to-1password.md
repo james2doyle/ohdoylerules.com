@@ -15,7 +15,7 @@ I have about 130 logins in AllPasswords, so I wasn't about to manually enter in 
 
 ### AllPasswords Export Format
 
-`Title, Username, Password, URL, Notes`
+> Title, Username, Password, URL, Notes
 
 The above line is the export format for AllPasswords.
 
@@ -23,25 +23,25 @@ Now this isn't going to work when you try to import it into 1Password. You will 
 
 Here is an export example:
 
-`ODR PW,super_cool_guy,ilovepuppies5000,http://ohdoylerules.com,"This is a fake entry"`
+> ODR PW,super_cool_guy,ilovepuppies5000,http://ohdoylerules.com,"This is a fake entry"
 
 Here is one that is less ideal, or maybe had some info missing:
 
-`ODR PW,super_cool_guy,ilovepuppies5000,,`
+> ODR PW,super_cool_guy,ilovepuppies5000,,
 
 ### 1Password Import Expectations
 
-`"Title","Location (URL)","Username","Password","Notes"`
+> "Title","Location (URL)","Username","Password","Notes"
 
 Now we need to put our CSV in this format. We need to *wrap the sections in quotes*, and we need to make sure that the *empty fields are just empty quotes*.
 
 Here is how we would arrange those 2 examples from before.
 
-`"ODR PW","http://ohdoylerules.com","super_cool_guy","ilovepuppies5000","This is a fake entry"`
+> "ODR PW","http://ohdoylerules.com","super_cool_guy","ilovepuppies5000","This is a fake entry"
 
 Here is the ugly one, and how to fix it:
 
-`"ODR PW","","super_cool_guy","ilovepuppies5000",""`
+> "ODR PW","","super_cool_guy","ilovepuppies5000",""
 
 ### Finding Issues
 
