@@ -11,7 +11,7 @@ Finally, I found a good excuse to re-write my old [Pyro Module Generator](http:/
 
 This tool was originally made when I was freelancing. I built it off the [Sample Module project on Github](https://github.com/pyrocms/sample). I wanted to be able to build modules quickly, since I wasn't using streams. In fact, streams wasn't even a thing when I made the first version of the module generator.
 
-Again, I have made a [live hosted version of the generator](dev.warpaintmedia.ca/pyro-module-generator/ "PyroCMS Module Generator Website") which you can use without having to have anything setup locally. The generated module is zipped and then ready for download.
+Again, I have made a [live hosted version of the generator](http://dev.warpaintmedia.ca/pyro-module-generator/ "PyroCMS Module Generator Website") which you can use without having to have anything setup locally. The generated module is zipped and then ready for download.
 
 The [source is also on Github](https://github.com/james2doyle/pyro-module-generator "PyroCMS Module Generator On Github") for people who want to patch issues or fork.
 
