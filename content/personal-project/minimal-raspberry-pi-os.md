@@ -133,4 +133,4 @@ Try running `lit version` and then `luvit --version` to see if the frameworks ar
 
 ### Finished
 
-You should now have everything setup to get around.
+You should now have everything setup to get around. If you find any problems with my instructions, please let me know and I will update them!
