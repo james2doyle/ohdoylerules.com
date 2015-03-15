@@ -97,20 +97,22 @@ Complete the following to setup Samba:
 * open the config with `vi /etc/samba/smb.conf`
 * then complete the following:
 
-    \# find in the top part of the file
-    workgroup = your_workgroup_name
-    \# find and uncomment this line
-    wins support = yes
-    \# add to the bottom of the file
-    [pihome]
-       comment= Pi Home
-       path=/home/
-       browseable=Yes
-       writeable=Yes
-       only guest=no
-       create mask=0777
-       directory mask=0777
-       public=no
+```
+# find in the top part of the file
+workgroup = your_workgroup_name
+# find and uncomment this line
+wins support = yes
+# add to the bottom of the file
+[pihome]
+  comment= Pi Home
+  path=/home/
+  browseable=Yes
+  writeable=Yes
+  only guest=no
+  create mask=0777
+  directory mask=0777
+  public=no
+```
 
 * set the samba password with `smbpasswd -a root`
 
