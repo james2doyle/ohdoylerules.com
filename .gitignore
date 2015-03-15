@@ -48,3 +48,6 @@ temp/cache/*
 # datastorage
 datastorage/*
 !datastorage/.htaccess
+
+*.sublime-project
+*.sublime-workspace
