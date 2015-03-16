@@ -1,6 +1,7 @@
 /*
 Title: Minimal Raspberry Pi OS
 Date: 2015-03-14
+Updated: 2015-03-16
 Category: Personal Project, Web
 Template: post
 Description: Setup and improve the Moebius OS for the Raspberry Pi
@@ -42,7 +43,13 @@ Moebius is the name of the OS, but also the name of a sweet little built-in comm
 
 #### SSH Niceness
 
-Add your public key to Moebius in order to ssh without a password. Just create `~/.ssh` and then use `vi ~/.ssh/authorized_keys` to paste in your public key.
+Add your public key to Moebius in order to ssh without a password. This is not required, but it does make popping in and out of the pi nice and quick. Plus, no password to remember!
+
+Moebius does not come with `nano`. If you are not familiar with the vi tool, you should [use this site to learn some basics](http://www.washington.edu/computing/unix/vi.html).
+
+Just create `~/.ssh` and then use `vi ~/.ssh/authorized_keys` to create a new file, then paste in your public key.
+
+### Dev Environment Setup
 
 * Run `moebius` and select `Basic/Initial Setup`
 * Choose `Autoresize SD partition`, follow the instructions
@@ -120,7 +127,7 @@ wins support = yes
 
 *Again, have lang.gcc installed before continuing*.
 
-I have been playing with [Lit](https://github.com/luvit/lit) and [Luvit](https://github.com/luvit/luvit) quite a bit lately, so let's install them with a series of commands
+I have been playing with [Lit](https://github.com/luvit/lit) and [Luvit](https://github.com/luvit/luvit). They are like lightweight versions of Node.js, but written with Lua. So let's install them with a series of commands:
     
     apt-get install curl
     curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
