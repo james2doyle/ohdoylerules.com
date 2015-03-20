@@ -1,7 +1,7 @@
 /*
 Title: Minimal Raspberry Pi OS
 Date: 2015-03-14
-Updated: 2015-03-16
+Updated: 2015-03-20
 Category: Personal Project, Web
 Template: post
 Description: Setup and improve the Moebius OS for the Raspberry Pi
@@ -10,17 +10,17 @@ Keywords: Moebius, debian, linux, raspberry, pi, os, operating system, minimal, 
 
 ## Introduction
 
-I have had a [Raspberry Pi B+](http://www.raspberrypi.org/products/model-b/) for a while now, and I was looking to setup a very minimal Linux OS.
+I have had a [Raspberry Pi B+](http://www.raspberrypi.org/products/model-b/) for a while now, and I was looking to setup a very minimal Linux OS. I am sure this would work fine with the Pi 2.
 
-Although the other [Raspberry Pi OSs](http://www.raspberrypi.org/downloads/) are great, a lot of them are too feature-full and have packaged GUI libraries I never use. So I wanted to install something much more bare than the ones on the Raspberry Pi website.
+Although the other [Raspberry Pi OSs](http://www.raspberrypi.org/downloads/) are great, a lot of them are too feature-full (read bloated) and have a packaged GUI that I would never use. Therefore, I wanted to install something much more *naked* than the ones on the Raspberry Pi website.
 
 Enter, [Moebius](http://sourceforge.net/projects/moebiuslinux/). A few words from the Moebius site:
 
-> [Moebius] is a Raspberry PI armhf Debian based distribution targeted to have a minimal footprint. Size, speed and optimizations are main goals for this distro...
+> [Moebius] is a Raspberry Pi armhf Debian based distribution targeted to have a minimal footprint. Size, speed and optimizations are main goals for this distro...
 
-With that said, the *unzipped img* is about 110Mb. That is very small. 
+With that said, the *unzipped `img`* file is about **110Mb**. That is pretty small!
 
-The other thing that Moebius does is remove the default Raspbian sources from apt-get. This means *you can't just download all the Rasbian packages* you want.
+The other thing that Moebius does is remove the default Raspbian sources from `apt-get`. This means *you can't just download all the Rasbian packages* you want.
 
 Moebius introduces the idea of containers. This isn't the same container technology like Docker. The "containers" are more like groups of packages. When installing a Moebius container, everything is installed in `/usr/bin` as if it came with the system.
 
@@ -39,13 +39,13 @@ First, visit the Moebius Sourceforge page and follow the instructions to [downlo
   <p>Moebius command line app</p>
 </div>
 
-Moebius is the name of the OS, but also the name of a sweet little built-in command line tool to setup the rest of the pi.
+Moebius is the name of the OS, but also the name of a sweet little built-in command line tool to setup the rest of the Pi.
 
 #### SSH Niceness
 
-Add your public key to Moebius in order to ssh without a password. This is not required, but it does make popping in and out of the pi nice and quick. Plus, no password to remember!
+**Optional:** Add your public key to Moebius in order to ssh without a password. This is not required, but it does make popping in and out of the Pi nice and quick. Plus, no password to remember!
 
-Moebius does not come with `nano`. If you are not familiar with the vi tool, you should [use this site to learn some basics](http://www.washington.edu/computing/unix/vi.html).
+Moebius does not come with `nano`! If you are not familiar with the `vi` tool, you should [use this site to learn some basics](http://www.washington.edu/computing/unix/vi.html).
 
 Just create `~/.ssh` and then use `vi ~/.ssh/authorized_keys` to create a new file, then paste in your public key.
 
@@ -67,7 +67,7 @@ Just create `~/.ssh` and then use `vi ~/.ssh/authorized_keys` to create a new fi
 
 **You may get an error** telling you to run `dpkg --configure -a`. If this happens, press any key to close the container installed and then run that command. When that completes, try to install the `lang.gcc` container again.
 
-You may have to repeat this process *multiple times*.
+You may have to repeat the process above *multiple times*. I did it twice.
 
 Once the container is installed, you should have `make` and `gcc`, and a bunch of other tools on your system.
 
@@ -94,9 +94,9 @@ This will take a while to build, so *grab a coffee or a beer*.
 
 ### Samba setup
 
-Samba lets us access the pi like a hard drive on our local network. Samba *works well with Windows and OSX*, and of course Linux as well. 
+[Samba](http://en.wikipedia.org/wiki/Samba_%28software%29) lets us access the Pi like a hard drive on our local network. Samba *works well with Windows and OSX*, and of course Linux as well. 
 
-If you are not familiar with the vi tool, you should [use this site to learn some basics](http://www.washington.edu/computing/unix/vi.html).
+If you are not familiar with the `vi` tool, you should [use this site to learn some basics](http://www.washington.edu/computing/unix/vi.html).
 
 Complete the following to setup Samba:
 
@@ -142,4 +142,4 @@ Try running `lit version` and then `luvit --version` to see if the frameworks ar
 
 ### Finished
 
-You should now have everything setup to get around. If you find any problems with my instructions, please let me know and I will update them!
+You should now have everything setup to get around. If you find any problems with my instructions, **please let me know in the comments** and I will update them!
