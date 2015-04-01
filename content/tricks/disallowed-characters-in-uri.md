@@ -7,10 +7,12 @@ Template: post
 Keywords: php, codeigniter, disallowed, characters, 400, error, paragraph ending, %E2%80%8B
 */
 
+How to fix "The URI you submitted has disallowed characters" error.
+
 Does this screenshot look familiar?
 
 <div class="center">
-  <a href="content/images/error-400-disallowed-characters.png" target="_blank"><img alt="codeigniter 400 error for disallowed characters" src="content/images/error-400-disallowed-characters.png" ></a>
+  <a href="http://ohdoylerules.com/content/images/error-400-disallowed-characters.png" target="_blank"><img alt="codeigniter 400 error for disallowed characters" src="http://ohdoylerules.com/content/images/error-400-disallowed-characters.png" ></a>
 </div>
 
 Well, it has been killing me for the last 2 hours. I have encountered this error before, but I never realized what caused it, or how it was fixed. I would just try random stuff, entering in different content, moving different functions. Eventually it would go away...
@@ -38,7 +40,7 @@ So what to do? When in doubt, *use vim*. I dusted off my vim and looked at the P
 I removed the character and everything worked perfectly. Here is the diff after I removed the character:
 
 <div class="center">
-  <a href="content/images/hidden-character-diff.png" target="_blank"><img alt="git diff for hidden character" src="content/images/hidden-character-diff.png" ></a>
+  <a href="http://ohdoylerules.com/content/images/hidden-character-diff.png" target="_blank"><img alt="git diff for hidden character" src="http://ohdoylerules.com/content/images/hidden-character-diff.png" ></a>
 </div>
 
 You can see there is a little trailing character there. I don't know exactly how this got in there, but god damn was it driving me crazy.
@@ -48,7 +50,7 @@ You can see there is a little trailing character there. I don't know exactly how
 The real problem is, this *didn't show in Sublime Text* or in the *Chrome elements panel*. Even the commit on *Github* didn't show the hidden character I removed.
 
 <div class="center">
-  <a href="content/images/github-hidden-character-diff.png" target="_blank"><img alt="github diff for hidden character" src="content/images/github-hidden-character-diff.png" ></a>
+  <a href="http://ohdoylerules.com/content/images/github-hidden-character-diff.png" target="_blank"><img alt="github diff for hidden character" src="http://ohdoylerules.com/content/images/github-hidden-character-diff.png" ></a>
 </div>
 
 The only way it would show up is when I opened the file in **vim**!
