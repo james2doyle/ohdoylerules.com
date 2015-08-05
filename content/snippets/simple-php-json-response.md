@@ -1,7 +1,7 @@
 /*
 Title: Simple PHP JSON Response
 Description: Create a simple JSON response using PHP
-Date: 2015-07-04
+Date: 2015-08-04
 Category: Snippets,Web
 Template: post
 Keywords: PHP, json, response, headers, status, encoding, parse, stringify
