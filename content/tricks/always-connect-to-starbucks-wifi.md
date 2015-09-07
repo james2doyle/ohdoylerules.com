@@ -25,7 +25,7 @@ Here are instructions for turning on wireless hotspot on [iOS](http://www.wikiho
 
 ### 3. Load the Starbucks connection page
 
-Now you will go to the [Starbucks connection page](starbucks.allstreamwifi.ca/00246C3ECB90/Welcome) and **wait until it is finished loading**.
+Now you will go to the [Starbucks connection page](http://starbucks.allstreamwifi.ca/00246C3ECB90/Welcome) and **wait until it is finished loading**.
 
 If it doesn't load all the way, that is fine. Just hit the stop button when you think it has reached a point of not going any further.
 
