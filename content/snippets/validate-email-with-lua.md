@@ -7,7 +7,7 @@ Template: post
 Keywords: Lua, valid, email, address, test
 */
 
-Valid emails, should be easy to check right? WRONG.
+Checking if an email is valid should be easy, right? WRONG.
 
 This took about 3-4 hours to finally get. I scoured the web for a good email validation function. But, I was unable to find any that actually handled all the valid email variations.
 
