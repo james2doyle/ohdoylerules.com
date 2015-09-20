@@ -32,11 +32,9 @@ $config['gravatar'] = 'http://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab5
 // looks for a lock file for knowing what type of environment we are in
 define('PRODUCTION', !file_exists('./localhost'));
 
-$config['plugins'] = array(
-	'phile\\XmlSitemap' => array('active' => true),
-	'phile\\TwigFilters' => array('active' => true),
-	'phile\\RssFeed' => array('active' => true),
-	'phile\\phpFastCache' => array('active' => PRODUCTION)
-	);
+$config['plugins']['phile\\XmlSitemap'] = array('active' => true);
+$config['plugins']['phile\\TwigFilters'] = array('active' => true);
+$config['plugins']['phile\\RssFeed'] = array('active' => true);
+$config['plugins']['phile\\phpFastCache'] = array('active' => PRODUCTION);
 
 return $config;
