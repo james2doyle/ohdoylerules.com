@@ -6,7 +6,7 @@ $config = array();
 $config['encryptionKey'] = 'P6K5CYb6RRXwRL3O?}b8JvRjhydM2Ltnw=L4uyYmp46tNUkMTVTKCJ?/RiT/HAq7';
 
 $config['site_title'] = 'James Doyle'; // Site title
-// $config['base_url'] = 'http://ohdoylerules.com'; // Override base URL (e.g. http://example.com)
+$config['base_url'] = (!file_exists('./localhost')) ? 'http://ohdoylerules.com' : 'http://localhost:8888/james2doyle'; // Override base URL (e.g. http://example.com)
 $config['theme'] = 'dist'; // Set the theme (defaults to "default")
 $config['date_format'] = 'F jS, Y'; // Set the PHP date format
 
