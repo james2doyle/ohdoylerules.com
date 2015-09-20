@@ -1,12 +1,15 @@
 <?php
 
+// looks for a lock file for knowing what type of environment we are in
+define('PRODUCTION', !file_exists('./localhost'));
+
 // use this config file to overwrite the defaults from default_config.php
 // or to make local config changes.
 $config = array();
 $config['encryptionKey'] = 'P6K5CYb6RRXwRL3O?}b8JvRjhydM2Ltnw=L4uyYmp46tNUkMTVTKCJ?/RiT/HAq7';
 
 $config['site_title'] = 'James Doyle'; // Site title
-$config['base_url'] = (!file_exists('./localhost')) ? 'http://ohdoylerules.com' : 'http://localhost:8888/james2doyle'; // Override base URL (e.g. http://example.com)
+$config['base_url'] = (PRODUCTION) ? 'http://ohdoylerules.com' : 'http://localhost:8888/james2doyle'; // Override base URL (e.g. http://example.com)
 $config['theme'] = 'dist'; // Set the theme (defaults to "default")
 $config['date_format'] = 'F jS, Y'; // Set the PHP date format
 
@@ -28,9 +31,6 @@ $config['author_helpline_title'] = 'Need Help?';
 $config['author_helpline'] = 'Are you having trouble with something? I can give you some advice, instruction, or <em>even look at your code</em>! All of this, for only <a href="http://bitcoin.com/" target="_blank" title="What is BitCoin?"><strong>0.02btc/hour</strong></a>. Or we can work something out.';
 
 $config['gravatar'] = 'http://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=100&d=mm&r=g';
-
-// looks for a lock file for knowing what type of environment we are in
-define('PRODUCTION', !file_exists('./localhost'));
 
 $config['plugins']['phile\\xmlSitemap'] = array('active' => true);
 $config['plugins']['phile\\twigFilters'] = array('active' => true);
