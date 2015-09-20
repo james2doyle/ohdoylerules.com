@@ -33,9 +33,9 @@ $config['gravatar'] = 'http://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab5
 define('PRODUCTION', !file_exists('./localhost'));
 
 $config['plugins'] = array(
-	'phile\\XMLSitemap' => array('active' => true),
+	'phile\\XmlSitemap' => array('active' => true),
 	'phile\\TwigFilters' => array('active' => true),
-	'phile\\RSSFeed' => array('active' => true),
+	'phile\\RssFeed' => array('active' => true),
 	'phile\\phpFastCache' => array('active' => PRODUCTION)
 	);
 

@@ -37,3 +37,5 @@ localhost
 
 *.sublime-project
 *.sublime-workspace
+
+*.log
