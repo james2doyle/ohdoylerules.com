@@ -1,24 +1,35 @@
 <?php
+/**
+ * @author PhileCMS
+ * @link https://philecms.com
+ * @license http://opensource.org/licenses/MIT
+ * @package Phile
+ */
 
-define('PHILE_VERSION',    '0.9.2');
-define('ROOT_DIR',         realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
-define('CONTENT_DIR',      ROOT_DIR . 'content' . DIRECTORY_SEPARATOR);
-define('CONTENT_EXT',      '.md');
-define('LIB_DIR',          ROOT_DIR . 'lib' . DIRECTORY_SEPARATOR);
-define('PLUGINS_DIR',      ROOT_DIR . 'plugins' . DIRECTORY_SEPARATOR);
-define('THEMES_DIR',       ROOT_DIR . 'themes' . DIRECTORY_SEPARATOR);
-define('CACHE_DIR',        LIB_DIR . 'cache' . DIRECTORY_SEPARATOR);
+require_once __DIR__ . '/lib/Phile/Bootstrap.php';
 
+ob_start();
 
-spl_autoload_extensions(".php");
-spl_autoload_register(function ($className) {
-	$fileName = LIB_DIR . str_replace("\\", DIRECTORY_SEPARATOR, $className) . '.php';
-	if (file_exists($fileName)) {
-		require_once $fileName;
+try {
+	\Phile\Bootstrap::getInstance()->initializeBasics();
+	$router = new \Phile\Core\Router();
+	$response = new \Phile\Core\Response();
+	$phileCore = new \Phile\Core($router, $response);
+	$phileCore->render();
+} catch (\Phile\Exception\AbstractException $e) {
+	if (\Phile\Core\ServiceLocator::hasService('Phile_ErrorHandler')) {
+		ob_end_clean();
+
+		/** @var \Phile\ServiceLocator\ErrorHandlerInterface $errorHandler */
+		$errorHandler = \Phile\Core\ServiceLocator::getService('Phile_ErrorHandler');
+		$errorHandler->handleException($e);
 	}
-});
+} catch (\Exception $e) {
+	if (\Phile\Core\ServiceLocator::hasService('Phile_ErrorHandler')) {
+		ob_end_clean();
 
-require(ROOT_DIR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
-
-$phileCore = new \Phile\Core();
-echo $phileCore->render();
+		/** @var \Phile\ServiceLocator\ErrorHandlerInterface $errorHandler */
+		$errorHandler = \Phile\Core\ServiceLocator::getService('Phile_ErrorHandler');
+		$errorHandler->handleException($e);
+	}
+}

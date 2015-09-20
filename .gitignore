@@ -1,27 +1,8 @@
-# Node gitignore
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-pids
-logs
-results
-
-node_modules
-
 # Composer
-composer.lock
 composer.phar
 
 # Twig
-vendor/twig/twig/doc/*
-vendor/twig/twig/ext/*
-vendor/twig/twig/test/*
+lib/vendor/*
 
 # OS Generated
 .DS_Store*
@@ -30,24 +11,29 @@ Icon?
 Thumbs.db
 *.swp
 
+# distribution build directory
+dist/*
+# phpDocs
+docs/*
+
 # User themes
 themes/*
 !themes/index.html
-!themes/dist
+!themes/default/*
 
 # PHPStorm settings
 .idea
 
-# temp folder
-temp/*
-!temp/index.html
-!temp/cache
-temp/cache/*
-!temp/cache/index.html
+# cache folder
+!lib/cache
+lib/cache/*
+!lib/cache/.htaccess
 
 # datastorage
-datastorage/*
-!datastorage/.htaccess
+lib/datastorage/*
+!lib/datastorage/.htaccess
+
+localhost
 
 *.sublime-project
 *.sublime-workspace

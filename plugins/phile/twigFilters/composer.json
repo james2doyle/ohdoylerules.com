@@ -1,0 +1,21 @@
+{
+	"name": "phile/twig-filters",
+	"type": "phile-plugin",
+    "version": "1.0.1",
+    "license": "MIT",
+    "description": "An example plugin for Phile showing how to make Twig filters.",
+    "homepage": "http://philecms.com",
+    "keywords": ["cms","phile","content"],
+    "authors": [
+        {
+            "name": "James Doyle",
+            "email": "james2doyle@gmail.com",
+            "homepage": "http://ohdoylerules.com/",
+            "role": "Developer"
+        }
+    ],
+	"require": {
+        "phile-cms/phile": ">=1",
+        "phile-cms/plugin-installer-plugin": ">=1"
+	}
+}

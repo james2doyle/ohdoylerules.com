@@ -1,28 +1,105 @@
 <?php
 
-// try to figure out the install path
-$config['site_title'] = 'PhileCMS'; // Site title
-$config['base_url'] = \Phile\Utility::getBaseUrl(); // use the Utility class to guess the base_url
-$config['theme'] = 'default'; // Set the theme
-$config['date_format'] = 'jS M Y'; // Set the PHP date format
-$config['pages_order_by'] = 'title'; // Order pages by "title" (alpha) or "date"
-$config['pages_order'] = 'desc'; // Order pages "asc" or "desc"
+/**
+ * Phile default config.
+ *
+ * Don't do changes here but overwrite them in your local config.
+ */
+$config = [];
 
-// figure out the timezone
-$timezone = (ini_get('date.timezone')) ? ini_get('date.timezone') : 'UTC';
-$config['timezone'] = $timezone; // The default timezone
+/**
+ * Base URL to Phile installation without trailing slash
+ *
+ * e.g. `http://example.com` or `http://example.com/phile`
+ *
+ * Default: try to resolve automatically in Router
+ */
+$config['base_url'] = (new Phile\Core\Router)->getBaseUrl();
 
-// only extend $config['plugins'] and not overwrite it, because some core plugins
-// will be added to this config option by default. So, use this option in this way:
-// $config['plugins']['myCustomPlugin'] = array('active' => true);
-// also notice, each plugin has its own config namespace.
-// activate plugins
-$config['plugins'] = array(
-	'phileDemoPlugin' => array('active' => true),
-	'phileParserMarkdown' => array('active' => true), // the default parser
-	'phileTemplateTwig' => array('active' => true), // the default template engine
-	'philePhpFastCache' => array('active' => true), // the default cache engine
-	'phileSimpleFileDataPersistence' => array('active' => true), // the default data storage engine
-);
+/**
+ * page title
+ */
+$config['site_title'] = 'PhileCMS';
+
+/**
+ * default theme
+ */
+$config['theme'] = 'default';
+
+/**
+ * date format as PHP date format
+ */
+$config['date_format'] = 'jS M Y';
+
+/**
+ * page order
+ *
+ * Order pages by "title" (alpha) or "date"
+ */
+$config['pages_order'] = 'meta.title:desc';
+
+/**
+ * timezone
+ */
+$config['timezone'] = (ini_get('date.timezone')) ? ini_get('date.timezone') : 'UTC';
+
+/**
+ * charset used for HTML and Markdown files
+ */
+$config['charset'] = 'utf-8';
+
+/**
+ * set PHP error reporting
+ */
+$config['display_errors'] = 0;
+
+/**
+ * include core plugins
+ */
+$config['plugins'] = [
+	/**
+	 * error handler
+	 */
+	'phile\\errorHandler' => [
+		'active' => true,
+		'handler' => \Phile\Plugin\Phile\ErrorHandler\Plugin::HANDLER_DEVELOPMENT
+	],
+	/**
+	 * setup check
+	 */
+	'phile\\setupCheck' => ['active' => true],
+	/**
+	 * parser
+	 */
+	'phile\\parserMarkdown' => ['active' => true],
+	/**
+	 * meta-tag parser
+	 */
+	'phile\\parserMeta' => [
+		'active' => true,
+		/**
+		 * Set meta-data format.
+		 *
+		 * - 'Phile' (default) Phile legacy format
+		 * - 'YAML' YAML
+		 *
+		 * Phile is going to switch to YAML for parsing meta tags. But if you
+		 * want to use YAML today you can change the format here.
+		 */
+		 'format' => 'Phile'
+	],
+	/**
+	 * template engine
+	 */
+	'phile\\templateTwig' => ['active' => true],
+	/**
+	 * cache engine
+	 */
+	'phile\\phpFastCache' => ['active' => true],
+	/**
+	 * persistent data storage
+	 */
+	'phile\\simpleFileDataPersistence' => ['active' => true],
+];
 
 return $config;
