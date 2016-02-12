@@ -26,6 +26,6 @@ I use this in [Laravel](https://laravel.com) (with an instance of `Symfony\Compo
 
 <script src="https://gist.github.com/james2doyle/516483af423d4643ac83.js"></script>
 
-If you are OCD, and wanted to always start with **1**, just update the else case with `'1-' . $file->getClientOriginalName()` for the `$client_name` and then it will always add a **1** when the file is new.
+If you are OCD, and wanted to all files to start with a number, just remove the if statement for the `$client_name`, only leaving the string concatenate line, and it will always add a the counter when the file is new.
 
 So give it a shot, and if you modify it for some other framework, post the link in the comments.
