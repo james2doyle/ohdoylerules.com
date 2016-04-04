@@ -30,7 +30,7 @@ $config['author_blurb'] = 'I am the director and lead developer at <a href="http
 $config['author_helpline_title'] = 'Need Help?';
 $config['author_helpline'] = 'Are you having trouble with something? I can give you some advice, instruction, or <em>even look at your code</em>! All of this, for only <a href="http://bitcoin.com/" target="_blank" title="What is BitCoin?"><strong>0.02btc/hour</strong></a>. Or we can work something out.';
 
-$config['gravatar'] = 'http://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=100&d=mm&r=g';
+$config['gravatar'] = 'https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=100&d=mm&r=g';
 
 $config['plugins']['phile\\xmlSitemap'] = array('active' => true);
 $config['plugins']['phile\\twigFilters'] = array('active' => true);
