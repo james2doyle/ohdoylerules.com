@@ -290,7 +290,7 @@ table {
 @font-face {
   font-family: FontAwesome;
   src: url(../font/fontawesome-webfont.eot?v=3.2.1);
-  src: url(../font/fontawesome-webfont.eot?#iefix&v=3.2.1) format('embedded-opentype'), url(../font/fontawesome-webfont.woff?v=3.2.1) format('woff'), url(../font/fontawesome-webfont.ttf?v=3.2.1) format('truetype'), url(../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1) format('svg');
+  src: url(../font/fontawesome-webfont.eot?#iefix&v=3.2.1) format("embedded-opentype"), url(../font/fontawesome-webfont.woff?v=3.2.1) format("woff"), url(../font/fontawesome-webfont.ttf?v=3.2.1) format("truetype"), url(../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1) format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -314,7 +314,7 @@ table {
 
 .icon-large:before {
   vertical-align: -10%;
-  font-size: 1.3333333333em;
+  font-size: 1.3333333333333333em;
 }
 
 a [class^=icon-],
@@ -325,18 +325,18 @@ a [class*=" icon-"] {
 [class^=icon-].icon-fixed-width,
 [class*=" icon-"].icon-fixed-width {
   display: inline-block;
-  width: 1.1428571429em;
+  width: 1.1428571428571428em;
   text-align: right;
-  padding-right: .2857142857em;
+  padding-right: .2857142857142857em;
 }
 
 [class^=icon-].icon-fixed-width.icon-large,
 [class*=" icon-"].icon-fixed-width.icon-large {
-  width: 1.4285714286em;
+  width: 1.4285714285714286em;
 }
 
 .icons-ul {
-  margin-left: 2.1428571429em;
+  margin-left: 2.142857142857143em;
   list-style-type: none;
 }
 
@@ -346,8 +346,8 @@ a [class*=" icon-"] {
 
 .icons-ul .icon-li {
   position: absolute;
-  left: -2.1428571429em;
-  width: 2.1428571429em;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
   text-align: center;
   line-height: inherit;
 }
@@ -2104,7 +2104,7 @@ a .icon-flip-vertical:before {
 }
 
 body {
-  font: 400 normal normal 16px/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 400 normal normal 16px/1.5 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   color: #333;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -2119,7 +2119,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Lato, 'Open Sans', 'Helvetica Neue', Helvetica, Arial;
+  font-family: Lato,'Open Sans','Helvetica Neue',Helvetica,Arial;
 }
 
 a,
@@ -2177,9 +2177,13 @@ hr {
 }
 
 .do-link {
-  display: inline-block;
   float: right;
   margin: -30px 0 0 0;
+}
+
+.ubu-link {
+  float: right;
+  margin: 0;
 }
 
 header {
@@ -2473,9 +2477,12 @@ li code {
   }
 
   .do-link {
+    margin-top: 1.5em;
+  }
+
+  .do-link,
+  .ubu-link {
     width: 100%;
-    margin: 1.5em 0 1em;
-    display: inline-block;
   }
 }
 

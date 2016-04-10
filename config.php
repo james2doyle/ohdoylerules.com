@@ -32,6 +32,8 @@ $config['author_helpline'] = 'Are you having trouble with something? I can give 
 
 $config['gravatar'] = 'https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=100&d=mm&r=g';
 
+$config['unblock_us'] = "http://unblk.us/vrtM";
+
 $config['plugins']['phile\\xmlSitemap'] = array('active' => true);
 $config['plugins']['phile\\twigFilters'] = array('active' => true);
 $config['plugins']['phile\\rssFeed'] = array('active' => true);

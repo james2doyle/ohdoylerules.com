@@ -72,9 +72,13 @@ hr {
 }
 
 .do-link {
-  display: inline-block;
   float: right;
   margin: -30px 0 0 0;
+}
+
+.ubu-link {
+  float: right;
+  margin: 0;
 }
 
 header {
@@ -330,8 +334,9 @@ li code {
     display: inline-block;
   }
   .do-link {
+    margin-top: 1.5em;
+  }
+  .do-link, .ubu-link {
     width: 100%;
-    margin: 1.5em 0 1em;
-    display: inline-block;
   }
 }
