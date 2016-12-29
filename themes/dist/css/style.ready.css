@@ -1619,7 +1619,7 @@ hr {
   margin: 0; }
 
 header {
-  padding: 3em 0 0;
+  padding: 3em 15% 0;
   background-color: #eb694b;
   text-align: center; }
 
@@ -1783,9 +1783,11 @@ li code {
     font-size: 14px; }
   header {
     font-size: 0.8em;
-    padding: 2em 0 0; }
+    padding: 2em 30% 0; }
     header.header-post h1 {
       width: 85%; }
+    header.header-post.active a, header.header-post:hover a {
+      transform: translateY(-3.5em); }
   .post-info span {
     float: left;
     clear: left; }
@@ -1802,6 +1804,7 @@ li code {
     font-size: 3em;
     line-height: 1.2; }
   .post-author {
+    margin-top: 2rem;
     text-align: center; }
   .post-author img {
     width: 100px;
@@ -1811,6 +1814,10 @@ li code {
     width: 100%;
     display: inline-block; }
   .do-link {
-    margin-top: 1.5em; }
+    margin: 1.5em 0; }
   .do-link, .ubu-link {
     width: 100%; } }
+
+@media only screen and (max-width: 640px) {
+  header {
+    padding: 2em 8% 0; } }
