@@ -3,24 +3,26 @@
   "description": "ohdoylerules template",
   "version": "1.0.0",
   "homepage": "http://ohdoylerules.com",
+  "repository": "https://github.com/james2doyle/ohdoylerules.com",
   "author": {
     "name": "James Doyle",
     "email": "james2doyle@gmail.com",
     "url": "http://ohdoylerules.com/"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  }],
-  "dependencies": {
-    "grunt": "~0.4.2"
-  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "devDependencies": {
-    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "~0.3.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-sass": "*",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-autoprefixer": "~0.3.0"
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "*"
   }
 }
