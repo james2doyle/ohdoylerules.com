@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "99c7c683c835a0a9252424a700c22c70",
+    "hash": "54b99d16aeb505ad7bea4c9cb7d23138",
+    "content-hash": "e21a84cfa8058e044ad95118f4f65ae1",
     "packages": [
         {
             "name": "michelf/php-markdown",
@@ -59,20 +60,20 @@
         },
         {
             "name": "phile-cms/plugin-installer-plugin",
-            "version": "dev-master",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhileCMS/ComposerPluginInstaller.git",
-                "reference": "1d7ae559222917271f071e8463aa382871d20cb8"
+                "reference": "b4906c1af9e2ff1760b63cc45621770013b7f39a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhileCMS/ComposerPluginInstaller/zipball/1d7ae559222917271f071e8463aa382871d20cb8",
-                "reference": "1d7ae559222917271f071e8463aa382871d20cb8",
+                "url": "https://api.github.com/repos/PhileCMS/ComposerPluginInstaller/zipball/b4906c1af9e2ff1760b63cc45621770013b7f39a",
+                "reference": "b4906c1af9e2ff1760b63cc45621770013b7f39a",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0.0"
+                "composer-plugin-api": "^1.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -91,7 +92,7 @@
                 {
                     "name": "Frank Nägler",
                     "email": "mail@naegler.net",
-                    "homepage": "http://www.frank-naegler.de",
+                    "homepage": "https://naegler.hamburg",
                     "role": "Developer"
                 }
             ],
@@ -103,19 +104,19 @@
                 "markdown",
                 "phile"
             ],
-            "time": "2015-03-14 23:23:50"
+            "time": "2016-03-26 11:02:09"
         },
         {
             "name": "phpfastcache/phpfastcache",
             "version": "3.0.11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/khoaofgod/phpfastcache.git",
+                "url": "https://github.com/PHPSocialNetwork/phpfastcache.git",
                 "reference": "5ee8aadcf04921f1b6f5742d2610973a5d8e9fe0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/khoaofgod/phpfastcache/zipball/5ee8aadcf04921f1b6f5742d2610973a5d8e9fe0",
+                "url": "https://api.github.com/repos/PHPSocialNetwork/phpfastcache/zipball/5ee8aadcf04921f1b6f5742d2610973a5d8e9fe0",
                 "reference": "5ee8aadcf04921f1b6f5742d2610973a5d8e9fe0",
                 "shasum": ""
             },
@@ -166,20 +167,17 @@
             "version": "2.8.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Yaml.git",
-                "reference": "d196cb1ac36901bde7d7fbed74ee31fdb85fd119"
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "707f112ff3c2c1b9b1d995135cf9ebc5222cea13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/d196cb1ac36901bde7d7fbed74ee31fdb85fd119",
-                "reference": "d196cb1ac36901bde7d7fbed74ee31fdb85fd119",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/707f112ff3c2c1b9b1d995135cf9ebc5222cea13",
+                "reference": "707f112ff3c2c1b9b1d995135cf9ebc5222cea13",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7|~3.0.0"
             },
             "type": "library",
             "extra": {
@@ -190,7 +188,10 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Yaml\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -208,7 +209,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-14 14:15:17"
+            "time": "2017-02-21 08:33:48"
         },
         {
             "name": "twig/twig",
