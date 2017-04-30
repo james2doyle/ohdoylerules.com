@@ -1,5 +1,5 @@
 ---
-Title: "PhlaconPHP Crop Image To Fit"
+Title: "PhalconPHP Crop Image To Fit"
 Description: "How to crop and scale an image to fit specific dimensions in Phalcon PHP"
 Date: "2014-11-24"
 Category: "Snippets"
