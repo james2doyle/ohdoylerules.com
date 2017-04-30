@@ -36,7 +36,7 @@ $browser = array (
 I use this example when I want to make small modifications to my CSS. Not unlike how Modernizr is supposed to work. Except modernizr doesn't give you browser information.
 
 ```html
-<html lang="en" class="{{ browser.browser }} {{ browser.platform }} {{ browser.type }}">
+<html lang="en" class="\{\{ browser.browser \}\} \{\{ browser.platform \}\} \{\{ browser.type \}\}">
 ```
 
 Here is the output for that html tag:

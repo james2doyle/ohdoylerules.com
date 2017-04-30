@@ -12,12 +12,7 @@ Github flavoured markdown field type for PyroCMS.
 Here is the link to the [Github
 Repo](https://github.com/james2doyle/pyro-github-markdown "pyro-github-markdown field type").
 
-Most of the work for this repo is taken from [GitHub-Flavored Markdown
-Comments](https://github.com/evansolomon/wp-github-flavored-markdown-comments)
-plugin for Wordpress. That repository is also based on [Michel Fortin's
-PHP markdown library](https://github.com/michelf/php-markdown/) with
-added features from [GitHub-flavored
-Markdown](https://github.com/github/github-flavored-markdown).
+Most of the work for this repo is taken from [GitHub-Flavored Markdown Comments](https://github.com/evansolomon/wp-github-flavored-markdown-comments) plugin for Wordpress. That repository is also based on [Michel Fortin's PHP markdown library](https://github.com/michelf/php-markdown/) with added features from [GitHub-flavored Markdown](https://github.com/github/github-flavored-markdown).
 
 *All I did was just bring it all together and make it play nice with
 Pyro.*
@@ -27,7 +22,7 @@ Pyro.*
 -   Install the field type as normal.
 -   Add the field type to a page type or stream
 -   Enter in your sexy Github Markdown
--   Just use `{{ the_field_slug }}` to render the HTML
+-   Just use `\{\{ the_field_slug \}\}` to render the HTML
 
 ### [](#examples)Examples
 
