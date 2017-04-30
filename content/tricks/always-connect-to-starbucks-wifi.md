@@ -1,11 +1,11 @@
-/*
-Title: Always Connect To Starbucks WiFi
-Description: How to connect to the Starbucks WiFi every time by using your phone.
-Date: 2014-09-20
-Category: Tricks
-Template: post
-Keywords: connect, starbucks, wifi, wireless, laptop, trick, easy, phone, tether, hotspot, iphone, android, macbook, osx
-*/
+---
+Title: "Always Connect To Starbucks WiFi"
+Description: "How to connect to the Starbucks WiFi every time by using your phone."
+Date: "2014-09-20"
+Category: "Tricks"
+Template: "post"
+Keywords: ["connect", "starbucks", "wifi", "wireless", "laptop", "trick", "easy", "phone", "tether", "hotspot", "iphone", "android", "macbook", "osx"]
+---
 
 Lately, it has been quite difficult for me to connect to Starbucks WiFi. About a year ago, the network would connect pretty quickly, but now it seems like the network is powered by voodoo magic and the will of Satan.
 

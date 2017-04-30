@@ -1,10 +1,10 @@
-/*
-Title: jQuery-doodal-js
-Date: 2013-09-09
-Category: Personal Project,Snippets,Web
-Template: post
-Keywords: jquery, plugin, modal, events, trigger, css3, transitions, animations, alert, confirm
-*/
+---
+Title: "jQuery-doodal-js"
+Date: "2013-09-09"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["jquery", "plugin", "modal", "events", "trigger", "css3", "transitions", "animations", "alert", "confirm"]
+---
 
 jQuery.doodal.js is a very simplistic modal plugin for jQuery. It has custom events, allows stacking, and is powered by CSS transitions
 

@@ -1,15 +1,15 @@
-/*
-Title: Migrate AllPasswords To 1Password
-Description: How to import your allpasswords csv into 1password
-Date: 2014-10-11
-Category: Tricks
-Template: post
-Keywords: 1password, allpasswords, export, import, csv, format, osx
-*/
+---
+Title: "Migrate AllPasswords To 1Password"
+Description: "How to import your allpasswords csv into 1password"
+Date: "2014-10-11"
+Category: "Tricks"
+Template: "post"
+Keywords: ["1password", "allpasswords", "export", "import", "csv", "format", "osx"]
+---
 
 [AllPasswords](https://itunes.apple.com/ca/app/allpasswords-handy-personal/id588258846?mt=12) is an awesome, free, app for [iPhone](https://itunes.apple.com/ca/app/allpasswords/id578246311?mt=8) and [OSX](https://itunes.apple.com/ca/app/allpasswords-handy-personal/id588258846?mt=12). It has a nice, simple interface, there is an awesome password generator, and it has iCloud sync.
 
-The problem is, I recently bought an iPhone 6 and updated to iOS 8. It seems that the iCloud sync has busted for AllPasswords, at least on my device. With the advent of the [1Password app getting a free version](http://bgr.com/2014/09/17/1password-for-ios-free-download/) I decided it might be time to switch. 
+The problem is, I recently bought an iPhone 6 and updated to iOS 8. It seems that the iCloud sync has busted for AllPasswords, at least on my device. With the advent of the [1Password app getting a free version](http://bgr.com/2014/09/17/1password-for-ios-free-download/) I decided it might be time to switch.
 
 I have about 130 logins in AllPasswords, so I wasn't about to manually enter in each account. Instead, I had to format the exported CSV from AllPasswords to be able to import into 1Password. Here is how I did it:
 

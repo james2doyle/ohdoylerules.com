@@ -1,17 +1,13 @@
-/*
-Title: rework-math
-Date: 2013-06-23
-Category: Personal Project,Web
-Template: post
-Keywords: 
-*/
+---
+Title: "rework-math"
+Description: "I created a plugin for rework that allows you to do simple math"
+Date: "2013-06-23"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["rework", "math", "css", "preprocess", "node", "javascript"]
+---
 
-I created a plugin for
-[Rework](https://github.com/visionmedia/rework "rework") CSS
-preprocessor to do math. Here is the [github
-repo](https://github.com/james2doyle/rework-math "rework-math"). It is
-also my first ever NPM package and it can be found on the website
-[here](https://npmjs.org/package/rework-math "rework-math on NPM").
+I created a plugin for [Rework](https://github.com/visionmedia/rework "rework") CSS preprocessor to do math. Here is the [github repo](https://github.com/james2doyle/rework-math "rework-math"). It is also my first ever NPM package and it can be found on the website [here](https://npmjs.org/package/rework-math "rework-math on NPM").
 
 ~~~~ {.prettyprint .lang-css}
 /* input */

@@ -1,11 +1,11 @@
-/*
-Title: Add A Counter For Duplicate Uploads
-Date: 2016-02-12
-Category: Web
-Template: post
-Description: A short script to detect if a folder contains a duplicate filename, and if it does, the filename gets a counter prepended to the front of the filename
-Keywords: php, upload, duplicate, name, laravel, symphony, file, rename, append, prepend, counter, increment
-*/
+---
+Title: "Add A Counter For Duplicate Uploads"
+Date: "2016-02-12"
+Category: "Web"
+Template: "post"
+Description: "A short script to detect if a folder contains a duplicate filename, and if it does, the filename gets a counter prepended to the front of the filename"
+Keywords: ["php", "upload", "duplicate", "name", "laravel", "symphony", "file", "rename", "append", "prepend", "counter", "increment"]
+---
 
 Wouldn't it be nice if, when you uploaded a file, the duplicate filenames just get a counter added in front?
 

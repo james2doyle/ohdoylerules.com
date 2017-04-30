@@ -1,11 +1,11 @@
-/*
-Title: Detect Animation Events in Javascript
-Description: Detect Animation Events in Javascript
-Date: 2013-05-31
-Category: Snippets,Web
-Template: post
-Keywords: detect, animation, events, javascript
-*/
+---
+Title: "Detect Animation Events in Javascript"
+Description: "Detect Animation Events in Javascript"
+Date: "2013-05-31"
+Category: "Snippets"
+Template: "post"
+Keywords: ["detect", "animation", "events", "javascript"]
+---
 
 Whenever I am doing animations that have javascript and CSS, most of the time, I want an callback to fire in javascript when the animations are complete. I have used this event for modals and little UI plugins. Normally, I would have a start event(click or touch) that just adds a class that has a CSS animation attached to it. Lets say we have a class called 'on'.
 
@@ -57,3 +57,4 @@ doAnim(myModalElement, 'on', 'AnimationEnd', function(){
 ```
 
 So now I have a function that will add a class to an element and then fire my callback when the animation is complete.
+

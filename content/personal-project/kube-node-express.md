@@ -1,13 +1,13 @@
-/*
-Title: Kube-Node-Express
-Date: 2012-10-21
-Category: Personal Project,Web
-Template: post
-Keywords: kube, node, express, css, framework, middleware, stylus, jade
-*/
+---
+Title: "Kube-Node-Express"
+Description: "Kube-Node-Express"
+Date: "2012-10-21"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["kube", "node", "express", "css", "framework", "middleware", "stylus", "jade"]
+---
 
-I have released my first node.js-based public repo! It is called
-[Kube-Node-Express](https://github.com/james2doyle/kube-node-express "Kube-Node-Express").
+I have released my first node.js-based public repo! It is called [Kube-Node-Express](https://github.com/james2doyle/kube-node-express "Kube-Node-Express").
 
 <img src="http://ohdoylerules.com/content/images/Screen-Shot-2012-10-20-at-3.46.33-PM11.png" alt="Kube CSS Framework" >
 
@@ -15,5 +15,4 @@ This is based off of the [Kube CSS Framework by Imperavi](http://imperavi.com/ku
 
 #### disclaimer
 
-I did not create any of these frameworks, I just combined them all
-together.
+I did not create any of these frameworks, I just combined them all together.

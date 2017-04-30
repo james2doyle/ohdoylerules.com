@@ -1,10 +1,11 @@
-/*
-Title: Clean CSS in Chrome Apps Office Hours
-Date: 2012-12-19
-Category: Web
-Template: post
-Keywords: clean, css, chrome, apps, office, hours
-*/
+---
+Title: "Clean CSS in Chrome Apps Office Hours"
+Description: "So my chrome app Clean CSS made it onto one of the Chrome Apps Office Hours."
+Date: "2012-12-19"
+Category: "Web"
+Template: "post"
+Keywords: ["clean", "css", "chrome", "apps", "office", "hours"]
+---
 
 ### Clean CSS made it into a Chrome Apps Office hours!!
 

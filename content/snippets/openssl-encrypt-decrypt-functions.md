@@ -1,11 +1,11 @@
-/*
-Title: Decrypt-Encrypt Functions From Command Line
-Description: Functions to encrypt and then decrypt files from the command line with OpenSSL
-Date: 2013-11-22
-Category: Snippets, Personal Project, Web
-Template: post
-Keywords: encrypt, decrypt, openssl, cli, terminal, shell, command line, shred, rc4
-*/
+---
+Title: "Decrypt-Encrypt Functions From Command Line"
+Description: "Functions to encrypt and then decrypt files from the command line with OpenSSL"
+Date: "2013-11-22"
+Category: "Snippets"
+Template: "post"
+Keywords: ["encrypt", "decrypt", "openssl", "cli", "terminal", "shell", "command line", "shred", "rc4"]
+---
 
 ### Preamble
 

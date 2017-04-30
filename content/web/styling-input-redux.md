@@ -1,10 +1,10 @@
-/*
-Title: Styling Radios and Checkboxes. Redux.
-Date: 2012-08-19
-Category: Web
-Template: post
-Keywords: checkbox, codepen, CSS, HTML, input, radio
-*/
+---
+Title: "Styling Radios and Checkboxes. Redux."
+Date: "2012-08-19"
+Category: "Web"
+Template: "post"
+Keywords: ["checkbox", "codepen", "CSS", "HTML", "input", "radio"]
+---
 
 A few weeks ago, or something like that, I made a post about [styling your labels to act as checkboxes/radios](http://ohdoylerules.com/web/radio-checkboxes/ "Styling radio and checkbox inputs"). I recently saw [a post on Dribbble by Mikael Eidenberg](http://dribbble.com/shots/693245-Untitled-iPhone-synth-app-waveforms "iPhone-synth-app-waveforms") which inspired me to make some nicely styled examples of that method in action.
 

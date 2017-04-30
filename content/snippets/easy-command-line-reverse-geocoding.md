@@ -1,11 +1,11 @@
-/*
-Title: Easy Command Line Reverse Geocoding
-Description: Easily reverse geocode an address using the command line and the google maps API
-Date: 2013-11-27
-Category: Snippets,Web
-Template: post
-Keywords: reverse, geocode, command, line, cli, terminal, json, google, maps
-*/
+---
+Title: "Easy Command Line Reverse Geocoding"
+Description: "Easily reverse geocode an address using the command line and the google maps API"
+Date: "2013-11-27"
+Category: "Snippets"
+Template: "post"
+Keywords: ["reverse", "geocode", "command", "line", "cli", "terminal", "json", "google", "maps"]
+---
 
 Using this function you can easily reverse geocode an address into a *lat and lang* position. This uses the [jq executable](http://stedolan.github.io/jq/) and the [Google Maps API](https://developers.google.com/maps/documentation/geocoding/#GeocodingRequests).
 
@@ -42,3 +42,4 @@ function reverse-geocode() {
     reverse-geocode "998 Oxford Street E, London ON, N5Y 3K7"
 
 This return the curl results as well as the Lat and Lang output for the location.
+

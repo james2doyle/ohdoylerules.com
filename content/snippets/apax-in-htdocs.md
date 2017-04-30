@@ -1,11 +1,11 @@
-/*
-Title: Apax apache theme in htdocs
-Description: Apax apache theme in htdocs
-Date: 2013-07-02
-Category: Snippets,Web
-Template: post
-Keywords: Apax, apache, theme, htdocs
-*/
+---
+Title: "Apax apache theme in htdocs"
+Description: "Apax apache theme in htdocs"
+Date: "2013-07-02"
+Category: "Snippets"
+Template: "post"
+Keywords: ["Apax", "apache", "theme", "htdocs"]
+---
 
 I was tired of looking at the ugly default no-style of the htdocs file listing. I had seen [Apaxy theme](http://adamwhitcroft.com/apaxy/ "Apaxy Homepage") before and thought it was really nice. But I couldn't figure out how to get it to work with the default htdocs MAMP folder. I tried again tonight, and I got it working without much hassle.
 
@@ -32,3 +32,4 @@ like this, in your .htaccess file:
 
 The old version should read "/theme" and not "/.theme". If change this
 line, it will NOT show the .theme folder in the localhost listing.
+

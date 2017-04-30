@@ -1,11 +1,11 @@
-/*
-Title: Render PHP File With Data
-Description: Render PHP File With Data
-Date: 2013-08-29
-Category: Snippets,Web
-Template: post
-Keywords: php, render, file, data, view, array, template
-*/
+---
+Title: "Render PHP File With Data"
+Description: "Render PHP File With Data"
+Date: "2013-08-29"
+Category: "Snippets"
+Template: "post"
+Keywords: ["php", "render", "file", "data", "view", "array", "template"]
+---
 
 I am modifying an open source CMS to use the [Phalcon PHP framework](phalconphp.com/en/ "Phalcon PHP Framework"), as well as the [PHP-Sundown](https://github.com/chobie/php-sundown "PHP-Sundown") C implimentation of Markdown.
 

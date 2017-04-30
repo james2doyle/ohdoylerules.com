@@ -1,16 +1,14 @@
-/*
-Title: rework-shade
-Date: 2013-06-23
-Category: Personal Project,Web
-Template: post
-Keywords: 
-*/
+---
+Title: "rework-shade"
+Description: "A package for rework that allows a shade function"
+Date: "2013-06-23"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["javascript", "node", "rework", "shade", "css"]
+---
 
-I created another plugin for Rework that makes it easy to do lighten and
-darken functions. I called it
-[rework-shade](https://github.com/james2doyle/rework-shade "rework-shade github").
-This package is also available [on NPM
-here](https://npmjs.org/package/rework-shade "rework-shade on NPM").
+I created another plugin for Rework that makes it easy to do lighten and darken functions. I called it [rework-shade](https://github.com/james2doyle/rework-shade "rework-shade github"). This package is also available [on NPM here](https://npmjs.org/package/rework-shade "rework-shade on NPM").
+
 Here is the basic usage.
 
 ~~~~ {.prettyprint .lang-css}

@@ -1,10 +1,11 @@
-/*
-Title: The $100 Website
-Date: 2013-07-23
-Category: Web
-Template: post
-Keywords: 100, dollar, website, warpaint, media
-*/
+---
+Title: "The $100 Website"
+Description: "I wrote a post on WARPAINT Media about people who ask about getting a website for $100."
+Date: "2013-07-23"
+Category: "Web"
+Template: "post"
+Keywords: ["100", "dollar", "website", "warpaint", "media"]
+---
 
 I wrote a post on WARPAINT Media about people who ask about getting a website for $100. It isn't an angry rant, although there is some frustration. It is more about courtesy.
 

@@ -1,11 +1,11 @@
-/*
-Title: Modernizr SVG Fallback to PNG
-Description: Modernizr SVG Fallback to PNG
-Date: 2013-05-27
-Category: Snippets, Web
-Template: post
-Keywords: CodeIgniter, generator, Github, laravel, module, open source, PHP, PyroCMS, tool
-*/
+---
+Title: "Modernizr SVG Fallback to PNG"
+Description: "Modernizr SVG Fallback to PNG"
+Date: "2013-05-27"
+Category: "Snippets"
+Template: "post"
+Keywords: ["CodeIgniter", "generator", "Github", "laravel", "module", "open source", "PHP", "PyroCMS", "tool"]
+---
 
 <div class="center">
   <img src="http://ohdoylerules.com/content/images/githubgistlogo.png" alt="Github Gists Logo">

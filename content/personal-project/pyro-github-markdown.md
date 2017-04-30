@@ -1,10 +1,11 @@
-/*
-Title: Pyro Github Markdown Field Type
-Date: 2013-06-23
-Category: Personal Project,Web
-Template: post
-Keywords:
-*/
+---
+Title: "Pyro Github Markdown Field Type"
+Description: "Pyro Github Markdown Field Type"
+Date: "2013-06-23"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["pyrocms", "github", "markdownd", "field", "php", "codeigniter"]
+---
 
 Github flavoured markdown field type for PyroCMS.
 

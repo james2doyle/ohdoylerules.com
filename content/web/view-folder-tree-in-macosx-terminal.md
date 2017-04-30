@@ -1,10 +1,11 @@
-/*
-Title: View Folder Tree in MacOSX Terminal
-Date: 2012-11-19
-Category: Web
-Template: post
-Keywords: view, folder, tree, macosx, terminal, bash, shell, command
-*/
+---
+Title: "View Folder Tree in MacOSX Terminal"
+Description: "View Folder Tree in MacOSX Terminal"
+Date: "2012-11-19"
+Category: "Web"
+Template: "post"
+Keywords: ["view", "folder", "tree", "macosx", "terminal", "bash", "shell", "command"]
+---
 
 [View Folder Tree in MacOSX Terminal](https://coderwall.com/p/owb6eg "terminal tree command")
 

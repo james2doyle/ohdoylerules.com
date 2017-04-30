@@ -1,10 +1,11 @@
-/*
-Title: PyroCMS Module Generator
-Date: 2013-04-13
-Category: Personal Project, Web
-Template: post
-Keywords: CodeIgniter, generator, Github, laravel, module, open source, PHP, PyroCMS, tool
-*/
+---
+Title: "PyroCMS Module Generator"
+Description: "PyroCMS Module Generator that can generate modules for pyrocms"
+Date: "2013-04-13"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["CodeIgniter", "generator", "Github", "laravel", "module", "open source", "PHP", "PyroCMS", "tool"]
+---
 
 <div class="center">
   <img src="http://ohdoylerules.com/content/images/pmgh.png" alt="PyroCMS Module generator header image">

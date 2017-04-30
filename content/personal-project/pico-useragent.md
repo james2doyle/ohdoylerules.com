@@ -1,10 +1,11 @@
-/*
-Title: pico-useragent plugin
-Date: 2013-09-15
-Category: Personal Project, Snippets, Web
-Template: post
-Keywords: pico, cms, useragent, parse, plugin, ua, sniffer, twig, templates, conditional, modernizr
-*/
+---
+Title: "Pico-Useragent Plugin"
+Description: "A plugin for pico that allows you to list the useragent"
+Date: "2013-09-15"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["pico", "cms", "useragent", "parse", "plugin", "ua", "sniffer", "twig", "templates", "conditional", "modernizr"]
+---
 
 I created another plugin for [Pico CMS](http://pico.dev7studios.com/). It is esentially a clone of my [pyro-sniffer-plugin](http://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin) for [PyroCMS](http://pyrocms.com "Pyro CMS Homepage").
 

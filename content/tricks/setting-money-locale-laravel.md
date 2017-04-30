@@ -1,11 +1,11 @@
-/*
-Title: How To Use LC_MONETARY In Laravel
-Description: How to use setlocale with LC_MONETARY in Laravel
-Date: 2017-02-24
-Category: Tricks
-Template: post
-Keywords: php, laravel, setlocale, lc_monetary, money_format
-*/
+---
+Title: "How To Use LC_MONETARY In Laravel"
+Description: "How to use setlocale with LC_MONETARY in Laravel"
+Date: "2017-02-24"
+Category: "Tricks"
+Template: "post"
+Keywords: ["php", "laravel", "setlocale", "lc_monetary", "money_format"]
+---
 
 If you are using the awesome `money_format` function in PHP, you may have noticed a difference between servers or environments regarding the output.
 

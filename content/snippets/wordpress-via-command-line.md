@@ -1,11 +1,11 @@
-/*
-Title: Get Wordpress via Command Line
-Description: Download and unzip the latest Wordpress version, all via command line
-Date: 2013-11-21
-Category: Snippets,Web
-Template: post
-Keywords: wordpress, install, bash, shell, cli, command, line, script
-*/
+---
+Title: "Get Wordpress via Command Line"
+Description: "Download and unzip the latest Wordpress version, all via command line"
+Date: "2013-11-21"
+Category: "Snippets"
+Template: "post"
+Keywords: ["wordpress", "install", "bash", "shell", "cli", "command", "line", "script"]
+---
 
 All the cool kids are using the command line these days. This allows you to run quick commands and little functions that would be too tedious to run with a GUI or just clicking around.
 
@@ -23,3 +23,4 @@ download-wordpress () {
 ```
 
 This is a handy function. You can really use it for any CMS or Zip file you have to grab on the regular. Just remember to run this in an *empty directory*, or it will overwrite everything and it will make a huge mess.
+

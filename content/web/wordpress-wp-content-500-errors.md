@@ -1,11 +1,11 @@
-/*
-Title: Fixing Wordpress wp-content 500 Errors
-Date: 2015-09-29
-Category: Web
-Template: post
-Description: how to fix the issue where Wordpress wp-content assets are throwing 500 errors
-Keywords: wordpress, wp, content, error, 500, misconfigure, hack, upload, index, htaccess, apache
-*/
+---
+Title: "Fixing Wordpress wp-content 500 Errors"
+Date: "2015-09-29"
+Category: "Web"
+Template: "post"
+Description: "How to fix the issue where Wordpress wp-content assets are throwing 500 errors"
+Keywords: ["wordpress", "wp", "content", "error", "500", "misconfigure", "hack", "upload", "index", "htaccess", "apache"]
+---
 
 Yesterday, a friend emailed me about her Wordpress site acting crazy. For some reason all the site assets weren't loading and were returning 500 errors.
 

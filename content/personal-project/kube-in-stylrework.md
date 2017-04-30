@@ -1,10 +1,11 @@
-/*
-Title: Kube in Styl/Rework
-Date: 2013-07-19
-Category: Web, Personal Project
-Template: post
-Keywords: kube, css, styl, rework, stylus, less, imperavi
-*/
+---
+Title: "Kube in Styl/Rework"
+Description: "Kube in Styl/Rework"
+Date: "2013-07-19"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["kube", "css", "styl", "rework", "stylus", "less", "imperavi"]
+---
 
 I finally finished the conversion of the [Kube CSS Framework](http://imperavi.com/kube/).
 

@@ -1,11 +1,11 @@
-/*
-Title: Bash select example
-Description: An example of how to use the select command in bash to pass arguments to functions
-Date: 2014-04-07
-Category: Snippets,Web
-Template: post
-Keywords: select, bash, command, line, cli, terminal, function, arguments
-*/
+---
+Title: "Bash select example"
+Description: "An example of how to use the select command in bash to pass arguments to functions"
+Date: "2014-04-07"
+Category: "Snippets"
+Template: "post"
+Keywords: ["select", "bash", "command", "line", "cli", "terminal", "function", "arguments"]
+---
 
 I recently bought 2 [raspberry pi computers](http://raspberrypi.org). One is for home, and one is for the office.
 
@@ -47,3 +47,4 @@ $
 ```
 
 You can see that in this example I push `1`. If I run it again and push `2`, you will see the French words show up.
+

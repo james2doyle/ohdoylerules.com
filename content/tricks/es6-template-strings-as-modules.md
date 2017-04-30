@@ -1,11 +1,11 @@
-/*
-Title: How To Use Template Strings As Modules
-Description: How to the new es6 template string literals to make reusable modules for templates/strings or HTML partials
-Date: 2017-02-26
-Category: Tricks
-Template: post
-Keywords: javascript, js, es6, template, string, literal, component, module
-*/
+---
+Title: "How To Use Template Strings As Modules"
+Description: "How to the new es6 template string literals to make reusable modules for templates/strings or HTML partials"
+Date: "2017-02-26"
+Category: "Tricks"
+Template: "post"
+Keywords: ["javascript", "js", "es6", "template", "string", "literal", "component", "module"]
+---
 
 I had a project the other day that needed to make some HTML strings based on some other data in my code.
 

@@ -1,11 +1,11 @@
-/*
-Title: Slack Meta Data For URLs and Links
-Date: 2015-10-31
-Category: Web
-Template: post
-Description: Tips to get Slack to resolve the correct meta data for your website URL
-Keywords: slack, meta, data, website, tag, url, link, image, issues, fixes, list, test
-*/
+---
+Title: "Slack Meta Data For URLs and Links"
+Date: "2015-10-31"
+Category: "Web"
+Template: "post"
+Description: "Tips to get Slack to resolve the correct meta data for your website URL"
+Keywords: ["slack", "meta", "data", "website", "tag", "url", "link", "image", "issues", "fixes", "list", "test"]
+---
 
 If you use [Slack](https://slack.com/), then you have probably noticed the awesome feature they have for generating nice meta data whenever you paste a URL or an image.
 
@@ -61,14 +61,4 @@ As you noticed, there is no "site title" being set. You can also see in the scre
 
 Now you may have copied these Twitter meta tags and pasted them in your site and filled in your information. That **will not work**. You need to use the [Twitter Card Validator](https://cards-dev.twitter.com/validator) to test, and then register, your account and URL.
 
-When you have a successful setup on your site, it should look somewhat like this when shared on Twitter:
-
-<div class="center">
-  <a href="http://ohdoylerules.com/content/images/warpaint-twitter.png" title="Twitter meta tag fetching example" target="_blank"><img alt="Twitter meta tag fetching example" src="http://ohdoylerules.com/content/images/warpaint-twitter.png" ></a>
-</div>
-
-As you can see, Slack does a much better job of handling images.
-
-Facebook and Twitter both blow the images up and crop them to be more rectangular. This can be handled but using a different image for Twitter. But unfortunately, Slack uses the same tags as Facebook (Open Graph) so I don't think there is a way around that, other than making an image that has tons of whitespace.
-
-If you have any tricks or tips on making this process a little better, it would be great to hear them!
+When you

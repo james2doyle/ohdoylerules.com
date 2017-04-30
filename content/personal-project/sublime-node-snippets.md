@@ -1,11 +1,11 @@
-/*
-Title: Sublime Node Snippets
-Date: 2014-03-25
-Category: Personal Project,Web
-Template: post
-Description: sublime snippets for node, async, underscore, and lodash
-Keywords: sublime text 3, snippets, javascript, node, async, underscore, lodash, completions, package control
-*/
+---
+Title: "Sublime Node Snippets"
+Date: "2014-03-25"
+Category: "Personal Project"
+Template: "post"
+Description: "Sublime Text snippets for node, async, underscore, and lodash"
+Keywords: ["sublime text 3", "snippets", "javascript", "node", "async", "underscore", "lodash", "completions", "package control"]
+---
 
 I created a [huge snippet library](https://sublime.wbond.net/packages/Node%20Completions) based on the docs for node 10.26. There are **783** total right now (*2014-03-25*).
 

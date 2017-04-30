@@ -1,10 +1,10 @@
-/*
-Title: git-website-workflow
-Date: 2013-03-13
-Category: Personal Project,Web
-Template: post
-Keywords: git, website, workflow, web, hub, source, server, version, control, aws, amazon web services, bash, shell, scripting
-*/
+---
+Title: "git-website-workflow"
+Date: "2013-03-13"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["git", "website", "workflow", "web", "hub", "source", "server", "version", "control", "aws", "amazon web services", "bash", "shell", "scripting"]
+---
 
 <div class="center">
   <img alt="Amazon Web Services Logo" src="http://ohdoylerules.com/content/images/awslogo.png">

@@ -1,11 +1,11 @@
-/*
-Title: PhalconPHP Completions
-Date: 2015-03-20
-Category: Personal Project, Web
-Template: post
-Description: A PhalconPHP completions and snippets package for Sublime Text
-Keywords: sublime, phalcon, phalconphp, completions, snippet, package
-*/
+---
+Title: "PhalconPHP Completions"
+Date: "2015-03-20"
+Category: "Personal Project"
+Template: "post"
+Description: "A PhalconPHP completions and snippets package for Sublime Text"
+Keywords: ["sublime", "phalcon", "phalconphp", "completions", "snippet", "package"]
+---
 
 I have created a package of Sublime Text completions for [Phalcon PHP](http://phalconphp.com/en/) 1.3.\*.
 

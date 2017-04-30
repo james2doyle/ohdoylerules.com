@@ -1,11 +1,11 @@
-/*
-Title: zsh new file && open file function
-Description: zsh new file && open file function
-Date: 2012-10-13
-Category: Snippets, Uncategorized
-Template: post
-Keywords: zsh, new, file, and, open, function, shell, bash, command
-*/
+---
+Title: "zsh new file && open file function"
+Description: "zsh new file && open file function"
+Date: "2012-10-13"
+Category: "Snippets"
+Template: "post"
+Keywords: ["zsh", "new", "file", "and", "open", "function", "shell", "bash", "command"]
+---
 
 Here is a little function that I made for [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh "oh-my-zsh"). I found myself constantly doing `sudo touch app.js && open app.js`.
 

@@ -1,11 +1,11 @@
-/*
-Title: Simple PHP JSON Response
-Description: Create a simple JSON response using PHP
-Date: 2015-08-04
-Category: Snippets,Web
-Template: post
-Keywords: PHP, json, response, headers, status, encoding, parse, stringify
-*/
+---
+Title: "Simple PHP JSON Response"
+Description: "Create a simple JSON response using PHP"
+Date: "2015-08-04"
+Category: "Snippets"
+Template: "post"
+Keywords: ["PHP", "json", "response", "headers", "status", "encoding", "parse", "stringify"]
+---
 
 This is little snippet I use all the time when I am building simple flat sites that need a single route for an AJAX request.
 

@@ -1,11 +1,11 @@
-/*
-Title: Generated content in CSS
-Description: Generated content in CSS
-Date: 2012-07-27
-Category: Fiddle,Web
-Template: post
-Keywords: generated, content, css, css3, attr, pseduo, elements
-*/
+---
+Title: "Generated content in CSS"
+Description: "How to use Generated content in CSS"
+Date: "2012-07-27"
+Category: "Fiddle"
+Template: "post"
+Keywords: ["generated", "content", "css", "css3", "attr", "pseduo", "elements"]
+---
 
 I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my [work](http://ohdoylerules.com/work/ "Work") section. Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the php echos. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:
 

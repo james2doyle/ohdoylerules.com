@@ -1,11 +1,11 @@
-/*
-Title: Phalcon Micro App Starter
-Date: 2015-01-20
-Category: Personal Project, Web
-Template: post
-Description: A showcase of a Phalcon Micro App starter template that makes it easy to get started with the Phalcon micro app class
-Keywords: Phalcon, module, open source, PHP, template, micro, simple, starter
-*/
+---
+Title: "Phalcon Micro App Starter"
+Date: "2015-01-20"
+Category: "Personal Project"
+Template: "post"
+Description: "A showcase of a Phalcon Micro App starter template that makes it easy to get started with the Phalcon micro app class"
+Keywords: ["Phalcon", "module", "open source", "PHP", "template", "micro", "simple", "starter"]
+---
 
 I created a [simple application template](https://github.com/james2doyle/phalcon-micro-start) that helps people get started with [Phalcon PHP](http://phalconphp.com/ "Phalcon PHP Homepage") using a more practical example of the [Micro application](http://docs.phalconphp.com/en/latest/reference/micro.html).
 

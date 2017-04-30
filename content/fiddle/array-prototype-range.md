@@ -1,11 +1,11 @@
-/*
-Title: Array.prototype.range()
-Description: Array.prototype.range in Javascript
-Date: 2012-10-18
-Category: Fiddle,Snippets,Web
-Template: post
-Keywords: array, prototype, range, javascript, js
-*/
+---
+Title: "Array.prototype.range()"
+Description: "How to create Array.prototype.range in Javascript"
+Date: "2012-10-18"
+Category: "Fiddle"
+Template: "post"
+Keywords: ["array", "prototype", "range", "javascript", "js"]
+---
 
 I wrote this little prototype after seeing the range function in ruby.
 

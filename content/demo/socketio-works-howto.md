@@ -1,11 +1,11 @@
-/*
-Title: Making a socket.io app and how socket.io works
-Description: Making a socket.io app and how socket.io works
-Date: 2013-01-13
-Category: Demo,Web
-Template: post
-Keywords:
-*/
+---
+Title: "Making a socket.io app and how socket.io works"
+Description: "Making a socket.io app and how socket.io works"
+Date: "2013-01-13"
+Category: "Demo"
+Template: "post"
+Keywords: ["socket", "io", "demo", "nodejs", "video"]
+---
 
 I made my first video about web development. It is a quick video about socket.io and how it works with node and such.
 

@@ -1,11 +1,11 @@
-/*
-Title: OpenSSL Passwd Without Prompt
-Description: How to use the openssl passwd without a confirm prompt
-Date: 2016-11-22
-Category: Tricks
-Template: post
-Keywords: openssl, prompt, passwd, password, confirm, stdin, stdout, pipe, auth
-*/
+---
+Title: "OpenSSL Passwd Without Prompt"
+Description: "How to use the openssl passwd without a confirm prompt"
+Date: "2016-11-22"
+Category: "Tricks"
+Template: "post"
+Keywords: ["openssl", "prompt", "passwd", "password", "confirm", "stdin", "stdout", "pipe", "auth"]
+---
 
 Have you ever wanted to generate a password using the `openssl passwd` command, but didn't want the prompt?
 

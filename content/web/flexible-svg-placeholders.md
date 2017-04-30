@@ -1,11 +1,11 @@
-/*
-Title: Flexible SVG Placeholder Images
-Description: Replace a service like placehold.it with your own local version that serves SVG images
-Date: 2014-05-24
-Category: Web
-Template: post
-Keywords: php, svg, image, placeholder, placehold.it, vector, center, text, server, placekitten
-*/
+---
+Title: "Flexible SVG Placeholder Images"
+Description: "Replace a service like placehold.it with your own local version that serves SVG images"
+Date: "2014-05-24"
+Category: "Web"
+Template: "post"
+Keywords: ["php", "svg", "image", "placeholder", "placehold.it", "vector", "center", "text", "server", "placekitten"]
+---
 
 Do you use [placehold.it](http://placehold.it "Placehold.it Homepage")? It is a great service. The only thing is when you are offline, or you are testing a page that needs a lot of placeholders, it may not be the greatest solution.
 
@@ -34,3 +34,4 @@ This would be the output:
 <div class="center">
   <img src="http://ohdoylerules.com/content/images/placeholder.png" alt="Placeholder Example">
 </div>
+

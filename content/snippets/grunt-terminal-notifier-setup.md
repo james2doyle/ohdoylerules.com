@@ -1,11 +1,11 @@
-/*
-Title: grunt terminal-notifier setup
-Description: grunt terminal-notifier setup
-Date: 2013-06-07
-Category: Snippets,Web
-Template: post
-Keywords: grunt, terminal-notifier, setup, git, shell, notification, osx, mac, desktop
-*/
+---
+Title: "grunt terminal-notifier setup"
+Description: "grunt terminal-notifier setup"
+Date: "2013-06-07"
+Category: "Snippets"
+Template: "post"
+Keywords: ["grunt", "terminal-notifier", "setup", "git", "shell", "notification", "osx", "mac", "desktop"]
+---
 
 I just downloaded the new Mountain Lion, finally. One of the biggest new things is the cool little native notifications akin to growl. I thought it would be cool to get a nice notification when my "grunt watch" task finished. First things first. You need to install [terminal-notifier](https://github.com/alloy/terminal-notifier "alloy/terminal notifier"). This allows you to interact with the native OSX notifications system.
 
@@ -42,3 +42,4 @@ watch: {
 ```
 
 You can see that the growl task runs after the initial stylus and javascript watch tasks.
+

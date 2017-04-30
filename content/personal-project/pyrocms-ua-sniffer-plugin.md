@@ -1,31 +1,21 @@
-/*
-Title: PyroCMS UA Sniffer Plugin
-Date: 2013-06-23
-Category: Personal Project,Web
-Template: post
-Keywords: 
-*/
+---
+Title: "PyroCMS UA Sniffer Plugin"
+Description: "A plugin for PyroCMS that allows UA Sniffing"
+Date: "2013-06-23"
+Category: "Personal Project,Web"
+Template: "post"
+Keywords: ["pyrocms", "plugin", "sniff", "useragent", "php", "code igniter"]
+---
 
-This plugin lets you sniff information from the user agent for use in
-the frontend. I use it for adding classes or conditional loading of
-partials and templates.
+This plugin lets you sniff information from the user agent for use in the frontend. I use it for adding classes or conditional loading of partials and templates.
 
-You can see the [github repository
-here](https://github.com/james2doyle/pyro-sniffer-plugin "pyro-sniffer-plugin github").
+You can see the [github repository here](https://github.com/james2doyle/pyro-sniffer-plugin "pyro-sniffer-plugin github").
 
-This plugin is **not** built on the [CodeIgniter User Agent
-Library](http://ellislab.com/codeigniter/user-guide/libraries/user_agent.html).
+This plugin is **not** built on the [CodeIgniter User Agent Library](http://ellislab.com/codeigniter/user-guide/libraries/user_agent.html).
 
-The reason I did not use the built in CodeIgniter lib, was because Pyro
-is only going to have CodeIgniter for a few more months(right?!?!), and
-I also want to have the information returned in a different way. This
-plugin is pretty small and only really gets information that is helpful
-to be used in CSS and Javascript (CSS custom classes and js feature
-detection/fallbacks).
+The reason I did not use the built in CodeIgniter lib, was because Pyro is only going to have CodeIgniter for a few more months(right?!?!), and I also want to have the information returned in a different way. This plugin is pretty small and only really gets information that is helpful to be used in CSS and Javascript (CSS custom classes and js feature detection/fallbacks).
 
-If you are looking for a plugin that uses the user agent library, check
-out [this plugin called
-Agent](https://www.pyrocms.com/store/details/agent_plugin).
+If you are looking for a plugin that uses the user agent library, check out [this plugin called Agent](https://www.pyrocms.com/store/details/agent_plugin).
 
 ### [](#usage)Usage
 

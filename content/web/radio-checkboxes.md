@@ -1,10 +1,11 @@
-/*
-Title: Styling radio and checkbox inputs
-Date: 2012-08-07
-Category: Web
-Template: post
-Keywords: checkbox, CSS, HTML, input, radio, styling
-*/
+---
+Title: "Styling radio and checkbox inputs"
+Description: "Styling inputs can be pretty annoying. I don’t think I really have any consistent way of making custom inputs"
+Date: "2012-08-07"
+Category: "Web"
+Template: "post"
+Keywords: ["checkbox", "CSS", "HTML", "input", "radio", "styling"]
+---
 
 Styling inputs can be pretty annoying. I don’t think I really have any consistent way of making custom inputs. Especially when it comes to radio and checkboxes. I will always prefer using CSS instead of images for obvious reasons. But for radios and checkboxes I normally use images. I usually just make a png sprite and use the :checked selector to move its position.
 

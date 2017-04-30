@@ -1,15 +1,15 @@
-/*
-Title: Generated Content Article Title
-Description: Generated Content Article Title
-Date: 2012-10-18
-Category: Demo, Web
-Template: post
-Keywords: generated, content, article, title, jsfiddle, title, button, work
-*/
+---
+Title: "Generated Content Article Title"
+Description: "Use Generated Content in CSS to show an Article link in plain text"
+Date: "2012-10-18"
+Category: "Demo"
+Template: "post"
+Keywords: ["generated", "content", "article", "title", "jsfiddle", "title", "button", "work"]
+---
 
 I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my [work](http://ohdoylerules.com/work/ "Work") section.
 
-Since it is just a repeating template, I built the classes and styles in jsFiddle and thenjust dropped in the php echos. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:
+Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the PHP `echo`s. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:
 
 ```css
 /*! styles for printing */

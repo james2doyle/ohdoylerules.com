@@ -1,10 +1,11 @@
-/*
-Title: The Simple Spam Stopper
-Date: 2014-05-27
-Category: Web
-Template: post
-Keywords: spam, email, contact, form, captcha, recaptcha, fields, validation, honey, pot
-*/
+---
+Title: "The Simple Spam Stopper"
+Description: "For the last year at WARPAINT Media, we have been getting assaulted with spam."
+Date: "2014-05-27"
+Category: "Web"
+Template: "post"
+Keywords: ["spam", "email", "contact", "form", "captcha", "recaptcha", "fields", "validation", "honey", "pot"]
+---
 
 For the last year at [WARPAINT Media](http://warpaintmedia.ca), we have been getting assaulted with spam. Everything from "Chinese Jerseys" and "Super SEO Ultra Elite Package Extreme" offers.
 
@@ -21,3 +22,4 @@ How about the results? Well we used to get about 10-20 spam per day. Now we get 
 #### Tl;Dr
 
 I added a second email input and practically eliminated our spam.
+

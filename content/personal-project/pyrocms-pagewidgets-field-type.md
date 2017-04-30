@@ -1,10 +1,11 @@
-/*
-Title: PyroCMS PageWidgets Field Type
-Date: 2013-03-05
-Category: Web, Personal Project
-Template: post
-Keywords: pyrocms, pyro, php, page, widgets, pagewidgets, field, type
-*/
+---
+Title: "PyroCMS PageWidgets Field Type"
+Description: "PyroCMS PageWidgets Field Type"
+Date: "2013-03-05"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["pyrocms", "pyro", "php", "page", "widgets", "pagewidgets", "field", "type"]
+---
 
 I created another field type for [PyroCMS](https://www.pyrocms.com/ "PyroCMS Website"). This one is so you can add widgets on a page-by-page basis instead of area-by-area.
 

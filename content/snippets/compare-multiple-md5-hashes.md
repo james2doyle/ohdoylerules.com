@@ -1,11 +1,11 @@
-/*
-Title: compare multiple md5 hashes
-Description: compare multiple md5 hashes
-Date: 2013-09-15
-Category: Snippets, Personal Project, Web
-Template: post
-Keywords: md5, hash, multiple, files, shell, bash, trim, compare
-*/
+---
+Title: "compare multiple md5 hashes"
+Description: "compare multiple md5 hashes"
+Date: "2013-09-15"
+Category: "Snippets"
+Template: "post"
+Keywords: ["md5", "hash", "multiple", "files", "shell", "bash", "trim", "compare"]
+---
 
 Sometimes you need to check a file against a `md5` hash. This can be annoying. Just look at this output:
 

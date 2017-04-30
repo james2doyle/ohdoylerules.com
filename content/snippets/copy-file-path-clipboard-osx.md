@@ -1,11 +1,11 @@
-/*
-Title: Copy filepath to clipboard in OSX
-Description: How to copy a filepath to the clipboard in OSX
-Date: 2014-07-10
-Category: Snippets
-Template: post
-Keywords: osx, apple, mavericks, 10.9.3, applescript, automator, finder, clipboard, copy, paste, shortcut
-*/
+---
+Title: "Copy filepath to clipboard in OSX"
+Description: "How to copy a filepath to the clipboard in OSX"
+Date: "2014-07-10"
+Category: "Snippets"
+Template: "post"
+Keywords: ["osx", "apple", "mavericks", "10.9.3", "applescript", "automator", "finder", "clipboard", "copy", "paste", "shortcut"]
+---
 
 At [WARPAINT](http://warpaintmedia.ca "WARPAINT Media"), we use [Dropbox](https://www.dropbox.com "Dropbox Homepage") for collaborating on our files. This is awesome, but a lot of the times you get some pretty nasty file paths. Especially when you are trying to guide someone to a place where you saved a file.
 
@@ -71,3 +71,4 @@ Now when you have a file of folder selected in the Finder, you can right-click, 
     <img src="http://ohdoylerules.com/content/images/clipboard-5.png" width="646" />
   </a>
 </div>
+

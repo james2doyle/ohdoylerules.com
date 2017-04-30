@@ -1,11 +1,11 @@
-/*
-Title: Simple Benchmarks With Apache AB
-Date: 2015-09-22
-Category: Web
-Template: post
-Description: a tutorial for generating simple benchmarks using the Apache ab tool
-Keywords: ab, apache, bench, load, test, request, mock, performance, response
-*/
+---
+Title: "Simple Benchmarks With Apache AB"
+Date: "2015-09-22"
+Category: "Web"
+Template: "post"
+Description: "a tutorial for generating simple benchmarks using the Apache ab tool"
+Keywords: ["ab", "apache", "bench", "load", "test", "request", "mock", "performance", "response"]
+---
 
 ### Why Benchmark?
 
@@ -48,8 +48,4 @@ Failures and errors are generally not good. You should check your logs for anyth
 
 For *Requests Per Second*, this tells you how quickly your site was able to process all those requests. Higher is better because it means that your site was able to serve the content without hiccups.
 
-The *Time Per Request*, although that article says it isn't important in the context of ab, I think it is still important to watch. This metric tells you how long the average request takes. Keep in mind we don't have javascript running, or images loading, or any of that. We know that [humans like things under 100ms](http://www.nngroup.com/articles/response-times-3-important-limits/ "Response Times: The 3 Important Limits"), so keep that in mind.
-
-### Real World Results
-
-This was helpful after [setting up Varnish](http://ohdoylerules.com/web/varnish-for-static-sites "Varnish for static sites") for this site. I wanted to get an idea of what kind of difference it was making. Well, I believe that I saw about a 500% increase in *request per second*. This is pretty sweet!
+The *Time Per Request*, although that article says it isn't important in the context of ab, I think it is still important to watch. This metric tells you how long the average request takes. Keep in mind we don't have javascript running, or

@@ -1,11 +1,11 @@
-/*
-Title: PHP WebSocket Chat
-Date: 2014-02-08
-Category: Personal Project
-Template: post
-Keywords: php, websocket, html5, socket, long poll, interval, ajax, post, get
-Description: PHP websocket chat application example
-*/
+---
+Title: "PHP WebSocket Chat"
+Description: "PHP websocket chat application example"
+Date: "2014-02-08"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["php", "websocket", "html5", "socket", "long poll", "interval", "ajax", "post", "get"]
+---
 
 About 6 months ago, I made a little [socket.io chat app](https://github.com/james2doyle/socket-chat-example). At the time, this was really only possible with Node.js because the [HTML5 WebSocket support](http://caniuse.com/#feat=websockets) was too low.
 

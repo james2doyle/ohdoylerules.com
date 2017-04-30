@@ -1,10 +1,11 @@
-/*
-Title: Tips For Using SVGs
-Date: 2014-05-17
-Category: Web
-Template: post
-Keywords: svg, image, pattern, base64, embed, object, safari, issues, viewbox, requestAnimationFrame, mask, animations, transitions
-*/
+---
+Title: "Tips For Using SVGs"
+Description: "I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind."
+Date: "2014-05-17"
+Category: "Web"
+Template: "post"
+Keywords: ["svg", "image", "pattern", "base64", "embed", "object", "safari", "issues", "viewbox", "requestAnimationFrame", "mask", "animations", "transitions"]
+---
 
 I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.
 
@@ -74,34 +75,4 @@ Always check your files to make sure there aren't any hidden layers. Firefox, ag
 
 Always outline your text. Enough said. Without it, the person may see a font that you didn't intend. I would only use a system font if I had to make sure it stayed as text. A case for this might be dynamically creating SVGs on the fly or something.
 
-### Use CSS For Animations and Transitions
-
-You can use CSS for most properties on SVG elements. You can also apply CSS transitions to most properties of the SVG. So you can use your fancy javascript to toggle classes and have things work smoothly. Check out this article on using [CSS animations with SVG](http://css-tricks.com/animating-svg-css/ "CSS Tricks - Animating SVG with CSS").
-
-### Use Unique IDs For Elements
-
-Although you can use a class for selecting elements in an SVG, I would suggest using ID attributes. Only because it makes you think about uniqueness. When selecting elements, you can use `document.getElementById` to target elements inside the SVG.
-
-I would almost suggest adding a namespace to your IDs. Something like `#svg-circle` is pretty great because it tells me it's the circle inside the SVG. Instead of having to do something like `document.getElementsByTagName('svg')[0].getElementsByClassName('circle')[0]`. This is long and awkward. I use `getElementById` whenever I can, For a couple reasons:
-
-* It is fast. See [this test](http://jsperf.com/getelementbyid-vs-queryselector/11 "getelementbyid-vs-queryselector"). 3&times; faster than querySelector.
-* You get 1 item on return
-* It supports dinosaur browsers
-
-### Use requestAnimationFrame for JS Animations
-
-Sometimes you may have to use javascript for animating. When that happens, you should always use [requestAnimationFrame](https://developer.mozilla.org/en/docs/Web/API/window.requestAnimationFrame "MDN requestAnimationFrame").
-
-RAF (requestAnimationFrame) let's you create smooth animations with javascript loops. What RAF does, is try to make your animations happen at 60fps. This is generally considered the best frame rate for games and HD video.
-
-If you don't have to use javascript loops for animations, you are better off going with CSS3 animations. One thing about RAF is that it has lower support than CSS3 animations. This means it will work in less browsers if you use RAF.
-
-Recently, I had a project where there was a big SVG that had a parallax effect. The mouse would move across the screen and the different layers of the SVG would move at different ratios (higher in the front, lower in the back). In order to get it to work nicely, I used RAF when animating the mouse movement.
-
-### Things to remember
-
-You always need to consider [which devices support SVG](http://caniuse.com/#search=svg "CanIUse - search SVG").
-
-Remember that there are various ways to import SVGs into an HTML document. You should find the best case for what you are doing.
-
-In the end, there is really no reason to not use SVG. Unless you absolutely require old IE support (IE < 9) or old Android support (Android < 3.0).
+### Use CSS Fo

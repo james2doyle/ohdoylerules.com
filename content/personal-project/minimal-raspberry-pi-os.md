@@ -1,12 +1,12 @@
-/*
-Title: Minimal Raspberry Pi OS
-Date: 2015-03-14
-Updated: 2015-03-20
-Category: Personal Project, Web
-Template: post
-Description: Setup and improve the Moebius OS for the Raspberry Pi
-Keywords: Moebius, debian, linux, raspberry, pi, os, operating system, minimal, small, tiny
-*/
+---
+Title: "Minimal Raspberry Pi OS"
+Date: "2015-03-14"
+Updated: "2015-03-20"
+Category: "Personal Project"
+Template: "post"
+Description: "Setup and improve the Moebius OS for the Raspberry Pi"
+Keywords: ["Moebius", "debian", "linux", "raspberry", "pi", "os", "operating system", "minimal", "small", "tiny"]
+---
 
 ## Introduction
 
@@ -94,7 +94,7 @@ This will take a while to build, so *grab a coffee or a beer*.
 
 ### Samba setup
 
-[Samba](http://en.wikipedia.org/wiki/Samba_%28software%29) lets us access the Pi like a hard drive on our local network. Samba *works well with Windows and OSX*, and of course Linux as well. 
+[Samba](http://en.wikipedia.org/wiki/Samba_%28software%29) lets us access the Pi like a hard drive on our local network. Samba *works well with Windows and OSX*, and of course Linux as well.
 
 If you are not familiar with the `vi` tool, you should [use this site to learn some basics](http://www.washington.edu/computing/unix/vi.html).
 
@@ -128,7 +128,7 @@ wins support = yes
 *Again, have lang.gcc installed before continuing*.
 
 I have been playing with [Lit](https://github.com/luvit/lit) and [Luvit](https://github.com/luvit/luvit). They are like lightweight versions of Node.js, but written with Lua. So let's install them with a series of commands:
-    
+
     apt-get install curl
     curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
     mkdir -p /usr/local/bin

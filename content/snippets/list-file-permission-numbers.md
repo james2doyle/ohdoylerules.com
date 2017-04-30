@@ -1,11 +1,11 @@
-/*
-Title: List File Permission Numbers
-Description: Easily list the chmod numbers for all the files in a folder
-Date: 2013-12-08
-Category: Snippets,Web
-Template: post
-Keywords: chmod, permissions, file, numbers, command, line, cli, terminal
-*/
+---
+Title: "List File Permission Numbers"
+Description: "Easily list the chmod numbers for all the files in a folder"
+Date: "2013-12-08"
+Category: "Snippets"
+Template: "post"
+Keywords: ["chmod", "permissions", "file", "numbers", "command", "line", "cli", "terminal"]
+---
 
 I wanted to see the chmod numbers for the files in a directory. So I can copy them to the other files. Since I don't want to do that dumb chmod math, I looked for a way to do it easily.
 
@@ -34,3 +34,4 @@ greping the output
     644 -rw-r--r--   1 james2doyle   README.md
 
 Here is the [stackoverflow question](http://goo.gl/HS9Ar3) where I stole this from.
+

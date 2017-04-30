@@ -1,11 +1,11 @@
-/*
-Title: Purge A File From A Github Repo
-Description: How to permanently remove a file from a repo and it's history
-Date: 2014-05-18
-Category: Snippets,Web
-Template: post
-Keywords: github, git, bash, command, line, cli, terminal, function, arguments, remove, repo, purge, history
-*/
+---
+Title: "Purge A File From A Github Repo"
+Description: "How to permanently remove a file from a repo and it's history"
+Date: "2014-05-18"
+Category: "Snippets"
+Template: "post"
+Keywords: ["github", "git", "bash", "command", "line", "cli", "terminal", "function", "arguments", "remove", "repo", "purge", "history"]
+---
 
 Ever wanted to permanently remove a file from a repo and it's history?
 
@@ -34,3 +34,4 @@ git commit -m "Add MYFILE to .gitignore"
 Then to update the live repo, run `git push origin master --force`.
 
 This process will remove the file from your repo, and from the history. This is in-case you committed a sensitive file. If you get in a real pickle, you can use the [BFG Repo-Cleaner](http://rtyley.github.io/bfg-repo-cleaner/ "BFG Repo-Cleaner").
+

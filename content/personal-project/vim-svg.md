@@ -1,12 +1,12 @@
-/*
-Title: Vim Vector Logo
-Date: 2014-03-04
-Updated: 2014-17-06
-Category: Personal Project,Web
-Template: post
-Desctiption: The Vim logo in a vector SVG format. Also includes a ICNS file for OSX.
-Keywords: Vim, logo, vector, svg, ai, image, macvim, icon, icns
-*/
+---
+Title: "Vim Vector Logo"
+Date: "2014-03-04"
+Updated: "2014-06-17"
+Category: "Personal Project"
+Template: "post"
+Description: "The Vim logo in a vector SVG format. Also includes a ICNS file for OSX."
+Keywords: ["Vim", "logo", "vector", "svg", "ai", "image", "macvim", "icon", "icns"]
+---
 
 Here is a beauty. People have been looking for this Vim logo in a vector format for quite some time. There is of course the [old logo](http://commons.wikimedia.org/wiki/File:Vimlogo.svg), but it looks pretty strange. It reminds me of Tron for some reason.
 

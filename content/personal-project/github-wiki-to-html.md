@@ -1,10 +1,10 @@
-/*
-Title: Github Wiki To HTML
-Date: 2013-11-17
-Category: Personal Project,Snippets,Web
-Template: post
-Keywords: github, gh pages, markdown, md, wiki, html, marked, node, export
-*/
+---
+Title: "Github Wiki To HTML"
+Date: "2013-11-17"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["github", "gh pages", "markdown", "md", "wiki", "html", "marked", "node", "export"]
+---
 
 Have you ever wanted to convert a Github wiki to a set of HTML pages? This can be an easy way to generate new gh-pages (github web pages) based on the projects Wiki.
 

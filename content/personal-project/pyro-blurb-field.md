@@ -1,10 +1,11 @@
-/*
-Title: pyro-blurb-field
-Date: 2013-03-19
-Category: Personal Project,Web
-Template: post
-Keywords: pyrocms, blurb, field, cms, php, sections, title, link, website, body, content, text
-*/
+---
+Title: "Pyro Blurb Field"
+Description: "A field for Pyrocms that allows you to create little blurbs in a list"
+Date: "2013-03-19"
+Category: "Personal Project,Web"
+Template: "post"
+Keywords: ["pyrocms", "blurb", "field", "cms", "php", "sections", "title", "link", "website", "body", "content", "text"]
+---
 
 I created another new field type for [PyroCMS](http://pyrocms.com "PyroCMS Website").
 

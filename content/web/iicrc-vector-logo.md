@@ -1,10 +1,10 @@
-/*
-Title: IICRC Vector Logo
-Date: 2013-12-18
-Category: Web
-Template: post
-Keywords: iicrc, vector, logo, svg, eps, black
-*/
+---
+Title: "IICRC Vector Logo"
+Date: "2013-12-18"
+Category: "Web"
+Template: "post"
+Keywords: ["iicrc", "vector", "logo", "svg", "eps", "black"]
+---
 
 Another lost logo, this one is for the IICRC (institute of inspection cleaning and restoration). They are an international cleaning certification institure. Clearly. Here is their vector logo.
 
@@ -13,3 +13,4 @@ Another lost logo, this one is for the IICRC (institute of inspection cleaning a
 </div>
 
 Enjoy. This was a huge pain to get right.
+

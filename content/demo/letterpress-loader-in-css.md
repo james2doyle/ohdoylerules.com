@@ -1,11 +1,11 @@
-/*
-Title: Letterpress loader in CSS
-Description: Letterpress loader in CSS
-Date: 2012-11-04
-Category: Demo,Web
-Template: post
-Keywords: letterpress, css, css3, loader, icon, loading, animation, transition, rotate, ajax
-*/
+---
+Title: "Letterpress loader in CSS"
+Description: "Create the Letterpress loader in CSS"
+Date: "2012-11-04"
+Category: "Demo"
+Template: "post"
+Keywords: ["letterpress", "css", "css3", "loader", "icon", "loading", "animation", "transition", "rotate", "ajax"]
+---
 
 I recently bought the amazing Letterpress app for iPhone. It truly is gorgeous, and has an amazing UI. It inspired me to make this little doodle.
 

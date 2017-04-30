@@ -1,11 +1,11 @@
-/*
-Title: Backup MySQL And Email It
-Description: Don't bother paying for a SaaS that creates MySQL backups and emails them to you on a schedule, you can do this with CRON and a small script
-Date: 2016-03-24
-Category: Snippets,Web
-Template: post
-Keywords: mysql, backup, email, mailgun, curl, mysqldump, shell, script, cron, sendmail, mail
-*/
+---
+Title: "Backup MySQL And Email It"
+Description: "Don't bother paying for a SaaS that creates MySQL backups and emails them to you on a schedule, you can do this with CRON and a small script"
+Date: "2016-03-24"
+Category: "Snippets"
+Template: "post"
+Keywords: ["mysql", "backup", "email", "mailgun", "curl", "mysqldump", "shell", "script", "cron", "sendmail", "mail"]
+---
 
 Recently, a friend of mine asked me what we use for managing the backups for our clients. I mentioned that we use `mysqldump` running on a `CRON` schedule. He said that he used a paid service for managing all the servers and their backups. He mentioned it sends to an Amazon S3 bucket, and also sends a notification.
 

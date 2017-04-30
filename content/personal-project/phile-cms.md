@@ -1,11 +1,11 @@
-/*
-Title: Phile CMS
-Description: Phile is flat-file CMS based on Pico
-Date: 2013-11-04
-Category: Personal Project,Web
-Template: post
-Keywords: phile, pico, cms, markdown, twig, template, PHP
-*/
+---
+Title: "Phile CMS"
+Description: "Phile is flat-file CMS based on Pico"
+Date: "2013-11-04"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["phile", "pico", "cms", "markdown", "twig", "template", "PHP"]
+---
 
 After being a upset at the progress with Pico, myself and a developer from Germany([Frank](https://twitter.com/neoblack "Frank Twitter")) have developed a fork project.
 

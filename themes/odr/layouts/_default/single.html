@@ -1,0 +1,60 @@
+{{ partial "header.html" . }}
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="header-post">
+    <h1 itemprop="name headline">{{ .Title }}</h1>
+    <br>
+    <a href="{{ .Site.BaseURL }}" title="Go Back Home">Go <i class="icon icon-home"></i></a>
+  </header>
+  <div class="container">
+    <div class="the-loop">
+      <div class="post-info">
+        {{ if .Params.Date }}
+        <span class="post-date" itemprop="datePublished"><i class="icon icon-time"></i> {{ dateFormat "January 2, 2006" .Params.Date }}</span>
+        {{ end }}
+        {{ if .Params.Updated }}
+        &nbsp;<span class="post-date"><i class="icon icon-time"></i> Updated: {{ dateFormat "January 2, 2006" .Params.Updated }}</span>
+        {{ end }}
+        &nbsp;&nbsp;&nbsp;
+        {{ if .Params.Category }}
+        <span class="post-category" itemprop="genre about"><i class="icon icon-tag"></i> {{ .Params.Category }}</span>
+        {{ end }}
+      </div>
+      <div class="cf"></div>
+      <div itemprop="ArticleBody text" class="main-content">{{ .Content }}</div>
+      <hr>
+      <div class="socials">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="james2doyle" data-count="none">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <div class="g-plus" data-action="share"></div>
+        <script type="text/javascript">(function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script>
+        <div class="cf"></div>
+        <a href="{{ .Site.Params.Referral_code }}" target="_blank" title="Site Hosted By Digital Ocean" class="do-link"><img src="/images/digitalocean-badge.png" width="140" height="39" alt="Digital Ocean Logo"></a>
+        <!-- <div class="cf"></div>
+        <a href="{{ .Site.Params.Unblock_us }}" target="_blank" title="Unblock us Referral" class="ubu-link"><img src="/images/unblockus-logo.png" width="176" height="73" alt="Digital Ocean Logo"></a> -->
+      </div>
+      <hr>
+      <div class="post-author">
+        <a href="https://twitter.com/{{ .Site.Params.Twitter }}" target="_blank"><img src="{{ .Site.Params.Gravatar }}" alt="{{ .Site.Title }} Profile Picture" width="100" height="100"></a>
+        <div class="post-author-info">
+          <h5><i class="icon icon-info-sign"></i> About The Author</h5>
+          <h3 itemprop="author publisher creator provider">{{ .Site.Title }}</h3>
+          <p>{{ .Site.Params.Author_blurb | safeHTML }}</p>
+          <h4><em>{{ .Site.Params.Author_helpline_title | safeHTML }}</em></h4>
+          <p>{{ .Site.Params.Author_helpline | safeHTML }}</p>
+          <ul class="social-links">
+            <li><a target="_blank" href="https://twitter.com/{{ .Site.Params.Twitter }}" title="{{ .Site.Title }} Twitter" rel="me"><i class="icon icon-twitter-sign"></i></a></li>
+            <li><a target="_blank" href="https://github.com/{{ .Site.Params.Github }}" title="{{ .Site.Title }} Github" rel="me"><i class="icon icon-github"></i></a></li>
+            <li><a target="_blank" href="https://plus.google.com/{{ .Site.Params.Googleplus }}" title="{{ .Site.Title }} Google Plus" rel="author publisher creator me"><i class="icon icon-google-plus-sign"></i></a></li>
+            <li><a target="_blank" href="mailto:{{ .Site.Params.Email }}" title="{{ .Site.Title }} Email" rel="me"><i class="icon icon-envelope"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div id="disqus_thread" itemprop="comment"></div>
+      <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}

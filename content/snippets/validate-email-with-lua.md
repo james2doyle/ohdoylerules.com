@@ -1,11 +1,11 @@
-/*
-Title: Validate Email With Lua
-Description: A verbose email validation function for Lua
-Date: 2015-09-06
-Category: Snippets,Web
-Template: post
-Keywords: Lua, valid, email, address, test
-*/
+---
+Title: "Validate Email With Lua"
+Description: "A verbose email validation function for Lua"
+Date: "2015-09-06"
+Category: "Snippets"
+Template: "post"
+Keywords: ["Lua", "valid", "email", "address", "test"]
+---
 
 Checking if an email is valid should be easy, right? WRONG.
 

@@ -1,10 +1,11 @@
-/*
-Title: pico-download plugin
-Date: 2013-09-18
-Category: Personal Project, Snippets, Web
-Template: post
-Keywords: pico, cms, markdown, php, plugin, download, force
-*/
+---
+Title: "pico-download plugin"
+Description: "I created a plugin to force files to download in PicoCMS"
+Date: "2013-09-18"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["pico", "cms", "markdown", "php", "plugin", "download", "force"]
+---
 
 I created a plugin to force files to download in [PicoCMS](http://pico.dev7studios.com).
 

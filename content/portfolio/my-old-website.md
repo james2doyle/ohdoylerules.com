@@ -1,10 +1,11 @@
-/*
-Title: My Old Website
-Date: 2012-10-04
-Category: Portfolio,Web
-Template: post
-Keywords:
-*/
+---
+Title: "My Old Website"
+Description: "See my old website"
+Date: "2012-10-04"
+Category: "Portfolio"
+Template: "post"
+Keywords: ["chrome 18", "firefox 10", "web", "site", "archive"]
+---
 
 I decided to host my old website because I wanted to show some work with Modernizr.
 

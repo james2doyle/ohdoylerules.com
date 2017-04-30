@@ -1,11 +1,11 @@
-/*
-Title: Add $.getStylesheet To jQuery
-Date: 2016-02-05
-Category: Web
-Template: post
-Description: Ever wanted to have a CSS/Stylesheet version of $.getScript? Well now you can with $.getStylesheet
-Keywords: javascript, jquery, getScript, getStylesheet, getCss, plugin, function, deferred
-*/
+---
+Title: "Add $.getStylesheet To jQuery"
+Date: "2016-02-05"
+Category: "Web"
+Template: "post"
+Description: "Ever wanted to have a CSS/Stylesheet version of $.getScript? Well now you can with $.getStylesheet"
+Keywords: ["javascript", "jquery", "getScript", "getStylesheet", "getCss", "plugin", "function", "deferred"]
+---
 
 Have you ever wanted to do this?
 

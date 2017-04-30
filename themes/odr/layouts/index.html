@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+<header class="header-logo">
+  <img src="/icons/logo.svg" alt="James Doyle Logo" width="113" height="57">
+  <h1><a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">{{ .Site.Title }}</a></h1>
+</header>
+<div class="container">
+  <div class="the-loop">
+    {{ range .Data.Pages }}
+    {{ $page := . }}
+    <article>
+      <h2><a href="{{ $page.Permalink }}" title="{{ $page.Title }}">{{ $page.Title }}</a></h2>
+      <div class="post-info">
+        {{ if $page.Params.Date }}
+        <span class="post-date"><i class="icon icon-time"></i> {{ dateFormat "January 2, 2006" $page.Params.Date }}</span>
+        {{ end }}
+        {{ if $page.Params.Updated }}
+        &nbsp;<span class="post-date"><i class="icon icon-time"></i> Updated: {{ dateFormat "January 2, 2006" $page.Params.Updated }}</span>
+        {{ end }}
+        {{ if $page.Params.Category }}
+        &nbsp;&nbsp;&nbsp;
+        <span class="post-category"><i class="icon icon-tag"></i> {{ $page.Params.Category }}</span>
+        {{ end }}
+      </div>
+      <div class="cf"></div>
+      <div class="post-intro">
+       <p>{{ $page.Params.Description }}</p>
+       <p><a href="{{ $page.Permalink }}" class="read-more" title="Read {{ $page.Title }}">Read More <i class="icon icon-arrow-right"></i></a></p>
+     </div>
+   </article>
+   {{ end }}
+  </div>
+</div>
+{{ partial "footer.html" . }}

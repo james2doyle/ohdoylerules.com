@@ -1,11 +1,11 @@
-/*
-Title: Atom Monokai Dark
-Description: Dark Monokai theme for the Github Atom editor
-Date: 2014-02-27
-Category: Personal Project,Snippets,Web
-Template: post
-Keywords: monokai, theme, dark, github, atom, editor, less, css, tmtheme, font, smoothing, scrollbars
-*/
+---
+Title: "Atom Monokai Dark"
+Description: "Dark Monokai theme for the Github Atom editor"
+Date: "2014-02-27"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["monokai", "theme", "dark", "github", "atom", "editor", "less", "css", "tmtheme", "font", "smoothing", "scrollbars"]
+---
 
 I made a [dark monokai](http://atom.io/packages/monokai-dark) syntax theme for [Atom](http://atom.io/).
 

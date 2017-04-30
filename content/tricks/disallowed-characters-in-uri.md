@@ -1,11 +1,11 @@
-/*
-Title: Disallowed Characters In URI
-Description: The URI you submitted has disallowed characters
-Date: 2015-03-31
-Category: Tricks
-Template: post
-Keywords: php, codeigniter, disallowed, characters, 400, error, paragraph ending, %E2%80%8B
-*/
+---
+Title: "Disallowed Characters In URI"
+Description: "The URI you submitted has disallowed characters"
+Date: "2015-03-31"
+Category: "Tricks"
+Template: "post"
+Keywords: ["php", "codeigniter", "disallowed", "characters", "400", "error", "paragraph ending", "%E2%80%8B"]
+---
 
 How to fix "The URI you submitted has disallowed characters" error.
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <base href="{{ .Site.BaseURL }}" />
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>{{ .Site.Title }} | {{ .Params.Title }}</title>
+  <link href="https://plus.google.com/{{ .Site.Params.Googleplus }}" rel="author publisher" />
+  {{ if not (eq .Params.Template "post") }}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ .Site.Title }}">
+  {{ end }}
+  <meta itemprop="name" content="{{ .Site.Title }}">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="{{ .Permalink }}">
+  <meta itemprop="email" content="{{ .Site.Params.Email }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta itemprop="image logo" content="/icons/logo.png">
+  <meta property="og:image" content="/icons/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ .Site.Params.Twitter }}">
+  <meta name="twitter:title" content="{{ .Params.Title }}">
+  <meta name="twitter:creator" content="@{{ .Site.Params.Twitter }}">
+  <meta name="twitter:image:src" content="/icons/logo.png">
+  <meta name="twitter:domain" content="{{ .Site.BaseURL }}">
+  <link rel="icon" href="/icons/logo.svg">
+  {{ if eq .Params.Title "Homepage" }}
+  <meta itemprop="description" content="{{ .Params.Description }}">
+  <meta property="og:description" content="{{ .Params.Description }}">
+  <meta name="twitter:description" content="{{ .Params.Description }}">
+  <meta itemprop="keywords" content="{{ delimit .Params.Keywords ", " }}">
+  <meta property="og:keywords" content="{{ delimit .Params.Keywords ", " }}">
+  {{ end }}
+  {{ if eq .Params.Template "post" }}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ .Params.Title }}">
+    <meta property="article:author" content="{{ .Site.Title }}" />
+    <meta property="article:section" content="{{ .Params.Category }}" />
+    <meta property="article:tag" content="{{ delimit .Params.Keywords ", " }}" />
+    <meta itemprop="keywords" content="{{ delimit .Params.Keywords ", " }}">
+    <meta property="og:keywords" content="{{ delimit .Params.Keywords ", " }}">
+    {{ if .Params.Updated }}
+    <meta itemprop="dateModified" content="{{ .Params.Updated }}" />
+    {{ end }}
+    {{ if .Params.Description }}
+    <meta itemprop="description" content="{{ .Params.Description }}">
+    <meta property="og:description" content="{{ .Params.Description }}">
+    <meta name="twitter:description" content="{{ .Params.Description }}">
+    {{ else }}
+    <meta itemprop="description" content="{{ .Site.Params.Description }}">
+    <meta name="twitter:description" content="{{ .Site.Params.Description }}">
+    <meta property="og:description" content="{{ .Site.Params.Description }}">
+    {{ end }}
+  {{ end }}
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" title="{{ .Site.Title }} RSS Feed" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "sitemap.xml" | absLangURL }}" />
+  {{ if eq .Params.Template "post" }}
+  <link rel="stylesheet" href="/css/tomorrow-night.css">
+  {{ end }}
+</head>
+<body>

@@ -1,11 +1,11 @@
-/*
-Title: PHP Variables in strings
-Description: PHP Variables in strings
-Date: 2013-03-21
-Category: Demo,Fiddle,Web
-Template: post
-Keywords: php, variables, string, interpolation, vars, in, text, render
-*/
+---
+Title: "PHP Variables in strings"
+Description: "A list of all the ways you can put PHP Variables in strings"
+Date: "2013-03-21"
+Category: "Demo"
+Template: "post"
+Keywords: ["php", "variables", "string", "interpolation", "vars", "in", "text", "render"]
+---
 
 I have been getting quite annoyed lately when escaping a string to output a PHP variable. So I decided to make a little test so I could see what the best way to tackle this was.
 

@@ -1,12 +1,13 @@
-/*
-Title: Custom Google Forms
-Author: James Doyle
-Date: 2013-05-22
-Updated: 2014-09-20
-Category: Personal Project, Web
-Template: post
-Keywords: CSS, custom, drive, forms, Github, google, less, node, open source, preprocessors
-*/
+---
+Title: "Custom Google Forms"
+Description: "I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something"
+Author: "James Doyle"
+Date: "2013-05-22"
+Updated: "2014-09-20"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["CSS", "custom", "drive", "forms", "Github", "google", "less", "node", "open source", "preprocessors"]
+---
 
 <div class="center">
   <img src="http://ohdoylerules.com/content/images/googleforms.png" alt="" align="middle">
@@ -53,3 +54,4 @@ I do not want to add any extra markup to the pages. The idea hear is to just cop
 But right now I am just going to try and normalize the current stylsheet into something as default as possible so that I can then create a my-theme-name.css file that contains all the variables to do the styling. I am currently only using the variables in LESS but eventually I will use more of the feaures to get everything nice and themeable.
 
 You can check out the [Demo form in action](https://googledrive.com/host/0B3SHb_huRFdyNENfQjVzSGpIOFU/index.html "Hosted Demo of custom Google Form") or just jump right to the [Github Repo](https://github.com/james2doyle/google-form-styling "james2doyle/google-form-styling").
+

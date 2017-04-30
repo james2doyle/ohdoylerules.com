@@ -1,11 +1,11 @@
-/*
-Title: Easy FFmpeg Video Posters
-Description: Take in a list of video files and generate a poster image for each one
-Date: 2015-03-19
-Category: Snippets,Web
-Template: post
-Keywords: ffmpeg, video, poster, screenshot, image, thumbnail, command line
-*/
+---
+Title: "Easy FFmpeg Video Posters"
+Description: "Take in a list of video files and generate a poster image for each one"
+Date: "2015-03-19"
+Category: "Snippets"
+Template: "post"
+Keywords: ["ffmpeg", "video", "poster", "screenshot", "image", "thumbnail", "command line"]
+---
 
 A week ago I was tasked with uploading about 20 different videos to a CMS. Normally for the HTML5 Video element to look nice, you should upload a [poster image](http://www.w3.org/TR/2012/WD-html5-20121025/the-video-element.html#attr-video-poster) so that there can be something showing before the video starts to play.
 

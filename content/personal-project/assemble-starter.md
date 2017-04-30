@@ -1,12 +1,11 @@
-/*
-Title: Assemble Starter
-Description: Assemble for Grunt.js Starter template
-Date: 2013-10-17
-Category: Personal Project,Snippets,Web
-Template: post
-Keywords: grunt, assemble, template, starting, tasks, gruntfile, node, livereload, sass, css, javascript, handlebars
-*/
-
+---
+Title: "Assemble Starter"
+Description: "Assemble for Grunt.js Starter template"
+Date: "2013-10-17"
+Category: "Personal Project"
+Template: "post"
+Keywords: ["grunt", "assemble", "template", "starting", "tasks", "gruntfile", "node", "livereload", "sass", "css", "javascript", "handlebars"]
+---
 
 Assemble starter is my starting point for any of my static [assemble sites](http://assemble.io/ "Grunt Assemble Homepage").
 

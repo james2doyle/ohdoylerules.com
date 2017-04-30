@@ -1,11 +1,11 @@
-/*
-Title: Randomly Generate A Password In Bash
-Description: Randomly generate a password of specified length and then copy it to the clipboard
-Date: 2014-02-16
-Category: Snippets, Personal Project, Web
-Template: post
-Keywords: password, random, generate, base64, bash, openssl, cli, terminal, shell, command line, pbcopy, clipboard, osx, mac
-*/
+---
+Title: "Randomly Generate A Password In Bash"
+Description: "Randomly generate a password of specified length and then copy it to the clipboard"
+Date: "2014-02-16"
+Category: "Snippets"
+Template: "post"
+Keywords: ["password", "random", "generate", "base64", "bash", "openssl", "cli", "terminal", "shell", "command line", "pbcopy", "clipboard", "osx", "mac"]
+---
 
 When installing or setting up frameworks, in this case I was playing around with [Laravel](http://laravel.com/), you usually need to set a session/secret/encryption key.
 
@@ -73,3 +73,4 @@ Argument must be a number
 ```
 
 This function would be put in your `.bashrc` file, or you `.zshrc` file if you are a cool ZSH user.
+

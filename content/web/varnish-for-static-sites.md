@@ -1,11 +1,11 @@
-/*
-Title: Varnish For Static Sites
-Date: 2015-09-20
-Category: Web
-Template: post
-Description: a small tutorial for how to setup Varnish cache for a flat site running on Apache
-Keywords: varnish, flat, file, site, apache, ubuntu, install, setup, config
-*/
+---
+Title: "Varnish For Static Sites"
+Date: "2015-09-20"
+Category: "Web"
+Template: "post"
+Description: "a small tutorial for how to setup Varnish cache for a flat site running on Apache"
+Keywords: ["varnish", "flat", "file", "site", "apache", "ubuntu", "install", "setup", "config"]
+---
 
 Recently, [my company](http://warpaintmedia.ca) had a request to build a series of sites that could handle huge bursts of traffic. I asked some friends of mine, what a good solution for this would be. All of them said [Varnish](https://www.varnish-cache.org/).
 

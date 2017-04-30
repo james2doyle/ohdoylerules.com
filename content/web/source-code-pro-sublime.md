@@ -1,10 +1,12 @@
-/*
-Title: Source Code Pro on Sublime Text
-Date: 2012-10-19
-Category: Web
-Template: post
-Keywords: 2, adobe, font, source code pro, sublime, syntax, text
-*/
+---
+Title: "Source Code Pro on Sublime Text"
+Description: "Download and install Source Code Pro on Sublime Text"
+Date: "2012-10-19"
+Category: "Web"
+Template: "post"
+Keywords: ["adobe", "font", "source code pro", "sublime", "syntax", "text"]
+---
+
 
 <div class="center">
   <img src="http://ohdoylerules.com/content/images/githubgistlogo.png" alt="Github Gists Logo">

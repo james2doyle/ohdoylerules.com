@@ -1,11 +1,11 @@
-/*
-Title: jQuery Plugin Snippets for Sublime Text 2
-Description: jQuery Plugin Snippets for Sublime Text 2
-Date: 2013-03-28
-Category: Snippets, Personal Project, Web
-Template: post
-Keywords: 2, editor, Github, javascript, jquery, open source, Plugin, snippets, sublime text
-*/
+---
+Title: "jQuery Plugin Snippets for Sublime Text 2"
+Description: "jQuery Plugin Snippets for Sublime Text 2"
+Date: "2013-03-28"
+Category: "Snippets"
+Template: "post"
+Keywords: ["editor", "Github", "javascript", "jquery", "open source", "Plugin", "snippets", "sublime text"]
+---
 
 <div class="center">
   <img src="http://ohdoylerules.com/content/images/jquery.png" alt="jquery logo">
@@ -22,3 +22,4 @@ These are for [Sublime Text 2](http://www.sublimetext.com/ "sublime text site") 
 I had to create that image because it didn’t exists for some reason.
 
 [Github Linky](https://github.com/james2doyle/jquery-plugin-snippets "james2doyle/jquery-plugin-snippets").
+

@@ -1,11 +1,11 @@
-/*
-Title: Use Nginx for A/B Testing
-Date: 2016-08-28
-Category: Web
-Template: post
-Description: Use Nginx to set custom headers in your HTTP responses so you can serve conditional content
-Keywords: nginx, server, middleware, a, b, test, content, conditional, header, marketing
-*/
+---
+Title: "Use Nginx for A/B Testing"
+Date: "2016-08-28"
+Category: "Web"
+Template: "post"
+Description: "Use Nginx to set custom headers in your HTTP responses so you can serve conditional content"
+Keywords: ["nginx", "server", "middleware", "a", "b", "test", "content", "conditional", "header", "marketing"]
+---
 
 I was starting a new project the other day that had a heavy marketing influence. The team was wondering about possibly A/B testing the main content section of the website.
 
@@ -81,3 +81,4 @@ Finally, we could add a middleware to collect that information from the header a
 The `split_clients` directive uses the IP of the request to assign it to either pool. Given this functionality, *if you are using shared internet connection in the office, this can be difficult to test*.
 
 I used `curl` requests from 2 different external servers to make sure that we were getting both A and B set by various IPs.
+
