@@ -19,7 +19,7 @@ If you are looking for a plugin that uses the user agent library, check out [thi
 
 ### [](#usage)Usage
 
-    <body class="{{ sniffer:get key="browser|platform|type" }}">
+    <body class="\{\{ sniffer:get key="browser|platform|type" \}\}">
 
 On my Mac running Google Chrome, this would return:
 
@@ -33,7 +33,7 @@ On my iPhone, this would return:
 
 This works in 2.2/develop. Not sure about 2.3 or 2.1.
 
-    {{ if { sniffer:get key="type" } == 'desktop' }}
+    \{\{ if \{ sniffer:get key="type" \} == 'desktop' \}\}
     <div class="huge-slider">
       <div class="slide">
         <img src="img/kitten1.jpg" width="1400" height="500">
@@ -45,11 +45,11 @@ This works in 2.2/develop. Not sure about 2.3 or 2.1.
         <img src="img/snake1.jpg" width="1400" height="500">
       </div>
     </div>
-    {{ else }}
+    \{\{ else \}\}
     <div class="mobile-logo">
       <img src="img/mobile-logo.png" width="200" height="200">
     </div>
-    {{ endif }}
+    \{\{ endif \}\}
 
 here is the full dump of the `$results` object for my machine:
 
