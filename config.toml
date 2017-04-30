@@ -9,6 +9,12 @@ verbose = true
 # verbose logging
 verboseLog = true
 
+copyright = "This work is licensed under The MIT License (MIT)."
+
+[author]
+  name = "James Doyle"
+  email = "james2doyle@gmail.com"
+
 [permalinks]
   post = "/:title/"
 
