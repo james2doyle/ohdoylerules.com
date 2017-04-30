@@ -35,7 +35,7 @@ So there are a couple ways you can embed an image in an SVG. I have found that t
 </svg>
 ```
 
-This is what the [outputted image](http://ohdoylerules.com/content/images/placeholder.svg) would look like.
+This is what the [outputted image](http://ohdoylerules.com/images/placeholder.svg) would look like.
 
 *I'm using a very small gif so that the base64 string isn't giant*.
 

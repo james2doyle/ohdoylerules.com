@@ -23,7 +23,7 @@ I then took that output and pasted it into Sublime Text. I split the output into
 
 Voila! There you have this sprite sheet.
 
-You can [download it here](http://ohdoylerules.com/content/images/font-awesome-sheet.svg).
+You can [download it here](http://ohdoylerules.com/images/font-awesome-sheet.svg).
 
 *These icons are from version 4.0.2*
 

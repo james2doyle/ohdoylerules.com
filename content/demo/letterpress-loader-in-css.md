@@ -10,7 +10,7 @@ Keywords: ["letterpress", "css", "css3", "loader", "icon", "loading", "animation
 I recently bought the amazing Letterpress app for iPhone. It truly is gorgeous, and has an amazing UI. It inspired me to make this little doodle.
 
 <div class="center">
-  <img src="http://ohdoylerules.com/content/images/Screen-Shot-2012-11-04-at-1.34.39-AM11.png" alt="Letterpress Loader In CSS">
+  <img src="http://ohdoylerules.com/images/Screen-Shot-2012-11-04-at-1.34.39-AM11.png" alt="Letterpress Loader In CSS">
 </div>
 
 This is a little tribute. It's an animated css loader in the style of Letterpress. It's a little different because it uses the custom cubic-bezier curve called 'ease-in-out-back', which is essentially elastic. I got the values from the great site [Ceaser](http://matthewlein.com/ceaser/ "Ceaser").

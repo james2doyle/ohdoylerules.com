@@ -11,7 +11,7 @@ After being a upset at the progress with Pico, myself and a developer from Germa
 
 <div class="center">
   <a href="http://philecms.github.io/Phile/" title="PhileCMS Homepage">
-    <img src="http://ohdoylerules.com/content/images/phile-logo.png" alt="PhileCMS Logo">
+    <img src="http://ohdoylerules.com/images/phile-logo.png" alt="PhileCMS Logo">
   </a>
 </div>
 

@@ -10,7 +10,7 @@ Keywords: ["Kaenon", "logo", "vector", "svg", "ai", "image", "macvim", "icon", "
 Here is another logo. This one is for the Kaenon sunglasses brand. This was very hard to find. It doesn't include the little gradient on the original logo. Maybe I will add that in the future.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/kaenon.svg" target="_blank"><img alt="kaenon svg vector" src="http://ohdoylerules.com/content/images/kaenon.svg" ></a>
+  <a href="http://ohdoylerules.com/images/kaenon.svg" target="_blank"><img alt="kaenon svg vector" src="http://ohdoylerules.com/images/kaenon.svg" ></a>
 </div>
 
 ##### Hint

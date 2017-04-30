@@ -32,6 +32,6 @@ If you saved the file as `placeholder-svg.php` then it would be used like so:
 This would be the output:
 
 <div class="center">
-  <img src="http://ohdoylerules.com/content/images/placeholder.png" alt="Placeholder Example">
+  <img src="http://ohdoylerules.com/images/placeholder.png" alt="Placeholder Example">
 </div>
 

@@ -113,7 +113,7 @@ For the *MAIN.cache_miss*, you want that to be as low as possible. This number r
 Since we added that line in our `default.vcl` file for `X-Cache`, we can see which files are being served by Varnish. Using dev tools in Chrome/Safari or Firefox, we can look for a header in our request called `X-Cache`.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/varnish-x-cache.png" title="Varnish x-cache header example" target="_blank"><img alt="Varnish x-cache header example" src="http://ohdoylerules.com/content/images/varnish-x-cache.png" ></a>
+  <a href="http://ohdoylerules.com/images/varnish-x-cache.png" title="Varnish x-cache header example" target="_blank"><img alt="Varnish x-cache header example" src="http://ohdoylerules.com/images/varnish-x-cache.png" ></a>
 </div>
 
 You can see that this item was *HIT*. This means that it will be counted in the *MAIN.cache_hit* column and not *MAIN.cache_miss* column. Good!

@@ -10,7 +10,7 @@ Keywords: ["slack", "meta", "data", "website", "tag", "url", "link", "image", "i
 If you use [Slack](https://slack.com/), then you have probably noticed the awesome feature they have for generating nice meta data whenever you paste a URL or an image.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/slack-example.png" title="Slack meta tag fetching example" target="_blank"><img alt="Slack meta tag fetching example" src="http://ohdoylerules.com/content/images/slack-example.png" ></a>
+  <a href="http://ohdoylerules.com/images/slack-example.png" title="Slack meta tag fetching example" target="_blank"><img alt="Slack meta tag fetching example" src="http://ohdoylerules.com/images/slack-example.png" ></a>
 </div>
 
 That is pretty slick! So how does it know what to grab for us?
@@ -40,7 +40,7 @@ Now we can look at the Open Graph meta tags that are being used to generate thes
 Open Graph tags are pretty popular. The biggest user of Open Graph is Facebook. Here is the result when the link is shared on Facebook:
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/warpaint-facebook.png" title="Facebook meta tag fetching example" target="_blank"><img alt="Facebook meta tag fetching example" src="http://ohdoylerules.com/content/images/warpaint-facebook.png" ></a>
+  <a href="http://ohdoylerules.com/images/warpaint-facebook.png" title="Facebook meta tag fetching example" target="_blank"><img alt="Facebook meta tag fetching example" src="http://ohdoylerules.com/images/warpaint-facebook.png" ></a>
 </div>
 
 Make sure you test your tags using the [Facebook Open Graph Object Debugger](https://developers.facebook.com/tools/debug/og/object/). This will help you spot errors in your tags. If there are errors, **Slack will not load the content**. You need to have valid tags to make Slack work nicely.

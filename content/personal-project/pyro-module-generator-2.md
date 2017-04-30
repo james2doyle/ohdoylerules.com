@@ -51,5 +51,5 @@ The generated module gets put in the `public/generated/` folder. As well as the 
 
 <div class="center">
   <p>Screenshot of the current version of the app</p>
-  <a href="http://ohdoylerules.com/content/images/pmg2.jpeg" title="PyroCMS Module Generator Screenshot" target="_blank"><img alt="PyroCMS Module Generator Screenshot" src="http://ohdoylerules.com/content/images/pmg2.jpeg" ></a>
+  <a href="http://ohdoylerules.com/images/pmg2.jpeg" title="PyroCMS Module Generator Screenshot" target="_blank"><img alt="PyroCMS Module Generator Screenshot" src="http://ohdoylerules.com/images/pmg2.jpeg" ></a>
 </div>

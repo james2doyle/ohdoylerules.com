@@ -20,8 +20,8 @@ We are going to be using [Automator](http://en.wikipedia.org/wiki/Automator_(sof
 So the first thing is to open Automator and create a new service. Like so:
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/clipboard-1.png" target="_blank" >
-    <img src="http://ohdoylerules.com/content/images/clipboard-1.png" width="720" />
+  <a href="http://ohdoylerules.com/images/clipboard-1.png" target="_blank" >
+    <img src="http://ohdoylerules.com/images/clipboard-1.png" width="720" />
   </a>
 </div>
 
@@ -39,8 +39,8 @@ end tell
 When that is all done, it should look something like this.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/clipboard-2.png" target="_blank" >
-    <img src="http://ohdoylerules.com/content/images/clipboard-2.png" width="720" />
+  <a href="http://ohdoylerules.com/images/clipboard-2.png" target="_blank" >
+    <img src="http://ohdoylerules.com/images/clipboard-2.png" width="720" />
   </a>
 </div>
 
@@ -49,16 +49,16 @@ Go to `File > Save` or press `⌘S`. **Do not Save-As**. Enter in `Copy Path To 
 Now open a new finder window and go to `Finder > Services > Services Preferences...` or `System Preferences > Keyboard > Shortcuts`. Select services on the left menu if it isn't already and scroll down to find `Copy Path To Clipboard`. This will open a window like this:
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/clipboard-3.png" target="_blank" >
-    <img src="http://ohdoylerules.com/content/images/clipboard-3.png" width="720" />
+  <a href="http://ohdoylerules.com/images/clipboard-3.png" target="_blank" >
+    <img src="http://ohdoylerules.com/images/clipboard-3.png" width="720" />
   </a>
 </div>
 
 Click on that item and make sure it is checked off, it should be by default. Then add a shortcut by clicking on the right side where it says "add shortcut". I made mine `⌃⌘\`. But if you have [Alfred.app](http://www.alfredapp.com/) that might conflict with it's copy feature. So you choose.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/clipboard-4.png" target="_blank" >
-    <img src="http://ohdoylerules.com/content/images/clipboard-4.png" width="720" />
+  <a href="http://ohdoylerules.com/images/clipboard-4.png" target="_blank" >
+    <img src="http://ohdoylerules.com/images/clipboard-4.png" width="720" />
   </a>
 </div>
 
@@ -67,8 +67,8 @@ You can use these steps to run any AppleScript on a file you choose. Pretty slic
 Now when you have a file of folder selected in the Finder, you can right-click, go to Services, and select `Copy Path To Clipboard`!
 
 <div class="center">
-  <a href="http://ohdoylerules.com/content/images/clipboard-5.png" target="_blank" >
-    <img src="http://ohdoylerules.com/content/images/clipboard-5.png" width="646" />
+  <a href="http://ohdoylerules.com/images/clipboard-5.png" target="_blank" >
+    <img src="http://ohdoylerules.com/images/clipboard-5.png" width="646" />
   </a>
 </div>
 

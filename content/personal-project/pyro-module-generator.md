@@ -8,7 +8,7 @@ Keywords: ["CodeIgniter", "generator", "Github", "laravel", "module", "open sour
 ---
 
 <div class="center">
-  <img src="http://ohdoylerules.com/content/images/pmgh.png" alt="PyroCMS Module generator header image">
+  <img src="http://ohdoylerules.com/images/pmgh.png" alt="PyroCMS Module generator header image">
 </div>
 
 ### UPDATE
@@ -31,6 +31,6 @@ In the end I chose Laravel because I might as well start learning it and it was 
 Some little screenshots:
 
 <div class="center">
-  <img src="http://ohdoylerules.com/content/images/pmg1.png" alt="PyroCMS Module generator input form">
-  <img src="http://ohdoylerules.com/content/images/pmg2.png" alt="PyroCMS Module generator field input">
+  <img src="http://ohdoylerules.com/images/pmg1.png" alt="PyroCMS Module generator input form">
+  <img src="http://ohdoylerules.com/images/pmg2.png" alt="PyroCMS Module generator field input">
 </div>

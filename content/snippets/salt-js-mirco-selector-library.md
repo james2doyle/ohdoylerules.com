@@ -9,7 +9,7 @@ Keywords: ["dom", "html5", "javascript", "js", "micro", "mini", "$", "querySelec
 ---
 
 <div class="center">
-  <img src="http://ohdoylerules.com/content/images/saltjs.png" alt="Slat.js Logo">
+  <img src="http://ohdoylerules.com/images/saltjs.png" alt="Slat.js Logo">
 </div>
 
 I made a tiny dom selector library called [Salt.js](https://github.com/james2doyle/saltjs "james2doyle/saltjs").
