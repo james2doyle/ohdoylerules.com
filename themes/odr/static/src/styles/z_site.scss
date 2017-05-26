@@ -1,5 +1,5 @@
 @import "imports/__normalize";
-@import "imports/_icons";
+// @import "imports/_icons";
 
 $dark: #333;
 $main: #eb694b;
@@ -215,34 +215,29 @@ header {
 .post-author {
   padding-bottom: 1em;
   display: inline-block;
-}
-
-.post-author img {
-  float: left;
-  margin-right: .8em;
+  img {
+    float: left;
+    margin-right: .8em;
+  }
 }
 
 .social-links {
   margin: 0;
   padding: 0;
-}
-
-.social-links li {
-  margin: 0;
-  list-style: none;
-  float: left;
-  margin-right: 1em;
-}
-
-.social-links li {
-  font-size: 1.4em;
-  transform: translateY();
-  -webkit-transition: -webkit-transform .4s ease;
-  transition: transform .4s ease;
-}
-
-.social-links li:hover {
-  transform: translateY(-5px);
+  li {
+    margin-right: 0.25em;
+    list-style: none;
+    float: left;
+    font-size: 1.4em;
+    a {
+      display: block;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
 }
 
 .center {
@@ -324,13 +319,12 @@ li code {
 
   .post-author {
     margin-top: 2rem;
-    text-align: center
-  }
-
-  .post-author img {
-    width: 100px;
-    margin: 0 auto;
-    float: none;
+    text-align: center;
+    .post-author-link img {
+      width: 120px;
+      margin: 0 auto;
+      float: none;
+    }
   }
 
   .post-author-info {

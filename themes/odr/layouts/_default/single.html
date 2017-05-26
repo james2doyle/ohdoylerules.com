@@ -9,14 +9,14 @@
     <div class="the-loop">
       <div class="post-info">
         {{ if .Params.Date }}
-        <span class="post-date" itemprop="datePublished"><i class="icon icon-time"></i> {{ dateFormat "January 2, 2006" .Params.Date }}</span>
+        <span class="post-date" itemprop="datePublished"><img src="/icons/clock.svg" alt="clock icon" width="13"> {{ dateFormat "January 2, 2006" .Params.Date }}</span>
         {{ end }}
         {{ if .Params.Updated }}
-        &nbsp;<span class="post-date"><i class="icon icon-time"></i> Updated: {{ dateFormat "January 2, 2006" .Params.Updated }}</span>
+        &nbsp;<span class="post-date"><img src="/icons/clock.svg" alt="clock icon" width="13"> Updated: {{ dateFormat "January 2, 2006" .Params.Updated }}</span>
         {{ end }}
         &nbsp;&nbsp;&nbsp;
         {{ if .Params.Category }}
-        <span class="post-category" itemprop="genre about"><i class="icon icon-tag"></i> {{ .Params.Category }}</span>
+        <span class="post-category" itemprop="genre about"><img src="/icons/tag.svg" alt="tag icon" width="13"> {{ .Params.Category }}</span>
         {{ end }}
       </div>
       <div class="cf"></div>
@@ -34,7 +34,9 @@
       </div>
       <hr>
       <div class="post-author">
-        <a href="https://twitter.com/{{ .Site.Params.Twitter }}" target="_blank"><img src="{{ .Site.Params.Gravatar }}" alt="{{ .Site.Title }} Profile Picture" width="100" height="100"></a>
+        <a href="https://twitter.com/{{ .Site.Params.Twitter }}" target="_blank" class="post-author-link">
+          <img src="{{ .Site.Params.Gravatar }}" alt="{{ .Site.Title }} Profile Picture" width="120" height="120">
+        </a>
         <div class="post-author-info">
           <h5><i class="icon icon-info-sign"></i> About The Author</h5>
           <h3 itemprop="author publisher creator provider">{{ .Site.Title }}</h3>
@@ -42,10 +44,10 @@
           <h4><em>{{ .Site.Params.Author_helpline_title | safeHTML }}</em></h4>
           <p>{{ .Site.Params.Author_helpline | safeHTML }}</p>
           <ul class="social-links">
-            <li><a target="_blank" href="https://twitter.com/{{ .Site.Params.Twitter }}" title="{{ .Site.Title }} Twitter" rel="me"><i class="icon icon-twitter-sign"></i></a></li>
-            <li><a target="_blank" href="https://github.com/{{ .Site.Params.Github }}" title="{{ .Site.Title }} Github" rel="me"><i class="icon icon-github"></i></a></li>
-            <li><a target="_blank" href="https://plus.google.com/{{ .Site.Params.Googleplus }}" title="{{ .Site.Title }} Google Plus" rel="author publisher creator me"><i class="icon icon-google-plus-sign"></i></a></li>
-            <li><a target="_blank" href="mailto:{{ .Site.Params.Email }}" title="{{ .Site.Title }} Email" rel="me"><i class="icon icon-envelope"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/{{ .Site.Params.Twitter }}" title="{{ .Site.Title }} Twitter" rel="me"><img src="/icons/twitter.svg" alt="twitter icon" width="26"></a></li>
+            <li><a target="_blank" href="https://github.com/{{ .Site.Params.Github }}" title="{{ .Site.Title }} Github" rel="me"><img src="/icons/github.svg" alt="github icon" width="23"></a></li>
+            <li><a target="_blank" href="https://plus.google.com/{{ .Site.Params.Googleplus }}" title="{{ .Site.Title }} Google Plus" rel="author publisher creator me"><img src="/icons/google.svg" alt="google icon" width="23"></a></li>
+            <li><a target="_blank" href="mailto:{{ .Site.Params.Email }}" title="{{ .Site.Title }} Email" rel="me"><img src="/icons/mail.svg" alt="mail icon" width="23"></a></li>
           </ul>
         </div>
       </div>
