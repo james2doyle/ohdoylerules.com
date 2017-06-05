@@ -11,14 +11,14 @@
       <h2><a href="{{ $page.Permalink }}" title="{{ $page.Title }}">{{ $page.Title }}</a></h2>
       <div class="post-info">
         {{ if $page.Params.Date }}
-        <span class="post-date"><i class="icon icon-time"></i> {{ dateFormat "January 2, 2006" $page.Params.Date }}</span>
+        <span class="post-date"><img src="/icons/clock.svg" alt="clock icon" width="13"> {{ dateFormat "January 2, 2006" $page.Params.Date }}</span>
         {{ end }}
         {{ if $page.Params.Updated }}
-        &nbsp;<span class="post-date"><i class="icon icon-time"></i> Updated: {{ dateFormat "January 2, 2006" $page.Params.Updated }}</span>
+        &nbsp;<span class="post-date"><img src="/icons/clock.svg" alt="clock icon" width="13"> Updated: {{ dateFormat "January 2, 2006" $page.Params.Updated }}</span>
         {{ end }}
         {{ if $page.Params.Category }}
         &nbsp;&nbsp;&nbsp;
-        <span class="post-category"><i class="icon icon-tag"></i> {{ $page.Params.Category }}</span>
+        <span class="post-category"><img src="/icons/tag.svg" alt="tag icon" width="13"> {{ $page.Params.Category }}</span>
         {{ end }}
       </div>
       <div class="cf"></div>
