@@ -59,8 +59,6 @@
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//www.google-analytics.com">
   <link rel="shortcut icon" href="/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" title="{{ .Site.Title }} RSS Feed" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "sitemap.xml" | absLangURL }}" />
@@ -71,6 +69,10 @@
   <link rel="dns-prefetch" href="//links.services.disqus.com">
   <link rel="dns-prefetch" href="//apis.google.com">
   <link rel="stylesheet" href="/css/tomorrow-night.css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
+  {{ else }}
+  <link href="https://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
   {{ end }}
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>

@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code, kbd, pre, pre code, samp {
-  font-family: monospace, serif;
+  font-family: 'Droid Sans Mono', monospace;
 }
 
 a,
@@ -296,14 +296,6 @@ li code {
         transform: translateY(-3.5em);
       }
     }
-  }
-  code,
-  kbd,
-  pre,
-  pre code,
-  samp {
-    font-family: sans-serif, monospace;
-    font-size: 1em;
   }
   .post-info span {
     float: left;
