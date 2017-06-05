@@ -22,7 +22,7 @@ Pyro.*
 -   Install the field type as normal.
 -   Add the field type to a page type or stream
 -   Enter in your sexy Github Markdown
--   Just use `\{\{ the_field_slug \}\}` to render the HTML
+-   Just use "the_field_slug" to render the HTML
 
 ### [](#examples)Examples
 
