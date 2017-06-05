@@ -5,7 +5,9 @@
   "homepage": "http://ohdoylerules.com",
   "repository": "https://github.com/james2doyle/ohdoylerules.com",
   "scripts": {
-    "dev": "hugo server -ws ../../../"
+    "dev": "hugo server -ws ../../../",
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "author": {
     "name": "James Doyle",
