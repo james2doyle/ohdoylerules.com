@@ -1,7 +1,7 @@
 ---
 Title: "Color Helpers In Fish Shell"
 Description: "How to easily create a color function for printing colorized output"
-Date: "2017-06-04"
+Date: "2017-06-03"
 Category: "Snippets"
 Template: "post"
 Keywords: ["color", "fish", "shell", "prompt", "output", "stdout"]
