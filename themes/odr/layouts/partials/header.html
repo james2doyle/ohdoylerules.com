@@ -6,7 +6,11 @@
   <meta http-equiv="Cache-control" content="public">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>{{ .Site.Title }} | {{ .Params.Title }}</title>
+  {{ if not .Params.Title }}
+    <title>{{ .Site.Title }} | OhDoyleRules</title>
+  {{ else }}
+    <title>{{ .Site.Title }} | {{ .Params.Title }}</title>
+  {{ end }}
   <link href="https://plus.google.com/{{ .Site.Params.Googleplus }}" rel="author publisher" />
   {{ if not (eq .Params.Template "post") }}
   <meta property="og:type" content="website" />
