@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   {{ if not .Params.Title }}
     <title>{{ .Site.Title }} | OhDoyleRules</title>
+    <meta name="twitter:title" content="{{ .Site.Title }} | OhDoyleRules">
+    <meta property="og:title" content="{{ .Site.Title }} | OhDoyleRules">
   {{ else }}
     <title>{{ .Site.Title }} | {{ .Params.Title }}</title>
   {{ end }}
@@ -42,7 +44,7 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ .Site.Params.Twitter }}">
-  <meta name="twitter:title" content="{{ .Params.Title }}">
+  {{ if .Params.Title }}<meta name="twitter:title" content="{{ .Params.Title }}">{{ end }}
   <meta name="twitter:creator" content="@{{ .Site.Params.Twitter }}">
   <meta name="twitter:image" content="/icons/logo.png">
   <meta name="twitter:domain" content="{{ .Site.BaseURL }}">
@@ -56,7 +58,7 @@
   {{ end }}
   {{ if eq .Params.Template "post" }}
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ .Params.Title }}">
+    {{ if .Params.Title }}<meta property="og:title" content="{{ .Params.Title }}">{{ end }}
     <meta property="article:author" content="{{ .Site.Title }}" />
     <meta property="article:section" content="{{ .Params.Category }}" />
     <meta property="article:tag" content="{{ delimit .Params.Keywords ", " }}" />
