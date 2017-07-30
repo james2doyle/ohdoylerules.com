@@ -50,7 +50,7 @@ The client believes that there are a certain number of things that "should just 
 
 One of the most common ones that I have seen fall under this umbrella would be things like setting up email for a new domain, providing hosting (for free or not), and on-going support.
 
-You should make a list of items that you find people believe will be included and make that those deliverables explicitly included or not.
+You should make a list of items that you find people believe will be included and make those deliverables explicitly included or not.
 
 I suggest having a section in your scope of work (S.O.W) for "included items" and "excluded items". Be sure to walk through these things with the client. If they point out something that they don't agree with, then that is the perfect time to discuss it. Don't assume anything.
 
