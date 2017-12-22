@@ -29,14 +29,14 @@ gulp.task('js', () => {
       pkg,
       date
     }))
-    .pipe(gulp.dest('js/'));
+    .pipe(gulp.dest('static/js/'));
 });
 
 gulp.task('cssmin', () => {
-  gulp.src('css/main.css')
+  gulp.src('static/css/main.css')
     .pipe(cssmin())
     .pipe(concat('main.min.css'))
-    .pipe(gulp.dest('css/'));
+    .pipe(gulp.dest('static/css/'));
 });
 
 gulp.task('sass', () => {
@@ -54,18 +54,18 @@ gulp.task('sass', () => {
       date
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('css/'));
+    .pipe(gulp.dest('static/css/'));
 });
 
 gulp.task('uglify', () => {
-  gulp.src('js/main.js')
+  gulp.src('static/js/main.js')
     .pipe(uglify())
     .pipe(concat('main.min.js'))
     .pipe(header(banner, {
       pkg,
       date
     }))
-    .pipe(gulp.dest('js/'));
+    .pipe(gulp.dest('static/js/'));
 });
 
 gulp.task('watch', () => {
