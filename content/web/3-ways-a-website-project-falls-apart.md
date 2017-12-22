@@ -8,7 +8,7 @@ Keywords: ["website", "fail", "project", "fall apart", "success", "content", "re
 ---
 
 <div class="center">
-  <img src="https://ohdoylerules.com/images/broken-glass.jpg" alt="Mens shoes on broken glass. Photo by veeterzy on Unsplash">
+  <img src="/images/broken-glass.jpg" alt="Mens shoes on broken glass. Photo by veeterzy on Unsplash">
   <p><small>Photo by <a href="https://unsplash.com/photos/afq5-t0ZGtQ?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">veeterzy</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small></p>
 </div>
 

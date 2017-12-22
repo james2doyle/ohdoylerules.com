@@ -10,7 +10,7 @@ Description: "James Doyle runner up in Mozilla Dev Derby September 2012"
 I have just submitted my demo for the [Mozzila Dev Derby](https://developer.mozilla.org/en-US/demos/detail/photo-shake "Photo Shake Page"). If you like it, please vote. Thank you!
 
 <div class="center">
-  <img src="https://ohdoylerules.com/images/james2doyle-Camera-Api-Demo2111.png" alt="Camera Api Demo" >
+  <img src="/images/james2doyle-Camera-Api-Demo2111.png" alt="Camera Api Demo" >
 </div>
 
 It uses the HTML5 File Api and also uses the device orientation API. Firstly, you upload or take a picture, then that picture fades up below in a polaroid-style div. You can then move you device and see the picture move.

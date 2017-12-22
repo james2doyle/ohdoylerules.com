@@ -8,7 +8,7 @@ Keywords: ["CodeIgniter", "generator", "Github", "laravel", "module", "open sour
 ---
 
 <div class="center">
-  <img src="https://ohdoylerules.com/images/githubgistlogo.png" alt="Github Gists Logo">
+  <img src="/images/githubgistlogo.png" alt="Github Gists Logo">
 </div>
 
 I have been building a small project boilerplate for when I am starting new projects. I wrote this small snippet based on [this article](http://toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script/ "Todd Motto - mastering-svg-use-for-a-retina-web-fallbacks-with-png-script").

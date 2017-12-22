@@ -73,7 +73,7 @@ for the original lib.
 I added the ability to preview your results too!
 
 [![pyro github markdown write
-preview](https://ohdoylerules.com/images/write.png)](https://github.com/james2doyle/pyro-github-markdown)
+preview](/images/write.png)](https://github.com/james2doyle/pyro-github-markdown)
 [![pyro github markdown
-preview](https://ohdoylerules.com/images/preview.png)](https://github.com/james2doyle/pyro-github-markdown)
+preview](/images/preview.png)](https://github.com/james2doyle/pyro-github-markdown)
 Go check out this badboy!

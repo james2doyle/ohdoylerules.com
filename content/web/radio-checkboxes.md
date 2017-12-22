@@ -12,7 +12,7 @@ Styling inputs can be pretty annoying. I don’t think I really have any consist
 But now, I have discovered a new way! I took the idea from [CSS Tricks](http://css-tricks.com/snippets/css/custom-checkboxes-and-radio-buttons/)/[Wufoo Forms](https://examples.wufoo.com/forms/custom-checkboxes-and-radio-buttons/ "WuFoo Forms Example"). It basically uses the label as the element. You hide the input tag and then style the label with checked and unchecked states.
 
 <div class="center">
-  <img src="https://ohdoylerules.com/images/radio-checkboxes.png" alt="End Results">
+  <img src="/images/radio-checkboxes.png" alt="End Results">
 </div>
 
     /* style this span element so we can display nicely, this styling is not necessary */

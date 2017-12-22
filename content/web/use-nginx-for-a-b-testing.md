@@ -71,7 +71,7 @@ server {
 This would be the resulting response from any HTTP request:
 
 <div class="center">
-  <a href="https://ohdoylerules.com/images/nginx-ab-header.png" title="Nginx example of the custom a/b header" target="_blank"><img alt="Nginx example of the custom a/b header" src="https://ohdoylerules.com/images/nginx-ab-header.png" ></a>
+  <a href="/images/nginx-ab-header.png" title="Nginx example of the custom a/b header" target="_blank"><img alt="Nginx example of the custom a/b header" src="/images/nginx-ab-header.png" ></a>
 </div>
 
 Awesome! Now half of all traffic will be tagged with either *X-AB-Testcase: A* or *X-AB-Testcase: B*.

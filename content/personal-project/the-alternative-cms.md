@@ -7,7 +7,7 @@ Template: "post"
 Keywords: ["presentation", "explode", "code", "cms", "phile", "alternative", "flat", "file", "markdown", "PHP", "twig"]
 ---
 
-The Explode Code presentation was last night. I spoke about [The Alternative CMS](https://ohdoylerules.com/images/the-alternative-cms.pdf "The Alternative CMS PDF"). It was about the problems with Wordpress, why *WYSIWYG* is hard, and why Flat File and Markdown could be the solution you are looking for.
+The Explode Code presentation was last night. I spoke about [The Alternative CMS](/images/the-alternative-cms.pdf "The Alternative CMS PDF"). It was about the problems with Wordpress, why *WYSIWYG* is hard, and why Flat File and Markdown could be the solution you are looking for.
 
 Pretty good reception overall. Some of the things people asked were about complexity. The real answer is if you are doing things that are super complex, you should'nt really use a flat-file cms.
 
@@ -15,7 +15,7 @@ Pretty good reception overall. Some of the things people asked were about comple
 
 I don't mention this in the slides, but the idea is really more 60% client and 40% developer. Using that flat-file is much faster to develop, but it makes it easier to manage for the client.
 
-[Here is the download](https://ohdoylerules.com/images/the-alternative-cms.pdf "The Alternative CMS PDF").
+[Here is the download](/images/the-alternative-cms.pdf "The Alternative CMS PDF").
 
 Here are some of the links to things I mentioned in the talk:
 
@@ -59,4 +59,4 @@ Here are some of the links to things I mentioned in the talk:
 * http://sofish.github.io/pen/
 * http://goo.gl/b4ECsb -- pen, grande, medium breakdown
 
-Again you can find the [PDF here](https://ohdoylerules.com/images/the-alternative-cms.pdf "The Alternative CMS PDF").
+Again you can find the [PDF here](/images/the-alternative-cms.pdf "The Alternative CMS PDF").

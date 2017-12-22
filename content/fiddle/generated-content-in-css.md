@@ -34,7 +34,7 @@ something like an inbox button. In the case I built it is a
 notifications button.
 
 <div class="center">
-  <a href="http://jsfiddle.net/james2doyle/LjgzD" target="_blank" title="notifications button"><img src="https://ohdoylerules.com/images/54368011.png" alt="notifications button"></a>
+  <a href="http://jsfiddle.net/james2doyle/LjgzD" target="_blank" title="notifications button"><img src="/images/54368011.png" alt="notifications button"></a>
 </div>
 
 ```css
