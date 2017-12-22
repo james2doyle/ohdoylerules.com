@@ -12,5 +12,5 @@ Lo and behold, a new vector. This one is for the Groupon logo. This is actually 
 Below is the source SVG for download.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/images/groupon.svg" title="groupon svg vector" target="_blank"><img alt="groupon svg vector" src="http://ohdoylerules.com/images/groupon.svg" ></a>
+  <a href="https://ohdoylerules.com/images/groupon.svg" title="groupon svg vector" target="_blank"><img alt="groupon svg vector" src="https://ohdoylerules.com/images/groupon.svg" ></a>
 </div>

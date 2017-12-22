@@ -7,7 +7,7 @@ Template: "post"
 Keywords: ["generated", "content", "article", "title", "jsfiddle", "title", "button", "work"]
 ---
 
-I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my [work](http://ohdoylerules.com/work/ "Work") section.
+I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my [work](https://ohdoylerules.com/work/ "Work") section.
 
 Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the PHP `echo`s. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:
 
@@ -29,7 +29,7 @@ Would render as [Website (www.example.com/)](www.example.com/)
 So with that in mind, I thought it would be cool to have a button that would render a count. So in practical applications it might be used for something like an inbox button. In the case I built it is a notifications button.
 
 <div class="center">
-  <img src="http://ohdoylerules.com/images/54368011.png" alt="notifications button" >
+  <img src="https://ohdoylerules.com/images/54368011.png" alt="notifications button" >
 </div>
 
 ```html

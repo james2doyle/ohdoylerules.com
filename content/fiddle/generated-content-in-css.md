@@ -7,7 +7,7 @@ Template: "post"
 Keywords: ["generated", "content", "css", "css3", "attr", "pseduo", "elements"]
 ---
 
-I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my [work](http://ohdoylerules.com/work/ "Work") section. Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the php echos. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:
+I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my [work](https://ohdoylerules.com/work/ "Work") section. Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the php echos. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:
 
 ```css
 /* styles for printing */
@@ -34,7 +34,7 @@ something like an inbox button. In the case I built it is a
 notifications button.
 
 <div class="center">
-  <a href="http://jsfiddle.net/james2doyle/LjgzD" target="_blank" title="notifications button"><img src="http://ohdoylerules.com/images/54368011.png" alt="notifications button"></a>
+  <a href="http://jsfiddle.net/james2doyle/LjgzD" target="_blank" title="notifications button"><img src="https://ohdoylerules.com/images/54368011.png" alt="notifications button"></a>
 </div>
 
 ```css

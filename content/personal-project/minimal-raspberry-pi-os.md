@@ -35,7 +35,7 @@ First, visit the Moebius Sourceforge page and follow the instructions to [downlo
 * When logged in, run `moebius`
 
 <div class="center">
-  <a href="http://ohdoylerules.com/images/moebius-tool.png" title="Moebius command line app" target="_blank"><img alt="Moebius command line app" src="http://ohdoylerules.com/images/moebius-tool.png" ></a>
+  <a href="https://ohdoylerules.com/images/moebius-tool.png" title="Moebius command line app" target="_blank"><img alt="Moebius command line app" src="https://ohdoylerules.com/images/moebius-tool.png" ></a>
   <p>Moebius command line app</p>
 </div>
 
@@ -61,7 +61,7 @@ Just create `~/.ssh` and then use `vi ~/.ssh/authorized_keys` to create a new fi
 * Select the `lang.gcc` container
 
 <div class="center">
-  <a href="http://ohdoylerules.com/images/moebius-container-tool.png" title="Moebius container command line app" target="_blank"><img alt="Moebius container command line app" src="http://ohdoylerules.com/images/moebius-container-tool.png" ></a>
+  <a href="https://ohdoylerules.com/images/moebius-container-tool.png" title="Moebius container command line app" target="_blank"><img alt="Moebius container command line app" src="https://ohdoylerules.com/images/moebius-container-tool.png" ></a>
   <p>Moebius container command line app</p>
 </div>
 

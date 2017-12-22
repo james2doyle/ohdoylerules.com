@@ -18,7 +18,7 @@ I was tired of looking at the ugly default no-style of the htdocs file listing. 
 
 Now you can edit the files in the ".theme" folder and style your page. I changed the ".wrapper" to have no max-width or margin, this way it was full screen.
 
-[![apaxy theme applied to htdocs](http://ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png)](http://ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png)
+[![apaxy theme applied to htdocs](https://ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png)](https://ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png)
 
 Above is a screenshot of what my htdocs/localhost:8888 now looks like.
 

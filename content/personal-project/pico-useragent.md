@@ -7,7 +7,7 @@ Template: "post"
 Keywords: ["pico", "cms", "useragent", "parse", "plugin", "ua", "sniffer", "twig", "templates", "conditional", "modernizr"]
 ---
 
-I created another plugin for [Pico CMS](http://pico.dev7studios.com/). It is esentially a clone of my [pyro-sniffer-plugin](http://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin) for [PyroCMS](http://pyrocms.com "Pyro CMS Homepage").
+I created another plugin for [Pico CMS](http://pico.dev7studios.com/). It is esentially a clone of my [pyro-sniffer-plugin](https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin) for [PyroCMS](http://pyrocms.com "Pyro CMS Homepage").
 
 Here is the [Github project](https://github.com/james2doyle/pico_useragent).
 

@@ -10,14 +10,14 @@ Description: "James Doyle runner up in Mozilla Dev Derby September 2012"
 I have just submitted my demo for the [Mozzila Dev Derby](https://developer.mozilla.org/en-US/demos/detail/photo-shake "Photo Shake Page"). If you like it, please vote. Thank you!
 
 <div class="center">
-  <img src="http://ohdoylerules.com/images/james2doyle-Camera-Api-Demo2111.png" alt="Camera Api Demo" >
+  <img src="https://ohdoylerules.com/images/james2doyle-Camera-Api-Demo2111.png" alt="Camera Api Demo" >
 </div>
 
 It uses the HTML5 File Api and also uses the device orientation API. Firstly, you upload or take a picture, then that picture fades up below in a polaroid-style div. You can then move you device and see the picture move.
 
 I also added something I called dynamic shine. This is just a diagonal white-to-transparent gradient. Tilting the device causes the photo to look like it is interacting with the light.
 
-You can also see the project [self-hosted here](http://ohdoylerules.com/test/cameraapi/ "photo shake").
+You can also see the project [self-hosted here](https://ohdoylerules.com/test/cameraapi/ "photo shake").
 
 #### UPDATE:
 

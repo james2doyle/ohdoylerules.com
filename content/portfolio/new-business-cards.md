@@ -9,4 +9,4 @@ Keywords: ["portfolio", "business", "cards"]
 
 Picked up my new cards right before [Dig London](http://www.diglondon.ca/). They have my new favourite emoticon on the back too.
 
-[![20121114-142327.jpg](http://ohdoylerules.com/images/20121114-14232711.jpg)](http://ohdoylerules.com/images/20121114-14232711.jpg)
+[![20121114-142327.jpg](https://ohdoylerules.com/images/20121114-14232711.jpg)](https://ohdoylerules.com/images/20121114-14232711.jpg)

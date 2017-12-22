@@ -7,7 +7,7 @@ Description: "The Pyro Module Generator allows you to rapidly create modules for
 Keywords: ["Phalcon", "generator", "Github", "module", "open source", "PHP", "Pyro", "tool", "build", "live", "demo"]
 ---
 
-Finally, I found a good excuse to re-write my old [Pyro Module Generator](http://ohdoylerules.com/personal-project/pyro-module-generator).
+Finally, I found a good excuse to re-write my old [Pyro Module Generator](https://ohdoylerules.com/personal-project/pyro-module-generator).
 
 This tool was originally made when I was freelancing. I built it off the [Sample Module project on Github](https://github.com/pyrocms/sample). I wanted to be able to build modules quickly, since I wasn't using streams. In fact, streams wasn't even a thing when I made the first version of the module generator.
 
@@ -51,5 +51,5 @@ The generated module gets put in the `public/generated/` folder. As well as the 
 
 <div class="center">
   <p>Screenshot of the current version of the app</p>
-  <a href="http://ohdoylerules.com/images/pmg2.jpeg" title="PyroCMS Module Generator Screenshot" target="_blank"><img alt="PyroCMS Module Generator Screenshot" src="http://ohdoylerules.com/images/pmg2.jpeg" ></a>
+  <a href="https://ohdoylerules.com/images/pmg2.jpeg" title="PyroCMS Module Generator Screenshot" target="_blank"><img alt="PyroCMS Module Generator Screenshot" src="https://ohdoylerules.com/images/pmg2.jpeg" ></a>
 </div>

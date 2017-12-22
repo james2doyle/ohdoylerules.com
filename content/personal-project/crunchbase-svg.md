@@ -10,6 +10,6 @@ I needed the CrunchBase logo in a vector so I had to create it from
 scratch.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/images/crunchbase.svg" target="_blank"><img alt="crunchbase svg vector" src="http://ohdoylerules.com/images/crunchbase.svg" ></a>
+  <a href="https://ohdoylerules.com/images/crunchbase.svg" target="_blank"><img alt="crunchbase svg vector" src="https://ohdoylerules.com/images/crunchbase.svg" ></a>
 </div>
 

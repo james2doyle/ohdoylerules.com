@@ -7,7 +7,7 @@ Template: "post"
 Keywords: ["osx", "apple", "applescript", "automator", "finder", "node", "javascript", "js", "marked", "markdown", "md", "scpt"]
 ---
 
-A few days ago, I wrote an article about [how to create a service in Automator to copy the selected file's path to the clipboard while in the Finder.app](http://ohdoylerules.com/snippets/copy-file-path-clipboard-osx "Copy filepath to clipboard in OSX").
+A few days ago, I wrote an article about [how to create a service in Automator to copy the selected file's path to the clipboard while in the Finder.app](https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx "Copy filepath to clipboard in OSX").
 
 I was playing around some more and thought it would be cool to be able to right click and convert a markdown file to HTML. This can be useful for lazy people who don't want to open and app or terminal just to convert.
 
@@ -44,7 +44,7 @@ tell application "Finder"
 end tell
 ```
 
-Now this can be used in an *Automator Service*, which you can find out how to make in the [previous article](http://ohdoylerules.com/snippets/copy-file-path-clipboard-osx "Copy filepath to clipboard in OSX").
+Now this can be used in an *Automator Service*, which you can find out how to make in the [previous article](https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx "Copy filepath to clipboard in OSX").
 
 If you modify this for any other cool node tools, please let me know!
 

@@ -10,5 +10,5 @@ Keywords: ["markdown", "logo", "vector", "svg", "md", "mdown"]
 The markdown logo in SVG vector format. I found this was not that easy to find. So I whipped one up of my own.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/images/markdown.svg" target="_blank" title="Markdown Vector SVG logo"><img alt="Markdown Vector SVG logo" src="http://ohdoylerules.com/images/markdown.svg" ></a>
+  <a href="https://ohdoylerules.com/images/markdown.svg" target="_blank" title="Markdown Vector SVG logo"><img alt="Markdown Vector SVG logo" src="https://ohdoylerules.com/images/markdown.svg" ></a>
 </div>

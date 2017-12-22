@@ -12,6 +12,6 @@ The other founder of my company ([WARPAINT Media](http://warpaintmedia.ca "WARPA
 Well again, I was unable to find the vector logo of their icon. So in my typical fashion, I recreated it. You can see it below.
 
 <div class="center">
-  <a href="http://ohdoylerules.com/images/docracy.svg" title="docracy svg vector" target="_blank"><img alt="docracy svg vector" src="http://ohdoylerules.com/images/docracy.svg" ></a>
+  <a href="https://ohdoylerules.com/images/docracy.svg" title="docracy svg vector" target="_blank"><img alt="docracy svg vector" src="https://ohdoylerules.com/images/docracy.svg" ></a>
 </div>
 

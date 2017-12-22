@@ -7,7 +7,7 @@ Keywords: ["git", "website", "workflow", "web", "hub", "source", "server", "vers
 ---
 
 <div class="center">
-  <img alt="Amazon Web Services Logo" src="http://ohdoylerules.com/images/awslogo.png">
+  <img alt="Amazon Web Services Logo" src="https://ohdoylerules.com/images/awslogo.png">
 </div>
 
 I recently switched to using Amazon Web Services for my hosting. It is awesome. Because it(EC2) is just a cloud computer, I can install anything I want and set up any workflow I desire. I recently found [an article](http://goo.gl/0L3E6 "A web-focused Git workflow") that was about a website git workflow.

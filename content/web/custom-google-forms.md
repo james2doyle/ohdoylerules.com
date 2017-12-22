@@ -10,7 +10,7 @@ Keywords: ["CSS", "custom", "drive", "forms", "Github", "google", "less", "node"
 ---
 
 <div class="center">
-  <img src="http://ohdoylerules.com/images/googleforms.png" alt="" align="middle">
+  <img src="https://ohdoylerules.com/images/googleforms.png" alt="" align="middle">
 </div>
 
 **Update: Google has added the tools to customize a form with logos, colours, fonts, and backgrounds. Use this guide if you want even more custom styles, or if you want to embed the form within another page.**
