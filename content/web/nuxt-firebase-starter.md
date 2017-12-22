@@ -7,7 +7,7 @@ Description: "An example project that uses nuxt.js and Firebase for simple auth 
 Keywords: ["firebase", "nuxt", "vue", "auth", "serverless", "single page app", "spa"]
 ---
 
-Over the past few weeks, I have been working on [a boilerplate/starting template for using the Nuxt.js framework with Firebase](https://nuxtjs.org/).
+Over the past few weeks, I have been working on [a boilerplate/starting template for using the Nuxt.js framework with Firebase](https://github.com/james2doyle/nuxt-firebase-auth).
 
 I plan to use this boilerplate for easily creating apps that require authentication, real-time feedback from the database (chats, threads, account balances, etc.), and proper modern support for the new PWA (progressive web app) conventions (service worker, offline, code-splitting, etc.) without having to worry too much about laying the ground work each time.
 
@@ -106,3 +106,5 @@ So I did! And now you can easily manage a mini-profile on the app without any ex
 </div>
 
 As you can see from the animation above, super simple interface with live updating thanks to the bindings from our application store to the Firebase database!
+
+Again, you can check out the project [at the repo on Github](https://github.com/james2doyle/nuxt-firebase-auth).
