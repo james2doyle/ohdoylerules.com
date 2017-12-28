@@ -95,15 +95,16 @@ header {
   padding: 1.8em 0;
   img {
     margin-top: 4em;
-    -webkit-filter: blur();
-    -webkit-transform: scale(1);
-    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    filter: blur(0px);
+    transform: scale(1);
+    backface-visibility: hidden;
     opacity: 1;
     transition: all .2s ease;
   }
   h1 {
     transform: translateY(-2em);
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     opacity: 0;
     transition: all .2s ease;
   }
@@ -114,11 +115,11 @@ header {
   &:hover, &.active {
     h1 {
       opacity: 1;
-      -webkit-transform: translateY(-2.5em);
+      transform: translateY(-2.5em);
     }
     img {
-      -webkit-filter: blur(3px);
-      -webkit-transform: scale(0.8);
+      filter: blur(3px);
+      transform: scale(0.8);
       opacity: 0.5;
     }
   }
@@ -132,18 +133,19 @@ header {
     display: inline-block;
     width: 70%;
     margin-top: 0;
-    -webkit-filter: blur();
-    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    filter: blur(0px);
+    backface-visibility: hidden;
     opacity: 1;
-    -webkit-transform: scale(1);
+    transform: scale(1);
     transition: all .2s ease;
   }
   a {
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     opacity: 0;
     font-size: 2em;
     text-shadow: 0 1px 1px rgba(0,0,0,.2);
-    -webkit-transform: translateY(-2em);
+    transform: translateY(-2em);
     z-index: 2;
     color: #fff;
     display: inline-block;
@@ -154,12 +156,12 @@ header {
   &:hover, &.active {
     h1 {
       opacity: 0.5;
-      -webkit-filter: blur(3px);
-      -webkit-transform: scale(0.8);
+      filter: blur(3px);
+      transform: scale(0.8);
     }
     a {
       opacity: 1;
-      -webkit-transform: translateY(-4.5em);
+      transform: translateY(-4.5em);
     }
   }
 }
@@ -196,7 +198,6 @@ header {
   }
   span i:before {
     transform: rotate(0deg);
-    -webkit-transition: -webkit-transform .4s ease;
     transition: transform .4s ease;
   }
   span:hover i:before {
