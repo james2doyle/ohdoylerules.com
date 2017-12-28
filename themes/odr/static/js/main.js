@@ -3,7 +3,7 @@
  * @version v1.0.0
  * @link http://ohdoylerules.com
  * @license MIT (http://opensource.org/licenses/MIT)
- * @copyright (c) 12/22/2017 James Doyle (http://ohdoylerules.com/)
+ * @copyright (c) 12/28/2017 James Doyle (http://ohdoylerules.com/)
  *//* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-cssanimations-csstransforms-csstransforms3d-svg-touch-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-css_filters-load
  */

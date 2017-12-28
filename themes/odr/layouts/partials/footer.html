@@ -8,11 +8,19 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
   // register the service worker
+  {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
+  console.info('on localhost - not loading service worker');
+  {{ else }}
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   }
+  {{ end }}
 </script>
+{{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
+<script src="/js/main.js"></script>
+{{ else }}
 <script src="/js/main.min.js"></script>
+{{ end }}
 {{ if eq .Params.Template "post" }}
 <script src="/js/highlight.custom.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
