@@ -25,6 +25,11 @@ code, kbd, pre, pre code, samp {
   font-family: 'Droid Sans Mono', monospace;
 }
 
+pre code {
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
 a,
 a:visited {
   color: $main;
@@ -88,9 +93,13 @@ hr {
 }
 
 header {
-  padding: 3em 15% 0;
+  padding: 1em 15% 3em;
   background-color: $main;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .header-logo {
@@ -133,7 +142,7 @@ header {
     font-size: 4em;
     color: white;
     display: inline-block;
-    width: 70%;
+    width: 60%;
     margin-top: 0;
     will-change: transform;
     filter: blur(0px);
@@ -147,7 +156,7 @@ header {
     opacity: 0;
     font-size: 2em;
     text-shadow: 0 1px 1px rgba(0,0,0,.2);
-    transform: translateY(-2em);
+    transform: translateY(2em);
     z-index: 2;
     color: white;
     display: inline-block;
@@ -163,7 +172,7 @@ header {
     }
     a {
       opacity: 1;
-      transform: translateY(-4.5em);
+      transform: translateY(4.5em);
     }
   }
 }
@@ -290,13 +299,13 @@ li code {
   }
   header {
     font-size: 0.8em;
-    padding: 2em 30% 0;
+    padding: 0 30% 3em;
     &.header-post {
       h1 {
         width: 85%
       }
       &.active a, &:hover a {
-        transform: translateY(-3.5em);
+        transform: translateY(3.5em);
       }
     }
   }

@@ -1,9 +1,8 @@
 {{ partial "header.html" . }}
 <div itemscope itemtype="http://schema.org/BlogPosting">
   <header class="header-post">
-    <h1 itemprop="name headline">{{ .Title }}</h1>
-    <br>
     <a href="{{ .Site.BaseURL }}" title="Go Back Home">Go <i class="icon icon-home"></i></a>
+    <h1 itemprop="name headline">{{ .Title }}</h1>
   </header>
   <div class="container">
     <div class="the-loop">
