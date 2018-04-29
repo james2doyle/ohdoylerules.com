@@ -14,46 +14,46 @@
   {{ end }}
   <link href="https://plus.google.com/{{ .Site.Params.Googleplus }}" rel="author publisher" />
   {{ if not (eq .Params.Template "post") }}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ .Site.Title }}">
   {{ end }}
   <meta itemprop="name" content="{{ .Site.Title }}">
   <meta property="og:site_name" content="ohdoylerules">
   <meta itemprop="url" content="{{ .Permalink }}">
   <meta itemprop="email" content="{{ .Site.Params.Email }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta itemprop="image logo" content="/icons/logo.png">
-  <meta property="og:image" content="/icons/logo.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
+  <meta itemprop="image logo" content="{{ .Site.BaseURL }}icons/logo.png">
+  <meta property="og:image" content="{{ .Site.BaseURL }}icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ .Site.BaseURL }}icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ .Site.BaseURL }}icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ .Site.BaseURL }}icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ .Site.BaseURL }}icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ .Site.BaseURL }}icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ .Site.BaseURL }}icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ .Site.BaseURL }}icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ .Site.BaseURL }}icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ .Site.BaseURL }}icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ .Site.BaseURL }}icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}icons/favicon-16x16.png">
+  <link rel="manifest" href="{{ .Site.BaseURL }}manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="{{ .Site.BaseURL }}icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ .Site.Params.Twitter }}">
   {{ if .Params.Title }}<meta name="twitter:title" content="{{ .Params.Title }}">{{ end }}
   <meta name="twitter:creator" content="@{{ .Site.Params.Twitter }}">
-  <meta name="twitter:image" content="/icons/logo.png">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}icons/logo.png">
   <meta name="twitter:domain" content="{{ .Site.BaseURL }}">
-  <link rel="icon" href="/icons/logo.svg">
+  <link rel="icon" href="{{ .Site.BaseURL }}icons/logo.svg">
   {{ if eq .Params.Title "Homepage" }}
-  <meta itemprop="description" content="{{ .Params.Description }}">
-  <meta property="og:description" content="{{ .Params.Description }}">
-  <meta name="twitter:description" content="{{ .Params.Description }}">
-  <meta itemprop="keywords" content="{{ delimit .Params.Keywords ", " }}">
-  <meta property="og:keywords" content="{{ delimit .Params.Keywords ", " }}">
+    <meta itemprop="description" content="{{ .Params.Description }}">
+    <meta property="og:description" content="{{ .Params.Description }}">
+    <meta name="twitter:description" content="{{ .Params.Description }}">
+    <meta itemprop="keywords" content="{{ delimit .Params.Keywords ", " }}">
+    <meta property="og:keywords" content="{{ delimit .Params.Keywords ", " }}">
   {{ end }}
   {{ if eq .Params.Template "post" }}
     <meta property="og:type" content="article" />
@@ -64,41 +64,41 @@
     <meta itemprop="keywords" content="{{ delimit .Params.Keywords ", " }}">
     <meta property="og:keywords" content="{{ delimit .Params.Keywords ", " }}">
     {{ if .Params.Updated }}
-    <meta itemprop="dateModified" content="{{ .Params.Updated }}" />
+      <meta itemprop="dateModified" content="{{ .Params.Updated }}" />
     {{ end }}
     {{ if .Params.Description }}
-    <meta itemprop="description" content="{{ .Params.Description }}">
-    <meta property="og:description" content="{{ .Params.Description }}">
-    <meta name="twitter:description" content="{{ .Params.Description }}">
+      <meta itemprop="description" content="{{ .Params.Description }}">
+      <meta property="og:description" content="{{ .Params.Description }}">
+      <meta name="twitter:description" content="{{ .Params.Description }}">
     {{ else }}
-    <meta itemprop="description" content="{{ .Site.Params.Description }}">
-    <meta name="twitter:description" content="{{ .Site.Params.Description }}">
-    <meta property="og:description" content="{{ .Site.Params.Description }}">
+      <meta itemprop="description" content="{{ .Site.Params.Description }}">
+      <meta name="twitter:description" content="{{ .Site.Params.Description }}">
+      <meta property="og:description" content="{{ .Site.Params.Description }}">
     {{ end }}
   {{ end }}
   <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
   <meta name="viewport" content="width=device-width">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//www.google-analytics.com">
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" />
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" title="{{ .Site.Title }} RSS Feed" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "sitemap.xml" | absLangURL }}" />
   {{ if eq .Params.Template "post" }}
-  <link rel="dns-prefetch" href="//www.facebook.com">
-  <link rel="dns-prefetch" href="//staticxx.facebook.com">
-  <link rel="dns-prefetch" href="//c.disquscdn.com">
-  <link rel="dns-prefetch" href="//links.services.disqus.com">
-  <link rel="dns-prefetch" href="//apis.google.com">
-  <link rel="stylesheet" href="/css/tomorrow-night.css">
-  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
+    <link rel="dns-prefetch" href="https://www.facebook.com">
+    <link rel="dns-prefetch" href="https://staticxx.facebook.com">
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <link rel="dns-prefetch" href="https://links.services.disqus.com">
+    <link rel="dns-prefetch" href="https://apis.google.com">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tomorrow-night.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
   {{ else }}
-  <link href="https://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
   {{ end }}
   {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
-  <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
   {{ else }}
-  <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.min.css">
   {{ end }}
 </head>
 <body>

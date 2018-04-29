@@ -17,13 +17,13 @@
   {{ end }}
 </script>
 {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
-<script src="/js/main.js"></script>
+  <script src="/js/main.js"></script>
 {{ else }}
-<script src="/js/main.min.js"></script>
+  <script src="{{ .Site.BaseURL }}js/main.min.js"></script>
 {{ end }}
 {{ if eq .Params.Template "post" }}
-<script src="/js/highlight.custom.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+  <script src="/js/highlight.custom.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 {{ end }}
 </body>
 </html>
