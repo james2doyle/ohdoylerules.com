@@ -1,5 +1,5 @@
 ---
-Title: "Laravel Sqlite Cache"
+Title: "Using Sqlite As A Cache In Laravel"
 Date: "2018-10-04"
 Category: "Web"
 Template: "post"
