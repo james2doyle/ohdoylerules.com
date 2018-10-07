@@ -26,7 +26,6 @@ addEventListener('install', (event) => {
  * Handles requests: responds with cache or else network.
  */
 addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
   event.respondWith(caches.match(event.request).then(response => response || fetch(event.request)));
 });
 
