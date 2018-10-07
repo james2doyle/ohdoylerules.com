@@ -94,9 +94,8 @@
     <link rel="dns-prefetch" href="https://links.services.disqus.com">
     <link rel="dns-prefetch" href="https://apis.google.com">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tomorrow-night.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
   {{ else }}
-    <link href="https://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400italic,700,400" rel="stylesheet" type="text/css">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
   {{ end }}
   {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
