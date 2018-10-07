@@ -49,6 +49,7 @@
   <meta name="twitter:domain" content="{{ .Site.BaseURL }}">
   <link rel="icon" href="{{ .Site.BaseURL }}icons/logo.svg">
   {{ if eq .Params.Title "Homepage" }}
+    <meta name="description" content="{{ .Params.Description }}">
     <meta itemprop="description" content="{{ .Params.Description }}">
     <meta property="og:description" content="{{ .Params.Description }}">
     <meta name="twitter:description" content="{{ .Params.Description }}">
@@ -67,10 +68,12 @@
       <meta itemprop="dateModified" content="{{ .Params.Updated }}" />
     {{ end }}
     {{ if .Params.Description }}
+      <meta name="description" content="{{ .Params.Description }}">
       <meta itemprop="description" content="{{ .Params.Description }}">
       <meta property="og:description" content="{{ .Params.Description }}">
       <meta name="twitter:description" content="{{ .Params.Description }}">
     {{ else }}
+      <meta name="description" content="{{ .Site.Params.Description }}">
       <meta itemprop="description" content="{{ .Site.Params.Description }}">
       <meta name="twitter:description" content="{{ .Site.Params.Description }}">
       <meta property="og:description" content="{{ .Site.Params.Description }}">
