@@ -126,7 +126,7 @@ header {
   &:hover, &.active {
     h1 {
       opacity: 1;
-      transform: translateY(-2.5em);
+      transform: translateY(-2em);
     }
     img {
       filter: blur(3px);
@@ -156,7 +156,7 @@ header {
     opacity: 0;
     font-size: 2em;
     text-shadow: 0 1px 1px rgba(0,0,0,.2);
-    transform: translateY(2em);
+    transform: translateY(100%);
     z-index: 2;
     color: white;
     display: inline-block;
