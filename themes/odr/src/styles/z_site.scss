@@ -28,9 +28,12 @@ code, kbd, pre, pre code, samp {
   font-family: $fontsMono;
 }
 
-pre code {
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+pre {
+  padding: 0.5rem;
+  code {
+    border-radius: 3px;
+    // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
 }
 
 a,

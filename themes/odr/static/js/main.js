@@ -1,9 +1,9 @@
 /*!
  * ohdoylerules - ohdoylerules template
  * @version v1.0.0
- * @link http://ohdoylerules.com
+ * @link https://ohdoylerules.com
  * @license MIT (http://opensource.org/licenses/MIT)
- * @copyright (c) 10/7/2018 James Doyle (http://ohdoylerules.com/)
+ * @copyright (c) 2/17/2019 James Doyle (https://ohdoylerules.com/)
  *//* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-cssanimations-csstransforms-csstransforms3d-svg-touch-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-css_filters-load
  */

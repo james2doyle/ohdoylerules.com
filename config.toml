@@ -11,6 +11,9 @@ verboseLog = true
 
 copyright = "This work is licensed under The MIT License (MIT)."
 
+pygmentsCodeFences = true
+pygmentsStyle = "tango"
+
 [author]
   name = "James Doyle"
   email = "james2doyle@gmail.com"
