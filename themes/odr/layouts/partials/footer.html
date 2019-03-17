@@ -12,7 +12,8 @@
   console.info('on localhost - not loading service worker');
   {{ else }}
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
+    {{ $stat := os.Stat "/content" }}
+    navigator.serviceWorker.register('/sw.js?{{ $stat.Size }}');
   }
   {{ end }}
 </script>
