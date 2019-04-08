@@ -13,7 +13,7 @@ When initially developing an application or a new feature we are constantly tryi
 
 Given those restrictions or that type of scenario, we need to pick places to *compromise on purpose*. We need to actively choose a section of the app to cut corners and hide garbage. Fun! Right?
 
-> Should we hardcore this? Should we store this in a column instead of a pivot table? Can we stick it in the HTML for now?
+> Should we hardcode this? Should we store this in a column instead of a pivot table? Can we stick it in the HTML for now?
 
 We have all heard (or spoken) these types of phrases at some point. If you haven't, well it must be nice to live in a fantasy land full of rainbows, puppies, and perfectly designed systems.
 
@@ -47,7 +47,7 @@ This is my number one place to spend all your time. Doing database tweaks early 
 
 I don't have much experience with no-SQL databases at scale. So I can't really speak to much on them. But generally, I think the advice is similar to relational database design: big migrations are painful. So try to make sure you have a scalable and sustainable design is important.
 
-Regarding relation datastores, my advice is mostly about relationships. Too often I see things like `address1`, `address2`, `address3`, etc. You get the deal. Instead of using a pivot table, someone decided it was too much work. So now you are growing the table horizontally and with each row instead of, get this, _being relational_.
+Regarding relation data stores, my advice is mostly about relationships. Too often I see things like `address1`, `address2`, `address3`, etc. You get the deal. Instead of using a pivot table, someone decided it was too much work. So now you are growing the table horizontally and with each row instead of, get this, _being relational_.
 
 Another one I've been bit by is using one-to-many relationships instead of designing for many-to-many with a `LIMIT 1` by default. It is so much easier to turn a many-to-many into a one-to-many than it is to do the reverse. How many times have you made something and then a week or a month later someone from product development or business asks *"how hard it would be to make it so that X could have many Y's?"* Only to be met with you screaming at the top of your lungs because you need to not only migrate the existing database but update all the code as well.
 
