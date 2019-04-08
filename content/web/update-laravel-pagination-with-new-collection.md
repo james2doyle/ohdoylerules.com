@@ -14,6 +14,7 @@ But what if you want to return paginated results? How do you used the results af
 Here is an example of how that works in practice:
 
 ```php
+<?php
 /**
  * Hydrates the paginated results for the query
  */
