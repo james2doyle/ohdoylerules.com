@@ -1,0 +1,51 @@
+{{ partial "header.html" . }}
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">{{ .Title }}</h1>
+      </div>
+    </header>
+    <p><a href="{{ .Site.BaseURL }}" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <div class="post-info">
+        {{ if .Params.Date }}
+        <span class="post-date" itemprop="datePublished">🕒 {{ dateFormat .Site.Params.Date_format .Params.Date }}</span>
+        {{ end }}
+        {{ if .Params.Updated }}
+        &nbsp;<span class="post-date">🕙 Updated: {{ dateFormat .Site.Params.Date_format .Params.Updated }}</span>
+        {{ end }}
+        &nbsp;&nbsp;&nbsp;
+        {{ if .Params.Category }}
+        <span class="post-category" itemprop="genre about">🏷 {{ .Params.Category }}</span>
+        {{ end }}
+      </div>
+      <div itemprop="ArticleBody text" class="main-content">{{ .Content }}</div>
+      <p><a href="{{ .Site.BaseURL }}" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/{{ .Site.Params.Twitter }}" target="_blank" class="post-author-link">
+            <img src="{{ .Site.Params.Gravatar }}" alt="{{ .Site.Title }} Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">{{ .Site.Title }}</h3></div>
+          <div class="media-content">
+            <p>{{ .Site.Params.Author_blurb | safeHTML }}</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
+        <div class="alert alert-info">Disqus comment section. Loaded when exported...</div>
+      {{ else }}
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}

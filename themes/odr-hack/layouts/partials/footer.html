@@ -1,0 +1,22 @@
+{{ $stat1 := os.Stat "/content" }}
+{{ $stat2 := os.Stat "/themes" }}
+<script defer>
+  // register the service worker
+  {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
+  console.info('on localhost - not loading service worker. Query: {{ $stat1.Size }}-{{ $stat2.Size }}');
+  {{ else }}
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?{{ $stat1.Size }}-{{ $stat2.Size }}');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  {{ end }}
+</script>
+</body>
+</html>

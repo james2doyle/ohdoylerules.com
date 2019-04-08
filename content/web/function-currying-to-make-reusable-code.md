@@ -102,14 +102,14 @@ username.addEventListener('input', handleInput('username'));
 In this example, we are adding an event handler to an input and basically giving it a label of "username". Not too special at the moment. If we wanted just the name that would be easy. So let's make this function handle more input types:
 
 ```js
-/*
-<input type="text" id="username"/>
-<input type="checkbox" id="accept" value="1" />
-<select id="age">
-  <option value="below 18">below 18</option>
-  <option value="above 18">above 18</option>
-</select>
- */
+/**
+ * <input type="text" id="username"/>
+ * <input type="checkbox" id="accept" value="1" />
+ * <select id="age">
+ *   <option value="below 18">below 18</option>
+ *   <option value="above 18">above 18</option>
+ * </select>
+ **/
 const handleInput = (name) => {
   return ({ target: { type, value, checked } }) => {
     console.log(`${name} input was set to "${type !== 'checkbox' ? value : checked}"`);
@@ -129,14 +129,14 @@ Ok, so now we see 3 different input types, all using the same function but the o
 We can actually clean this up more though:
 
 ```js
-/*
-<input type="text" id="username"/>
-<input type="checkbox" id="accept" value="1" />
-<select id="age">
-  <option value="below 18">below 18</option>
-  <option value="above 18">above 18</option>
-</select>
- */
+/**
+ * <input type="text" id="username"/>
+ * <input type="checkbox" id="accept" value="1" />
+ * <select id="age">
+ *   <option value="below 18">below 18</option>
+ *   <option value="above 18">above 18</option>
+ * </select>
+ **/
 const handleInput = (name, prop = 'value') => {
   return ({ target }) => {
     console.log(`${name} input was set to "${target[prop]}"`);

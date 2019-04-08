@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+<div class="container">
+  <header class="grid -middle -center">
+    <p>
+      <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}" class="none">
+        <img src="/icons/logo.svg" alt="James Doyle Logo" width="113" height="57">
+      </a>
+    </p>
+  </header>
+  <div class="the-loop">
+    {{ range .Data.Pages }}
+    {{ $page := . }}
+    <article>
+      <h2><a href="{{ $page.Permalink }}" title="{{ $page.Title }}">{{ $page.Title }}</a></h2>
+      <p class="post-info">
+        {{ if $page.Params.Date }}
+          <span class="post-date">🕒 {{ dateFormat .Site.Params.Date_format $page.Params.Date }}</span>
+        {{ end }}
+        {{ if $page.Params.Updated }}
+          &nbsp;<span class="post-date">🕙 Updated: {{ dateFormat .Site.Params.Date_format $page.Params.Updated }}</span>
+        {{ end }}
+        {{ if $page.Params.Category }}
+          &nbsp;<span class="post-category">🏷 {{ $page.Params.Category }}</span>
+        {{ end }}
+      </p>
+      <div class="post-intro">
+       <p>{{ $page.Params.Description }}</p>
+       <p><a href="{{ $page.Permalink }}" class="read-more" title="Read {{ $page.Title }}">Read More <i class="icon icon-arrow-right"></i></a></p>
+     </div>
+   </article>
+   {{ end }}
+  </div>
+</div>
+{{ partial "footer.html" . }}

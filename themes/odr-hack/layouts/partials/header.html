@@ -12,6 +12,7 @@
   {{ else }}
     <title>{{ .Site.Title }} | {{ .Params.Title }}</title>
   {{ end }}
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
   <link href="https://plus.google.com/{{ .Site.Params.Googleplus }}" rel="author publisher" />
   {{ if not (eq .Params.Template "post") }}
     <meta property="og:type" content="website" />
@@ -40,7 +41,7 @@
   <link rel="manifest" href="{{ .Site.BaseURL }}manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="{{ .Site.BaseURL }}icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#333333">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ .Site.Params.Twitter }}">
   {{ if .Params.Title }}<meta name="twitter:title" content="{{ .Params.Title }}">{{ end }}
@@ -57,6 +58,7 @@
     <meta property="og:keywords" content="{{ delimit .Params.Keywords ", " }}">
   {{ end }}
   {{ if eq .Params.Template "post" }}
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
     <meta property="og:type" content="article" />
     {{ if .Params.Title }}<meta property="og:title" content="{{ .Params.Title }}">{{ end }}
     <meta property="article:author" content="{{ .Site.Title }}" />
@@ -79,28 +81,22 @@
       <meta property="og:description" content="{{ .Site.Params.Description }}">
     {{ end }}
   {{ end }}
-  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
-  <meta name="viewport" content="width=device-width">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" />
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" title="{{ .Site.Title }} RSS Feed" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "sitemap.xml" | absLangURL }}" />
-  {{ if eq .Params.Template "post" }}
-    <link rel="dns-prefetch" href="https://www.facebook.com">
-    <link rel="dns-prefetch" href="https://staticxx.facebook.com">
-    <link rel="dns-prefetch" href="https://c.disquscdn.com">
-    <link rel="dns-prefetch" href="https://links.services.disqus.com">
-    <link rel="dns-prefetch" href="https://apis.google.com">
-    <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tomorrow-night.css"> -->
-  {{ else }}
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-  {{ end }}
-  {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
-  {{ else }}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.min.css">
-  {{ end }}
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/hack.css">
+  <style type="text/css">
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+  </style>
 </head>
-<body>
+<body class="hack">
