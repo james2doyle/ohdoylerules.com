@@ -86,7 +86,7 @@
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" title="{{ .Site.Title }} RSS Feed" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "sitemap.xml" | absLangURL }}" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/hack.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/hack.custom.css">
   <style type="text/css">
     a.none {
       color: inherit;
@@ -96,6 +96,13 @@
     a.none:hover {
       background: none;
       opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
     }
   </style>
 </head>
