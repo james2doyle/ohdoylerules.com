@@ -53,11 +53,11 @@ CREATE TABLE "project"
 SELECT `tagline` FROM `projects` WHERE `name` = "My Project"
 
 # Get predictable results
-{
-  "project": {
+[
+  {
     "tagline": "A query language for APIs"
   }
-}
+]
 ```
 
 So this really is just another way to store and query your data. We describe the structure, query it using the specified query language with our expected structure, and print out the results.
@@ -209,7 +209,7 @@ We see that we found the user:
 ```json
 [
   {
-    "last_name": "Andrew Adams"
+    "full_name": "Andrew Adams"
   }
 ]
 ```
