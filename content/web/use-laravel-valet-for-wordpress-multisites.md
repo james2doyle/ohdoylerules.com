@@ -3,7 +3,7 @@ Title: "Use Laravel Valet for WordPress Multisites"
 Date: "2019-09-01"
 Category: "Web"
 Template: "post"
-Description: ""
+Description: "Use Laravel Valet for developing local WordPress multisites"
 Keywords: ["laravel", valet", "php", "subdomain", "wordpress", "multisite", "setup"]
 ---
 
