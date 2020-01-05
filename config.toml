@@ -13,6 +13,9 @@ copyright = "This work is licensed under The MIT License (MIT)."
 pygmentsCodeFences = true
 pygmentsStyle = "dracula"
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [author]
   name = "James Doyle"
   email = "james2doyle@gmail.com"
