@@ -8,26 +8,25 @@
     </p>
   </header>
   <div class="the-loop">
-    {{ range .Data.Pages }}
-    {{ $page := . }}
-    <article>
-      <h2><a href="{{ $page.Permalink }}" title="{{ $page.Title }}">{{ $page.Title }}</a></h2>
-      <p class="post-info">
-        {{ if $page.Params.Date }}
-          <span class="post-date">🕒 {{ dateFormat .Site.Params.Date_format $page.Params.Date }}</span>
-        {{ end }}
-        {{ if $page.Params.Updated }}
-          &nbsp;<span class="post-date">🕙 Updated: {{ dateFormat .Site.Params.Date_format $page.Params.Updated }}</span>
-        {{ end }}
-        {{ if $page.Params.Category }}
-          &nbsp;<span class="post-category">🏷 {{ $page.Params.Category }}</span>
-        {{ end }}
-      </p>
-      <div class="post-intro">
-       <p>{{ $page.Params.Description }}</p>
-       <p><a href="{{ $page.Permalink }}" class="read-more" title="Read {{ $page.Title }}">Read More <i class="icon icon-arrow-right"></i></a></p>
-     </div>
-   </article>
+    {{ range $.Site.RegularPages.ByDate.Reverse }}
+      <article>
+        <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+        <p class="post-info">
+          {{ if .Params.Date }}
+            <span class="post-date">🕒 {{ dateFormat .Site.Params.Date_format .Params.Date }}</span>
+          {{ end }}
+          {{ if .Params.Updated }}
+            &nbsp;<span class="post-date">🕙 Updated: {{ dateFormat .Site.Params.Date_format .Params.Updated }}</span>
+          {{ end }}
+          {{ if .Params.Category }}
+            &nbsp;<span class="post-category">🏷 {{ .Params.Category }}</span>
+          {{ end }}
+        </p>
+        <div class="post-intro">
+          <p>{{ .Params.Description }}</p>
+          <p><a href="{{ .Permalink }}" class="read-more" title="Read {{ .Title }}">Read More <i class="icon icon-arrow-right"></i></a></p>
+        </div>
+     </article>
    {{ end }}
   </div>
 </div>
