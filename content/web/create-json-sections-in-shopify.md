@@ -22,7 +22,8 @@ Here is an example of the if statement required:
 ```liquid
 {% comment %}https://help.shopify.com/en/themes/development/sections/section-rendering-api{% endcomment %}
 {% comment %}request.page_type will be "index" when using the section rendering API{% endcomment %}
-{%- if request.page_type == 'index' -%}
+{% comment %}content_for_header will contain the query string in the request{% endcomment %}
+{%- if request.page_type == 'index' and content_for_header contains 'section_id' -%}
 {
   {%- for block in section.blocks -%}
     {%- assign slug = block.settings.title | downcase -%}
@@ -37,7 +38,7 @@ Here is an example of the if statement required:
 {%- endif -%}
 ```
 
-As you can see from the comment, `request.page_type` will be equal to `"index"` when rendered via the API. This means, we can use that state to return a string of JSON.
+As you can see from the comment, `request.page_type` will be equal to `"index"` and `content_for_header` will contain `"section_id"` when rendered via the API. This means, we can use that state to return a string of JSON.
 
 When this is returned from the section API, it will still be treated as HTML and wrapped with markup. It will look something like this:
 
