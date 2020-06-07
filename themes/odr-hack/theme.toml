@@ -5,7 +5,7 @@ description = ""
 homepage = "https://www.ohdoylerules.com/"
 tags = []
 features = []
-min_version = "0.20"
+min_version = "0.72"
 
 [author]
   name = "James Doyle"
