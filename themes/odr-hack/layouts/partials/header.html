@@ -192,7 +192,10 @@
   </style>
   <script type="text/javascript" charset="utf-8" defer>
     document.addEventListener('DOMContentLoaded', function() {
-      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || '0');
+      // they "prefer dark"
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      // apply the theme they have set in localstorage or the default one
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
 
       const themes = document.getElementById('themes').content.split(',');
       const stylesheet = document.getElementById('stylesheet');
