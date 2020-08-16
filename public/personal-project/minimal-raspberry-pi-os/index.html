@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | Minimal Raspberry Pi OS</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="Minimal Raspberry Pi OS">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Minimal Raspberry Pi OS">
+    <meta property="article:author" content="James Doyle" />
+    <meta property="article:section" content="Personal Project" />
+    <meta property="article:tag" content="Moebius, debian, linux, raspberry, pi, os, operating system, minimal, small, tiny" />
+    <meta itemprop="keywords" content="Moebius, debian, linux, raspberry, pi, os, operating system, minimal, small, tiny">
+    <meta property="og:keywords" content="Moebius, debian, linux, raspberry, pi, os, operating system, minimal, small, tiny">
+    
+      <meta itemprop="dateModified" content="2015-03-20" />
+    
+    
+      <meta name="description" content="Setup and improve the Moebius OS for the Raspberry Pi">
+      <meta itemprop="description" content="Setup and improve the Moebius OS for the Raspberry Pi">
+      <meta property="og:description" content="Setup and improve the Moebius OS for the Raspberry Pi">
+      <meta name="twitter:description" content="Setup and improve the Moebius OS for the Raspberry Pi">
+    
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">Minimal Raspberry Pi OS</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <div class="post-info">
+        
+        <span class="post-date" itemprop="datePublished">🕒 March 14, 2015</span>
+        
+        
+        &nbsp;<span class="post-date">🕙 Updated: March 20, 2015</span>
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <span class="post-category" itemprop="genre about">🏷 Personal Project</span>
+        
+      </div>
+      <div itemprop="ArticleBody text" class="main-content"><h2 id="introduction">Introduction</h2>
+<p>I have had a <a href="http://www.raspberrypi.org/products/model-b/">Raspberry Pi B+</a> for a while now, and I was looking to setup a very minimal Linux OS. I am sure this would work fine with the Pi 2.</p>
+<p>Although the other <a href="http://www.raspberrypi.org/downloads/">Raspberry Pi OSs</a> are great, a lot of them are too feature-full (read bloated) and have a packaged GUI that I would never use. Therefore, I wanted to install something much more <em>naked</em> than the ones on the Raspberry Pi website.</p>
+<p>Enter, <a href="http://sourceforge.net/projects/moebiuslinux/">Moebius</a>. A few words from the Moebius site:</p>
+<blockquote>
+<p>[Moebius] is a Raspberry Pi armhf Debian based distribution targeted to have a minimal footprint. Size, speed and optimizations are main goals for this distro&hellip;</p>
+</blockquote>
+<p>With that said, the <em>unzipped <code>img</code></em> file is about <strong>110Mb</strong>. That is pretty small!</p>
+<p>The other thing that Moebius does is remove the default Raspbian sources from <code>apt-get</code>. This means <em>you can&rsquo;t just download all the Rasbian packages</em> you want.</p>
+<p>Moebius introduces the idea of containers. This isn&rsquo;t the same container technology like Docker. The &ldquo;containers&rdquo; are more like groups of packages. When installing a Moebius container, everything is installed in <code>/usr/bin</code> as if it came with the system.</p>
+<p>I am going to provide a little walkthrough to get started with Moebius as a light-weight development environment, as well as how to install some other tools.</p>
+<h3 id="initial-setup">Initial Setup</h3>
+<p>First, visit the Moebius Sourceforge page and follow the instructions to <a href="http://sourceforge.net/projects/moebiuslinux/files/raspberry.stable/">download Moebius</a>. The basic instructions tell you how to copy the img to the SD Card. Once everything is setup and the Raspberry Pi has booted, complete the following:</p>
+<ul>
+<li>Either connect a screen and keyboard to the pi, or SSH to the pi</li>
+<li>The default user is <code>root</code> and password is <code>moebius</code></li>
+<li>When logged in, run <code>moebius</code></li>
+</ul>
+<div class="center">
+  <a href="/images/moebius-tool.png" title="Moebius command line app" target="_blank"><img alt="Moebius command line app" src="/images/moebius-tool.png" ></a>
+  <p>Moebius command line app</p>
+</div>
+<p>Moebius is the name of the OS, but also the name of a sweet little built-in command line tool to setup the rest of the Pi.</p>
+<h4 id="ssh-niceness">SSH Niceness</h4>
+<p><strong>Optional:</strong> Add your public key to Moebius in order to ssh without a password. This is not required, but it does make popping in and out of the Pi nice and quick. Plus, no password to remember!</p>
+<p>Moebius does not come with <code>nano</code>! If you are not familiar with the <code>vi</code> tool, you should <a href="http://www.washington.edu/computing/unix/vi.html">use this site to learn some basics</a>.</p>
+<p>Just create <code>~/.ssh</code> and then use <code>vi ~/.ssh/authorized_keys</code> to create a new file, then paste in your public key.</p>
+<h3 id="dev-environment-setup">Dev Environment Setup</h3>
+<ul>
+<li>Run <code>moebius</code> and select <code>Basic/Initial Setup</code></li>
+<li>Choose <code>Autoresize SD partition</code>, follow the instructions</li>
+<li>Run <code>apt-get update</code></li>
+<li>Run <code>apt-get install tzdata</code></li>
+<li>Run <code>moebius</code> and select <code>Basic/Initial Setup</code>, choose <code>System timezone setup</code> and follow instructions</li>
+<li>In <code>moebius</code>, select <code>Software Management</code> and select <code>Update containers list from repository</code></li>
+<li>Do the same as above except choose <code>Install a container</code> from the <code>Software Management</code> menu</li>
+<li>Select the <code>lang.gcc</code> container</li>
+</ul>
+<div class="center">
+  <a href="/images/moebius-container-tool.png" title="Moebius container command line app" target="_blank"><img alt="Moebius container command line app" src="/images/moebius-container-tool.png" ></a>
+  <p>Moebius container command line app</p>
+</div>
+<p><strong>You may get an error</strong> telling you to run <code>dpkg --configure -a</code>. If this happens, press any key to close the container installed and then run that command. When that completes, try to install the <code>lang.gcc</code> container again.</p>
+<p>You may have to repeat the process above <em>multiple times</em>. I did it twice.</p>
+<p>Once the container is installed, you should have <code>make</code> and <code>gcc</code>, and a bunch of other tools on your system.</p>
+<hr>
+<h3 id="install-git">Install git</h3>
+<p><strong>You must install the lang.gcc container first</strong>. That container provides the necessary compilers we need in order to build git.</p>
+<ul>
+<li>Get the required development files with <code>apt-get install openssl-dev curl-dev libexpat-dev dropbear-dev coreutils coreutils-dev</code></li>
+<li>Download the latest zip archive <code>wget https://github.com/git/git/archive/v2.3.3.zip</code></li>
+<li>Run <code>unzip v2.3.3.zip</code> and then <code>cd v2.3.3/</code></li>
+<li>Allow the scripts to run with <code>chmod +x *.sh &amp;&amp; chmod +x check_bindir</code></li>
+</ul>
+<p>Following the official <a href="https://github.com/git/git/blob/master/INSTALL">INSTALL</a> in the git source code repository, we want to leave out some of the features in order to build without some of the required libraries.</p>
+<p>To do this, we need to run:</p>
+<pre><code>make NO_PERL=YesPlease NO_TCLTK=YesPlease NO_GETTEXT=YesPlease prefix=/usr install
+</code></pre>
+<p>This will take a while to build, so <em>grab a coffee or a beer</em>.</p>
+<p><strong>Note:</strong> This command does not build the docs, so if you want those, you will have to consult the <a href="https://github.com/git/git/blob/master/INSTALL">INSTALL</a> file in the git repo.</p>
+<h3 id="samba-setup">Samba setup</h3>
+<p><a href="http://en.wikipedia.org/wiki/Samba_%28software%29">Samba</a> lets us access the Pi like a hard drive on our local network. Samba <em>works well with Windows and OSX</em>, and of course Linux as well.</p>
+<p>If you are not familiar with the <code>vi</code> tool, you should <a href="http://www.washington.edu/computing/unix/vi.html">use this site to learn some basics</a>.</p>
+<p>Complete the following to setup Samba:</p>
+<ul>
+<li>run <code>apt-get install samba</code></li>
+<li>open the config with <code>vi /etc/samba/smb.conf</code></li>
+<li>then complete the following:</li>
+</ul>
+<pre><code># find in the top part of the file
+workgroup = your_workgroup_name
+# find and uncomment this line
+wins support = yes
+# add to the bottom of the file
+[pihome]
+  comment= Pi Home
+  path=/home/
+  browseable=Yes
+  writeable=Yes
+  only guest=no
+  create mask=0777
+  directory mask=0777
+  public=no
+</code></pre><ul>
+<li>set the samba password with <code>smbpasswd -a root</code></li>
+</ul>
+<h3 id="install-lit-and-luvit">Install lit and luvit</h3>
+<p><em>Again, have lang.gcc installed before continuing</em>.</p>
+<p>I have been playing with <a href="https://github.com/luvit/lit">Lit</a> and <a href="https://github.com/luvit/luvit">Luvit</a>. They are like lightweight versions of Node.js, but written with Lua. So let&rsquo;s install them with a series of commands:</p>
+<pre><code>apt-get install curl
+curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
+mkdir -p /usr/local/bin
+mv lit /usr/local/bin/lit
+lit make lit://luvit/luvit
+mv luvit /usr/local/bin/luvit
+</code></pre>
+<p>Try running <code>lit version</code> and then <code>luvit --version</code> to see if the frameworks are installed.</p>
+<hr>
+<h3 id="finished">Finished</h3>
+<p>You should now have everything setup to get around. If you find any problems with my instructions, <strong>please let me know in the comments</strong> and I will update them!</p>
+</div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?384-128');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+

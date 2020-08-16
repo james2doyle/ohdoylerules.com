@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | Simple Slack Slash Supplier</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="https://ohdoylerules.com/web/simple-slash-commands/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/web/simple-slash-commands/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="Simple Slack Slash Supplier">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Simple Slack Slash Supplier">
+    <meta property="article:author" content="James Doyle" />
+    <meta property="article:section" content="Web" />
+    <meta property="article:tag" content="slack, slash, commands, node, lambda" />
+    <meta itemprop="keywords" content="slack, slash, commands, node, lambda">
+    <meta property="og:keywords" content="slack, slash, commands, node, lambda">
+    
+    
+      <meta name="description" content="A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses">
+      <meta itemprop="description" content="A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses">
+      <meta property="og:description" content="A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses">
+      <meta name="twitter:description" content="A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses">
+    
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/web/simple-slash-commands/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">Simple Slack Slash Supplier</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <div class="post-info">
+        
+        <span class="post-date" itemprop="datePublished">🕒 May 13, 2019</span>
+        
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <span class="post-category" itemprop="genre about">🏷 Web</span>
+        
+      </div>
+      <div itemprop="ArticleBody text" class="main-content"><p><em>This is a reprint of the README from my project <a href="https://github.com/james2doyle/simple-slack-slash-supplier">simple-slack-slash-supplier</a>.</em></p>
+<p>This examples project showcases a simple way to create new slash commands without having to work too hard.</p>
+<p>This example assumes you have access to <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> as well as have <a href="https://api.slack.com/slash-commands">created a Slash command in Slack</a>.</p>
+<h3 id="handling-applicationx-www-form-urlencoded">Handling <code>application/x-www-form-urlencoded</code></h3>
+<p>Slack sends their <code>POST</code> requests using <code>Content-Type: application/x-www-form-urlencoded</code>. This is not a content type that Lambda supports out-of-the-box. We need to do some legwork in order to map that raw request body to <code>JSON</code> which we can understand more easily in our Node.js handler function.</p>
+<p>Preliminary setup:</p>
+<ul>
+<li>You must create a standalone <code>POST</code> resource action</li>
+<li>Be sure &ldquo;Integration type&rdquo; is set to &ldquo;Lambda Function&rdquo;</li>
+<li>Make sure <code>Use Lambda Proxy integration</code> is checked</li>
+<li>Remove the original <code>ANY</code> resource action to be sure it doesn&rsquo;t conflict</li>
+</ul>
+<h4 id="mapping-templates">Mapping templates</h4>
+<p>In order to properly handle <code>application/x-www-form-urlencoded</code>, we need to make a mapping template for it.</p>
+<p>Here are the steps:</p>
+<ul>
+<li>Click on &ldquo;Integration Request&rdquo; when viewing the details of your <code>POST</code> resource action</li>
+<li>Pop open the &ldquo;Mapping templates&rdquo; accordion</li>
+<li>Click &ldquo;Add mapping template&rdquo;</li>
+<li>Use <code>application/x-www-form-urlencoded</code> in the field that appears</li>
+<li>Scroll down and see the new form to enter in your template details</li>
+<li>Select &ldquo;Method request passthrough&rdquo; from the &ldquo;Generate template&rdquo; dropdown</li>
+<li>Put the following content in the textarea:</li>
+</ul>
+<pre><code>##  Ripped from &quot;https://stackoverflow.com/a/52705985/1170664&quot;
+{
+    &quot;body-json&quot; : $input.json('$'),
+    &quot;params&quot; : {
+        #foreach( $token in $input.path('$').split('&amp;') )
+            #set( $keyVal = $token.split('=') )
+            #set( $keyValSize = $keyVal.size() )
+            #if( $keyValSize &gt;= 1 )
+                #set( $key = $util.urlDecode($keyVal[0]) )
+                #if( $keyValSize &gt;= 2 )
+                    #set( $val = $util.urlDecode($keyVal[1]) )
+                #else
+                    #set( $val = '' )
+                #end
+                &quot;$key&quot;: &quot;$util.escapeJavaScript($val)&quot;#if($foreach.hasNext),#end
+            #end
+        #end
+    },
+    &quot;stage-variables&quot; : {
+        #foreach($key in $stageVariables.keySet())
+        &quot;$key&quot; : &quot;$util.escapeJavaScript($stageVariables.get($key))&quot;
+            #if($foreach.hasNext),#end
+        #end
+    },
+    &quot;context&quot; : {
+        &quot;account-id&quot; : &quot;$context.identity.accountId&quot;,
+        &quot;api-id&quot; : &quot;$context.apiId&quot;,
+        &quot;api-key&quot; : &quot;$context.identity.apiKey&quot;,
+        &quot;authorizer-principal-id&quot; : &quot;$context.authorizer.principalId&quot;,
+        &quot;caller&quot; : &quot;$context.identity.caller&quot;,
+        &quot;cognito-authentication-provider&quot; : &quot;$context.identity.cognitoAuthenticationProvider&quot;,
+        &quot;cognito-authentication-type&quot; : &quot;$context.identity.cognitoAuthenticationType&quot;,
+        &quot;cognito-identity-id&quot; : &quot;$context.identity.cognitoIdentityId&quot;,
+        &quot;cognito-identity-pool-id&quot; : &quot;$context.identity.cognitoIdentityPoolId&quot;,
+        &quot;http-method&quot; : &quot;$context.httpMethod&quot;,
+        &quot;stage&quot; : &quot;$context.stage&quot;,
+        &quot;source-ip&quot; : &quot;$context.identity.sourceIp&quot;,
+        &quot;user&quot; : &quot;$context.identity.user&quot;,
+        &quot;user-agent&quot; : &quot;$context.identity.userAgent&quot;,
+        &quot;user-arn&quot; : &quot;$context.identity.userArn&quot;,
+        &quot;request-id&quot; : &quot;$context.requestId&quot;,
+        &quot;resource-id&quot; : &quot;$context.resourceId&quot;,
+        &quot;resource-path&quot; : &quot;$context.resourcePath&quot;
+    }
+}
+</code></pre><ul>
+<li>Paste the content above in the textarea</li>
+<li>Click &ldquo;Save&rdquo; to confirm the content of the textarea</li>
+<li>From the &ldquo;Actions&rdquo; dropdown select &ldquo;Deploy API&rdquo;</li>
+<li>Deploy the API changes as you normally would</li>
+</ul>
+<p>Now you should now be able to handle <code>POST</code> requests with content type of <code>application/x-www-form-urlencoded</code> and they will be converted right into <code>JSON</code> automatically!</p>
+<h3 id="testing">Testing</h3>
+<p>You can edit <code>hello-command.json</code> to add details about your command in order to test the different handlers. Add new files and new tests scripts to <code>package.json</code> to keep going.</p>
+<p>Run the commands with:</p>
+<pre><code>npm install
+npm run test
+</code></pre></div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?384-128');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+

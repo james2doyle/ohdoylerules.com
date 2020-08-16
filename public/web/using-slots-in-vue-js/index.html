@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | Using slots in Vue js</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="https://ohdoylerules.com/web/using-slots-in-vue-js/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/web/using-slots-in-vue-js/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="Using slots in Vue js">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Using slots in Vue js">
+    <meta property="article:author" content="James Doyle" />
+    <meta property="article:section" content="Web" />
+    <meta property="article:tag" content="vue, slots, server, rendered, reusable, flexible, components, liquid, blade" />
+    <meta itemprop="keywords" content="vue, slots, server, rendered, reusable, flexible, components, liquid, blade">
+    <meta property="og:keywords" content="vue, slots, server, rendered, reusable, flexible, components, liquid, blade">
+    
+    
+      <meta name="description" content="If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components">
+      <meta itemprop="description" content="If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components">
+      <meta property="og:description" content="If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components">
+      <meta name="twitter:description" content="If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components">
+    
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/web/using-slots-in-vue-js/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">Using slots in Vue js</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <div class="post-info">
+        
+        <span class="post-date" itemprop="datePublished">🕒 May 18, 2020</span>
+        
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <span class="post-category" itemprop="genre about">🏷 Web</span>
+        
+      </div>
+      <div itemprop="ArticleBody text" class="main-content"><p>If you are working with server-rendered apps (your view is compiled on the server down to HTML), and you are a <a href="https://vuejs.org/">Vue.js</a> user, then you should definitely learn to use a <a href="https://vuejs.org/v2/guide/components-slots.html">Vue feature called slots</a>! Not only will it allow you to make more reusable and flexible components, but you will also improve the rendering performance of your apps as well.</p>
+<h2 id="basic-example">Basic Example</h2>
+<p>Here is the example we will be refactoring later. It is a &ldquo;profile list&rdquo; which takes in an array of users from a prop, and then creates &ldquo;profile cards&rdquo; for each one. Finally, it adds a button in each card that emits an event with the user data when someone clicks on it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#6272a4">&lt;!--
+</span><span style="color:#6272a4">  This is the way you might typically build a component like this
+</span><span style="color:#6272a4"> --&gt;</span>
+&lt;<span style="color:#ff79c6">template</span>&gt;
+  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-list&#34;</span>&gt;
+    &lt;<span style="color:#ff79c6">ul</span>&gt;
+      <span style="color:#6272a4">&lt;!-- loop over all the users and create cards for them --&gt;</span>
+      &lt;<span style="color:#ff79c6">li</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-card&#34;</span> <span style="color:#50fa7b">v-for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user in users&#34;</span> <span style="color:#50fa7b">:key</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.id&#34;</span>&gt;
+        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-details&#34;</span>&gt;
+          &lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">:src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.profile_image&#34;</span> <span style="color:#50fa7b">:alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;`${user.username}` profile image&#34;</span>&gt;
+          &lt;<span style="color:#ff79c6">h4</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.username&#34;</span>&gt;&lt;/<span style="color:#ff79c6">h4</span>&gt;
+        &lt;/<span style="color:#ff79c6">div</span>&gt;
+        <span style="color:#6272a4">&lt;!-- we have a button event here --&gt;</span>
+        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;buttonHandler(user)&#34;</span>&gt;View&lt;/<span style="color:#ff79c6">button</span>&gt;
+      &lt;/<span style="color:#ff79c6">li</span>&gt;
+    &lt;/<span style="color:#ff79c6">ul</span>&gt;
+  &lt;/<span style="color:#ff79c6">div</span>&gt;
+&lt;/<span style="color:#ff79c6">template</span>&gt;
+
+&lt;<span style="color:#ff79c6">script</span>&gt;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
+  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;ProfileList&#39;</span>,
+  props<span style="color:#ff79c6">:</span> {
+    <span style="color:#6272a4">// we take in our list of users
+</span><span style="color:#6272a4"></span>    users<span style="color:#ff79c6">:</span> {
+      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">Array</span>,
+      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+    }
+  },
+  methods<span style="color:#ff79c6">:</span> {
+    buttonHandler(user) {
+      <span style="color:#ff79c6">this</span>.$emit(<span style="color:#f1fa8c">&#39;profile-change&#39;</span>, user);
+    }
+  }
+};
+&lt;/<span style="color:#ff79c6">script</span>&gt;
+</code></pre></div><p>This is how you might use this component in your server-rendered templates:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#6272a4">&lt;!-- liquid or twig example --&gt;</span>
+&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ users | json | escape }}&#34;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
+<span style="color:#6272a4">&lt;!-- plain php, short echo --&gt;</span>
+&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&lt;?= htmlspecialchars(json_encode($users), ENT_QUOTES, &#39;UTF-8&#39;) ?&gt;&#34;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
+<span style="color:#6272a4">&lt;!-- laravel blade example, note single quotes --&gt;</span>
+&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;@json($users)&#39;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
+</code></pre></div><p>As you can see the main approach here is to encode the users as JSON and pass them to the components <code>users</code> prop. This can create quite a mess of JSON if you look at the source of your pages if you have lots of components that do this.</p>
+<h2 id="why-use-slots">Why Use Slots?</h2>
+<p>As I mentioned, with slots you can create more reusable and flexible components and improve the rendering performance of your apps. I&rsquo;ll outline some of the details below.</p>
+<h4 id="on-reusability-and-flexibility">On Reusability and Flexibility</h4>
+<p>Normally, you would send data to your Vue component using props, events, or a store. But using slots, you can essentially skip a rendering step and send your pre-compiled Vue into your Vue components template. This allows you to create components with <em>flexible templates</em> instead of adding tons of props and lots of switches in the templates.</p>
+<p>What I&rsquo;ve typically seen in the past with larger apps, developers end up creating super-components with tons and tons of props. The reason this happens is usually because the components require flexibility. If you have lots of props, that is <a href="https://en.wikipedia.org/wiki/Code_smell">probably a code smell</a>. A way to reduce the number of props is to use events, new components, and of course, slots, to split things up!</p>
+<h4 id="on-passing-data">On Passing Data</h4>
+<p>Since a slot is rendered on the server, you can also do some handy things with the template. Say you want to show or hide different content based on whether the user is authenticated. Well, this is super easy when working in server-rendered templates since the session is so easy to access. You might even have entire blocks of the UI that are not shown if the user is not logged in or is logged out.</p>
+<p>This can help to dramatically reduce the work you need to do on your frontend to access data or building token-based APIs.</p>
+<h4 id="on-rendering">On Rendering</h4>
+<p>Since a slot is prerended HTML, your component ends up changing to really only encapsulating <em>the logic</em> of your component and less &ldquo;template&rdquo; of your component. You&rsquo;ll notice that when using slots instead of props, your page with show the content inside the slot even before Vue has finished loading. This is great because it can help reduce <a href="https://en.wikipedia.org/wiki/Flash_of_unstyled_content">flashes of unstyled content</a> that make your app look a little janky.</p>
+<p>Although <a href="https://developers.google.com/search/docs/guides/javascript-seo-basics">browers will run your javascript</a>, a by-product of using slots is that you could improve the SEO of your site, as you are trying to fill the page with the most HTML possible.</p>
+<p>Mostly slots are good for making more flexible components. The performance benefit is super helpful though.</p>
+<h2 id="refactored-to-slots">Refactored to Slots</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#6272a4">&lt;!--
+</span><span style="color:#6272a4">  All we need to do is cut that inside layout and replace it with a &#34;default&#34; slot
+</span><span style="color:#6272a4"> --&gt;</span>
+&lt;<span style="color:#ff79c6">template</span>&gt;
+  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-list&#34;</span>&gt;
+    &lt;<span style="color:#ff79c6">ul</span>&gt;
+      <span style="color:#6272a4">&lt;!-- this is a default slot with a binding to the `buttonHandler` function --&gt;</span>
+      &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">:buttonHandler</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;buttonHandler&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
+    &lt;/<span style="color:#ff79c6">ul</span>&gt;
+  &lt;/<span style="color:#ff79c6">div</span>&gt;
+&lt;/<span style="color:#ff79c6">template</span>&gt;
+
+&lt;<span style="color:#ff79c6">script</span>&gt;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
+  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;ProfileList&#39;</span>,
+  methods<span style="color:#ff79c6">:</span> {
+    buttonHandler(user) {
+      <span style="color:#ff79c6">this</span>.$emit(<span style="color:#f1fa8c">&#39;profile-change&#39;</span>, user);
+    }
+  }
+};
+&lt;/<span style="color:#ff79c6">script</span>&gt;
+</code></pre></div><p>You can now see how we completely remove our inner template and props and replace it with the <code>slot</code> tag. We don&rsquo;t need the props now since we won&rsquo;t be passing in any data. We are going to be passing in the entire block of rendered HTML on our server, and when Vue loads on the client side, the functionality will be hooked up!</p>
+<p>This is how you might use this component in your server-rendered templates:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-slot</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;slotProps&#34;</span>&gt;
+  @foreach ($users as $user)
+    &lt;<span style="color:#ff79c6">li</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-card&#34;</span> <span style="color:#50fa7b">key</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.id }}&#34;</span>&gt;
+      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-details&#34;</span>&gt;
+        &lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.profile_image }}&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.username }} profile image&#34;</span>&gt;
+        &lt;<span style="color:#ff79c6">h4</span>&gt;{{ $user.username }}&lt;/<span style="color:#ff79c6">h4</span>&gt;
+      &lt;/<span style="color:#ff79c6">div</span>&gt;
+      <span style="color:#6272a4">&lt;!-- we have a button event here --&gt;</span>
+      &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;slotProps.buttonHandler(@json($user))&#39;</span>&gt;View&lt;/<span style="color:#ff79c6">button</span>&gt;
+    &lt;/<span style="color:#ff79c6">li</span>&gt;
+  @endforeach
+&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
+</code></pre></div><p>Now if you view the source of your page in your browser, you will see that the HTML looks more like Vue is <em>decorating</em> your HTML instead of generating it.</p>
+<h4 id="another-example">Another Example</h4>
+<p>Let&rsquo;s create a modal with slots!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">template</span>&gt;
+  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-wrapper&#34;</span>&gt;
+    &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;toggle&#34;</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;openLabel&#34;</span>&gt;&lt;/<span style="color:#ff79c6">button</span>&gt;
+    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-overlay&#34;</span> <span style="color:#50fa7b">v-if</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;open&#34;</span>&gt;
+      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-header&#34;</span>&gt;
+        &lt;<span style="color:#ff79c6">h3</span>&gt;
+          <span style="color:#6272a4">&lt;!-- here is a named slot, we can force content right into this spot as long as we use named slots --&gt;</span>
+          &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;header&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
+        &lt;/<span style="color:#ff79c6">h3</span>&gt;
+      &lt;/<span style="color:#ff79c6">div</span>&gt;
+      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-body&#34;</span>&gt;
+        &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;body&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
+      &lt;/<span style="color:#ff79c6">div</span>&gt;
+      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-footer&#34;</span>&gt;
+        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;toggle&#34;</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;closeLabel&#34;</span>&gt;&lt;/<span style="color:#ff79c6">button</span>&gt;
+      &lt;/<span style="color:#ff79c6">div</span>&gt;
+    &lt;/<span style="color:#ff79c6">div</span>&gt;
+  &lt;/<span style="color:#ff79c6">div</span>&gt;
+&lt;/<span style="color:#ff79c6">template</span>&gt;
+
+&lt;<span style="color:#ff79c6">script</span>&gt;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
+  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Modal&#34;</span>,
+  props<span style="color:#ff79c6">:</span> {
+    openLabel<span style="color:#ff79c6">:</span> {
+      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">String</span>,
+      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+      <span style="color:#ff79c6">default</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Open&#34;</span>
+    },
+    closeLabel<span style="color:#ff79c6">:</span> {
+      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">String</span>,
+      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+      <span style="color:#ff79c6">default</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Close&#34;</span>
+    }
+  },
+  data() {
+    <span style="color:#ff79c6">return</span> {
+      open<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
+    };
+  },
+  methods<span style="color:#ff79c6">:</span> {
+    toggle() {
+      <span style="color:#ff79c6">this</span>.open <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">!</span><span style="color:#ff79c6">this</span>.open;
+    }
+  }
+};
+&lt;/<span style="color:#ff79c6">script</span>&gt;
+</code></pre></div><p>Here we have a component that has 2 slots! One for the header of the modal and another for the body. We are still using props though. We don&rsquo;t want to overwrite the main button that opens the modal, or the <code>modal-footer</code> content that includes our button and the handler.</p>
+<p>Now we can use this component as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#6272a4">&lt;!-- set our custom labels --&gt;</span>
+&lt;<span style="color:#ff79c6">modal</span> <span style="color:#50fa7b">openLabel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;View Details&#34;</span> <span style="color:#50fa7b">closeLabel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Dismiss&#34;</span>&gt;
+  <span style="color:#6272a4">&lt;!-- pass in our title --&gt;</span>
+  &lt;<span style="color:#ff79c6">template</span> <span style="color:#50fa7b">v-slot:header</span>&gt;Details&lt;/<span style="color:#ff79c6">template</span>&gt;
+  <span style="color:#6272a4">&lt;!-- pass in our body content that will be displayed --&gt;</span>
+  &lt;<span style="color:#ff79c6">template</span> <span style="color:#50fa7b">v-slot:body</span>&gt;
+    &lt;<span style="color:#ff79c6">h3</span>&gt;This is my title&lt;/<span style="color:#ff79c6">h3</span>&gt;
+    &lt;<span style="color:#ff79c6">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare ipsum ligula, id pharetra neque lobortis nec. Mauris varius, felis eget interdum ultricies, libero nulla varius tortor, nec semper tortor leo id nisl. Fusce a est augue. In hac habitasse platea dictumst. Sed pretium egestas vestibulum. Nunc pellentesque aliquam justo, eu rutrum nunc vehicula ac. Nunc feugiat sed ipsum in dapibus. Quisque finibus, dolor at consequat.&lt;/<span style="color:#ff79c6">p</span>&gt;
+  &lt;/<span style="color:#ff79c6">template</span>&gt;
+&lt;/<span style="color:#ff79c6">modal</span>&gt;
+</code></pre></div><p>You can actually conditionally show slots as well. Let&rsquo;s add that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="font-weight:bold">@@ -2,7 +2,7 @@
+</span><span style="font-weight:bold"></span>   &lt;div class=&#34;modal-wrapper&#34;&gt;
+     &lt;button type=&#34;button&#34; @click.prevent=&#34;toggle&#34; v-text=&#34;openLabel&#34;&gt;&lt;/button&gt;
+     &lt;div class=&#34;modal-overlay&#34; v-if=&#34;open&#34;&gt;
+<span style="color:#8b080b">-      &lt;div class=&#34;modal-header&#34;&gt;
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+      &lt;div class=&#34;modal-header&#34; v-if=&#34;hasHeaderSlot&#34;&gt;
+</span><span style="font-weight:bold"></span>         &lt;h3&gt;
+           &lt;!-- here is a named slot, we can force content right into this spot as long as we use named slots --&gt;
+           &lt;slot name=&#34;header&#34;&gt;&lt;/slot&gt;
+<span style="font-weight:bold">@@ -38,6 +38,11 @@
+</span><span style="font-weight:bold"></span>       open: false
+     };
+   },
+<span style="font-weight:bold">+  computed: {
+</span><span style="font-weight:bold">+    hasHeaderSlot() {
+</span><span style="font-weight:bold">+      return !this.$slots[&#34;header&#34;];
+</span><span style="font-weight:bold">+    }
+</span><span style="font-weight:bold">+  },
+</span><span style="font-weight:bold"></span>   methods: {
+     toggle() {
+       this.open = !this.open;
+</code></pre></div><p>What we&rsquo;ve done here is hide a slot (the <code>header</code> one) if the slot is not filled in. This allows us to use the <code>body</code> slot even more effectively! We can provide a full content replacement if we want. Nice!</p>
+<h4 id="accordion-example">Accordion Example</h4>
+<p>Here are a couple more example but done in the Codesandbox editor. They have code comments as well as some more organization:</p>
+<p><strong>Accordion</strong></p>
+<iframe
+   src="https://codesandbox.io/embed/slots-accordion-32c18?fontsize=14&hidenavigation=1&theme=dark"
+   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+   title="Slots - Accordion"
+   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+ ></iframe>
+<p><strong>Image Picker</strong></p>
+<iframe
+   src="https://codesandbox.io/embed/slots-image-picker-3yvlh?fontsize=14&hidenavigation=1&initialpath=%2Fsrc%2Fcomponents%2FImagePicker.vue&theme=dark"
+   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden; margin-bottom: 1rem"
+   title="Slots - Image Picker"
+   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
+   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+ ></iframe>
+<h2 id="in-conclusion">In Conclusion</h2>
+<p>So next time you find yourself making tons of props or duplicating component just because they have slightly different templates, just reach for slots!</p>
+</div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?384-128');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <pattern id="background-image" patternUnits="userSpaceOnUse" width="64" height="64">
+      <!-- the width and height of the image should match the pattern, in most cases -->
+      <image xlink:href="data:image/gif;base64,R0lGODdhQABAAOMAAMzMzJaWlr6+vqOjo8XFxZycnLGxsbe3t6qqqgAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAQABAAAAEpBDISau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqPyKRyyRwSQk+bYDA5IDbT6rVGKAgmhSim+5WEbYbBQWItTBDwLSC9BrRthcHgGnaD/WZ6fF1cAQBdBAEFAXUAcBOJh2GKjDUBBAdUkpAFZxKXmRKENQedZaMAAwZpVaaigE2xsrO0tba3uLm6u7y9vr/AwcLDxMXGxxURADs=" x="0" y="0" width="64" height="64" id="svg-background" />
+    </pattern>
+  </defs>
+  <g>
+    <ellipse ry="32" rx="32" id="svg_1" cy="32" cx="32" fill="url(#background-image)"/>
+  </g>
+</svg>

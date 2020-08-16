@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | Tips For Using SVGs</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="https://ohdoylerules.com/web/tips-for-using-svgs/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/web/tips-for-using-svgs/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="Tips For Using SVGs">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Tips For Using SVGs">
+    <meta property="article:author" content="James Doyle" />
+    <meta property="article:section" content="Web" />
+    <meta property="article:tag" content="svg, image, pattern, base64, embed, object, safari, issues, viewbox, requestAnimationFrame, mask, animations, transitions" />
+    <meta itemprop="keywords" content="svg, image, pattern, base64, embed, object, safari, issues, viewbox, requestAnimationFrame, mask, animations, transitions">
+    <meta property="og:keywords" content="svg, image, pattern, base64, embed, object, safari, issues, viewbox, requestAnimationFrame, mask, animations, transitions">
+    
+    
+      <meta name="description" content="I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.">
+      <meta itemprop="description" content="I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.">
+      <meta property="og:description" content="I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.">
+      <meta name="twitter:description" content="I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.">
+    
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/web/tips-for-using-svgs/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">Tips For Using SVGs</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <div class="post-info">
+        
+        <span class="post-date" itemprop="datePublished">🕒 May 17, 2014</span>
+        
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <span class="post-category" itemprop="genre about">🏷 Web</span>
+        
+      </div>
+      <div itemprop="ArticleBody text" class="main-content"><p>I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.</p>
+<h3 id="use-viewbox">Use Viewbox</h3>
+<p>This one is a little gem. The <code>viewBox</code> property allows you to set the dimensions of the image but it will also allow you can have responsive SVGs.</p>
+<p>They maintain their ratios, but they will scale to 100% width and height. If you have an SVG that is 64 by 64, the syntax for the viewBox property would be <code>viewBox=&quot;0 0 64 64&quot;</code>. Pretty simple. Just make sure you remove the width and height on the base SVG tag when using viewBox.</p>
+<p>If you open an SVG in a new window, like opening a new file in the browser, you will notice that when zooming in, if <code>viewBox</code> property set properly, the image stays the same size. It won&rsquo;t zoom.</p>
+<h3 id="use-base64-images">Use base64 Images</h3>
+<p>So there are a couple ways you can embed an image in an SVG. I have found that the best way is to use a <a href="http://b1nary.ch/base64/" title="embed base64 - easy, client side base64 encoder">base 64 encoded string</a> as the image href.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#ff79c6">&lt;svg</span> <span style="color:#50fa7b">viewBox=</span><span style="color:#f1fa8c">&#34;0 0 64 64&#34;</span> <span style="color:#50fa7b">xmlns=</span><span style="color:#f1fa8c">&#34;http://www.w3.org/2000/svg&#34;</span> <span style="color:#50fa7b">xmlns:svg=</span><span style="color:#f1fa8c">&#34;http://www.w3.org/2000/svg&#34;</span> <span style="color:#50fa7b">xmlns:xlink=</span><span style="color:#f1fa8c">&#34;http://www.w3.org/1999/xlink&#34;</span><span style="color:#ff79c6">&gt;</span>
+  <span style="color:#ff79c6">&lt;defs&gt;</span>
+    <span style="color:#ff79c6">&lt;pattern</span> <span style="color:#50fa7b">id=</span><span style="color:#f1fa8c">&#34;background-image&#34;</span> <span style="color:#50fa7b">patternUnits=</span><span style="color:#f1fa8c">&#34;userSpaceOnUse&#34;</span> <span style="color:#50fa7b">width=</span><span style="color:#f1fa8c">&#34;64&#34;</span> <span style="color:#50fa7b">height=</span><span style="color:#f1fa8c">&#34;64&#34;</span><span style="color:#ff79c6">&gt;</span>
+      <span style="color:#6272a4">&lt;!-- the width and height of the image should match the pattern, in most cases --&gt;</span>
+      <span style="color:#ff79c6">&lt;image</span> <span style="color:#50fa7b">xlink:href=</span><span style="color:#f1fa8c">&#34;data:image/gif;base64,R0lGODdhQABAAOMAAMzMzJaWlr6+vqOjo8XFxZycnLGxsbe3t6qqqgAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAQABAAAAEpBDISau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqPyKRyyRwSQk+bYDA5IDbT6rVGKAgmhSim+5WEbYbBQWItTBDwLSC9BrRthcHgGnaD/WZ6fF1cAQBdBAEFAXUAcBOJh2GKjDUBBAdUkpAFZxKXmRKENQedZaMAAwZpVaaigE2xsrO0tba3uLm6u7y9vr/AwcLDxMXGxxURADs=&#34;</span> <span style="color:#50fa7b">x=</span><span style="color:#f1fa8c">&#34;0&#34;</span> <span style="color:#50fa7b">y=</span><span style="color:#f1fa8c">&#34;0&#34;</span> <span style="color:#50fa7b">width=</span><span style="color:#f1fa8c">&#34;64&#34;</span> <span style="color:#50fa7b">height=</span><span style="color:#f1fa8c">&#34;64&#34;</span> <span style="color:#50fa7b">id=</span><span style="color:#f1fa8c">&#34;svg-background&#34;</span> <span style="color:#ff79c6">/&gt;</span>
+    <span style="color:#ff79c6">&lt;/pattern&gt;</span>
+  <span style="color:#ff79c6">&lt;/defs&gt;</span>
+  <span style="color:#ff79c6">&lt;g&gt;</span>
+    <span style="color:#ff79c6">&lt;ellipse</span> <span style="color:#50fa7b">ry=</span><span style="color:#f1fa8c">&#34;32&#34;</span> <span style="color:#50fa7b">rx=</span><span style="color:#f1fa8c">&#34;32&#34;</span> <span style="color:#50fa7b">id=</span><span style="color:#f1fa8c">&#34;svg_1&#34;</span> <span style="color:#50fa7b">cy=</span><span style="color:#f1fa8c">&#34;32&#34;</span> <span style="color:#50fa7b">cx=</span><span style="color:#f1fa8c">&#34;32&#34;</span> <span style="color:#50fa7b">fill=</span><span style="color:#f1fa8c">&#34;url(#background-image)&#34;</span><span style="color:#ff79c6">/&gt;</span>
+  <span style="color:#ff79c6">&lt;/g&gt;</span>
+<span style="color:#ff79c6">&lt;/svg&gt;</span>
+</code></pre></div><p>This is what the <a href="/images/placeholder.svg">outputted image</a> would look like.</p>
+<p><em>I&rsquo;m using a very small gif so that the base64 string isn&rsquo;t giant</em>.</p>
+<p>You can also see <code>viewBox</code> in action (try zooming). The reason I use this technique, is because it cuts down on requests but also cuts down on file size (for the most part). When you need to have multiple images inside the SVG, this works very well. Instead of having multiple requests (SVG, image1.jpg, image2.jpg, etc.) you get one request.</p>
+<h4 id="note">Note</h4>
+<hr>
+<p>For some reason, Safari does not like the following scenario: <strong>an SVG, in an img tag, that has a base64 image in it</strong>. I solved this problem, and this is how I did it.</p>
+<p>I changed this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;img/fun.svg&#34;</span> <span style="color:#50fa7b">height</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;989&#34;</span> <span style="color:#50fa7b">width</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;989&#34;</span>&gt;
+</code></pre></div><p>To this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">object</span> <span style="color:#50fa7b">height</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;989px&#34;</span> <span style="color:#50fa7b">width</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;989px&#34;</span> <span style="color:#50fa7b">data</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;img/fun.svg&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;image/svg+xml&#34;</span>&gt;&lt;/<span style="color:#ff79c6">object</span>&gt;
+</code></pre></div><p>Then it worked. In an <code>img</code> tag, the image worked fine in all browsers, yes even IE (checked 11 and 10), but in Safari (7.0.3) it would not render. If I opened the SVG directly in a new tab, it worked fine. So there was some sort of reason that it would not render inside of an <code>img</code> tag. Annoying.</p>
+<hr>
+<h3 id="be-careful-with-masks">Be Careful With Masks</h3>
+<p>Masking in SVG seems to be a magical mistress. I find sometimes it works wonderfully, and sometimes it is just wrong. Firefox is a pain with this one.</p>
+<h3 id="simple-is-better">Simple Is Better</h3>
+<p>Always check your files to make sure there aren&rsquo;t any hidden layers. Firefox, again, will punish you for this. I find a lot of SVG documents will have some strange layers that are just empty paths or unfilled objects. This usually is the product of using live trace.</p>
+<h3 id="text-to-outlines">Text To Outlines</h3>
+<p>Always outline your text. Enough said. Without it, the person may see a font that you didn&rsquo;t intend. I would only use a system font if I had to make sure it stayed as text. A case for this might be dynamically creating SVGs on the fly or something.</p>
+<h3 id="use-css-fo">Use CSS Fo</h3>
+</div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?384-128');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+

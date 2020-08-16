@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | Nuxt Firebase Starter</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="https://ohdoylerules.com/web/nuxt-firebase-starter/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/web/nuxt-firebase-starter/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="Nuxt Firebase Starter">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Nuxt Firebase Starter">
+    <meta property="article:author" content="James Doyle" />
+    <meta property="article:section" content="Web" />
+    <meta property="article:tag" content="firebase, nuxt, vue, auth, serverless, single page app, spa" />
+    <meta itemprop="keywords" content="firebase, nuxt, vue, auth, serverless, single page app, spa">
+    <meta property="og:keywords" content="firebase, nuxt, vue, auth, serverless, single page app, spa">
+    
+    
+      <meta name="description" content="An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles">
+      <meta itemprop="description" content="An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles">
+      <meta property="og:description" content="An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles">
+      <meta name="twitter:description" content="An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles">
+    
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/web/nuxt-firebase-starter/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">Nuxt Firebase Starter</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <div class="post-info">
+        
+        <span class="post-date" itemprop="datePublished">🕒 December 21, 2017</span>
+        
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <span class="post-category" itemprop="genre about">🏷 Web</span>
+        
+      </div>
+      <div itemprop="ArticleBody text" class="main-content"><p>Over the past few weeks, I have been working on <a href="https://github.com/james2doyle/nuxt-firebase-auth">a boilerplate/starting template for using the Nuxt.js framework with Firebase</a>.</p>
+<p>I plan to use this boilerplate for easily creating apps that require authentication, real-time feedback from the database (chats, threads, account balances, etc.), and proper modern support for the new PWA (progressive web app) conventions (service worker, offline, code-splitting, etc.) without having to worry too much about laying the ground work each time.</p>
+<p>If you already know about Nuxt and Firebase, I suggest just checking out the project and playing around with it. By default, I have setup the Nuxt PWA module, social login support for Google and Github, and also setup a database convention called “accounts” where users manage their public profile inside the application.</p>
+<p>If you are unfamiliar with the tools, keep reading!</p>
+<hr>
+<h3 id="nuxt">Nuxt</h3>
+<p>As you may be able to tell from this post and some of the other posts on this site, I am also a <a href="https://vuejs.org/">Vue.js</a> fan. I have been using it since before version 1 was released.</p>
+<p>About four months ago, I started using a relatively new framework created on top of Vue.js (and stolen from the <a href="https://github.com/zeit/next.js/">Next.js React project</a>) called <a href="https://nuxtjs.org/">Nuxt.js</a>.</p>
+<p>Essentially, Nuxt (and Next) setup conventions for routing pages, creating components, adding “stores” (flux, redux, etc.) based on a directory setup.</p>
+<p>So, for example (these are taken from the Nuxt documentation), you have a structure as follows:</p>
+<pre><code>pages/
+--| _slug/
+-----| comments.vue
+-----| index.vue
+--| users/
+-----| _id.vue
+--| index.vue
+</code></pre><p>And this will generate the following routes automatically:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">router: {
+  routes: [
+    {
+      name: &#39;index&#39;,
+      path: &#39;/&#39;,
+      component: &#39;pages/index.vue&#39;
+    },
+    {
+      name: &#39;users-id&#39;,
+      path: &#39;/users/:id?&#39;,
+      component: &#39;pages/users/_id.vue&#39;
+    },
+    {
+      name: &#39;slug&#39;,
+      path: &#39;/:slug&#39;,
+      component: &#39;pages/_slug/index.vue&#39;
+    },
+    {
+      name: &#39;slug-comments&#39;,
+      path: &#39;/:slug/comments&#39;,
+      component: &#39;pages/_slug/comments.vue&#39;
+    }
+  ]
+}
+</code></pre></div><p>You can then call <code>this.$route.params.slug</code>  (for slug-comments) or <code>this.$route.params.id</code> (for users-id) inside the components or pages that are on that route.</p>
+<p>Pretty slick right?</p>
+<p>So Nuxt is cool. It lets me quickly create an SPA (single-page app) without worrying about setting up an elaborate route object or worrying about how to organize my projects folders and logic. You just toss files in folders, and everything pretty much works.</p>
+<p>Some people <strong>hate this</strong> but I find the structure liberating. I plan to use that additional time/energy to focus on building my app and not organizing configs or fiddling with route logic.</p>
+<p>Now onto the Firebase portion of the project:</p>
+<hr>
+<h3 id="firebase">Firebase</h3>
+<p>If you have some experience with <a href="https://firebase.google.com/">Firebase</a> you probably know that it is an excellent service offering some nice features for dealing with &ldquo;real-time&rdquo; data as well as some other features like storage, push notifications, serverless functions, and authentication. The best part is that it is usually free for most small projects as they don&rsquo;t use enough resources to qualify for the paid tiers of service.</p>
+<p>When I first started using Firebase, I didn&rsquo;t like it. The concept of <code>snapshots</code> and paths was confusing for someone coming from a key-value store or a more traditional relational database. It also lacks higher order sorting and querying. For example, you can query for ranges, but you can&rsquo;t query for <code>LIKE</code> or &ldquo;matches/patterns”.</p>
+<p>Queries like that can be limiting, but once you shift your mentality to something more like reducing and filtering, these issues disappear. You also need to be conscious about how you structure your database, <em>but I digress</em>.</p>
+<p>As I got more comfortable with it, I began to see how powerful and easy it is to build things like chats, threads/commenting systems, atomic counters (“like” systems, ratings, etc.), and even used it to do browser push notifications. I am using it right now to build an API rate limiter!</p>
+<hr>
+<h3 id="combining-forces">Combining Forces!</h3>
+<p>Using Nuxt and Firebase together has been easy. I was able to create a nice login flow (with support for Google and Github OAuth!) within about a day.</p>
+<p>I also added support for this convention called “accounts”. When a new user signs up, we create an account on the Firebase database that is read-write for that user. This object contains their display name and profile image path.</p>
+<p>Since we have a profile image (either pulled from the social login or assigned a default), I figured; <em>why not add support for uploading a new profile image to the Firebase storage?</em></p>
+<p>So I did! And now you can easily manage a mini-profile on the app without any extra configuration. It is there by default:</p>
+<div class="center">
+  <img src="/images/nuxt-firebase-account-preview.gif" alt="nuxt firebase account preview">
+  <p><small>Nuxt Firebase Account Preview</small></p>
+</div>
+<p>As you can see from the animation above, super simple interface with live updating thanks to the bindings from our application store to the Firebase database!</p>
+<p>Again, you can check out the project <a href="https://github.com/james2doyle/nuxt-firebase-auth">at the repo on Github</a>.</p>
+</div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?384-128');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+

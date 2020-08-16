@@ -1,7 +1,3 @@
-# Hugo default output directory
-/public
-!/public/CNAME
-
 ## OS Files
 # Windows
 Thumbs.db

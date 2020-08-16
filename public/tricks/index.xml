@@ -1,0 +1,288 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tricks on James Doyle</title>
+    <link>https://ohdoylerules.com/tricks/</link>
+    <description>Recent content in Tricks on James Doyle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
+    <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
+    <copyright>This work is licensed under The MIT License (MIT).</copyright>
+    <lastBuildDate>Sat, 08 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ohdoylerules.com/tricks/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Handle spaces and no-spaces in MySQL where-like clauses</title>
+      <link>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</link>
+      <pubDate>Sat, 08 Jul 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</guid>
+      <description>&lt;p&gt;Have you ever been writing a search for MySQL and had an issue where the search wouldn&amp;rsquo;t handle spaces properly?&lt;/p&gt;
+&lt;p&gt;I was writing a search for a &lt;code&gt;users&lt;/code&gt; table and wanted to find a user by their first name or last name or a combination of both.&lt;/p&gt;
+&lt;p&gt;I started with a query like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;users&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;LOWER&lt;/span&gt;(&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;users&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;.&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;first_name&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;)
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;LOWER&lt;/span&gt;(:searchTerm)
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;OR&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;LOWER&lt;/span&gt;(&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;users&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;.&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;last_name&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;)
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;LOWER&lt;/span&gt;(:searchTerm)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is the list for the matches, given that there is a user with the &lt;code&gt;first_name&lt;/code&gt; of &amp;ldquo;James&amp;rdquo; and &lt;code&gt;last_name&lt;/code&gt; of &amp;ldquo;Doyle&amp;rdquo;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;%james%&amp;rdquo; - &lt;strong&gt;match&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;%doyle%&amp;rdquo; - &lt;strong&gt;match&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;%james d%&amp;rdquo; - &lt;em&gt;no match&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;%j doyle%&amp;rdquo; - &lt;em&gt;no match&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;%james doyle%&amp;rdquo; - &lt;em&gt;no match&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The issue comes in when you add spaces into the search query. I didn&amp;rsquo;t want to split the word into an array and do a search for each word. That would require querying the database multiple times. And I don&amp;rsquo;t want to try to do &lt;code&gt;RLIKE&lt;/code&gt; and all these string hacks to get this to match more accurately.&lt;/p&gt;
+&lt;p&gt;Well, I found this trick where you can create fake columns using the &lt;code&gt;CONCAT&lt;/code&gt; and then replace any space character with &lt;code&gt;%&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So if I queried like this: &lt;code&gt;%james doyle%&lt;/code&gt;, that will actually become &lt;code&gt;%james%doyle%&lt;/code&gt; when it gets to the actual SQL WHERE query.&lt;/p&gt;
+&lt;p&gt;This allows you to &lt;em&gt;get a better match more often&lt;/em&gt; if the user types in more content in a query with a space.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;users&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;WHERE&lt;/span&gt;
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;LOWER&lt;/span&gt;(CONCAT(&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;users&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;.&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;first_name&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;users&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;.&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;last_name&lt;span style=&#34;color:#ff79c6&#34;&gt;`&lt;/span&gt;))
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;LOWER&lt;/span&gt;(&lt;span style=&#34;color:#ff79c6&#34;&gt;REPLACE&lt;/span&gt;(:searchTerm, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;%&amp;#34;&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is a list of terms that will be matched in this query:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;%james%&amp;rdquo; - &lt;strong&gt;match&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;%doyle%&amp;rdquo; - &lt;strong&gt;match&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;%james d%&amp;rdquo; - &lt;strong&gt;match&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;%j doyle%&amp;rdquo; (becomes &amp;ldquo;%j%doyle%&amp;rdquo; due to &lt;code&gt;REPLACE&lt;/code&gt;) - &lt;strong&gt;match&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;%james doyle%&amp;rdquo; (becomes &amp;ldquo;%james%doyle%&amp;rdquo; due to &lt;code&gt;REPLACE&lt;/code&gt;) - &lt;strong&gt;match&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sidenote&#34;&gt;Sidenote&lt;/h4&gt;
+&lt;p&gt;The only downside of this query is that you may get more matches if the string you are searching for is too small. Like 2 - 3 characters. At that point though, you should notify the user that they should enter in more characters to get more accurate results.&lt;/p&gt;
+&lt;p&gt;Another great thing is that if you added a &lt;code&gt;middle_name&lt;/code&gt; column, it will handle searches where someone is searching for a known first and middle name as well. It can still match as the &lt;code&gt;CONCAT&lt;/code&gt; builds a nice string to match against.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Conditional Vue.js Mixins</title>
+      <link>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</guid>
+      <description>&lt;p&gt;When building more traditional Vue.js applications, I tend to use mixins a lot. It helps split up code, speparate concerns, and can allow for some cool tricks. One that i keep using is conditionally requiring a mixin based on the details of the page.&lt;/p&gt;
+&lt;p&gt;Here is an example. The first module is a function that, like &lt;code&gt;require&lt;/code&gt;, will load a file into the script it is being called from. The thing is, this &lt;code&gt;require&lt;/code&gt; function also takes a new parameter for checking if the page URL contains a particular string or &lt;em&gt;array of strings&lt;/em&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;conditionalrequirejs&#34;&gt;conditionalRequire.js&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// loads mixins based on the current URL
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;module.exports &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(name, filename) {
+  &lt;span style=&#34;color:#6272a4&#34;&gt;// name can be an array or single string value
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  name &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#ff79c6&#34;&gt;typeof&lt;/span&gt;(name) &lt;span style=&#34;color:#ff79c6&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;object&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;?&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;Array&lt;/span&gt;.from(name) &lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [name];
+  &lt;span style=&#34;color:#6272a4&#34;&gt;// are there any matches?
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; check &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; name.filter((n) =&amp;gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;window&lt;/span&gt;.location.pathname.includes(n)).length;
+
+  &lt;span style=&#34;color:#6272a4&#34;&gt;// return a no-op function for better compatibility with traditional require
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; check &lt;span style=&#34;color:#ff79c6&#34;&gt;?&lt;/span&gt; require(filename) &lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;() { &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; {}; };
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The next code block below would be for you main app file. This would be the file included in all of the footers on your site. Some things to assume is these modules exist in a folder called &lt;code&gt;mixins/&lt;/code&gt; and that the source files in there are returning a valid object that works as a mixin.&lt;/p&gt;
+&lt;h4 id=&#34;indexjs&#34;&gt;index.js&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;// include the module from the above snippet
+const conditionalRequire = require(&#39;conditionalRequire&#39;);
+
+// create our Vue app
+const app = new Vue({
+  el: &amp;quot;#app&amp;quot;,
+  data: {
+    // ...
+  },
+  mixins: [
+    require(&#39;mixins/global&#39;), // a regular module - loaded always
+    require(&#39;mixins/navigation&#39;), // a regular module - loaded always
+    conditionalRequire(&#39;home&#39;, &#39;mixins/home&#39;), // only load when on the &amp;quot;/home&amp;quot; page
+    conditionalRequire(&#39;profile&#39;, &#39;mixins/profile&#39;), // only load when on the &amp;quot;/profile&amp;quot; page
+    conditionalRequire([&#39;about&#39;, &#39;contact&#39;], &#39;mixins/forms&#39;) // load on &amp;quot;/about&amp;quot; and &amp;quot;/contact&amp;quot;
+  ]
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So you can see this can be a handy trick. You don&amp;rsquo;t load code on pages you don&amp;rsquo;t need it. There are ways to do this using components and &lt;code&gt;v-if&lt;/code&gt; but it is a lot &amp;ldquo;softer&amp;rdquo; than simply never running/including code that you know is not needed.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To Use Template Strings As Modules</title>
+      <link>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</guid>
+      <description>&lt;p&gt;I had a project the other day that needed to make some HTML strings based on some other data in my code.&lt;/p&gt;
+&lt;p&gt;This is a standard approach when you need to write to the &lt;code&gt;innerHTML&lt;/code&gt; of an element, or if you want to populate a string before writing it to the DOM or some HTML attribute.&lt;/p&gt;
+&lt;p&gt;I was trying to find a nice way to split up my JS - that had a bunch of functions in it - and my template string which had a bunch of parts that needed to be filled/replaced while being looped over.&lt;/p&gt;
+&lt;p&gt;Another thing I wanted to accomplish is to be able to find the string in my code quickly. Just in case I needed to locate it and make some more changes to it in the future. Previously, the code was sitting is some variable or some function like &lt;code&gt;buildElementTemplate&lt;/code&gt; or something. But that still seemed a little gross for me.&lt;/p&gt;
+&lt;p&gt;Well, I found a nice way to do all of these things. By sticking the string code in a module, and returning a function, I can pass the data in as I needed. Plus, it was easy to use &lt;code&gt;require&lt;/code&gt; whenever I needed that template.&lt;/p&gt;
+&lt;h4 id=&#34;templatejs&#34;&gt;template.js&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;module.exports &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(name, age) {
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;`Hello &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;${&lt;/span&gt;name&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;! You look good for &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;${&lt;/span&gt;age&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;!`&lt;/span&gt;;
+}
+
+&lt;span style=&#34;color:#6272a4&#34;&gt;// or as an object
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;module.exports &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(data) {
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;`Hello &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;${&lt;/span&gt;data.name&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;! You look good for &lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;${&lt;/span&gt;data.age&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;!`&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;applicationjs&#34;&gt;application.js&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// myTemplate will be the compiled string
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myTemplate &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; require(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;./template&amp;#39;&lt;/span&gt;)(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Billy&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#bd93f9&#34;&gt;85&lt;/span&gt;);
+
+&lt;span style=&#34;color:#6272a4&#34;&gt;// object style
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myTemplate &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; require(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;./template&amp;#39;&lt;/span&gt;)({ name&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Billy&amp;#39;&lt;/span&gt;, age&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;85&lt;/span&gt;});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There we go! A nice way to split up some template logic and some app logic. You could probably even return an object of methods that would compile different strings for your app - think translations or different personal messages for the user.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To Use LC_MONETARY In Laravel</title>
+      <link>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</link>
+      <pubDate>Fri, 24 Feb 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</guid>
+      <description>&lt;p&gt;If you are using the awesome &lt;code&gt;money_format&lt;/code&gt; function in PHP, you may have noticed a difference between servers or environments regarding the output.&lt;/p&gt;
+&lt;p&gt;Sometimes you do get the trailing zeros. Sometimes not.&lt;/p&gt;
+&lt;p&gt;If you are ever trying to figure out what is going on here, it usually has to do with the current locale of the application. In Laravel, you can make this change in the &lt;code&gt;AppServiceProvider&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        // set the money locale for money_format to work nicely
+        setlocale(LC_MONETARY, &amp;#39;en_US.UTF-8&amp;#39;);
+    }
+
+    // ... rest of the provider
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And that should be it. Now when using &lt;code&gt;money_format&lt;/code&gt;, the output should be normalized.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OpenSSL Passwd Without Prompt</title>
+      <link>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</link>
+      <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</guid>
+      <description>&lt;p&gt;Have you ever wanted to generate a password using the &lt;code&gt;openssl passwd&lt;/code&gt; command, but didn&amp;rsquo;t want the prompt?&lt;/p&gt;
+&lt;p&gt;I encountered this problem when I was writing &lt;a href=&#34;https://github.com/invokemedia/ansible-basicauth-nginx&#34;&gt;an Ansible role for setting up Nginx basic auth&lt;/a&gt;. I didn&amp;rsquo;t want the prompt since I had no way for ansible to handle that gracefully. After some Googling, and some &lt;code&gt;man&lt;/code&gt; page grepping, I found the answer.&lt;/p&gt;
+&lt;p&gt;You can generate a password without a prompt by piping text into &lt;code&gt;openssl&lt;/code&gt; and passing a new flag. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;password&amp;quot; | openssl passwd -apr1 -stdin
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will echo to &lt;code&gt;stdout&lt;/code&gt;. This way you can write a script or something instead of having to use the prompt to type in the password.&lt;/p&gt;
+&lt;p&gt;In my case of generating a basic auth password, I had to append the output to the &lt;code&gt;/etc/nginx/.htpasswd&lt;/code&gt; file. That was done using the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;password&amp;quot; | openssl passwd -apr1 -stdin &amp;gt;&amp;gt; /etc/nginx/.htpasswd
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There ya go. It&amp;rsquo;s that easy. I have actually used this trick a couple times for generating passwords and piping to &lt;code&gt;pbcopy&lt;/code&gt; (the clipboard) on my mac.&lt;/p&gt;
+&lt;p&gt;Pretty useful stuff!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Disallowed Characters In URI</title>
+      <link>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</link>
+      <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</guid>
+      <description>&lt;p&gt;How to fix &amp;ldquo;The URI you submitted has disallowed characters&amp;rdquo; error.&lt;/p&gt;
+&lt;p&gt;Does this screenshot look familiar?&lt;/p&gt;
+&lt;div class=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/error-400-disallowed-characters.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;codeigniter 400 error for disallowed characters&#34; src=&#34;https://ohdoylerules.com/images/error-400-disallowed-characters.png&#34; &gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Well, it has been killing me for the last 2 hours. I have encountered this error before, but I never realized what caused it, or how it was fixed. I would just try random stuff, entering in different content, moving different functions. Eventually it would go away&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;symptoms&#34;&gt;Symptoms&lt;/h3&gt;
+&lt;p&gt;In this situation, whenever I would click on a particular link I got the error. I copied and pasted the URL from the browser into Sublime Text. It looked like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://localhost:8080/website/page%E2%80%8B
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;What the heck? I never added those characters. They never showed in the browser URL, and trying to replace them in my code was not working.&lt;/p&gt;
+&lt;p&gt;I tried editing the entries in my database in order to remove the character. I deleted and edited each field. I even tried converting the character encoding and trimming the URL. &lt;em&gt;Nothing worked!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I then read a post on the &lt;a href=&#34;https://forum.pyrocms.com/discussion/24142/does-pagesurl-return-with-disallowed-characters-for-you-too&#34;&gt;PyroCMS Forum&lt;/a&gt; that said there is probably a hidden character somewhere in the code. Well, I looked in my PHP and I didn&amp;rsquo;t find anything, looking in my HTML there was nothing there either.&lt;/p&gt;
+&lt;p&gt;So what to do? When in doubt, &lt;em&gt;use vim&lt;/em&gt;. I dusted off my vim and looked at the PHP file, nothing! Then I opened the HTML file&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HEY! There is a tiny little hidden character in my HTML!!&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-fix&#34;&gt;The Fix&lt;/h3&gt;
+&lt;p&gt;I removed the character and everything worked perfectly. Here is the diff after I removed the character:&lt;/p&gt;
+&lt;div class=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/hidden-character-diff.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;git diff for hidden character&#34; src=&#34;https://ohdoylerules.com/images/hidden-character-diff.png&#34; &gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;You can see there is a little trailing character there. I don&amp;rsquo;t know exactly how this got in there, but god damn was it driving me crazy.&lt;/p&gt;
+&lt;h3 id=&#34;in-summation&#34;&gt;In Summation&lt;/h3&gt;
+&lt;p&gt;The real problem is, this &lt;em&gt;didn&amp;rsquo;t show in Sublime Text&lt;/em&gt; or in the &lt;em&gt;Chrome elements panel&lt;/em&gt;. Even the commit on &lt;em&gt;Github&lt;/em&gt; didn&amp;rsquo;t show the hidden character I removed.&lt;/p&gt;
+&lt;div class=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/github-hidden-character-diff.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;github diff for hidden character&#34; src=&#34;https://ohdoylerules.com/images/github-hidden-character-diff.png&#34; &gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;The only way it would show up is when I opened the file in &lt;strong&gt;vim&lt;/strong&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrate AllPasswords To 1Password</title>
+      <link>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/ca/app/allpasswords-handy-personal/id588258846?mt=12&#34;&gt;AllPasswords&lt;/a&gt; is an awesome, free, app for &lt;a href=&#34;https://itunes.apple.com/ca/app/allpasswords/id578246311?mt=8&#34;&gt;iPhone&lt;/a&gt; and &lt;a href=&#34;https://itunes.apple.com/ca/app/allpasswords-handy-personal/id588258846?mt=12&#34;&gt;OSX&lt;/a&gt;. It has a nice, simple interface, there is an awesome password generator, and it has iCloud sync.&lt;/p&gt;
+&lt;p&gt;The problem is, I recently bought an iPhone 6 and updated to iOS 8. It seems that the iCloud sync has busted for AllPasswords, at least on my device. With the advent of the &lt;a href=&#34;http://bgr.com/2014/09/17/1password-for-ios-free-download/&#34;&gt;1Password app getting a free version&lt;/a&gt; I decided it might be time to switch.&lt;/p&gt;
+&lt;p&gt;I have about 130 logins in AllPasswords, so I wasn&amp;rsquo;t about to manually enter in each account. Instead, I had to format the exported CSV from AllPasswords to be able to import into 1Password. Here is how I did it:&lt;/p&gt;
+&lt;h3 id=&#34;allpasswords-export-format&#34;&gt;AllPasswords Export Format&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Title, Username, Password, URL, Notes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The above line is the export format for AllPasswords.&lt;/p&gt;
+&lt;p&gt;Now this isn&amp;rsquo;t going to work when you try to import it into 1Password. You will need to do some &lt;em&gt;massaging&lt;/em&gt; of the CSV to get it to work properly.&lt;/p&gt;
+&lt;p&gt;Here is an export example:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ODR PW,super_cool_guy,ilovepuppies5000,http://ohdoylerules.com,&amp;ldquo;This is a fake entry&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here is one that is less ideal, or maybe had some info missing:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ODR PW,super_cool_guy,ilovepuppies5000,,&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;1password-import-expectations&#34;&gt;1Password Import Expectations&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Title&amp;rdquo;,&amp;ldquo;Location (URL)&amp;rdquo;,&amp;ldquo;Username&amp;rdquo;,&amp;ldquo;Password&amp;rdquo;,&amp;ldquo;Notes&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now we need to put our CSV in this format. We need to &lt;em&gt;wrap the sections in quotes&lt;/em&gt;, and we need to make sure that the &lt;em&gt;empty fields are just empty quotes&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Here is how we would arrange those 2 examples from before.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;ODR PW&amp;rdquo;,&amp;ldquo;http://ohdoylerules.com&amp;rdquo;,&amp;ldquo;super_cool_guy&amp;rdquo;,&amp;ldquo;ilovepuppies5000&amp;rdquo;,&amp;ldquo;This is a fake entry&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here is the ugly one, and how to fix it:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;ODR PW&amp;rdquo;,&amp;quot;&amp;rdquo;,&amp;ldquo;super_cool_guy&amp;rdquo;,&amp;ldquo;ilovepuppies5000&amp;rdquo;,&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;finding-issues&#34;&gt;Finding Issues&lt;/h3&gt;
+&lt;p&gt;When you are trying to import, you will notice that 1Passwords gives no feedback on what is wrong with the CSV, it will just deny the import.&lt;/p&gt;
+&lt;p&gt;The trick is to go through the file and make sure there are &lt;em&gt;5 sets of quotes&lt;/em&gt;. That is what helped me.&lt;/p&gt;
+&lt;p&gt;So far I have been very happy with 1Password. It seems like a really solid app. I opted for Dropbox as the sync storage, and I downloaded the Chrome extension that will prompt me for pasting or saving of logins.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Always Connect To Starbucks WiFi</title>
+      <link>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</link>
+      <pubDate>Sat, 20 Sep 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</guid>
+      <description>&lt;p&gt;Lately, it has been quite difficult for me to connect to Starbucks WiFi. About a year ago, the network would connect pretty quickly, but now it seems like the network is powered by voodoo magic and the will of Satan.&lt;/p&gt;
+&lt;p&gt;Well, I have discovered the &lt;em&gt;ultimate way&lt;/em&gt; to connect to the network &lt;strong&gt;every time&lt;/strong&gt;. Now, this is still complete bullshit, considering the year is &lt;strong&gt;2014&lt;/strong&gt; and we have a rover on Mars, but we still can&amp;rsquo;t connect to a wireless network. Don&amp;rsquo;t even get me started on wireless printers.&lt;/p&gt;
+&lt;p&gt;Here is the process I use to connect quickly:&lt;/p&gt;
+&lt;h3 id=&#34;1-connect-to-the-starbucks-network-with-your-phone&#34;&gt;1. Connect to the Starbucks network with your phone&lt;/h3&gt;
+&lt;p&gt;Yes. Use your cell phone to connect to the Starbucks wireless network. I have never had a problem connecting any phone to the Starbucks wifi. It seems like phones have some sort of special powers.&lt;/p&gt;
+&lt;h3 id=&#34;2-turn-on-tethering-and-connect-to-your-computer-to-your-phone&#34;&gt;2. Turn on tethering and connect to your computer to your phone&lt;/h3&gt;
+&lt;p&gt;Once you connect &lt;em&gt;your phone&lt;/em&gt; to the Starbucks network, turn on &lt;strong&gt;tethering&lt;/strong&gt; or &lt;strong&gt;wifi hotspot&lt;/strong&gt;. Then, on your computer, connect to your phones network.&lt;/p&gt;
+&lt;p&gt;Here are instructions for turning on wireless hotspot on &lt;a href=&#34;http://www.wikihow.com/Activate-Internet-Tethering-on-the-iPhone&#34;&gt;iOS&lt;/a&gt; and &lt;a href=&#34;http://www.wikihow.com/Tether-With-Android&#34;&gt;android&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;3-load-the-starbucks-connection-page&#34;&gt;3. Load the Starbucks connection page&lt;/h3&gt;
+&lt;p&gt;Now you will go to the &lt;a href=&#34;http://starbucks.allstreamwifi.ca/00246C3ECB90/Welcome&#34;&gt;Starbucks connection page&lt;/a&gt; and &lt;strong&gt;wait until it is finished loading&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If it doesn&amp;rsquo;t load all the way, that is fine. Just hit the stop button when you think it has reached a point of not going any further.&lt;/p&gt;
+&lt;h4 id=&#34;do-not-press-the-green-submit-button&#34;&gt;DO NOT PRESS THE GREEN SUBMIT BUTTON!&lt;/h4&gt;
+&lt;p&gt;Control yourself. We will do this later.&lt;/p&gt;
+&lt;h3 id=&#34;4-switch-your-computer-to-the-starbucks-network&#34;&gt;4. Switch your computer to the Starbucks network&lt;/h3&gt;
+&lt;p&gt;While that connection page &lt;strong&gt;is still open&lt;/strong&gt;, switch your computers wifi from the &lt;em&gt;phones hotspot connection&lt;/em&gt; to the &lt;em&gt;Starbucks network&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;5-click-the-big-green-button-to-connect&#34;&gt;5. Click the big green button to connect&lt;/h3&gt;
+&lt;p&gt;Now that you have the &lt;em&gt;connection page loaded&lt;/em&gt; and your &lt;em&gt;computer connected to the Starbucks wifi&lt;/em&gt;, you can press the big green submit button. This will complete the authentication and it should redirect you to the Starbucks homepage.&lt;/p&gt;
+&lt;h3 id=&#34;why-does-this-work&#34;&gt;Why does this work?&lt;/h3&gt;
+&lt;p&gt;I am not really sure. I &lt;em&gt;think&lt;/em&gt; the reason might be that an unauthenticated connection to the network (a connection that has not made it past the connection page) has limited bandwidth.&lt;/p&gt;
+&lt;p&gt;This means that all pages are trying to load with a throttled speed. Typically, the browser will only try to connect for so long before it gives up and assumes the site is unreachable (a timeout occurs).&lt;/p&gt;
+&lt;p&gt;With my process, you are using a connection that is already authenticated, so you have the full speed you need in order to load the necessary page without it timing out on you.&lt;/p&gt;
+&lt;h3 id=&#34;side-note&#34;&gt;Side Note&lt;/h3&gt;
+&lt;p&gt;You can probably use your phones &lt;em&gt;data network&lt;/em&gt; to load the initial Starbucks connection page. Then switch from the phone to Starbucks and press the green button.&lt;/p&gt;
+&lt;h3 id=&#34;did-this-work&#34;&gt;Did this work?&lt;/h3&gt;
+&lt;p&gt;This always works for me. It is a hell of a lot better than waiting a solid 30 minutes before the network finally connects. If this works for you, please &lt;strong&gt;leave a comment&lt;/strong&gt; and let me know. If it doesn&amp;rsquo;t work, let me know &lt;strong&gt;what you did&lt;/strong&gt; in order to get it to work.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

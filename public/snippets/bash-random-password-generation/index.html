@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | Randomly Generate A Password In Bash</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="https://ohdoylerules.com/snippets/bash-random-password-generation/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/snippets/bash-random-password-generation/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="Randomly Generate A Password In Bash">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Randomly Generate A Password In Bash">
+    <meta property="article:author" content="James Doyle" />
+    <meta property="article:section" content="Snippets" />
+    <meta property="article:tag" content="password, random, generate, base64, bash, openssl, cli, terminal, shell, command line, pbcopy, clipboard, osx, mac" />
+    <meta itemprop="keywords" content="password, random, generate, base64, bash, openssl, cli, terminal, shell, command line, pbcopy, clipboard, osx, mac">
+    <meta property="og:keywords" content="password, random, generate, base64, bash, openssl, cli, terminal, shell, command line, pbcopy, clipboard, osx, mac">
+    
+    
+      <meta name="description" content="Randomly generate a password of specified length and then copy it to the clipboard">
+      <meta itemprop="description" content="Randomly generate a password of specified length and then copy it to the clipboard">
+      <meta property="og:description" content="Randomly generate a password of specified length and then copy it to the clipboard">
+      <meta name="twitter:description" content="Randomly generate a password of specified length and then copy it to the clipboard">
+    
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/snippets/bash-random-password-generation/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">Randomly Generate A Password In Bash</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <div class="post-info">
+        
+        <span class="post-date" itemprop="datePublished">🕒 February 16, 2014</span>
+        
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <span class="post-category" itemprop="genre about">🏷 Snippets</span>
+        
+      </div>
+      <div itemprop="ArticleBody text" class="main-content"><p>When installing or setting up frameworks, in this case I was playing around with <a href="http://laravel.com/">Laravel</a>, you usually need to set a session/secret/encryption key.</p>
+<p>I know why this is, but I always end up looking around for some random password generator so I can get a random string that is exactly 32 characters. Isn&rsquo;t there an easier way?!?!</p>
+<p>Yes there is. If you have the magical <a href="https://www.openssl.org/" title="OpenSSL Website">OpenSSL</a> installed, which most do, you can use it to generate a random string.</p>
+<p>I found a <a href="http://osxdaily.com/2011/05/10/generate-random-passwords-command-line/" title="Generate Random Passwords from the Command Line">article online</a> that uses base64 to generate a string of a certain length. The only thing is that base64 is padded with 8 bits. Which means that if you want 32 then you need to use 24. This goes up exponentially as the number gets bigger. So there is a trim part of the function that clips off the extra characters.</p>
+<p>Here is the function broken down into steps:</p>
+<ul>
+<li>pass a number to the function</li>
+<li>cut the resulting string</li>
+<li>generate a base64 string using that number</li>
+<li>echo out the result</li>
+<li>copy the output to the clipboard with a newline</li>
+<li>echo out a success</li>
+</ul>
+<p>I put a check in there if the argument is not a number. This is just for the dummies out there.</p>
+<h4 id="pbcopy-is-not-defined">pbcopy is not defined</h4>
+<p>You are probably on Linux. I found <a href="http://whereswalden.com/2009/10/23/pbcopy-and-pbpaste-for-linux/" title="pbcopy and pbpaste for Linux">this little snippet</a> for the lazy. This way you can forget about translating it each time.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#8be9fd;font-style:italic">alias</span> <span style="color:#8be9fd;font-style:italic">pbcopy</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;xsel --clipboard --input&#34;</span>
+<span style="color:#8be9fd;font-style:italic">alias</span> <span style="color:#8be9fd;font-style:italic">pbpaste</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;xsel --clipboard --output&#34;</span>
+</code></pre></div><p>Now for the actual shell function:</p>
+<h3 id="code">Code</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#6272a4"># if the argument is a number</span>
+<span style="color:#6272a4"># cut the string so that there is no base64 padding</span>
+<span style="color:#6272a4"># generate a random password of the specified length</span>
+<span style="color:#6272a4"># then copy it to the clipboard without a newline</span>
+<span style="color:#6272a4"># usage: password 32</span>
+password<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+  <span style="color:#8be9fd;font-style:italic">LENGTH</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$1</span><span style="color:#f1fa8c">&#34;</span>
+  <span style="color:#8be9fd;font-style:italic">REGEX</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;^[0-9]+$&#39;</span>
+  <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[[</span> <span style="color:#8be9fd;font-style:italic">$LENGTH</span> <span style="color:#ff79c6">=</span>~ <span style="color:#8be9fd;font-style:italic">$REGEX</span> <span style="color:#ff79c6">]]</span> ; <span style="color:#ff79c6">then</span>
+    <span style="color:#8be9fd;font-style:italic">PASSWD</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>openssl rand -base64 <span style="color:#8be9fd;font-style:italic">$LENGTH</span> | head -c<span style="color:#8be9fd;font-style:italic">$LENGTH</span><span style="color:#ff79c6">)</span>
+    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$PASSWD</span>
+    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$PASSWD</span> | tr -d <span style="color:#f1fa8c">&#39;\n&#39;</span> | pbcopy
+    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Password copied to clipboard&#34;</span>
+  <span style="color:#ff79c6">else</span>
+    <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Argument must be a number&#34;</span>
+  <span style="color:#ff79c6">fi</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>Here is how you would use it, and what the results would look like:</p>
+<h3 id="output">Output</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">~ ❯ password <span style="color:#bd93f9">32</span>
+gY4zLES+WWF5+iNWo0FYx+os6EmDwecf
+Password copied to clipboard
+~ ❯ password fu
+Argument must be a number
+~ ❯
+</code></pre></div><p>This function would be put in your <code>.bashrc</code> file, or you <code>.zshrc</code> file if you are a cool ZSH user.</p>
+</div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?384-128');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+

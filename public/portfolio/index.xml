@@ -1,0 +1,59 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolios on James Doyle</title>
+    <link>https://ohdoylerules.com/portfolio/</link>
+    <description>Recent content in Portfolios on James Doyle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
+    <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
+    <copyright>This work is licensed under The MIT License (MIT).</copyright>
+    <lastBuildDate>Thu, 11 Apr 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ohdoylerules.com/portfolio/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Grey Nimbus website</title>
+      <link>https://ohdoylerules.com/portfolio/grey-nimbus-website/</link>
+      <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/grey-nimbus-website/</guid>
+      <description>&lt;p&gt;Finally took the time and initiative to launch &lt;a href=&#34;http://greynimbus.com&#34; title=&#34;Grey Nimbus Website&#34;&gt;Grey Nimbus&lt;/a&gt;, my business. The website itself is built using &lt;a href=&#34;http://fuelphp.com&#34; title=&#34;FuelPHP&#34;&gt;FuelPHP&lt;/a&gt;. The reason I chose it was because I was curious and it was pretty light weight.&lt;/p&gt;
+&lt;p&gt;The website has no database so that was pretty much ignored. But I wanted easy validation for forms and a good email library. This is handled nicely by Fuel. The docs are mostly good. I had to do a little google searching when I was trying to tie things in together.&lt;/p&gt;
+&lt;p&gt;I knew I wanted parallax and responsive. I found &lt;a href=&#34;https://github.com/spencerbaynton/cool-kitten&#34; title=&#34;spencerbaynton/cool kitten&#34;&gt;a fork&lt;/a&gt; of the &lt;a href=&#34;http://www.jalxob.com/cool-kitten/&#34; title=&#34;cool-kitten homepage&#34;&gt;cool-kitten&lt;/a&gt; framework that I liked and created &lt;a href=&#34;https://github.com/james2doyle/cool-kitten&#34; title=&#34;james2doyle/cool kitten&#34;&gt;my own fork&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In my fork, the first thing I did was add &lt;a href=&#34;http://retinajs.com/&#34; title=&#34;Retina.js Homepage&#34;&gt;retina.js&lt;/a&gt;. I know some people knock retina.js because it uses &lt;a href=&#34;http://mir.aculo.us/2012/09/22/dont-use-javascript-for-retinafying/&#34; title=&#34;Thomas Fuchs - Don’t use JavaScript for Retinafying&#34;&gt;javascript&lt;/a&gt; to replace images with an @2x version.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Maybe in the next update I will switch to SVG images, but I digress.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The second thing I did was create a &lt;a href=&#34;https://github.com/james2doyle/cool-kitten/blob/master/compile.sh&#34; title=&#34;james2doyle/cool-kitten build script&#34;&gt;build script&lt;/a&gt; to concatenate and minify the javascript and css. It uses &lt;a href=&#34;https://github.com/GoalSmashers/clean-css&#34; title=&#34;GoalSmashers/clean-css&#34;&gt;clean-css&lt;/a&gt; and &lt;a href=&#34;https://github.com/mishoo/UglifyJS&#34; title=&#34;mishoo/UglifyJS&#34;&gt;uglifyjs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The reason I didn&amp;rsquo;t use something like grunt.js is because I only had 2 tasks to run and it was only when I was ready to push to the server. I added a condition in the head and footer to check to see if the site was in production and load the minified versions or the normal big list of separate files. The rest was just testing and building. Creating content is always tough for me. I want to sound casual which some people don&amp;rsquo;t like. But it reflects me better so, whatever.&lt;/p&gt;
+&lt;p&gt;I ended up adding &lt;a href=&#34;http://daneden.me/animate/&#34; title=&#34;daneden.me/animate/&#34;&gt;animate.css&lt;/a&gt; too. I didn&amp;rsquo;t create any fallbacks for no css animation support because they just won&amp;rsquo;t show if you don&amp;rsquo;t have support. I&amp;rsquo;ve used the library before and it is pretty great. I created a custom build because I am trying to keep my footprint small. In the end, even with all the images and javascript libs, I managed to get the page to load in &lt;a href=&#34;http://blog.kissmetrics.com/loading-time/?wide=1&#34; title=&#34;How Loading Time Affects Your Bottom Line&#34;&gt;under 1 second&lt;/a&gt; (at least on desktop&amp;hellip;).&lt;/p&gt;
+&lt;p&gt;In conclusion, I am very happy with it. I have gotten a lot of positive feedback and suggestions. Everyday I make a few minor tweaks. Please &lt;a href=&#34;http://greynimbus.com/&#34; title=&#34;Grey Nimbus Website&#34;&gt;check it out&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New business cards</title>
+      <link>https://ohdoylerules.com/portfolio/new-business-cards/</link>
+      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/new-business-cards/</guid>
+      <description>&lt;p&gt;Picked up my new cards right before &lt;a href=&#34;http://www.diglondon.ca/&#34;&gt;Dig London&lt;/a&gt;. They have my new favourite emoticon on the back too.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/20121114-14232711.jpg&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/20121114-14232711.jpg&#34; alt=&#34;20121114-142327.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My Old Website</title>
+      <link>https://ohdoylerules.com/portfolio/my-old-website/</link>
+      <pubDate>Thu, 04 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/my-old-website/</guid>
+      <description>&lt;p&gt;I decided to host my old website because I wanted to show some work with Modernizr.&lt;/p&gt;
+&lt;p&gt;Looking back it is actually pretty cool! I kind of miss it haha. It seems to run much better than I remember. I think that is because it was the days of chrome 18 and Firefox 10 which had spotty 3d transform support.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/test/old/&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-10-04-at-11.26.23-AM-e134936451049011.png&#34; alt=&#34;My Old Site&#34; title=&#34;My Old Site&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Maybe someday I can make a sub-site or a project site based off of that design. This was also one of my first sites to use AJAX. It was pretty frustrating and hard at the time. It is funny looking at my code and the way I handled things back then. I read it and feel like I am looking at a strangers code.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

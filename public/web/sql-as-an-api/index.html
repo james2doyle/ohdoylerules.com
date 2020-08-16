@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | SQL As An API</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="https://ohdoylerules.com/web/sql-as-an-api/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/web/sql-as-an-api/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="SQL As An API">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="SQL As An API">
+    <meta property="article:author" content="James Doyle" />
+    <meta property="article:section" content="Web" />
+    <meta property="article:tag" content="sql, graphql, api, sqlite, json, query, php" />
+    <meta itemprop="keywords" content="sql, graphql, api, sqlite, json, query, php">
+    <meta property="og:keywords" content="sql, graphql, api, sqlite, json, query, php">
+    
+    
+      <meta name="description" content="An example of how to use SQL as an API instead of reaching for something like GraphQL">
+      <meta itemprop="description" content="An example of how to use SQL as an API instead of reaching for something like GraphQL">
+      <meta property="og:description" content="An example of how to use SQL as an API instead of reaching for something like GraphQL">
+      <meta name="twitter:description" content="An example of how to use SQL as an API instead of reaching for something like GraphQL">
+    
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/web/sql-as-an-api/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">SQL As An API</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <div class="post-info">
+        
+        <span class="post-date" itemprop="datePublished">🕒 May 12, 2019</span>
+        
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <span class="post-category" itemprop="genre about">🏷 Web</span>
+        
+      </div>
+      <div itemprop="ArticleBody text" class="main-content"><p>There has been a lot of fanfare around the idea of <a href="https://graphql.org/">GraphQL</a> lately. For good reason in my opinion.</p>
+<p>GraphQL allows you to essentially define your API with your query. For example, if you want to only include a single field then you can do that. If you want to nest related items, or not, you can do that as well.</p>
+<p>If you take a quick look at the GraphQL website (as it is today) you can see how they lay this out:</p>
+<pre><code># Describe your data
+type Project {
+  name: String
+  tagline: String
+  created_at: Int
+}
+
+# Ask for what you want
+{
+  project(name: &quot;My Project&quot;) {
+    tagline
+  }
+}
+
+# Get predictable results
+{
+  &quot;project&quot;: {
+    &quot;tagline&quot;: &quot;A query language for APIs&quot;
+  }
+}
+</code></pre><p>Pretty straightforward. You create a model of your data that describes it, write a query that matches the model, and get the results.</p>
+<p>Although, this should already look familiar to anyone that has used a relational database before. What if we massage this example so it fits a more classic datastore:</p>
+<pre><code># Describe your data
+CREATE TABLE &quot;project&quot;
+(
+    [name] NVARCHAR(40),
+    [tagline] NVARCHAR(120),
+    [created_at] INTEGER NOT NULL
+);
+
+# Ask for what you want
+SELECT `tagline` FROM `projects` WHERE `name` = &quot;My Project&quot;
+
+# Get predictable results
+[
+  {
+    &quot;tagline&quot;: &quot;A query language for APIs&quot;
+  }
+]
+</code></pre><p>So this really is just another way to store and query your data. We describe the structure, query it using the specified query language with our expected structure, and print out the results.</p>
+<blockquote>
+<p>So can we create a GraphQL experience using just SQL?</p>
+</blockquote>
+<p>So can we create a GraphQL experience using just SQL? Short answer, yes. This isn&rsquo;t a new concept though. There is a tool called <a href="https://simonwillison.net/2017/Nov/13/datasette/#Arbitrary_SQL_55">datasette</a> that does just this.</p>
+<p>So where do we start? Well, we don&rsquo;t want users to be able to modify our database. We want to safely expose SQL to the internet. Crazy idea but it just might work.</p>
+<p>So what we want to do is open a Sqlite database using the &ldquo;ro&rdquo; (read only) mode (see <a href="http://www.sqlite.org/draft/c3ref/open.html">mode details here</a>). This mode means that you <em>cannot modify the database</em>. You can only run queries that are reads. This is a great feature as we need to expose this database to the public internet if we are going to use it as an API.</p>
+<p>Once we have a mounted sqlite database that is set to &ldquo;read only&rdquo; mode, we can then pass queries right to it and return the results.</p>
+<h3 id="basic-example">Basic Example</h3>
+<p>We are going to whip up this example using PHP and the <code>chinook</code> database <a href="http://www.sqlitetutorial.net/sqlite-sample-database/">from this site</a>. It is insanely easy to get this working using the <code>SQLite3</code> class and a single <code>json_encode</code> call.</p>
+<p>Let&rsquo;s see how to get this done:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?php</span>
+<span style="color:#6272a4">// be sure to open with `SQLITE3_OPEN_READONLY`
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$db</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> SQLite3(<span style="color:#f1fa8c">&#39;chinook.sqlite&#39;</span>, SQLITE3_OPEN_READONLY);
+<span style="color:#6272a4">// pull out the query from the POST request
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$rows</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$db</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">query</span>(<span style="color:#8be9fd;font-style:italic">$_POST</span>[<span style="color:#f1fa8c">&#39;query&#39;</span>]);
+<span style="color:#8be9fd;font-style:italic">$results</span> <span style="color:#ff79c6">=</span> [];
+<span style="color:#ff79c6">while</span> (<span style="color:#8be9fd;font-style:italic">$row</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$rows</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">fetchArray</span>(SQLITE3_ASSOC)) {
+    <span style="color:#8be9fd;font-style:italic">$results</span>[] <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$row</span>;
+}
+<span style="color:#ff79c6">echo</span> json_encode(<span style="color:#8be9fd;font-style:italic">$results</span>);
+</code></pre></div><p>OK. That was easy. This is all we need to support calls to this &ldquo;server&rdquo;. Let&rsquo;s save this to <code>index.php</code>. And start a webserver on port <code>8000</code>. If you didn&rsquo;t know this, PHP has a built-in server just like the one python has. We can start it like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">php -S localhost:8000
+</code></pre></div><p>You should see some output information about what the server is doing. Now we can make calls to this API:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT LastName FROM employees&#39;</span>
+</code></pre></div><p>We should see the following output in our console:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+  {
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
+  }
+]
+</code></pre></div><h3 id="getting-fancier">Getting fancier</h3>
+<p>Nice! So this works. Let&rsquo;s try to do something a little more fancy:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT printf(&#34;%s %s&#34;, FirstName, LastName) AS FullName, FirstName, LastName FROM employees&#39;</span>
+</code></pre></div><p>Our output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+  {
+    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew Adams&#34;</span>,
+    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew&#34;</span>,
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>,
+    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy&#34;</span>,
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Jane Peacock&#34;</span>,
+    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Jane&#34;</span>,
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret Park&#34;</span>,
+    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret&#34;</span>,
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Steve Johnson&#34;</span>,
+    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Steve&#34;</span>,
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>,
+    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Michael&#34;</span>,
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Robert King&#34;</span>,
+    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Robert&#34;</span>,
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Laura Callahan&#34;</span>,
+    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Laura&#34;</span>,
+    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
+  }
+]
+</code></pre></div><p>How about a little example that searches a users name?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT printf (&#34;%s %s&#34;, employees.FirstName, employees.LastName) AS full_name FROM employees WHERE full_name LIKE &#34;an%&#34;&#39;</span>
+</code></pre></div><p>We see that we found the user:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+  {
+    <span style="color:#ff79c6">&#34;full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew Adams&#34;</span>
+  }
+]
+</code></pre></div><p>Let&rsquo;s do an even more sophisticated example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT e2.EmployeeId AS employee_id, e2.ReportsTo AS reports_to, printf (&#34;%s %s&#34;, e2.FirstName, e2.LastName) AS employee_full_name, printf (&#34;%s %s&#34;, e1.FirstName, e1.LastName) AS reports_to_full_name FROM employees e1 INNER JOIN employees e2 ON e1.EmployeeId = e2.ReportsTo WHERE e1.ReportsTo IS NOT NULL&#39;</span>
+</code></pre></div><p>And our output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+  {
+    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">3</span>,
+    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
+    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Jane Peacock&#34;</span>,
+    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">4</span>,
+    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
+    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret Park&#34;</span>,
+    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">5</span>,
+    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
+    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Steve Johnson&#34;</span>,
+    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">7</span>,
+    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">6</span>,
+    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Robert King&#34;</span>,
+    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>
+  },
+  {
+    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">8</span>,
+    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">6</span>,
+    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Laura Callahan&#34;</span>,
+    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>
+  }
+]
+</code></pre></div><p>Awesome! As you can see this is pretty great! We have a basic API that we can use not only to read but to handle relationships as well. Sweet!</p>
+<h3 id="handling-malicious-queries">Handling malicious queries</h3>
+<p>Let&rsquo;s try to execute a bad command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=INSERT INTO &#34;artists&#34; (&#34;Name&#34;) VALUES (&#34;Philip Glass Ensemble&#34;)&#39;</span>
+</code></pre></div><p>We should see this output from the server:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">br</span> /&gt;
+&lt;<span style="color:#ff79c6">b</span>&gt;Warning&lt;/<span style="color:#ff79c6">b</span>&gt;:  SQLite3::query(): Unable to execute statement: attempt to write a readonly database in &lt;<span style="color:#ff79c6">b</span>&gt;/Users/james/Sites/sqliteapi/index.php&lt;/<span style="color:#ff79c6">b</span>&gt; on line &lt;<span style="color:#ff79c6">b</span>&gt;6&lt;/<span style="color:#ff79c6">b</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+&lt;<span style="color:#ff79c6">br</span> /&gt;
+&lt;<span style="color:#ff79c6">b</span>&gt;Fatal error&lt;/<span style="color:#ff79c6">b</span>&gt;:  Uncaught Error: Call to a member function fetchArray() on bool in /Users/james/Sites/sqliteapi/index.php:8
+Stack trace:
+#0 {main}
+  thrown in &lt;<span style="color:#ff79c6">b</span>&gt;/Users/james/Sites/sqliteapi/index.php&lt;/<span style="color:#ff79c6">b</span>&gt; on line &lt;<span style="color:#ff79c6">b</span>&gt;8&lt;/<span style="color:#ff79c6">b</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+</code></pre></div><p>As you can see, we try to execute a bad query that would manipulate the data and we get blocked.</p>
+<h3 id="super-example">Super example</h3>
+<p>Here is a much more robust example with some error handling, proper status codes, parsing of JSON input, and it also allows you to put the <code>query</code> in a <code>GET</code> or a <code>POST</code> request.</p>
+<script src="https://gist.github.com/james2doyle/9e4b2b4f17e33bfb236fbdaf96c41a4c.js"></script>
+<p>Try running the example above and giving things a test. Here is our new request that uses JSON instead:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -X POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  http://localhost:8000 <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  -H <span style="color:#f1fa8c">&#39;Content-Type: application/json&#39;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  -d <span style="color:#f1fa8c">&#39;{ &#34;query&#34;: &#34;SELECT LastName FROM employees&#34; }&#39;</span>
+</code></pre></div><p>Now we have the following output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;data&#34;</span>: [
+    {
+      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
+    },
+    {
+      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
+    },
+    {
+      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
+    },
+    {
+      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
+    },
+    {
+      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
+    },
+    {
+      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
+    },
+    {
+      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
+    },
+    {
+      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
+    }
+  ],
+  <span style="color:#ff79c6">&#34;meta&#34;</span>: {
+    <span style="color:#ff79c6">&#34;query&#34;</span>: <span style="color:#f1fa8c">&#34;SELECT LastName FROM employees&#34;</span>,
+    <span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">8</span>
+  }
+}
+</code></pre></div><p>So there you go. A pretty robust solution that has excellent performance, a simple and well-known query language, and supports almost any combination of data.</p>
+<h3 id="in-summation">In summation</h3>
+<p>So this could be a great option for a lot of applications. You can quickly imagine how this could be used for something like a simple search API. You could have an application hook to add data to this special database when your data is changed. Sqlite is a really viable option for a lot of things as it can grow to 140 TB, supports <a href="https://www.sqlite.org/json1.html"><code>json_</code> functions</a>, and even <a href="https://effbot.org/zone/sqlite-blob.htm">binary data</a>.</p>
+<p>Keep in mind that you can&rsquo;t really nest the same way you can in GraphQL. But you might be ok with that depending on your use case.</p>
+</div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?384-128');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+

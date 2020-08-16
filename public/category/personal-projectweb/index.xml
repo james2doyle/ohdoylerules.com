@@ -1,0 +1,101 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal Project,Web on James Doyle</title>
+    <link>https://ohdoylerules.com/category/personal-projectweb/</link>
+    <description>Recent content in Personal Project,Web on James Doyle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
+    <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
+    <copyright>This work is licensed under The MIT License (MIT).</copyright>
+    <lastBuildDate>Sun, 23 Jun 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ohdoylerules.com/category/personal-projectweb/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PyroCMS UA Sniffer Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
+      <description>&lt;p&gt;This plugin lets you sniff information from the user agent for use in the frontend. I use it for adding classes or conditional loading of partials and templates.&lt;/p&gt;
+&lt;p&gt;You can see the &lt;a href=&#34;https://github.com/james2doyle/pyro-sniffer-plugin&#34; title=&#34;pyro-sniffer-plugin github&#34;&gt;github repository here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This plugin is &lt;strong&gt;not&lt;/strong&gt; built on the &lt;a href=&#34;http://ellislab.com/codeigniter/user-guide/libraries/user_agent.html&#34;&gt;CodeIgniter User Agent Library&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The reason I did not use the built in CodeIgniter lib, was because Pyro is only going to have CodeIgniter for a few more months(right?!?!), and I also want to have the information returned in a different way. This plugin is pretty small and only really gets information that is helpful to be used in CSS and Javascript (CSS custom classes and js feature detection/fallbacks).&lt;/p&gt;
+&lt;p&gt;If you are looking for a plugin that uses the user agent library, check out &lt;a href=&#34;https://www.pyrocms.com/store/details/agent_plugin&#34;&gt;this plugin called Agent&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;usageusage&#34;&gt;&lt;a href=&#34;#usage&#34;&gt;&lt;/a&gt;Usage&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;body class=&amp;quot;\{\{ sniffer:get key=&amp;quot;browser|platform|type&amp;quot; \}\}&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On my Mac running Google Chrome, this would return:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;body class=&amp;quot; google-chrome mac desktop&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On my iPhone, this would return:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;body class=&amp;quot; apple-mobile-safari ios mobile&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;conditional-contentconditional-content&#34;&gt;&lt;a href=&#34;#conditional-content&#34;&gt;&lt;/a&gt;conditional content&lt;/h4&gt;
+&lt;p&gt;This works in 2.2/develop. Not sure about 2.3 or 2.1.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\{\{ if \{ sniffer:get key=&amp;quot;type&amp;quot; \} == &#39;desktop&#39; \}\}
+&amp;lt;div class=&amp;quot;huge-slider&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;slide&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;img/kitten1.jpg&amp;quot; width=&amp;quot;1400&amp;quot; height=&amp;quot;500&amp;quot;&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;slide&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;img/puppy1.jpg&amp;quot; width=&amp;quot;1400&amp;quot; height=&amp;quot;500&amp;quot;&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;slide&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;img/snake1.jpg&amp;quot; width=&amp;quot;1400&amp;quot; height=&amp;quot;500&amp;quot;&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+\{\{ else \}\}
+&amp;lt;div class=&amp;quot;mobile-logo&amp;quot;&amp;gt;
+  &amp;lt;img src=&amp;quot;img/mobile-logo.png&amp;quot; width=&amp;quot;200&amp;quot; height=&amp;quot;200&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+\{\{ endif \}\}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;here is the full dump of the &lt;code&gt;$results&lt;/code&gt; object for my machine:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$results = array (
+  [&#39;useragent&#39;] =&amp;gt; &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.44 Safari/537.36&#39; // full ua string
+  [&#39;name&#39;] =&amp;gt; &#39;Google Chrome&#39; // name of the browser
+  [&#39;browser&#39;] =&amp;gt; &#39;google-chrome&#39; // CSS safe browser name
+  [&#39;version&#39;] =&amp;gt; &#39;28.0.1500.44&#39; // bowser version
+  [&#39;type&#39;] =&amp;gt; &#39;desktop&#39; // device form factor
+  [&#39;platform&#39;] =&amp;gt; &#39;mac&#39; // OS platform
+  [&#39;pattern&#39;] =&amp;gt; &#39;#(?Version|Chrome|other)[/ ]+(?[0-9.|a-zA-Z.]*)#&#39; // match pattern
+);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CrunchBase SVG logo</title>
+      <link>https://ohdoylerules.com/personal-project/crunchbase-svg/</link>
+      <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/crunchbase-svg/</guid>
+      <description>&lt;p&gt;I needed the CrunchBase logo in a vector so I had to create it from
+scratch.&lt;/p&gt;
+&lt;div class=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/crunchbase.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;crunchbase svg vector&#34; src=&#34;https://ohdoylerules.com/images/crunchbase.svg&#34; &gt;&lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pyro Blurb Field</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-blurb-field/</link>
+      <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-blurb-field/</guid>
+      <description>&lt;p&gt;I created another new field type for &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;PyroCMS Website&#34;&gt;PyroCMS&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;center&#34;&gt;
+  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.39-PM.png&#34; &gt;
+&lt;/div&gt;
+&lt;p&gt;This one is for doing little &amp;ldquo;blurb&amp;rdquo; sections. Essentially I keep seeing little title+image+body components. Like testimonials, user profiles, portfolio snippets. These all follow a title+image+body format. So I built a little field type to provide an easy way to manage these in your page types.&lt;/p&gt;
+&lt;div class=&#34;center&#34;&gt;
+  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.21-PM.png&#34; &gt;
+&lt;/div&gt;
+&lt;p&gt;I also put the &lt;a href=&#34;https://github.com/james2doyle/pyro-blurb-field&#34; title=&#34;pyro-blurb field github&#34;&gt;project on github&lt;/a&gt; so that you can see it. It will also be on the PyroCMS Store.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

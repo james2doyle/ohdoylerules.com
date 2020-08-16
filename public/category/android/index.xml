@@ -1,0 +1,27 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on James Doyle</title>
+    <link>https://ohdoylerules.com/category/android/</link>
+    <description>Recent content in Android on James Doyle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
+    <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
+    <copyright>This work is licensed under The MIT License (MIT).</copyright>
+    <lastBuildDate>Fri, 20 Jul 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ohdoylerules.com/category/android/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Installing Android 4.1.1 Jelly Bean for Nexus S</title>
+      <link>https://ohdoylerules.com/android/jellybean-nexuss/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/android/jellybean-nexuss/</guid>
+      <description>&lt;p&gt;So I have been flashing ROMs for a while now. I recently installed Jelly Bean 4.1. I used the OTA(Over The Air) version from &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=1784497&#34; title=&#34;here&#34;&gt;here&lt;/a&gt;. Just make sure you also flash the Simple-Root.zip file. I did not. So I had to root my phone again and then install it. Which wasn&amp;rsquo;t too bad but still annoying.&lt;/p&gt;
+&lt;p&gt;As with flashing any kind of ROM there is always the thought and reality that you could break something. I had a custom ROM on before I switched to a Jelly Bean based ROM. It had the nice notification power controls which was awesome. But Jelly Bean (or at least any of the ROMs so far) do not. So with a bit of searching I found &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.painless.pc&#34; title=&#34;Power Controls&#34;&gt;Power Controls&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It works well and has a lot of customizable features. It is a recommend.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
