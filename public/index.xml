@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homepage on James Doyle</title>
-    <link>https://james2doyle.github.io/ohdoylerules.com/</link>
+    <link>https://ohdoylerules.com/</link>
     <description>Recent content in Homepage on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,77 +9,77 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohdoylerules.com/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Webs</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/</link>
+      <link>https://ohdoylerules.com/web/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/</guid>
+      <guid>https://ohdoylerules.com/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tricks</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/</link>
+      <link>https://ohdoylerules.com/tricks/</link>
       <pubDate>Sat, 08 Jul 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/</guid>
+      <guid>https://ohdoylerules.com/tricks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Snippets</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/</link>
+      <link>https://ohdoylerules.com/snippets/</link>
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/</guid>
+      <guid>https://ohdoylerules.com/snippets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Personal-projects</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/</link>
+      <link>https://ohdoylerules.com/personal-project/</link>
       <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/</guid>
+      <guid>https://ohdoylerules.com/personal-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demos</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/demo/</link>
+      <link>https://ohdoylerules.com/demo/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/</guid>
+      <guid>https://ohdoylerules.com/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Portfolios</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/portfolio/</link>
+      <link>https://ohdoylerules.com/portfolio/</link>
       <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/portfolio/</guid>
+      <guid>https://ohdoylerules.com/portfolio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fiddles</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/fiddle/</link>
+      <link>https://ohdoylerules.com/fiddle/</link>
       <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/fiddle/</guid>
+      <guid>https://ohdoylerules.com/fiddle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Androids</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/android/</link>
+      <link>https://ohdoylerules.com/android/</link>
       <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/android/</guid>
+      <guid>https://ohdoylerules.com/android/</guid>
       <description></description>
     </item>
     
