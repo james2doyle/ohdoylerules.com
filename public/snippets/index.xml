@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Snippets on James Doyle</title>
-    <link>https://ohdoylerules.com/snippets/</link>
+    <link>https://james2doyle.github.io/ohdoylerules.com/snippets/</link>
     <description>Recent content in Snippets on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,14 +9,14 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Sat, 03 Jun 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ohdoylerules.com/snippets/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/snippets/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Color Helpers In Fish Shell</title>
-      <link>https://ohdoylerules.com/snippets/color-helpers-in-fish-shell/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/color-helpers-in-fish-shell/</link>
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/color-helpers-in-fish-shell/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/color-helpers-in-fish-shell/</guid>
       <description>&lt;p&gt;I am one of those people who likes a lot of colors in my shell. When there is a failure, I like to see red. If there is something stuccessful, I like to see green.&lt;/p&gt;
 &lt;p&gt;Working with the prompt to output the correct colors can be a bit of a pain. I manage to find a nice way to handle both colorizing backgrounds for the text as well as the actual text color. You can see an example below:&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/james2doyle/acb8c065c8b4d63f557d44a77a356d59.js&#34;&gt;&lt;/script&gt;
@@ -45,10 +45,10 @@
     
     <item>
       <title>Install the latest Node.js on Amazon Linux</title>
-      <link>https://ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</link>
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</guid>
       <description>&lt;p&gt;Installing the latest version of Node.js on the Amazon linux AMI can actually be a little painful.&lt;/p&gt;
 &lt;p&gt;Here is a script for doing just that.&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/james2doyle/a1f0b415dee4e69b3595b7af1d07e7c1.js&#34;&gt;&lt;/script&gt;
@@ -58,10 +58,10 @@
     
     <item>
       <title>Running Go (golang) in Docker</title>
-      <link>https://ohdoylerules.com/snippets/running-go-in-docker/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/running-go-in-docker/</link>
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/running-go-in-docker/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/running-go-in-docker/</guid>
       <description>&lt;p&gt;Lately, I have been trying to learn golang. This means playing with a lot of tools and busting up my local environment.&lt;/p&gt;
 &lt;p&gt;In order to keep things simple, I have been using Docker container to run my applications when I am ready to deploy or build them.&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/james2doyle/6489d3e60d994222ce0404c8cd500a93.js&#34;&gt;&lt;/script&gt;
@@ -71,10 +71,10 @@
     
     <item>
       <title>Backup MySQL And Email It</title>
-      <link>https://ohdoylerules.com/snippets/backup-mysql-and-email-it/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/backup-mysql-and-email-it/</link>
       <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/backup-mysql-and-email-it/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/backup-mysql-and-email-it/</guid>
       <description>&lt;p&gt;Recently, a friend of mine asked me what we use for managing the backups for our clients. I mentioned that we use &lt;code&gt;mysqldump&lt;/code&gt; running on a &lt;code&gt;CRON&lt;/code&gt; schedule. He said that he used a paid service for managing all the servers and their backups. He mentioned it sends to an Amazon S3 bucket, and also sends a notification.&lt;/p&gt;
 &lt;p&gt;With my setup, he noted that I could be in trouble if the hard drive failed, or the site gets wiped because my backups are stored locally right beside the site itself.&lt;/p&gt;
 &lt;p&gt;I thought to myself, &amp;ldquo;Hmmm. What would help me back these files up, let me know that it is done, access them quickly, and also cost no money?&amp;rdquo;. Email + &lt;code&gt;CRON&lt;/code&gt;. Email is a pretty reasonable solution for this.&lt;/p&gt;
@@ -106,10 +106,10 @@
     
     <item>
       <title>Validate Email With Lua</title>
-      <link>https://ohdoylerules.com/snippets/validate-email-with-lua/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/validate-email-with-lua/</link>
       <pubDate>Sun, 06 Sep 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/validate-email-with-lua/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/validate-email-with-lua/</guid>
       <description>&lt;p&gt;Checking if an email is valid should be easy, right? WRONG.&lt;/p&gt;
 &lt;p&gt;This took about 3-4 hours to finally get. I scoured the web for a good email validation function. But, I was unable to find any that actually handled all the valid email variations.&lt;/p&gt;
 &lt;p&gt;If you didn&amp;rsquo;t know, the &lt;a href=&#34;https://en.wikipedia.org/wiki/Email_address#Examples&#34;&gt;spec for email&lt;/a&gt; is actually pretty complex. It allows a lot more than just a web-safe prefix and a domain sandwiched between an &lt;code&gt;@&lt;/code&gt; symbol. You can use quotes, brackets, escapes, and more &lt;code&gt;@&lt;/code&gt; symbols.&lt;/p&gt;
@@ -124,10 +124,10 @@
     
     <item>
       <title>Simple PHP JSON Response</title>
-      <link>https://ohdoylerules.com/snippets/simple-php-json-response/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/simple-php-json-response/</link>
       <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/simple-php-json-response/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/simple-php-json-response/</guid>
       <description>&lt;p&gt;This is little snippet I use all the time when I am building simple flat sites that need a single route for an AJAX request.&lt;/p&gt;
 &lt;p&gt;There are a couple of things you need to do in order to create a proper JSON response.&lt;/p&gt;
 &lt;h4 id=&#34;use-json_encode&#34;&gt;Use json_encode&lt;/h4&gt;
@@ -158,10 +158,10 @@
     
     <item>
       <title>Easy FFmpeg Video Posters</title>
-      <link>https://ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</link>
       <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</guid>
       <description>&lt;p&gt;A week ago I was tasked with uploading about 20 different videos to a CMS. Normally for the HTML5 Video element to look nice, you should upload a &lt;a href=&#34;http://www.w3.org/TR/2012/WD-html5-20121025/the-video-element.html#attr-video-poster&#34;&gt;poster image&lt;/a&gt; so that there can be something showing before the video starts to play.&lt;/p&gt;
 &lt;p&gt;In my case, I had to generate a poster for each of these 20 videos. This would have taken a long time, so I scripted it using FFmpeg!&lt;/p&gt;
 &lt;p&gt;Here is the script:&lt;/p&gt;
@@ -189,10 +189,10 @@
     
     <item>
       <title>PhalconPHP Crop Image To Fit</title>
-      <link>https://ohdoylerules.com/snippets/phalconphp-crop-to-fit/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/phalconphp-crop-to-fit/</link>
       <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/phalconphp-crop-to-fit/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/phalconphp-crop-to-fit/</guid>
       <description>&lt;p&gt;I was trying to find out how to crop-to-fit an image with &lt;code&gt;GD&lt;/code&gt;. But there were no examples with Phalcon. There was one post that mentioned using &lt;code&gt;Imagick&lt;/code&gt;. The only problem was that you needed to compiled Imagick with &lt;code&gt;--lrf&lt;/code&gt; in order to use &lt;code&gt;liquidRescale&lt;/code&gt;. This may not be an option on many hosting platforms. For that reason, I wanted to use &lt;code&gt;GD&lt;/code&gt; instead.&lt;/p&gt;
 &lt;p&gt;I &lt;a href=&#34;http://salman-w.blogspot.com/2009/04/crop-to-fit-image-using-aspphp.html&#34; title=&#34;Crop-To-Fit an Image Using ASP/PHP&#34;&gt;found this post&lt;/a&gt; after a quick Google search. It helped me create the base for my Phalcon version of the function. This may seem pretty easy for some people, but I found enough people asking, that I figured I would share the whole code.&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/james2doyle/13a36401d6249729d017.js&#34;&gt;&lt;/script&gt;
@@ -202,10 +202,10 @@
     
     <item>
       <title>Using Node.js in an AppleScript</title>
-      <link>https://ohdoylerules.com/snippets/using-node-in-applescript/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/using-node-in-applescript/</link>
       <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/using-node-in-applescript/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/using-node-in-applescript/</guid>
       <description>&lt;p&gt;A few days ago, I wrote an article about &lt;a href=&#34;https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx&#34; title=&#34;Copy filepath to clipboard in OSX&#34;&gt;how to create a service in Automator to copy the selected file&amp;rsquo;s path to the clipboard while in the Finder.app&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I was playing around some more and thought it would be cool to be able to right click and convert a markdown file to HTML. This can be useful for lazy people who don&amp;rsquo;t want to open and app or terminal just to convert.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -246,10 +246,10 @@
     
     <item>
       <title>Copy filepath to clipboard in OSX</title>
-      <link>https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</link>
       <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</guid>
       <description>&lt;p&gt;At &lt;a href=&#34;http://warpaintmedia.ca&#34; title=&#34;WARPAINT Media&#34;&gt;WARPAINT&lt;/a&gt;, we use &lt;a href=&#34;https://www.dropbox.com&#34; title=&#34;Dropbox Homepage&#34;&gt;Dropbox&lt;/a&gt; for collaborating on our files. This is awesome, but a lot of the times you get some pretty nasty file paths. Especially when you are trying to guide someone to a place where you saved a file.&lt;/p&gt;
 &lt;p&gt;I wanted to solve this problem by creating an AppleScript service that would allow everyone to &lt;strong&gt;Copy the selected file&amp;rsquo;s path to the clipboard&lt;/strong&gt;. Here is how I did it.&lt;/p&gt;
 &lt;hr&gt;
@@ -259,8 +259,8 @@
 &lt;/blockquote&gt;
 &lt;p&gt;So the first thing is to open Automator and create a new service. Like so:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-1.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-1.png&#34; width=&#34;720&#34; /&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-1.png&#34; target=&#34;_blank&#34; &gt;
+    &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-1.png&#34; width=&#34;720&#34; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Then you need to select &lt;code&gt;files or folders&lt;/code&gt; for &amp;ldquo;Service receives selected&amp;rdquo; and choose &lt;code&gt;Finder.app&lt;/code&gt; for the second option. The do a search for &lt;code&gt;applescript&lt;/code&gt; and drag the &lt;code&gt;Run AppleScript&lt;/code&gt; choice into the window on the right.&lt;/p&gt;
@@ -271,28 +271,28 @@
 &lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;tell&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When that is all done, it should look something like this.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-2.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-2.png&#34; width=&#34;720&#34; /&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-2.png&#34; target=&#34;_blank&#34; &gt;
+    &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-2.png&#34; width=&#34;720&#34; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Go to &lt;code&gt;File &amp;gt; Save&lt;/code&gt; or press &lt;code&gt;⌘S&lt;/code&gt;. &lt;strong&gt;Do not Save-As&lt;/strong&gt;. Enter in &lt;code&gt;Copy Path To Clipboard&lt;/code&gt; as the name. &lt;em&gt;It shouldn&amp;rsquo;t ask for a location&lt;/em&gt;, it will just show an input field. This is perfectly fine.&lt;/p&gt;
 &lt;p&gt;Now open a new finder window and go to &lt;code&gt;Finder &amp;gt; Services &amp;gt; Services Preferences...&lt;/code&gt; or &lt;code&gt;System Preferences &amp;gt; Keyboard &amp;gt; Shortcuts&lt;/code&gt;. Select services on the left menu if it isn&amp;rsquo;t already and scroll down to find &lt;code&gt;Copy Path To Clipboard&lt;/code&gt;. This will open a window like this:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-3.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-3.png&#34; width=&#34;720&#34; /&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-3.png&#34; target=&#34;_blank&#34; &gt;
+    &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-3.png&#34; width=&#34;720&#34; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Click on that item and make sure it is checked off, it should be by default. Then add a shortcut by clicking on the right side where it says &amp;ldquo;add shortcut&amp;rdquo;. I made mine &lt;code&gt;⌃⌘\&lt;/code&gt;. But if you have &lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred.app&lt;/a&gt; that might conflict with it&amp;rsquo;s copy feature. So you choose.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-4.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-4.png&#34; width=&#34;720&#34; /&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-4.png&#34; target=&#34;_blank&#34; &gt;
+    &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-4.png&#34; width=&#34;720&#34; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;You can use these steps to run any AppleScript on a file you choose. Pretty slick!&lt;/p&gt;
 &lt;p&gt;Now when you have a file of folder selected in the Finder, you can right-click, go to Services, and select &lt;code&gt;Copy Path To Clipboard&lt;/code&gt;!&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-5.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-5.png&#34; width=&#34;646&#34; /&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-5.png&#34; target=&#34;_blank&#34; &gt;
+    &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/clipboard-5.png&#34; width=&#34;646&#34; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </description>
@@ -300,10 +300,10 @@
     
     <item>
       <title>Purge A File From A Github Repo</title>
-      <link>https://ohdoylerules.com/snippets/purge-file-from-github/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/purge-file-from-github/</link>
       <pubDate>Sun, 18 May 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/purge-file-from-github/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/purge-file-from-github/</guid>
       <description>&lt;p&gt;Ever wanted to permanently remove a file from a repo and it&amp;rsquo;s history?&lt;/p&gt;
 &lt;p&gt;Add this snippet to the end of your &lt;code&gt;.bashrc&lt;/code&gt; (or &lt;code&gt;.zshrc&lt;/code&gt; if you are a cool guy developer):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# remove a file from the repo and from the history&lt;/span&gt;
@@ -326,10 +326,10 @@ git commit -m &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Add MYFILE to .
     
     <item>
       <title>Bash select example</title>
-      <link>https://ohdoylerules.com/snippets/bash-select-example/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/bash-select-example/</link>
       <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/bash-select-example/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/bash-select-example/</guid>
       <description>&lt;p&gt;I recently bought 2 &lt;a href=&#34;http://raspberrypi.org&#34;&gt;raspberry pi computers&lt;/a&gt;. One is for home, and one is for the office.&lt;/p&gt;
 &lt;p&gt;Since we have dynamic IPs setup in the office, and I have the same at my house, I needed to be able to connect using the MAC address of the pi. I ended up writing a little script to get the IP based on the MAC Address, and then ssh into the computer. Pretty slick.&lt;/p&gt;
 &lt;p&gt;To make my life easier I used the &lt;code&gt;select&lt;/code&gt; command in bash. The &lt;a href=&#34;http://www.gnu.org/software/bash/manual/bashref.html#Conditional-Constructs&#34;&gt;documentation for select&lt;/a&gt; leaves a lot to be desired. So I had to fiddle with it until I got it right. Here is a simple boilerplate for a bash script using select:&lt;/p&gt;
@@ -363,10 +363,10 @@ $
     
     <item>
       <title>Randomly Generate A Password In Bash</title>
-      <link>https://ohdoylerules.com/snippets/bash-random-password-generation/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/bash-random-password-generation/</link>
       <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/bash-random-password-generation/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/bash-random-password-generation/</guid>
       <description>&lt;p&gt;When installing or setting up frameworks, in this case I was playing around with &lt;a href=&#34;http://laravel.com/&#34;&gt;Laravel&lt;/a&gt;, you usually need to set a session/secret/encryption key.&lt;/p&gt;
 &lt;p&gt;I know why this is, but I always end up looking around for some random password generator so I can get a random string that is exactly 32 characters. Isn&amp;rsquo;t there an easier way?!?!&lt;/p&gt;
 &lt;p&gt;Yes there is. If you have the magical &lt;a href=&#34;https://www.openssl.org/&#34; title=&#34;OpenSSL Website&#34;&gt;OpenSSL&lt;/a&gt; installed, which most do, you can use it to generate a random string.&lt;/p&gt;
@@ -418,10 +418,10 @@ Argument must be a number
     
     <item>
       <title>List File Permission Numbers</title>
-      <link>https://ohdoylerules.com/snippets/list-file-permission-numbers/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/list-file-permission-numbers/</link>
       <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/list-file-permission-numbers/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/list-file-permission-numbers/</guid>
       <description>&lt;p&gt;I wanted to see the chmod numbers for the files in a directory. So I can copy them to the other files. Since I don&amp;rsquo;t want to do that dumb chmod math, I looked for a way to do it easily.&lt;/p&gt;
 &lt;p&gt;I found the following code:&lt;/p&gt;
 &lt;h4 id=&#34;function&#34;&gt;Function&lt;/h4&gt;
@@ -445,10 +445,10 @@ Argument must be a number
     
     <item>
       <title>Easy Command Line Reverse Geocoding</title>
-      <link>https://ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</link>
       <pubDate>Wed, 27 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</guid>
       <description>&lt;p&gt;Using this function you can easily reverse geocode an address into a &lt;em&gt;lat and lang&lt;/em&gt; position. This uses the &lt;a href=&#34;http://stedolan.github.io/jq/&#34;&gt;jq executable&lt;/a&gt; and the &lt;a href=&#34;https://developers.google.com/maps/documentation/geocoding/#GeocodingRequests&#34;&gt;Google Maps API&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;requirements&#34;&gt;Requirements&lt;/h4&gt;
 &lt;p&gt;This little snippet &lt;a href=&#34;http://stedolan.github.io/jq/&#34;&gt;requires jq to be installed&lt;/a&gt;. It is very easy to install.&lt;/p&gt;
@@ -479,10 +479,10 @@ Argument must be a number
     
     <item>
       <title>Decrypt-Encrypt Functions From Command Line</title>
-      <link>https://ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</link>
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</guid>
       <description>&lt;h3 id=&#34;preamble&#34;&gt;Preamble&lt;/h3&gt;
 &lt;p&gt;I have been reading about encryption and security since the whole NSA/Edward Snowden thing. It is pretty intense stuff. Most of the security comes from the philosophy of &amp;ldquo;security through obfuscation&amp;rdquo;. What this means, is that you are making it extremely difficult (expensive, time-consuming) to try and look at your &amp;ldquo;stuff&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;I would suggest reading &lt;a href=&#34;http://en.wikipedia.org/wiki/Key_size&#34;&gt;this article on &amp;ldquo;Key Size&amp;rdquo;&lt;/a&gt;. This is probably my favorite quote from the article:&lt;/p&gt;
@@ -525,10 +525,10 @@ gshred --iterations&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;s
     
     <item>
       <title>Get Wordpress via Command Line</title>
-      <link>https://ohdoylerules.com/snippets/wordpress-via-command-line/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/wordpress-via-command-line/</link>
       <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/wordpress-via-command-line/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/wordpress-via-command-line/</guid>
       <description>&lt;p&gt;All the cool kids are using the command line these days. This allows you to run quick commands and little functions that would be too tedious to run with a GUI or just clicking around.&lt;/p&gt;
 &lt;p&gt;A while ago I added this little code snippet to be .bashrc file. It means I can run &lt;code&gt;download-wordpress&lt;/code&gt; in an empty folder and then it will go and grab the latest archive, unzip it, and remove the junk.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;download-wordpress &lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
@@ -545,10 +545,10 @@ gshred --iterations&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;s
     
     <item>
       <title>HostMonster PHPMailer Settings</title>
-      <link>https://ohdoylerules.com/snippets/hostmonster-phpmailer/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/hostmonster-phpmailer/</link>
       <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/hostmonster-phpmailer/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/hostmonster-phpmailer/</guid>
       <description>&lt;p&gt;God Damn!! This one was a b*tch to get right. I have a small plugin for a site that makes doing AJAX contact forms a breeze.&lt;/p&gt;
 &lt;p&gt;But, of course, it likes to be a pain in the ass when I am trying to set it up. Also you usually have to be on the correct domain to allow the script to send the right email. So doubly annoying.&lt;/p&gt;
 &lt;p&gt;Here is the code that worked for me:&lt;/p&gt;
@@ -566,10 +566,10 @@ $mail-&amp;gt;Host = &amp;#39;host286.hostmonster.com&amp;#39;;
     
     <item>
       <title>compare multiple md5 hashes</title>
-      <link>https://ohdoylerules.com/snippets/compare-multiple-md5-hashes/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/compare-multiple-md5-hashes/</link>
       <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/compare-multiple-md5-hashes/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/compare-multiple-md5-hashes/</guid>
       <description>&lt;p&gt;Sometimes you need to check a file against a &lt;code&gt;md5&lt;/code&gt; hash. This can be annoying. Just look at this output:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# command&lt;/span&gt;
 md5 file.xml ~/Downloads/file.xml file2.xml
@@ -613,10 +613,10 @@ cat check.md5
     
     <item>
       <title>Render PHP File With Data</title>
-      <link>https://ohdoylerules.com/snippets/render-php-with-data/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/render-php-with-data/</link>
       <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/render-php-with-data/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/render-php-with-data/</guid>
       <description>&lt;p&gt;I am modifying an open source CMS to use the &lt;a href=&#34;phalconphp.com/en/&#34; title=&#34;Phalcon PHP Framework&#34;&gt;Phalcon PHP framework&lt;/a&gt;, as well as the &lt;a href=&#34;https://github.com/chobie/php-sundown&#34; title=&#34;PHP-Sundown&#34;&gt;PHP-Sundown&lt;/a&gt; C implimentation of Markdown.&lt;/p&gt;
 &lt;p&gt;It is a very simple CMS which previously would just echo out compiled HTML. But I am using the Volt template engine in Phalcon. It renders &lt;code&gt;.volt&lt;/code&gt; files to native PHP. This means that I cannot just spit out raw HTML. I need to create a render function that passes an array of data to my PHP file.&lt;/p&gt;
 &lt;p&gt;Here is that function:&lt;/p&gt;
@@ -637,10 +637,10 @@ echo renderPhpFile(&amp;#39;views/templates/index.php&amp;#39;, $view_data);
     
     <item>
       <title>Simple HTML5 Notifications</title>
-      <link>https://ohdoylerules.com/snippets/simple-html5-notification/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/simple-html5-notification/</link>
       <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/simple-html5-notification/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/simple-html5-notification/</guid>
       <description>&lt;p&gt;I was playing around with HTML5 Notifications the other day. They are pretty slick! It allows you to essentially send growl notifications to your desktop from the browser.&lt;/p&gt;
 &lt;p&gt;This little function would be used during an event to request permission for notifications and then display it with a simple abstraction of the native API.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; notify(title, body, timeout) {
@@ -666,10 +666,10 @@ echo renderPhpFile(&amp;#39;views/templates/index.php&amp;#39;, $view_data);
     
     <item>
       <title>Apax apache theme in htdocs</title>
-      <link>https://ohdoylerules.com/snippets/apax-in-htdocs/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/apax-in-htdocs/</link>
       <pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/apax-in-htdocs/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/apax-in-htdocs/</guid>
       <description>&lt;p&gt;I was tired of looking at the ugly default no-style of the htdocs file listing. I had seen &lt;a href=&#34;http://adamwhitcroft.com/apaxy/&#34; title=&#34;Apaxy Homepage&#34;&gt;Apaxy theme&lt;/a&gt; before and thought it was really nice. But I couldn&amp;rsquo;t figure out how to get it to work with the default htdocs MAMP folder. I tried again tonight, and I got it working without much hassle.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/AdamWhitcroft/Apaxy/archive/master.zip&#34; title=&#34;Apaxy Download Link&#34;&gt;Download Apaxy&lt;/a&gt; and move everything from the apaxy folder into your MAMP htdocs folder.&lt;/li&gt;
@@ -680,7 +680,7 @@ echo renderPhpFile(&amp;#39;views/templates/index.php&amp;#39;, $view_data);
 &lt;li&gt;enjoy a not-ugly page&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Now you can edit the files in the &amp;ldquo;.theme&amp;rdquo; folder and style your page. I changed the &amp;ldquo;.wrapper&amp;rdquo; to have no max-width or margin, this way it was full screen.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png&#34; alt=&#34;apaxy theme applied to htdocs&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png&#34; alt=&#34;apaxy theme applied to htdocs&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Above is a screenshot of what my htdocs/localhost:8888 now looks like.&lt;/p&gt;
 &lt;h4 id=&#34;optional&#34;&gt;OPTIONAL&lt;/h4&gt;
 &lt;p&gt;You can also hide the &amp;ldquo;.theme&amp;rdquo; folder. You will see a section that looks
@@ -695,10 +695,10 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
     
     <item>
       <title>grunt terminal-notifier setup</title>
-      <link>https://ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</link>
       <pubDate>Fri, 07 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</guid>
       <description>&lt;p&gt;I just downloaded the new Mountain Lion, finally. One of the biggest new things is the cool little native notifications akin to growl. I thought it would be cool to get a nice notification when my &amp;ldquo;grunt watch&amp;rdquo; task finished. First things first. You need to install &lt;a href=&#34;https://github.com/alloy/terminal-notifier&#34; title=&#34;alloy/terminal notifier&#34;&gt;terminal-notifier&lt;/a&gt;. This allows you to interact with the native OSX notifications system.&lt;/p&gt;
 &lt;p&gt;There is a ruby gem and a standalone &amp;ldquo;.app&amp;rdquo;. Once this is installed, you will need to grab the &lt;a href=&#34;https://github.com/alextucker/grunt-growl&#34; title=&#34;alextucker/grunt-growl&#34;&gt;grunt-growl&lt;/a&gt; plugin. There are more instructions there for the terminal-notifier app. Now you will need to setup a new task in your gruntfile:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;growl&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
@@ -730,10 +730,10 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
     
     <item>
       <title>Detect Animation Events in Javascript</title>
-      <link>https://ohdoylerules.com/snippets/animation-events-in-javascript/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/animation-events-in-javascript/</link>
       <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/animation-events-in-javascript/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/animation-events-in-javascript/</guid>
       <description>&lt;p&gt;Whenever I am doing animations that have javascript and CSS, most of the time, I want an callback to fire in javascript when the animations are complete. I have used this event for modals and little UI plugins. Normally, I would have a start event(click or touch) that just adds a class that has a CSS animation attached to it. Lets say we have a class called &amp;lsquo;on&amp;rsquo;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;.&lt;span style=&#34;color:#50fa7b&#34;&gt;modal&lt;/span&gt;.&lt;span style=&#34;color:#50fa7b&#34;&gt;on&lt;/span&gt; {
   &lt;span style=&#34;color:#ff79c6&#34;&gt;animation&lt;/span&gt;: showModal &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;ease&lt;/span&gt;;
@@ -777,12 +777,12 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
     
     <item>
       <title>Modernizr SVG Fallback to PNG</title>
-      <link>https://ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</link>
       <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</guid>
       <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/githubgistlogo.png&#34; alt=&#34;Github Gists Logo&#34;&gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/githubgistlogo.png&#34; alt=&#34;Github Gists Logo&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;I have been building a small project boilerplate for when I am starting new projects. I wrote this small snippet based on &lt;a href=&#34;http://toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script/&#34; title=&#34;Todd Motto - mastering-svg-use-for-a-retina-web-fallbacks-with-png-script&#34;&gt;this article&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The only changes I made were wrapping it in a closure and combining all the vars to make it smaller. Of course your minifier would do this anyway unless you are using it inline after including Modernizr.&lt;/p&gt;
@@ -807,12 +807,12 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
     
     <item>
       <title>Salt.js micro selector library</title>
-      <link>https://ohdoylerules.com/snippets/salt-js-mirco-selector-library/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/salt-js-mirco-selector-library/</link>
       <pubDate>Sun, 12 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/salt-js-mirco-selector-library/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/salt-js-mirco-selector-library/</guid>
       <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/saltjs.png&#34; alt=&#34;Slat.js Logo&#34;&gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/saltjs.png&#34; alt=&#34;Slat.js Logo&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;I made a tiny dom selector library called &lt;a href=&#34;https://github.com/james2doyle/saltjs&#34; title=&#34;james2doyle/saltjs&#34;&gt;Salt.js&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It uses a regular expression to map different queries you pass through it to their native get functions. The reason I don’t just use &lt;code&gt;querySelectorAll&lt;/code&gt; for everything is because it is slower than the native get commands. &lt;a href=&#34;http://jsperf.com/getelementbyid-vs-queryselector/11&#34;&gt;See this jsperf test&lt;/a&gt;.&lt;/p&gt;
@@ -841,17 +841,17 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
     
     <item>
       <title>jQuery Plugin Snippets for Sublime Text 2</title>
-      <link>https://ohdoylerules.com/snippets/jquery-plugin-snippets/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/jquery-plugin-snippets/</link>
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/jquery-plugin-snippets/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/jquery-plugin-snippets/</guid>
       <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/jquery.png&#34; alt=&#34;jquery logo&#34;&gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/jquery.png&#34; alt=&#34;jquery logo&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;I created a &lt;a href=&#34;https://github.com/james2doyle/jquery-plugin-snippets&#34; title=&#34;james2doyle/jquery-plugin-snippets&#34;&gt;bunch of snippets&lt;/a&gt; out of the patterns from &lt;a href=&#34;https://github.com/shichuan/javascript-patterns/tree/master/jquery-plugin-patterns&#34; title=&#34;shichuan javascript patterns&#34;&gt;shichuans javascript patterns repo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;These are for &lt;a href=&#34;http://www.sublimetext.com/&#34; title=&#34;sublime text site&#34;&gt;Sublime Text 2&lt;/a&gt; which everyone knows. You just clone the repo into the packages directory and they magically appear. If you don’t use sublime text…&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/yunost2.jpg&#34; alt=&#34;y u no use sublime text 2&#34;&gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/yunost2.jpg&#34; alt=&#34;y u no use sublime text 2&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;I had to create that image because it didn’t exists for some reason.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/jquery-plugin-snippets&#34; title=&#34;james2doyle/jquery-plugin-snippets&#34;&gt;Github Linky&lt;/a&gt;.&lt;/p&gt;
@@ -860,10 +860,10 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
     
     <item>
       <title>WYSIWYG in PyroCMS Widgets</title>
-      <link>https://ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</link>
       <pubDate>Sat, 10 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</guid>
       <description>&lt;p&gt;I have been working on a site that uses &lt;a href=&#34;https://www.pyrocms.com/&#34; title=&#34;PyroCMS Homepage&#34;&gt;PyroCMS&lt;/a&gt;. I needed to build a custom widget that had a WYSIWYG textarea. This is what worked for me.&lt;/p&gt;
 &lt;p&gt;Add this to template in the constructors function.&lt;/p&gt;
 &lt;h4 id=&#34;pyrocmssystemcmsmoduleswidgetscontrollersadminphp&#34;&gt;pyrocms/system/cms/modules/widgets/controllers/admin.php&lt;/h4&gt;
@@ -897,10 +897,10 @@ $this-&amp;gt;template
     
     <item>
       <title>zsh new file &amp;&amp; open file function</title>
-      <link>https://ohdoylerules.com/snippets/zsh-new-open-function/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/zsh-new-open-function/</link>
       <pubDate>Sat, 13 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/zsh-new-open-function/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/zsh-new-open-function/</guid>
       <description>&lt;p&gt;Here is a little function that I made for &lt;a href=&#34;https://github.com/robbyrussell/oh-my-zsh&#34; title=&#34;oh-my-zsh&#34;&gt;oh-my-zsh&lt;/a&gt;. I found myself constantly doing &lt;code&gt;sudo touch app.js &amp;amp;&amp;amp; open app.js&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;What this little command does is create an empty file called &lt;code&gt;app.js&lt;/code&gt; and then opens it with whatever your default editor is.&lt;/p&gt;
 &lt;h4 id=&#34;here-is-the-function&#34;&gt;Here is the function:&lt;/h4&gt;
@@ -916,10 +916,10 @@ new () {
     
     <item>
       <title>Target Mozilla-only in CSS</title>
-      <link>https://ohdoylerules.com/snippets/target-mozilla-only-in-css/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/target-mozilla-only-in-css/</link>
       <pubDate>Thu, 11 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/target-mozilla-only-in-css/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/target-mozilla-only-in-css/</guid>
       <description>&lt;p&gt;I had some issues in Firefox recently. I was building a complicated “item” in CSS and it looked great in Chrome. I got an email later saying that the sizing was all off for a bunch of things. I thought this was really strange. I went back to the CSS and Chrome and I could not see any issues.&lt;/p&gt;
 &lt;p&gt;I then fired up Firefox and, yikes! There was a bunch of weird issues. This is strange because normally Chrome to Firefox translates pretty well. I was using the &lt;code&gt;::first-letter&lt;/code&gt; element and a few &lt;code&gt;::before&lt;/code&gt; elements. But somehow, someway they got messed up. Anyway, I discovered this little snippet:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;@&lt;span style=&#34;color:#ff79c6&#34;&gt;-moz-document&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;url-prefix&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; {
@@ -931,10 +931,10 @@ new () {
     
     <item>
       <title>nodelist.each</title>
-      <link>https://ohdoylerules.com/snippets/nodelist-each/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/snippets/nodelist-each/</link>
       <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/nodelist-each/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/snippets/nodelist-each/</guid>
       <description>&lt;p&gt;I was doing a project in vanilla javascript that used querySelectorAll, which returns a nodelist object. I wanted the jQuery each function so that I could add an event listener to each element. It was a school project and no jQuery allowed so I did some research and came up with this little prototype.&lt;/p&gt;
 &lt;p&gt;Here is the result:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;Object&lt;/span&gt;.prototype.each &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(callback) {

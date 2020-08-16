@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demo on James Doyle</title>
-    <link>https://ohdoylerules.com/category/demo/</link>
+    <link>https://james2doyle.github.io/ohdoylerules.com/category/demo/</link>
     <description>Recent content in Demo on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,20 +9,20 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ohdoylerules.com/category/demo/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/category/demo/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>GoDaddy Email on Digital Ocean</title>
-      <link>https://ohdoylerules.com/demo/godaddy-digital-ocean/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/demo/godaddy-digital-ocean/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/demo/godaddy-digital-ocean/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/godaddy-digital-ocean/</guid>
       <description>&lt;p&gt;I was recently trying to send an email to a domain I had purchased on GoDaddy but had hosting on &lt;a href=&#34;https://www.digitalocean.com/?refcode=802f151adea5&#34;&gt;Digital Ocean&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I sent the email and a couple hours later it bounced. This wasn&amp;rsquo;t good. My email was going to GoDadddy but I want the site &lt;em&gt;hosted&lt;/em&gt; on Digital Ocean.&lt;/p&gt;
 &lt;p&gt;So I had to find how to keep the domain hosted on Digital Ocean but the email needs to stay on GoDaddy servers.&lt;/p&gt;
 &lt;p&gt;Here are the DNS settings I used:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/do-records1.png&#34; title=&#34;GoDaddy Digital Ocean DNS Records&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/do-records1.png&#34; alt=&#34;GoDaddy Digital Ocean DNS Records&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/do-records1.png&#34; title=&#34;GoDaddy Digital Ocean DNS Records&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/do-records1.png&#34; alt=&#34;GoDaddy Digital Ocean DNS Records&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Your settings may differ, so please follow these instructions in order to check if your settings are correct:&lt;/p&gt;
 &lt;ul&gt;
@@ -34,7 +34,7 @@
 &lt;/ul&gt;
 &lt;p&gt;There you can see that there are a bunch of records listed. These are the ones for your specific domain.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/do-records2.png&#34; title=&#34;GoDaddy Default MX and DNS Records&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/do-records2.png&#34; alt=&#34;GoDaddy Default MX and DNS Records&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/do-records2.png&#34; title=&#34;GoDaddy Default MX and DNS Records&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/do-records2.png&#34; alt=&#34;GoDaddy Default MX and DNS Records&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Hopefully this was helpful because it took a long time to figure out! It is even more painful because the records take a while to propogate. Boo!&lt;/p&gt;
 </description>
@@ -42,10 +42,10 @@
     
     <item>
       <title>PHP Variables in strings</title>
-      <link>https://ohdoylerules.com/demo/php-variables-in-strings/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/demo/php-variables-in-strings/</link>
       <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/demo/php-variables-in-strings/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/php-variables-in-strings/</guid>
       <description>&lt;p&gt;I have been getting quite annoyed lately when escaping a string to output a PHP variable. So I decided to make a little test so I could see what the best way to tackle this was.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// tested on PHP 5.4.4
 $var = &amp;#34;variable value&amp;#34;;
@@ -64,12 +64,12 @@ echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
     
     <item>
       <title>Making a socket.io app and how socket.io works</title>
-      <link>https://ohdoylerules.com/demo/socketio-works-howto/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/demo/socketio-works-howto/</link>
       <pubDate>Sun, 13 Jan 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/demo/socketio-works-howto/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/socketio-works-howto/</guid>
       <description>&lt;p&gt;I made my first video about web development. It is a quick video about socket.io and how it works with node and such.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://youtu.be/JfYRGTvMbBA&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/vlcsnap-2013-01-12-16h52m23s239.jpg&#34; alt=&#34;Socket.io demo app&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://youtu.be/JfYRGTvMbBA&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/vlcsnap-2013-01-12-16h52m23s239.jpg&#34; alt=&#34;Socket.io demo app&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It also includes a little demo of a tiny app I built. I may release the source later on depending on the videos popularity.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://youtu.be/JfYRGTvMbBA&#34;&gt;Making a socket.io app&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -77,25 +77,25 @@ echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
     
     <item>
       <title>A demo of CSS Flexbox</title>
-      <link>https://ohdoylerules.com/demo/flexbox-demo/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/demo/flexbox-demo/</link>
       <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/demo/flexbox-demo/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/flexbox-demo/</guid>
       <description>&lt;p&gt;An old flexbox demo I made a while back. It may not be the latest syntax so beware!!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://codepen.io/james2doyle/pen/svEek&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-11-13-at-4.23.41-PM-e135284190554411.png&#34; alt=&#34;Flexbox Demo&#34; title=&#34;Flexbox Demo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://codepen.io/james2doyle/pen/svEek&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2012-11-13-at-4.23.41-PM-e135284190554411.png&#34; alt=&#34;Flexbox Demo&#34; title=&#34;Flexbox Demo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://codepen.io/james2doyle/pen/svEek&#34; title=&#34;Codepen Link&#34;&gt;Check out the pen&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Letterpress loader in CSS</title>
-      <link>https://ohdoylerules.com/demo/letterpress-loader-in-css/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/demo/letterpress-loader-in-css/</link>
       <pubDate>Sun, 04 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/demo/letterpress-loader-in-css/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/letterpress-loader-in-css/</guid>
       <description>&lt;p&gt;I recently bought the amazing Letterpress app for iPhone. It truly is gorgeous, and has an amazing UI. It inspired me to make this little doodle.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-11-04-at-1.34.39-AM11.png&#34; alt=&#34;Letterpress Loader In CSS&#34;&gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2012-11-04-at-1.34.39-AM11.png&#34; alt=&#34;Letterpress Loader In CSS&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;This is a little tribute. It&amp;rsquo;s an animated css loader in the style of Letterpress. It&amp;rsquo;s a little different because it uses the custom cubic-bezier curve called &amp;lsquo;ease-in-out-back&amp;rsquo;, which is essentially elastic. I got the values from the great site &lt;a href=&#34;http://matthewlein.com/ceaser/&#34; title=&#34;Ceaser&#34;&gt;Ceaser&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As always, &lt;a href=&#34;http://codepen.io/james2doyle/pen/rDEzp&#34; title=&#34;Letterpress CSS Loader&#34;&gt;check out the pen&lt;/a&gt;&lt;/p&gt;
@@ -104,10 +104,10 @@ echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
     
     <item>
       <title>Generated Content Article Title</title>
-      <link>https://ohdoylerules.com/demo/generated-content-title/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/demo/generated-content-title/</link>
       <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/demo/generated-content-title/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/generated-content-title/</guid>
       <description>&lt;p&gt;I like &lt;a href=&#34;http://jsfiddle.net/&#34; title=&#34;jsFiddle&#34;&gt;jsFiddle&lt;/a&gt;. I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my &lt;a href=&#34;https://ohdoylerules.com/work/&#34; title=&#34;Work&#34;&gt;work&lt;/a&gt; section.&lt;/p&gt;
 &lt;p&gt;Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the PHP &lt;code&gt;echo&lt;/code&gt;s. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;/*! styles for printing */&lt;/span&gt;
@@ -122,7 +122,7 @@ echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
 &lt;p&gt;Would render as &lt;a href=&#34;www.example.com/&#34;&gt;Website (www.example.com/)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So with that in mind, I thought it would be cool to have a button that would render a count. So in practical applications it might be used for something like an inbox button. In the case I built it is a notifications button.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/54368011.png&#34; alt=&#34;notifications button&#34; &gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/54368011.png&#34; alt=&#34;notifications button&#34; &gt;
 &lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;button {
   color: #333;
@@ -158,13 +158,13 @@ button:after {
     
     <item>
       <title>No Javascript CSS Accordion</title>
-      <link>https://ohdoylerules.com/demo/no-javascript-accordion/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/demo/no-javascript-accordion/</link>
       <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/demo/no-javascript-accordion/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/no-javascript-accordion/</guid>
       <description>&lt;p&gt;I made this today. It&amp;rsquo;s a little CSS-only accordion. It uses the &lt;code&gt;:target&lt;/code&gt; selector. The &lt;code&gt;:target&lt;/code&gt; selector is rather new. It also has some quirks. It is almost like an onclick without the javascript.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-10-17-at-1.54.00-PM11.png&#34; alt=&#34;no-js accordion&#34; &gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2012-10-17-at-1.54.00-PM11.png&#34; alt=&#34;no-js accordion&#34; &gt;
 &lt;/div&gt;
 &lt;p&gt;The thing I find is that the name is being passed through the URL when using this method. This is nice when you want to refresh the page and keep the same item active. But that is also a downside because maybe when you refresh you want everything to reset. In that case, you would need to delete the variable/id out of the URL and then refresh.&lt;/p&gt;
 &lt;p&gt;But just &lt;a href=&#34;http://codepen.io/james2doyle/pen/tgxDr&#34; title=&#34;no-js accordion&#34;&gt;check it out&lt;/a&gt; already!&lt;/p&gt;
@@ -173,13 +173,13 @@ button:after {
     
     <item>
       <title>Mozilla Dev Derby</title>
-      <link>https://ohdoylerules.com/demo/mozilla-dev-derby/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/demo/mozilla-dev-derby/</link>
       <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/demo/mozilla-dev-derby/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/demo/mozilla-dev-derby/</guid>
       <description>&lt;p&gt;I have just submitted my demo for the &lt;a href=&#34;https://developer.mozilla.org/en-US/demos/detail/photo-shake&#34; title=&#34;Photo Shake Page&#34;&gt;Mozzila Dev Derby&lt;/a&gt;. If you like it, please vote. Thank you!&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/james2doyle-Camera-Api-Demo2111.png&#34; alt=&#34;Camera Api Demo&#34; &gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/james2doyle-Camera-Api-Demo2111.png&#34; alt=&#34;Camera Api Demo&#34; &gt;
 &lt;/div&gt;
 &lt;p&gt;It uses the HTML5 File Api and also uses the device orientation API. Firstly, you upload or take a picture, then that picture fades up below in a polaroid-style div. You can then move you device and see the picture move.&lt;/p&gt;
 &lt;p&gt;I also added something I called dynamic shine. This is just a diagonal white-to-transparent gradient. Tilting the device causes the photo to look like it is interacting with the light.&lt;/p&gt;

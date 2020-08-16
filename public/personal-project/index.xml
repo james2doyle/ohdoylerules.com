@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal-projects on James Doyle</title>
-    <link>https://ohdoylerules.com/personal-project/</link>
+    <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/</link>
     <description>Recent content in Personal-projects on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,14 +9,14 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Sat, 14 Mar 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ohdoylerules.com/personal-project/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/personal-project/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Minimal Raspberry Pi OS</title>
-      <link>https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</link>
       <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;I have had a &lt;a href=&#34;http://www.raspberrypi.org/products/model-b/&#34;&gt;Raspberry Pi B+&lt;/a&gt; for a while now, and I was looking to setup a very minimal Linux OS. I am sure this would work fine with the Pi 2.&lt;/p&gt;
 &lt;p&gt;Although the other &lt;a href=&#34;http://www.raspberrypi.org/downloads/&#34;&gt;Raspberry Pi OSs&lt;/a&gt; are great, a lot of them are too feature-full (read bloated) and have a packaged GUI that I would never use. Therefore, I wanted to install something much more &lt;em&gt;naked&lt;/em&gt; than the ones on the Raspberry Pi website.&lt;/p&gt;
@@ -36,7 +36,7 @@
 &lt;li&gt;When logged in, run &lt;code&gt;moebius&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/moebius-tool.png&#34; title=&#34;Moebius command line app&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Moebius command line app&#34; src=&#34;https://ohdoylerules.com/images/moebius-tool.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/moebius-tool.png&#34; title=&#34;Moebius command line app&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Moebius command line app&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/moebius-tool.png&#34; &gt;&lt;/a&gt;
   &lt;p&gt;Moebius command line app&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Moebius is the name of the OS, but also the name of a sweet little built-in command line tool to setup the rest of the Pi.&lt;/p&gt;
@@ -56,7 +56,7 @@
 &lt;li&gt;Select the &lt;code&gt;lang.gcc&lt;/code&gt; container&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/moebius-container-tool.png&#34; title=&#34;Moebius container command line app&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Moebius container command line app&#34; src=&#34;https://ohdoylerules.com/images/moebius-container-tool.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/moebius-container-tool.png&#34; title=&#34;Moebius container command line app&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Moebius container command line app&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/moebius-container-tool.png&#34; &gt;&lt;/a&gt;
   &lt;p&gt;Moebius container command line app&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;You may get an error&lt;/strong&gt; telling you to run &lt;code&gt;dpkg --configure -a&lt;/code&gt;. If this happens, press any key to close the container installed and then run that command. When that completes, try to install the &lt;code&gt;lang.gcc&lt;/code&gt; container again.&lt;/p&gt;
@@ -122,10 +122,10 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Phalcon Micro App Starter</title>
-      <link>https://ohdoylerules.com/personal-project/phalcon-micro-starter/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/phalcon-micro-starter/</link>
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/phalcon-micro-starter/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/phalcon-micro-starter/</guid>
       <description>&lt;p&gt;I created a &lt;a href=&#34;https://github.com/james2doyle/phalcon-micro-start&#34;&gt;simple application template&lt;/a&gt; that helps people get started with &lt;a href=&#34;http://phalconphp.com/&#34; title=&#34;Phalcon PHP Homepage&#34;&gt;Phalcon PHP&lt;/a&gt; using a more practical example of the &lt;a href=&#34;http://docs.phalconphp.com/en/latest/reference/micro.html&#34;&gt;Micro application&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;There is already a &lt;a href=&#34;https://github.com/phalcon/store&#34;&gt;sample application created by the Phalcon team that uses the Micro class&lt;/a&gt;, but I found it to be a little more specific than I would like. It uses things like the &lt;a href=&#34;http://docs.phalconphp.com/en/latest/reference/volt.html&#34;&gt;Volt template engine&lt;/a&gt;, models, Database connections, and some other &lt;a href=&#34;https://github.com/phalcon/store/blob/master/config/bootstrap.php&#34;&gt;glossed over Bootstrapping&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/phalcon-micro-start&#34;&gt;My example application&lt;/a&gt; contains very little. It has enough to get you started creating a simple JSON-based application, or just serving a static site with a few cached views.&lt;/p&gt;
@@ -152,10 +152,10 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>PyroCMS Module Generator 2.0</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-module-generator-2/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-module-generator-2/</link>
       <pubDate>Sun, 16 Nov 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-module-generator-2/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-module-generator-2/</guid>
       <description>&lt;p&gt;Finally, I found a good excuse to re-write my old &lt;a href=&#34;https://ohdoylerules.com/personal-project/pyro-module-generator&#34;&gt;Pyro Module Generator&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This tool was originally made when I was freelancing. I built it off the &lt;a href=&#34;https://github.com/pyrocms/sample&#34;&gt;Sample Module project on Github&lt;/a&gt;. I wanted to be able to build modules quickly, since I wasn&amp;rsquo;t using streams. In fact, streams wasn&amp;rsquo;t even a thing when I made the first version of the module generator.&lt;/p&gt;
 &lt;p&gt;Again, I have made a &lt;a href=&#34;http://dev.warpaintmedia.ca/pyro-module-generator/&#34; title=&#34;PyroCMS Module Generator Website&#34;&gt;live hosted version of the generator&lt;/a&gt; which you can use without having to have anything setup locally. The generated module is zipped and then ready for download.&lt;/p&gt;
@@ -186,17 +186,17 @@ mv luvit /usr/local/bin/luvit
 &lt;p&gt;The generated module gets put in the &lt;code&gt;public/generated/&lt;/code&gt; folder. As well as the Zip file.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
   &lt;p&gt;Screenshot of the current version of the app&lt;/p&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/pmg2.jpeg&#34; title=&#34;PyroCMS Module Generator Screenshot&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;PyroCMS Module Generator Screenshot&#34; src=&#34;https://ohdoylerules.com/images/pmg2.jpeg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/pmg2.jpeg&#34; title=&#34;PyroCMS Module Generator Screenshot&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;PyroCMS Module Generator Screenshot&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/pmg2.jpeg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Lico</title>
-      <link>https://ohdoylerules.com/personal-project/lico-luvit-cms/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/lico-luvit-cms/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/lico-luvit-cms/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/lico-luvit-cms/</guid>
       <description>&lt;p&gt;I have re-created Pico (&lt;a href=&#34;https://github.com/picocms/Pico&#34;&gt;github&lt;/a&gt; or &lt;a href=&#34;http://picocms.org/&#34;&gt;homepage&lt;/a&gt;) using the awesome &lt;a href=&#34;https://github.com/luvit/luvit&#34;&gt;Luvit&lt;/a&gt; framework. Luvit is a &lt;a href=&#34;http://luajit.org/&#34;&gt;LuaJIT&lt;/a&gt; wrapper for &lt;a href=&#34;https://github.com/joyent/libuv&#34;&gt;libuv&lt;/a&gt;, of &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; fame. It is called &lt;a href=&#34;https://github.com/james2doyle/Lico&#34; title=&#34;Lico On Github&#34;&gt;Lico&lt;/a&gt;!&lt;/p&gt;
 &lt;h3 id=&#34;what-is-lico&#34;&gt;What is Lico?&lt;/h3&gt;
 &lt;p&gt;Pico says, &lt;em&gt;&amp;ldquo;Pico is a stupidly simple, blazing fast, flat file CMS&amp;rdquo;&lt;/em&gt;. Lico aims for the same thing. There is a very close parity with Pico even though this is very early.&lt;/p&gt;
@@ -229,10 +229,10 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Koding Interview</title>
-      <link>https://ohdoylerules.com/personal-project/koding-interview/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/koding-interview/</link>
       <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/koding-interview/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/koding-interview/</guid>
       <description>&lt;p&gt;A few months back I was interviewed by the developer socila network Koding.&lt;/p&gt;
 &lt;p&gt;The initiative was for them to showcase some of the people using their network to build their skill and circle of friends. It is a really cool social network that has been gaining a lot of traction lately.&lt;/p&gt;
 &lt;p&gt;Here is &lt;a href=&#34;http://stories.koding.com/story/james-doyle/&#34;&gt;the link to the interview&lt;/a&gt;.&lt;/p&gt;
@@ -241,13 +241,13 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Kaenon Vector Logo</title>
-      <link>https://ohdoylerules.com/personal-project/kaenon-logo/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/kaenon-logo/</link>
       <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/kaenon-logo/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/kaenon-logo/</guid>
       <description>&lt;p&gt;Here is another logo. This one is for the Kaenon sunglasses brand. This was very hard to find. It doesn&amp;rsquo;t include the little gradient on the original logo. Maybe I will add that in the future.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/kaenon.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;kaenon svg vector&#34; src=&#34;https://ohdoylerules.com/images/kaenon.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/kaenon.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;kaenon svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/kaenon.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;h5 id=&#34;hint&#34;&gt;Hint&lt;/h5&gt;
 &lt;p&gt;If you are looking for these hard to find logos, sometimes you can find them in a lookbook or catalog PDF. The assets are usually high DPI because most of the time these documents are for printing.&lt;/p&gt;
@@ -256,10 +256,10 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Sublime Node Snippets</title>
-      <link>https://ohdoylerules.com/personal-project/sublime-node-snippets/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/sublime-node-snippets/</link>
       <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/sublime-node-snippets/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/sublime-node-snippets/</guid>
       <description>&lt;p&gt;I created a &lt;a href=&#34;https://sublime.wbond.net/packages/Node%20Completions&#34;&gt;huge snippet library&lt;/a&gt; based on the docs for node 10.26. There are &lt;strong&gt;783&lt;/strong&gt; total right now (&lt;em&gt;2014-03-25&lt;/em&gt;).&lt;/p&gt;
 &lt;p&gt;The way that I quickly made this big repository, was I wrote a script that would generate new sublime snippets based on a text file.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://github.com/james2doyle/sublime-node-snippets/blob/master/convert.php&#34;&gt;converter&lt;/a&gt; just reads &lt;a href=&#34;https://github.com/james2doyle/sublime-node-snippets/blob/master/sources.txt&#34;&gt;the text file&lt;/a&gt; line by line and then generates a &lt;code&gt;.sublime-completions&lt;/code&gt; file.&lt;/p&gt;
@@ -363,10 +363,10 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Simple Binder</title>
-      <link>https://ohdoylerules.com/personal-project/simple-binder/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/simple-binder/</link>
       <pubDate>Fri, 14 Mar 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/simple-binder/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/simple-binder/</guid>
       <description>&lt;p&gt;The other day I was working on a custom form that had a lot of javascript interaction. It got a little too far before I realized I should have been using something like &lt;a href=&#34;http://angularjs.org/&#34;&gt;Angular.js&lt;/a&gt;. I was looking for a simple one-way databinding library, but I couldn&amp;rsquo;t find anything that wasn&amp;rsquo;t overkill.&lt;/p&gt;
 &lt;p&gt;So I created &lt;a href=&#34;http://james2doyle.github.io/simplebinder/&#34;&gt;Simple Binder&lt;/a&gt;. Simple Binder is a zero dependency one-way databinder for javascript. The great thing about it is that, not only is it very simple, but it is super small as well. No dependencies is also nice.&lt;/p&gt;
 &lt;p&gt;Using the lib is pretty straightforward. Here is the markup required for a simplebinder element:&lt;/p&gt;
@@ -402,19 +402,19 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Vim Vector Logo</title>
-      <link>https://ohdoylerules.com/personal-project/vim-svg/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/vim-svg/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/vim-svg/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/vim-svg/</guid>
       <description>&lt;p&gt;Here is a beauty. People have been looking for this Vim logo in a vector format for quite some time. There is of course the &lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Vimlogo.svg&#34;&gt;old logo&lt;/a&gt;, but it looks pretty strange. It reminds me of Tron for some reason.&lt;/p&gt;
 &lt;p&gt;Anyway this was a pain to make because of all the layers and custom shaping of the V. Also I had to make a bunch of changes to everything once I tested it in the browser because it was all busted.&lt;/p&gt;
 &lt;p&gt;I usually test my SVGs in the browser as a final OK point. I know if it renders there, then everything should be fine. Also people want it for using as a retina icon now, since the advent of responsive design and development.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/vim.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;vim svg vector&#34; src=&#34;https://ohdoylerules.com/images/vim.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/vim.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;vim svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/vim.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;If you happen to use this for anything, it would be nice to recieve some credit for it. I actually couldn&amp;rsquo;t find who made the original Vim logo. It might just be lost in time.&lt;/p&gt;
 &lt;h4 id=&#34;update&#34;&gt;Update&lt;/h4&gt;
-&lt;p&gt;I made a icns version for OSX. You can &lt;a href=&#34;https://ohdoylerules.com/images/vim.icns&#34;&gt;download it here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I made a icns version for OSX. You can &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/vim.icns&#34;&gt;download it here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You can change the MacVim icon if you want. I happen to think this one is a little nicer.&lt;/p&gt;
 &lt;h4 id=&#34;update-2&#34;&gt;Update 2&lt;/h4&gt;
 &lt;p&gt;I have found another person who wanted a new vim icon. They added it to the fork of &lt;a href=&#34;https://code.google.com/p/macvim/&#34;&gt;MacVim&lt;/a&gt;. Here is the &lt;a href=&#34;https://github.com/kaishin/macvim/commit/fedcb4579b68439dba85b9d7fa4b076faac7ebad&#34;&gt;commit from his repo&lt;/a&gt; with the new icon.&lt;/p&gt;
@@ -423,14 +423,14 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Atom Monokai Dark</title>
-      <link>https://ohdoylerules.com/personal-project/atom-monokai-dark/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/atom-monokai-dark/</link>
       <pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/atom-monokai-dark/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/atom-monokai-dark/</guid>
       <description>&lt;p&gt;I made a &lt;a href=&#34;http://atom.io/packages/monokai-dark&#34;&gt;dark monokai&lt;/a&gt; syntax theme for &lt;a href=&#34;http://atom.io/&#34;&gt;Atom&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Originally converted from &lt;a href=&#34;https://github.com/kevinsawicki/monokai&#34;&gt;monokai&lt;/a&gt; which in turn came from the &lt;a href=&#34;http://www.monokai.nl/blog/wp-content/asdev/Monokai.tmTheme&#34;&gt;TextMate&lt;/a&gt; theme using the &lt;a href=&#34;http://atom.io/docs/latest/converting-a-text-mate-theme&#34;&gt;TextMate bundle converter&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/atom-monokai-dark.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;atom monokai dark screenshot&#34; src=&#34;https://ohdoylerules.com/images/atom-monokai-dark.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/atom-monokai-dark.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;atom monokai dark screenshot&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/atom-monokai-dark.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;I would also suggest editing your main stylesheet and adding the following CSS:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;/* really nice smooth fonts */&lt;/span&gt;
@@ -470,17 +470,17 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>The Alternative Cms</title>
-      <link>https://ohdoylerules.com/personal-project/the-alternative-cms/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/the-alternative-cms/</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/the-alternative-cms/</guid>
-      <description>&lt;p&gt;The Explode Code presentation was last night. I spoke about &lt;a href=&#34;https://ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;The Alternative CMS&lt;/a&gt;. It was about the problems with Wordpress, why &lt;em&gt;WYSIWYG&lt;/em&gt; is hard, and why Flat File and Markdown could be the solution you are looking for.&lt;/p&gt;
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/the-alternative-cms/</guid>
+      <description>&lt;p&gt;The Explode Code presentation was last night. I spoke about &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;The Alternative CMS&lt;/a&gt;. It was about the problems with Wordpress, why &lt;em&gt;WYSIWYG&lt;/em&gt; is hard, and why Flat File and Markdown could be the solution you are looking for.&lt;/p&gt;
 &lt;p&gt;Pretty good reception overall. Some of the things people asked were about complexity. The real answer is if you are doing things that are super complex, you should&amp;rsquo;nt really use a flat-file cms.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;the idea is really more 60% client and 40% developer&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I don&amp;rsquo;t mention this in the slides, but the idea is really more 60% client and 40% developer. Using that flat-file is much faster to develop, but it makes it easier to manage for the client.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;Here is the download&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;Here is the download&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here are some of the links to things I mentioned in the talk:&lt;/p&gt;
 &lt;h4 id=&#34;flat-file-cmss&#34;&gt;Flat File CMSs&lt;/h4&gt;
 &lt;ul&gt;
@@ -522,16 +522,16 @@ mv luvit /usr/local/bin/luvit
 &lt;li&gt;&lt;a href=&#34;http://sofish.github.io/pen/&#34;&gt;http://sofish.github.io/pen/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://goo.gl/b4ECsb&#34;&gt;http://goo.gl/b4ECsb&lt;/a&gt; &amp;ndash; pen, grande, medium breakdown&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Again you can find the &lt;a href=&#34;https://ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;PDF here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Again you can find the &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;PDF here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>PHP WebSocket Chat</title>
-      <link>https://ohdoylerules.com/personal-project/php-websocket-chat/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/php-websocket-chat/</link>
       <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/php-websocket-chat/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/php-websocket-chat/</guid>
       <description>&lt;p&gt;About 6 months ago, I made a little &lt;a href=&#34;https://github.com/james2doyle/socket-chat-example&#34;&gt;socket.io chat app&lt;/a&gt;. At the time, this was really only possible with Node.js because the &lt;a href=&#34;http://caniuse.com/#feat=websockets&#34;&gt;HTML5 WebSocket support&lt;/a&gt; was too low.&lt;/p&gt;
 &lt;p&gt;But now, months later, the support for WebSockets is actually very good.Looking at &lt;a href=&#34;http://caniuse.com&#34;&gt;caniuse.com&lt;/a&gt; right now, there is better support for WebSocket than there is WebGL. I would argue that WebGL support is actually more important than the WebSocket support, but I digress. Here is a non-jargon-laden explanation from &lt;a href=&#34;http://www.html5rocks.com/en/tutorials/websockets/basics/#toc-introduction-sockets&#34;&gt;HTML5Rocks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -544,7 +544,7 @@ mv luvit /usr/local/bin/luvit
 &lt;p&gt;If you want a technically in-depth overview, checkout &lt;a href=&#34;http://www.websocket.org/quantum.html&#34;&gt;websocket.org&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Anyway, I made a &lt;a href=&#34;https://github.com/james2doyle/php-socket-chat&#34;&gt;little chat app&lt;/a&gt; with &lt;a href=&#34;http://socketo.me/&#34;&gt;Ratchet&lt;/a&gt;. People knock PHP for all the bad things it does. But getting the WebSocket example running, actually wasn&amp;rsquo;t that bad. Apparently Apache doesn&amp;rsquo;t play nice with Ratchet (not sure about &lt;em&gt;pure&lt;/em&gt; WebSockets) so you have to use the &lt;a href=&#34;http://www.php.net/manual/en/features.commandline.webserver.php&#34;&gt;built-in PHP server&lt;/a&gt; which comes with PHP 5.4.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/php-socket-animation.gif&#34; target=&#34;_blank&#34; title=&#34;php ratchet socket server form example&#34;&gt;&lt;img alt=&#34;php ratchet socket server form example&#34; src=&#34;https://ohdoylerules.com/images/php-socket-animation.gif&#34; width=&#34;252&#34; height=&#34;246&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/php-socket-animation.gif&#34; target=&#34;_blank&#34; title=&#34;php ratchet socket server form example&#34;&gt;&lt;img alt=&#34;php ratchet socket server form example&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/php-socket-animation.gif&#34; width=&#34;252&#34; height=&#34;246&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;The app I made is pretty much a copy paste from the &lt;a href=&#34;http://socketo.me/docs/hello-world&#34;&gt;Rachet Hello World Example&lt;/a&gt; but tried to make the simplest chat app I could. The server is actually pretty close the Hello World code, just with a bunch of extra client-side javascript.&lt;/p&gt;
 &lt;p&gt;Once you &lt;a href=&#34;https://github.com/james2doyle/php-socket-chat&#34;&gt;download the app&lt;/a&gt;, if you have PHP properly installed and in your path, you can use &lt;code&gt;php bin/chat-server.php&lt;/code&gt; in the root folder to start the server. You can then hit the index page and see the green connection message. You will also see some information in your terminal.&lt;/p&gt;
@@ -555,10 +555,10 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>All About PhileCMS Video</title>
-      <link>https://ohdoylerules.com/personal-project/phile-intro-video/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/phile-intro-video/</link>
       <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/phile-intro-video/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/phile-intro-video/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/PhileCMS/Phile&#34;&gt;PhileCMS&lt;/a&gt; now has a &lt;a href=&#34;http://www.youtube.com/watch?v=8GLMe371RuI&#34;&gt;new instructional video&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here are some of the points I hit on in the video:&lt;/p&gt;
 &lt;ul&gt;
@@ -579,29 +579,29 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Groupon SVG logo</title>
-      <link>https://ohdoylerules.com/personal-project/groupon-green-logo-svg/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/groupon-green-logo-svg/</link>
       <pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/groupon-green-logo-svg/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/groupon-green-logo-svg/</guid>
       <description>&lt;p&gt;Lo and behold, a new vector. This one is for the Groupon logo. This is actually based on another logo that was black. It wasn&amp;rsquo;t very nice, so I picked the Groupon greens from their site and applied them to the background gradient. I also removed the gaudy font gradient and left them as flat white.&lt;/p&gt;
 &lt;p&gt;Below is the source SVG for download.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/groupon.svg&#34; title=&#34;groupon svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;groupon svg vector&#34; src=&#34;https://ohdoylerules.com/images/groupon.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/groupon.svg&#34; title=&#34;groupon svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;groupon svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/groupon.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Chrome Reverse Geocode App</title>
-      <link>https://ohdoylerules.com/personal-project/chrome-reverse-geocode/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/chrome-reverse-geocode/</link>
       <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/chrome-reverse-geocode/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/chrome-reverse-geocode/</guid>
       <description>&lt;p&gt;I have created a new app (with the help of &lt;a href=&#34;https://twitter.com/beatricelaw&#34;&gt;Beatrice Law&lt;/a&gt;) called &lt;a href=&#34;http://goo.gl/Z15Teh&#34; title=&#34;Reverse Geocode on the Chrome Web Store&#34;&gt;Reverse Geocode&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In the process of building the site for &lt;a href=&#34;http://textbooksforchange.ca/&#34;&gt;Textbooks For Change&lt;/a&gt;, a &lt;a href=&#34;http://warpaintmedia.ca&#34;&gt;WARPAINT Media&lt;/a&gt; client, I realized I needed an easy way for them to reverse geocode an address for their map listings.&lt;/p&gt;
 &lt;p&gt;The site is built on &lt;a href=&#34;http://philecms.github.io/Phile/&#34;&gt;PhileCMS&lt;/a&gt; so it is very fast, but requires a little more savvy-ness than normal. I added the static Google Map that is based on the list of coordinates they enter in.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;http://goo.gl/Z15Teh&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;chrome reverse geocode app screenshot&#34; src=&#34;https://ohdoylerules.com/images/reverse-geocode.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;http://goo.gl/Z15Teh&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;chrome reverse geocode app screenshot&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/reverse-geocode.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;It is very easy to update, but not quite that easy to get the coordinates. There is a Google tool to do this, but it is actually not as nice (but I have an obvious bias).&lt;/p&gt;
 &lt;p&gt;The app allows you to enter in an address, then they app goes and gets the latitude and longitude. Then, because this is a &lt;a href=&#34;http://developer.chrome.com/apps/about_apps.html&#34;&gt;Chrome Packaged App&lt;/a&gt;, you can copy it right to your clipboard with a single click!&lt;/p&gt;
@@ -612,10 +612,10 @@ mv luvit /usr/local/bin/luvit
     
     <item>
       <title>Grunt Highlight Plugin</title>
-      <link>https://ohdoylerules.com/personal-project/grunt-highlight/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/grunt-highlight/</link>
       <pubDate>Mon, 25 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/grunt-highlight/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/grunt-highlight/</guid>
       <description>&lt;p&gt;Over the weekend, in a couple hours, I wrote this grunt plugin for &lt;a href=&#34;http://highlightjs.org&#34;&gt;Highlight.js&lt;/a&gt;. I know that &lt;a href=&#34;https://github.com/chjj/marked&#34;&gt;marked&lt;/a&gt; does an excellent job of parsing markdown, and can also use highlight, but I wanted something I could use in &lt;a href=&#34;https://github.com/assemble/assemble/&#34;&gt;assemble&lt;/a&gt; for HTML parsing or full css/js files.&lt;/p&gt;
 &lt;p&gt;This was made much easier thanks to the &lt;a href=&#34;https://github.com/yeoman/generator-gruntplugin&#34;&gt;yeoman-gruntplugin&lt;/a&gt; project.&lt;/p&gt;
 &lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
@@ -708,10 +708,10 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Github Wiki To HTML</title>
-      <link>https://ohdoylerules.com/personal-project/github-wiki-to-html/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/github-wiki-to-html/</link>
       <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/github-wiki-to-html/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/github-wiki-to-html/</guid>
       <description>&lt;p&gt;Have you ever wanted to convert a Github wiki to a set of HTML pages? This can be an easy way to generate new gh-pages (github web pages) based on the projects Wiki.&lt;/p&gt;
 &lt;p&gt;As of &lt;a href=&#34;https://github.com/blog/699-making-github-more-open-git-backed-wikis&#34;&gt;August 2010&lt;/a&gt;, you can actually clone a repositories wiki to your local machine just by adding .wiki at the end.&lt;/p&gt;
 &lt;p&gt;This pulls down all the wiki pages in their current format, by default this is &lt;code&gt;.md&lt;/code&gt; files.&lt;/p&gt;
@@ -740,14 +740,14 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Phile CMS</title>
-      <link>https://ohdoylerules.com/personal-project/phile-cms/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/phile-cms/</link>
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/phile-cms/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/phile-cms/</guid>
       <description>&lt;p&gt;After being a upset at the progress with Pico, myself and a developer from Germany(&lt;a href=&#34;https://twitter.com/neoblack&#34; title=&#34;Frank Twitter&#34;&gt;Frank&lt;/a&gt;) have developed a fork project.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
   &lt;a href=&#34;http://philecms.github.io/Phile/&#34; title=&#34;PhileCMS Homepage&#34;&gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/phile-logo.png&#34; alt=&#34;PhileCMS Logo&#34;&gt;
+    &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/phile-logo.png&#34; alt=&#34;PhileCMS Logo&#34;&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;The project is &lt;a href=&#34;http://philecms.github.io/Phile/&#34; title=&#34;PhileCMS Homepage&#34;&gt;PhileCMS&lt;/a&gt;. It maintains the philosophy of Pico, being fast and small, but it makes a lot of improvements on the core. Most the project is now OOP based with classes and models.&lt;/p&gt;
@@ -772,37 +772,37 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Google Drive Flat SVG Logo</title>
-      <link>https://ohdoylerules.com/personal-project/google-drive-svg-logo/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/google-drive-svg-logo/</link>
       <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/google-drive-svg-logo/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/google-drive-svg-logo/</guid>
       <description>&lt;p&gt;Recently we needed a bunch of vector logos for a blog post. So again, in typical fashion, I had to craft a vector logo from scratch. Luckily the Google Drive logo is pretty simple. Just 3 shapes. All trapezoids (?).&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/google-drive.svg&#34; target=&#34;_blank&#34; title=&#34;google drive svg vector&#34;&gt;&lt;img width=&#34;300&#34; alt=&#34;google drive svg vector&#34; src=&#34;https://ohdoylerules.com/images/google-drive.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/google-drive.svg&#34; target=&#34;_blank&#34; title=&#34;google drive svg vector&#34;&gt;&lt;img width=&#34;300&#34; alt=&#34;google drive svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/google-drive.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Docracy SVG logo</title>
-      <link>https://ohdoylerules.com/personal-project/docracy-logo-svg/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/docracy-logo-svg/</link>
       <pubDate>Thu, 31 Oct 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/docracy-logo-svg/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/docracy-logo-svg/</guid>
       <description>&lt;p&gt;The other founder of my company (&lt;a href=&#34;http://warpaintmedia.ca&#34; title=&#34;WARPAINT Media Homepage&#34;&gt;WARPAINT Media&lt;/a&gt;) was working on a blog post where we list all the PAAS/SAAS tools that we use. One of them is &lt;a href=&#34;https://www.docracy.com/&#34; title=&#34;Docracy Homepage&#34;&gt;Docracy&lt;/a&gt;. It is a site that shares free legal documents. You can modify and fork them to your own account, they have signing features as well.&lt;/p&gt;
 &lt;p&gt;Well again, I was unable to find the vector logo of their icon. So in my typical fashion, I recreated it. You can see it below.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/docracy.svg&#34; title=&#34;docracy svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;docracy svg vector&#34; src=&#34;https://ohdoylerules.com/images/docracy.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/docracy.svg&#34; title=&#34;docracy svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;docracy svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/docracy.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Assemble Starter</title>
-      <link>https://ohdoylerules.com/personal-project/assemble-starter/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/assemble-starter/</link>
       <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/assemble-starter/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/assemble-starter/</guid>
       <description>&lt;p&gt;Assemble starter is my starting point for any of my static &lt;a href=&#34;http://assemble.io/&#34; title=&#34;Grunt Assemble Homepage&#34;&gt;assemble sites&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You can find the &lt;a href=&#34;https://github.com/james2doyle/assemble-starter&#34; title=&#34;Assemble Starter Repo&#34;&gt;project on Github&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I often use assemble when I am building themes. The reason being you can do quick templating (thanks to &lt;a href=&#34;http://handlebarsjs.com/&#34; title=&#34;Handlebars Homepage&#34;&gt;Handlebars&lt;/a&gt;), it compiles fast, requires no server, and I am using &lt;a href=&#34;http://gruntjs.com/&#34; title=&#34;Grunt Homepage&#34;&gt;Grunt&lt;/a&gt; anyway.&lt;/p&gt;
@@ -849,10 +849,10 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>pico-download plugin</title>
-      <link>https://ohdoylerules.com/personal-project/pico-download-plugin/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pico-download-plugin/</link>
       <pubDate>Wed, 18 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pico-download-plugin/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pico-download-plugin/</guid>
       <description>&lt;p&gt;I created a plugin to force files to download in &lt;a href=&#34;http://pico.dev7studios.com&#34;&gt;PicoCMS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I needed this because I wanted to PDFs to download and not just render in the browser.&lt;/p&gt;
 &lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
@@ -871,10 +871,10 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Pico-Useragent Plugin</title>
-      <link>https://ohdoylerules.com/personal-project/pico-useragent/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pico-useragent/</link>
       <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pico-useragent/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pico-useragent/</guid>
       <description>&lt;p&gt;I created another plugin for &lt;a href=&#34;http://pico.dev7studios.com/&#34;&gt;Pico CMS&lt;/a&gt;. It is esentially a clone of my &lt;a href=&#34;https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin&#34;&gt;pyro-sniffer-plugin&lt;/a&gt; for &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;Pyro CMS Homepage&#34;&gt;PyroCMS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here is the &lt;a href=&#34;https://github.com/james2doyle/pico_useragent&#34;&gt;Github project&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This plugin allows you to parse the user agent of the current visitor and then expose that information in an easy to use variable in your twig templates.&lt;/p&gt;
@@ -917,10 +917,10 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>jQuery-doodal-js</title>
-      <link>https://ohdoylerules.com/personal-project/jquery-doodal-js/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/jquery-doodal-js/</link>
       <pubDate>Mon, 09 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/jquery-doodal-js/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/jquery-doodal-js/</guid>
       <description>&lt;p&gt;jQuery.doodal.js is a very simplistic modal plugin for jQuery. It has custom events, allows stacking, and is powered by CSS transitions&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://james2doyle.github.io/jquery.doodal.js/&#34;&gt;See the demo&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
@@ -952,10 +952,10 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Grunt Sundown</title>
-      <link>https://ohdoylerules.com/personal-project/grunt-sundown/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/grunt-sundown/</link>
       <pubDate>Sun, 08 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/grunt-sundown/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/grunt-sundown/</guid>
       <description>&lt;p&gt;&lt;strong&gt;grunt-sundown&lt;/strong&gt; is a wrapper for &lt;a href=&#34;https://github.com/benmills/robotskirt&#34;&gt;robotskirt&lt;/a&gt;(&lt;a href=&#34;https://github.com/vmg/sundown&#34;&gt;Sundown&lt;/a&gt;) - a C implementation of &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
 &lt;p&gt;This plugin requires Grunt &lt;code&gt;~0.4.1&lt;/code&gt;&lt;/p&gt;
@@ -1020,10 +1020,10 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Pyro Twitter Widget</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-twitter-widget/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-twitter-widget/</link>
       <pubDate>Thu, 08 Aug 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-twitter-widget/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-twitter-widget/</guid>
       <description>&lt;p&gt;I created another widget for PyroCMS. This one is for Twitter. I didn&amp;rsquo;t find one that I liked or thought was very good, so I created my own. This widget actually uses a 3rd party sub-module, for the Twitter authentication, called &lt;a href=&#34;https://github.com/J7mbo/twitter-api-php&#34; title=&#34;J7mbo/twitter-api-php&#34;&gt;twitter-api-php&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here are the current supported (basically just tested) API endpoints:&lt;/p&gt;
 &lt;ul&gt;
@@ -1039,33 +1039,33 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Pico Get By Filename Plugin</title>
-      <link>https://ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</link>
       <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</guid>
       <description>&lt;p&gt;I wrote another small plugin for PicoCMS that actually lets you load files based on the filename. I called it &lt;a href=&#34;https://github.com/james2doyle/pico_get_by_filename&#34; title=&#34;james2doyle/pico_get_by_filename&#34;&gt;pico_get_by_filename&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Markdown Logo Vector SVG</title>
-      <link>https://ohdoylerules.com/personal-project/markdown-logo-vector-svg/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/markdown-logo-vector-svg/</link>
       <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/markdown-logo-vector-svg/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/markdown-logo-vector-svg/</guid>
       <description>&lt;p&gt;The markdown logo in SVG vector format. I found this was not that easy to find. So I whipped one up of my own.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/markdown.svg&#34; target=&#34;_blank&#34; title=&#34;Markdown Vector SVG logo&#34;&gt;&lt;img alt=&#34;Markdown Vector SVG logo&#34; src=&#34;https://ohdoylerules.com/images/markdown.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/markdown.svg&#34; target=&#34;_blank&#34; title=&#34;Markdown Vector SVG logo&#34;&gt;&lt;img alt=&#34;Markdown Vector SVG logo&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/markdown.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Kube in Styl/Rework</title>
-      <link>https://ohdoylerules.com/personal-project/kube-in-stylrework/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/kube-in-stylrework/</link>
       <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/kube-in-stylrework/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/kube-in-stylrework/</guid>
       <description>&lt;p&gt;I finally finished the conversion of the &lt;a href=&#34;http://imperavi.com/kube/&#34;&gt;Kube CSS Framework&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The original is written in &lt;a href=&#34;http://lesscss.org/&#34; title=&#34;LESSCSS Homepage&#34;&gt;LESS&lt;/a&gt; and I have rewrote it to work with &lt;a href=&#34;https://github.com/visionmedia/styl&#34; title=&#34;visionmedia/styl&#34;&gt;Styl&lt;/a&gt; and &lt;a href=&#34;https://github.com/visionmedia/rework&#34; title=&#34;visionmedia/rework&#34;&gt;Rework&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/kube-styl&#34; title=&#34;james2doyle/kube-styl&#34;&gt;Here is the github repo&lt;/a&gt;&lt;/p&gt;
@@ -1074,31 +1074,31 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Pico Slider Plugin</title>
-      <link>https://ohdoylerules.com/personal-project/pico-slider-plugin/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pico-slider-plugin/</link>
       <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pico-slider-plugin/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pico-slider-plugin/</guid>
       <description>&lt;p&gt;I wrote a small plugin for the Pico CMS. I recently discovered a very cool PHP-based CMS called, &lt;a href=&#34;http://pico.dev7studios.com/&#34; title=&#34;Pico CMS Homepage&#34;&gt;Pico CMS&lt;/a&gt;. This CMS is a no-database flat-file CMS. It is really fast and very easy. There was no real way to handle images in the base version. So I developed a plugin that can list images in a folder. I named it pico_slider but it could probably be named pico_image_list because all it really does is expose an image array to the front-end variables. &lt;a href=&#34;https://github.com/james2doyle/pico_slider&#34; title=&#34;james2doyle/pico_slider&#34;&gt;Here it is on Github&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>NPM logo SVG</title>
-      <link>https://ohdoylerules.com/personal-project/npm-logo-svg/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/npm-logo-svg/</link>
       <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/npm-logo-svg/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/npm-logo-svg/</guid>
       <description>&lt;p&gt;I made a vector version of the logo for &lt;a href=&#34;http://npmjs.org&#34; title=&#34;NPM Homepage&#34;&gt;NPM&lt;/a&gt;. Here is the vector version as a SVG.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/npm-logo.svg&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/npm-logo.svg&#34; alt=&#34;npm vector svg logo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/npm-logo.svg&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/npm-logo.svg&#34; alt=&#34;npm vector svg logo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Disqus Comments</title>
-      <link>https://ohdoylerules.com/personal-project/disqus-comments/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/disqus-comments/</link>
       <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/disqus-comments/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/disqus-comments/</guid>
       <description>&lt;p&gt;I have finally added a decent comment system to this site. I installed Disqus. It is pretty awesome. I have used it before and it is a great system. I have enabled comments on &lt;em&gt;every&lt;/em&gt; post on the site.&lt;/p&gt;
 &lt;p&gt;I may go back and turn some off but for the most part they are enabled by default. You could be really meta and comment on this post about the new comments! &lt;em&gt;wink wink!&lt;/em&gt;&lt;/p&gt;
 </description>
@@ -1106,10 +1106,10 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
     
     <item>
       <title>Pyro Github Markdown Field Type</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-github-markdown/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-github-markdown/</link>
       <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-github-markdown/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-github-markdown/</guid>
       <description>&lt;p&gt;Github flavoured markdown field type for PyroCMS.&lt;/p&gt;
 &lt;p&gt;Here is the link to the &lt;a href=&#34;https://github.com/james2doyle/pyro-github-markdown&#34; title=&#34;pyro-github-markdown field type&#34;&gt;Github
 Repo&lt;/a&gt;.&lt;/p&gt;
@@ -1157,18 +1157,18 @@ README&lt;/a&gt;
 for the original lib.&lt;/p&gt;
 &lt;h3 id=&#34;update&#34;&gt;UPDATE&lt;/h3&gt;
 &lt;p&gt;I added the ability to preview your results too!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/pyro-github-markdown&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/write.png&#34; alt=&#34;pyro github markdown writepreview&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://github.com/james2doyle/pyro-github-markdown&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/preview.png&#34; alt=&#34;pyro github markdownpreview&#34;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/pyro-github-markdown&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/write.png&#34; alt=&#34;pyro github markdown writepreview&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/james2doyle/pyro-github-markdown&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/preview.png&#34; alt=&#34;pyro github markdownpreview&#34;&gt;&lt;/a&gt;
 Go check out this badboy!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>PyroCMS UA Sniffer Plugin</title>
-      <link>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
       <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
       <description>&lt;p&gt;This plugin lets you sniff information from the user agent for use in the frontend. I use it for adding classes or conditional loading of partials and templates.&lt;/p&gt;
 &lt;p&gt;You can see the &lt;a href=&#34;https://github.com/james2doyle/pyro-sniffer-plugin&#34; title=&#34;pyro-sniffer-plugin github&#34;&gt;github repository here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This plugin is &lt;strong&gt;not&lt;/strong&gt; built on the &lt;a href=&#34;http://ellislab.com/codeigniter/user-guide/libraries/user_agent.html&#34;&gt;CodeIgniter User Agent Library&lt;/a&gt;.&lt;/p&gt;
@@ -1219,10 +1219,10 @@ Go check out this badboy!&lt;/p&gt;
     
     <item>
       <title>rework-math</title>
-      <link>https://ohdoylerules.com/personal-project/rework-math/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/rework-math/</link>
       <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/rework-math/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/rework-math/</guid>
       <description>&lt;p&gt;I created a plugin for &lt;a href=&#34;https://github.com/visionmedia/rework&#34; title=&#34;rework&#34;&gt;Rework&lt;/a&gt; CSS preprocessor to do math. Here is the &lt;a href=&#34;https://github.com/james2doyle/rework-math&#34; title=&#34;rework-math&#34;&gt;github repo&lt;/a&gt;. It is also my first ever NPM package and it can be found on the website &lt;a href=&#34;https://npmjs.org/package/rework-math&#34; title=&#34;rework-math on NPM&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-{.prettyprint&#34; data-lang=&#34;{.prettyprint&#34;&gt;/* input */
 div {
@@ -1255,10 +1255,10 @@ div {
     
     <item>
       <title>rework-shade</title>
-      <link>https://ohdoylerules.com/personal-project/rework-shade/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/rework-shade/</link>
       <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/rework-shade/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/rework-shade/</guid>
       <description>&lt;p&gt;I created another plugin for Rework that makes it easy to do lighten and darken functions. I called it &lt;a href=&#34;https://github.com/james2doyle/rework-shade&#34; title=&#34;rework-shade github&#34;&gt;rework-shade&lt;/a&gt;. This package is also available &lt;a href=&#34;https://npmjs.org/package/rework-shade&#34; title=&#34;rework-shade on NPM&#34;&gt;on NPM here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here is the basic usage.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-{.prettyprint&#34; data-lang=&#34;{.prettyprint&#34;&gt;/* input */
@@ -1302,10 +1302,10 @@ body {
     
     <item>
       <title>NudeProject - a starting point for simple websites</title>
-      <link>https://ohdoylerules.com/personal-project/nudeproject/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/nudeproject/</link>
       <pubDate>Tue, 04 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/nudeproject/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/nudeproject/</guid>
       <description>&lt;p&gt;NudeProject is meant to be a starting point for new landing pages, single-page sites, or even just basic mockups. The point is to get me off the ground quickly. It only provides the most basic things that I need most of the time. These include &lt;a href=&#34;http://gruntjs.com/&#34; title=&#34;gruntjs homepage&#34;&gt;grunt tasks&lt;/a&gt;, &lt;a href=&#34;http://necolas.github.io/normalize.css/&#34; title=&#34;normalize css&#34;&gt;normalized CSS&lt;/a&gt;, &lt;a href=&#34;http://modernizr.com&#34; title=&#34;modernizr&#34;&gt;modernizr&lt;/a&gt;, and a &lt;a href=&#34;https://gist.github.com/james2doyle/5659710&#34; title=&#34;modernizr-svg-replace.js&#34;&gt;SVG fallback snippet&lt;/a&gt; in javascript. Check out the project &lt;a href=&#34;https://github.com/james2doyle/nudeproject&#34; title=&#34;james2doyle/nudeproject&#34;&gt;on github&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;grunt&#34;&gt;grunt&lt;/h4&gt;
 &lt;p&gt;included grunt taks&lt;/p&gt;
@@ -1350,40 +1350,40 @@ body {
     
     <item>
       <title>CrunchBase SVG logo</title>
-      <link>https://ohdoylerules.com/personal-project/crunchbase-svg/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/crunchbase-svg/</link>
       <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/crunchbase-svg/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/crunchbase-svg/</guid>
       <description>&lt;p&gt;I needed the CrunchBase logo in a vector so I had to create it from
 scratch.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/crunchbase.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;crunchbase svg vector&#34; src=&#34;https://ohdoylerules.com/images/crunchbase.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/crunchbase.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;crunchbase svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/crunchbase.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Startup Canada SVG logos</title>
-      <link>https://ohdoylerules.com/personal-project/startup-canada-svg/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/startup-canada-svg/</link>
       <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/startup-canada-svg/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/startup-canada-svg/</guid>
       <description>&lt;p&gt;I had to create these SVGs for the new &lt;a href=&#34;http://spotlander.com&#34; title=&#34;Spotlander&#34;&gt;Spotlander&lt;/a&gt; website. They are 2 of them, one for the parent company; Startup Canada. The last one is for the divisions, in this case: Startup London. I figured I would share.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/startupcanada.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;startupcanada svg vector&#34; src=&#34;https://ohdoylerules.com/images/startupcanada.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/startupcanada.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;startupcanada svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/startupcanada.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/startuplondon.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;startuplondon svg vector&#34; src=&#34;https://ohdoylerules.com/images/startuplondon.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/startuplondon.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;startuplondon svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/startuplondon.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>April 2013 Redesign!</title>
-      <link>https://ohdoylerules.com/personal-project/april-2013-redesign/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/april-2013-redesign/</link>
       <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/april-2013-redesign/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/april-2013-redesign/</guid>
       <description>&lt;p&gt;Another redesign. This one is completely by me, with a little help from the &lt;a href=&#34;http://html5blank.com&#34; title=&#34;html5blank wordpress theme&#34;&gt;html5blank&lt;/a&gt; Wordpress template. I am using SVGs exclusively. Although I only have 2 images for the entire site, the logo and the mobile nav hamburger/menu button. I think the best part is the new code highlighter. It has some cool features.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;// here is some javascript
 var item = document.getElementById(&#39;#item&#39;);
@@ -1418,10 +1418,10 @@ item.setAttribute(&#39;data-index&#39;, 1);
     
     <item>
       <title>Switching to SVG on Grey Nimbus</title>
-      <link>https://ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</link>
       <pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</guid>
       <description>&lt;p&gt;So I recently bought the &lt;a href=&#34;http://www.bohemiancoding.com/sketch/&#34; title=&#34;Sketch Website&#34;&gt;Sketch app&lt;/a&gt; for Mac. I am using it because I don&amp;rsquo;t have illustrator. But to be honest, it is much better at doing small things. It&amp;rsquo;s been about 2 hours switching the whole thing over and I have to say it is worth it.&lt;/p&gt;
 &lt;p&gt;I also found a &lt;a href=&#34;https://github.com/svg/svgo&#34; title=&#34;svg/svgo&#34;&gt;SVG minifier&lt;/a&gt; that I will definitely be using in the future. It managed to save about 50-60% on each image. Which, for compression, is very good. After all is said and done, I saved about 10kb. Now this is not a lot but I also eliminated the use of retina.js. Which cause a second request for each image that has an @2x version. So on mobile I have made the site much faster.&lt;/p&gt;
 &lt;p&gt;Also, because of the way that FuelPHP does it&amp;rsquo;s caching, I was not able to cache the images. Because it would append a query at the end for the cache and retina.js would not be able to find the retina version. That means that any retina device would take double(approximately) requests to get the full page.&lt;/p&gt;
@@ -1436,10 +1436,10 @@ item.setAttribute(&#39;data-index&#39;, 1);
     
     <item>
       <title>Pyro Swipe.js Module</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-swipe-js-module/</link>
       <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-swipe-js-module/</guid>
       <description>&lt;p&gt;Yep, another module. This one is for the awesome &lt;a href=&#34;https://github.com/bradbirdsall/Swipe&#34; title=&#34;bradbirdsall/Swipe&#34;&gt;Swipe.js library&lt;/a&gt;. Swipe is amazing because it is touch-capable, lightweight and has no dependencies(no jQuery). This module allows users to create multiple slideshows just by choosing a folder they want to pull the images from.&lt;/p&gt;
 &lt;p&gt;Then using the modules plugin, they can call it anywhere on a page.&lt;/p&gt;
 &lt;p&gt;Here is is &lt;a href=&#34;https://github.com/james2doyle/pyro-swipe-module&#34; title=&#34;james2doyle/pyro-swipe-module&#34;&gt;on github&lt;/a&gt;.&lt;/p&gt;
@@ -1449,12 +1449,12 @@ item.setAttribute(&#39;data-index&#39;, 1);
     
     <item>
       <title>PyroCMS Module Generator</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-module-generator/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-module-generator/</link>
       <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-module-generator/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-module-generator/</guid>
       <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/pmgh.png&#34; alt=&#34;PyroCMS Module generator header image&#34;&gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/pmgh.png&#34; alt=&#34;PyroCMS Module generator header image&#34;&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;update&#34;&gt;UPDATE&lt;/h3&gt;
 &lt;p&gt;I created a &lt;a href=&#34;http://pyromg.aws.af.cm/&#34; title=&#34;Hosted Pyro Module Generator&#34;&gt;hosted version&lt;/a&gt; of the module generator.&lt;/p&gt;
@@ -1467,21 +1467,21 @@ item.setAttribute(&#39;data-index&#39;, 1);
 &lt;p&gt;In the end I chose Laravel because I might as well start learning it and it was pretty easy to use. Sp please &lt;a href=&#34;https://github.com/james2doyle/pyro-module-generator&#34; title=&#34;james2doyle/pyro-module-generator&#34;&gt;check it out&lt;/a&gt; and help clean it up if you can.&lt;/p&gt;
 &lt;p&gt;Some little screenshots:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/pmg1.png&#34; alt=&#34;PyroCMS Module generator input form&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/pmg2.png&#34; alt=&#34;PyroCMS Module generator field input&#34;&gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/pmg1.png&#34; alt=&#34;PyroCMS Module generator input form&#34;&gt;
+  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/pmg2.png&#34; alt=&#34;PyroCMS Module generator field input&#34;&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Pyro Image Select Field</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-image-select-field/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-image-select-field/</link>
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-image-select-field/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-image-select-field/</guid>
       <description>&lt;p&gt;Another &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;PyroCMS Website&#34;&gt;PyroCMS&lt;/a&gt; field type. This one is called Image Select. Why? Because it does exactly that. It lets you select images. But wait! There is already an image field type. Yes, but that is for uploading images. Sometimes you just want to choose and image you already have. An image drop down is good for this.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;pyro image select screen3&#34; src=&#34;https://ohdoylerules.com/images/screen3.png&#34; &gt;
+  &lt;img alt=&#34;pyro image select screen3&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/screen3.png&#34; &gt;
 &lt;/div&gt;
 &lt;p&gt;I think a nice grid with thumbnail previews is even better!! I have the project &lt;a href=&#34;https://github.com/james2doyle/pyro-image-select&#34; title=&#34;pyro image select github page&#34;&gt;hosted on github&lt;/a&gt;. It will also be submitted to the PyroCMS store.&lt;/p&gt;
 </description>
@@ -1489,17 +1489,17 @@ item.setAttribute(&#39;data-index&#39;, 1);
     
     <item>
       <title>Pyro Blurb Field</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-blurb-field/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-blurb-field/</link>
       <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-blurb-field/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-blurb-field/</guid>
       <description>&lt;p&gt;I created another new field type for &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;PyroCMS Website&#34;&gt;PyroCMS&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.39-PM.png&#34; &gt;
+  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.39-PM.png&#34; &gt;
 &lt;/div&gt;
 &lt;p&gt;This one is for doing little &amp;ldquo;blurb&amp;rdquo; sections. Essentially I keep seeing little title+image+body components. Like testimonials, user profiles, portfolio snippets. These all follow a title+image+body format. So I built a little field type to provide an easy way to manage these in your page types.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.21-PM.png&#34; &gt;
+  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.21-PM.png&#34; &gt;
 &lt;/div&gt;
 &lt;p&gt;I also put the &lt;a href=&#34;https://github.com/james2doyle/pyro-blurb-field&#34; title=&#34;pyro-blurb field github&#34;&gt;project on github&lt;/a&gt; so that you can see it. It will also be on the PyroCMS Store.&lt;/p&gt;
 </description>
@@ -1507,10 +1507,10 @@ item.setAttribute(&#39;data-index&#39;, 1);
     
     <item>
       <title>canadian-provinces-field</title>
-      <link>https://ohdoylerules.com/personal-project/canadian-provinces-field/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/canadian-provinces-field/</link>
       <pubDate>Fri, 15 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/canadian-provinces-field/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/canadian-provinces-field/</guid>
       <description>&lt;p&gt;Created another &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;PyroCMS website&#34;&gt;PyroCMS&lt;/a&gt; field.
 This one is for Canadian Provinces and Territories. Here is &lt;a href=&#34;https://github.com/james2doyle/canadian-provinces-field&#34; title=&#34;canadian-provinces-field&#34;&gt;the github
 page&lt;/a&gt;.&lt;/p&gt;
@@ -1519,12 +1519,12 @@ page&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>git-website-workflow</title>
-      <link>https://ohdoylerules.com/personal-project/git-website-workflow/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/git-website-workflow/</link>
       <pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/git-website-workflow/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/git-website-workflow/</guid>
       <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;Amazon Web Services Logo&#34; src=&#34;https://ohdoylerules.com/images/awslogo.png&#34;&gt;
+  &lt;img alt=&#34;Amazon Web Services Logo&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/awslogo.png&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;I recently switched to using Amazon Web Services for my hosting. It is awesome. Because it(EC2) is just a cloud computer, I can install anything I want and set up any workflow I desire. I recently found &lt;a href=&#34;http://goo.gl/0L3E6&#34; title=&#34;A web-focused Git workflow&#34;&gt;an article&lt;/a&gt; that was about a website git workflow.&lt;/p&gt;
 &lt;p&gt;I finally got the flow down, but it was taking a little too long to start a project. So I decided to &lt;a href=&#34;https://github.com/james2doyle/git-website-workflow&#34; title=&#34;git-websit-workflow bash script&#34;&gt;make it into a script&lt;/a&gt;.This works with any cloud computer workflow. It doesn&amp;rsquo;t have to be just Amazon.&lt;/p&gt;
@@ -1534,10 +1534,10 @@ page&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>PyroCMS PageWidgets Field Type</title>
-      <link>https://ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</link>
       <pubDate>Tue, 05 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</guid>
       <description>&lt;p&gt;I created another field type for &lt;a href=&#34;https://www.pyrocms.com/&#34; title=&#34;PyroCMS Website&#34;&gt;PyroCMS&lt;/a&gt;. This one is so you can add widgets on a page-by-page basis instead of area-by-area.&lt;/p&gt;
 &lt;p&gt;I kept getting asked by clients for this feature, and with the advent of the new page type and field types this is a lot easier. The source is on &lt;a href=&#34;https://github.com/james2doyle/pyro-pagewidgets-field&#34; title=&#34;pyro-pagewidgets-field&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -1545,50 +1545,50 @@ page&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Clean CSS Updated</title>
-      <link>https://ohdoylerules.com/personal-project/clean-css-updated/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/clean-css-updated/</link>
       <pubDate>Sun, 24 Feb 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/clean-css-updated/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/clean-css-updated/</guid>
       <description>&lt;p&gt;I updated my Chrome packaged app, Clean CSS. Here is &lt;a href=&#34;http://james2doyle.github.com/clean-css-chrome-app/&#34; title=&#34;Clean CSS Chrome App&#34;&gt;the website&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Pyro List Field</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-list-field/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-list-field/</link>
       <pubDate>Sat, 23 Feb 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-list-field/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-list-field/</guid>
       <description>&lt;p&gt;I created a list field type for PyroCMS. It allows users to easily add and manage list content. The source code is up &lt;a href=&#34;https://github.com/james2doyle/pyro-list-field&#34; title=&#34;Pyro List Field&#34;&gt;on github&lt;/a&gt; and avaliable on the &lt;a href=&#34;https://www.pyrocms.com/store/details/list_field_type&#34; title=&#34;PyroCMS Store List Field Type&#34;&gt;PyroCMS store&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Pyro Image Widget</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-image-widget/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-image-widget/</link>
       <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-image-widget/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-image-widget/</guid>
       <description>&lt;p&gt;I created a small image widget for PyroCMS. It allows a user to choose any image in the files as a widget. It also allows you to add a link and a target so it can be opened in a new tab. Here is &lt;a href=&#34;https://github.com/james2doyle/pyro-image-widget&#34; title=&#34;Pyro Image Widget Github&#34;&gt;the github link&lt;/a&gt; and the &lt;a href=&#34;https://www.pyrocms.com/store/details/pyro_image_widget&#34; title=&#34;Pyro Image Widget&#34;&gt;PyroCMS store link&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Zepto Drag &amp; Swap</title>
-      <link>https://ohdoylerules.com/personal-project/zepto-drag-swap/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/zepto-drag-swap/</link>
       <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/zepto-drag-swap/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/zepto-drag-swap/</guid>
       <description>&lt;p&gt;I created a little plugin for zepto.js called Drag &amp;amp; Swap. Here is the &lt;a href=&#34;http://james2doyle.github.com/zepto-dragswap/&#34; title=&#34;Zepto Dragswap&#34;&gt;github link&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Clean CSS in Chrome Apps Office Hours</title>
-      <link>https://ohdoylerules.com/personal-project/clean-css-in-office-hours/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/clean-css-in-office-hours/</link>
       <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/clean-css-in-office-hours/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/clean-css-in-office-hours/</guid>
       <description>&lt;h3 id=&#34;clean-css-made-it-into-a-chrome-apps-office-hours&#34;&gt;Clean CSS made it into a Chrome Apps Office hours!!&lt;/h3&gt;
 &lt;p&gt;So my chrome app &lt;a href=&#34;http://james2doyle.github.com/clean-css-chrome-app/&#34; title=&#34;Clean CSS Chrome App&#34;&gt;Clean CSS&lt;/a&gt; made it onto one of the Chrome Apps Office Hours.&lt;/p&gt;
 &lt;p&gt;The Office Hours is a series of videos by Google where developers talk to the community about Google technology, software and programming. The way I got on was I saw Paul Kinlan, a Google Chrome developer advocate, make a post about the live office hours being held that day.&lt;/p&gt;
@@ -1599,12 +1599,12 @@ page&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Kube-Node-Express</title>
-      <link>https://ohdoylerules.com/personal-project/kube-node-express/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/kube-node-express/</link>
       <pubDate>Sun, 21 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/kube-node-express/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/kube-node-express/</guid>
       <description>&lt;p&gt;I have released my first node.js-based public repo! It is called &lt;a href=&#34;https://github.com/james2doyle/kube-node-express&#34; title=&#34;Kube-Node-Express&#34;&gt;Kube-Node-Express&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-10-20-at-3.46.33-PM11.png&#34; alt=&#34;Kube CSS Framework&#34; &gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2012-10-20-at-3.46.33-PM11.png&#34; alt=&#34;Kube CSS Framework&#34; &gt;&lt;/p&gt;
 &lt;p&gt;This is based off of the &lt;a href=&#34;http://imperavi.com/kube/&#34; title=&#34;Kube CSS Framework&#34;&gt;Kube CSS Framework by Imperavi&lt;/a&gt;. It uses the &lt;a href=&#34;http://expressjs.com/&#34; title=&#34;expressjs&#34;&gt;express&lt;/a&gt; framework for node. This was inspired by a similar project I saw that was &lt;a href=&#34;https://github.com/robrighter/node-boilerplate&#34; title=&#34;node boilerplate&#34;&gt;based on the HTML5 Boilerplate&lt;/a&gt;. I will probably end up stealing more ideas from that project too.&lt;/p&gt;
 &lt;h4 id=&#34;disclaimer&#34;&gt;disclaimer&lt;/h4&gt;
 &lt;p&gt;I did not create any of these frameworks, I just combined them all together.&lt;/p&gt;

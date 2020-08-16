@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal Project,Web on James Doyle</title>
-    <link>https://ohdoylerules.com/category/personal-projectweb/</link>
+    <link>https://james2doyle.github.io/ohdoylerules.com/category/personal-projectweb/</link>
     <description>Recent content in Personal Project,Web on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,14 +9,14 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Sun, 23 Jun 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ohdoylerules.com/category/personal-projectweb/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/category/personal-projectweb/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>PyroCMS UA Sniffer Plugin</title>
-      <link>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
       <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
       <description>&lt;p&gt;This plugin lets you sniff information from the user agent for use in the frontend. I use it for adding classes or conditional loading of partials and templates.&lt;/p&gt;
 &lt;p&gt;You can see the &lt;a href=&#34;https://github.com/james2doyle/pyro-sniffer-plugin&#34; title=&#34;pyro-sniffer-plugin github&#34;&gt;github repository here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This plugin is &lt;strong&gt;not&lt;/strong&gt; built on the &lt;a href=&#34;http://ellislab.com/codeigniter/user-guide/libraries/user_agent.html&#34;&gt;CodeIgniter User Agent Library&lt;/a&gt;.&lt;/p&gt;
@@ -67,31 +67,31 @@
     
     <item>
       <title>CrunchBase SVG logo</title>
-      <link>https://ohdoylerules.com/personal-project/crunchbase-svg/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/crunchbase-svg/</link>
       <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/crunchbase-svg/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/crunchbase-svg/</guid>
       <description>&lt;p&gt;I needed the CrunchBase logo in a vector so I had to create it from
 scratch.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/crunchbase.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;crunchbase svg vector&#34; src=&#34;https://ohdoylerules.com/images/crunchbase.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/crunchbase.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;crunchbase svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/crunchbase.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Pyro Blurb Field</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-blurb-field/</link>
+      <link>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-blurb-field/</link>
       <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-blurb-field/</guid>
+      <guid>https://james2doyle.github.io/ohdoylerules.com/personal-project/pyro-blurb-field/</guid>
       <description>&lt;p&gt;I created another new field type for &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;PyroCMS Website&#34;&gt;PyroCMS&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.39-PM.png&#34; &gt;
+  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.39-PM.png&#34; &gt;
 &lt;/div&gt;
 &lt;p&gt;This one is for doing little &amp;ldquo;blurb&amp;rdquo; sections. Essentially I keep seeing little title+image+body components. Like testimonials, user profiles, portfolio snippets. These all follow a title+image+body format. So I built a little field type to provide an easy way to manage these in your page types.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.21-PM.png&#34; &gt;
+  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.21-PM.png&#34; &gt;
 &lt;/div&gt;
 &lt;p&gt;I also put the &lt;a href=&#34;https://github.com/james2doyle/pyro-blurb-field&#34; title=&#34;pyro-blurb field github&#34;&gt;project on github&lt;/a&gt; so that you can see it. It will also be on the PyroCMS Store.&lt;/p&gt;
 </description>
