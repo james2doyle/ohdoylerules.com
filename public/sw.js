@@ -4,11 +4,11 @@ const expectedCaches = [CACHE_NAME];
 // the list of files that need to be cached
 const staticFiles = [
   './',
-  './css/main.min.css',
-  './css/tomorrow-night.css',
+  './css/new.light.css',
+  './css/new.dark.css',
   './js/main.min.js',
-  './js/highlight.custom.js',
-  './icons/logo.svg',
+  './icons/logo-light.svg',
+  './icons/logo-dark.svg',
   './manifest.json',
   './favicon.ico',
 ];
