@@ -6,7 +6,7 @@ const staticFiles = [
   './',
   './css/new.light.css',
   './css/new.dark.css',
-  './js/main.min.js',
+  './icons/logo.svg',
   './icons/logo-light.svg',
   './icons/logo-dark.svg',
   './manifest.json',
