@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tricks on James Doyle</title>
-    <link>https://james2doyle.github.io/ohdoylerules.com/tricks/</link>
+    <link>https://ohdoylerules.com/tricks/</link>
     <description>Recent content in Tricks on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,14 +9,14 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Sat, 08 Jul 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/tricks/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohdoylerules.com/tricks/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Handle spaces and no-spaces in MySQL where-like clauses</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</link>
+      <link>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</link>
       <pubDate>Sat, 08 Jul 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</guid>
+      <guid>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</guid>
       <description>&lt;p&gt;Have you ever been writing a search for MySQL and had an issue where the search wouldn&amp;rsquo;t handle spaces properly?&lt;/p&gt;
 &lt;p&gt;I was writing a search for a &lt;code&gt;users&lt;/code&gt; table and wanted to find a user by their first name or last name or a combination of both.&lt;/p&gt;
 &lt;p&gt;I started with a query like this:&lt;/p&gt;
@@ -57,10 +57,10 @@
     
     <item>
       <title>Conditional Vue.js Mixins</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/conditionall-vuejs-mixins/</link>
+      <link>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</link>
       <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/conditionall-vuejs-mixins/</guid>
+      <guid>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</guid>
       <description>&lt;p&gt;When building more traditional Vue.js applications, I tend to use mixins a lot. It helps split up code, speparate concerns, and can allow for some cool tricks. One that i keep using is conditionally requiring a mixin based on the details of the page.&lt;/p&gt;
 &lt;p&gt;Here is an example. The first module is a function that, like &lt;code&gt;require&lt;/code&gt;, will load a file into the script it is being called from. The thing is, this &lt;code&gt;require&lt;/code&gt; function also takes a new parameter for checking if the page URL contains a particular string or &lt;em&gt;array of strings&lt;/em&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;conditionalrequirejs&#34;&gt;conditionalRequire.js&lt;/h4&gt;
@@ -99,10 +99,10 @@ const app = new Vue({
     
     <item>
       <title>How To Use Template Strings As Modules</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/es6-template-strings-as-modules/</link>
+      <link>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</link>
       <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/es6-template-strings-as-modules/</guid>
+      <guid>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</guid>
       <description>&lt;p&gt;I had a project the other day that needed to make some HTML strings based on some other data in my code.&lt;/p&gt;
 &lt;p&gt;This is a standard approach when you need to write to the &lt;code&gt;innerHTML&lt;/code&gt; of an element, or if you want to populate a string before writing it to the DOM or some HTML attribute.&lt;/p&gt;
 &lt;p&gt;I was trying to find a nice way to split up my JS - that had a bunch of functions in it - and my template string which had a bunch of parts that needed to be filled/replaced while being looped over.&lt;/p&gt;
@@ -129,10 +129,10 @@ const app = new Vue({
     
     <item>
       <title>How To Use LC_MONETARY In Laravel</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/setting-money-locale-laravel/</link>
+      <link>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</link>
       <pubDate>Fri, 24 Feb 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/setting-money-locale-laravel/</guid>
+      <guid>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</guid>
       <description>&lt;p&gt;If you are using the awesome &lt;code&gt;money_format&lt;/code&gt; function in PHP, you may have noticed a difference between servers or environments regarding the output.&lt;/p&gt;
 &lt;p&gt;Sometimes you do get the trailing zeros. Sometimes not.&lt;/p&gt;
 &lt;p&gt;If you are ever trying to figure out what is going on here, it usually has to do with the current locale of the application. In Laravel, you can make this change in the &lt;code&gt;AppServiceProvider&lt;/code&gt;:&lt;/p&gt;
@@ -156,10 +156,10 @@ const app = new Vue({
     
     <item>
       <title>OpenSSL Passwd Without Prompt</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/openssl-passwd-without-prompt/</link>
+      <link>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</link>
       <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/openssl-passwd-without-prompt/</guid>
+      <guid>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</guid>
       <description>&lt;p&gt;Have you ever wanted to generate a password using the &lt;code&gt;openssl passwd&lt;/code&gt; command, but didn&amp;rsquo;t want the prompt?&lt;/p&gt;
 &lt;p&gt;I encountered this problem when I was writing &lt;a href=&#34;https://github.com/invokemedia/ansible-basicauth-nginx&#34;&gt;an Ansible role for setting up Nginx basic auth&lt;/a&gt;. I didn&amp;rsquo;t want the prompt since I had no way for ansible to handle that gracefully. After some Googling, and some &lt;code&gt;man&lt;/code&gt; page grepping, I found the answer.&lt;/p&gt;
 &lt;p&gt;You can generate a password without a prompt by piping text into &lt;code&gt;openssl&lt;/code&gt; and passing a new flag. For example:&lt;/p&gt;
@@ -174,14 +174,14 @@ const app = new Vue({
     
     <item>
       <title>Disallowed Characters In URI</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/disallowed-characters-in-uri/</link>
+      <link>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</link>
       <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/disallowed-characters-in-uri/</guid>
+      <guid>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</guid>
       <description>&lt;p&gt;How to fix &amp;ldquo;The URI you submitted has disallowed characters&amp;rdquo; error.&lt;/p&gt;
 &lt;p&gt;Does this screenshot look familiar?&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/error-400-disallowed-characters.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;codeigniter 400 error for disallowed characters&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/error-400-disallowed-characters.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/error-400-disallowed-characters.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;codeigniter 400 error for disallowed characters&#34; src=&#34;https://ohdoylerules.com/images/error-400-disallowed-characters.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Well, it has been killing me for the last 2 hours. I have encountered this error before, but I never realized what caused it, or how it was fixed. I would just try random stuff, entering in different content, moving different functions. Eventually it would go away&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;symptoms&#34;&gt;Symptoms&lt;/h3&gt;
@@ -195,13 +195,13 @@ const app = new Vue({
 &lt;h3 id=&#34;the-fix&#34;&gt;The Fix&lt;/h3&gt;
 &lt;p&gt;I removed the character and everything worked perfectly. Here is the diff after I removed the character:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/hidden-character-diff.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;git diff for hidden character&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/hidden-character-diff.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/hidden-character-diff.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;git diff for hidden character&#34; src=&#34;https://ohdoylerules.com/images/hidden-character-diff.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;You can see there is a little trailing character there. I don&amp;rsquo;t know exactly how this got in there, but god damn was it driving me crazy.&lt;/p&gt;
 &lt;h3 id=&#34;in-summation&#34;&gt;In Summation&lt;/h3&gt;
 &lt;p&gt;The real problem is, this &lt;em&gt;didn&amp;rsquo;t show in Sublime Text&lt;/em&gt; or in the &lt;em&gt;Chrome elements panel&lt;/em&gt;. Even the commit on &lt;em&gt;Github&lt;/em&gt; didn&amp;rsquo;t show the hidden character I removed.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/github-hidden-character-diff.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;github diff for hidden character&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/github-hidden-character-diff.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/github-hidden-character-diff.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;github diff for hidden character&#34; src=&#34;https://ohdoylerules.com/images/github-hidden-character-diff.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;The only way it would show up is when I opened the file in &lt;strong&gt;vim&lt;/strong&gt;!&lt;/p&gt;
 </description>
@@ -209,10 +209,10 @@ const app = new Vue({
     
     <item>
       <title>Migrate AllPasswords To 1Password</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</link>
+      <link>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</link>
       <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</guid>
+      <guid>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/ca/app/allpasswords-handy-personal/id588258846?mt=12&#34;&gt;AllPasswords&lt;/a&gt; is an awesome, free, app for &lt;a href=&#34;https://itunes.apple.com/ca/app/allpasswords/id578246311?mt=8&#34;&gt;iPhone&lt;/a&gt; and &lt;a href=&#34;https://itunes.apple.com/ca/app/allpasswords-handy-personal/id588258846?mt=12&#34;&gt;OSX&lt;/a&gt;. It has a nice, simple interface, there is an awesome password generator, and it has iCloud sync.&lt;/p&gt;
 &lt;p&gt;The problem is, I recently bought an iPhone 6 and updated to iOS 8. It seems that the iCloud sync has busted for AllPasswords, at least on my device. With the advent of the &lt;a href=&#34;http://bgr.com/2014/09/17/1password-for-ios-free-download/&#34;&gt;1Password app getting a free version&lt;/a&gt; I decided it might be time to switch.&lt;/p&gt;
 &lt;p&gt;I have about 130 logins in AllPasswords, so I wasn&amp;rsquo;t about to manually enter in each account. Instead, I had to format the exported CSV from AllPasswords to be able to import into 1Password. Here is how I did it:&lt;/p&gt;
@@ -252,10 +252,10 @@ const app = new Vue({
     
     <item>
       <title>Always Connect To Starbucks WiFi</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</link>
+      <link>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</link>
       <pubDate>Sat, 20 Sep 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</guid>
+      <guid>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</guid>
       <description>&lt;p&gt;Lately, it has been quite difficult for me to connect to Starbucks WiFi. About a year ago, the network would connect pretty quickly, but now it seems like the network is powered by voodoo magic and the will of Satan.&lt;/p&gt;
 &lt;p&gt;Well, I have discovered the &lt;em&gt;ultimate way&lt;/em&gt; to connect to the network &lt;strong&gt;every time&lt;/strong&gt;. Now, this is still complete bullshit, considering the year is &lt;strong&gt;2014&lt;/strong&gt; and we have a rover on Mars, but we still can&amp;rsquo;t connect to a wireless network. Don&amp;rsquo;t even get me started on wireless printers.&lt;/p&gt;
 &lt;p&gt;Here is the process I use to connect quickly:&lt;/p&gt;

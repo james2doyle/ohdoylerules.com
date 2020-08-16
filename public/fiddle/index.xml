@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fiddles on James Doyle</title>
-    <link>https://james2doyle.github.io/ohdoylerules.com/fiddle/</link>
+    <link>https://ohdoylerules.com/fiddle/</link>
     <description>Recent content in Fiddles on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,14 +9,14 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Thu, 18 Oct 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/fiddle/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohdoylerules.com/fiddle/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Array.prototype.range()</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/fiddle/array-prototype-range/</link>
+      <link>https://ohdoylerules.com/fiddle/array-prototype-range/</link>
       <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/fiddle/array-prototype-range/</guid>
+      <guid>https://ohdoylerules.com/fiddle/array-prototype-range/</guid>
       <description>&lt;p&gt;I wrote this little prototype after seeing the range function in ruby.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;Array&lt;/span&gt;.prototype.range &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(a, b, step) {
   step &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;!&lt;/span&gt;step &lt;span style=&#34;color:#ff79c6&#34;&gt;?&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; step;
@@ -36,34 +36,34 @@ myarray.range(&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, &lt;span
     
     <item>
       <title>Create a Dancing Music Bar animation in CSS and SVG</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/fiddle/dancing-music-bars/</link>
+      <link>https://ohdoylerules.com/fiddle/dancing-music-bars/</link>
       <pubDate>Tue, 16 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/fiddle/dancing-music-bars/</guid>
+      <guid>https://ohdoylerules.com/fiddle/dancing-music-bars/</guid>
       <description>&lt;p data-height=&#34;265&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;bwbJgW&#34; data-default-tab=&#34;result&#34; data-user=&#34;james2doyle&#34; data-embed-version=&#34;2&#34; data-pen-title=&#34;bwbJgW&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;http://codepen.io/james2doyle/pen/bwbJgW/&#34;&gt;bwbJgW&lt;/a&gt; by James Doyle (&lt;a href=&#34;http://codepen.io/james2doyle&#34;&gt;@james2doyle&lt;/a&gt;) on &lt;a href=&#34;http://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async src=&#34;https://production-assets.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;</description>
     </item>
     
     <item>
       <title>Create a Pagebend effect using CSS</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/fiddle/css3-pagebend/</link>
+      <link>https://ohdoylerules.com/fiddle/css3-pagebend/</link>
       <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/fiddle/css3-pagebend/</guid>
+      <guid>https://ohdoylerules.com/fiddle/css3-pagebend/</guid>
       <description>&lt;p&gt;I crafted &lt;a href=&#34;http://codepen.io/james2doyle/pen/HpbrL&#34; title=&#34;css3-pagebend&#34;&gt;this lil&amp;rsquo; beauty&lt;/a&gt; in class today. It turns out that it is really hard to make transforming elements intersect. At least, I couldn&amp;rsquo;t figure it out.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://codepen.io/james2doyle/pen/HpbrL&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/css3-pagebend11.jpg&#34; alt=&#34;css3-pagebend&#34; title=&#34;css3-pagebend&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://codepen.io/james2doyle/pen/HpbrL&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/css3-pagebend11.jpg&#34; alt=&#34;css3-pagebend&#34; title=&#34;css3-pagebend&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I ended up having to essentially split the image in 2 and then rotateY one of the sides. It didn&amp;rsquo;t look quite right when it was bending at the middle, so I made the split like 60-40. As always, click the image for the live action.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>CSS Date Card</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/fiddle/css-date-card/</link>
+      <link>https://ohdoylerules.com/fiddle/css-date-card/</link>
       <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/fiddle/css-date-card/</guid>
+      <guid>https://ohdoylerules.com/fiddle/css-date-card/</guid>
       <description>&lt;p&gt;I am trying to make up for not posting in the last few days. Here is another thing I have been working on. It is a replication of &lt;a href=&#34;http://dribbble.com/shots/713807-Extended&#34; title=&#34;Event Card&#34;&gt;another dribbble post&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://dabblet.com/gist/3743024&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/css-event-card2111.jpg&#34; alt=&#34;css-event-card&#34; title=&#34;Event card replicated in CSS&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://dabblet.com/gist/3743024&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/css-event-card2111.jpg&#34; alt=&#34;css-event-card&#34; title=&#34;Event card replicated in CSS&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;There are a couple of things missing but most of them would be replicated with a webfont. There was also the issue of not having a choice in the anti-aliasing of the font. The image was made using photoshop and probably used crisp or smooth which makes the font look &lt;em&gt;real nice&lt;/em&gt;. I don&amp;rsquo;t even know if I got the font right. I used Open Sans. It looked close enough so whatever. I&amp;rsquo;ve been working on this on and off for about 2 weeks so it is time to give it away!&lt;/p&gt;
 &lt;p&gt;Click the image for a dabblet. &lt;em&gt;BTW, I always misspell dabblet because of the triple B in dribbble!&lt;/em&gt;&lt;/p&gt;
 </description>
@@ -71,13 +71,13 @@ myarray.range(&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, &lt;span
     
     <item>
       <title>No-Js Image Preview</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/fiddle/no-js-image-preview/</link>
+      <link>https://ohdoylerules.com/fiddle/no-js-image-preview/</link>
       <pubDate>Mon, 27 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/fiddle/no-js-image-preview/</guid>
+      <guid>https://ohdoylerules.com/fiddle/no-js-image-preview/</guid>
       <description>&lt;p&gt;Using CSS transforms, I was able to build a little image previewer. There is only one image for both the thumbnail and full size view. Scale does wonders.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/No-Js-Image-Preview-CodePen.png&#34; alt=&#34;No Js Image Preview · CodePen&#34; &gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/No-Js-Image-Preview-CodePen.png&#34; alt=&#34;No Js Image Preview · CodePen&#34; &gt;
 &lt;/div&gt;
 &lt;p&gt;I created this guy in &lt;a href=&#34;http://codepen.io/james2doyle/pen/fChbD&#34; title=&#34;Codepen.io&#34;&gt;Codepen.io&lt;/a&gt;. It seems to be a lot better than just showing all the html/css/js in a post. I would appreciate any comments or possible improvements. I might try to build some sort of template/plugin so that anyone can just plop in their images and BAM it works nicely.&lt;/p&gt;
 </description>
@@ -85,10 +85,10 @@ myarray.range(&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, &lt;span
     
     <item>
       <title>Generated content in CSS</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/fiddle/generated-content-in-css/</link>
+      <link>https://ohdoylerules.com/fiddle/generated-content-in-css/</link>
       <pubDate>Fri, 27 Jul 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/fiddle/generated-content-in-css/</guid>
+      <guid>https://ohdoylerules.com/fiddle/generated-content-in-css/</guid>
       <description>&lt;p&gt;I like &lt;a href=&#34;http://jsfiddle.net/&#34; title=&#34;jsFiddle&#34;&gt;jsFiddle&lt;/a&gt;. I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my &lt;a href=&#34;https://ohdoylerules.com/work/&#34; title=&#34;Work&#34;&gt;work&lt;/a&gt; section. Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the php echos. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;/* styles for printing */&lt;/span&gt;
 @&lt;span style=&#34;color:#ff79c6&#34;&gt;media&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;print&lt;/span&gt;{
@@ -106,7 +106,7 @@ would render a count. So in practical applications it might be used for
 something like an inbox button. In the case I built it is a
 notifications button.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;http://jsfiddle.net/james2doyle/LjgzD&#34; target=&#34;_blank&#34; title=&#34;notifications button&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/54368011.png&#34; alt=&#34;notifications button&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;http://jsfiddle.net/james2doyle/LjgzD&#34; target=&#34;_blank&#34; title=&#34;notifications button&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/54368011.png&#34; alt=&#34;notifications button&#34;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;button&lt;/span&gt; {
     &lt;span style=&#34;color:#ff79c6&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;#333&lt;/span&gt;;

@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Webs on James Doyle</title>
-    <link>https://james2doyle.github.io/ohdoylerules.com/web/</link>
+    <link>https://ohdoylerules.com/web/</link>
     <description>Recent content in Webs on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,14 +9,14 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/web/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohdoylerules.com/web/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using slots in Vue js</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/using-slots-in-vue-js/</link>
+      <link>https://ohdoylerules.com/web/using-slots-in-vue-js/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/using-slots-in-vue-js/</guid>
+      <guid>https://ohdoylerules.com/web/using-slots-in-vue-js/</guid>
       <description>&lt;p&gt;If you are working with server-rendered apps (your view is compiled on the server down to HTML), and you are a &lt;a href=&#34;https://vuejs.org/&#34;&gt;Vue.js&lt;/a&gt; user, then you should definitely learn to use a &lt;a href=&#34;https://vuejs.org/v2/guide/components-slots.html&#34;&gt;Vue feature called slots&lt;/a&gt;! Not only will it allow you to make more reusable and flexible components, but you will also improve the rendering performance of your apps as well.&lt;/p&gt;
 &lt;h2 id=&#34;basic-example&#34;&gt;Basic Example&lt;/h2&gt;
 &lt;p&gt;Here is the example we will be refactoring later. It is a &amp;ldquo;profile list&amp;rdquo; which takes in an array of users from a prop, and then creates &amp;ldquo;profile cards&amp;rdquo; for each one. Finally, it adds a button in each card that emits an event with the user data when someone clicks on it.&lt;/p&gt;
@@ -223,10 +223,10 @@
     
     <item>
       <title>Create JSON Sections In Shopify</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/create-json-sections-in-shopify/</link>
+      <link>https://ohdoylerules.com/web/create-json-sections-in-shopify/</link>
       <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/create-json-sections-in-shopify/</guid>
+      <guid>https://ohdoylerules.com/web/create-json-sections-in-shopify/</guid>
       <description>&lt;p&gt;If you&amp;rsquo;re like me, you&amp;rsquo;re probably constantly running into issues with the flexibility of Shopify themes. There are a lot of issues that come up when trying to squeeze in features and functionality that are &amp;ldquo;shop-adjacent&amp;rdquo;. Shopify does a good job at running a store but it can be difficult to reach beyond that and make some more interactive experiences.&lt;/p&gt;
 &lt;p&gt;Recently, I wanted to share the content from one section on one page to another section on another page. This isn&amp;rsquo;t really possible using liquid because you can&amp;rsquo;t pass variables to sections. So even including them both on the same page wouldn&amp;rsquo;t work. You also can&amp;rsquo;t include sections in other sections. So that also won&amp;rsquo;t work.&lt;/p&gt;
 &lt;p&gt;So how can you pass data between sections? Well, I managed to get this done by using the &lt;a href=&#34;https://help.shopify.com/en/themes/development/sections/section-rendering-api&#34;&gt;Section Rendering API&lt;/a&gt;. Now, this is not something in liquid, but it can be used as a JS API. Specifically, you can render a section in isolation and without the surrounding page content.&lt;/p&gt;
@@ -309,10 +309,10 @@ async &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/s
     
     <item>
       <title>Detect Theme Editor In Shopify Liquid Templates</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</link>
+      <link>https://ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</guid>
+      <guid>https://ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</guid>
       <description>&lt;p&gt;So you may already know that you cannot detect if an liquid page is running in the theme editor. You can however, &lt;a href=&#34;https://help.shopify.com/en/themes/development/theme-editor/other-theme-files#detecting-the-theme-editor-with-javascript&#34;&gt;detect this in Javascript&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;But what if you want conditional content? What if you want to use this &amp;ldquo;switch&amp;rdquo; in a liquid template?&lt;/p&gt;
 &lt;p&gt;There are a couple good reasons to do this. The first one being that sometimes you need to show the content the website admin is editing in a different way.&lt;/p&gt;
@@ -355,10 +355,10 @@ async &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/s
     
     <item>
       <title>Using Zapier Webhooks for HTML forms</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/zapier-webhooks-for-html-forms/</link>
+      <link>https://ohdoylerules.com/web/zapier-webhooks-for-html-forms/</link>
       <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/zapier-webhooks-for-html-forms/</guid>
+      <guid>https://ohdoylerules.com/web/zapier-webhooks-for-html-forms/</guid>
       <description>&lt;p&gt;If you don&amp;rsquo;t know about &lt;a href=&#34;https://zapier.com/&#34;&gt;Zapier&lt;/a&gt;, it&amp;rsquo;s a service that allows you to &amp;ldquo;automate everything&amp;rdquo;. I&amp;rsquo;ve been using it for over 4 years to automate tons of different things like posting daily Trello tasks to Slack, activity in Intercom to Emails, and even a custom scheduled job that gives me task information for the current day.&lt;/p&gt;
 &lt;p&gt;One of the best built-in zaps (that&amp;rsquo;s what they call the tasks) is the &lt;a href=&#34;https://zapier.com/app-directory/webhook/integrations&#34;&gt;webhook zap&lt;/a&gt; which let&amp;rsquo;s you send a &lt;code&gt;POST&lt;/code&gt; request to Zapier and then connect that with the 100s of other integrations. You can use this for all types of things. One thing I have found it to be good for is handling form submissions on static sites.&lt;/p&gt;
 &lt;p&gt;As the concept of static sites and &amp;ldquo;serverless&amp;rdquo; keeps getting more and more popular, so do the services surrounding those concepts. But if you know where to look, and how to set things up, most of those &amp;ldquo;services&amp;rdquo; that supplement static sites can be replace with some savvy Zapier setups.&lt;/p&gt;
@@ -394,10 +394,10 @@ async &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/s
     
     <item>
       <title>Use Laravel Valet for WordPress Multisites</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</link>
+      <link>https://ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</link>
       <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</guid>
+      <guid>https://ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</guid>
       <description>&lt;p&gt;Working with WordPress multisites can sometimes be a pain. Especially if you are not using the amazing &lt;a href=&#34;https://laravel.com/docs/6.0/valet&#34;&gt;Laravel Valet&lt;/a&gt; tool to manage your local sites.&lt;/p&gt;
 &lt;p&gt;From the site:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -468,10 +468,10 @@ define(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;SITECOOKIEPATH&amp;#39
     
     <item>
       <title>Build A Multi-lingual Laravel Site With Subdomains</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</link>
+      <link>https://ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</link>
       <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</guid>
+      <guid>https://ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</guid>
       <description>&lt;p&gt;OK, so you want to make Laravel a multi-lingual (or just multi-functional) site based off the subdomain? Cool. Must be an interesting project.&lt;/p&gt;
 &lt;p&gt;In order to test this on local development, we are going to use &lt;a href=&#34;https://laravel.com/docs/5.8/valet&#34;&gt;Valet&lt;/a&gt;. Let&amp;rsquo;s say our Laravel project folder is in &lt;code&gt;~/Sites/multisite&lt;/code&gt;. We can use that as our base path moving forward. With Valet, we can set up subdomains with &lt;code&gt;valet link&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m going to pretend that we want to add support for a new subdomain for the French version of our site. I&amp;rsquo;m also going to assume that your valet TLD is &lt;code&gt;.localhost&lt;/code&gt; and your project is called &lt;code&gt;multisite.localhost&lt;/code&gt;. The domain we are adding in this case, it will be &lt;code&gt;fr.multisite.localhost&lt;/code&gt;.&lt;/p&gt;
@@ -668,7 +668,7 @@ define(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;SITECOOKIEPATH&amp;#39
 &amp;lt;/&lt;span style=&#34;color:#ff79c6&#34;&gt;html&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We should see something like this when we load up &lt;code&gt;multisite.localhost&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/multisite-demo.gif&#34; target=&#34;_blank&#34; title=&#34;laravel multi-lingual site demo&#34;&gt;&lt;img alt=&#34;laravel multi-lingual site demo&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/multisite-demo.gif&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/multisite-demo.gif&#34; target=&#34;_blank&#34; title=&#34;laravel multi-lingual site demo&#34;&gt;&lt;img alt=&#34;laravel multi-lingual site demo&#34; src=&#34;https://ohdoylerules.com/images/multisite-demo.gif&#34;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Wow! Amazing. So it works! Very nice. We now have the basis for a multilingual site based completely off subdomains and we didn&amp;rsquo;t need to install any packages or do any weird magic!&lt;/p&gt;
 </description>
@@ -676,10 +676,10 @@ define(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;SITECOOKIEPATH&amp;#39
     
     <item>
       <title>Simple Slack Slash Supplier</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/simple-slash-commands/</link>
+      <link>https://ohdoylerules.com/web/simple-slash-commands/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/simple-slash-commands/</guid>
+      <guid>https://ohdoylerules.com/web/simple-slash-commands/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a reprint of the README from my project &lt;a href=&#34;https://github.com/james2doyle/simple-slack-slash-supplier&#34;&gt;simple-slack-slash-supplier&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This examples project showcases a simple way to create new slash commands without having to work too hard.&lt;/p&gt;
 &lt;p&gt;This example assumes you have access to &lt;a href=&#34;https://aws.amazon.com/lambda/&#34;&gt;AWS Lambda&lt;/a&gt; as well as have &lt;a href=&#34;https://api.slack.com/slash-commands&#34;&gt;created a Slash command in Slack&lt;/a&gt;.&lt;/p&gt;
@@ -766,10 +766,10 @@ npm run test
     
     <item>
       <title>SQL As An API</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/sql-as-an-api/</link>
+      <link>https://ohdoylerules.com/web/sql-as-an-api/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/sql-as-an-api/</guid>
+      <guid>https://ohdoylerules.com/web/sql-as-an-api/</guid>
       <description>&lt;p&gt;There has been a lot of fanfare around the idea of &lt;a href=&#34;https://graphql.org/&#34;&gt;GraphQL&lt;/a&gt; lately. For good reason in my opinion.&lt;/p&gt;
 &lt;p&gt;GraphQL allows you to essentially define your API with your query. For example, if you want to only include a single field then you can do that. If you want to nest related items, or not, you can do that as well.&lt;/p&gt;
 &lt;p&gt;If you take a quick look at the GraphQL website (as it is today) you can see how they lay this out:&lt;/p&gt;
@@ -1031,10 +1031,10 @@ Stack trace:
     
     <item>
       <title>Laravel Scout Sonic Driver</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/laravel-scout-sonic-driver/</link>
+      <link>https://ohdoylerules.com/web/laravel-scout-sonic-driver/</link>
       <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/laravel-scout-sonic-driver/</guid>
+      <guid>https://ohdoylerules.com/web/laravel-scout-sonic-driver/</guid>
       <description>&lt;p&gt;If you haven&amp;rsquo;t heard about the cool new search indexer &lt;a href=&#34;https://github.com/valeriansaliou/sonic&#34;&gt;Sonic&lt;/a&gt; you must be living under a rock! If you want to read about Sonic directly from the author, &lt;a href=&#34;https://journal.valeriansaliou.name/announcing-sonic-a-super-light-alternative-to-elasticsearch/&#34;&gt;check out his blog post&lt;/a&gt; on why and how they went on building the tool.&lt;/p&gt;
 &lt;p&gt;According to the Sonic page, it is:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1059,10 +1059,10 @@ Stack trace:
     
     <item>
       <title>Function Currying To Make Reusable Code</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/function-currying-to-make-reusable-code/</link>
+      <link>https://ohdoylerules.com/web/function-currying-to-make-reusable-code/</link>
       <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/function-currying-to-make-reusable-code/</guid>
+      <guid>https://ohdoylerules.com/web/function-currying-to-make-reusable-code/</guid>
       <description>&lt;p&gt;Function currying. If you haven&amp;rsquo;t heard of it before, let me introduce you to this magical pattern that can help reduce duplicate code and improve readability.&lt;/p&gt;
 &lt;p&gt;Currying is just a fancy way to describe a &lt;em&gt;function that returns a function&lt;/em&gt;. Pretty simple right? I mean this literally. There are no gotchas here. A &lt;em&gt;function that returns a function&lt;/em&gt; is a curried function. Enough words though. I will show you some common code samples and then refactor them to use curried functions.&lt;/p&gt;
 &lt;h3 id=&#34;cleaning-up-prototype-chains&#34;&gt;Cleaning up prototype chains&lt;/h3&gt;
@@ -1208,10 +1208,10 @@ ReactDOM.render(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt;F
     
     <item>
       <title>When And Where To Compromise Your App Design</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</link>
+      <link>https://ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</link>
       <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</guid>
+      <guid>https://ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</guid>
       <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;You won&amp;rsquo;t believe number 3!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;When initially developing an application or a new feature we are constantly trying to balance best practices in system/application design with delivering a finished product. Usually, things like scaling or flexibility become a secondary thought or something that would be &lt;em&gt;&amp;ldquo;nice to have, if we had the time&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Given those restrictions or that type of scenario, we need to pick places to &lt;em&gt;compromise on purpose&lt;/em&gt;. We need to actively choose a section of the app to cut corners and hide garbage. Fun! Right?&lt;/p&gt;
@@ -1243,10 +1243,10 @@ ReactDOM.render(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt;F
     
     <item>
       <title>Using Sqlite As A Cache In Laravel</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/laravel-sqlite-cache/</link>
+      <link>https://ohdoylerules.com/web/laravel-sqlite-cache/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/laravel-sqlite-cache/</guid>
+      <guid>https://ohdoylerules.com/web/laravel-sqlite-cache/</guid>
       <description>&lt;p&gt;I was playing with a new project using &lt;a href=&#34;https://laravel.com/docs/5.7&#34;&gt;Laravel 5.7&lt;/a&gt; and I wanted to use &lt;a href=&#34;https://www.sqlite.org/index.html&#34;&gt;sqlite&lt;/a&gt; for the &lt;a href=&#34;https://laravel.com/docs/5.7/cache&#34;&gt;cache feature&lt;/a&gt; that comes with the framework. If you didn&amp;rsquo;t know, Laravel allows you to choose a cache &amp;ldquo;driver&amp;rdquo; and Laravel will handle writes, reads, and even locks, using that cache.&lt;/p&gt;
 &lt;p&gt;By default, Laravel includes drivers for &amp;ldquo;database&amp;rdquo;, &amp;ldquo;redis&amp;rdquo;, &amp;ldquo;memcached&amp;rdquo;, &amp;ldquo;file&amp;rdquo;, and &amp;ldquo;array&amp;rdquo;. In typical Laravel fashion, you can even &lt;a href=&#34;https://laravel.com/docs/5.7/cache#adding-custom-cache-drivers&#34;&gt;write your own drivers&lt;/a&gt;. All you need to do is implement the &lt;code&gt;Illuminate\Contracts\Cache\Store&lt;/code&gt; interface using the technology you wish to turn into a cache driver.&lt;/p&gt;
 &lt;p&gt;To my surprise, the &amp;ldquo;database&amp;rdquo; cache driver does not support multiple database connections. Which means whatever &lt;code&gt;DB_CONNECTION&lt;/code&gt; you are using is also going to be used for the cache database driver when it is selected. I took a look to see how the &amp;ldquo;database&amp;rdquo; driver was implemented (it&amp;rsquo;s in the &lt;code&gt;Illuminate\Cache\DatabaseStore&lt;/code&gt; class) to see if there is any way I can make the database driver use a different connection than the one set in &lt;code&gt;DB_CONNECTION&lt;/code&gt;. Looking deeper, it turns out that by extending &lt;code&gt;Illuminate\Cache\DatabaseStore&lt;/code&gt;, I was able to put together a &amp;ldquo;sqlite&amp;rdquo; cache driver really quickly.&lt;/p&gt;
@@ -1313,16 +1313,16 @@ ReactDOM.render(&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt;F
     
     <item>
       <title>Angular (v1.x) Through iFrame</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/angular-through-iframe/</link>
+      <link>https://ohdoylerules.com/web/angular-through-iframe/</link>
       <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/angular-through-iframe/</guid>
+      <guid>https://ohdoylerules.com/web/angular-through-iframe/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is an older project/repo that uses the previous version of Angular (v1.x) so keep that in mind.&lt;/p&gt;
 &lt;p&gt;I was working on a project that required users to generate content that had dynamic templates. The goal was to make the entire thing was just a javascript client application and not have to worry about adding a server for handling the updates. Even better, if we could avoid AJAX requests for each keypress to update the content of the template, that would be even better.&lt;/p&gt;
 &lt;p&gt;This was a perfect problem for an iframe to solve as we had remote HTML files that would be loaded into an editor and then you can edit the data insde them. When you were finished, you could generate a PDF from the content inside the iframe. It was pretty sweet and worked really well.&lt;/p&gt;
 &lt;p&gt;While writing the app, I had to find a way to get data from the parent window into the iframe. If you didn&amp;rsquo;t know this, you can actually call &lt;code&gt;window&lt;/code&gt; functions on an iframe you own (one that has &lt;code&gt;sandbox=&amp;quot;allow-same-origin allow-scripts&amp;quot;&lt;/code&gt; set on the tag and is the same domain) which will allow you to send data down to the iframe and have it run events, change code, or in my case, trigger &lt;code&gt;$scope&lt;/code&gt; updates.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/angular-iframe.gif&#34; alt=&#34;angular through iframe demo&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/angular-iframe.gif&#34; alt=&#34;angular through iframe demo&#34;&gt;
   &lt;p&gt;&lt;small&gt;Angular Through iFrame Preview&lt;/small&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;All we need to do is access the &lt;code&gt;contentWindow&lt;/code&gt; (on our parent iframe) property and call functions that exist in the &lt;code&gt;window&lt;/code&gt; of the child iframe.&lt;/p&gt;
@@ -1347,10 +1347,10 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>Nuxt Firebase Starter</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/nuxt-firebase-starter/</link>
+      <link>https://ohdoylerules.com/web/nuxt-firebase-starter/</link>
       <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/nuxt-firebase-starter/</guid>
+      <guid>https://ohdoylerules.com/web/nuxt-firebase-starter/</guid>
       <description>&lt;p&gt;Over the past few weeks, I have been working on &lt;a href=&#34;https://github.com/james2doyle/nuxt-firebase-auth&#34;&gt;a boilerplate/starting template for using the Nuxt.js framework with Firebase&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I plan to use this boilerplate for easily creating apps that require authentication, real-time feedback from the database (chats, threads, account balances, etc.), and proper modern support for the new PWA (progressive web app) conventions (service worker, offline, code-splitting, etc.) without having to worry too much about laying the ground work each time.&lt;/p&gt;
 &lt;p&gt;If you already know about Nuxt and Firebase, I suggest just checking out the project and playing around with it. By default, I have setup the Nuxt PWA module, social login support for Google and Github, and also setup a database convention called “accounts” where users manage their public profile inside the application.&lt;/p&gt;
@@ -1411,7 +1411,7 @@ iframe.contentWindow.update(dataFromParent);
 &lt;p&gt;Since we have a profile image (either pulled from the social login or assigned a default), I figured; &lt;em&gt;why not add support for uploading a new profile image to the Firebase storage?&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;So I did! And now you can easily manage a mini-profile on the app without any extra configuration. It is there by default:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/nuxt-firebase-account-preview.gif&#34; alt=&#34;nuxt firebase account preview&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/nuxt-firebase-account-preview.gif&#34; alt=&#34;nuxt firebase account preview&#34;&gt;
   &lt;p&gt;&lt;small&gt;Nuxt Firebase Account Preview&lt;/small&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;As you can see from the animation above, super simple interface with live updating thanks to the bindings from our application store to the Firebase database!&lt;/p&gt;
@@ -1421,10 +1421,10 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>Using DigitalOcean Spaces</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/using-digitalocean-spaces/</link>
+      <link>https://ohdoylerules.com/web/using-digitalocean-spaces/</link>
       <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/using-digitalocean-spaces/</guid>
+      <guid>https://ohdoylerules.com/web/using-digitalocean-spaces/</guid>
       <description>&lt;p&gt;If you are a fan of &lt;a href=&#34;https://m.do.co/c/802f151adea5&#34;&gt;DigitalOcean&lt;/a&gt;, or you keep an eye on DevOps news, then you probably heard about the new &lt;a href=&#34;https://www.digitalocean.com/products/object-storage/&#34;&gt;DigitalOcean Spaces&lt;/a&gt; offering.&lt;/p&gt;
 &lt;p&gt;Spaces is essentially an AWS S3-compatible service but with that special DigitalOcean touch.&lt;/p&gt;
 &lt;p&gt;Now Spaces is not a 1:1 replacement for S3. There are quite a few features that have not yet been implemented. They also don&amp;rsquo;t have any GUI interfaces for things like managing bucket policies or CORS configurations.&lt;/p&gt;
@@ -1446,12 +1446,12 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>3 Ways A Website Project Falls Apart</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</link>
+      <link>https://ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</link>
       <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</guid>
+      <guid>https://ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</guid>
       <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/broken-glass.jpg&#34; alt=&#34;Mens shoes on broken glass. Photo by veeterzy on Unsplash&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/broken-glass.jpg&#34; alt=&#34;Mens shoes on broken glass. Photo by veeterzy on Unsplash&#34;&gt;
   &lt;p&gt;&lt;small&gt;Photo by &lt;a href=&#34;https://unsplash.com/photos/afq5-t0ZGtQ?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;veeterzy&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Over the last seven years, I have been involved in hundreds of website projects.&lt;/p&gt;
@@ -1518,10 +1518,10 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>WordPress Browser Body Class</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/wordpress-browser-body-class/</link>
+      <link>https://ohdoylerules.com/web/wordpress-browser-body-class/</link>
       <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/wordpress-browser-body-class/</guid>
+      <guid>https://ohdoylerules.com/web/wordpress-browser-body-class/</guid>
       <description>&lt;p&gt;Sometimes, browsers just don&amp;rsquo;t behave. While working on a WordPress site, I had a particular styling issue that was affecting Safari. I was wondering what the best way to target the browser was.&lt;/p&gt;
 &lt;p&gt;If you didn&amp;rsquo;t know, there are some primitive &lt;a href=&#34;https://codex.wordpress.org/Global_Variables#Browser_Detection_Booleans&#34;&gt;browser detection booleans&lt;/a&gt; that are built into WordPress.&lt;/p&gt;
 &lt;p&gt;Using those primitives, I was able to whip up a little snippet that adds classes to the body tag depending on the browser - no plugins required.&lt;/p&gt;
@@ -1533,10 +1533,10 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>Update Laravel Pagination With New Collection</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</link>
+      <link>https://ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</guid>
+      <guid>https://ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</guid>
       <description>&lt;p&gt;Have you even done a database search (using the &lt;code&gt;DB&lt;/code&gt; facade) and got back an array of results that wasn&amp;rsquo;t wrapped in lovely little Eloquent Models? After some googling, I am sure you probably found out about the &lt;a href=&#34;http://commandz.io/create-models-from-query-builder/&#34;&gt;hydrate&lt;/a&gt; method. Using &lt;code&gt;hydrate&lt;/code&gt;, you can turn an array of results from the database into real models from your application. This works phenomenally.&lt;/p&gt;
 &lt;p&gt;But what if you want to return paginated results? How do you used the results after they are already paginated? Well there is a method called &lt;code&gt;setCollection&lt;/code&gt; on the &lt;a href=&#34;https://laravel.com/api/5.4/Illuminate/Pagination/LengthAwarePaginator.html&#34;&gt;LengthAwarePaginator&lt;/a&gt; class. What it will let you do actually set the results of the pagination to a new collection.&lt;/p&gt;
 &lt;p&gt;Here is an example of how that works in practice:&lt;/p&gt;
@@ -1565,10 +1565,10 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>Use Nginx for A/B Testing</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/use-nginx-for-a-b-testing/</link>
+      <link>https://ohdoylerules.com/web/use-nginx-for-a-b-testing/</link>
       <pubDate>Sun, 28 Aug 2016 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/use-nginx-for-a-b-testing/</guid>
+      <guid>https://ohdoylerules.com/web/use-nginx-for-a-b-testing/</guid>
       <description>&lt;p&gt;I was starting a new project the other day that had a heavy marketing influence. The team was wondering about possibly A/B testing the main content section of the website.&lt;/p&gt;
 &lt;p&gt;It got me thinking about doing A/B test with content and how that works.&lt;/p&gt;
 &lt;p&gt;There are a couple of ways that A/B testing can be accomplished. After some quick Google-ing, I found this cool feature of Nginx called &lt;code&gt;split_clients&lt;/code&gt;.&lt;/p&gt;
@@ -1613,7 +1613,7 @@ iframe.contentWindow.update(dataFromParent);
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This would be the resulting response from any HTTP request:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/nginx-ab-header.png&#34; title=&#34;Nginx example of the custom a/b header&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Nginx example of the custom a/b header&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/nginx-ab-header.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/nginx-ab-header.png&#34; title=&#34;Nginx example of the custom a/b header&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Nginx example of the custom a/b header&#34; src=&#34;https://ohdoylerules.com/images/nginx-ab-header.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Awesome! Now half of all traffic will be tagged with either &lt;em&gt;X-AB-Testcase: A&lt;/em&gt; or &lt;em&gt;X-AB-Testcase: B&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Finally, we could add a middleware to collect that information from the header and pass it to variables in your views, or you could use AJAX to check the headers of a piece of conditionally content.&lt;/p&gt;
@@ -1624,10 +1624,10 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>Add A Counter For Duplicate Uploads</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</link>
+      <link>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</link>
       <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</guid>
+      <guid>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</guid>
       <description>&lt;p&gt;Wouldn&amp;rsquo;t it be nice if, when you uploaded a file, the duplicate filenames just get a counter added in front?&lt;/p&gt;
 &lt;p&gt;Some people add timestamps on their files, and add some type of date, but I always found that to be very cumbersome.&lt;/p&gt;
 &lt;p&gt;How about something like this?&lt;/p&gt;
@@ -1645,10 +1645,10 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>Add $.getStylesheet To jQuery</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/add-getstylesheet-to-jquery/</link>
+      <link>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</link>
       <pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/add-getstylesheet-to-jquery/</guid>
+      <guid>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</guid>
       <description>&lt;p&gt;Have you ever wanted to do this?&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;$.when($.getStylesheet(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;css/main.css&amp;#39;&lt;/span&gt;), $.getScript(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;js/main.js&amp;#39;&lt;/span&gt;))
 .then(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; () {
@@ -1666,13 +1666,13 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>Slack Meta Data For URLs and Links</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/slack-url-meta-data/</link>
+      <link>https://ohdoylerules.com/web/slack-url-meta-data/</link>
       <pubDate>Sat, 31 Oct 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/slack-url-meta-data/</guid>
+      <guid>https://ohdoylerules.com/web/slack-url-meta-data/</guid>
       <description>&lt;p&gt;If you use &lt;a href=&#34;https://slack.com/&#34;&gt;Slack&lt;/a&gt;, then you have probably noticed the awesome feature they have for generating nice meta data whenever you paste a URL or an image.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/slack-example.png&#34; title=&#34;Slack meta tag fetching example&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Slack meta tag fetching example&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/slack-example.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/slack-example.png&#34; title=&#34;Slack meta tag fetching example&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Slack meta tag fetching example&#34; src=&#34;https://ohdoylerules.com/images/slack-example.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;That is pretty slick! So how does it know what to grab for us?&lt;/p&gt;
 &lt;p&gt;From the Slack website:&lt;/p&gt;
@@ -1694,7 +1694,7 @@ iframe.contentWindow.update(dataFromParent);
 &amp;lt;&lt;span style=&#34;color:#ff79c6&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;property&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;og:url&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;content&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;http://warpaintmedia.ca&amp;#34;&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open Graph tags are pretty popular. The biggest user of Open Graph is Facebook. Here is the result when the link is shared on Facebook:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/warpaint-facebook.png&#34; title=&#34;Facebook meta tag fetching example&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Facebook meta tag fetching example&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/warpaint-facebook.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/warpaint-facebook.png&#34; title=&#34;Facebook meta tag fetching example&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Facebook meta tag fetching example&#34; src=&#34;https://ohdoylerules.com/images/warpaint-facebook.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Make sure you test your tags using the &lt;a href=&#34;https://developers.facebook.com/tools/debug/og/object/&#34;&gt;Facebook Open Graph Object Debugger&lt;/a&gt;. This will help you spot errors in your tags. If there are errors, &lt;strong&gt;Slack will not load the content&lt;/strong&gt;. You need to have valid tags to make Slack work nicely.&lt;/p&gt;
 &lt;p&gt;How about the &lt;a href=&#34;https://dev.twitter.com/cards/overview&#34;&gt;Twitter Card&lt;/a&gt; meta tags?&lt;/p&gt;
@@ -1713,10 +1713,10 @@ iframe.contentWindow.update(dataFromParent);
     
     <item>
       <title>Fixing Wordpress wp-content 500 Errors</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/wordpress-wp-content-500-errors/</link>
+      <link>https://ohdoylerules.com/web/wordpress-wp-content-500-errors/</link>
       <pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/wordpress-wp-content-500-errors/</guid>
+      <guid>https://ohdoylerules.com/web/wordpress-wp-content-500-errors/</guid>
       <description>&lt;p&gt;Yesterday, a friend emailed me about her Wordpress site acting crazy. For some reason all the site assets weren&amp;rsquo;t loading and were returning 500 errors.&lt;/p&gt;
 &lt;h4 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h4&gt;
 &lt;p&gt;I had her check the usual things: &lt;code&gt;.htaccess&lt;/code&gt; is there, the asset actually existed, some plugin wasn&amp;rsquo;t busting the site. Each one was throwing a 500 error, so it was something else.&lt;/p&gt;
@@ -1756,10 +1756,10 @@ define(&amp;#39;SCRIPT_DEBUG&amp;#39;, true);
     
     <item>
       <title>Simple Benchmarks With Apache AB</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</link>
+      <link>https://ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</link>
       <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</guid>
+      <guid>https://ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</guid>
       <description>&lt;h3 id=&#34;why-benchmark&#34;&gt;Why Benchmark?&lt;/h3&gt;
 &lt;p&gt;Did you know that Apache has a benchmarking tool for testing the HTTP server? It is called &lt;a href=&#34;http://httpd.apache.org/docs/2.4/programs/ab.html&#34; title=&#34;Apache ab&#34;&gt;ab&lt;/a&gt;, and it is pretty great!&lt;/p&gt;
 &lt;p&gt;As your site grows in popularity, complexity, or size, you will want to test the site to see how it preforms. Having the site crash or lock up during peak time can be devastating for a small blog or e-commerce site. It means lost revenue, and can leave a visitor with a bad impression of your site. This can drive them to generate a bad referral, or worse, go to your competitor.&lt;/p&gt;
@@ -1790,10 +1790,10 @@ define(&amp;#39;SCRIPT_DEBUG&amp;#39;, true);
     
     <item>
       <title>Varnish For Static Sites</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/varnish-for-static-sites/</link>
+      <link>https://ohdoylerules.com/web/varnish-for-static-sites/</link>
       <pubDate>Sun, 20 Sep 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/varnish-for-static-sites/</guid>
+      <guid>https://ohdoylerules.com/web/varnish-for-static-sites/</guid>
       <description>&lt;p&gt;Recently, &lt;a href=&#34;http://warpaintmedia.ca&#34;&gt;my company&lt;/a&gt; had a request to build a series of sites that could handle huge bursts of traffic. I asked some friends of mine, what a good solution for this would be. All of them said &lt;a href=&#34;https://www.varnish-cache.org/&#34;&gt;Varnish&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you don&amp;rsquo;t know what Varnish is, check out this definition from their documentation:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1857,7 +1857,7 @@ Listen 127.0.0.1:8080
 &lt;h4 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h4&gt;
 &lt;p&gt;Since we added that line in our &lt;code&gt;default.vcl&lt;/code&gt; file for &lt;code&gt;X-Cache&lt;/code&gt;, we can see which files are being served by Varnish. Using dev tools in Chrome/Safari or Firefox, we can look for a header in our request called &lt;code&gt;X-Cache&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/varnish-x-cache.png&#34; title=&#34;Varnish x-cache header example&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Varnish x-cache header example&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/varnish-x-cache.png&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/varnish-x-cache.png&#34; title=&#34;Varnish x-cache header example&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Varnish x-cache header example&#34; src=&#34;https://ohdoylerules.com/images/varnish-x-cache.png&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;You can see that this item was &lt;em&gt;HIT&lt;/em&gt;. This means that it will be counted in the &lt;em&gt;MAIN.cache_hit&lt;/em&gt; column and not &lt;em&gt;MAIN.cache_miss&lt;/em&gt; column. Good!&lt;/p&gt;
 &lt;p&gt;Things that mess up Varnish are headers and cookie headers especially. Sometimes you want or need some headers though. This setup does not allow any cookies to get through. If you had a normal CMS with this setup, you would find you wouldn&amp;rsquo;t be able to log in, or there might be some CSRF Token (Cross Site Request Forgery) issues with form submissions if you use CSRF.&lt;/p&gt;
@@ -1867,10 +1867,10 @@ Listen 127.0.0.1:8080
     
     <item>
       <title>PhalconPHP Completions</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/phalconphp-completions/</link>
+      <link>https://ohdoylerules.com/web/phalconphp-completions/</link>
       <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/phalconphp-completions/</guid>
+      <guid>https://ohdoylerules.com/web/phalconphp-completions/</guid>
       <description>&lt;p&gt;I have created a package of Sublime Text completions for &lt;a href=&#34;http://phalconphp.com/en/&#34;&gt;Phalcon PHP&lt;/a&gt; 1.3.*.&lt;/p&gt;
 &lt;p&gt;There are &lt;strong&gt;414&lt;/strong&gt; total right now. This is pretty much a copy-paste from my &lt;a href=&#34;https://github.com/james2doyle/sublime-node-snippets&#34;&gt;sublime-node-snippets&lt;/a&gt; repo.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
@@ -1920,13 +1920,13 @@ Listen 127.0.0.1:8080
     
     <item>
       <title>Kijiji Vector Logo</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/kijiji-vector-logo/</link>
+      <link>https://ohdoylerules.com/web/kijiji-vector-logo/</link>
       <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/kijiji-vector-logo/</guid>
+      <guid>https://ohdoylerules.com/web/kijiji-vector-logo/</guid>
       <description>&lt;p&gt;This logo was not only impossible to find, because searching for &amp;ldquo;kijiji vector logo&amp;rdquo; returns nothing but people wanting to sell vector logos &lt;strong&gt;on&lt;/strong&gt; Kijiji, but it was difficult to trace as well.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/kijiji.svg&#34; title=&#34;kijiji svg vector logo&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;kijiji svg vector logo&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/kijiji.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/kijiji.svg&#34; title=&#34;kijiji svg vector logo&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;kijiji svg vector logo&#34; src=&#34;https://ohdoylerules.com/images/kijiji.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;The reason I had to find this logo, was that I made a new Chrome app called, &amp;ldquo;&lt;a href=&#34;http://goo.gl/8VXrlm&#34; title=&#34;Kijiji Enhanced on the Chrome Web Store&#34;&gt;Kijiji Enhanced&lt;/a&gt;&amp;rdquo;. It allows you to browse with larger thumbnails, rotate images in the image viewer, and also view inline maps at the bottom of posts.&lt;/p&gt;
 </description>
@@ -1934,15 +1934,15 @@ Listen 127.0.0.1:8080
     
     <item>
       <title>Typeform Vector Logo</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/typeform-vector-logo/</link>
+      <link>https://ohdoylerules.com/web/typeform-vector-logo/</link>
       <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/typeform-vector-logo/</guid>
+      <guid>https://ohdoylerules.com/web/typeform-vector-logo/</guid>
       <description>&lt;p&gt;Another difficult logo to find. This one is for the fun new Typeform service. Typeform allows you to create dynamic and fun forms for clients, events, and other general uses.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/typeform.svg&#34; title=&#34;typeform svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;typeform svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/typeform.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/typeform.svg&#34; title=&#34;typeform svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;typeform svg vector&#34; src=&#34;https://ohdoylerules.com/images/typeform.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
-&lt;p&gt;If you are a photoshopper, you can also &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/typeform.eps&#34; title=&#34;typeform eps vector&#34; target=&#34;_blank&#34;&gt;grab the EPS file&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are a photoshopper, you can also &lt;a href=&#34;https://ohdoylerules.com/images/typeform.eps&#34; title=&#34;typeform eps vector&#34; target=&#34;_blank&#34;&gt;grab the EPS file&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;update&#34;&gt;Update&lt;/h3&gt;
 &lt;p&gt;Here is the &lt;a href=&#34;http://bit.ly/WPjXfZ&#34;&gt;official repository of Typeform branding graphics&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -1950,10 +1950,10 @@ Listen 127.0.0.1:8080
     
     <item>
       <title>The Simple Spam Stopper</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/simple-spam-stopper/</link>
+      <link>https://ohdoylerules.com/web/simple-spam-stopper/</link>
       <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/simple-spam-stopper/</guid>
+      <guid>https://ohdoylerules.com/web/simple-spam-stopper/</guid>
       <description>&lt;p&gt;For the last year at &lt;a href=&#34;http://warpaintmedia.ca&#34;&gt;WARPAINT Media&lt;/a&gt;, we have been getting assaulted with spam. Everything from &amp;ldquo;Chinese Jerseys&amp;rdquo; and &amp;ldquo;Super SEO Ultra Elite Package Extreme&amp;rdquo; offers.&lt;/p&gt;
 &lt;p&gt;We are using &lt;a href=&#34;http://pyrocms.com&#34;&gt;PyroCMS&lt;/a&gt; for the website. The default contact plugin is pretty awesome. It has some really great features and couldn&amp;rsquo;t be easier to use. There is a little &lt;a href=&#34;http://www.sitepoint.com/forums/showthread.php?946120-Spam-Honey-Pot-trap&amp;amp;s=9cfd3419319d5c9bd1f5d597cdfa6113&amp;amp;p=5278832&amp;amp;viewfull=1#post5278832&#34;&gt;honeypot&lt;/a&gt; for spam bots, but it seems to not be doing a great job, at least for us.&lt;/p&gt;
 &lt;p&gt;The great thing about the Pyro contact form is that it lets the developer define some validation without much work. In the past I have added questions like &lt;em&gt;&amp;ldquo;what is one plus one? (use a number)&amp;quot;&lt;/em&gt;, other times I have tried &lt;em&gt;&amp;ldquo;are you a human?&amp;quot;&lt;/em&gt; with a dropdown. Both seemed fine. But I wanted something a little more transparent and more conventional than strange questions about math or your species.&lt;/p&gt;
@@ -1967,10 +1967,10 @@ Listen 127.0.0.1:8080
     
     <item>
       <title>Flexible SVG Placeholder Images</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/flexible-svg-placeholders/</link>
+      <link>https://ohdoylerules.com/web/flexible-svg-placeholders/</link>
       <pubDate>Sat, 24 May 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/flexible-svg-placeholders/</guid>
+      <guid>https://ohdoylerules.com/web/flexible-svg-placeholders/</guid>
       <description>&lt;p&gt;Do you use &lt;a href=&#34;http://placehold.it&#34; title=&#34;Placehold.it Homepage&#34;&gt;placehold.it&lt;/a&gt;? It is a great service. The only thing is when you are offline, or you are testing a page that needs a lot of placeholders, it may not be the greatest solution.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Enter the SVG placeholder.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Here are the properties you can set:&lt;/p&gt;
@@ -1987,17 +1987,17 @@ Listen 127.0.0.1:8080
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#ff79c6&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;placeholder-svg.php?wh=400x400&amp;amp;fill=bada55&amp;amp;color=000000&amp;amp;font=Georgia&amp;amp;size=20&amp;#34;&lt;/span&gt; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This would be the output:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/placeholder.png&#34; alt=&#34;Placeholder Example&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/placeholder.png&#34; alt=&#34;Placeholder Example&#34;&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Tips For Using SVGs</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/tips-for-using-svgs/</link>
+      <link>https://ohdoylerules.com/web/tips-for-using-svgs/</link>
       <pubDate>Sat, 17 May 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/tips-for-using-svgs/</guid>
+      <guid>https://ohdoylerules.com/web/tips-for-using-svgs/</guid>
       <description>&lt;p&gt;I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.&lt;/p&gt;
 &lt;h3 id=&#34;use-viewbox&#34;&gt;Use Viewbox&lt;/h3&gt;
 &lt;p&gt;This one is a little gem. The &lt;code&gt;viewBox&lt;/code&gt; property allows you to set the dimensions of the image but it will also allow you can have responsive SVGs.&lt;/p&gt;
@@ -2016,7 +2016,7 @@ Listen 127.0.0.1:8080
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;ellipse&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ry=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;32&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;rx=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;32&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;svg_1&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;cy=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;32&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;cx=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;32&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;fill=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;url(#background-image)&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;/&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;/g&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is what the &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/placeholder.svg&#34;&gt;outputted image&lt;/a&gt; would look like.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is what the &lt;a href=&#34;https://ohdoylerules.com/images/placeholder.svg&#34;&gt;outputted image&lt;/a&gt; would look like.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;I&amp;rsquo;m using a very small gif so that the base64 string isn&amp;rsquo;t giant&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;You can also see &lt;code&gt;viewBox&lt;/code&gt; in action (try zooming). The reason I use this technique, is because it cuts down on requests but also cuts down on file size (for the most part). When you need to have multiple images inside the SVG, this works very well. Instead of having multiple requests (SVG, image1.jpg, image2.jpg, etc.) you get one request.&lt;/p&gt;
 &lt;h4 id=&#34;note&#34;&gt;Note&lt;/h4&gt;
@@ -2040,10 +2040,10 @@ Listen 127.0.0.1:8080
     
     <item>
       <title>Font Awesome SVG Icons</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/font-awesome-svg-icons/</link>
+      <link>https://ohdoylerules.com/web/font-awesome-svg-icons/</link>
       <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/font-awesome-svg-icons/</guid>
+      <guid>https://ohdoylerules.com/web/font-awesome-svg-icons/</guid>
       <description>&lt;p&gt;This one was kind of annoying. I was looking for all the &lt;a href=&#34;http://fontawesome.io/&#34;&gt;font-awesome icons&lt;/a&gt; in a nice sheet so that &lt;a href=&#34;warpaintmedia.ca&#34;&gt;WARPAINT&lt;/a&gt; could design some mockups for a client. Well, of course this sheet doesn&amp;rsquo;t exists.&lt;/p&gt;
 &lt;p&gt;So I used the following code to grab the icons from the &lt;a href=&#34;http://fontawesome.io/cheatsheet/&#34;&gt;cheatsheet page&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; arr &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
@@ -2053,20 +2053,20 @@ $(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;.container .col-md-4&amp;#3
 console.log(arr);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I then took that output and pasted it into Sublime Text. I split the output into multiple lines, and replaced the commas with double spaces. That was then pasted into Illustrator and exported as SVG.&lt;/p&gt;
 &lt;p&gt;Voila! There you have this sprite sheet.&lt;/p&gt;
-&lt;p&gt;You can &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/font-awesome-sheet.svg&#34;&gt;download it here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&#34;https://ohdoylerules.com/images/font-awesome-sheet.svg&#34;&gt;download it here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;These icons are from version 4.0.2&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>IICRC Vector Logo</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/iicrc-vector-logo/</link>
+      <link>https://ohdoylerules.com/web/iicrc-vector-logo/</link>
       <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/iicrc-vector-logo/</guid>
+      <guid>https://ohdoylerules.com/web/iicrc-vector-logo/</guid>
       <description>&lt;p&gt;Another lost logo, this one is for the IICRC (institute of inspection cleaning and restoration). They are an international cleaning certification institure. Clearly. Here is their vector logo.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/iicrc.svg&#34; title=&#34;iicrc svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;iicrc svg vector&#34; src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/iicrc.svg&#34; &gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/iicrc.svg&#34; title=&#34;iicrc svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;iicrc svg vector&#34; src=&#34;https://ohdoylerules.com/images/iicrc.svg&#34; &gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Enjoy. This was a huge pain to get right.&lt;/p&gt;
 </description>
@@ -2074,10 +2074,10 @@ console.log(arr);
     
     <item>
       <title>CMS Watch List</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/cms-watch-list/</link>
+      <link>https://ohdoylerules.com/web/cms-watch-list/</link>
       <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/cms-watch-list/</guid>
+      <guid>https://ohdoylerules.com/web/cms-watch-list/</guid>
       <description>&lt;p&gt;I created a new post on WARPAINT about some of the upcoming CMS platforms you may not have heard of.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://warpaintmedia.ca/blog/2013/07/cms-watch-list&#34; title=&#34;CMS Watch List&#34;&gt;Here is the article&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -2085,10 +2085,10 @@ console.log(arr);
     
     <item>
       <title>The $100 Website</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/the-100-dollar-website/</link>
+      <link>https://ohdoylerules.com/web/the-100-dollar-website/</link>
       <pubDate>Tue, 23 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/the-100-dollar-website/</guid>
+      <guid>https://ohdoylerules.com/web/the-100-dollar-website/</guid>
       <description>&lt;p&gt;I wrote a post on WARPAINT Media about people who ask about getting a website for $100. It isn&amp;rsquo;t an angry rant, although there is some frustration. It is more about courtesy.&lt;/p&gt;
 &lt;p&gt;I wouldn&amp;rsquo;t ask you to take $100 for an entire weeks worth of work. So please, don&amp;rsquo;t ask me. &lt;a href=&#34;http://warpaintmedia.ca/blog/2013/07/the-100-dollar-website&#34; title=&#34;The $100 Website&#34;&gt;Here is the article&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -2096,12 +2096,12 @@ console.log(arr);
     
     <item>
       <title>Custom Google Forms</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/custom-google-forms/</link>
+      <link>https://ohdoylerules.com/web/custom-google-forms/</link>
       <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/custom-google-forms/</guid>
+      <guid>https://ohdoylerules.com/web/custom-google-forms/</guid>
       <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/googleforms.png&#34; alt=&#34;&#34; align=&#34;middle&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/googleforms.png&#34; alt=&#34;&#34; align=&#34;middle&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Update: Google has added the tools to customize a form with logos, colours, fonts, and backgrounds. Use this guide if you want even more custom styles, or if you want to embed the form within another page.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something. After a bit of research I have found a way to create custom forms rather easily.&lt;/p&gt;
@@ -2139,21 +2139,21 @@ console.log(arr);
     
     <item>
       <title>CSS3 badge logo in SVG</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/css3-badge-logo-in-svg/</link>
+      <link>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</link>
       <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/css3-badge-logo-in-svg/</guid>
+      <guid>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</guid>
       <description>&lt;p&gt;I have been trying to find the CSS3 badge in a SVG format but it wasn’t that easy. The HTML5 one was the first result on Google. Now finally I found one. I am posting it here because now I will never lose it!&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/html5css3badges.png&#34; alt=&#34;HTML5 and CSS3 badges&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/html5css3badges.png&#34; alt=&#34;HTML5 and CSS3 badges&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;Here is the CSS3 logo:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/css3.svg&#34; target=&#34;_blank&#34; title=&#34;Download CSS3.svg&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/css3.svg&#34; alt=&#34;CSS3 Scalable vector graphic&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/css3.svg&#34; target=&#34;_blank&#34; title=&#34;Download CSS3.svg&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/css3.svg&#34; alt=&#34;CSS3 Scalable vector graphic&#34;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Here is the HTML5 logo in-case you need it:&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/html5.svg&#34; target=&#34;_blank&#34; title=&#34;Download HTML5.svg&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/html5.svg&#34; alt=&#34;HTML5 Scalable vector graphic&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/html5.svg&#34; target=&#34;_blank&#34; title=&#34;Download HTML5.svg&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/html5.svg&#34; alt=&#34;HTML5 Scalable vector graphic&#34;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;p&gt;I found the logos on &lt;a href=&#34;http://www.bobbyberberyan.com/2012/03/html-5-css-3-logos/&#34; title=&#34;bobby berberyan - html-5-css-3-logos&#34;&gt;this website&lt;/a&gt;. They were in one single SVG file and I split them up.&lt;/p&gt;
@@ -2162,10 +2162,10 @@ console.log(arr);
     
     <item>
       <title>AngularJS Hangout - Promises Promises</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/angularjs-hangout-promises-promises/</link>
+      <link>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</link>
       <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/angularjs-hangout-promises-promises/</guid>
+      <guid>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</guid>
       <description>&lt;p&gt;I somehow managed to find my way into an &lt;a href=&#34;https://plus.google.com/u/0/events/cljavmi7kpup1fso43k3fkpk2eg&#34; title=&#34;AngularJS Promises&#34;&gt;AngularJS hangout&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The hangout is about promises and deffereds. On the google plus &lt;a href=&#34;https://plus.google.com/u/0/events/cljavmi7kpup1fso43k3fkpk2eg&#34; title=&#34;Angularjs Promises Event Page&#34;&gt;event page&lt;/a&gt;, there are links to all the plunkrs in the video. Here is the direct &lt;a href=&#34;https://www.youtube.com/watch?v=XLaYaaq2Miw&#34; title=&#34;Angularjs Promises Youtube&#34;&gt;youtube link&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -2173,27 +2173,27 @@ console.log(arr);
     
     <item>
       <title>View Folder Tree in MacOSX Terminal</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</link>
+      <link>https://ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</link>
       <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</guid>
+      <guid>https://ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://coderwall.com/p/owb6eg&#34; title=&#34;terminal tree command&#34;&gt;View Folder Tree in MacOSX Terminal&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2012-11-19-at-1.05.22-PM11.png&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2012-11-19-at-1.05.22-PM11.png&#34; alt=&#34;zsh tree alias&#34; title=&#34;zsh tree alias&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-11-19-at-1.05.22-PM11.png&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-11-19-at-1.05.22-PM11.png&#34; alt=&#34;zsh tree alias&#34; title=&#34;zsh tree alias&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Source Code Pro on Sublime Text</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/source-code-pro-sublime/</link>
+      <link>https://ohdoylerules.com/web/source-code-pro-sublime/</link>
       <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/source-code-pro-sublime/</guid>
+      <guid>https://ohdoylerules.com/web/source-code-pro-sublime/</guid>
       <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/githubgistlogo.png&#34; alt=&#34;Github Gists Logo&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/githubgistlogo.png&#34; alt=&#34;Github Gists Logo&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;I recently switched my font in sublime text to the new Adobe font, &lt;a href=&#34;http://blogs.adobe.com/typblography/2012/09/source-code-pro.html&#34; title=&#34;Adobe Blog - Source Code Pro&#34;&gt;Source Code Pro&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/sourcecodepro.png&#34; alt=&#34;Source Code Pro sublime text 2 screenshot&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/sourcecodepro.png&#34; alt=&#34;Source Code Pro sublime text 2 screenshot&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;It looks fantastic! It is so smooth and crisp. To switch to it as your main font, first download the font. Then add the line “font_face”: “Source Code Pro” in your Preferences-&amp;gt;User Settings(keyboard shortcut command+comma to open the settings) and that’s it! Pretty fly.&lt;/p&gt;
 </description>
@@ -2201,13 +2201,13 @@ console.log(arr);
     
     <item>
       <title>Styling Radios and Checkboxes. Redux.</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/styling-input-redux/</link>
+      <link>https://ohdoylerules.com/web/styling-input-redux/</link>
       <pubDate>Sun, 19 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/styling-input-redux/</guid>
+      <guid>https://ohdoylerules.com/web/styling-input-redux/</guid>
       <description>&lt;p&gt;A few weeks ago, or something like that, I made a post about &lt;a href=&#34;https://ohdoylerules.com/web/radio-checkboxes/&#34; title=&#34;Styling radio and checkbox inputs&#34;&gt;styling your labels to act as checkboxes/radios&lt;/a&gt;. I recently saw &lt;a href=&#34;http://dribbble.com/shots/693245-Untitled-iPhone-synth-app-waveforms&#34; title=&#34;iPhone-synth-app-waveforms&#34;&gt;a post on Dribbble by Mikael Eidenberg&lt;/a&gt; which inspired me to make some nicely styled examples of that method in action.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/synthappbuttons.png&#34; alt=&#34;Synth App Buttons in pure CSS&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/synthappbuttons.png&#34; alt=&#34;Synth App Buttons in pure CSS&#34;&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;a href=&#34;http://codepen.io/james2doyle/pen/AKblD&#34; title=&#34;Synth App Buttons&#34;&gt;Here is the pen on Codepen.io&lt;/a&gt;. I usually use jsFidddle but I decided to change it up this time. Maybe my next post will be hosted on tinker.io or dabblet… although tinker does not have accounts like the others.&lt;/p&gt;
 &lt;p&gt;This is the exact same method as my &lt;a href=&#34;https://ohdoylerules.com/web/radio-checkboxes/&#34; title=&#34;Styling radio and checkbox inputs&#34;&gt;previous article&lt;/a&gt;, only there is a lot more css.&lt;/p&gt;
@@ -2216,10 +2216,10 @@ console.log(arr);
     
     <item>
       <title>WordPress Plugin Swipe.js</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/wordpress-plugin-swipe-js/</link>
+      <link>https://ohdoylerules.com/web/wordpress-plugin-swipe-js/</link>
       <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/wordpress-plugin-swipe-js/</guid>
+      <guid>https://ohdoylerules.com/web/wordpress-plugin-swipe-js/</guid>
       <description>&lt;p&gt;I have made my first WordPress plugin and github project: &lt;a href=&#34;https://github.com/james2doyle/Swipe.js-WordPress-Plugin&#34; title=&#34;WordPress Plugin: SwipeJS&#34;&gt;A WordPress plugin for Swipe.js&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This is my first attempt at a WordPress plugin and a Github project.&lt;/p&gt;
 </description>
@@ -2227,10 +2227,10 @@ console.log(arr);
     
     <item>
       <title>Making Checkboxes in WordPress options pages</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/checkboxes-options/</link>
+      <link>https://ohdoylerules.com/web/checkboxes-options/</link>
       <pubDate>Sat, 11 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/checkboxes-options/</guid>
+      <guid>https://ohdoylerules.com/web/checkboxes-options/</guid>
       <description>&lt;p&gt;I am in the process of building my first WordPress plugin. Of course I am wildly researching how to do things. One thing that was particularly hard to find was how to use checkboxes in options pages. Here is the solution I used.&lt;/p&gt;
 &lt;p&gt;WordPress has a function called &lt;a href=&#34;http://codex.wordpress.org/Function_Reference/checked&#34; title=&#34;WordPress Codex For Checked Function&#34;&gt;checked()&lt;/a&gt;. This basically returns a true checked attribute if the conditions it is passed are met. Here is how I used it:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;checkbox&amp;quot; name=&amp;quot;my_options&amp;quot; &amp;lt;?php checked( get_option(&#39;my_option&#39;) == &#39;on&#39;,true); ?&amp;gt; /&amp;gt;
@@ -2241,14 +2241,14 @@ console.log(arr);
     
     <item>
       <title>Styling radio and checkbox inputs</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/web/radio-checkboxes/</link>
+      <link>https://ohdoylerules.com/web/radio-checkboxes/</link>
       <pubDate>Tue, 07 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/web/radio-checkboxes/</guid>
+      <guid>https://ohdoylerules.com/web/radio-checkboxes/</guid>
       <description>&lt;p&gt;Styling inputs can be pretty annoying. I don’t think I really have any consistent way of making custom inputs. Especially when it comes to radio and checkboxes. I will always prefer using CSS instead of images for obvious reasons. But for radios and checkboxes I normally use images. I usually just make a png sprite and use the :checked selector to move its position.&lt;/p&gt;
 &lt;p&gt;But now, I have discovered a new way! I took the idea from &lt;a href=&#34;http://css-tricks.com/snippets/css/custom-checkboxes-and-radio-buttons/&#34;&gt;CSS Tricks&lt;/a&gt;/&lt;a href=&#34;https://examples.wufoo.com/forms/custom-checkboxes-and-radio-buttons/&#34; title=&#34;WuFoo Forms Example&#34;&gt;Wufoo Forms&lt;/a&gt;. It basically uses the label as the element. You hide the input tag and then style the label with checked and unchecked states.&lt;/p&gt;
 &lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/radio-checkboxes.png&#34; alt=&#34;End Results&#34;&gt;
+  &lt;img src=&#34;https://ohdoylerules.com/images/radio-checkboxes.png&#34; alt=&#34;End Results&#34;&gt;
 &lt;/div&gt;
 &lt;pre&gt;&lt;code&gt;/* style this span element so we can display nicely, this styling is not necessary */
 span {

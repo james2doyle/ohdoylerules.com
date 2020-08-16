@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portfolio on James Doyle</title>
-    <link>https://james2doyle.github.io/ohdoylerules.com/category/portfolio/</link>
+    <link>https://ohdoylerules.com/category/portfolio/</link>
     <description>Recent content in Portfolio on James Doyle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -9,14 +9,14 @@
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Thu, 11 Apr 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://james2doyle.github.io/ohdoylerules.com/category/portfolio/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohdoylerules.com/category/portfolio/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Grey Nimbus website</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/portfolio/grey-nimbus-website/</link>
+      <link>https://ohdoylerules.com/portfolio/grey-nimbus-website/</link>
       <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/portfolio/grey-nimbus-website/</guid>
+      <guid>https://ohdoylerules.com/portfolio/grey-nimbus-website/</guid>
       <description>&lt;p&gt;Finally took the time and initiative to launch &lt;a href=&#34;http://greynimbus.com&#34; title=&#34;Grey Nimbus Website&#34;&gt;Grey Nimbus&lt;/a&gt;, my business. The website itself is built using &lt;a href=&#34;http://fuelphp.com&#34; title=&#34;FuelPHP&#34;&gt;FuelPHP&lt;/a&gt;. The reason I chose it was because I was curious and it was pretty light weight.&lt;/p&gt;
 &lt;p&gt;The website has no database so that was pretty much ignored. But I wanted easy validation for forms and a good email library. This is handled nicely by Fuel. The docs are mostly good. I had to do a little google searching when I was trying to tie things in together.&lt;/p&gt;
 &lt;p&gt;I knew I wanted parallax and responsive. I found &lt;a href=&#34;https://github.com/spencerbaynton/cool-kitten&#34; title=&#34;spencerbaynton/cool kitten&#34;&gt;a fork&lt;/a&gt; of the &lt;a href=&#34;http://www.jalxob.com/cool-kitten/&#34; title=&#34;cool-kitten homepage&#34;&gt;cool-kitten&lt;/a&gt; framework that I liked and created &lt;a href=&#34;https://github.com/james2doyle/cool-kitten&#34; title=&#34;james2doyle/cool kitten&#34;&gt;my own fork&lt;/a&gt;.&lt;/p&gt;
@@ -33,24 +33,24 @@
     
     <item>
       <title>New business cards</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/portfolio/new-business-cards/</link>
+      <link>https://ohdoylerules.com/portfolio/new-business-cards/</link>
       <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/portfolio/new-business-cards/</guid>
+      <guid>https://ohdoylerules.com/portfolio/new-business-cards/</guid>
       <description>&lt;p&gt;Picked up my new cards right before &lt;a href=&#34;http://www.diglondon.ca/&#34;&gt;Dig London&lt;/a&gt;. They have my new favourite emoticon on the back too.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://james2doyle.github.io/ohdoylerules.com/images/20121114-14232711.jpg&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/20121114-14232711.jpg&#34; alt=&#34;20121114-142327.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/20121114-14232711.jpg&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/20121114-14232711.jpg&#34; alt=&#34;20121114-142327.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>My Old Website</title>
-      <link>https://james2doyle.github.io/ohdoylerules.com/portfolio/my-old-website/</link>
+      <link>https://ohdoylerules.com/portfolio/my-old-website/</link>
       <pubDate>Thu, 04 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://james2doyle.github.io/ohdoylerules.com/portfolio/my-old-website/</guid>
+      <guid>https://ohdoylerules.com/portfolio/my-old-website/</guid>
       <description>&lt;p&gt;I decided to host my old website because I wanted to show some work with Modernizr.&lt;/p&gt;
 &lt;p&gt;Looking back it is actually pretty cool! I kind of miss it haha. It seems to run much better than I remember. I think that is because it was the days of chrome 18 and Firefox 10 which had spotty 3d transform support.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/test/old/&#34;&gt;&lt;img src=&#34;https://james2doyle.github.io/ohdoylerules.com/images/Screen-Shot-2012-10-04-at-11.26.23-AM-e134936451049011.png&#34; alt=&#34;My Old Site&#34; title=&#34;My Old Site&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/test/old/&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-10-04-at-11.26.23-AM-e134936451049011.png&#34; alt=&#34;My Old Site&#34; title=&#34;My Old Site&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Maybe someday I can make a sub-site or a project site based off of that design. This was also one of my first sites to use AJAX. It was pretty frustrating and hard at the time. It is funny looking at my code and the way I handled things back then. I read it and feel like I am looking at a strangers code.&lt;/p&gt;
 </description>
     </item>
