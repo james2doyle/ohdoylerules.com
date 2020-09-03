@@ -213,7 +213,7 @@
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         
         <span class="post-date" itemprop="datePublished">🕒 August 11, 2012</span>
         
@@ -222,7 +222,7 @@
         
         <span class="post-category" itemprop="genre about">🏷 Web</span>
         
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I am in the process of building my first WordPress plugin. Of course I am wildly researching how to do things. One thing that was particularly hard to find was how to use checkboxes in options pages. Here is the solution I used.</p>
 <p>WordPress has a function called <a href="http://codex.wordpress.org/Function_Reference/checked" title="WordPress Codex For Checked Function">checked()</a>. This basically returns a true checked attribute if the conditions it is passed are met. Here is how I used it:</p>
 <pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;my_options&quot; &lt;?php checked( get_option('my_option') == 'on',true); ?&gt; /&gt;

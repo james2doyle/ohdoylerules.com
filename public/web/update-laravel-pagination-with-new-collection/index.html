@@ -213,7 +213,7 @@
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         
         <span class="post-date" itemprop="datePublished">🕒 June 4, 2017</span>
         
@@ -222,7 +222,7 @@
         
         <span class="post-category" itemprop="genre about">🏷 Web</span>
         
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content"><p>Have you even done a database search (using the <code>DB</code> facade) and got back an array of results that wasn&rsquo;t wrapped in lovely little Eloquent Models? After some googling, I am sure you probably found out about the <a href="http://commandz.io/create-models-from-query-builder/">hydrate</a> method. Using <code>hydrate</code>, you can turn an array of results from the database into real models from your application. This works phenomenally.</p>
 <p>But what if you want to return paginated results? How do you used the results after they are already paginated? Well there is a method called <code>setCollection</code> on the <a href="https://laravel.com/api/5.4/Illuminate/Pagination/LengthAwarePaginator.html">LengthAwarePaginator</a> class. What it will let you do actually set the results of the pagination to a new collection.</p>
 <p>Here is an example of how that works in practice:</p>

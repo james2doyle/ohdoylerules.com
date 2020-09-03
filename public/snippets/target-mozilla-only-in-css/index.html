@@ -213,7 +213,7 @@
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         
         <span class="post-date" itemprop="datePublished">🕒 October 11, 2012</span>
         
@@ -222,7 +222,7 @@
         
         <span class="post-category" itemprop="genre about">🏷 Snippets</span>
         
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I had some issues in Firefox recently. I was building a complicated “item” in CSS and it looked great in Chrome. I got an email later saying that the sizing was all off for a bunch of things. I thought this was really strange. I went back to the CSS and Chrome and I could not see any issues.</p>
 <p>I then fired up Firefox and, yikes! There was a bunch of weird issues. This is strange because normally Chrome to Firefox translates pretty well. I was using the <code>::first-letter</code> element and a few <code>::before</code> elements. But somehow, someway they got messed up. Anyway, I discovered this little snippet:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#ff79c6">-moz-document</span> <span style="color:#ff79c6">url-prefix</span><span style="color:#ff79c6">()</span> {

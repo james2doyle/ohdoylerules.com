@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
   
-    <title>James Doyle | Disallowed Characters In URI</title>
+    <title>James Doyle | Vuex Stateful URL Plugin</title>
   
   <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
   <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
   
   <meta itemprop="name" content="James Doyle">
   <meta property="og:site_name" content="ohdoylerules">
-  <meta itemprop="url" content="https://ohdoylerules.com/tricks/disallowed-characters-in-uri/">
+  <meta itemprop="url" content="https://ohdoylerules.com/snippets/vuex-stateful-url/">
   <meta itemprop="email" content="james2doyle@gmail.com">
-  <meta property="og:url" content="https://ohdoylerules.com/tricks/disallowed-characters-in-uri/">
+  <meta property="og:url" content="https://ohdoylerules.com/snippets/vuex-stateful-url/">
   <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
   <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
   <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
@@ -37,7 +37,7 @@
   <meta name="theme-color" content="#333333">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@james2doyle">
-  <meta name="twitter:title" content="Disallowed Characters In URI">
+  <meta name="twitter:title" content="Vuex Stateful URL Plugin">
   <meta name="twitter:creator" content="@james2doyle">
   <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
   <meta name="twitter:domain" content="https://ohdoylerules.com/">
@@ -46,23 +46,23 @@
   
     <link rel="dns-prefetch" href="https://c.disquscdn.com">
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Disallowed Characters In URI">
+    <meta property="og:title" content="Vuex Stateful URL Plugin">
     <meta property="article:author" content="James Doyle" />
-    <meta property="article:section" content="Tricks" />
-    <meta property="article:tag" content="php, codeigniter, disallowed, characters, 400, error, paragraph ending, %E2%80%8B" />
-    <meta itemprop="keywords" content="php, codeigniter, disallowed, characters, 400, error, paragraph ending, %E2%80%8B">
-    <meta property="og:keywords" content="php, codeigniter, disallowed, characters, 400, error, paragraph ending, %E2%80%8B">
+    <meta property="article:section" content="Snippets" />
+    <meta property="article:tag" content="vue, vuex, plugin, store, sync, url, query, string" />
+    <meta itemprop="keywords" content="vue, vuex, plugin, store, sync, url, query, string">
+    <meta property="og:keywords" content="vue, vuex, plugin, store, sync, url, query, string">
     
     
-      <meta name="description" content="The URI you submitted has disallowed characters">
-      <meta itemprop="description" content="The URI you submitted has disallowed characters">
-      <meta property="og:description" content="The URI you submitted has disallowed characters">
-      <meta name="twitter:description" content="The URI you submitted has disallowed characters">
+      <meta name="description" content="StatefulURL is a Vuex plugin that can read and write the state from a query string">
+      <meta itemprop="description" content="StatefulURL is a Vuex plugin that can read and write the state from a query string">
+      <meta property="og:description" content="StatefulURL is a Vuex plugin that can read and write the state from a query string">
+      <meta name="twitter:description" content="StatefulURL is a Vuex plugin that can read and write the state from a query string">
     
   
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
-  <link rel="canonical" href="https://ohdoylerules.com/tricks/disallowed-characters-in-uri/">
+  <link rel="canonical" href="https://ohdoylerules.com/snippets/vuex-stateful-url/">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
   <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
   <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
@@ -208,47 +208,45 @@
   <div class="container">
     <header class="grid -middle">
       <div class="cell menu">
-        <h1 itemprop="name headline">Disallowed Characters In URI</h1>
+        <h1 itemprop="name headline">Vuex Stateful URL Plugin</h1>
       </div>
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
       <p class="post-info">
         
-        <span class="post-date" itemprop="datePublished">🕒 March 31, 2015</span>
+        <span class="post-date" itemprop="datePublished">🕒 September 3, 2020</span>
         
         
         &nbsp;&nbsp;&nbsp;
         
-        <span class="post-category" itemprop="genre about">🏷 Tricks</span>
+        <span class="post-category" itemprop="genre about">🏷 Snippets</span>
         
       </p>
-      <div itemprop="ArticleBody text" class="main-content"><p>How to fix &ldquo;The URI you submitted has disallowed characters&rdquo; error.</p>
-<p>Does this screenshot look familiar?</p>
+      <div itemprop="ArticleBody text" class="main-content"><p>Have you ever used permalinks on a site? These links store the state of the page in the URL. They can be super useful for simple single-page-apps (SPAs) for bringing users back to where they were when they left the page or just adding the ability to share that page state with someone else without requiring logins or anything like that.</p>
+<p>I&rsquo;m a Vue.js user who likes VueX. So I wanted to create a plugin in VueX that would send the state of the store into the URL.</p>
+<p>VueX provides a <a href="https://vuex.vuejs.org/guide/plugins.html">plugin API</a> so you can write plugins that can extend the basic functionality. So I wrote the plugin for VueX that would sync the store to the URL.</p>
+<p>I used a great package called <a href="https://github.com/masotime/json-url">json-url</a> which allows you to encode/compress JSON objects in a URL-safe way.</p>
+<p>It is now published to <a href="https://www.npmjs.com/package/vuex-stateful-url">npm</a> and the source is on <a href="https://github.com/james2doyle/vuex-stateful-url">GitHub</a>.</p>
+<p>Here is the demo of the plugin working:</p>
 <div class="center">
-  <a href="/images/error-400-disallowed-characters.png" target="_blank"><img alt="codeigniter 400 error for disallowed characters" src="/images/error-400-disallowed-characters.png" ></a>
+  <a href="/images/vuex-stateful-url.gif" target="_blank" title="vuex stateful url demo"><img alt="laravel multi-lingual site demo" src="/images/vuex-stateful-url.gif"></a>
 </div>
-<p>Well, it has been killing me for the last 2 hours. I have encountered this error before, but I never realized what caused it, or how it was fixed. I would just try random stuff, entering in different content, moving different functions. Eventually it would go away&hellip;</p>
-<h3 id="symptoms">Symptoms</h3>
-<p>In this situation, whenever I would click on a particular link I got the error. I copied and pasted the URL from the browser into Sublime Text. It looked like this:</p>
-<pre><code>http://localhost:8080/website/page%E2%80%8B
-</code></pre><p>What the heck? I never added those characters. They never showed in the browser URL, and trying to replace them in my code was not working.</p>
-<p>I tried editing the entries in my database in order to remove the character. I deleted and edited each field. I even tried converting the character encoding and trimming the URL. <em>Nothing worked!</em></p>
-<p>I then read a post on the <a href="https://forum.pyrocms.com/discussion/24142/does-pagesurl-return-with-disallowed-characters-for-you-too">PyroCMS Forum</a> that said there is probably a hidden character somewhere in the code. Well, I looked in my PHP and I didn&rsquo;t find anything, looking in my HTML there was nothing there either.</p>
-<p>So what to do? When in doubt, <em>use vim</em>. I dusted off my vim and looked at the PHP file, nothing! Then I opened the HTML file&hellip;</p>
-<p><strong>HEY! There is a tiny little hidden character in my HTML!!</strong></p>
-<h3 id="the-fix">The Fix</h3>
-<p>I removed the character and everything worked perfectly. Here is the diff after I removed the character:</p>
-<div class="center">
-  <a href="/images/hidden-character-diff.png" target="_blank"><img alt="git diff for hidden character" src="/images/hidden-character-diff.png" ></a>
-</div>
-<p>You can see there is a little trailing character there. I don&rsquo;t know exactly how this got in there, but god damn was it driving me crazy.</p>
-<h3 id="in-summation">In Summation</h3>
-<p>The real problem is, this <em>didn&rsquo;t show in Sublime Text</em> or in the <em>Chrome elements panel</em>. Even the commit on <em>Github</em> didn&rsquo;t show the hidden character I removed.</p>
-<div class="center">
-  <a href="/images/github-hidden-character-diff.png" target="_blank"><img alt="github diff for hidden character" src="/images/github-hidden-character-diff.png" ></a>
-</div>
-<p>The only way it would show up is when I opened the file in <strong>vim</strong>!</p>
+<p>You can use the plugin like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// es6
+</span><span style="color:#6272a4">// import StatefulURL from &#39;vuex-stateful-url&#39;;
+</span><span style="color:#6272a4">// commonjs
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> StatefulURL <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#39;vuex-stateful-url&#39;</span>);
+
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#ff79c6">new</span> Vuex.Store({
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>  plugins<span style="color:#ff79c6">:</span> [
+    <span style="color:#6272a4">// your other plugins...
+</span><span style="color:#6272a4"></span>    StatefulURL()
+  ],
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>});
+</code></pre></div><p>You can <a href="https://github.com/james2doyle/vuex-crosstab">read more on the Github page</a>.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>

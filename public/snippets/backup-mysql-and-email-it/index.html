@@ -213,7 +213,7 @@
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         
         <span class="post-date" itemprop="datePublished">🕒 March 24, 2016</span>
         
@@ -222,7 +222,7 @@
         
         <span class="post-category" itemprop="genre about">🏷 Snippets</span>
         
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content"><p>Recently, a friend of mine asked me what we use for managing the backups for our clients. I mentioned that we use <code>mysqldump</code> running on a <code>CRON</code> schedule. He said that he used a paid service for managing all the servers and their backups. He mentioned it sends to an Amazon S3 bucket, and also sends a notification.</p>
 <p>With my setup, he noted that I could be in trouble if the hard drive failed, or the site gets wiped because my backups are stored locally right beside the site itself.</p>
 <p>I thought to myself, &ldquo;Hmmm. What would help me back these files up, let me know that it is done, access them quickly, and also cost no money?&rdquo;. Email + <code>CRON</code>. Email is a pretty reasonable solution for this.</p>

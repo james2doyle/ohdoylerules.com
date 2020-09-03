@@ -8,8 +8,73 @@
     <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
-    <lastBuildDate>Sat, 03 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ohdoylerules.com/snippets/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Vuex Crosstab Plugin</title>
+      <link>https://ohdoylerules.com/snippets/vuex-crosstab/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/vuex-crosstab/</guid>
+      <description>&lt;p&gt;Did you know that you can use localstorage as an event bus between same-origin tabs?&lt;/p&gt;
+&lt;p&gt;Yep! Local storage is shared across same-origin domains. Which means you can share information between tabs on the same domain. Other cool thing is that the &lt;code&gt;storage&lt;/code&gt; event that is fired on the &lt;code&gt;window&lt;/code&gt; when localstorage changes, it &lt;em&gt;only fired on non-focused tabs&lt;/em&gt;. This means you can write an event bus to sync the tabs you don&amp;rsquo;t have focused with the one you do! Neat.&lt;/p&gt;
+&lt;p&gt;When browsing around GitHub, like I do, I found this project called &lt;a href=&#34;https://github.com/storeon/storeon&#34;&gt;storeon&lt;/a&gt;. It is a framework agnostic state manager. It&amp;rsquo;s aim is to be small and flexible and provide additional functionality through plugins. One such plugin is called &lt;a href=&#34;https://github.com/storeon/crosstab&#34;&gt;crosstab&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am a Vue.js user who likes VueX. So I wanted to recreate this plugin in VueX. VueX also provides a &lt;a href=&#34;https://vuex.vuejs.org/guide/plugins.html&#34;&gt;plugin API&lt;/a&gt; so you can write plugins as well. So I wrote the plugin for VueX, published it to &lt;a href=&#34;https://www.npmjs.com/package/vuex-crosstab&#34;&gt;npm&lt;/a&gt;, and posted the source on &lt;a href=&#34;https://github.com/james2doyle/vuex-crosstab&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is the demo of the plugin working:&lt;/p&gt;
+&lt;div class=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/vuex-crosstab.gif&#34; target=&#34;_blank&#34; title=&#34;vuex crosstab demo&#34;&gt;&lt;img alt=&#34;laravel multi-lingual site demo&#34; src=&#34;https://ohdoylerules.com/images/vuex-crosstab.gif&#34;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;You can use the plugin like so:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// es6
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// import CrossTab from &amp;#39;vuex-crosstab&amp;#39;;
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// commonjs
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; CrossTab &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; require(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;vuex-crosstab&amp;#39;&lt;/span&gt;);
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; Vuex.Store({
+  &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  plugins&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [
+    &lt;span style=&#34;color:#6272a4&#34;&gt;// your other plugins...
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    CrossTab({ recover&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt; })
+  ],
+  &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is a simple config object you can pass to control some things like the &amp;ldquo;recovery&amp;rdquo; which will check the localstorage to see if there was state already in there. You can &lt;a href=&#34;https://github.com/james2doyle/vuex-crosstab#options&#34;&gt;read more on the Github page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Vuex Stateful URL Plugin</title>
+      <link>https://ohdoylerules.com/snippets/vuex-stateful-url/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/vuex-stateful-url/</guid>
+      <description>&lt;p&gt;Have you ever used permalinks on a site? These links store the state of the page in the URL. They can be super useful for simple single-page-apps (SPAs) for bringing users back to where they were when they left the page or just adding the ability to share that page state with someone else without requiring logins or anything like that.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m a Vue.js user who likes VueX. So I wanted to create a plugin in VueX that would send the state of the store into the URL.&lt;/p&gt;
+&lt;p&gt;VueX provides a &lt;a href=&#34;https://vuex.vuejs.org/guide/plugins.html&#34;&gt;plugin API&lt;/a&gt; so you can write plugins that can extend the basic functionality. So I wrote the plugin for VueX that would sync the store to the URL.&lt;/p&gt;
+&lt;p&gt;I used a great package called &lt;a href=&#34;https://github.com/masotime/json-url&#34;&gt;json-url&lt;/a&gt; which allows you to encode/compress JSON objects in a URL-safe way.&lt;/p&gt;
+&lt;p&gt;It is now published to &lt;a href=&#34;https://www.npmjs.com/package/vuex-stateful-url&#34;&gt;npm&lt;/a&gt; and the source is on &lt;a href=&#34;https://github.com/james2doyle/vuex-stateful-url&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is the demo of the plugin working:&lt;/p&gt;
+&lt;div class=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://ohdoylerules.com/images/vuex-stateful-url.gif&#34; target=&#34;_blank&#34; title=&#34;vuex stateful url demo&#34;&gt;&lt;img alt=&#34;laravel multi-lingual site demo&#34; src=&#34;https://ohdoylerules.com/images/vuex-stateful-url.gif&#34;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;You can use the plugin like so:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// es6
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// import StatefulURL from &amp;#39;vuex-stateful-url&amp;#39;;
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// commonjs
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; StatefulURL &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; require(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;vuex-stateful-url&amp;#39;&lt;/span&gt;);
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; Vuex.Store({
+  &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  plugins&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [
+    &lt;span style=&#34;color:#6272a4&#34;&gt;// your other plugins...
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    StatefulURL()
+  ],
+  &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
+&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can &lt;a href=&#34;https://github.com/james2doyle/vuex-crosstab&#34;&gt;read more on the Github page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Color Helpers In Fish Shell</title>
