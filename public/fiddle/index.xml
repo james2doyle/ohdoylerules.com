@@ -2,14 +2,14 @@
   <channel>
     <title>Fiddles on James Doyle</title>
     <link>https://ohdoylerules.com/fiddle/</link>
-    <description>Recent content in Fiddles on James Doyle</description>
+    <description>James Doyle site feed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Thu, 18 Oct 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ohdoylerules.com/fiddle/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohdoylerules.com/fiddle/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Vuex Stateful URL Plugin</title>
@@ -647,7 +647,7 @@
       <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/web/iicrc-vector-logo/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>IICRC Vector Logo</description>
     </item>
     
     <item>
@@ -719,7 +719,7 @@
       <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/github-wiki-to-html/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>Github Wiki To HTML</description>
     </item>
     
     <item>
@@ -791,7 +791,7 @@
       <pubDate>Mon, 09 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/jquery-doodal-js/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>jQuery-doodal-js</description>
     </item>
     
     <item>
@@ -800,7 +800,7 @@
       <pubDate>Sun, 08 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/grunt-sundown/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>Grunt Sundown</description>
     </item>
     
     <item>
@@ -827,7 +827,7 @@
       <pubDate>Thu, 08 Aug 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pyro-twitter-widget/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>Pyro Twitter Widget</description>
     </item>
     
     <item>
@@ -854,7 +854,7 @@
       <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/web/cms-watch-list/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>CMS Watch List</description>
     </item>
     
     <item>
@@ -989,7 +989,7 @@
       <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/crunchbase-svg/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>CrunchBase SVG logo</description>
     </item>
     
     <item>
@@ -1025,7 +1025,7 @@
       <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>CSS3 badge logo in SVG</description>
     </item>
     
     <item>
@@ -1043,7 +1043,7 @@
       <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>AngularJS Hangout - Promises Promises</description>
     </item>
     
     <item>
@@ -1119,21 +1119,21 @@
     </item>
     
     <item>
-      <title>canadian-provinces-field</title>
+      <title>Canadian Provinces Field</title>
       <link>https://ohdoylerules.com/personal-project/canadian-provinces-field/</link>
       <pubDate>Fri, 15 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/canadian-provinces-field/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>Canadian Provinces Field</description>
     </item>
     
     <item>
-      <title>git-website-workflow</title>
+      <title>Git Website Workflow</title>
       <link>https://ohdoylerules.com/personal-project/git-website-workflow/</link>
       <pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/git-website-workflow/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>Git Website Workflow</description>
     </item>
     
     <item>
@@ -1218,12 +1218,12 @@
     </item>
     
     <item>
-      <title>A demo of CSS Flexbox</title>
+      <title>Flexbox Demo</title>
       <link>https://ohdoylerules.com/demo/flexbox-demo/</link>
       <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/flexbox-demo/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>A demo of CSS Flexbox</description>
     </item>
     
     <item>
@@ -1290,12 +1290,12 @@
     </item>
     
     <item>
-      <title>Create a Dancing Music Bar animation in CSS and SVG</title>
+      <title>Dancing Music Bars</title>
       <link>https://ohdoylerules.com/fiddle/dancing-music-bars/</link>
       <pubDate>Tue, 16 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/fiddle/dancing-music-bars/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>Create a Dancing Music Bar animation in CSS and SVG</description>
     </item>
     
     <item>
@@ -1326,21 +1326,21 @@
     </item>
     
     <item>
+      <title>CSS3 Pagebend</title>
+      <link>https://ohdoylerules.com/fiddle/css3-pagebend/</link>
+      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/css3-pagebend/</guid>
+      <description>Create a Pagebend effect using CSS</description>
+    </item>
+    
+    <item>
       <title>CSS Date Card</title>
       <link>https://ohdoylerules.com/fiddle/css-date-card/</link>
       <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/fiddle/css-date-card/</guid>
       <description>Create a Date Card using CSS transitions, animations, and gradients</description>
-    </item>
-    
-    <item>
-      <title>Create a Pagebend effect using CSS</title>
-      <link>https://ohdoylerules.com/fiddle/css3-pagebend/</link>
-      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
-      <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/fiddle/css3-pagebend/</guid>
-      <description>&lt;no value&gt;</description>
     </item>
     
     <item>
@@ -1376,7 +1376,7 @@
       <pubDate>Sun, 19 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/web/styling-input-redux/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>Styling Radios and Checkboxes. Redux.</description>
     </item>
     
     <item>
@@ -1394,7 +1394,7 @@
       <pubDate>Sat, 11 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/web/checkboxes-options/</guid>
-      <description>&lt;no value&gt;</description>
+      <description>Making Checkboxes in WordPress options pages</description>
     </item>
     
     <item>
