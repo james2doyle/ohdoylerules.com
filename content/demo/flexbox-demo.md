@@ -1,6 +1,6 @@
 ---
 Title: "Flexbox Demo"
-Title: "A demo of CSS Flexbox"
+Description: "A demo of CSS Flexbox"
 Date: "2012-11-14"
 Category: "Demo"
 Template: "post"

@@ -1,5 +1,6 @@
 ---
 Title: "IICRC Vector Logo"
+Description: "IICRC Vector Logo"
 Date: "2013-12-18"
 Category: "Web"
 Template: "post"
@@ -13,4 +14,3 @@ Another lost logo, this one is for the IICRC (institute of inspection cleaning a
 </div>
 
 Enjoy. This was a huge pain to get right.
-

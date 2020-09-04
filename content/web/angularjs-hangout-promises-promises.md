@@ -1,5 +1,6 @@
 ---
 Title: "AngularJS Hangout - Promises Promises"
+Description: "AngularJS Hangout - Promises Promises"
 Date: "2013-04-17"
 Category: "Web"
 Template: "post"

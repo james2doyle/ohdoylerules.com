@@ -1,5 +1,6 @@
 ---
 Title: "Pyro Twitter Widget"
+Description: "Pyro Twitter Widget"
 Date: "2013-08-08"
 Category: "Personal Project"
 Template: "post"

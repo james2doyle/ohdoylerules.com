@@ -1,5 +1,6 @@
 ---
 Title: "CMS Watch List"
+Description: "CMS Watch List"
 Date: "2013-07-26"
 Category: "Web"
 Template: "post"

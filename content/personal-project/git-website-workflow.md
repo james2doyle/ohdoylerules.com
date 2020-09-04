@@ -1,5 +1,6 @@
 ---
-Title: "git-website-workflow"
+Title: "Git Website Workflow"
+Description: "Git Website Workflow"
 Date: "2013-03-13"
 Category: "Personal Project"
 Template: "post"

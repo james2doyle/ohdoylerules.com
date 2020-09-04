@@ -1,5 +1,6 @@
 ---
 Title: "Making Checkboxes in WordPress options pages"
+Description: "Making Checkboxes in WordPress options pages"
 Date: "2012-08-11"
 Category: "Web"
 Template: "post"

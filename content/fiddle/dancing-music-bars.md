@@ -1,6 +1,6 @@
 ---
 Title: "Dancing Music Bars"
-Title: "Create a Dancing Music Bar animation in CSS and SVG"
+Description: "Create a Dancing Music Bar animation in CSS and SVG"
 Date: "2012-10-16"
 Category: "Fiddle"
 Template: "post"
