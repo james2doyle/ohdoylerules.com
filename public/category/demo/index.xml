@@ -12,32 +12,1092 @@
     <atom:link href="https://ohdoylerules.com/category/demo/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Vuex Stateful URL Plugin</title>
+      <link>https://ohdoylerules.com/snippets/vuex-stateful-url/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/vuex-stateful-url/</guid>
+      <description>StatefulURL is a Vuex plugin that can read and write the state from a query string</description>
+    </item>
+    
+    <item>
+      <title>Vuex Crosstab Plugin</title>
+      <link>https://ohdoylerules.com/snippets/vuex-crosstab/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/vuex-crosstab/</guid>
+      <description>CrossTab syncs Vuex state across same-origin tabs. Converted from storeon crosstab</description>
+    </item>
+    
+    <item>
+      <title>Using slots in Vue js</title>
+      <link>https://ohdoylerules.com/web/using-slots-in-vue-js/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/using-slots-in-vue-js/</guid>
+      <description>If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components</description>
+    </item>
+    
+    <item>
+      <title>Create JSON Sections In Shopify</title>
+      <link>https://ohdoylerules.com/web/create-json-sections-in-shopify/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/create-json-sections-in-shopify/</guid>
+      <description>A demo on how to create a section in Shopify that returns JSON and HTML</description>
+    </item>
+    
+    <item>
+      <title>Detect Theme Editor In Shopify Liquid Templates</title>
+      <link>https://ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</guid>
+      <description>A demo on how to detect when a template is running in the Shopify theme and section builder</description>
+    </item>
+    
+    <item>
+      <title>Using Zapier Webhooks for HTML forms</title>
+      <link>https://ohdoylerules.com/web/zapier-webhooks-for-html-forms/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/zapier-webhooks-for-html-forms/</guid>
+      <description>You can use Zapier webhooks to handle HTML form submissions - if you know how to set up your form</description>
+    </item>
+    
+    <item>
+      <title>Use Laravel Valet for WordPress Multisites</title>
+      <link>https://ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</guid>
+      <description>Use Laravel Valet for developing local WordPress multisites</description>
+    </item>
+    
+    <item>
+      <title>Build A Multi-lingual Laravel Site With Subdomains</title>
+      <link>https://ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</link>
+      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</guid>
+      <description>Have you ever wanted to use subdomains in Laravel to control logic, locale, or other functionality? Well, this example might help.</description>
+    </item>
+    
+    <item>
+      <title>Simple Slack Slash Supplier</title>
+      <link>https://ohdoylerules.com/web/simple-slash-commands/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-slash-commands/</guid>
+      <description>A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses</description>
+    </item>
+    
+    <item>
+      <title>SQL As An API</title>
+      <link>https://ohdoylerules.com/web/sql-as-an-api/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/sql-as-an-api/</guid>
+      <description>An example of how to use SQL as an API instead of reaching for something like GraphQL</description>
+    </item>
+    
+    <item>
+      <title>Laravel Scout Sonic Driver</title>
+      <link>https://ohdoylerules.com/web/laravel-scout-sonic-driver/</link>
+      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/laravel-scout-sonic-driver/</guid>
+      <description>A Laravel Scout driver for the Sonic search tool</description>
+    </item>
+    
+    <item>
+      <title>Function Currying To Make Reusable Code</title>
+      <link>https://ohdoylerules.com/web/function-currying-to-make-reusable-code/</link>
+      <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/function-currying-to-make-reusable-code/</guid>
+      <description>Function currying. If you haven&#39;t heard of it before, let me introduce you to this magical pattern that can help reduce duplicate code and improve readability</description>
+    </item>
+    
+    <item>
+      <title>When And Where To Compromise Your App Design</title>
+      <link>https://ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</guid>
+      <description>When initially developing an application or a new feature we are constantly trying to balance best practices in design with delivering a finished product.</description>
+    </item>
+    
+    <item>
+      <title>Using Sqlite As A Cache In Laravel</title>
+      <link>https://ohdoylerules.com/web/laravel-sqlite-cache/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/laravel-sqlite-cache/</guid>
+      <description>How to use Sqlite as a cache in Laravel</description>
+    </item>
+    
+    <item>
+      <title>Angular (v1.x) Through iFrame</title>
+      <link>https://ohdoylerules.com/web/angular-through-iframe/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/angular-through-iframe/</guid>
+      <description>How to use angular.js (v1.x) through an iframe when the iframe URL is dynamically swapped</description>
+    </item>
+    
+    <item>
+      <title>Nuxt Firebase Starter</title>
+      <link>https://ohdoylerules.com/web/nuxt-firebase-starter/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/nuxt-firebase-starter/</guid>
+      <description>An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles</description>
+    </item>
+    
+    <item>
+      <title>Using DigitalOcean Spaces</title>
+      <link>https://ohdoylerules.com/web/using-digitalocean-spaces/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/using-digitalocean-spaces/</guid>
+      <description>An example project for how to use DigitalOcean Spaces with S3 tools</description>
+    </item>
+    
+    <item>
+      <title>3 Ways A Website Project Falls Apart</title>
+      <link>https://ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</guid>
+      <description>Over the last 7 years, I have been a part of hundreds of website projects. Here are some of the most common ways I have seen a project fail.</description>
+    </item>
+    
+    <item>
+      <title>Handle spaces and no-spaces in MySQL where-like clauses</title>
+      <link>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</link>
+      <pubDate>Sat, 08 Jul 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</guid>
+      <description>Have you ever wanted to write a WHERE LIKE for a query with and without spaces? Well, now you can with this trick!</description>
+    </item>
+    
+    <item>
+      <title>WordPress Browser Body Class</title>
+      <link>https://ohdoylerules.com/web/wordpress-browser-body-class/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-browser-body-class/</guid>
+      <description>A simple WordPress tutorial for adding a class to the body that represents the browser. No plugin required.</description>
+    </item>
+    
+    <item>
+      <title>Update Laravel Pagination With New Collection</title>
+      <link>https://ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</guid>
+      <description>Did you know you can update a Laravel pagination with a new collection?</description>
+    </item>
+    
+    <item>
+      <title>Color Helpers In Fish Shell</title>
+      <link>https://ohdoylerules.com/snippets/color-helpers-in-fish-shell/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/color-helpers-in-fish-shell/</guid>
+      <description>How to easily create a color function for printing colorized output</description>
+    </item>
+    
+    <item>
+      <title>Conditional Vue.js Mixins</title>
+      <link>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</guid>
+      <description>How to use commonjs modules as vue.js mixins and how to conditionally load mixins on a per-page-basis.</description>
+    </item>
+    
+    <item>
+      <title>Install the latest Node.js on Amazon Linux</title>
+      <link>https://ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</guid>
+      <description>How to install the latest version of node.js on the Amazon Linux AMI</description>
+    </item>
+    
+    <item>
+      <title>Running Go (golang) in Docker</title>
+      <link>https://ohdoylerules.com/snippets/running-go-in-docker/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/running-go-in-docker/</guid>
+      <description>How to run and deploy golang applications inside a Docker container.</description>
+    </item>
+    
+    <item>
+      <title>How To Use Template Strings As Modules</title>
+      <link>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</guid>
+      <description>How to the new es6 template string literals to make reusable modules for templates/strings or HTML partials</description>
+    </item>
+    
+    <item>
+      <title>How To Use LC_MONETARY In Laravel</title>
+      <link>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</link>
+      <pubDate>Fri, 24 Feb 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</guid>
+      <description>How to use setlocale with LC_MONETARY in Laravel</description>
+    </item>
+    
+    <item>
+      <title>OpenSSL Passwd Without Prompt</title>
+      <link>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</link>
+      <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</guid>
+      <description>How to use the openssl passwd without a confirm prompt</description>
+    </item>
+    
+    <item>
+      <title>Use Nginx for A/B Testing</title>
+      <link>https://ohdoylerules.com/web/use-nginx-for-a-b-testing/</link>
+      <pubDate>Sun, 28 Aug 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/use-nginx-for-a-b-testing/</guid>
+      <description>Use Nginx to set custom headers in your HTTP responses so you can serve conditional content</description>
+    </item>
+    
+    <item>
+      <title>Backup MySQL And Email It</title>
+      <link>https://ohdoylerules.com/snippets/backup-mysql-and-email-it/</link>
+      <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/backup-mysql-and-email-it/</guid>
+      <description>Don&#39;t bother paying for a SaaS that creates MySQL backups and emails them to you on a schedule, you can do this with CRON and a small script</description>
+    </item>
+    
+    <item>
+      <title>Add A Counter For Duplicate Uploads</title>
+      <link>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</link>
+      <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</guid>
+      <description>A short script to detect if a folder contains a duplicate filename, and if it does, the filename gets a counter prepended to the front of the filename</description>
+    </item>
+    
+    <item>
+      <title>Add $.getStylesheet To jQuery</title>
+      <link>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</link>
+      <pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</guid>
+      <description>Ever wanted to have a CSS/Stylesheet version of $.getScript? Well now you can with $.getStylesheet</description>
+    </item>
+    
+    <item>
+      <title>Slack Meta Data For URLs and Links</title>
+      <link>https://ohdoylerules.com/web/slack-url-meta-data/</link>
+      <pubDate>Sat, 31 Oct 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/slack-url-meta-data/</guid>
+      <description>Tips to get Slack to resolve the correct meta data for your website URL</description>
+    </item>
+    
+    <item>
+      <title>Fixing Wordpress wp-content 500 Errors</title>
+      <link>https://ohdoylerules.com/web/wordpress-wp-content-500-errors/</link>
+      <pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-wp-content-500-errors/</guid>
+      <description>How to fix the issue where Wordpress wp-content assets are throwing 500 errors</description>
+    </item>
+    
+    <item>
+      <title>Simple Benchmarks With Apache AB</title>
+      <link>https://ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</guid>
+      <description>a tutorial for generating simple benchmarks using the Apache ab tool</description>
+    </item>
+    
+    <item>
+      <title>Varnish For Static Sites</title>
+      <link>https://ohdoylerules.com/web/varnish-for-static-sites/</link>
+      <pubDate>Sun, 20 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/varnish-for-static-sites/</guid>
+      <description>a small tutorial for how to setup Varnish cache for a flat site running on Apache</description>
+    </item>
+    
+    <item>
+      <title>Validate Email With Lua</title>
+      <link>https://ohdoylerules.com/snippets/validate-email-with-lua/</link>
+      <pubDate>Sun, 06 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/validate-email-with-lua/</guid>
+      <description>A verbose email validation function for Lua</description>
+    </item>
+    
+    <item>
+      <title>Simple PHP JSON Response</title>
+      <link>https://ohdoylerules.com/snippets/simple-php-json-response/</link>
+      <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/simple-php-json-response/</guid>
+      <description>Create a simple JSON response using PHP</description>
+    </item>
+    
+    <item>
+      <title>Disallowed Characters In URI</title>
+      <link>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</link>
+      <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</guid>
+      <description>The URI you submitted has disallowed characters</description>
+    </item>
+    
+    <item>
+      <title>PhalconPHP Completions</title>
+      <link>https://ohdoylerules.com/web/phalconphp-completions/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/phalconphp-completions/</guid>
+      <description>A PhalconPHP completions and snippets package for Sublime Text</description>
+    </item>
+    
+    <item>
+      <title>Easy FFmpeg Video Posters</title>
+      <link>https://ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</link>
+      <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</guid>
+      <description>Take in a list of video files and generate a poster image for each one</description>
+    </item>
+    
+    <item>
+      <title>Minimal Raspberry Pi OS</title>
+      <link>https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</link>
+      <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</guid>
+      <description>Setup and improve the Moebius OS for the Raspberry Pi</description>
+    </item>
+    
+    <item>
+      <title>Phalcon Micro App Starter</title>
+      <link>https://ohdoylerules.com/personal-project/phalcon-micro-starter/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/phalcon-micro-starter/</guid>
+      <description>A showcase of a Phalcon Micro App starter template that makes it easy to get started with the Phalcon micro app class</description>
+    </item>
+    
+    <item>
+      <title>PhalconPHP Crop Image To Fit</title>
+      <link>https://ohdoylerules.com/snippets/phalconphp-crop-to-fit/</link>
+      <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/phalconphp-crop-to-fit/</guid>
+      <description>How to crop and scale an image to fit specific dimensions in Phalcon PHP</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS Module Generator 2.0</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-module-generator-2/</link>
+      <pubDate>Sun, 16 Nov 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-module-generator-2/</guid>
+      <description>The Pyro Module Generator allows you to rapidly create modules for Pyro 2.2 and up</description>
+    </item>
+    
+    <item>
+      <title>Kijiji Vector Logo</title>
+      <link>https://ohdoylerules.com/web/kijiji-vector-logo/</link>
+      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/kijiji-vector-logo/</guid>
+      <description>the kijiji logo as a vector svg file</description>
+    </item>
+    
+    <item>
+      <title>Migrate AllPasswords To 1Password</title>
+      <link>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</guid>
+      <description>How to import your allpasswords csv into 1password</description>
+    </item>
+    
+    <item>
+      <title>Always Connect To Starbucks WiFi</title>
+      <link>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</link>
+      <pubDate>Sat, 20 Sep 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</guid>
+      <description>How to connect to the Starbucks WiFi every time by using your phone.</description>
+    </item>
+    
+    <item>
+      <title>Lico</title>
+      <link>https://ohdoylerules.com/personal-project/lico-luvit-cms/</link>
+      <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/lico-luvit-cms/</guid>
+      <description>Lico is a re-creation of the PicoCMS for PHP, but written for Luvit for Lua</description>
+    </item>
+    
+    <item>
+      <title>Typeform Vector Logo</title>
+      <link>https://ohdoylerules.com/web/typeform-vector-logo/</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/typeform-vector-logo/</guid>
+      <description>Another difficult logo to find. This one is for the fun new Typeform service. Typeform allows you to create dynamic and fun forms for clients, events, and other general uses.</description>
+    </item>
+    
+    <item>
+      <title>Using Node.js in an AppleScript</title>
+      <link>https://ohdoylerules.com/snippets/using-node-in-applescript/</link>
+      <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/using-node-in-applescript/</guid>
+      <description>How to use Node.js in an AppleScript</description>
+    </item>
+    
+    <item>
+      <title>Copy filepath to clipboard in OSX</title>
+      <link>https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</link>
+      <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</guid>
+      <description>How to copy a filepath to the clipboard in OSX</description>
+    </item>
+    
+    <item>
+      <title>The Simple Spam Stopper</title>
+      <link>https://ohdoylerules.com/web/simple-spam-stopper/</link>
+      <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-spam-stopper/</guid>
+      <description>For the last year at WARPAINT Media, we have been getting assaulted with spam.</description>
+    </item>
+    
+    <item>
+      <title>Flexible SVG Placeholder Images</title>
+      <link>https://ohdoylerules.com/web/flexible-svg-placeholders/</link>
+      <pubDate>Sat, 24 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/flexible-svg-placeholders/</guid>
+      <description>Replace a service like placehold.it with your own local version that serves SVG images</description>
+    </item>
+    
+    <item>
+      <title>Purge A File From A Github Repo</title>
+      <link>https://ohdoylerules.com/snippets/purge-file-from-github/</link>
+      <pubDate>Sun, 18 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/purge-file-from-github/</guid>
+      <description>How to permanently remove a file from a repo and it&#39;s history</description>
+    </item>
+    
+    <item>
+      <title>Tips For Using SVGs</title>
+      <link>https://ohdoylerules.com/web/tips-for-using-svgs/</link>
+      <pubDate>Sat, 17 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/tips-for-using-svgs/</guid>
+      <description>I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.</description>
+    </item>
+    
+    <item>
+      <title>Koding Interview</title>
+      <link>https://ohdoylerules.com/personal-project/koding-interview/</link>
+      <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/koding-interview/</guid>
+      <description>James Doyle interview by the developer social network Koding</description>
+    </item>
+    
+    <item>
+      <title>Kaenon Vector Logo</title>
+      <link>https://ohdoylerules.com/personal-project/kaenon-logo/</link>
+      <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/kaenon-logo/</guid>
+      <description>The Kaenon logo in a vector SVG format</description>
+    </item>
+    
+    <item>
+      <title>Bash select example</title>
+      <link>https://ohdoylerules.com/snippets/bash-select-example/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/bash-select-example/</guid>
+      <description>An example of how to use the select command in bash to pass arguments to functions</description>
+    </item>
+    
+    <item>
+      <title>Sublime Node Snippets</title>
+      <link>https://ohdoylerules.com/personal-project/sublime-node-snippets/</link>
+      <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/sublime-node-snippets/</guid>
+      <description>Sublime Text snippets for node, async, underscore, and lodash</description>
+    </item>
+    
+    <item>
+      <title>Simple Binder</title>
+      <link>https://ohdoylerules.com/personal-project/simple-binder/</link>
+      <pubDate>Fri, 14 Mar 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/simple-binder/</guid>
+      <description>simplebinder is a zero dependency one-way databinder for javascript</description>
+    </item>
+    
+    <item>
+      <title>Vim Vector Logo</title>
+      <link>https://ohdoylerules.com/personal-project/vim-svg/</link>
+      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/vim-svg/</guid>
+      <description>The Vim logo in a vector SVG format. Also includes a ICNS file for OSX.</description>
+    </item>
+    
+    <item>
+      <title>Atom Monokai Dark</title>
+      <link>https://ohdoylerules.com/personal-project/atom-monokai-dark/</link>
+      <pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/atom-monokai-dark/</guid>
+      <description>Dark Monokai theme for the Github Atom editor</description>
+    </item>
+    
+    <item>
+      <title>The Alternative Cms</title>
+      <link>https://ohdoylerules.com/personal-project/the-alternative-cms/</link>
+      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/the-alternative-cms/</guid>
+      <description>Presentation for The Alternative Cms</description>
+    </item>
+    
+    <item>
+      <title>Randomly Generate A Password In Bash</title>
+      <link>https://ohdoylerules.com/snippets/bash-random-password-generation/</link>
+      <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/bash-random-password-generation/</guid>
+      <description>Randomly generate a password of specified length and then copy it to the clipboard</description>
+    </item>
+    
+    <item>
+      <title>PHP WebSocket Chat</title>
+      <link>https://ohdoylerules.com/personal-project/php-websocket-chat/</link>
+      <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/php-websocket-chat/</guid>
+      <description>PHP websocket chat application example</description>
+    </item>
+    
+    <item>
+      <title>All About PhileCMS Video</title>
+      <link>https://ohdoylerules.com/personal-project/phile-intro-video/</link>
+      <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/phile-intro-video/</guid>
+      <description>All About PhileCMS Video</description>
+    </item>
+    
+    <item>
+      <title>Font Awesome SVG Icons</title>
+      <link>https://ohdoylerules.com/web/font-awesome-svg-icons/</link>
+      <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/font-awesome-svg-icons/</guid>
+      <description>A sprite sheet of all the font-awesome icons from version 4.0.2</description>
+    </item>
+    
+    <item>
+      <title>Groupon SVG logo</title>
+      <link>https://ohdoylerules.com/personal-project/groupon-green-logo-svg/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/groupon-green-logo-svg/</guid>
+      <description>groupon logo in vector svg</description>
+    </item>
+    
+    <item>
+      <title>Chrome Reverse Geocode App</title>
+      <link>https://ohdoylerules.com/personal-project/chrome-reverse-geocode/</link>
+      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/chrome-reverse-geocode/</guid>
+      <description>Chrome Reverse Geocode App</description>
+    </item>
+    
+    <item>
+      <title>IICRC Vector Logo</title>
+      <link>https://ohdoylerules.com/web/iicrc-vector-logo/</link>
+      <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/iicrc-vector-logo/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>List File Permission Numbers</title>
+      <link>https://ohdoylerules.com/snippets/list-file-permission-numbers/</link>
+      <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/list-file-permission-numbers/</guid>
+      <description>Easily list the chmod numbers for all the files in a folder</description>
+    </item>
+    
+    <item>
+      <title>Easy Command Line Reverse Geocoding</title>
+      <link>https://ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</link>
+      <pubDate>Wed, 27 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</guid>
+      <description>Easily reverse geocode an address using the command line and the google maps API</description>
+    </item>
+    
+    <item>
+      <title>Grunt Highlight Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/grunt-highlight/</link>
+      <pubDate>Mon, 25 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/grunt-highlight/</guid>
+      <description>Grunt task for running Highlight.js over files or blocks of code</description>
+    </item>
+    
+    <item>
+      <title>Decrypt-Encrypt Functions From Command Line</title>
+      <link>https://ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</guid>
+      <description>Functions to encrypt and then decrypt files from the command line with OpenSSL</description>
+    </item>
+    
+    <item>
+      <title>Get Wordpress via Command Line</title>
+      <link>https://ohdoylerules.com/snippets/wordpress-via-command-line/</link>
+      <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/wordpress-via-command-line/</guid>
+      <description>Download and unzip the latest Wordpress version, all via command line</description>
+    </item>
+    
+    <item>
+      <title>HostMonster PHPMailer Settings</title>
+      <link>https://ohdoylerules.com/snippets/hostmonster-phpmailer/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/hostmonster-phpmailer/</guid>
+      <description>How to setup PHPMailer on a HostMonster hosting server</description>
+    </item>
+    
+    <item>
       <title>GoDaddy Email on Digital Ocean</title>
       <link>https://ohdoylerules.com/demo/godaddy-digital-ocean/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/godaddy-digital-ocean/</guid>
-      <description>&lt;p&gt;I was recently trying to send an email to a domain I had purchased on GoDaddy but had hosting on &lt;a href=&#34;https://www.digitalocean.com/?refcode=802f151adea5&#34;&gt;Digital Ocean&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I sent the email and a couple hours later it bounced. This wasn&amp;rsquo;t good. My email was going to GoDadddy but I want the site &lt;em&gt;hosted&lt;/em&gt; on Digital Ocean.&lt;/p&gt;
-&lt;p&gt;So I had to find how to keep the domain hosted on Digital Ocean but the email needs to stay on GoDaddy servers.&lt;/p&gt;
-&lt;p&gt;Here are the DNS settings I used:&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/do-records1.png&#34; title=&#34;GoDaddy Digital Ocean DNS Records&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/do-records1.png&#34; alt=&#34;GoDaddy Digital Ocean DNS Records&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Your settings may differ, so please follow these instructions in order to check if your settings are correct:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Log into GoDaddy&lt;/li&gt;
-&lt;li&gt;Launch the domain you are looking to check&lt;/li&gt;
-&lt;li&gt;Go to the email tab&lt;/li&gt;
-&lt;li&gt;Hover over tools and click &amp;ldquo;Server Settings&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;You will see a popup showing all the settings&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There you can see that there are a bunch of records listed. These are the ones for your specific domain.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/do-records2.png&#34; title=&#34;GoDaddy Default MX and DNS Records&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/do-records2.png&#34; alt=&#34;GoDaddy Default MX and DNS Records&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Hopefully this was helpful because it took a long time to figure out! It is even more painful because the records take a while to propogate. Boo!&lt;/p&gt;
-</description>
+      <description>How to use GoDaddy Email on Digital Ocean</description>
+    </item>
+    
+    <item>
+      <title>Github Wiki To HTML</title>
+      <link>https://ohdoylerules.com/personal-project/github-wiki-to-html/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/github-wiki-to-html/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Phile CMS</title>
+      <link>https://ohdoylerules.com/personal-project/phile-cms/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/phile-cms/</guid>
+      <description>Phile is flat-file CMS based on Pico</description>
+    </item>
+    
+    <item>
+      <title>Google Drive Flat SVG Logo</title>
+      <link>https://ohdoylerules.com/personal-project/google-drive-svg-logo/</link>
+      <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/google-drive-svg-logo/</guid>
+      <description>Google Drive Flat SVG Logo</description>
+    </item>
+    
+    <item>
+      <title>Docracy SVG logo</title>
+      <link>https://ohdoylerules.com/personal-project/docracy-logo-svg/</link>
+      <pubDate>Thu, 31 Oct 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/docracy-logo-svg/</guid>
+      <description>Docracy logo in vector svg</description>
+    </item>
+    
+    <item>
+      <title>Assemble Starter</title>
+      <link>https://ohdoylerules.com/personal-project/assemble-starter/</link>
+      <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/assemble-starter/</guid>
+      <description>Assemble for Grunt.js Starter template</description>
+    </item>
+    
+    <item>
+      <title>pico-download plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pico-download-plugin/</link>
+      <pubDate>Wed, 18 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pico-download-plugin/</guid>
+      <description>I created a plugin to force files to download in PicoCMS</description>
+    </item>
+    
+    <item>
+      <title>Pico-Useragent Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pico-useragent/</link>
+      <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pico-useragent/</guid>
+      <description>A plugin for pico that allows you to list the useragent</description>
+    </item>
+    
+    <item>
+      <title>compare multiple md5 hashes</title>
+      <link>https://ohdoylerules.com/snippets/compare-multiple-md5-hashes/</link>
+      <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/compare-multiple-md5-hashes/</guid>
+      <description>compare multiple md5 hashes</description>
+    </item>
+    
+    <item>
+      <title>jQuery-doodal-js</title>
+      <link>https://ohdoylerules.com/personal-project/jquery-doodal-js/</link>
+      <pubDate>Mon, 09 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/jquery-doodal-js/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Grunt Sundown</title>
+      <link>https://ohdoylerules.com/personal-project/grunt-sundown/</link>
+      <pubDate>Sun, 08 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/grunt-sundown/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Simple HTML5 Notifications</title>
+      <link>https://ohdoylerules.com/snippets/simple-html5-notification/</link>
+      <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/simple-html5-notification/</guid>
+      <description>Simple HTML5 Notifications</description>
+    </item>
+    
+    <item>
+      <title>Render PHP File With Data</title>
+      <link>https://ohdoylerules.com/snippets/render-php-with-data/</link>
+      <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/render-php-with-data/</guid>
+      <description>Render PHP File With Data</description>
+    </item>
+    
+    <item>
+      <title>Pyro Twitter Widget</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-twitter-widget/</link>
+      <pubDate>Thu, 08 Aug 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-twitter-widget/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pico Get By Filename Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</link>
+      <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</guid>
+      <description>I wrote another small plugin for PicoCMS that actually lets you load files based on the filename</description>
+    </item>
+    
+    <item>
+      <title>Markdown Logo Vector SVG</title>
+      <link>https://ohdoylerules.com/personal-project/markdown-logo-vector-svg/</link>
+      <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/markdown-logo-vector-svg/</guid>
+      <description>Markdown Logo Vector SVG</description>
+    </item>
+    
+    <item>
+      <title>CMS Watch List</title>
+      <link>https://ohdoylerules.com/web/cms-watch-list/</link>
+      <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/cms-watch-list/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>The $100 Website</title>
+      <link>https://ohdoylerules.com/web/the-100-dollar-website/</link>
+      <pubDate>Tue, 23 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/the-100-dollar-website/</guid>
+      <description>I wrote a post on WARPAINT Media about people who ask about getting a website for $100.</description>
+    </item>
+    
+    <item>
+      <title>Kube in Styl/Rework</title>
+      <link>https://ohdoylerules.com/personal-project/kube-in-stylrework/</link>
+      <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/kube-in-stylrework/</guid>
+      <description>Kube in Styl/Rework</description>
+    </item>
+    
+    <item>
+      <title>Pico Slider Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pico-slider-plugin/</link>
+      <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pico-slider-plugin/</guid>
+      <description>a plugin for Pico that allows you to create a Slider</description>
+    </item>
+    
+    <item>
+      <title>NPM logo SVG</title>
+      <link>https://ohdoylerules.com/personal-project/npm-logo-svg/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/npm-logo-svg/</guid>
+      <description>The NPM logo as a SVG</description>
+    </item>
+    
+    <item>
+      <title>Apax apache theme in htdocs</title>
+      <link>https://ohdoylerules.com/snippets/apax-in-htdocs/</link>
+      <pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/apax-in-htdocs/</guid>
+      <description>Apax apache theme in htdocs</description>
+    </item>
+    
+    <item>
+      <title>Disqus Comments</title>
+      <link>https://ohdoylerules.com/personal-project/disqus-comments/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/disqus-comments/</guid>
+      <description>Adding Disqus Comments to the website</description>
+    </item>
+    
+    <item>
+      <title>rework-shade</title>
+      <link>https://ohdoylerules.com/personal-project/rework-shade/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/rework-shade/</guid>
+      <description>A package for rework that allows a shade function</description>
+    </item>
+    
+    <item>
+      <title>rework-math</title>
+      <link>https://ohdoylerules.com/personal-project/rework-math/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/rework-math/</guid>
+      <description>I created a plugin for rework that allows you to do simple math</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS UA Sniffer Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
+      <description>A plugin for PyroCMS that allows UA Sniffing</description>
+    </item>
+    
+    <item>
+      <title>Pyro Github Markdown Field Type</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-github-markdown/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-github-markdown/</guid>
+      <description>Pyro Github Markdown Field Type</description>
+    </item>
+    
+    <item>
+      <title>grunt terminal-notifier setup</title>
+      <link>https://ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</link>
+      <pubDate>Fri, 07 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</guid>
+      <description>grunt terminal-notifier setup</description>
+    </item>
+    
+    <item>
+      <title>NudeProject - a starting point for simple websites</title>
+      <link>https://ohdoylerules.com/personal-project/nudeproject/</link>
+      <pubDate>Tue, 04 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/nudeproject/</guid>
+      <description>NudeProject - a starting point for simple websites</description>
+    </item>
+    
+    <item>
+      <title>Detect Animation Events in Javascript</title>
+      <link>https://ohdoylerules.com/snippets/animation-events-in-javascript/</link>
+      <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/animation-events-in-javascript/</guid>
+      <description>Detect Animation Events in Javascript</description>
+    </item>
+    
+    <item>
+      <title>Startup Canada SVG logos</title>
+      <link>https://ohdoylerules.com/personal-project/startup-canada-svg/</link>
+      <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/startup-canada-svg/</guid>
+      <description>All the Startup Canada SVG logos</description>
+    </item>
+    
+    <item>
+      <title>CrunchBase SVG logo</title>
+      <link>https://ohdoylerules.com/personal-project/crunchbase-svg/</link>
+      <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/crunchbase-svg/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Modernizr SVG Fallback to PNG</title>
+      <link>https://ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</link>
+      <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</guid>
+      <description>Modernizr SVG Fallback to PNG</description>
+    </item>
+    
+    <item>
+      <title>Custom Google Forms</title>
+      <link>https://ohdoylerules.com/web/custom-google-forms/</link>
+      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/custom-google-forms/</guid>
+      <description>I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something</description>
+    </item>
+    
+    <item>
+      <title>Salt.js micro selector library</title>
+      <link>https://ohdoylerules.com/snippets/salt-js-mirco-selector-library/</link>
+      <pubDate>Sun, 12 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/salt-js-mirco-selector-library/</guid>
+      <description>salt.js is micro DOM selector library. Minified, it comes in at 255 bytes</description>
+    </item>
+    
+    <item>
+      <title>CSS3 badge logo in SVG</title>
+      <link>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>April 2013 Redesign!</title>
+      <link>https://ohdoylerules.com/personal-project/april-2013-redesign/</link>
+      <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/april-2013-redesign/</guid>
+      <description>Another redesign. This one is completely by me, with a little help from the html5blank Wordpress template. I am using SVGs exclusively.</description>
+    </item>
+    
+    <item>
+      <title>AngularJS Hangout - Promises Promises</title>
+      <link>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</link>
+      <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Switching to SVG on Grey Nimbus</title>
+      <link>https://ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</link>
+      <pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</guid>
+      <description>Switching to SVG for all images on my website</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS Module Generator</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-module-generator/</link>
+      <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-module-generator/</guid>
+      <description>PyroCMS Module Generator that can generate modules for pyrocms</description>
+    </item>
+    
+    <item>
+      <title>Pyro Swipe.js Module</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</link>
+      <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</guid>
+      <description>A module for Pyro CMS that wraps up the Swipe.js Module</description>
+    </item>
+    
+    <item>
+      <title>Grey Nimbus website</title>
+      <link>https://ohdoylerules.com/portfolio/grey-nimbus-website/</link>
+      <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/grey-nimbus-website/</guid>
+      <description>My old Grey Nimbus website</description>
+    </item>
+    
+    <item>
+      <title>Pyro Image Select Field</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-image-select-field/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-image-select-field/</guid>
+      <description>A field for Pyro CMS that allows you to select images from your uploads</description>
+    </item>
+    
+    <item>
+      <title>jQuery Plugin Snippets for Sublime Text 2</title>
+      <link>https://ohdoylerules.com/snippets/jquery-plugin-snippets/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/jquery-plugin-snippets/</guid>
+      <description>jQuery Plugin Snippets for Sublime Text 2</description>
     </item>
     
     <item>
@@ -46,20 +1106,79 @@
       <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/php-variables-in-strings/</guid>
-      <description>&lt;p&gt;I have been getting quite annoyed lately when escaping a string to output a PHP variable. So I decided to make a little test so I could see what the best way to tackle this was.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// tested on PHP 5.4.4
-$var = &amp;#34;variable value&amp;#34;;
-echo &amp;#34;tell me the &amp;#34;.$var.&amp;#34; please&amp;#34;; // variable value
-echo &amp;#34;tell me the &amp;#34;,$var,&amp;#34; please&amp;#34;; // variable value
-echo &amp;#34;tell me the $var please&amp;#34;; // variable value
-echo &amp;#34;tell me the {$var} please&amp;#34;; // variable value
-echo &amp;#39;tell me the &amp;#39;,$var,&amp;#39; please&amp;#39;; // variable value
-echo &amp;#39;tell me the $var please&amp;#39;; // $var
-echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Maybe I am a little dumb for not knowing this. But I would always escape my strings like:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;echo &amp;#34;my little &amp;#34;.$var.&amp;#34; went to the market.&amp;#34;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;when I could have just used &amp;ldquo;$var&amp;rdquo; with double quotes&amp;hellip; Everything in single quotes is treated as a plain string and anything with double is interpreted. I saw something saying that some of these will not output properly in older versions of PHP.&lt;/p&gt;
-</description>
+      <description>A list of all the ways you can put PHP Variables in strings</description>
+    </item>
+    
+    <item>
+      <title>Pyro Blurb Field</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-blurb-field/</link>
+      <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-blurb-field/</guid>
+      <description>A field for Pyrocms that allows you to create little blurbs in a list</description>
+    </item>
+    
+    <item>
+      <title>canadian-provinces-field</title>
+      <link>https://ohdoylerules.com/personal-project/canadian-provinces-field/</link>
+      <pubDate>Fri, 15 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/canadian-provinces-field/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>git-website-workflow</title>
+      <link>https://ohdoylerules.com/personal-project/git-website-workflow/</link>
+      <pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/git-website-workflow/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS PageWidgets Field Type</title>
+      <link>https://ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</link>
+      <pubDate>Tue, 05 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</guid>
+      <description>PyroCMS PageWidgets Field Type</description>
+    </item>
+    
+    <item>
+      <title>Clean CSS Updated</title>
+      <link>https://ohdoylerules.com/personal-project/clean-css-updated/</link>
+      <pubDate>Sun, 24 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/clean-css-updated/</guid>
+      <description>Clean CSS Chrome app Updated</description>
+    </item>
+    
+    <item>
+      <title>Pyro List Field</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-list-field/</link>
+      <pubDate>Sat, 23 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-list-field/</guid>
+      <description>A field for Pyro CMS that allows the creation of Lists</description>
+    </item>
+    
+    <item>
+      <title>Zepto Drag &amp; Swap</title>
+      <link>https://ohdoylerules.com/personal-project/zepto-drag-swap/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/zepto-drag-swap/</guid>
+      <description>Create a drag and drop list with Zepto</description>
+    </item>
+    
+    <item>
+      <title>Pyro Image Widget</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-image-widget/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-image-widget/</guid>
+      <description>A widget for Pyro CMS for creating Image sections</description>
     </item>
     
     <item>
@@ -68,11 +1187,34 @@ echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
       <pubDate>Sun, 13 Jan 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/socketio-works-howto/</guid>
-      <description>&lt;p&gt;I made my first video about web development. It is a quick video about socket.io and how it works with node and such.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://youtu.be/JfYRGTvMbBA&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/vlcsnap-2013-01-12-16h52m23s239.jpg&#34; alt=&#34;Socket.io demo app&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It also includes a little demo of a tiny app I built. I may release the source later on depending on the videos popularity.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://youtu.be/JfYRGTvMbBA&#34;&gt;Making a socket.io app&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Making a socket.io app and how socket.io works</description>
+    </item>
+    
+    <item>
+      <title>Clean CSS in Chrome Apps Office Hours</title>
+      <link>https://ohdoylerules.com/personal-project/clean-css-in-office-hours/</link>
+      <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/clean-css-in-office-hours/</guid>
+      <description>So my chrome app Clean CSS made it onto one of the Chrome Apps Office Hours.</description>
+    </item>
+    
+    <item>
+      <title>View Folder Tree in MacOSX Terminal</title>
+      <link>https://ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</link>
+      <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</guid>
+      <description>View Folder Tree in MacOSX Terminal</description>
+    </item>
+    
+    <item>
+      <title>New business cards</title>
+      <link>https://ohdoylerules.com/portfolio/new-business-cards/</link>
+      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/new-business-cards/</guid>
+      <description>Check out my new business cards</description>
     </item>
     
     <item>
@@ -81,10 +1223,16 @@ echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
       <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/flexbox-demo/</guid>
-      <description>&lt;p&gt;An old flexbox demo I made a while back. It may not be the latest syntax so beware!!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://codepen.io/james2doyle/pen/svEek&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-11-13-at-4.23.41-PM-e135284190554411.png&#34; alt=&#34;Flexbox Demo&#34; title=&#34;Flexbox Demo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://codepen.io/james2doyle/pen/svEek&#34; title=&#34;Codepen Link&#34;&gt;Check out the pen&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>WYSIWYG in PyroCMS Widgets</title>
+      <link>https://ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</link>
+      <pubDate>Sat, 10 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</guid>
+      <description>WYSIWYG in PyroCMS Widgets</description>
     </item>
     
     <item>
@@ -93,13 +1241,25 @@ echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
       <pubDate>Sun, 04 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/letterpress-loader-in-css/</guid>
-      <description>&lt;p&gt;I recently bought the amazing Letterpress app for iPhone. It truly is gorgeous, and has an amazing UI. It inspired me to make this little doodle.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-11-04-at-1.34.39-AM11.png&#34; alt=&#34;Letterpress Loader In CSS&#34;&gt;
-&lt;/div&gt;
-&lt;p&gt;This is a little tribute. It&amp;rsquo;s an animated css loader in the style of Letterpress. It&amp;rsquo;s a little different because it uses the custom cubic-bezier curve called &amp;lsquo;ease-in-out-back&amp;rsquo;, which is essentially elastic. I got the values from the great site &lt;a href=&#34;http://matthewlein.com/ceaser/&#34; title=&#34;Ceaser&#34;&gt;Ceaser&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As always, &lt;a href=&#34;http://codepen.io/james2doyle/pen/rDEzp&#34; title=&#34;Letterpress CSS Loader&#34;&gt;check out the pen&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Create the Letterpress loader in CSS</description>
+    </item>
+    
+    <item>
+      <title>Kube-Node-Express</title>
+      <link>https://ohdoylerules.com/personal-project/kube-node-express/</link>
+      <pubDate>Sun, 21 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/kube-node-express/</guid>
+      <description>Kube-Node-Express</description>
+    </item>
+    
+    <item>
+      <title>Source Code Pro on Sublime Text</title>
+      <link>https://ohdoylerules.com/web/source-code-pro-sublime/</link>
+      <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/source-code-pro-sublime/</guid>
+      <description>Download and install Source Code Pro on Sublime Text</description>
     </item>
     
     <item>
@@ -108,52 +1268,16 @@ echo &amp;#39;tell me the {$var} please&amp;#39;; // {$var}
       <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/generated-content-title/</guid>
-      <description>&lt;p&gt;I like &lt;a href=&#34;http://jsfiddle.net/&#34; title=&#34;jsFiddle&#34;&gt;jsFiddle&lt;/a&gt;. I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my &lt;a href=&#34;https://ohdoylerules.com/work/&#34; title=&#34;Work&#34;&gt;work&lt;/a&gt; section.&lt;/p&gt;
-&lt;p&gt;Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the PHP &lt;code&gt;echo&lt;/code&gt;s. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;/*! styles for printing */&lt;/span&gt;
-@&lt;span style=&#34;color:#ff79c6&#34;&gt;media&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;print&lt;/span&gt;{
-  &lt;span style=&#34;color:#6272a4&#34;&gt;/*! all a tags with an href attribute */&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;:after{
-    &lt;span style=&#34;color:#6272a4&#34;&gt;/*! display that href after the value */&lt;/span&gt;
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;content&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34; (&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;attr&lt;/span&gt;(href) &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;)&amp;#34;&lt;/span&gt;;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;what-does-this-look-like&#34;&gt;What does this look like?&lt;/h3&gt;
-&lt;p&gt;Would render as &lt;a href=&#34;www.example.com/&#34;&gt;Website (www.example.com/)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;So with that in mind, I thought it would be cool to have a button that would render a count. So in practical applications it might be used for something like an inbox button. In the case I built it is a notifications button.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/54368011.png&#34; alt=&#34;notifications button&#34; &gt;
-&lt;/div&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;button {
-  color: #333;
-  padding: 4px 10px;
-  border: 1px solid #aaa;
-  outline: none;
-  font-weight: bold;
-  font-size: 12px;
-  font-family: &amp;#39;Corbin&amp;#39;;
-  background: #eee;
-  border-radius: 3px;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.5);
-  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
-}
-button:after {
-  content: attr(data-count);
-  border-radius: 10px;
-  display: inline-block;
-  background: #777;
-  padding: 2px 5px;
-  width: 15px;
-  margin: 0 0 0 8px;
-  color: white;
-  font-weight: normal;
-  border: 1px solid #555;
-  box-shadow: inset 0 1px 2px rgba(255,255,255,0.5),
-      inset 0 -1px 2px rgba(0,0,0,0.5);
-  text-shadow: 0 1px 0 rgba(0,0,0,0.6);
-}​
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you would like to see that bad boy in action check out &lt;a href=&#34;http://jsfiddle.net/james2doyle/LjgzD/&#34; title=&#34;jsFiddle css content&#34;&gt;this fiddle&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Use Generated Content in CSS to show an Article link in plain text</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.range()</title>
+      <link>https://ohdoylerules.com/fiddle/array-prototype-range/</link>
+      <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/array-prototype-range/</guid>
+      <description>How to create Array.prototype.range in Javascript</description>
     </item>
     
     <item>
@@ -162,13 +1286,70 @@ button:after {
       <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/no-javascript-accordion/</guid>
-      <description>&lt;p&gt;I made this today. It&amp;rsquo;s a little CSS-only accordion. It uses the &lt;code&gt;:target&lt;/code&gt; selector. The &lt;code&gt;:target&lt;/code&gt; selector is rather new. It also has some quirks. It is almost like an onclick without the javascript.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-10-17-at-1.54.00-PM11.png&#34; alt=&#34;no-js accordion&#34; &gt;
-&lt;/div&gt;
-&lt;p&gt;The thing I find is that the name is being passed through the URL when using this method. This is nice when you want to refresh the page and keep the same item active. But that is also a downside because maybe when you refresh you want everything to reset. In that case, you would need to delete the variable/id out of the URL and then refresh.&lt;/p&gt;
-&lt;p&gt;But just &lt;a href=&#34;http://codepen.io/james2doyle/pen/tgxDr&#34; title=&#34;no-js accordion&#34;&gt;check it out&lt;/a&gt; already!&lt;/p&gt;
-</description>
+      <description>Build an Accordion with just CSS and no Javascript</description>
+    </item>
+    
+    <item>
+      <title>Create a Dancing Music Bar animation in CSS and SVG</title>
+      <link>https://ohdoylerules.com/fiddle/dancing-music-bars/</link>
+      <pubDate>Tue, 16 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/dancing-music-bars/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>zsh new file &amp;&amp; open file function</title>
+      <link>https://ohdoylerules.com/snippets/zsh-new-open-function/</link>
+      <pubDate>Sat, 13 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/zsh-new-open-function/</guid>
+      <description>zsh new file &amp;&amp; open file function</description>
+    </item>
+    
+    <item>
+      <title>Target Mozilla-only in CSS</title>
+      <link>https://ohdoylerules.com/snippets/target-mozilla-only-in-css/</link>
+      <pubDate>Thu, 11 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/target-mozilla-only-in-css/</guid>
+      <description>Target Mozilla-only in CSS</description>
+    </item>
+    
+    <item>
+      <title>My Old Website</title>
+      <link>https://ohdoylerules.com/portfolio/my-old-website/</link>
+      <pubDate>Thu, 04 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/my-old-website/</guid>
+      <description>See my old website</description>
+    </item>
+    
+    <item>
+      <title>CSS Date Card</title>
+      <link>https://ohdoylerules.com/fiddle/css-date-card/</link>
+      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/css-date-card/</guid>
+      <description>Create a Date Card using CSS transitions, animations, and gradients</description>
+    </item>
+    
+    <item>
+      <title>Create a Pagebend effect using CSS</title>
+      <link>https://ohdoylerules.com/fiddle/css3-pagebend/</link>
+      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/css3-pagebend/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>nodelist.each</title>
+      <link>https://ohdoylerules.com/snippets/nodelist-each/</link>
+      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/nodelist-each/</guid>
+      <description>nodelist.prototype.each in javascript</description>
     </item>
     
     <item>
@@ -177,16 +1358,70 @@ button:after {
       <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/demo/mozilla-dev-derby/</guid>
-      <description>&lt;p&gt;I have just submitted my demo for the &lt;a href=&#34;https://developer.mozilla.org/en-US/demos/detail/photo-shake&#34; title=&#34;Photo Shake Page&#34;&gt;Mozzila Dev Derby&lt;/a&gt;. If you like it, please vote. Thank you!&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/james2doyle-Camera-Api-Demo2111.png&#34; alt=&#34;Camera Api Demo&#34; &gt;
-&lt;/div&gt;
-&lt;p&gt;It uses the HTML5 File Api and also uses the device orientation API. Firstly, you upload or take a picture, then that picture fades up below in a polaroid-style div. You can then move you device and see the picture move.&lt;/p&gt;
-&lt;p&gt;I also added something I called dynamic shine. This is just a diagonal white-to-transparent gradient. Tilting the device causes the photo to look like it is interacting with the light.&lt;/p&gt;
-&lt;p&gt;You can also see the project &lt;a href=&#34;https://ohdoylerules.com/test/cameraapi/&#34; title=&#34;photo shake&#34;&gt;self-hosted here&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;update&#34;&gt;UPDATE:&lt;/h4&gt;
-&lt;p&gt;I got runner up! Here are the &lt;a href=&#34;https://hacks.mozilla.org/2012/09/announcing-the-august-dev-derby-winners/&#34; title=&#34;Mozilla Dev Derby August&#34;&gt;results&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>James Doyle runner up in Mozilla Dev Derby September 2012</description>
+    </item>
+    
+    <item>
+      <title>No-Js Image Preview</title>
+      <link>https://ohdoylerules.com/fiddle/no-js-image-preview/</link>
+      <pubDate>Mon, 27 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/no-js-image-preview/</guid>
+      <description>Create a No-Js Image Preview with only CSS</description>
+    </item>
+    
+    <item>
+      <title>Styling Radios and Checkboxes. Redux.</title>
+      <link>https://ohdoylerules.com/web/styling-input-redux/</link>
+      <pubDate>Sun, 19 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/styling-input-redux/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>WordPress Plugin Swipe.js</title>
+      <link>https://ohdoylerules.com/web/wordpress-plugin-swipe-js/</link>
+      <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-plugin-swipe-js/</guid>
+      <description>WordPress Plugin Swipe.js</description>
+    </item>
+    
+    <item>
+      <title>Making Checkboxes in WordPress options pages</title>
+      <link>https://ohdoylerules.com/web/checkboxes-options/</link>
+      <pubDate>Sat, 11 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/checkboxes-options/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Styling radio and checkbox inputs</title>
+      <link>https://ohdoylerules.com/web/radio-checkboxes/</link>
+      <pubDate>Tue, 07 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/radio-checkboxes/</guid>
+      <description>Styling inputs can be pretty annoying. I don’t think I really have any consistent way of making custom inputs</description>
+    </item>
+    
+    <item>
+      <title>Generated content in CSS</title>
+      <link>https://ohdoylerules.com/fiddle/generated-content-in-css/</link>
+      <pubDate>Fri, 27 Jul 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/generated-content-in-css/</guid>
+      <description>How to use Generated content in CSS</description>
+    </item>
+    
+    <item>
+      <title>Installing Android 4.1.1 Jelly Bean for Nexus S</title>
+      <link>https://ohdoylerules.com/android/jellybean-nexuss/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/android/jellybean-nexuss/</guid>
+      <description>How to flash jelly bean onto a nexus s</description>
     </item>
     
   </channel>

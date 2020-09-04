@@ -12,68 +12,192 @@
     <atom:link href="https://ohdoylerules.com/category/snippets/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Vuex Crosstab Plugin</title>
-      <link>https://ohdoylerules.com/snippets/vuex-crosstab/</link>
-      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
-      <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/vuex-crosstab/</guid>
-      <description>&lt;p&gt;Did you know that you can use localstorage as an event bus between same-origin tabs?&lt;/p&gt;
-&lt;p&gt;Yep! Local storage is shared across same-origin domains. Which means you can share information between tabs on the same domain. Other cool thing is that the &lt;code&gt;storage&lt;/code&gt; event that is fired on the &lt;code&gt;window&lt;/code&gt; when localstorage changes, it &lt;em&gt;only fired on non-focused tabs&lt;/em&gt;. This means you can write an event bus to sync the tabs you don&amp;rsquo;t have focused with the one you do! Neat.&lt;/p&gt;
-&lt;p&gt;When browsing around GitHub, like I do, I found this project called &lt;a href=&#34;https://github.com/storeon/storeon&#34;&gt;storeon&lt;/a&gt;. It is a framework agnostic state manager. It&amp;rsquo;s aim is to be small and flexible and provide additional functionality through plugins. One such plugin is called &lt;a href=&#34;https://github.com/storeon/crosstab&#34;&gt;crosstab&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I am a Vue.js user who likes VueX. So I wanted to recreate this plugin in VueX. VueX also provides a &lt;a href=&#34;https://vuex.vuejs.org/guide/plugins.html&#34;&gt;plugin API&lt;/a&gt; so you can write plugins as well. So I wrote the plugin for VueX, published it to &lt;a href=&#34;https://www.npmjs.com/package/vuex-crosstab&#34;&gt;npm&lt;/a&gt;, and posted the source on &lt;a href=&#34;https://github.com/james2doyle/vuex-crosstab&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here is the demo of the plugin working:&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/vuex-crosstab.gif&#34; target=&#34;_blank&#34; title=&#34;vuex crosstab demo&#34;&gt;&lt;img alt=&#34;laravel multi-lingual site demo&#34; src=&#34;https://ohdoylerules.com/images/vuex-crosstab.gif&#34;&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;You can use the plugin like so:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// es6
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// import CrossTab from &amp;#39;vuex-crosstab&amp;#39;;
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// commonjs
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; CrossTab &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; require(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;vuex-crosstab&amp;#39;&lt;/span&gt;);
-
-&lt;span style=&#34;color:#ff79c6&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; Vuex.Store({
-  &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  plugins&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [
-    &lt;span style=&#34;color:#6272a4&#34;&gt;// your other plugins...
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    CrossTab({ recover&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt; })
-  ],
-  &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is a simple config object you can pass to control some things like the &amp;ldquo;recovery&amp;rdquo; which will check the localstorage to see if there was state already in there. You can &lt;a href=&#34;https://github.com/james2doyle/vuex-crosstab#options&#34;&gt;read more on the Github page&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Vuex Stateful URL Plugin</title>
       <link>https://ohdoylerules.com/snippets/vuex-stateful-url/</link>
       <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/vuex-stateful-url/</guid>
-      <description>&lt;p&gt;Have you ever used permalinks on a site? These links store the state of the page in the URL. They can be super useful for simple single-page-apps (SPAs) for bringing users back to where they were when they left the page or just adding the ability to share that page state with someone else without requiring logins or anything like that.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m a Vue.js user who likes VueX. So I wanted to create a plugin in VueX that would send the state of the store into the URL.&lt;/p&gt;
-&lt;p&gt;VueX provides a &lt;a href=&#34;https://vuex.vuejs.org/guide/plugins.html&#34;&gt;plugin API&lt;/a&gt; so you can write plugins that can extend the basic functionality. So I wrote the plugin for VueX that would sync the store to the URL.&lt;/p&gt;
-&lt;p&gt;I used a great package called &lt;a href=&#34;https://github.com/masotime/json-url&#34;&gt;json-url&lt;/a&gt; which allows you to encode/compress JSON objects in a URL-safe way.&lt;/p&gt;
-&lt;p&gt;It is now published to &lt;a href=&#34;https://www.npmjs.com/package/vuex-stateful-url&#34;&gt;npm&lt;/a&gt; and the source is on &lt;a href=&#34;https://github.com/james2doyle/vuex-stateful-url&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here is the demo of the plugin working:&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/vuex-stateful-url.gif&#34; target=&#34;_blank&#34; title=&#34;vuex stateful url demo&#34;&gt;&lt;img alt=&#34;laravel multi-lingual site demo&#34; src=&#34;https://ohdoylerules.com/images/vuex-stateful-url.gif&#34;&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;You can use the plugin like so:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// es6
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// import StatefulURL from &amp;#39;vuex-stateful-url&amp;#39;;
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// commonjs
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; StatefulURL &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; require(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;vuex-stateful-url&amp;#39;&lt;/span&gt;);
-
-&lt;span style=&#34;color:#ff79c6&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; Vuex.Store({
-  &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  plugins&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [
-    &lt;span style=&#34;color:#6272a4&#34;&gt;// your other plugins...
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    StatefulURL()
-  ],
-  &lt;span style=&#34;color:#6272a4&#34;&gt;// ...
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can &lt;a href=&#34;https://github.com/james2doyle/vuex-crosstab&#34;&gt;read more on the Github page&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>StatefulURL is a Vuex plugin that can read and write the state from a query string</description>
+    </item>
+    
+    <item>
+      <title>Vuex Crosstab Plugin</title>
+      <link>https://ohdoylerules.com/snippets/vuex-crosstab/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/vuex-crosstab/</guid>
+      <description>CrossTab syncs Vuex state across same-origin tabs. Converted from storeon crosstab</description>
+    </item>
+    
+    <item>
+      <title>Using slots in Vue js</title>
+      <link>https://ohdoylerules.com/web/using-slots-in-vue-js/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/using-slots-in-vue-js/</guid>
+      <description>If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components</description>
+    </item>
+    
+    <item>
+      <title>Create JSON Sections In Shopify</title>
+      <link>https://ohdoylerules.com/web/create-json-sections-in-shopify/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/create-json-sections-in-shopify/</guid>
+      <description>A demo on how to create a section in Shopify that returns JSON and HTML</description>
+    </item>
+    
+    <item>
+      <title>Detect Theme Editor In Shopify Liquid Templates</title>
+      <link>https://ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</guid>
+      <description>A demo on how to detect when a template is running in the Shopify theme and section builder</description>
+    </item>
+    
+    <item>
+      <title>Using Zapier Webhooks for HTML forms</title>
+      <link>https://ohdoylerules.com/web/zapier-webhooks-for-html-forms/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/zapier-webhooks-for-html-forms/</guid>
+      <description>You can use Zapier webhooks to handle HTML form submissions - if you know how to set up your form</description>
+    </item>
+    
+    <item>
+      <title>Use Laravel Valet for WordPress Multisites</title>
+      <link>https://ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</guid>
+      <description>Use Laravel Valet for developing local WordPress multisites</description>
+    </item>
+    
+    <item>
+      <title>Build A Multi-lingual Laravel Site With Subdomains</title>
+      <link>https://ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</link>
+      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</guid>
+      <description>Have you ever wanted to use subdomains in Laravel to control logic, locale, or other functionality? Well, this example might help.</description>
+    </item>
+    
+    <item>
+      <title>Simple Slack Slash Supplier</title>
+      <link>https://ohdoylerules.com/web/simple-slash-commands/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-slash-commands/</guid>
+      <description>A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses</description>
+    </item>
+    
+    <item>
+      <title>SQL As An API</title>
+      <link>https://ohdoylerules.com/web/sql-as-an-api/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/sql-as-an-api/</guid>
+      <description>An example of how to use SQL as an API instead of reaching for something like GraphQL</description>
+    </item>
+    
+    <item>
+      <title>Laravel Scout Sonic Driver</title>
+      <link>https://ohdoylerules.com/web/laravel-scout-sonic-driver/</link>
+      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/laravel-scout-sonic-driver/</guid>
+      <description>A Laravel Scout driver for the Sonic search tool</description>
+    </item>
+    
+    <item>
+      <title>Function Currying To Make Reusable Code</title>
+      <link>https://ohdoylerules.com/web/function-currying-to-make-reusable-code/</link>
+      <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/function-currying-to-make-reusable-code/</guid>
+      <description>Function currying. If you haven&#39;t heard of it before, let me introduce you to this magical pattern that can help reduce duplicate code and improve readability</description>
+    </item>
+    
+    <item>
+      <title>When And Where To Compromise Your App Design</title>
+      <link>https://ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</guid>
+      <description>When initially developing an application or a new feature we are constantly trying to balance best practices in design with delivering a finished product.</description>
+    </item>
+    
+    <item>
+      <title>Using Sqlite As A Cache In Laravel</title>
+      <link>https://ohdoylerules.com/web/laravel-sqlite-cache/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/laravel-sqlite-cache/</guid>
+      <description>How to use Sqlite as a cache in Laravel</description>
+    </item>
+    
+    <item>
+      <title>Angular (v1.x) Through iFrame</title>
+      <link>https://ohdoylerules.com/web/angular-through-iframe/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/angular-through-iframe/</guid>
+      <description>How to use angular.js (v1.x) through an iframe when the iframe URL is dynamically swapped</description>
+    </item>
+    
+    <item>
+      <title>Nuxt Firebase Starter</title>
+      <link>https://ohdoylerules.com/web/nuxt-firebase-starter/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/nuxt-firebase-starter/</guid>
+      <description>An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles</description>
+    </item>
+    
+    <item>
+      <title>Using DigitalOcean Spaces</title>
+      <link>https://ohdoylerules.com/web/using-digitalocean-spaces/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/using-digitalocean-spaces/</guid>
+      <description>An example project for how to use DigitalOcean Spaces with S3 tools</description>
+    </item>
+    
+    <item>
+      <title>3 Ways A Website Project Falls Apart</title>
+      <link>https://ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</guid>
+      <description>Over the last 7 years, I have been a part of hundreds of website projects. Here are some of the most common ways I have seen a project fail.</description>
+    </item>
+    
+    <item>
+      <title>Handle spaces and no-spaces in MySQL where-like clauses</title>
+      <link>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</link>
+      <pubDate>Sat, 08 Jul 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</guid>
+      <description>Have you ever wanted to write a WHERE LIKE for a query with and without spaces? Well, now you can with this trick!</description>
+    </item>
+    
+    <item>
+      <title>WordPress Browser Body Class</title>
+      <link>https://ohdoylerules.com/web/wordpress-browser-body-class/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-browser-body-class/</guid>
+      <description>A simple WordPress tutorial for adding a class to the body that represents the browser. No plugin required.</description>
+    </item>
+    
+    <item>
+      <title>Update Laravel Pagination With New Collection</title>
+      <link>https://ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</guid>
+      <description>Did you know you can update a Laravel pagination with a new collection?</description>
     </item>
     
     <item>
@@ -82,30 +206,16 @@
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/color-helpers-in-fish-shell/</guid>
-      <description>&lt;p&gt;I am one of those people who likes a lot of colors in my shell. When there is a failure, I like to see red. If there is something stuccessful, I like to see green.&lt;/p&gt;
-&lt;p&gt;Working with the prompt to output the correct colors can be a bit of a pain. I manage to find a nice way to handle both colorizing backgrounds for the text as well as the actual text color. You can see an example below:&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/james2doyle/acb8c065c8b4d63f557d44a77a356d59.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;Once you add the code into your &lt;code&gt;fish config&lt;/code&gt;. You will then be able to colorize your output using this simple helper function:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;color_print &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$COLOR_R&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;I am red text.&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can also do a background color:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;color_print &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$BG_G&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;I am on a green background.&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I use this helper function in my other functions to colorize output when showing different results or handling different exit codes.&lt;/p&gt;
-&lt;p&gt;Here is an exmple of a little function that moves a file and timestamps it:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;function&lt;/span&gt; amv
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;source&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$argv&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;1&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$source&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; stamp &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;date +%Y-%m-%d-%H-%M-%S&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; dest &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$stamp&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$source&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
-    mv &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$source&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$dest&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;# output will be blue text
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    color_print &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$COLOR_B&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Moved &lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$source&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt; to an archive at &lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$dest&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;# output will be yellow text
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    color_print &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$COLOR_Y&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Help: amv source.zip {timestamp}-source.zip&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So you can see where this can be really helpful for when you just want to simply color some text. Instead of worrying about the color codes and escape sequences, you can use this handy helper function now.&lt;/p&gt;
-</description>
+      <description>How to easily create a color function for printing colorized output</description>
+    </item>
+    
+    <item>
+      <title>Conditional Vue.js Mixins</title>
+      <link>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</guid>
+      <description>How to use commonjs modules as vue.js mixins and how to conditionally load mixins on a per-page-basis.</description>
     </item>
     
     <item>
@@ -114,11 +224,7 @@
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</guid>
-      <description>&lt;p&gt;Installing the latest version of Node.js on the Amazon linux AMI can actually be a little painful.&lt;/p&gt;
-&lt;p&gt;Here is a script for doing just that.&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/james2doyle/a1f0b415dee4e69b3595b7af1d07e7c1.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;Hopefully, sometime soon, Amazon will stop using &lt;code&gt;0.10.*&lt;/code&gt; and start using a &lt;code&gt;x.*&lt;/code&gt; version by default.&lt;/p&gt;
-</description>
+      <description>How to install the latest version of node.js on the Amazon Linux AMI</description>
     </item>
     
     <item>
@@ -127,11 +233,43 @@
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/running-go-in-docker/</guid>
-      <description>&lt;p&gt;Lately, I have been trying to learn golang. This means playing with a lot of tools and busting up my local environment.&lt;/p&gt;
-&lt;p&gt;In order to keep things simple, I have been using Docker container to run my applications when I am ready to deploy or build them.&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/james2doyle/6489d3e60d994222ce0404c8cd500a93.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;I use &lt;a href=&#34;https://zeit.co/now&#34;&gt;now.sh&lt;/a&gt; to deploy the applications. Since now.sh support deploying Docker, using the Dockerfile approach makes it really simple to deploy.&lt;/p&gt;
-</description>
+      <description>How to run and deploy golang applications inside a Docker container.</description>
+    </item>
+    
+    <item>
+      <title>How To Use Template Strings As Modules</title>
+      <link>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</guid>
+      <description>How to the new es6 template string literals to make reusable modules for templates/strings or HTML partials</description>
+    </item>
+    
+    <item>
+      <title>How To Use LC_MONETARY In Laravel</title>
+      <link>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</link>
+      <pubDate>Fri, 24 Feb 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</guid>
+      <description>How to use setlocale with LC_MONETARY in Laravel</description>
+    </item>
+    
+    <item>
+      <title>OpenSSL Passwd Without Prompt</title>
+      <link>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</link>
+      <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</guid>
+      <description>How to use the openssl passwd without a confirm prompt</description>
+    </item>
+    
+    <item>
+      <title>Use Nginx for A/B Testing</title>
+      <link>https://ohdoylerules.com/web/use-nginx-for-a-b-testing/</link>
+      <pubDate>Sun, 28 Aug 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/use-nginx-for-a-b-testing/</guid>
+      <description>Use Nginx to set custom headers in your HTTP responses so you can serve conditional content</description>
     </item>
     
     <item>
@@ -140,33 +278,61 @@
       <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/backup-mysql-and-email-it/</guid>
-      <description>&lt;p&gt;Recently, a friend of mine asked me what we use for managing the backups for our clients. I mentioned that we use &lt;code&gt;mysqldump&lt;/code&gt; running on a &lt;code&gt;CRON&lt;/code&gt; schedule. He said that he used a paid service for managing all the servers and their backups. He mentioned it sends to an Amazon S3 bucket, and also sends a notification.&lt;/p&gt;
-&lt;p&gt;With my setup, he noted that I could be in trouble if the hard drive failed, or the site gets wiped because my backups are stored locally right beside the site itself.&lt;/p&gt;
-&lt;p&gt;I thought to myself, &amp;ldquo;Hmmm. What would help me back these files up, let me know that it is done, access them quickly, and also cost no money?&amp;rdquo;. Email + &lt;code&gt;CRON&lt;/code&gt;. Email is a pretty reasonable solution for this.&lt;/p&gt;
-&lt;p&gt;With Email, you get the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A notification of when the backup is done&lt;/li&gt;
-&lt;li&gt;An &amp;ldquo;offsite&amp;rdquo; backup of the file&lt;/li&gt;
-&lt;li&gt;A searchable history of the files/backups&lt;/li&gt;
-&lt;li&gt;Forwarding of the backup to someone else&lt;/li&gt;
-&lt;li&gt;CC multiple accounts and have the backup available to multiple people&lt;/li&gt;
-&lt;li&gt;Send a copy to the client, so they can have one too&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;So I whipped up a script with &lt;code&gt;mysqldump&lt;/code&gt;, &lt;code&gt;curl&lt;/code&gt;, and &lt;code&gt;CRON&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Although you can send email &lt;code&gt;sendmail&lt;/code&gt; or &lt;code&gt;mail&lt;/code&gt;, I opted for &lt;a href=&#34;http://www.mailgun.com/&#34;&gt;Mailgun&lt;/a&gt;. It is something we are already using, so hooking it up took no time at all. They also have an excellent API, which is faster than &lt;em&gt;SMTP&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;On top of the regular email features I listed above, with Mailgun, I also get:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;read receipts&lt;/li&gt;
-&lt;li&gt;delivery reports&lt;/li&gt;
-&lt;li&gt;logging&lt;/li&gt;
-&lt;li&gt;web hooks (you can catch emails with individual subjects or recipients)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;So, without spending any money, I can get a SaaS experience using some built-in tools.&lt;/p&gt;
-&lt;p&gt;You can see the script here:&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/james2doyle/6e471dee73124eddda8c.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;I included some rules for the &lt;code&gt;crontab&lt;/code&gt; settings. I used &lt;code&gt;0 0 * * 1 *&lt;/code&gt; which is once a week on Monday at midnight.&lt;/p&gt;
-&lt;p&gt;You can still run the script above &lt;em&gt;without using &lt;code&gt;CRON&lt;/code&gt;&lt;/em&gt;. Just put it somewhere on your server and run it like you normally would: &lt;code&gt;./backup-mysql-db.sh&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Don&#39;t bother paying for a SaaS that creates MySQL backups and emails them to you on a schedule, you can do this with CRON and a small script</description>
+    </item>
+    
+    <item>
+      <title>Add A Counter For Duplicate Uploads</title>
+      <link>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</link>
+      <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</guid>
+      <description>A short script to detect if a folder contains a duplicate filename, and if it does, the filename gets a counter prepended to the front of the filename</description>
+    </item>
+    
+    <item>
+      <title>Add $.getStylesheet To jQuery</title>
+      <link>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</link>
+      <pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</guid>
+      <description>Ever wanted to have a CSS/Stylesheet version of $.getScript? Well now you can with $.getStylesheet</description>
+    </item>
+    
+    <item>
+      <title>Slack Meta Data For URLs and Links</title>
+      <link>https://ohdoylerules.com/web/slack-url-meta-data/</link>
+      <pubDate>Sat, 31 Oct 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/slack-url-meta-data/</guid>
+      <description>Tips to get Slack to resolve the correct meta data for your website URL</description>
+    </item>
+    
+    <item>
+      <title>Fixing Wordpress wp-content 500 Errors</title>
+      <link>https://ohdoylerules.com/web/wordpress-wp-content-500-errors/</link>
+      <pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-wp-content-500-errors/</guid>
+      <description>How to fix the issue where Wordpress wp-content assets are throwing 500 errors</description>
+    </item>
+    
+    <item>
+      <title>Simple Benchmarks With Apache AB</title>
+      <link>https://ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</guid>
+      <description>a tutorial for generating simple benchmarks using the Apache ab tool</description>
+    </item>
+    
+    <item>
+      <title>Varnish For Static Sites</title>
+      <link>https://ohdoylerules.com/web/varnish-for-static-sites/</link>
+      <pubDate>Sun, 20 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/varnish-for-static-sites/</guid>
+      <description>a small tutorial for how to setup Varnish cache for a flat site running on Apache</description>
     </item>
     
     <item>
@@ -175,16 +341,7 @@
       <pubDate>Sun, 06 Sep 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/validate-email-with-lua/</guid>
-      <description>&lt;p&gt;Checking if an email is valid should be easy, right? WRONG.&lt;/p&gt;
-&lt;p&gt;This took about 3-4 hours to finally get. I scoured the web for a good email validation function. But, I was unable to find any that actually handled all the valid email variations.&lt;/p&gt;
-&lt;p&gt;If you didn&amp;rsquo;t know, the &lt;a href=&#34;https://en.wikipedia.org/wiki/Email_address#Examples&#34;&gt;spec for email&lt;/a&gt; is actually pretty complex. It allows a lot more than just a web-safe prefix and a domain sandwiched between an &lt;code&gt;@&lt;/code&gt; symbol. You can use quotes, brackets, escapes, and more &lt;code&gt;@&lt;/code&gt; symbols.&lt;/p&gt;
-&lt;p&gt;Looking at the results that Wikipedia gives me for emails that should fail or pass a validation, I knew this would require more than just a simple pattern match.&lt;/p&gt;
-&lt;p&gt;Here is the final product. I added some nice comments to explain some of the rules as well.&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/james2doyle/67846afd05335822c149.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;You can see there is a lot more logic than expected. I also made this function have multiple returns.&lt;/p&gt;
-&lt;p&gt;If the email passes the function returns &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;nil&lt;/code&gt;, but if it fails, it will return &lt;code&gt;nil&lt;/code&gt; and the reason that the validation failed. Pretty slick!&lt;/p&gt;
-&lt;p&gt;Anyway, this was a tedious task. So go forth and leverage my pain in your next form submission.&lt;/p&gt;
-</description>
+      <description>A verbose email validation function for Lua</description>
     </item>
     
     <item>
@@ -193,32 +350,25 @@
       <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/simple-php-json-response/</guid>
-      <description>&lt;p&gt;This is little snippet I use all the time when I am building simple flat sites that need a single route for an AJAX request.&lt;/p&gt;
-&lt;p&gt;There are a couple of things you need to do in order to create a proper JSON response.&lt;/p&gt;
-&lt;h4 id=&#34;use-json_encode&#34;&gt;Use json_encode&lt;/h4&gt;
-&lt;p&gt;If you are really new to PHP, you may not have found &lt;a href=&#34;http://php.net/manual/en/function.json-encode.php#refsect1-function.json-encode-examples&#34;&gt;json_encode&lt;/a&gt;. If that is the case, then look it up right now.&lt;/p&gt;
-&lt;p&gt;This function converts PHP arrays, strings, and objects, into a JSON safe string. This makes it simple for you to create safe responses that can be handled by your javascript.&lt;/p&gt;
-&lt;h4 id=&#34;use-content-type&#34;&gt;Use Content-Type&lt;/h4&gt;
-&lt;p&gt;This is usually the magic command that allows you to &lt;em&gt;receive&lt;/em&gt; JSON from your script. If you don&amp;rsquo;t set the header, PHP will simple return a string. Then in your javascript, you have to use &lt;code&gt;JSON.parse&lt;/code&gt; in order to get the object that javascript can use.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;header(&amp;#39;Content-Type: application/json&amp;#39;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;No more strings! The request is now treated accordingly and is parsed for you. I am sure everyone has encountered this in the beginning.&lt;/p&gt;
-&lt;h4 id=&#34;use-status&#34;&gt;Use Status&lt;/h4&gt;
-&lt;p&gt;Here is another header that you need to set in order for things to work smoothly. By setting the status, you can tell your javascript, as well as your browser, what the status of the request it. By default, the requests are treated as &lt;code&gt;200 OK&lt;/code&gt;. So although you may have sent a response with a failing message, with setting a failed status (usually 300 codes and above) the browser, and your javascript, think everything is fine.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;header(&amp;#39;Status: 400 Bad Request&amp;#39;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This becomes very apparent in jQuery when using &lt;code&gt;$.get&lt;/code&gt; or &lt;code&gt;$.post&lt;/code&gt;. If you are using a Promise style request (using &lt;code&gt;$.get().then( ... )&lt;/code&gt;), your error handler never gets called.&lt;/p&gt;
-&lt;p&gt;If you want to find the perfect header for your fantastic error, check out the Wikipedia for the &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_HTTP_status_codes&#34;&gt;HTTP status codes&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
-&lt;p&gt;Here is an example of a simple script I might use when testing an AJAX response, or when building a flat-file site. I would place this somewhere in my websites directory, and then hit it directly with an AJAX request.&lt;/p&gt;
-&lt;p&gt;If my local path to my site was &lt;code&gt;http://localhost:8888/website&lt;/code&gt;, I would save this script as &lt;code&gt;json.php&lt;/code&gt;. Then I would then use the following jQuery to test the script:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$.get(&amp;quot;http://localhost:8888/website/json.php&amp;quot;)
-.done(function(response){
-  console.log(response);
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If everything was organized correctly, I should get a successful response with the information I wanted.&lt;/p&gt;
-&lt;p&gt;Here is the script:&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/james2doyle/33794328675a6c88edd6.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;You could always add more HTTP status codes, or use different key names for the array response. I like &lt;code&gt;status&lt;/code&gt; and &lt;code&gt;message&lt;/code&gt; because I may have a successful response, but I know something else went wrong when the &lt;code&gt;status&lt;/code&gt; is false. I usually put whatever data I need in &lt;code&gt;message&lt;/code&gt;. If message is a string, I know there is actually a message and not data I need to handle.&lt;/p&gt;
-</description>
+      <description>Create a simple JSON response using PHP</description>
+    </item>
+    
+    <item>
+      <title>Disallowed Characters In URI</title>
+      <link>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</link>
+      <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</guid>
+      <description>The URI you submitted has disallowed characters</description>
+    </item>
+    
+    <item>
+      <title>PhalconPHP Completions</title>
+      <link>https://ohdoylerules.com/web/phalconphp-completions/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/phalconphp-completions/</guid>
+      <description>A PhalconPHP completions and snippets package for Sublime Text</description>
     </item>
     
     <item>
@@ -227,29 +377,25 @@
       <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</guid>
-      <description>&lt;p&gt;A week ago I was tasked with uploading about 20 different videos to a CMS. Normally for the HTML5 Video element to look nice, you should upload a &lt;a href=&#34;http://www.w3.org/TR/2012/WD-html5-20121025/the-video-element.html#attr-video-poster&#34;&gt;poster image&lt;/a&gt; so that there can be something showing before the video starts to play.&lt;/p&gt;
-&lt;p&gt;In my case, I had to generate a poster for each of these 20 videos. This would have taken a long time, so I scripted it using FFmpeg!&lt;/p&gt;
-&lt;p&gt;Here is the script:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#!/usr/bin/env bash
-&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#6272a4&#34;&gt;# take in mp4, take screenshot at 5 seconds&lt;/span&gt;
-&lt;span style=&#34;color:#6272a4&#34;&gt;# output same filename, but with jpg extension&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; FILE in *.mp4
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;# save the filename but swap the extension&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;NEWFILE&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;FILE&lt;/span&gt;%.mp4&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;.jpg&amp;#34;&lt;/span&gt;
-    ffmpeg -y -i &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$FILE&lt;/span&gt; -f mjpeg -vframes &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt; -ss &lt;span style=&#34;color:#bd93f9&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$NEWFILE&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;If your videos are not mp4 format, just change the extension.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;To use this script:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;save this script as &lt;code&gt;poster.sh&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;put it in the folder with all your video files&lt;/li&gt;
-&lt;li&gt;own the script with &lt;code&gt;chmod +x poster.sh&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;run the script with &lt;code&gt;./poster.sh&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You should see a bunch of text fly in your command line, and a couple of seconds later, the conversion should be done. You will see some nice little posters right beside your videos! And, they will all be nicely named too!&lt;/p&gt;
-</description>
+      <description>Take in a list of video files and generate a poster image for each one</description>
+    </item>
+    
+    <item>
+      <title>Minimal Raspberry Pi OS</title>
+      <link>https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</link>
+      <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</guid>
+      <description>Setup and improve the Moebius OS for the Raspberry Pi</description>
+    </item>
+    
+    <item>
+      <title>Phalcon Micro App Starter</title>
+      <link>https://ohdoylerules.com/personal-project/phalcon-micro-starter/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/phalcon-micro-starter/</guid>
+      <description>A showcase of a Phalcon Micro App starter template that makes it easy to get started with the Phalcon micro app class</description>
     </item>
     
     <item>
@@ -258,11 +404,61 @@
       <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/phalconphp-crop-to-fit/</guid>
-      <description>&lt;p&gt;I was trying to find out how to crop-to-fit an image with &lt;code&gt;GD&lt;/code&gt;. But there were no examples with Phalcon. There was one post that mentioned using &lt;code&gt;Imagick&lt;/code&gt;. The only problem was that you needed to compiled Imagick with &lt;code&gt;--lrf&lt;/code&gt; in order to use &lt;code&gt;liquidRescale&lt;/code&gt;. This may not be an option on many hosting platforms. For that reason, I wanted to use &lt;code&gt;GD&lt;/code&gt; instead.&lt;/p&gt;
-&lt;p&gt;I &lt;a href=&#34;http://salman-w.blogspot.com/2009/04/crop-to-fit-image-using-aspphp.html&#34; title=&#34;Crop-To-Fit an Image Using ASP/PHP&#34;&gt;found this post&lt;/a&gt; after a quick Google search. It helped me create the base for my Phalcon version of the function. This may seem pretty easy for some people, but I found enough people asking, that I figured I would share the whole code.&lt;/p&gt;
-&lt;script src=&#34;https://gist.github.com/james2doyle/13a36401d6249729d017.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;If you really wanted to use Imagick, then you could just replace GD in the constructor (&lt;code&gt;Phalcon\Image\Adapter\Imagick($source)&lt;/code&gt;) and it should work fine. This way you don&amp;rsquo;t need to compile Imagick from source in order to get &lt;code&gt;liquidRescale&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>How to crop and scale an image to fit specific dimensions in Phalcon PHP</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS Module Generator 2.0</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-module-generator-2/</link>
+      <pubDate>Sun, 16 Nov 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-module-generator-2/</guid>
+      <description>The Pyro Module Generator allows you to rapidly create modules for Pyro 2.2 and up</description>
+    </item>
+    
+    <item>
+      <title>Kijiji Vector Logo</title>
+      <link>https://ohdoylerules.com/web/kijiji-vector-logo/</link>
+      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/kijiji-vector-logo/</guid>
+      <description>the kijiji logo as a vector svg file</description>
+    </item>
+    
+    <item>
+      <title>Migrate AllPasswords To 1Password</title>
+      <link>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</guid>
+      <description>How to import your allpasswords csv into 1password</description>
+    </item>
+    
+    <item>
+      <title>Always Connect To Starbucks WiFi</title>
+      <link>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</link>
+      <pubDate>Sat, 20 Sep 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</guid>
+      <description>How to connect to the Starbucks WiFi every time by using your phone.</description>
+    </item>
+    
+    <item>
+      <title>Lico</title>
+      <link>https://ohdoylerules.com/personal-project/lico-luvit-cms/</link>
+      <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/lico-luvit-cms/</guid>
+      <description>Lico is a re-creation of the PicoCMS for PHP, but written for Luvit for Lua</description>
+    </item>
+    
+    <item>
+      <title>Typeform Vector Logo</title>
+      <link>https://ohdoylerules.com/web/typeform-vector-logo/</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/typeform-vector-logo/</guid>
+      <description>Another difficult logo to find. This one is for the fun new Typeform service. Typeform allows you to create dynamic and fun forms for clients, events, and other general uses.</description>
     </item>
     
     <item>
@@ -271,42 +467,7 @@
       <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/using-node-in-applescript/</guid>
-      <description>&lt;p&gt;A few days ago, I wrote an article about &lt;a href=&#34;https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx&#34; title=&#34;Copy filepath to clipboard in OSX&#34;&gt;how to create a service in Automator to copy the selected file&amp;rsquo;s path to the clipboard while in the Finder.app&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I was playing around some more and thought it would be cool to be able to right click and convert a markdown file to HTML. This can be useful for lazy people who don&amp;rsquo;t want to open and app or terminal just to convert.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Here is the trick, you need absolute paths to node and the target module (or bin entry js file) file you are trying to run&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Here is the code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-applescript&#34; data-lang=&#34;applescript&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;-- setup some valid extensions for markdown files&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;property&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;validExtensions&lt;/span&gt; : {&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;md&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;markdown&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;mdown&amp;#34;&lt;/span&gt;}
-&lt;span style=&#34;color:#ff79c6&#34;&gt;tell&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;application&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Finder&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;theFile&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;item&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;of&lt;/span&gt; (&lt;span style=&#34;color:#ff79c6&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;selection&lt;/span&gt;)
-  &lt;span style=&#34;color:#6272a4&#34;&gt;-- check if the extension is correct&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;extension&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;theFile&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;is in&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;validExtensions&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;then&lt;/span&gt;
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;selectedItem&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;selection&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;as &lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;text&lt;/span&gt;
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;thePath&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;POSIX&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;selectedItem&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;-- created a quoted path in case there are special characters&lt;/span&gt;
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;nicePath&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;quoted form&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;thePath&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;-- here is the trick, you need absolute paths to node and the target bin&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;-- just tack on the extension for html&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;do shell script&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/usr/local/bin/node /usr/local/share/npm/bin/marked --gfm &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;nicePath&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34; &amp;gt; &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;nicePath&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;.html&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;-- find out what the new file is called&lt;/span&gt;
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;outName&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;to&lt;/span&gt; (&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;do shell script&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;basename &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;nicePath&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;.html &amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;of&lt;/span&gt; result
-    &lt;span style=&#34;color:#6272a4&#34;&gt;-- since there is no progress, let me know when your done&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;display&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;notification&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;outName&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34; created successfully&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Markdown Conversion Finished&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;-- allow time for the notification to show&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;delay&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;-- wrong file so show this&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;display dialog&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;the file is not a valid Markdown file&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Conversion Error&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;-- allow time for the notification to show&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;delay&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;tell&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now this can be used in an &lt;em&gt;Automator Service&lt;/em&gt;, which you can find out how to make in the &lt;a href=&#34;https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx&#34; title=&#34;Copy filepath to clipboard in OSX&#34;&gt;previous article&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;If you modify this for any other cool node tools, please let me know!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;PS&lt;/strong&gt;: Keep in mind that this doesn&amp;rsquo;t iterate through multiple files. Only single files.&lt;/p&gt;
-</description>
+      <description>How to use Node.js in an AppleScript</description>
     </item>
     
     <item>
@@ -315,52 +476,25 @@
       <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</guid>
-      <description>&lt;p&gt;At &lt;a href=&#34;http://warpaintmedia.ca&#34; title=&#34;WARPAINT Media&#34;&gt;WARPAINT&lt;/a&gt;, we use &lt;a href=&#34;https://www.dropbox.com&#34; title=&#34;Dropbox Homepage&#34;&gt;Dropbox&lt;/a&gt; for collaborating on our files. This is awesome, but a lot of the times you get some pretty nasty file paths. Especially when you are trying to guide someone to a place where you saved a file.&lt;/p&gt;
-&lt;p&gt;I wanted to solve this problem by creating an AppleScript service that would allow everyone to &lt;strong&gt;Copy the selected file&amp;rsquo;s path to the clipboard&lt;/strong&gt;. Here is how I did it.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;We are going to be using &lt;a href=&#34;http://en.wikipedia.org/wiki/Automator_(software)&#34;&gt;Automator&lt;/a&gt; to create a new service. Here is the description of Automator in case you don&amp;rsquo;t know what it is:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Automator is an application developed by Apple Inc. for OS X that implements point-and-click (or drag and drop) creation of workflows for automating repetitive tasks into batches for quicker alteration, thus saving time and effort over human intervention to manually change each file separately.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;So the first thing is to open Automator and create a new service. Like so:&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-1.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-1.png&#34; width=&#34;720&#34; /&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Then you need to select &lt;code&gt;files or folders&lt;/code&gt; for &amp;ldquo;Service receives selected&amp;rdquo; and choose &lt;code&gt;Finder.app&lt;/code&gt; for the second option. The do a search for &lt;code&gt;applescript&lt;/code&gt; and drag the &lt;code&gt;Run AppleScript&lt;/code&gt; choice into the window on the right.&lt;/p&gt;
-&lt;p&gt;You will need to paste the following code into the AppleScript window:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-applescript&#34; data-lang=&#34;applescript&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;tell&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;application&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Finder&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;sel&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;selection&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;as &lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;text&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;set the clipboard to&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;POSIX&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;sel&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;tell&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When that is all done, it should look something like this.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-2.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-2.png&#34; width=&#34;720&#34; /&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Go to &lt;code&gt;File &amp;gt; Save&lt;/code&gt; or press &lt;code&gt;⌘S&lt;/code&gt;. &lt;strong&gt;Do not Save-As&lt;/strong&gt;. Enter in &lt;code&gt;Copy Path To Clipboard&lt;/code&gt; as the name. &lt;em&gt;It shouldn&amp;rsquo;t ask for a location&lt;/em&gt;, it will just show an input field. This is perfectly fine.&lt;/p&gt;
-&lt;p&gt;Now open a new finder window and go to &lt;code&gt;Finder &amp;gt; Services &amp;gt; Services Preferences...&lt;/code&gt; or &lt;code&gt;System Preferences &amp;gt; Keyboard &amp;gt; Shortcuts&lt;/code&gt;. Select services on the left menu if it isn&amp;rsquo;t already and scroll down to find &lt;code&gt;Copy Path To Clipboard&lt;/code&gt;. This will open a window like this:&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-3.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-3.png&#34; width=&#34;720&#34; /&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;Click on that item and make sure it is checked off, it should be by default. Then add a shortcut by clicking on the right side where it says &amp;ldquo;add shortcut&amp;rdquo;. I made mine &lt;code&gt;⌃⌘\&lt;/code&gt;. But if you have &lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred.app&lt;/a&gt; that might conflict with it&amp;rsquo;s copy feature. So you choose.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-4.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-4.png&#34; width=&#34;720&#34; /&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;You can use these steps to run any AppleScript on a file you choose. Pretty slick!&lt;/p&gt;
-&lt;p&gt;Now when you have a file of folder selected in the Finder, you can right-click, go to Services, and select &lt;code&gt;Copy Path To Clipboard&lt;/code&gt;!&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/clipboard-5.png&#34; target=&#34;_blank&#34; &gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/clipboard-5.png&#34; width=&#34;646&#34; /&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</description>
+      <description>How to copy a filepath to the clipboard in OSX</description>
+    </item>
+    
+    <item>
+      <title>The Simple Spam Stopper</title>
+      <link>https://ohdoylerules.com/web/simple-spam-stopper/</link>
+      <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-spam-stopper/</guid>
+      <description>For the last year at WARPAINT Media, we have been getting assaulted with spam.</description>
+    </item>
+    
+    <item>
+      <title>Flexible SVG Placeholder Images</title>
+      <link>https://ohdoylerules.com/web/flexible-svg-placeholders/</link>
+      <pubDate>Sat, 24 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/flexible-svg-placeholders/</guid>
+      <description>Replace a service like placehold.it with your own local version that serves SVG images</description>
     </item>
     
     <item>
@@ -369,24 +503,34 @@
       <pubDate>Sun, 18 May 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/purge-file-from-github/</guid>
-      <description>&lt;p&gt;Ever wanted to permanently remove a file from a repo and it&amp;rsquo;s history?&lt;/p&gt;
-&lt;p&gt;Add this snippet to the end of your &lt;code&gt;.bashrc&lt;/code&gt; (or &lt;code&gt;.zshrc&lt;/code&gt; if you are a cool guy developer):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# remove a file from the repo and from the history&lt;/span&gt;
-git-purge&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;FN&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;git rm --cached --ignore-unmatch &lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
-  git filter-branch --force --index-filter &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$FN&lt;/span&gt; --prune-empty --tag-name-filter cat -- --all
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This was taken from the &lt;a href=&#34;https://help.github.com/articles/remove-sensitive-data&#34; title=&#34;Github - Remove Sensitive Data&#34;&gt;Github article about removing files&lt;/a&gt;. Here is what they said about the function:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Run git filter-branch, forcing (&amp;ndash;force) Git to process—but not check out (&amp;ndash;index-filter)—the entire history of every branch and tag (&amp;ndash;tag-name-filter cat &amp;ndash; &amp;ndash;all), removing the specified file (&amp;lsquo;git rm &amp;ndash;cached &amp;ndash;ignore-unmatch MYFILE&amp;rsquo;) and any empty commits generated as a result (&amp;ndash;prune-empty). Note that you need to specify the path to the file you want to remove, not just its filename. Be careful! This will overwrite your existing tags.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;You should also add the file to your &lt;code&gt;.gitignore&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;MYFILE&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; .gitignore
-git add .gitignore
-git commit -m &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Add MYFILE to .gitignore&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then to update the live repo, run &lt;code&gt;git push origin master --force&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;This process will remove the file from your repo, and from the history. This is in-case you committed a sensitive file. If you get in a real pickle, you can use the &lt;a href=&#34;http://rtyley.github.io/bfg-repo-cleaner/&#34; title=&#34;BFG Repo-Cleaner&#34;&gt;BFG Repo-Cleaner&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>How to permanently remove a file from a repo and it&#39;s history</description>
+    </item>
+    
+    <item>
+      <title>Tips For Using SVGs</title>
+      <link>https://ohdoylerules.com/web/tips-for-using-svgs/</link>
+      <pubDate>Sat, 17 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/tips-for-using-svgs/</guid>
+      <description>I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.</description>
+    </item>
+    
+    <item>
+      <title>Koding Interview</title>
+      <link>https://ohdoylerules.com/personal-project/koding-interview/</link>
+      <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/koding-interview/</guid>
+      <description>James Doyle interview by the developer social network Koding</description>
+    </item>
+    
+    <item>
+      <title>Kaenon Vector Logo</title>
+      <link>https://ohdoylerules.com/personal-project/kaenon-logo/</link>
+      <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/kaenon-logo/</guid>
+      <description>The Kaenon logo in a vector SVG format</description>
     </item>
     
     <item>
@@ -395,35 +539,52 @@ git commit -m &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Add MYFILE to .
       <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/bash-select-example/</guid>
-      <description>&lt;p&gt;I recently bought 2 &lt;a href=&#34;http://raspberrypi.org&#34;&gt;raspberry pi computers&lt;/a&gt;. One is for home, and one is for the office.&lt;/p&gt;
-&lt;p&gt;Since we have dynamic IPs setup in the office, and I have the same at my house, I needed to be able to connect using the MAC address of the pi. I ended up writing a little script to get the IP based on the MAC Address, and then ssh into the computer. Pretty slick.&lt;/p&gt;
-&lt;p&gt;To make my life easier I used the &lt;code&gt;select&lt;/code&gt; command in bash. The &lt;a href=&#34;http://www.gnu.org/software/bash/manual/bashref.html#Conditional-Constructs&#34;&gt;documentation for select&lt;/a&gt; leaves a lot to be desired. So I had to fiddle with it until I got it right. Here is a simple boilerplate for a bash script using select:&lt;/p&gt;
-&lt;h4 id=&#34;function&#34;&gt;Function&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#!/usr/bin/env bash
-&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
-speak&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$2&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
-  break; &lt;span style=&#34;color:#6272a4&#34;&gt;# we are done&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;What do you want me to say?&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;select&lt;/span&gt; ab in &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Bonjour&amp;#34;&lt;/span&gt;;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$ab&lt;/span&gt; in
-    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; speak &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;my friend&amp;#34;&lt;/span&gt;;;
-    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Bonjour&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; speak &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Bonjour&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;mon ami&amp;#34;&lt;/span&gt;;;
-    *&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;invalid option&amp;#34;&lt;/span&gt;;; &lt;span style=&#34;color:#6272a4&#34;&gt;# you picked anything but 1 or 2&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;esac&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save that in a file called &lt;code&gt;say-hello.sh&lt;/code&gt; and change the rights to allow execution by using &lt;code&gt;chmod +x say-hello.sh&lt;/code&gt;. Then you can run it:&lt;/p&gt;
-&lt;h4 id=&#34;output&#34;&gt;Output:&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$ ./say-hello.sh
-  1) Hello
-  2) Bonjour
-  #? 1
-  Hello my friend
-$
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can see that in this example I push &lt;code&gt;1&lt;/code&gt;. If I run it again and push &lt;code&gt;2&lt;/code&gt;, you will see the French words show up.&lt;/p&gt;
-</description>
+      <description>An example of how to use the select command in bash to pass arguments to functions</description>
+    </item>
+    
+    <item>
+      <title>Sublime Node Snippets</title>
+      <link>https://ohdoylerules.com/personal-project/sublime-node-snippets/</link>
+      <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/sublime-node-snippets/</guid>
+      <description>Sublime Text snippets for node, async, underscore, and lodash</description>
+    </item>
+    
+    <item>
+      <title>Simple Binder</title>
+      <link>https://ohdoylerules.com/personal-project/simple-binder/</link>
+      <pubDate>Fri, 14 Mar 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/simple-binder/</guid>
+      <description>simplebinder is a zero dependency one-way databinder for javascript</description>
+    </item>
+    
+    <item>
+      <title>Vim Vector Logo</title>
+      <link>https://ohdoylerules.com/personal-project/vim-svg/</link>
+      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/vim-svg/</guid>
+      <description>The Vim logo in a vector SVG format. Also includes a ICNS file for OSX.</description>
+    </item>
+    
+    <item>
+      <title>Atom Monokai Dark</title>
+      <link>https://ohdoylerules.com/personal-project/atom-monokai-dark/</link>
+      <pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/atom-monokai-dark/</guid>
+      <description>Dark Monokai theme for the Github Atom editor</description>
+    </item>
+    
+    <item>
+      <title>The Alternative Cms</title>
+      <link>https://ohdoylerules.com/personal-project/the-alternative-cms/</link>
+      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/the-alternative-cms/</guid>
+      <description>Presentation for The Alternative Cms</description>
     </item>
     
     <item>
@@ -432,53 +593,61 @@ $
       <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/bash-random-password-generation/</guid>
-      <description>&lt;p&gt;When installing or setting up frameworks, in this case I was playing around with &lt;a href=&#34;http://laravel.com/&#34;&gt;Laravel&lt;/a&gt;, you usually need to set a session/secret/encryption key.&lt;/p&gt;
-&lt;p&gt;I know why this is, but I always end up looking around for some random password generator so I can get a random string that is exactly 32 characters. Isn&amp;rsquo;t there an easier way?!?!&lt;/p&gt;
-&lt;p&gt;Yes there is. If you have the magical &lt;a href=&#34;https://www.openssl.org/&#34; title=&#34;OpenSSL Website&#34;&gt;OpenSSL&lt;/a&gt; installed, which most do, you can use it to generate a random string.&lt;/p&gt;
-&lt;p&gt;I found a &lt;a href=&#34;http://osxdaily.com/2011/05/10/generate-random-passwords-command-line/&#34; title=&#34;Generate Random Passwords from the Command Line&#34;&gt;article online&lt;/a&gt; that uses base64 to generate a string of a certain length. The only thing is that base64 is padded with 8 bits. Which means that if you want 32 then you need to use 24. This goes up exponentially as the number gets bigger. So there is a trim part of the function that clips off the extra characters.&lt;/p&gt;
-&lt;p&gt;Here is the function broken down into steps:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;pass a number to the function&lt;/li&gt;
-&lt;li&gt;cut the resulting string&lt;/li&gt;
-&lt;li&gt;generate a base64 string using that number&lt;/li&gt;
-&lt;li&gt;echo out the result&lt;/li&gt;
-&lt;li&gt;copy the output to the clipboard with a newline&lt;/li&gt;
-&lt;li&gt;echo out a success&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I put a check in there if the argument is not a number. This is just for the dummies out there.&lt;/p&gt;
-&lt;h4 id=&#34;pbcopy-is-not-defined&#34;&gt;pbcopy is not defined&lt;/h4&gt;
-&lt;p&gt;You are probably on Linux. I found &lt;a href=&#34;http://whereswalden.com/2009/10/23/pbcopy-and-pbpaste-for-linux/&#34; title=&#34;pbcopy and pbpaste for Linux&#34;&gt;this little snippet&lt;/a&gt; for the lazy. This way you can forget about translating it each time.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;pbcopy&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xsel --clipboard --input&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;pbpaste&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xsel --clipboard --output&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now for the actual shell function:&lt;/p&gt;
-&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# if the argument is a number&lt;/span&gt;
-&lt;span style=&#34;color:#6272a4&#34;&gt;# cut the string so that there is no base64 padding&lt;/span&gt;
-&lt;span style=&#34;color:#6272a4&#34;&gt;# generate a random password of the specified length&lt;/span&gt;
-&lt;span style=&#34;color:#6272a4&#34;&gt;# then copy it to the clipboard without a newline&lt;/span&gt;
-&lt;span style=&#34;color:#6272a4&#34;&gt;# usage: password 32&lt;/span&gt;
-password&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;LENGTH&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;REGEX&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;^[0-9]+$&amp;#39;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;[[&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$LENGTH&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;~ &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$REGEX&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;]]&lt;/span&gt; ; &lt;span style=&#34;color:#ff79c6&#34;&gt;then&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;PASSWD&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;openssl rand -base64 &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$LENGTH&lt;/span&gt; | head -c&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$LENGTH&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$PASSWD&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$PASSWD&lt;/span&gt; | tr -d &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt; | pbcopy
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Password copied to clipboard&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Argument must be a number&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;fi&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is how you would use it, and what the results would look like:&lt;/p&gt;
-&lt;h3 id=&#34;output&#34;&gt;Output&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;~ ❯ password &lt;span style=&#34;color:#bd93f9&#34;&gt;32&lt;/span&gt;
-gY4zLES+WWF5+iNWo0FYx+os6EmDwecf
-Password copied to clipboard
-~ ❯ password fu
-Argument must be a number
-~ ❯
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function would be put in your &lt;code&gt;.bashrc&lt;/code&gt; file, or you &lt;code&gt;.zshrc&lt;/code&gt; file if you are a cool ZSH user.&lt;/p&gt;
-</description>
+      <description>Randomly generate a password of specified length and then copy it to the clipboard</description>
+    </item>
+    
+    <item>
+      <title>PHP WebSocket Chat</title>
+      <link>https://ohdoylerules.com/personal-project/php-websocket-chat/</link>
+      <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/php-websocket-chat/</guid>
+      <description>PHP websocket chat application example</description>
+    </item>
+    
+    <item>
+      <title>All About PhileCMS Video</title>
+      <link>https://ohdoylerules.com/personal-project/phile-intro-video/</link>
+      <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/phile-intro-video/</guid>
+      <description>All About PhileCMS Video</description>
+    </item>
+    
+    <item>
+      <title>Font Awesome SVG Icons</title>
+      <link>https://ohdoylerules.com/web/font-awesome-svg-icons/</link>
+      <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/font-awesome-svg-icons/</guid>
+      <description>A sprite sheet of all the font-awesome icons from version 4.0.2</description>
+    </item>
+    
+    <item>
+      <title>Groupon SVG logo</title>
+      <link>https://ohdoylerules.com/personal-project/groupon-green-logo-svg/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/groupon-green-logo-svg/</guid>
+      <description>groupon logo in vector svg</description>
+    </item>
+    
+    <item>
+      <title>Chrome Reverse Geocode App</title>
+      <link>https://ohdoylerules.com/personal-project/chrome-reverse-geocode/</link>
+      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/chrome-reverse-geocode/</guid>
+      <description>Chrome Reverse Geocode App</description>
+    </item>
+    
+    <item>
+      <title>IICRC Vector Logo</title>
+      <link>https://ohdoylerules.com/web/iicrc-vector-logo/</link>
+      <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/iicrc-vector-logo/</guid>
+      <description>&lt;no value&gt;</description>
     </item>
     
     <item>
@@ -487,25 +656,7 @@ Argument must be a number
       <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/list-file-permission-numbers/</guid>
-      <description>&lt;p&gt;I wanted to see the chmod numbers for the files in a directory. So I can copy them to the other files. Since I don&amp;rsquo;t want to do that dumb chmod math, I looked for a way to do it easily.&lt;/p&gt;
-&lt;p&gt;I found the following code:&lt;/p&gt;
-&lt;h4 id=&#34;function&#34;&gt;Function&lt;/h4&gt;
-&lt;p&gt;Add the following to your .bashrc (or .zshrc file if you are cool) and then reload the source of your terminal.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;function&lt;/span&gt; show-permissions&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  ls -l | awk &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;{k=0;for(i=0;i&amp;lt;=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
-&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;            *2^(8-i));if(k)printf(&amp;#34;%0o &amp;#34;,k);print}&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;usage&#34;&gt;Usage:&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;show-permissions
-644 -rw-r--r--   1 james2doyle   README.md
-644 -rw-r--r--   1 james2doyle   LICENSE
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;greping the output&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;show-permissions | grep README.md
-644 -rw-r--r--   1 james2doyle   README.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here is the &lt;a href=&#34;http://goo.gl/HS9Ar3&#34;&gt;stackoverflow question&lt;/a&gt; where I stole this from.&lt;/p&gt;
-</description>
+      <description>Easily list the chmod numbers for all the files in a folder</description>
     </item>
     
     <item>
@@ -514,32 +665,16 @@ Argument must be a number
       <pubDate>Wed, 27 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</guid>
-      <description>&lt;p&gt;Using this function you can easily reverse geocode an address into a &lt;em&gt;lat and lang&lt;/em&gt; position. This uses the &lt;a href=&#34;http://stedolan.github.io/jq/&#34;&gt;jq executable&lt;/a&gt; and the &lt;a href=&#34;https://developers.google.com/maps/documentation/geocoding/#GeocodingRequests&#34;&gt;Google Maps API&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;requirements&#34;&gt;Requirements&lt;/h4&gt;
-&lt;p&gt;This little snippet &lt;a href=&#34;http://stedolan.github.io/jq/&#34;&gt;requires jq to be installed&lt;/a&gt;. It is very easy to install.&lt;/p&gt;
-&lt;p&gt;From the site:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;jq is a lightweight and flexible command-line JSON processor&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;It is multi-platform, so no worries for Windows users.&lt;/p&gt;
-&lt;p&gt;Here is the meat:&lt;/p&gt;
-&lt;h4 id=&#34;function&#34;&gt;Function&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;function&lt;/span&gt; reverse-geocode&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#6272a4&#34;&gt;# replace spaces with + signs&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;STRING&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt; | tr &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;+&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#6272a4&#34;&gt;# save results&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;CURLED&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;curl &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;http://maps.googleapis.com/maps/api/geocode/json?address=&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$STRING&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;amp;sensor=true&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#6272a4&#34;&gt;# save lat and lng&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;LANG&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$CURLED&lt;/span&gt; | jq &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;.results[0].geometry.location.lng&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;LAT&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$CURLED&lt;/span&gt; | jq &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;.results[0].geometry.location.lat&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#6272a4&#34;&gt;# echo them out&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Lat: &lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$LAT&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;, Lang: &lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$LANG&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;usage&#34;&gt;Usage:&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;reverse-geocode &amp;quot;998 Oxford Street E, London ON, N5Y 3K7&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This return the curl results as well as the Lat and Lang output for the location.&lt;/p&gt;
-</description>
+      <description>Easily reverse geocode an address using the command line and the google maps API</description>
+    </item>
+    
+    <item>
+      <title>Grunt Highlight Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/grunt-highlight/</link>
+      <pubDate>Mon, 25 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/grunt-highlight/</guid>
+      <description>Grunt task for running Highlight.js over files or blocks of code</description>
     </item>
     
     <item>
@@ -548,44 +683,7 @@ Argument must be a number
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</guid>
-      <description>&lt;h3 id=&#34;preamble&#34;&gt;Preamble&lt;/h3&gt;
-&lt;p&gt;I have been reading about encryption and security since the whole NSA/Edward Snowden thing. It is pretty intense stuff. Most of the security comes from the philosophy of &amp;ldquo;security through obfuscation&amp;rdquo;. What this means, is that you are making it extremely difficult (expensive, time-consuming) to try and look at your &amp;ldquo;stuff&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;I would suggest reading &lt;a href=&#34;http://en.wikipedia.org/wiki/Key_size&#34;&gt;this article on &amp;ldquo;Key Size&amp;rdquo;&lt;/a&gt;. This is probably my favorite quote from the article:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;With a key of length &lt;em&gt;n&lt;/em&gt; bits, there are &lt;em&gt;2n&lt;/em&gt; possible keys. This number grows very rapidly as &lt;em&gt;n&lt;/em&gt; increases. Moore&amp;rsquo;s law suggests that computing power doubles roughly every 18 to 24 months, but even this doubling effect leaves the larger symmetric key lengths currently considered acceptable well out of reach.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The best thing you can do for this type of encryption is &lt;a href=&#34;https://tech.dropbox.com/2012/04/zxcvbn-realistic-password-strength-estimation/&#34;&gt;pick a good password&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# take in a file and output an encrypted one&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;function&lt;/span&gt; encrypt&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#6272a4&#34;&gt;# take in a file and output a new one with a `.enc` extension&lt;/span&gt;
-  openssl rc4 -in &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt; -out &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;.enc
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;.enc created&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-
-&lt;span style=&#34;color:#6272a4&#34;&gt;# reverse of encrypt()&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;function&lt;/span&gt; decrypt&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;FILENAME&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#6272a4&#34;&gt;# save the old filename&lt;/span&gt;
-  &lt;span style=&#34;color:#6272a4&#34;&gt;# decrypt the file and save it to a file with no `.enc` extension&lt;/span&gt;
-  openssl rc4 -d -in &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt; -out &lt;span style=&#34;color:#f1fa8c&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;FILENAME&lt;/span&gt;%.*&lt;span style=&#34;color:#f1fa8c&#34;&gt;}&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$1&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt; decrypted&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This still leave an &amp;ldquo;open&amp;rdquo; file when the file is encrypted. Remember to remove the file securely. You can use &lt;code&gt;shred&lt;/code&gt; or &lt;code&gt;gshred&lt;/code&gt; (for OSX). Here is the info from the &lt;code&gt;--help&lt;/code&gt; output of gshred:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Overwrite the specified FILE(s) repeatedly, in order to make it harder
-for even very expensive hardware probing to recover the data.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Here is the function that I found to be pretty good:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# overwrite &amp;#39;my-unsafe-file.txt&amp;#39; 3 times, with zeros (nulls) and then remove the file&lt;/span&gt;
-gshred --iterations&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;3&lt;/span&gt; --zero --remove my-unsafe-file.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: I used RC4 instead of 3DES because it is faster (95% slower than RC4), but it is not as secure.&lt;/p&gt;
-&lt;h4 id=&#34;references&#34;&gt;References:&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://osxdaily.com/2012/01/30/encrypt-and-decrypt-files-with-openssl/&#34;&gt;Encrypt &amp;amp; Decrypt Files from the Command Line with OpenSSL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.commandlinekungfu.com/2009/05/episode-32-wiping-securely.html&#34;&gt;Wiping Securely&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://zombe.es/post/4078724716/openssl-cipher-selection&#34;&gt;OpenSSL Cipher Selection&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Functions to encrypt and then decrypt files from the command line with OpenSSL</description>
     </item>
     
     <item>
@@ -594,18 +692,7 @@ gshred --iterations&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;s
       <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/wordpress-via-command-line/</guid>
-      <description>&lt;p&gt;All the cool kids are using the command line these days. This allows you to run quick commands and little functions that would be too tedious to run with a GUI or just clicking around.&lt;/p&gt;
-&lt;p&gt;A while ago I added this little code snippet to be .bashrc file. It means I can run &lt;code&gt;download-wordpress&lt;/code&gt; in an empty folder and then it will go and grab the latest archive, unzip it, and remove the junk.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;download-wordpress &lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  wget http://wordpress.org/latest.tar.gz &lt;span style=&#34;color:#6272a4&#34;&gt;# get wordpress&lt;/span&gt;
-  tar xfz latest.tar.gz &lt;span style=&#34;color:#6272a4&#34;&gt;# unzip the archive&lt;/span&gt;
-  mv wordpress/* ./ &lt;span style=&#34;color:#6272a4&#34;&gt;# move the files to the root of this directory&lt;/span&gt;
-  rmdir ./wordpress/ &lt;span style=&#34;color:#6272a4&#34;&gt;# delete the empty directory&lt;/span&gt;
-  rm -f latest.tar.gz &lt;span style=&#34;color:#6272a4&#34;&gt;# delete the archive&lt;/span&gt;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;wordpress installed&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#6272a4&#34;&gt;# let me know we are done&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is a handy function. You can really use it for any CMS or Zip file you have to grab on the regular. Just remember to run this in an &lt;em&gt;empty directory&lt;/em&gt;, or it will overwrite everything and it will make a huge mess.&lt;/p&gt;
-</description>
+      <description>Download and unzip the latest Wordpress version, all via command line</description>
     </item>
     
     <item>
@@ -614,19 +701,79 @@ gshred --iterations&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;s
       <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/hostmonster-phpmailer/</guid>
-      <description>&lt;p&gt;God Damn!! This one was a b*tch to get right. I have a small plugin for a site that makes doing AJAX contact forms a breeze.&lt;/p&gt;
-&lt;p&gt;But, of course, it likes to be a pain in the ass when I am trying to set it up. Also you usually have to be on the correct domain to allow the script to send the right email. So doubly annoying.&lt;/p&gt;
-&lt;p&gt;Here is the code that worked for me:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$mail = new PHPMailer; // basic class declaration
-$mail-&amp;gt;isSMTP(); // duh!
-$mail-&amp;gt;SMTPDebug = 0; // no debug
-$mail-&amp;gt;SMTPAuth = true; // yes to auth please
-$mail-&amp;gt;Port = 26; // nope not port 25, 26!!
-$mail-&amp;gt;Host = &amp;#39;host286.hostmonster.com&amp;#39;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now your host may differ. I used &lt;a href=&#34;http://mxtoolbox.com/&#34;&gt;this tool&lt;/a&gt; to check the MX records for the domain. After the check is complete, you will see a small table showing the hostname, IP address, TTL, and some links. &lt;strong&gt;Click &amp;ldquo;SMTP Test&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Once that text completes, you will see another table. The first result is the &amp;ldquo;SMTP Reverse Banner Check&amp;rdquo;. Copy the hostname, which is the domain in that value field.&lt;/p&gt;
-&lt;p&gt;Hopefully this works for you. I had a hell of a time getting the correct settings. &lt;em&gt;My pain is your gain&lt;/em&gt;.&lt;/p&gt;
-</description>
+      <description>How to setup PHPMailer on a HostMonster hosting server</description>
+    </item>
+    
+    <item>
+      <title>GoDaddy Email on Digital Ocean</title>
+      <link>https://ohdoylerules.com/demo/godaddy-digital-ocean/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/godaddy-digital-ocean/</guid>
+      <description>How to use GoDaddy Email on Digital Ocean</description>
+    </item>
+    
+    <item>
+      <title>Github Wiki To HTML</title>
+      <link>https://ohdoylerules.com/personal-project/github-wiki-to-html/</link>
+      <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/github-wiki-to-html/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Phile CMS</title>
+      <link>https://ohdoylerules.com/personal-project/phile-cms/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/phile-cms/</guid>
+      <description>Phile is flat-file CMS based on Pico</description>
+    </item>
+    
+    <item>
+      <title>Google Drive Flat SVG Logo</title>
+      <link>https://ohdoylerules.com/personal-project/google-drive-svg-logo/</link>
+      <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/google-drive-svg-logo/</guid>
+      <description>Google Drive Flat SVG Logo</description>
+    </item>
+    
+    <item>
+      <title>Docracy SVG logo</title>
+      <link>https://ohdoylerules.com/personal-project/docracy-logo-svg/</link>
+      <pubDate>Thu, 31 Oct 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/docracy-logo-svg/</guid>
+      <description>Docracy logo in vector svg</description>
+    </item>
+    
+    <item>
+      <title>Assemble Starter</title>
+      <link>https://ohdoylerules.com/personal-project/assemble-starter/</link>
+      <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/assemble-starter/</guid>
+      <description>Assemble for Grunt.js Starter template</description>
+    </item>
+    
+    <item>
+      <title>pico-download plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pico-download-plugin/</link>
+      <pubDate>Wed, 18 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pico-download-plugin/</guid>
+      <description>I created a plugin to force files to download in PicoCMS</description>
+    </item>
+    
+    <item>
+      <title>Pico-Useragent Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pico-useragent/</link>
+      <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pico-useragent/</guid>
+      <description>A plugin for pico that allows you to list the useragent</description>
     </item>
     
     <item>
@@ -635,69 +782,25 @@ $mail-&amp;gt;Host = &amp;#39;host286.hostmonster.com&amp;#39;;
       <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/compare-multiple-md5-hashes/</guid>
-      <description>&lt;p&gt;Sometimes you need to check a file against a &lt;code&gt;md5&lt;/code&gt; hash. This can be annoying. Just look at this output:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# command&lt;/span&gt;
-md5 file.xml ~/Downloads/file.xml file2.xml
-
-&lt;span style=&#34;color:#6272a4&#34;&gt;# output&lt;/span&gt;
-MD5 &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;file.xml&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; 389a537b7443108f610038b4e4dd549a
-MD5 &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;/Users/james2doyle/Downloads/file.xml&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; 389a537b7443108f610038b4e4dd549a
-MD5 &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;file.xml&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; 389a537b7443108f610038b4e4dd549a
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Well it would be nice to not see all that junk in front of the hash. If they were lined up then it would be easier to compare them. Like so:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# command&lt;/span&gt;
-md5-check file.xml ~/Downloads/file.xml file2.xml
-
-&lt;span style=&#34;color:#6272a4&#34;&gt;# output&lt;/span&gt;
-389a537b7443108f610038b4e4dd549a
-389a537b7443108f610038b4e4dd549a
-389a537b7443108f610038b4e4dd549a
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Better. Here is the &lt;code&gt;md5-check&lt;/code&gt; function I wrote to take an array of arguments and then trim out all the garabage.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;function&lt;/span&gt; md5-check&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; ARG in &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$@&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;temp&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;md5 &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$ARG&lt;/span&gt; | cut -d&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;=&amp;#39;&lt;/span&gt; -f2&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$temp&lt;/span&gt; | tr -d &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;done&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It is also good for saving the output of a md5 hash:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# output into file&lt;/span&gt;
-md5-check Downloads/logo.jpg | &amp;gt; check.md5
-
-&lt;span style=&#34;color:#6272a4&#34;&gt;# check the contents of the check.md5 file&lt;/span&gt;
-cat check.md5
-6ed200ea7afa42e3bd90010fb14b06fd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Or you can read the file contents and compare it to the file&amp;rsquo;s md5 hash:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;md5-check Downloads/logo.jpg &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cat check.md5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;this would output like so:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;6ed200ea7afa42e3bd90010fb14b06fd
-6ed200ea7afa42e3bd90010fb14b06fd
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Seems a bit easier to compare the results of the hashes. Although I never really use them, I think it makes sense when you are transfering large files or you are downloading files in chunks.&lt;/p&gt;
-</description>
+      <description>compare multiple md5 hashes</description>
     </item>
     
     <item>
-      <title>Render PHP File With Data</title>
-      <link>https://ohdoylerules.com/snippets/render-php-with-data/</link>
-      <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
+      <title>jQuery-doodal-js</title>
+      <link>https://ohdoylerules.com/personal-project/jquery-doodal-js/</link>
+      <pubDate>Mon, 09 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/snippets/render-php-with-data/</guid>
-      <description>&lt;p&gt;I am modifying an open source CMS to use the &lt;a href=&#34;phalconphp.com/en/&#34; title=&#34;Phalcon PHP Framework&#34;&gt;Phalcon PHP framework&lt;/a&gt;, as well as the &lt;a href=&#34;https://github.com/chobie/php-sundown&#34; title=&#34;PHP-Sundown&#34;&gt;PHP-Sundown&lt;/a&gt; C implimentation of Markdown.&lt;/p&gt;
-&lt;p&gt;It is a very simple CMS which previously would just echo out compiled HTML. But I am using the Volt template engine in Phalcon. It renders &lt;code&gt;.volt&lt;/code&gt; files to native PHP. This means that I cannot just spit out raw HTML. I need to create a render function that passes an array of data to my PHP file.&lt;/p&gt;
-&lt;p&gt;Here is that function:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function renderPhpFile($filename, $vars = null) {
-  if (is_array($vars) &amp;amp;&amp;amp; !empty($vars)) {
-    extract($vars);
-  }
-  ob_start();
-  include $filename;
-  return ob_get_clean();
-}
-// usage
-echo renderPhpFile(&amp;#39;views/templates/index.php&amp;#39;, $view_data);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This works! It is a handy little function for passing data into a PHP file.&lt;/p&gt;
-&lt;p&gt;If you wanted to use an object, you would need to cast it to an array first.&lt;/p&gt;
-</description>
+      <guid>https://ohdoylerules.com/personal-project/jquery-doodal-js/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Grunt Sundown</title>
+      <link>https://ohdoylerules.com/personal-project/grunt-sundown/</link>
+      <pubDate>Sun, 08 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/grunt-sundown/</guid>
+      <description>&lt;no value&gt;</description>
     </item>
     
     <item>
@@ -706,27 +809,88 @@ echo renderPhpFile(&amp;#39;views/templates/index.php&amp;#39;, $view_data);
       <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/simple-html5-notification/</guid>
-      <description>&lt;p&gt;I was playing around with HTML5 Notifications the other day. They are pretty slick! It allows you to essentially send growl notifications to your desktop from the browser.&lt;/p&gt;
-&lt;p&gt;This little function would be used during an event to request permission for notifications and then display it with a simple abstraction of the native API.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; notify(title, body, timeout) {
-  timeout &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; (timeout) &lt;span style=&#34;color:#ff79c6&#34;&gt;?&lt;/span&gt; timeout &lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;3000&lt;/span&gt;;
-  Notification.requestPermission(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; () {
-    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; nf &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; Notification(title, {
-      body&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; body,
-      iconUrl&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;test.png&amp;#34;&lt;/span&gt;
-    });
-    nf.onshow &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; () {
-      setTimeout(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; () {
-        nf.close()
-      }, timeout)
-    };
-  });
-}
-&lt;span style=&#34;color:#6272a4&#34;&gt;// usage
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;notify(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;My Title&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;My hot body with a bunch of lorem in it&amp;#39;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It will then ask for permission, if your page doesn&amp;rsquo;t have it already, then show the notification. Right now it just shows a small grey box for the test image.&lt;/p&gt;
-&lt;p&gt;The last parameter is for a custom timeout. I like the default of 3 seconds but if you need to you can override it without modifying the function.&lt;/p&gt;
-</description>
+      <description>Simple HTML5 Notifications</description>
+    </item>
+    
+    <item>
+      <title>Render PHP File With Data</title>
+      <link>https://ohdoylerules.com/snippets/render-php-with-data/</link>
+      <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/render-php-with-data/</guid>
+      <description>Render PHP File With Data</description>
+    </item>
+    
+    <item>
+      <title>Pyro Twitter Widget</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-twitter-widget/</link>
+      <pubDate>Thu, 08 Aug 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-twitter-widget/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pico Get By Filename Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</link>
+      <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</guid>
+      <description>I wrote another small plugin for PicoCMS that actually lets you load files based on the filename</description>
+    </item>
+    
+    <item>
+      <title>Markdown Logo Vector SVG</title>
+      <link>https://ohdoylerules.com/personal-project/markdown-logo-vector-svg/</link>
+      <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/markdown-logo-vector-svg/</guid>
+      <description>Markdown Logo Vector SVG</description>
+    </item>
+    
+    <item>
+      <title>CMS Watch List</title>
+      <link>https://ohdoylerules.com/web/cms-watch-list/</link>
+      <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/cms-watch-list/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>The $100 Website</title>
+      <link>https://ohdoylerules.com/web/the-100-dollar-website/</link>
+      <pubDate>Tue, 23 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/the-100-dollar-website/</guid>
+      <description>I wrote a post on WARPAINT Media about people who ask about getting a website for $100.</description>
+    </item>
+    
+    <item>
+      <title>Kube in Styl/Rework</title>
+      <link>https://ohdoylerules.com/personal-project/kube-in-stylrework/</link>
+      <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/kube-in-stylrework/</guid>
+      <description>Kube in Styl/Rework</description>
+    </item>
+    
+    <item>
+      <title>Pico Slider Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pico-slider-plugin/</link>
+      <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pico-slider-plugin/</guid>
+      <description>a plugin for Pico that allows you to create a Slider</description>
+    </item>
+    
+    <item>
+      <title>NPM logo SVG</title>
+      <link>https://ohdoylerules.com/personal-project/npm-logo-svg/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/npm-logo-svg/</guid>
+      <description>The NPM logo as a SVG</description>
     </item>
     
     <item>
@@ -735,27 +899,52 @@ echo renderPhpFile(&amp;#39;views/templates/index.php&amp;#39;, $view_data);
       <pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/apax-in-htdocs/</guid>
-      <description>&lt;p&gt;I was tired of looking at the ugly default no-style of the htdocs file listing. I had seen &lt;a href=&#34;http://adamwhitcroft.com/apaxy/&#34; title=&#34;Apaxy Homepage&#34;&gt;Apaxy theme&lt;/a&gt; before and thought it was really nice. But I couldn&amp;rsquo;t figure out how to get it to work with the default htdocs MAMP folder. I tried again tonight, and I got it working without much hassle.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AdamWhitcroft/Apaxy/archive/master.zip&#34; title=&#34;Apaxy Download Link&#34;&gt;Download Apaxy&lt;/a&gt; and move everything from the apaxy folder into your MAMP htdocs folder.&lt;/li&gt;
-&lt;li&gt;open &amp;ldquo;htaccess.txt&amp;rdquo; and replace &amp;ldquo;/{FOLDERNAME}/theme&amp;rdquo; with &amp;ldquo;/.theme/&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;rename the &amp;ldquo;htaccess.txt&amp;rdquo; file to &amp;ldquo;.htaccess&amp;rdquo; which will hide the file&lt;/li&gt;
-&lt;li&gt;rename the &amp;ldquo;theme&amp;rdquo; folder to &amp;ldquo;.theme&amp;rdquo; which will hide the directory&lt;/li&gt;
-&lt;li&gt;go to your localhost url and refresh&lt;/li&gt;
-&lt;li&gt;enjoy a not-ugly page&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Now you can edit the files in the &amp;ldquo;.theme&amp;rdquo; folder and style your page. I changed the &amp;ldquo;.wrapper&amp;rdquo; to have no max-width or margin, this way it was full screen.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-07-02-at-12.38.08-AM.png&#34; alt=&#34;apaxy theme applied to htdocs&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Above is a screenshot of what my htdocs/localhost:8888 now looks like.&lt;/p&gt;
-&lt;h4 id=&#34;optional&#34;&gt;OPTIONAL&lt;/h4&gt;
-&lt;p&gt;You can also hide the &amp;ldquo;.theme&amp;rdquo; folder. You will see a section that looks
-like this, in your .htaccess file:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# HIDE /theme DIRECTORY
-IndexIgnore .htaccess /.theme
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The old version should read &amp;ldquo;/theme&amp;rdquo; and not &amp;ldquo;/.theme&amp;rdquo;. If change this
-line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
-</description>
+      <description>Apax apache theme in htdocs</description>
+    </item>
+    
+    <item>
+      <title>Disqus Comments</title>
+      <link>https://ohdoylerules.com/personal-project/disqus-comments/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/disqus-comments/</guid>
+      <description>Adding Disqus Comments to the website</description>
+    </item>
+    
+    <item>
+      <title>rework-shade</title>
+      <link>https://ohdoylerules.com/personal-project/rework-shade/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/rework-shade/</guid>
+      <description>A package for rework that allows a shade function</description>
+    </item>
+    
+    <item>
+      <title>rework-math</title>
+      <link>https://ohdoylerules.com/personal-project/rework-math/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/rework-math/</guid>
+      <description>I created a plugin for rework that allows you to do simple math</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS UA Sniffer Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
+      <description>A plugin for PyroCMS that allows UA Sniffing</description>
+    </item>
+    
+    <item>
+      <title>Pyro Github Markdown Field Type</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-github-markdown/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-github-markdown/</guid>
+      <description>Pyro Github Markdown Field Type</description>
     </item>
     
     <item>
@@ -764,33 +953,16 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
       <pubDate>Fri, 07 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</guid>
-      <description>&lt;p&gt;I just downloaded the new Mountain Lion, finally. One of the biggest new things is the cool little native notifications akin to growl. I thought it would be cool to get a nice notification when my &amp;ldquo;grunt watch&amp;rdquo; task finished. First things first. You need to install &lt;a href=&#34;https://github.com/alloy/terminal-notifier&#34; title=&#34;alloy/terminal notifier&#34;&gt;terminal-notifier&lt;/a&gt;. This allows you to interact with the native OSX notifications system.&lt;/p&gt;
-&lt;p&gt;There is a ruby gem and a standalone &amp;ldquo;.app&amp;rdquo;. Once this is installed, you will need to grab the &lt;a href=&#34;https://github.com/alextucker/grunt-growl&#34; title=&#34;alextucker/grunt-growl&#34;&gt;grunt-growl&lt;/a&gt; plugin. There are more instructions there for the terminal-notifier app. Now you will need to setup a new task in your gruntfile:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;growl&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-  css&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-    title&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;STYLUS BUILT&amp;#39;&lt;/span&gt;,
-    message&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;css/style.css has been created&amp;#39;&lt;/span&gt;
-  },
-  js&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-    title&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;JAVASCRIPT BUILT&amp;#39;&lt;/span&gt;,
-    message&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;dist/js/scripts.js has been created&amp;#39;&lt;/span&gt;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now my watch task looks like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;watch&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-  scripts&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-    files&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;&amp;lt;%= concat.dist.src %&amp;gt;&amp;#39;&lt;/span&gt;],
-    tasks&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;jshint&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;concat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;growl:js&amp;#39;&lt;/span&gt;],
-    options&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {}
-  },
-  styles&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-    files&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;css/*.styl&amp;#39;&lt;/span&gt;],
-    tasks&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;stylus&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;growl:css&amp;#39;&lt;/span&gt;],
-    options&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {}
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can see that the growl task runs after the initial stylus and javascript watch tasks.&lt;/p&gt;
-</description>
+      <description>grunt terminal-notifier setup</description>
+    </item>
+    
+    <item>
+      <title>NudeProject - a starting point for simple websites</title>
+      <link>https://ohdoylerules.com/personal-project/nudeproject/</link>
+      <pubDate>Tue, 04 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/nudeproject/</guid>
+      <description>NudeProject - a starting point for simple websites</description>
     </item>
     
     <item>
@@ -799,45 +971,25 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
       <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/animation-events-in-javascript/</guid>
-      <description>&lt;p&gt;Whenever I am doing animations that have javascript and CSS, most of the time, I want an callback to fire in javascript when the animations are complete. I have used this event for modals and little UI plugins. Normally, I would have a start event(click or touch) that just adds a class that has a CSS animation attached to it. Lets say we have a class called &amp;lsquo;on&amp;rsquo;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;.&lt;span style=&#34;color:#50fa7b&#34;&gt;modal&lt;/span&gt;.&lt;span style=&#34;color:#50fa7b&#34;&gt;on&lt;/span&gt; {
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;animation&lt;/span&gt;: showModal &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;ease&lt;/span&gt;;
-}
-@&lt;span style=&#34;color:#ff79c6&#34;&gt;keyframes&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;showModal&lt;/span&gt; {
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;%&lt;/span&gt; {
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;opacity&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;;
-  }
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;%&lt;/span&gt; {
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;opacity&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So now in javascript I might have a button click that adds &amp;lsquo;on&amp;rsquo; to my modal. In my javascript I would have a function to detect different animation events(start, iterate and end). Here is the code that I modified from a &lt;a href=&#34;http://www.sitepoint.com/css3-animation-javascript-event-handlers/&#34; title=&#34;Sitepoint&#34;&gt;SitePoint Article&lt;/a&gt; that was posting about the same topic.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; pfx &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;webkit&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;moz&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;MS&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;o&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;];
-&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; doAnim(element, animClass, type, callback) {
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; p &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, l &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; pfx.length;
-  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; removeAndCall(){
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;this&lt;/span&gt;.removeEventListener(pfx[p]&lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt;type, arguments.callee,&lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;);
-    callback();
-  }
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; (; p &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt; l; p&lt;span style=&#34;color:#ff79c6&#34;&gt;++&lt;/span&gt;) {
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#ff79c6&#34;&gt;!&lt;/span&gt;pfx[p]) {
-      type &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; type.toLowerCase();
-    }
-    element.classList.add(animClass);
-    element.addEventListener(pfx[p]&lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt;type, removeAndCall, &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;);
-  }
-}
-&lt;span style=&#34;color:#6272a4&#34;&gt;// doAnim(elem, &amp;#39;show&amp;#39;, &amp;#39;AnimationEnd&amp;#39;, function(){
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;//   this function will fire when the animation is finished
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;//   elem.classList.remove(&amp;#39;show&amp;#39;);
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// });
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this particular example I would do:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;doAnim(myModalElement, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;on&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;AnimationEnd&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(){
-  &lt;span style=&#34;color:#6272a4&#34;&gt;// this function will fire when the animation is finished
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  myModalElement.classList.remove(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;on&amp;#39;&lt;/span&gt;);
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So now I have a function that will add a class to an element and then fire my callback when the animation is complete.&lt;/p&gt;
-</description>
+      <description>Detect Animation Events in Javascript</description>
+    </item>
+    
+    <item>
+      <title>Startup Canada SVG logos</title>
+      <link>https://ohdoylerules.com/personal-project/startup-canada-svg/</link>
+      <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/startup-canada-svg/</guid>
+      <description>All the Startup Canada SVG logos</description>
+    </item>
+    
+    <item>
+      <title>CrunchBase SVG logo</title>
+      <link>https://ohdoylerules.com/personal-project/crunchbase-svg/</link>
+      <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/crunchbase-svg/</guid>
+      <description>&lt;no value&gt;</description>
     </item>
     
     <item>
@@ -846,28 +998,97 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
       <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</guid>
-      <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/githubgistlogo.png&#34; alt=&#34;Github Gists Logo&#34;&gt;
-&lt;/div&gt;
-&lt;p&gt;I have been building a small project boilerplate for when I am starting new projects. I wrote this small snippet based on &lt;a href=&#34;http://toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script/&#34; title=&#34;Todd Motto - mastering-svg-use-for-a-retina-web-fallbacks-with-png-script&#34;&gt;this article&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The only changes I made were wrapping it in a closure and combining all the vars to make it smaller. Of course your minifier would do this anyway unless you are using it inline after including Modernizr.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/james2doyle/5659710&#34; title=&#34;modernizr-svg-replace.js&#34;&gt;Here is the gist&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Or you can copy the current version from right here.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#ff79c6&#34;&gt;!&lt;/span&gt;Modernizr.svg) {
-  &lt;span style=&#34;color:#6272a4&#34;&gt;// wrap this in a closure to not expose any conflicts
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  (&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;() {
-    &lt;span style=&#34;color:#6272a4&#34;&gt;// grab all images. getElementsByTagName works with IE5.5 and up
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; imgs &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;document&lt;/span&gt;.getElementsByTagName(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;img&amp;#39;&lt;/span&gt;),endsWithDotSvg &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;/.*\.svg$/&lt;/span&gt;,i &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,l &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; imgs.length;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;// quick for loop
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt;(; i &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt; l; &lt;span style=&#34;color:#ff79c6&#34;&gt;++&lt;/span&gt;i) {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt;(imgs[i].src.match(endsWithDotSvg)) {
-        &lt;span style=&#34;color:#6272a4&#34;&gt;// replace the png suffix with the svg one
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;        imgs[i].src &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; imgs[i].src.slice(&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;3&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;png&amp;#39;&lt;/span&gt;;
-      }
-    }
-  })();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>Modernizr SVG Fallback to PNG</description>
+    </item>
+    
+    <item>
+      <title>Custom Google Forms</title>
+      <link>https://ohdoylerules.com/web/custom-google-forms/</link>
+      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/custom-google-forms/</guid>
+      <description>I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something</description>
+    </item>
+    
+    <item>
+      <title>Salt.js micro selector library</title>
+      <link>https://ohdoylerules.com/snippets/salt-js-mirco-selector-library/</link>
+      <pubDate>Sun, 12 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/salt-js-mirco-selector-library/</guid>
+      <description>salt.js is micro DOM selector library. Minified, it comes in at 255 bytes</description>
+    </item>
+    
+    <item>
+      <title>CSS3 badge logo in SVG</title>
+      <link>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>April 2013 Redesign!</title>
+      <link>https://ohdoylerules.com/personal-project/april-2013-redesign/</link>
+      <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/april-2013-redesign/</guid>
+      <description>Another redesign. This one is completely by me, with a little help from the html5blank Wordpress template. I am using SVGs exclusively.</description>
+    </item>
+    
+    <item>
+      <title>AngularJS Hangout - Promises Promises</title>
+      <link>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</link>
+      <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Switching to SVG on Grey Nimbus</title>
+      <link>https://ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</link>
+      <pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</guid>
+      <description>Switching to SVG for all images on my website</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS Module Generator</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-module-generator/</link>
+      <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-module-generator/</guid>
+      <description>PyroCMS Module Generator that can generate modules for pyrocms</description>
+    </item>
+    
+    <item>
+      <title>Pyro Swipe.js Module</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</link>
+      <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</guid>
+      <description>A module for Pyro CMS that wraps up the Swipe.js Module</description>
+    </item>
+    
+    <item>
+      <title>Grey Nimbus website</title>
+      <link>https://ohdoylerules.com/portfolio/grey-nimbus-website/</link>
+      <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/grey-nimbus-website/</guid>
+      <description>My old Grey Nimbus website</description>
+    </item>
+    
+    <item>
+      <title>Pyro Image Select Field</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-image-select-field/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-image-select-field/</guid>
+      <description>A field for Pyro CMS that allows you to select images from your uploads</description>
     </item>
     
     <item>
@@ -876,17 +1097,133 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/jquery-plugin-snippets/</guid>
-      <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/jquery.png&#34; alt=&#34;jquery logo&#34;&gt;
-&lt;/div&gt;
-&lt;p&gt;I created a &lt;a href=&#34;https://github.com/james2doyle/jquery-plugin-snippets&#34; title=&#34;james2doyle/jquery-plugin-snippets&#34;&gt;bunch of snippets&lt;/a&gt; out of the patterns from &lt;a href=&#34;https://github.com/shichuan/javascript-patterns/tree/master/jquery-plugin-patterns&#34; title=&#34;shichuan javascript patterns&#34;&gt;shichuans javascript patterns repo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;These are for &lt;a href=&#34;http://www.sublimetext.com/&#34; title=&#34;sublime text site&#34;&gt;Sublime Text 2&lt;/a&gt; which everyone knows. You just clone the repo into the packages directory and they magically appear. If you don’t use sublime text…&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/yunost2.jpg&#34; alt=&#34;y u no use sublime text 2&#34;&gt;
-&lt;/div&gt;
-&lt;p&gt;I had to create that image because it didn’t exists for some reason.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/jquery-plugin-snippets&#34; title=&#34;james2doyle/jquery-plugin-snippets&#34;&gt;Github Linky&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>jQuery Plugin Snippets for Sublime Text 2</description>
+    </item>
+    
+    <item>
+      <title>PHP Variables in strings</title>
+      <link>https://ohdoylerules.com/demo/php-variables-in-strings/</link>
+      <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/php-variables-in-strings/</guid>
+      <description>A list of all the ways you can put PHP Variables in strings</description>
+    </item>
+    
+    <item>
+      <title>Pyro Blurb Field</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-blurb-field/</link>
+      <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-blurb-field/</guid>
+      <description>A field for Pyrocms that allows you to create little blurbs in a list</description>
+    </item>
+    
+    <item>
+      <title>canadian-provinces-field</title>
+      <link>https://ohdoylerules.com/personal-project/canadian-provinces-field/</link>
+      <pubDate>Fri, 15 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/canadian-provinces-field/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>git-website-workflow</title>
+      <link>https://ohdoylerules.com/personal-project/git-website-workflow/</link>
+      <pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/git-website-workflow/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS PageWidgets Field Type</title>
+      <link>https://ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</link>
+      <pubDate>Tue, 05 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</guid>
+      <description>PyroCMS PageWidgets Field Type</description>
+    </item>
+    
+    <item>
+      <title>Clean CSS Updated</title>
+      <link>https://ohdoylerules.com/personal-project/clean-css-updated/</link>
+      <pubDate>Sun, 24 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/clean-css-updated/</guid>
+      <description>Clean CSS Chrome app Updated</description>
+    </item>
+    
+    <item>
+      <title>Pyro List Field</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-list-field/</link>
+      <pubDate>Sat, 23 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-list-field/</guid>
+      <description>A field for Pyro CMS that allows the creation of Lists</description>
+    </item>
+    
+    <item>
+      <title>Zepto Drag &amp; Swap</title>
+      <link>https://ohdoylerules.com/personal-project/zepto-drag-swap/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/zepto-drag-swap/</guid>
+      <description>Create a drag and drop list with Zepto</description>
+    </item>
+    
+    <item>
+      <title>Pyro Image Widget</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-image-widget/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-image-widget/</guid>
+      <description>A widget for Pyro CMS for creating Image sections</description>
+    </item>
+    
+    <item>
+      <title>Making a socket.io app and how socket.io works</title>
+      <link>https://ohdoylerules.com/demo/socketio-works-howto/</link>
+      <pubDate>Sun, 13 Jan 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/socketio-works-howto/</guid>
+      <description>Making a socket.io app and how socket.io works</description>
+    </item>
+    
+    <item>
+      <title>Clean CSS in Chrome Apps Office Hours</title>
+      <link>https://ohdoylerules.com/personal-project/clean-css-in-office-hours/</link>
+      <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/clean-css-in-office-hours/</guid>
+      <description>So my chrome app Clean CSS made it onto one of the Chrome Apps Office Hours.</description>
+    </item>
+    
+    <item>
+      <title>View Folder Tree in MacOSX Terminal</title>
+      <link>https://ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</link>
+      <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</guid>
+      <description>View Folder Tree in MacOSX Terminal</description>
+    </item>
+    
+    <item>
+      <title>New business cards</title>
+      <link>https://ohdoylerules.com/portfolio/new-business-cards/</link>
+      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/new-business-cards/</guid>
+      <description>Check out my new business cards</description>
+    </item>
+    
+    <item>
+      <title>A demo of CSS Flexbox</title>
+      <link>https://ohdoylerules.com/demo/flexbox-demo/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/flexbox-demo/</guid>
+      <description>&lt;no value&gt;</description>
     </item>
     
     <item>
@@ -895,35 +1232,70 @@ line, it will NOT show the .theme folder in the localhost listing.&lt;/p&gt;
       <pubDate>Sat, 10 Nov 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</guid>
-      <description>&lt;p&gt;I have been working on a site that uses &lt;a href=&#34;https://www.pyrocms.com/&#34; title=&#34;PyroCMS Homepage&#34;&gt;PyroCMS&lt;/a&gt;. I needed to build a custom widget that had a WYSIWYG textarea. This is what worked for me.&lt;/p&gt;
-&lt;p&gt;Add this to template in the constructors function.&lt;/p&gt;
-&lt;h4 id=&#34;pyrocmssystemcmsmoduleswidgetscontrollersadminphp&#34;&gt;pyrocms/system/cms/modules/widgets/controllers/admin.php&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// my new template
-$this-&amp;gt;template
--&amp;gt;set_partial(&amp;#39;shortcuts&amp;#39;, &amp;#39;admin/partials/shortcuts&amp;#39;)
--&amp;gt;append_js(&amp;#39;module::widgets.js&amp;#39;)
--&amp;gt;append_css(&amp;#39;module::widgets.css&amp;#39;)
--&amp;gt;append_metadata($this-&amp;gt;load-&amp;gt;view(&amp;#39;fragments/wysiwyg&amp;#39;, $this-&amp;gt;data, TRUE));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following javascript needs to be added to the top of your view/form.php file.&lt;/p&gt;
-&lt;h4 id=&#34;widgetsmywysiwygwidgetviewsformphp&#34;&gt;/widgets/mywysiwygwidget/views/form.php&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// my self special jquery
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;($){
-    $(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;textarea.wysiwyg-simple&amp;#39;&lt;/span&gt;).ckeditor({
-    &lt;span style=&#34;color:#6272a4&#34;&gt;// this is the config for the simple wysiwyg
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    toolbar&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [
-        [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Bold&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Italic&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;NumberedList&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;BulletedList&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Link&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Unlink&amp;#39;&lt;/span&gt;]
-    ],
-    width&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;99%&amp;#39;&lt;/span&gt;,
-    height&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;100&lt;/span&gt;,
-    dialog_backgroundCoverColor&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;#000&amp;#39;&lt;/span&gt;,
-    defaultLanguage&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;,
-    language&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
-    });
-})(jQuery);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Also, you need to have the wysiwyg-simple class on your textarea.&lt;/p&gt;
-&lt;h4 id=&#34;widgetsmywysiwygwidgetviewsformphp-1&#34;&gt;/widgets/mywysiwygwidget/views/form.php&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;echo form_textarea(array(&amp;#39;name&amp;#39;=&amp;gt; &amp;#39;html&amp;#39;, &amp;#39;value&amp;#39; =&amp;gt; $options[&amp;#39;html&amp;#39;], &amp;#39;class&amp;#39; =&amp;gt; &amp;#39;wysiwyg-simple&amp;#39;));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>WYSIWYG in PyroCMS Widgets</description>
+    </item>
+    
+    <item>
+      <title>Letterpress loader in CSS</title>
+      <link>https://ohdoylerules.com/demo/letterpress-loader-in-css/</link>
+      <pubDate>Sun, 04 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/letterpress-loader-in-css/</guid>
+      <description>Create the Letterpress loader in CSS</description>
+    </item>
+    
+    <item>
+      <title>Kube-Node-Express</title>
+      <link>https://ohdoylerules.com/personal-project/kube-node-express/</link>
+      <pubDate>Sun, 21 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/kube-node-express/</guid>
+      <description>Kube-Node-Express</description>
+    </item>
+    
+    <item>
+      <title>Source Code Pro on Sublime Text</title>
+      <link>https://ohdoylerules.com/web/source-code-pro-sublime/</link>
+      <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/source-code-pro-sublime/</guid>
+      <description>Download and install Source Code Pro on Sublime Text</description>
+    </item>
+    
+    <item>
+      <title>Generated Content Article Title</title>
+      <link>https://ohdoylerules.com/demo/generated-content-title/</link>
+      <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/generated-content-title/</guid>
+      <description>Use Generated Content in CSS to show an Article link in plain text</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.range()</title>
+      <link>https://ohdoylerules.com/fiddle/array-prototype-range/</link>
+      <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/array-prototype-range/</guid>
+      <description>How to create Array.prototype.range in Javascript</description>
+    </item>
+    
+    <item>
+      <title>No Javascript CSS Accordion</title>
+      <link>https://ohdoylerules.com/demo/no-javascript-accordion/</link>
+      <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/no-javascript-accordion/</guid>
+      <description>Build an Accordion with just CSS and no Javascript</description>
+    </item>
+    
+    <item>
+      <title>Create a Dancing Music Bar animation in CSS and SVG</title>
+      <link>https://ohdoylerules.com/fiddle/dancing-music-bars/</link>
+      <pubDate>Tue, 16 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/dancing-music-bars/</guid>
+      <description>&lt;no value&gt;</description>
     </item>
     
     <item>
@@ -932,17 +1304,7 @@ $this-&amp;gt;template
       <pubDate>Sat, 13 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/zsh-new-open-function/</guid>
-      <description>&lt;p&gt;Here is a little function that I made for &lt;a href=&#34;https://github.com/robbyrussell/oh-my-zsh&#34; title=&#34;oh-my-zsh&#34;&gt;oh-my-zsh&lt;/a&gt;. I found myself constantly doing &lt;code&gt;sudo touch app.js &amp;amp;&amp;amp; open app.js&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;What this little command does is create an empty file called &lt;code&gt;app.js&lt;/code&gt; and then opens it with whatever your default editor is.&lt;/p&gt;
-&lt;h4 id=&#34;here-is-the-function&#34;&gt;Here is the function:&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;# create a new file in the current directory and then open it
-new () {
-  sudo touch $1 &amp;amp;&amp;amp; open $1
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;how-to-use&#34;&gt;How to use:&lt;/h4&gt;
-&lt;p&gt;Open your &lt;code&gt;.zshrc&lt;/code&gt; file and add this function at the bottom. If you haven&amp;rsquo;t yet, uncomment the line that adds the zshconfig alias. If you are looking for example aliases, well, there are a couple in this section. When you want to create and then open a file just type &lt;code&gt;new myfile.xxx&lt;/code&gt;. This will create the new file in the directory and then open it with whatever editor you want.&lt;/p&gt;
-</description>
+      <description>zsh new file &amp;&amp; open file function</description>
     </item>
     
     <item>
@@ -951,13 +1313,34 @@ new () {
       <pubDate>Thu, 11 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/target-mozilla-only-in-css/</guid>
-      <description>&lt;p&gt;I had some issues in Firefox recently. I was building a complicated “item” in CSS and it looked great in Chrome. I got an email later saying that the sizing was all off for a bunch of things. I thought this was really strange. I went back to the CSS and Chrome and I could not see any issues.&lt;/p&gt;
-&lt;p&gt;I then fired up Firefox and, yikes! There was a bunch of weird issues. This is strange because normally Chrome to Firefox translates pretty well. I was using the &lt;code&gt;::first-letter&lt;/code&gt; element and a few &lt;code&gt;::before&lt;/code&gt; elements. But somehow, someway they got messed up. Anyway, I discovered this little snippet:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;@&lt;span style=&#34;color:#ff79c6&#34;&gt;-moz-document&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;url-prefix&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; {
-  &lt;span style=&#34;color:#6272a4&#34;&gt;/* firefox only styles */&lt;/span&gt;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It works. But what does it mean? The url-prefix() is a way to serve specific styles to a specific URL. In this case, I just want to target a -moz- device. &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/CSS/@document?redirectlocale=en-US&amp;amp;redirectslug=CSS%2F%40-moz-document&#34; title=&#34;MDN @Document&#34;&gt;Here is a more in depth definition&lt;/a&gt;. This worked nicely, and so it will stay into production.&lt;/p&gt;
-</description>
+      <description>Target Mozilla-only in CSS</description>
+    </item>
+    
+    <item>
+      <title>My Old Website</title>
+      <link>https://ohdoylerules.com/portfolio/my-old-website/</link>
+      <pubDate>Thu, 04 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/my-old-website/</guid>
+      <description>See my old website</description>
+    </item>
+    
+    <item>
+      <title>CSS Date Card</title>
+      <link>https://ohdoylerules.com/fiddle/css-date-card/</link>
+      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/css-date-card/</guid>
+      <description>Create a Date Card using CSS transitions, animations, and gradients</description>
+    </item>
+    
+    <item>
+      <title>Create a Pagebend effect using CSS</title>
+      <link>https://ohdoylerules.com/fiddle/css3-pagebend/</link>
+      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/css3-pagebend/</guid>
+      <description>&lt;no value&gt;</description>
     </item>
     
     <item>
@@ -966,26 +1349,79 @@ new () {
       <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/snippets/nodelist-each/</guid>
-      <description>&lt;p&gt;I was doing a project in vanilla javascript that used querySelectorAll, which returns a nodelist object. I wanted the jQuery each function so that I could add an event listener to each element. It was a school project and no jQuery allowed so I did some research and came up with this little prototype.&lt;/p&gt;
-&lt;p&gt;Here is the result:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;Object&lt;/span&gt;.prototype.each &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(callback) {
-  &lt;span style=&#34;color:#6272a4&#34;&gt;// new empty array
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; a &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; [];
-  &lt;span style=&#34;color:#6272a4&#34;&gt;// iterate through the nodelist
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; i &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;this&lt;/span&gt;.length; i&lt;span style=&#34;color:#ff79c6&#34;&gt;++&lt;/span&gt;) {
-    &lt;span style=&#34;color:#6272a4&#34;&gt;// put the objects into the array
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    a[i] &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;this&lt;/span&gt;[i];
-    &lt;span style=&#34;color:#6272a4&#34;&gt;// callback the new array
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    callback(a[i]);
-  }
-}
-&lt;span style=&#34;color:#6272a4&#34;&gt;// USAGE
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; x &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;document&lt;/span&gt;.querySelectorAll(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;li&amp;#39;&lt;/span&gt;);
-x.each(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(elem) {
-    elem.style.background &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;red&amp;#39;&lt;/span&gt;;
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pretty cool. &lt;a href=&#34;http://jsfiddle.net/james2doyle/nrhgr/&#34; title=&#34;each prototype&#34;&gt;Here is the fiddle&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>nodelist.prototype.each in javascript</description>
+    </item>
+    
+    <item>
+      <title>Mozilla Dev Derby</title>
+      <link>https://ohdoylerules.com/demo/mozilla-dev-derby/</link>
+      <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/mozilla-dev-derby/</guid>
+      <description>James Doyle runner up in Mozilla Dev Derby September 2012</description>
+    </item>
+    
+    <item>
+      <title>No-Js Image Preview</title>
+      <link>https://ohdoylerules.com/fiddle/no-js-image-preview/</link>
+      <pubDate>Mon, 27 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/no-js-image-preview/</guid>
+      <description>Create a No-Js Image Preview with only CSS</description>
+    </item>
+    
+    <item>
+      <title>Styling Radios and Checkboxes. Redux.</title>
+      <link>https://ohdoylerules.com/web/styling-input-redux/</link>
+      <pubDate>Sun, 19 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/styling-input-redux/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>WordPress Plugin Swipe.js</title>
+      <link>https://ohdoylerules.com/web/wordpress-plugin-swipe-js/</link>
+      <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-plugin-swipe-js/</guid>
+      <description>WordPress Plugin Swipe.js</description>
+    </item>
+    
+    <item>
+      <title>Making Checkboxes in WordPress options pages</title>
+      <link>https://ohdoylerules.com/web/checkboxes-options/</link>
+      <pubDate>Sat, 11 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/checkboxes-options/</guid>
+      <description>&lt;no value&gt;</description>
+    </item>
+    
+    <item>
+      <title>Styling radio and checkbox inputs</title>
+      <link>https://ohdoylerules.com/web/radio-checkboxes/</link>
+      <pubDate>Tue, 07 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/radio-checkboxes/</guid>
+      <description>Styling inputs can be pretty annoying. I don’t think I really have any consistent way of making custom inputs</description>
+    </item>
+    
+    <item>
+      <title>Generated content in CSS</title>
+      <link>https://ohdoylerules.com/fiddle/generated-content-in-css/</link>
+      <pubDate>Fri, 27 Jul 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/generated-content-in-css/</guid>
+      <description>How to use Generated content in CSS</description>
+    </item>
+    
+    <item>
+      <title>Installing Android 4.1.1 Jelly Bean for Nexus S</title>
+      <link>https://ohdoylerules.com/android/jellybean-nexuss/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/android/jellybean-nexuss/</guid>
+      <description>How to flash jelly bean onto a nexus s</description>
     </item>
     
   </channel>
