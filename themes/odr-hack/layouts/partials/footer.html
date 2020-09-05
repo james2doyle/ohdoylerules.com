@@ -1,12 +1,10 @@
-{{ $stat1 := os.Stat "/content" }}
-{{ $stat2 := os.Stat "/themes" }}
 <script defer>
   // register the service worker
   {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
-  console.info('on localhost - not loading service worker. Query: {{ $stat1.Size }}-{{ $stat2.Size }}');
+  console.info('on localhost - not loading service worker. Query: {{ now.Format "2006-01-02" }}');
   {{ else }}
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?{{ $stat1.Size }}-{{ $stat2.Size }}');
+    navigator.serviceWorker.register('/sw.js?{{ now.Format "2006-01-02" }}');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);
