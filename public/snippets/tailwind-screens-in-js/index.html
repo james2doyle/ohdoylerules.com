@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
   
-    <title>James Doyle | WordPress Browser Body Class</title>
+    <title>James Doyle | Tailwind Screens In JS</title>
   
   <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
   <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
   
   <meta itemprop="name" content="James Doyle">
   <meta property="og:site_name" content="ohdoylerules">
-  <meta itemprop="url" content="https://ohdoylerules.com/web/wordpress-browser-body-class/">
+  <meta itemprop="url" content="https://ohdoylerules.com/snippets/tailwind-screens-in-js/">
   <meta itemprop="email" content="james2doyle@gmail.com">
-  <meta property="og:url" content="https://ohdoylerules.com/web/wordpress-browser-body-class/">
+  <meta property="og:url" content="https://ohdoylerules.com/snippets/tailwind-screens-in-js/">
   <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
   <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
   <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
@@ -37,7 +37,7 @@
   <meta name="theme-color" content="#333333">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@james2doyle">
-  <meta name="twitter:title" content="WordPress Browser Body Class">
+  <meta name="twitter:title" content="Tailwind Screens In JS">
   <meta name="twitter:creator" content="@james2doyle">
   <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
   <meta name="twitter:domain" content="https://ohdoylerules.com/">
@@ -46,23 +46,23 @@
   
     <link rel="dns-prefetch" href="https://c.disquscdn.com">
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="WordPress Browser Body Class">
+    <meta property="og:title" content="Tailwind Screens In JS">
     <meta property="article:author" content="James Doyle" />
-    <meta property="article:section" content="Web" />
-    <meta property="article:tag" content="wordpress, browser, detect, body, class, no plugin" />
-    <meta itemprop="keywords" content="wordpress, browser, detect, body, class, no plugin">
-    <meta property="og:keywords" content="wordpress, browser, detect, body, class, no plugin">
+    <meta property="article:section" content="Snippets" />
+    <meta property="article:tag" content="tailwind, css, screens, js" />
+    <meta itemprop="keywords" content="tailwind, css, screens, js">
+    <meta property="og:keywords" content="tailwind, css, screens, js">
     
     
-      <meta name="description" content="A simple WordPress tutorial for adding a class to the body that represents the browser. No plugin required.">
-      <meta itemprop="description" content="A simple WordPress tutorial for adding a class to the body that represents the browser. No plugin required.">
-      <meta property="og:description" content="A simple WordPress tutorial for adding a class to the body that represents the browser. No plugin required.">
-      <meta name="twitter:description" content="A simple WordPress tutorial for adding a class to the body that represents the browser. No plugin required.">
+      <meta name="description" content="Detect if a tailwind screen value matches the current window">
+      <meta itemprop="description" content="Detect if a tailwind screen value matches the current window">
+      <meta property="og:description" content="Detect if a tailwind screen value matches the current window">
+      <meta name="twitter:description" content="Detect if a tailwind screen value matches the current window">
     
   
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
-  <link rel="canonical" href="https://ohdoylerules.com/web/wordpress-browser-body-class/">
+  <link rel="canonical" href="https://ohdoylerules.com/snippets/tailwind-screens-in-js/">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
   <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
   <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
@@ -208,27 +208,49 @@
   <div class="container">
     <header class="grid -middle">
       <div class="cell menu">
-        <h1 itemprop="name headline">WordPress Browser Body Class</h1>
+        <h1 itemprop="name headline">Tailwind Screens In JS</h1>
       </div>
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
       <p class="post-info">
         
-        <span class="post-date" itemprop="datePublished">🕒 June 21, 2017</span>
+        <span class="post-date" itemprop="datePublished">🕒 September 5, 2020</span>
         
         
         &nbsp;&nbsp;&nbsp;
         
-        <span class="post-category" itemprop="genre about">🏷 Web</span>
+        <span class="post-category" itemprop="genre about">🏷 Snippets</span>
         
       </p>
-      <div itemprop="ArticleBody text" class="main-content"><p>Sometimes, browsers just don&rsquo;t behave. While working on a WordPress site, I had a particular styling issue that was affecting Safari. I was wondering what the best way to target the browser was.</p>
-<p>If you didn&rsquo;t know, there are some primitive <a href="https://codex.wordpress.org/Global_Variables#Browser_Detection_Booleans">browser detection booleans</a> that are built into WordPress.</p>
-<p>Using those primitives, I was able to whip up a little snippet that adds classes to the body tag depending on the browser - no plugins required.</p>
-<script src="https://gist.github.com/james2doyle/979b09fc7c676baf3283bdb113b3db6d.js"></script>
-<p>As you can see, we simply loop over each one of those browser booleans and append them to the output.</p>
-<p>Easy, and no plugin needed. Just add that code to your <code>functions.php</code> file.</p>
+      <div itemprop="ArticleBody text" class="main-content"><p>If you haven&rsquo;t heard of <a href="https://tailwindcss.com/">Tailwindcss</a> before, what is going on? It is the hot new CSS framework for building custom designs.</p>
+<p>From the site:</p>
+<blockquote>
+<p>Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.</p>
+</blockquote>
+<p>One of the things Tailwindcss gives you is a configuration file (named <code>tailwind.config.js</code>) for setting the configuration of the output CSS. This may be a little strange to people who have never used this before but there are some advantages. The output CSS can be configured based on the build environment or your own specifications.</p>
+<p>One of the configuration settings is for what screen sizes and breakpoints are supported. One of the benefits of these values being defined in JS is that you can then use them in JS as well. You can <a href="https://tailwindcss.com/docs/breakpoints">read more about them in the docs</a>.</p>
+<p>So why might you want to use these values in JS? Well, if you are building components that have conditional content based on the screen size, having access to these values can be super handy. You can check the screen size and show/hide different content, conditional load different sizes elements, or even disable an entire swath of features/functionality. All while keep your JS code in sync with your CSS code. You can reuse the variable names.</p>
+<p>Here is the code I used to accomplish this:</p>
+<script src="https://gist.github.com/james2doyle/c1306ace82cfe9e22a4ecfff13c6595b.js"></script>
+<p>You can use the function like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// es6
+</span><span style="color:#6272a4">// import screenIs from &#39;screenIs&#39;;
+</span><span style="color:#6272a4">// commonjs
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> screenIs <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#39;screenIs&#39;</span>);
+
+<span style="color:#ff79c6">if</span> (screenIs(<span style="color:#f1fa8c">&#39;md&#39;</span>)) {
+  <span style="color:#6272a4">// we are on an &#34;md&#34; screen...
+</span><span style="color:#6272a4"></span>}
+
+<span style="color:#ff79c6">const</span> { md, lg } <span style="color:#ff79c6">=</span> screenIs();
+<span style="color:#ff79c6">if</span> (md <span style="color:#ff79c6">||</span> lg) {
+  <span style="color:#6272a4">// we are on an &#34;md&#34; or an &#34;lg&#34; screen...
+</span><span style="color:#6272a4"></span>}
+</code></pre></div><p>Basically, we load up the config, use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia"><code>window.matchMedia</code></a> to test all the media queries in the config, then check if the key we pass in matches an existing key in our config and return the results.</p>
+<p>Pretty simple but a nice way to share the config into your JS code.</p>
+<p>If you are familiar with Tailwind, you might be asking, <em>why not just use CSS with md:show and md:hide?</em></p>
+<p>While that does work perfectly for visual content, it does not stop the browser from creating the DOM for the hidden content or stop and event listeners from being created or removed. If you are using the detection of the screen in JS, you can make sure to not render or add events for code that is not used. The opposite is true for when the screen changes and you need to cleanup any listeners or DOM elements you don&rsquo;t want to be there.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
