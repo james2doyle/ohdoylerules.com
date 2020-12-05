@@ -1,5 +1,6 @@
 ---
-Title: "canadian-provinces-field"
+Title: "Canadian Provinces Field"
+Description: "Canadian Provinces Field"
 Date: "2013-03-15"
 Category: "Personal Project"
 Template: "post"

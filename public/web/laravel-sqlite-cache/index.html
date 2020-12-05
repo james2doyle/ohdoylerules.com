@@ -213,7 +213,7 @@
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         
         <span class="post-date" itemprop="datePublished">🕒 October 4, 2018</span>
         
@@ -222,7 +222,7 @@
         
         <span class="post-category" itemprop="genre about">🏷 Web</span>
         
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I was playing with a new project using <a href="https://laravel.com/docs/5.7">Laravel 5.7</a> and I wanted to use <a href="https://www.sqlite.org/index.html">sqlite</a> for the <a href="https://laravel.com/docs/5.7/cache">cache feature</a> that comes with the framework. If you didn&rsquo;t know, Laravel allows you to choose a cache &ldquo;driver&rdquo; and Laravel will handle writes, reads, and even locks, using that cache.</p>
 <p>By default, Laravel includes drivers for &ldquo;database&rdquo;, &ldquo;redis&rdquo;, &ldquo;memcached&rdquo;, &ldquo;file&rdquo;, and &ldquo;array&rdquo;. In typical Laravel fashion, you can even <a href="https://laravel.com/docs/5.7/cache#adding-custom-cache-drivers">write your own drivers</a>. All you need to do is implement the <code>Illuminate\Contracts\Cache\Store</code> interface using the technology you wish to turn into a cache driver.</p>
 <p>To my surprise, the &ldquo;database&rdquo; cache driver does not support multiple database connections. Which means whatever <code>DB_CONNECTION</code> you are using is also going to be used for the cache database driver when it is selected. I took a look to see how the &ldquo;database&rdquo; driver was implemented (it&rsquo;s in the <code>Illuminate\Cache\DatabaseStore</code> class) to see if there is any way I can make the database driver use a different connection than the one set in <code>DB_CONNECTION</code>. Looking deeper, it turns out that by extending <code>Illuminate\Cache\DatabaseStore</code>, I was able to put together a &ldquo;sqlite&rdquo; cache driver really quickly.</p>
@@ -310,13 +310,11 @@
     </div>
   </div>
 </div>
-
-
 <script defer>
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?352-96');
+    navigator.serviceWorker.register('/sw.js?2020-09-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

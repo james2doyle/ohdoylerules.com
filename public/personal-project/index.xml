@@ -2,14 +2,392 @@
   <channel>
     <title>Personal-projects on James Doyle</title>
     <link>https://ohdoylerules.com/personal-project/</link>
-    <description>Recent content in Personal-projects on James Doyle</description>
+    <description>James Doyle site feed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
     <lastBuildDate>Sat, 14 Mar 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ohdoylerules.com/personal-project/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ohdoylerules.com/personal-project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tailwind Screens In JS</title>
+      <link>https://ohdoylerules.com/snippets/tailwind-screens-in-js/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/tailwind-screens-in-js/</guid>
+      <description>Detect if a tailwind screen value matches the current window</description>
+    </item>
+    
+    <item>
+      <title>Vuex Stateful URL Plugin</title>
+      <link>https://ohdoylerules.com/snippets/vuex-stateful-url/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/vuex-stateful-url/</guid>
+      <description>StatefulURL is a Vuex plugin that can read and write the state from a query string</description>
+    </item>
+    
+    <item>
+      <title>Vuex Crosstab Plugin</title>
+      <link>https://ohdoylerules.com/snippets/vuex-crosstab/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/vuex-crosstab/</guid>
+      <description>CrossTab syncs Vuex state across same-origin tabs. Converted from storeon crosstab</description>
+    </item>
+    
+    <item>
+      <title>Using slots in Vue js</title>
+      <link>https://ohdoylerules.com/web/using-slots-in-vue-js/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/using-slots-in-vue-js/</guid>
+      <description>If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components</description>
+    </item>
+    
+    <item>
+      <title>Create JSON Sections In Shopify</title>
+      <link>https://ohdoylerules.com/web/create-json-sections-in-shopify/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/create-json-sections-in-shopify/</guid>
+      <description>A demo on how to create a section in Shopify that returns JSON and HTML</description>
+    </item>
+    
+    <item>
+      <title>Detect Theme Editor In Shopify Liquid Templates</title>
+      <link>https://ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/detect-theme-editor-in-shopify-liquid-templates/</guid>
+      <description>A demo on how to detect when a template is running in the Shopify theme and section builder</description>
+    </item>
+    
+    <item>
+      <title>Using Zapier Webhooks for HTML forms</title>
+      <link>https://ohdoylerules.com/web/zapier-webhooks-for-html-forms/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/zapier-webhooks-for-html-forms/</guid>
+      <description>You can use Zapier webhooks to handle HTML form submissions - if you know how to set up your form</description>
+    </item>
+    
+    <item>
+      <title>Use Laravel Valet for WordPress Multisites</title>
+      <link>https://ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/use-laravel-valet-for-wordpress-multisites/</guid>
+      <description>Use Laravel Valet for developing local WordPress multisites</description>
+    </item>
+    
+    <item>
+      <title>Build A Multi-lingual Laravel Site With Subdomains</title>
+      <link>https://ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</link>
+      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/build-a-multi-lingual-laravel-site-with-subdomains/</guid>
+      <description>Have you ever wanted to use subdomains in Laravel to control logic, locale, or other functionality? Well, this example might help.</description>
+    </item>
+    
+    <item>
+      <title>Simple Slack Slash Supplier</title>
+      <link>https://ohdoylerules.com/web/simple-slash-commands/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-slash-commands/</guid>
+      <description>A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses</description>
+    </item>
+    
+    <item>
+      <title>SQL As An API</title>
+      <link>https://ohdoylerules.com/web/sql-as-an-api/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/sql-as-an-api/</guid>
+      <description>An example of how to use SQL as an API instead of reaching for something like GraphQL</description>
+    </item>
+    
+    <item>
+      <title>Laravel Scout Sonic Driver</title>
+      <link>https://ohdoylerules.com/web/laravel-scout-sonic-driver/</link>
+      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/laravel-scout-sonic-driver/</guid>
+      <description>A Laravel Scout driver for the Sonic search tool</description>
+    </item>
+    
+    <item>
+      <title>Function Currying To Make Reusable Code</title>
+      <link>https://ohdoylerules.com/web/function-currying-to-make-reusable-code/</link>
+      <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/function-currying-to-make-reusable-code/</guid>
+      <description>Function currying. If you haven&#39;t heard of it before, let me introduce you to this magical pattern that can help reduce duplicate code and improve readability</description>
+    </item>
+    
+    <item>
+      <title>When And Where To Compromise Your App Design</title>
+      <link>https://ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/when-and-where-to-compromise-your-app-design/</guid>
+      <description>When initially developing an application or a new feature we are constantly trying to balance best practices in design with delivering a finished product.</description>
+    </item>
+    
+    <item>
+      <title>Using Sqlite As A Cache In Laravel</title>
+      <link>https://ohdoylerules.com/web/laravel-sqlite-cache/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/laravel-sqlite-cache/</guid>
+      <description>How to use Sqlite as a cache in Laravel</description>
+    </item>
+    
+    <item>
+      <title>Angular (v1.x) Through iFrame</title>
+      <link>https://ohdoylerules.com/web/angular-through-iframe/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/angular-through-iframe/</guid>
+      <description>How to use angular.js (v1.x) through an iframe when the iframe URL is dynamically swapped</description>
+    </item>
+    
+    <item>
+      <title>Nuxt Firebase Starter</title>
+      <link>https://ohdoylerules.com/web/nuxt-firebase-starter/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/nuxt-firebase-starter/</guid>
+      <description>An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles</description>
+    </item>
+    
+    <item>
+      <title>Using DigitalOcean Spaces</title>
+      <link>https://ohdoylerules.com/web/using-digitalocean-spaces/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/using-digitalocean-spaces/</guid>
+      <description>An example project for how to use DigitalOcean Spaces with S3 tools</description>
+    </item>
+    
+    <item>
+      <title>3 Ways A Website Project Falls Apart</title>
+      <link>https://ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/3-ways-a-website-project-falls-apart/</guid>
+      <description>Over the last 7 years, I have been a part of hundreds of website projects. Here are some of the most common ways I have seen a project fail.</description>
+    </item>
+    
+    <item>
+      <title>Handle spaces and no-spaces in MySQL where-like clauses</title>
+      <link>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</link>
+      <pubDate>Sat, 08 Jul 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/handle-spaces-and-no-spaces-in-mysql-where-like-clauses/</guid>
+      <description>Have you ever wanted to write a WHERE LIKE for a query with and without spaces? Well, now you can with this trick!</description>
+    </item>
+    
+    <item>
+      <title>WordPress Browser Body Class</title>
+      <link>https://ohdoylerules.com/web/wordpress-browser-body-class/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-browser-body-class/</guid>
+      <description>A simple WordPress tutorial for adding a class to the body that represents the browser. No plugin required.</description>
+    </item>
+    
+    <item>
+      <title>Update Laravel Pagination With New Collection</title>
+      <link>https://ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/update-laravel-pagination-with-new-collection/</guid>
+      <description>Did you know you can update a Laravel pagination with a new collection?</description>
+    </item>
+    
+    <item>
+      <title>Color Helpers In Fish Shell</title>
+      <link>https://ohdoylerules.com/snippets/color-helpers-in-fish-shell/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/color-helpers-in-fish-shell/</guid>
+      <description>How to easily create a color function for printing colorized output</description>
+    </item>
+    
+    <item>
+      <title>Conditional Vue.js Mixins</title>
+      <link>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/conditionall-vuejs-mixins/</guid>
+      <description>How to use commonjs modules as vue.js mixins and how to conditionally load mixins on a per-page-basis.</description>
+    </item>
+    
+    <item>
+      <title>Install the latest Node.js on Amazon Linux</title>
+      <link>https://ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/</guid>
+      <description>How to install the latest version of node.js on the Amazon Linux AMI</description>
+    </item>
+    
+    <item>
+      <title>Running Go (golang) in Docker</title>
+      <link>https://ohdoylerules.com/snippets/running-go-in-docker/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/running-go-in-docker/</guid>
+      <description>How to run and deploy golang applications inside a Docker container.</description>
+    </item>
+    
+    <item>
+      <title>How To Use Template Strings As Modules</title>
+      <link>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/es6-template-strings-as-modules/</guid>
+      <description>How to the new es6 template string literals to make reusable modules for templates/strings or HTML partials</description>
+    </item>
+    
+    <item>
+      <title>How To Use LC_MONETARY In Laravel</title>
+      <link>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</link>
+      <pubDate>Fri, 24 Feb 2017 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/setting-money-locale-laravel/</guid>
+      <description>How to use setlocale with LC_MONETARY in Laravel</description>
+    </item>
+    
+    <item>
+      <title>OpenSSL Passwd Without Prompt</title>
+      <link>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</link>
+      <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/openssl-passwd-without-prompt/</guid>
+      <description>How to use the openssl passwd without a confirm prompt</description>
+    </item>
+    
+    <item>
+      <title>Use Nginx for A/B Testing</title>
+      <link>https://ohdoylerules.com/web/use-nginx-for-a-b-testing/</link>
+      <pubDate>Sun, 28 Aug 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/use-nginx-for-a-b-testing/</guid>
+      <description>Use Nginx to set custom headers in your HTTP responses so you can serve conditional content</description>
+    </item>
+    
+    <item>
+      <title>Backup MySQL And Email It</title>
+      <link>https://ohdoylerules.com/snippets/backup-mysql-and-email-it/</link>
+      <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/backup-mysql-and-email-it/</guid>
+      <description>Don&#39;t bother paying for a SaaS that creates MySQL backups and emails them to you on a schedule, you can do this with CRON and a small script</description>
+    </item>
+    
+    <item>
+      <title>Add A Counter For Duplicate Uploads</title>
+      <link>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</link>
+      <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</guid>
+      <description>A short script to detect if a folder contains a duplicate filename, and if it does, the filename gets a counter prepended to the front of the filename</description>
+    </item>
+    
+    <item>
+      <title>Add $.getStylesheet To jQuery</title>
+      <link>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</link>
+      <pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</guid>
+      <description>Ever wanted to have a CSS/Stylesheet version of $.getScript? Well now you can with $.getStylesheet</description>
+    </item>
+    
+    <item>
+      <title>Slack Meta Data For URLs and Links</title>
+      <link>https://ohdoylerules.com/web/slack-url-meta-data/</link>
+      <pubDate>Sat, 31 Oct 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/slack-url-meta-data/</guid>
+      <description>Tips to get Slack to resolve the correct meta data for your website URL</description>
+    </item>
+    
+    <item>
+      <title>Fixing Wordpress wp-content 500 Errors</title>
+      <link>https://ohdoylerules.com/web/wordpress-wp-content-500-errors/</link>
+      <pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-wp-content-500-errors/</guid>
+      <description>How to fix the issue where Wordpress wp-content assets are throwing 500 errors</description>
+    </item>
+    
+    <item>
+      <title>Simple Benchmarks With Apache AB</title>
+      <link>https://ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</link>
+      <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-benchmarks-with-apache-ab/</guid>
+      <description>a tutorial for generating simple benchmarks using the Apache ab tool</description>
+    </item>
+    
+    <item>
+      <title>Varnish For Static Sites</title>
+      <link>https://ohdoylerules.com/web/varnish-for-static-sites/</link>
+      <pubDate>Sun, 20 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/varnish-for-static-sites/</guid>
+      <description>a small tutorial for how to setup Varnish cache for a flat site running on Apache</description>
+    </item>
+    
+    <item>
+      <title>Validate Email With Lua</title>
+      <link>https://ohdoylerules.com/snippets/validate-email-with-lua/</link>
+      <pubDate>Sun, 06 Sep 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/validate-email-with-lua/</guid>
+      <description>A verbose email validation function for Lua</description>
+    </item>
+    
+    <item>
+      <title>Simple PHP JSON Response</title>
+      <link>https://ohdoylerules.com/snippets/simple-php-json-response/</link>
+      <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/simple-php-json-response/</guid>
+      <description>Create a simple JSON response using PHP</description>
+    </item>
+    
+    <item>
+      <title>Disallowed Characters In URI</title>
+      <link>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</link>
+      <pubDate>Tue, 31 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/disallowed-characters-in-uri/</guid>
+      <description>The URI you submitted has disallowed characters</description>
+    </item>
+    
+    <item>
+      <title>PhalconPHP Completions</title>
+      <link>https://ohdoylerules.com/web/phalconphp-completions/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/phalconphp-completions/</guid>
+      <description>A PhalconPHP completions and snippets package for Sublime Text</description>
+    </item>
+    
+    <item>
+      <title>Easy FFmpeg Video Posters</title>
+      <link>https://ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</link>
+      <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/easy-ffmpeg-video-posters/</guid>
+      <description>Take in a list of video files and generate a poster image for each one</description>
+    </item>
     
     <item>
       <title>Minimal Raspberry Pi OS</title>
@@ -17,107 +395,7 @@
       <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/minimal-raspberry-pi-os/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;I have had a &lt;a href=&#34;http://www.raspberrypi.org/products/model-b/&#34;&gt;Raspberry Pi B+&lt;/a&gt; for a while now, and I was looking to setup a very minimal Linux OS. I am sure this would work fine with the Pi 2.&lt;/p&gt;
-&lt;p&gt;Although the other &lt;a href=&#34;http://www.raspberrypi.org/downloads/&#34;&gt;Raspberry Pi OSs&lt;/a&gt; are great, a lot of them are too feature-full (read bloated) and have a packaged GUI that I would never use. Therefore, I wanted to install something much more &lt;em&gt;naked&lt;/em&gt; than the ones on the Raspberry Pi website.&lt;/p&gt;
-&lt;p&gt;Enter, &lt;a href=&#34;http://sourceforge.net/projects/moebiuslinux/&#34;&gt;Moebius&lt;/a&gt;. A few words from the Moebius site:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[Moebius] is a Raspberry Pi armhf Debian based distribution targeted to have a minimal footprint. Size, speed and optimizations are main goals for this distro&amp;hellip;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;With that said, the &lt;em&gt;unzipped &lt;code&gt;img&lt;/code&gt;&lt;/em&gt; file is about &lt;strong&gt;110Mb&lt;/strong&gt;. That is pretty small!&lt;/p&gt;
-&lt;p&gt;The other thing that Moebius does is remove the default Raspbian sources from &lt;code&gt;apt-get&lt;/code&gt;. This means &lt;em&gt;you can&amp;rsquo;t just download all the Rasbian packages&lt;/em&gt; you want.&lt;/p&gt;
-&lt;p&gt;Moebius introduces the idea of containers. This isn&amp;rsquo;t the same container technology like Docker. The &amp;ldquo;containers&amp;rdquo; are more like groups of packages. When installing a Moebius container, everything is installed in &lt;code&gt;/usr/bin&lt;/code&gt; as if it came with the system.&lt;/p&gt;
-&lt;p&gt;I am going to provide a little walkthrough to get started with Moebius as a light-weight development environment, as well as how to install some other tools.&lt;/p&gt;
-&lt;h3 id=&#34;initial-setup&#34;&gt;Initial Setup&lt;/h3&gt;
-&lt;p&gt;First, visit the Moebius Sourceforge page and follow the instructions to &lt;a href=&#34;http://sourceforge.net/projects/moebiuslinux/files/raspberry.stable/&#34;&gt;download Moebius&lt;/a&gt;. The basic instructions tell you how to copy the img to the SD Card. Once everything is setup and the Raspberry Pi has booted, complete the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Either connect a screen and keyboard to the pi, or SSH to the pi&lt;/li&gt;
-&lt;li&gt;The default user is &lt;code&gt;root&lt;/code&gt; and password is &lt;code&gt;moebius&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;When logged in, run &lt;code&gt;moebius&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/moebius-tool.png&#34; title=&#34;Moebius command line app&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Moebius command line app&#34; src=&#34;https://ohdoylerules.com/images/moebius-tool.png&#34; &gt;&lt;/a&gt;
-  &lt;p&gt;Moebius command line app&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Moebius is the name of the OS, but also the name of a sweet little built-in command line tool to setup the rest of the Pi.&lt;/p&gt;
-&lt;h4 id=&#34;ssh-niceness&#34;&gt;SSH Niceness&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Optional:&lt;/strong&gt; Add your public key to Moebius in order to ssh without a password. This is not required, but it does make popping in and out of the Pi nice and quick. Plus, no password to remember!&lt;/p&gt;
-&lt;p&gt;Moebius does not come with &lt;code&gt;nano&lt;/code&gt;! If you are not familiar with the &lt;code&gt;vi&lt;/code&gt; tool, you should &lt;a href=&#34;http://www.washington.edu/computing/unix/vi.html&#34;&gt;use this site to learn some basics&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Just create &lt;code&gt;~/.ssh&lt;/code&gt; and then use &lt;code&gt;vi ~/.ssh/authorized_keys&lt;/code&gt; to create a new file, then paste in your public key.&lt;/p&gt;
-&lt;h3 id=&#34;dev-environment-setup&#34;&gt;Dev Environment Setup&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Run &lt;code&gt;moebius&lt;/code&gt; and select &lt;code&gt;Basic/Initial Setup&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Choose &lt;code&gt;Autoresize SD partition&lt;/code&gt;, follow the instructions&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;apt-get update&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;apt-get install tzdata&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;moebius&lt;/code&gt; and select &lt;code&gt;Basic/Initial Setup&lt;/code&gt;, choose &lt;code&gt;System timezone setup&lt;/code&gt; and follow instructions&lt;/li&gt;
-&lt;li&gt;In &lt;code&gt;moebius&lt;/code&gt;, select &lt;code&gt;Software Management&lt;/code&gt; and select &lt;code&gt;Update containers list from repository&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Do the same as above except choose &lt;code&gt;Install a container&lt;/code&gt; from the &lt;code&gt;Software Management&lt;/code&gt; menu&lt;/li&gt;
-&lt;li&gt;Select the &lt;code&gt;lang.gcc&lt;/code&gt; container&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/moebius-container-tool.png&#34; title=&#34;Moebius container command line app&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;Moebius container command line app&#34; src=&#34;https://ohdoylerules.com/images/moebius-container-tool.png&#34; &gt;&lt;/a&gt;
-  &lt;p&gt;Moebius container command line app&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;You may get an error&lt;/strong&gt; telling you to run &lt;code&gt;dpkg --configure -a&lt;/code&gt;. If this happens, press any key to close the container installed and then run that command. When that completes, try to install the &lt;code&gt;lang.gcc&lt;/code&gt; container again.&lt;/p&gt;
-&lt;p&gt;You may have to repeat the process above &lt;em&gt;multiple times&lt;/em&gt;. I did it twice.&lt;/p&gt;
-&lt;p&gt;Once the container is installed, you should have &lt;code&gt;make&lt;/code&gt; and &lt;code&gt;gcc&lt;/code&gt;, and a bunch of other tools on your system.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;install-git&#34;&gt;Install git&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;You must install the lang.gcc container first&lt;/strong&gt;. That container provides the necessary compilers we need in order to build git.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Get the required development files with &lt;code&gt;apt-get install openssl-dev curl-dev libexpat-dev dropbear-dev coreutils coreutils-dev&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Download the latest zip archive &lt;code&gt;wget https://github.com/git/git/archive/v2.3.3.zip&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;unzip v2.3.3.zip&lt;/code&gt; and then &lt;code&gt;cd v2.3.3/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Allow the scripts to run with &lt;code&gt;chmod +x *.sh &amp;amp;&amp;amp; chmod +x check_bindir&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Following the official &lt;a href=&#34;https://github.com/git/git/blob/master/INSTALL&#34;&gt;INSTALL&lt;/a&gt; in the git source code repository, we want to leave out some of the features in order to build without some of the required libraries.&lt;/p&gt;
-&lt;p&gt;To do this, we need to run:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;make NO_PERL=YesPlease NO_TCLTK=YesPlease NO_GETTEXT=YesPlease prefix=/usr install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This will take a while to build, so &lt;em&gt;grab a coffee or a beer&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This command does not build the docs, so if you want those, you will have to consult the &lt;a href=&#34;https://github.com/git/git/blob/master/INSTALL&#34;&gt;INSTALL&lt;/a&gt; file in the git repo.&lt;/p&gt;
-&lt;h3 id=&#34;samba-setup&#34;&gt;Samba setup&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Samba_%28software%29&#34;&gt;Samba&lt;/a&gt; lets us access the Pi like a hard drive on our local network. Samba &lt;em&gt;works well with Windows and OSX&lt;/em&gt;, and of course Linux as well.&lt;/p&gt;
-&lt;p&gt;If you are not familiar with the &lt;code&gt;vi&lt;/code&gt; tool, you should &lt;a href=&#34;http://www.washington.edu/computing/unix/vi.html&#34;&gt;use this site to learn some basics&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Complete the following to setup Samba:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;run &lt;code&gt;apt-get install samba&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;open the config with &lt;code&gt;vi /etc/samba/smb.conf&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;then complete the following:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;# find in the top part of the file
-workgroup = your_workgroup_name
-# find and uncomment this line
-wins support = yes
-# add to the bottom of the file
-[pihome]
-  comment= Pi Home
-  path=/home/
-  browseable=Yes
-  writeable=Yes
-  only guest=no
-  create mask=0777
-  directory mask=0777
-  public=no
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;set the samba password with &lt;code&gt;smbpasswd -a root&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;install-lit-and-luvit&#34;&gt;Install lit and luvit&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Again, have lang.gcc installed before continuing&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;I have been playing with &lt;a href=&#34;https://github.com/luvit/lit&#34;&gt;Lit&lt;/a&gt; and &lt;a href=&#34;https://github.com/luvit/luvit&#34;&gt;Luvit&lt;/a&gt;. They are like lightweight versions of Node.js, but written with Lua. So let&amp;rsquo;s install them with a series of commands:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;apt-get install curl
-curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
-mkdir -p /usr/local/bin
-mv lit /usr/local/bin/lit
-lit make lit://luvit/luvit
-mv luvit /usr/local/bin/luvit
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Try running &lt;code&gt;lit version&lt;/code&gt; and then &lt;code&gt;luvit --version&lt;/code&gt; to see if the frameworks are installed.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;finished&#34;&gt;Finished&lt;/h3&gt;
-&lt;p&gt;You should now have everything setup to get around. If you find any problems with my instructions, &lt;strong&gt;please let me know in the comments&lt;/strong&gt; and I will update them!&lt;/p&gt;
-</description>
+      <description>Setup and improve the Moebius OS for the Raspberry Pi</description>
     </item>
     
     <item>
@@ -126,28 +404,16 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/phalcon-micro-starter/</guid>
-      <description>&lt;p&gt;I created a &lt;a href=&#34;https://github.com/james2doyle/phalcon-micro-start&#34;&gt;simple application template&lt;/a&gt; that helps people get started with &lt;a href=&#34;http://phalconphp.com/&#34; title=&#34;Phalcon PHP Homepage&#34;&gt;Phalcon PHP&lt;/a&gt; using a more practical example of the &lt;a href=&#34;http://docs.phalconphp.com/en/latest/reference/micro.html&#34;&gt;Micro application&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;There is already a &lt;a href=&#34;https://github.com/phalcon/store&#34;&gt;sample application created by the Phalcon team that uses the Micro class&lt;/a&gt;, but I found it to be a little more specific than I would like. It uses things like the &lt;a href=&#34;http://docs.phalconphp.com/en/latest/reference/volt.html&#34;&gt;Volt template engine&lt;/a&gt;, models, Database connections, and some other &lt;a href=&#34;https://github.com/phalcon/store/blob/master/config/bootstrap.php&#34;&gt;glossed over Bootstrapping&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/phalcon-micro-start&#34;&gt;My example application&lt;/a&gt; contains very little. It has enough to get you started creating a simple JSON-based application, or just serving a static site with a few cached views.&lt;/p&gt;
-&lt;h2 id=&#34;whats-included&#34;&gt;What&amp;rsquo;s Included?&lt;/h2&gt;
-&lt;h4 id=&#34;basic-page-example&#34;&gt;Basic page example&lt;/h4&gt;
-&lt;p&gt;Just shows a simple GET route and serves a single view.&lt;/p&gt;
-&lt;h4 id=&#34;partial-views-simple-view-engine&#34;&gt;Partial views (&lt;code&gt;Simple&lt;/code&gt; view engine)&lt;/h4&gt;
-&lt;p&gt;The templates use partials for the header and footer of the site.&lt;/p&gt;
-&lt;h4 id=&#34;url-with-params&#34;&gt;URL with params&lt;/h4&gt;
-&lt;p&gt;You can pass parameters into the URL, and they will be rendered on the page.&lt;/p&gt;
-&lt;h4 id=&#34;json-return&#34;&gt;JSON return&lt;/h4&gt;
-&lt;p&gt;An example of how to return JSON via a POST request. There is also a comment that tells you the jQuery test function to try.&lt;/p&gt;
-&lt;h4 id=&#34;cached-view&#34;&gt;Cached view&lt;/h4&gt;
-&lt;p&gt;This shows how you can serve a cached view, with an expiry. Good for those complicated pages that need to be refreshed every other day.&lt;/p&gt;
-&lt;h4 id=&#34;redirect-url&#34;&gt;Redirect URL&lt;/h4&gt;
-&lt;p&gt;This one is really simple. It just shows how you can redirect one URL request to another.&lt;/p&gt;
-&lt;h3 id=&#34;other-niceness&#34;&gt;Other Niceness&lt;/h3&gt;
-&lt;p&gt;I also included a simple grunt task that uses &lt;code&gt;livereload&lt;/code&gt;. This will refresh the browser when view files, or the &lt;code&gt;app.php&lt;/code&gt; file, changes.&lt;/p&gt;
-&lt;h3 id=&#34;link&#34;&gt;Link&lt;/h3&gt;
-&lt;p&gt;You can find the &lt;a href=&#34;https://github.com/james2doyle/phalcon-micro-start&#34;&gt;repositry on Github&lt;/a&gt;. I will be updating and tweaking this project as I move along. It may become more feature-rich in the next few months. I would like to build a nice solid base for myself when using the Micro app.&lt;/p&gt;
-&lt;p&gt;There may be some need to add in some simple search examples, models, forms, validation, or even Database connections. But we will see if that is where it moved organically.&lt;/p&gt;
-</description>
+      <description>A showcase of a Phalcon Micro App starter template that makes it easy to get started with the Phalcon micro app class</description>
+    </item>
+    
+    <item>
+      <title>PhalconPHP Crop Image To Fit</title>
+      <link>https://ohdoylerules.com/snippets/phalconphp-crop-to-fit/</link>
+      <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/phalconphp-crop-to-fit/</guid>
+      <description>How to crop and scale an image to fit specific dimensions in Phalcon PHP</description>
     </item>
     
     <item>
@@ -156,39 +422,34 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Sun, 16 Nov 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pyro-module-generator-2/</guid>
-      <description>&lt;p&gt;Finally, I found a good excuse to re-write my old &lt;a href=&#34;https://ohdoylerules.com/personal-project/pyro-module-generator&#34;&gt;Pyro Module Generator&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This tool was originally made when I was freelancing. I built it off the &lt;a href=&#34;https://github.com/pyrocms/sample&#34;&gt;Sample Module project on Github&lt;/a&gt;. I wanted to be able to build modules quickly, since I wasn&amp;rsquo;t using streams. In fact, streams wasn&amp;rsquo;t even a thing when I made the first version of the module generator.&lt;/p&gt;
-&lt;p&gt;Again, I have made a &lt;a href=&#34;http://dev.warpaintmedia.ca/pyro-module-generator/&#34; title=&#34;PyroCMS Module Generator Website&#34;&gt;live hosted version of the generator&lt;/a&gt; which you can use without having to have anything setup locally. The generated module is zipped and then ready for download.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://github.com/james2doyle/pyro-module-generator&#34; title=&#34;PyroCMS Module Generator On Github&#34;&gt;source is also on Github&lt;/a&gt; for people who want to patch issues or fork.&lt;/p&gt;
-&lt;h3 id=&#34;about-version-20&#34;&gt;About Version 2.0&lt;/h3&gt;
-&lt;p&gt;This new version is built with &lt;a href=&#34;http://phalconphp.com/en/&#34;&gt;PhalconPHP&lt;/a&gt; because phalcon is crazy fast and easy to make small apps with. I managed to get the whole thing re-written in a day. Much of the code was a copy paste for the build process. But now the &lt;code&gt;Add Field&lt;/code&gt; button is actually an AJAX call to generate a new partial for the new field. This is much nicer than the pervious version.&lt;/p&gt;
-&lt;p&gt;That being said, &lt;strong&gt;YOU MUST HAVE PHALCONPHP INSTALLED TO USE THIS APP!!&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;There are a few little things I need to refactor, so that when 3.0 comes out, it will be easy to switch between the different versions of Pyro.&lt;/p&gt;
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-&lt;p&gt;Just throw it in your localhost root and point your browser to it. There is no database, since it just writes and renames files for you.&lt;/p&gt;
-&lt;p&gt;If you have &lt;strong&gt;used a custom folder name&lt;/strong&gt; (and didn&amp;rsquo;t just clone as &lt;code&gt;pyro-module-generator&lt;/code&gt;), then open the &lt;a href=&#34;https://github.com/james2doyle/pyro-module-generator/blob/master/config/config.php#L7&#34;&gt;config/config.php and change the baseUri&lt;/a&gt; to match that folder name.&lt;/p&gt;
-&lt;h5 id=&#34;writeable-folders&#34;&gt;Writeable Folders&lt;/h5&gt;
-&lt;p&gt;We need to run &lt;code&gt;chmod -R 777 cache/volt&lt;/code&gt; and &lt;code&gt;chmod -R 777 public/generated&lt;/code&gt; if you have write errors.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;cache/volt/&lt;/li&gt;
-&lt;li&gt;public/generated/&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;genrated-modules&#34;&gt;Genrated Modules&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Included in all generated modules is the following setup:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ID&lt;/code&gt; field by default&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;order&lt;/code&gt; field by default&lt;/li&gt;
-&lt;li&gt;functionality for drag and drop table order (add &lt;code&gt;ui-sortable-container&lt;/code&gt; to &lt;code&gt;tbody&lt;/code&gt; in admin index view)&lt;/li&gt;
-&lt;li&gt;basic function for files included but commented out&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_form_data&lt;/code&gt; function for passing data to form views&lt;/li&gt;
-&lt;li&gt;settings table included, but commented out&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The generated module gets put in the &lt;code&gt;public/generated/&lt;/code&gt; folder. As well as the Zip file.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;p&gt;Screenshot of the current version of the app&lt;/p&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/pmg2.jpeg&#34; title=&#34;PyroCMS Module Generator Screenshot&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;PyroCMS Module Generator Screenshot&#34; src=&#34;https://ohdoylerules.com/images/pmg2.jpeg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-</description>
+      <description>The Pyro Module Generator allows you to rapidly create modules for Pyro 2.2 and up</description>
+    </item>
+    
+    <item>
+      <title>Kijiji Vector Logo</title>
+      <link>https://ohdoylerules.com/web/kijiji-vector-logo/</link>
+      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/kijiji-vector-logo/</guid>
+      <description>the kijiji logo as a vector svg file</description>
+    </item>
+    
+    <item>
+      <title>Migrate AllPasswords To 1Password</title>
+      <link>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/migrate-allpasswords-to-1password/</guid>
+      <description>How to import your allpasswords csv into 1password</description>
+    </item>
+    
+    <item>
+      <title>Always Connect To Starbucks WiFi</title>
+      <link>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</link>
+      <pubDate>Sat, 20 Sep 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/always-connect-to-starbucks-wifi/</guid>
+      <description>How to connect to the Starbucks WiFi every time by using your phone.</description>
     </item>
     
     <item>
@@ -197,34 +458,70 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/lico-luvit-cms/</guid>
-      <description>&lt;p&gt;I have re-created Pico (&lt;a href=&#34;https://github.com/picocms/Pico&#34;&gt;github&lt;/a&gt; or &lt;a href=&#34;http://picocms.org/&#34;&gt;homepage&lt;/a&gt;) using the awesome &lt;a href=&#34;https://github.com/luvit/luvit&#34;&gt;Luvit&lt;/a&gt; framework. Luvit is a &lt;a href=&#34;http://luajit.org/&#34;&gt;LuaJIT&lt;/a&gt; wrapper for &lt;a href=&#34;https://github.com/joyent/libuv&#34;&gt;libuv&lt;/a&gt;, of &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; fame. It is called &lt;a href=&#34;https://github.com/james2doyle/Lico&#34; title=&#34;Lico On Github&#34;&gt;Lico&lt;/a&gt;!&lt;/p&gt;
-&lt;h3 id=&#34;what-is-lico&#34;&gt;What is Lico?&lt;/h3&gt;
-&lt;p&gt;Pico says, &lt;em&gt;&amp;ldquo;Pico is a stupidly simple, blazing fast, flat file CMS&amp;rdquo;&lt;/em&gt;. Lico aims for the same thing. There is a very close parity with Pico even though this is very early.&lt;/p&gt;
-&lt;p&gt;I used the static server from the Luvit examples as a base and went from there.&lt;/p&gt;
-&lt;h3 id=&#34;how-to-create-content&#34;&gt;How to create content?&lt;/h3&gt;
-&lt;p&gt;You can understand the basics by looking at the included content directory and just running the &lt;code&gt;server.lua&lt;/code&gt; file and hitting the index page.&lt;/p&gt;
-&lt;p&gt;If you need more information you can see the &lt;a href=&#34;http://picocms.org/docs.html&#34;&gt;Pico docs&lt;/a&gt; and understand what is happening and how it works.&lt;/p&gt;
-&lt;h3 id=&#34;what-features-are-implemented&#34;&gt;What features are implemented?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Markdown Parsing using &lt;a href=&#34;https://github.com/mneudert/luvit-markdown&#34;&gt;luvit-markdown&lt;/a&gt; &amp;ndash; &lt;em&gt;looking to switch to &lt;a href=&#34;https://github.com/torch/sundown-ffi/tree/hoedown&#34;&gt;Hoedown&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;HTML Templating (using my own modified version of &lt;a href=&#34;https://github.com/james2doyle/sltluv&#34;&gt;SLT2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Flexible Meta schema (Uses HTML comments instead of PHP style)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;whats-missing&#34;&gt;Whats missing?&lt;/h3&gt;
-&lt;p&gt;Plugins. Although with the native of the &lt;a href=&#34;https://github.com/luvit/luvit/blob/master/examples/event-emitters.lua&#34;&gt;Event Emitter&lt;/a&gt; inside Luvit, this should be rather easy to re-create.&lt;/p&gt;
-&lt;p&gt;You can use SLTLuv to add new functions and features to your templates. You can see the &lt;code&gt;modules/slt-extensions.lua&lt;/code&gt; on how to add extensions to the templates. I also added in some examples in the &lt;code&gt;default/themes/index.html&lt;/code&gt;, if you want to see how they work.&lt;/p&gt;
-&lt;p&gt;Check out the &lt;a href=&#34;https://github.com/henix/slt2#example&#34;&gt;slt2 examples&lt;/a&gt; to see how to write proper templates.&lt;/p&gt;
-&lt;p&gt;The markdown engine is rather simple. There is no fenced code blocks, and sometimes it will wrap uncommon HTML tags with &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tags (I tried using a &lt;code&gt;figure&lt;/code&gt; element and it was wrapped in p tags). I want switch to &lt;a href=&#34;https://github.com/torch/sundown-ffi/tree/hoedown&#34;&gt;Hoedown&lt;/a&gt; soon.&lt;/p&gt;
-&lt;h3 id=&#34;performance&#34;&gt;Performance&lt;/h3&gt;
-&lt;p&gt;Well, this is very interesting. Running the default setup for Pico and Lico, reveals Lico is twice as fast in at the browser level.&lt;/p&gt;
-&lt;p&gt;Using the Chrome Devtools Network Panel, I measured the index page of each system. I consistently got around 120ms for each request. For Pico, the results were varied quite a bit. They ranged from 200ms to as high as 500ms, but never going under 200ms.&lt;/p&gt;
-&lt;p&gt;There are a lot of factors here, but the default Pico has 3 pages and my Lico testing suite (same one as this repo) had 6 pages.&lt;/p&gt;
-&lt;p&gt;I did some other testing against my other project, &lt;a href=&#34;https://github.com/PhileCMS/Phile#performance-with-20-pages&#34;&gt;PhileCMS&lt;/a&gt;. You can see that Pico doesn&amp;rsquo;t handle large amounts of pages very well.&lt;/p&gt;
-&lt;h3 id=&#34;there-are-issues&#34;&gt;There are issues!&lt;/h3&gt;
-&lt;p&gt;Yeah I bet. I am not a Lua developer. I made this over a week-long period trying to learn Lua. If you notice some funky stuff or clean n00b issues, please create issues or pull requests.&lt;/p&gt;
-&lt;h3 id=&#34;repo&#34;&gt;Repo?&lt;/h3&gt;
-&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/james2doyle/Lico&#34;&gt;link to the Github repository&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Lico is a re-creation of the PicoCMS for PHP, but written for Luvit for Lua</description>
+    </item>
+    
+    <item>
+      <title>Typeform Vector Logo</title>
+      <link>https://ohdoylerules.com/web/typeform-vector-logo/</link>
+      <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/typeform-vector-logo/</guid>
+      <description>Another difficult logo to find. This one is for the fun new Typeform service. Typeform allows you to create dynamic and fun forms for clients, events, and other general uses.</description>
+    </item>
+    
+    <item>
+      <title>Using Node.js in an AppleScript</title>
+      <link>https://ohdoylerules.com/snippets/using-node-in-applescript/</link>
+      <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/using-node-in-applescript/</guid>
+      <description>How to use Node.js in an AppleScript</description>
+    </item>
+    
+    <item>
+      <title>Copy filepath to clipboard in OSX</title>
+      <link>https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</link>
+      <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx/</guid>
+      <description>How to copy a filepath to the clipboard in OSX</description>
+    </item>
+    
+    <item>
+      <title>The Simple Spam Stopper</title>
+      <link>https://ohdoylerules.com/web/simple-spam-stopper/</link>
+      <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/simple-spam-stopper/</guid>
+      <description>For the last year at WARPAINT Media, we have been getting assaulted with spam.</description>
+    </item>
+    
+    <item>
+      <title>Flexible SVG Placeholder Images</title>
+      <link>https://ohdoylerules.com/web/flexible-svg-placeholders/</link>
+      <pubDate>Sat, 24 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/flexible-svg-placeholders/</guid>
+      <description>Replace a service like placehold.it with your own local version that serves SVG images</description>
+    </item>
+    
+    <item>
+      <title>Purge A File From A Github Repo</title>
+      <link>https://ohdoylerules.com/snippets/purge-file-from-github/</link>
+      <pubDate>Sun, 18 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/purge-file-from-github/</guid>
+      <description>How to permanently remove a file from a repo and it&#39;s history</description>
+    </item>
+    
+    <item>
+      <title>Tips For Using SVGs</title>
+      <link>https://ohdoylerules.com/web/tips-for-using-svgs/</link>
+      <pubDate>Sat, 17 May 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/tips-for-using-svgs/</guid>
+      <description>I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.</description>
     </item>
     
     <item>
@@ -233,10 +530,7 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/koding-interview/</guid>
-      <description>&lt;p&gt;A few months back I was interviewed by the developer socila network Koding.&lt;/p&gt;
-&lt;p&gt;The initiative was for them to showcase some of the people using their network to build their skill and circle of friends. It is a really cool social network that has been gaining a lot of traction lately.&lt;/p&gt;
-&lt;p&gt;Here is &lt;a href=&#34;http://stories.koding.com/story/james-doyle/&#34;&gt;the link to the interview&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>James Doyle interview by the developer social network Koding</description>
     </item>
     
     <item>
@@ -245,13 +539,16 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/kaenon-logo/</guid>
-      <description>&lt;p&gt;Here is another logo. This one is for the Kaenon sunglasses brand. This was very hard to find. It doesn&amp;rsquo;t include the little gradient on the original logo. Maybe I will add that in the future.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/kaenon.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;kaenon svg vector&#34; src=&#34;https://ohdoylerules.com/images/kaenon.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;h5 id=&#34;hint&#34;&gt;Hint&lt;/h5&gt;
-&lt;p&gt;If you are looking for these hard to find logos, sometimes you can find them in a lookbook or catalog PDF. The assets are usually high DPI because most of the time these documents are for printing.&lt;/p&gt;
-</description>
+      <description>The Kaenon logo in a vector SVG format</description>
+    </item>
+    
+    <item>
+      <title>Bash select example</title>
+      <link>https://ohdoylerules.com/snippets/bash-select-example/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/bash-select-example/</guid>
+      <description>An example of how to use the select command in bash to pass arguments to functions</description>
     </item>
     
     <item>
@@ -260,105 +557,7 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Tue, 25 Mar 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/sublime-node-snippets/</guid>
-      <description>&lt;p&gt;I created a &lt;a href=&#34;https://sublime.wbond.net/packages/Node%20Completions&#34;&gt;huge snippet library&lt;/a&gt; based on the docs for node 10.26. There are &lt;strong&gt;783&lt;/strong&gt; total right now (&lt;em&gt;2014-03-25&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;The way that I quickly made this big repository, was I wrote a script that would generate new sublime snippets based on a text file.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://github.com/james2doyle/sublime-node-snippets/blob/master/convert.php&#34;&gt;converter&lt;/a&gt; just reads &lt;a href=&#34;https://github.com/james2doyle/sublime-node-snippets/blob/master/sources.txt&#34;&gt;the text file&lt;/a&gt; line by line and then generates a &lt;code&gt;.sublime-completions&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;There is a template that is sort of setup. So you can actually just clone the repo, drop in a new sources file, and then generate a new snippets library with the converter.&lt;/p&gt;
-&lt;p&gt;Here is an excerpt from &lt;a href=&#34;https://github.com/james2doyle/sublime-node-snippets&#34;&gt;the github repo&lt;/a&gt;:&lt;/p&gt;
-&lt;h2 id=&#34;installing&#34;&gt;Installing&lt;/h2&gt;
-&lt;h4 id=&#34;package-control&#34;&gt;Package Control&lt;/h4&gt;
-&lt;p&gt;Just look for &lt;code&gt;sublime-node-snippets&lt;/code&gt; on &lt;a href=&#34;https://sublime.wbond.net/packages/Node%20Completions&#34;&gt;Package Control&lt;/a&gt;. It is called &amp;ldquo;Node Completions&amp;rdquo; on the site, but comes up as &amp;ldquo;sublime-node-snippets&amp;rdquo;.&lt;/p&gt;
-&lt;h4 id=&#34;manual-install&#34;&gt;Manual Install&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Open the Commands Palette (command+shift+p)&lt;/li&gt;
-&lt;li&gt;Package Control: Add Repository&lt;/li&gt;
-&lt;li&gt;Past in this repos URL&lt;/li&gt;
-&lt;li&gt;Press Enter&lt;/li&gt;
-&lt;li&gt;Open the palette again&lt;/li&gt;
-&lt;li&gt;press enter on &amp;ldquo;sublime-node-snippets&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;watch it install&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;using&#34;&gt;Using&lt;/h2&gt;
-&lt;p&gt;Pressing &lt;code&gt;.&lt;/code&gt; (period) will end the snippet lookup.&lt;/p&gt;
-&lt;p&gt;You will have better results if you pretend the period isn&amp;rsquo;t needed. So if you are looking for &lt;code&gt;fs.readdir&lt;/code&gt;, you would type &lt;code&gt;fsread&lt;/code&gt; and you would see the results coming up.&lt;/p&gt;
-&lt;h2 id=&#34;snippet-categories&#34;&gt;Snippet Categories&lt;/h2&gt;
-&lt;p&gt;Node Populars&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;async&lt;/li&gt;
-&lt;li&gt;underscore&lt;/li&gt;
-&lt;li&gt;lodash&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Node Core&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Assert&lt;/li&gt;
-&lt;li&gt;Buffer&lt;/li&gt;
-&lt;li&gt;Child&lt;/li&gt;
-&lt;li&gt;Console&lt;/li&gt;
-&lt;li&gt;Cluster&lt;/li&gt;
-&lt;li&gt;Crypto&lt;/li&gt;
-&lt;li&gt;Decoder&lt;/li&gt;
-&lt;li&gt;Domain&lt;/li&gt;
-&lt;li&gt;Dns&lt;/li&gt;
-&lt;li&gt;Event&lt;/li&gt;
-&lt;li&gt;Http&lt;/li&gt;
-&lt;li&gt;Https&lt;/li&gt;
-&lt;li&gt;Fs&lt;/li&gt;
-&lt;li&gt;Global&lt;/li&gt;
-&lt;li&gt;Module&lt;/li&gt;
-&lt;li&gt;Net&lt;/li&gt;
-&lt;li&gt;Path&lt;/li&gt;
-&lt;li&gt;Punnycode&lt;/li&gt;
-&lt;li&gt;Process&lt;/li&gt;
-&lt;li&gt;Querystring&lt;/li&gt;
-&lt;li&gt;Readline&lt;/li&gt;
-&lt;li&gt;Repl&lt;/li&gt;
-&lt;li&gt;Timers&lt;/li&gt;
-&lt;li&gt;Tls Ssl&lt;/li&gt;
-&lt;li&gt;Tty&lt;/li&gt;
-&lt;li&gt;Udp&lt;/li&gt;
-&lt;li&gt;Util&lt;/li&gt;
-&lt;li&gt;Url&lt;/li&gt;
-&lt;li&gt;Os&lt;/li&gt;
-&lt;li&gt;Vm&lt;/li&gt;
-&lt;li&gt;Zlib&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;adding-new-snippets&#34;&gt;Adding New Snippets&lt;/h2&gt;
-&lt;p&gt;Here is how I quickly got all these snippets.&lt;/p&gt;
-&lt;p&gt;I will use &lt;a href=&#34;http://expressjs.com/3x/api.html&#34;&gt;Express&lt;/a&gt; as an example since it isn&amp;rsquo;t in here.&lt;/p&gt;
-&lt;p&gt;First I went to the docs for the framework, and I looked to see what the code examples were wrapped in.&lt;/p&gt;
-&lt;p&gt;For the &lt;a href=&#34;http://expressjs.com/3x/api.html&#34;&gt;express&lt;/a&gt; docs site, the codes are shown in &lt;code&gt;section h3&lt;/code&gt; tags. So to quickly get the list, I ran the following code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;Array&lt;/span&gt;.prototype.slice.call(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;document&lt;/span&gt;.querySelectorAll(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;section h3&amp;#34;&lt;/span&gt;), &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;).map(&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(item){
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; item.textContent.trim();
-}).join(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;\n&amp;#34;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then copied the output and pasted it in the &lt;code&gt;sources.txt&lt;/code&gt; file. Done!&lt;/p&gt;
-&lt;h5 id=&#34;cool-feature&#34;&gt;Cool Feature&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;The word &lt;code&gt;callback&lt;/code&gt; will automagically be converted into a function.&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;building&#34;&gt;Building&lt;/h2&gt;
-&lt;p&gt;I went to each page of the &lt;a href=&#34;http://nodejs.org/api/&#34;&gt;node docs&lt;/a&gt;, and copied the functions. Then I wrote a &lt;a href=&#34;https://github.com/james2doyle/sublime-node-snippets/blob/master/convert.php&#34;&gt;converter&lt;/a&gt; to take each function and convert it to a snippet.&lt;/p&gt;
-&lt;p&gt;For Example, this line:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;setTimeout(fun, delay)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Is going to get converted to:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;setTimeout(${1:fun}, ${2:delay})${0}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When the word &lt;code&gt;callback&lt;/code&gt; appears, it will convert it to the standard
-&lt;code&gt;fun&lt;/code&gt; snippet.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;fs.readdir(path, callback)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;will become&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;fs.readdir(${&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt;path}, &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(${&lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt;args}){
-  ${&lt;span style=&#34;color:#bd93f9&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// body}
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;})${&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sourcestxt&#34;&gt;sources.txt&lt;/h2&gt;
-&lt;p&gt;This file is cool.&lt;/p&gt;
-&lt;p&gt;It is just a line-by-line output of the node docs functions. This is the file that is raked over to generate the snippets.&lt;/p&gt;
-&lt;h2 id=&#34;running-the-build&#34;&gt;Running The Build&lt;/h2&gt;
-&lt;p&gt;Just run &lt;code&gt;php convert.php&lt;/code&gt; and it will rake the sources.txt file and then write the new snippet in the snippets folder.&lt;/p&gt;
-&lt;p&gt;Everything before the first &lt;code&gt;(&lt;/code&gt; will be used as the filename and tab snippet.&lt;/p&gt;
-&lt;h2 id=&#34;contributing&#34;&gt;Contributing&lt;/h2&gt;
-&lt;p&gt;Just add (or edit) a line in the source file. Then run &lt;code&gt;php convert.php&lt;/code&gt; to generate the new snippets.&lt;/p&gt;
-&lt;h2 id=&#34;why-php&#34;&gt;Why PHP?!&lt;/h2&gt;
-&lt;p&gt;Well, PHP is actually pretty good at manipulating strings and writing files. Maybe at some point I will convert the converter and release it as a separate tool.&lt;/p&gt;
-&lt;h2 id=&#34;source&#34;&gt;Source&lt;/h2&gt;
-&lt;p&gt;You can find the &lt;a href=&#34;https://github.com/james2doyle/sublime-node-snippets&#34;&gt;source code on github&lt;/a&gt;. You can also install via package control by looking for &lt;code&gt;sublime-node-snippets&lt;/code&gt;.&lt;/p&gt;
-</description>
+      <description>Sublime Text snippets for node, async, underscore, and lodash</description>
     </item>
     
     <item>
@@ -367,37 +566,7 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Fri, 14 Mar 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/simple-binder/</guid>
-      <description>&lt;p&gt;The other day I was working on a custom form that had a lot of javascript interaction. It got a little too far before I realized I should have been using something like &lt;a href=&#34;http://angularjs.org/&#34;&gt;Angular.js&lt;/a&gt;. I was looking for a simple one-way databinding library, but I couldn&amp;rsquo;t find anything that wasn&amp;rsquo;t overkill.&lt;/p&gt;
-&lt;p&gt;So I created &lt;a href=&#34;http://james2doyle.github.io/simplebinder/&#34;&gt;Simple Binder&lt;/a&gt;. Simple Binder is a zero dependency one-way databinder for javascript. The great thing about it is that, not only is it very simple, but it is super small as well. No dependencies is also nice.&lt;/p&gt;
-&lt;p&gt;Using the lib is pretty straightforward. Here is the markup required for a simplebinder element:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;p data-model=&amp;quot;number&amp;quot;&amp;gt;number&amp;lt;/p&amp;gt;
-&amp;lt;input type=&amp;quot;number&amp;quot; data-controller=&amp;quot;number&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see, you must have a &lt;em&gt;data-model&lt;/em&gt; and a &lt;em&gt;data-controller&lt;/em&gt; set on your items. Models are like the destination for the data-controllers value.&lt;/p&gt;
-&lt;p&gt;This would be the javascript for this element:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var sb = SimpleBinder(&#39;number&#39;, function(input, model) {
-  console.log(input.value);
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now the &lt;code&gt;sb&lt;/code&gt; variable it a simplebinder object. It has a few nice methods that you can use now:&lt;/p&gt;
-&lt;p&gt;Destroy a simplebinder element.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sb.destroy();
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Add a new controller to a simplebinder element.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sb.addController(&#39;new-controller-name&#39;);
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Add a new model to a simplebinder element.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sb.addModel(&#39;new-model-name&#39;);
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;See all models on a simplebinder element. Returns an arrary of strings with querySelectorAll queries.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sb.models;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;See all controllers on a simplebinder element. Returns an arrary of strings with querySelectorAll queries.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sb.controllers;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Custom events and attributes&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var sb = SimpleBinder(&#39;modelname&#39;, {
-  watch: &#39;value&#39;, // what controller attribute are we watching?
-  change: &#39;className&#39; // the attribute to change on the model, default = textContent
-}, function(input, model) {
-  console.log(input.value);
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That&amp;rsquo;s it. I will be adding the ability to remove a Model or Controller in the future. I tested this on a variety of devices. This library uses &lt;code&gt;querySelectorAll&lt;/code&gt;, so if you don&amp;rsquo;t have that&amp;hellip; well you&amp;rsquo;re fucked.&lt;/p&gt;
-&lt;p&gt;Check out the &lt;a href=&#34;https://github.com/james2doyle/simplebinder&#34;&gt;source on github&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>simplebinder is a zero dependency one-way databinder for javascript</description>
     </item>
     
     <item>
@@ -406,19 +575,7 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/vim-svg/</guid>
-      <description>&lt;p&gt;Here is a beauty. People have been looking for this Vim logo in a vector format for quite some time. There is of course the &lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Vimlogo.svg&#34;&gt;old logo&lt;/a&gt;, but it looks pretty strange. It reminds me of Tron for some reason.&lt;/p&gt;
-&lt;p&gt;Anyway this was a pain to make because of all the layers and custom shaping of the V. Also I had to make a bunch of changes to everything once I tested it in the browser because it was all busted.&lt;/p&gt;
-&lt;p&gt;I usually test my SVGs in the browser as a final OK point. I know if it renders there, then everything should be fine. Also people want it for using as a retina icon now, since the advent of responsive design and development.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/vim.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;vim svg vector&#34; src=&#34;https://ohdoylerules.com/images/vim.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;If you happen to use this for anything, it would be nice to recieve some credit for it. I actually couldn&amp;rsquo;t find who made the original Vim logo. It might just be lost in time.&lt;/p&gt;
-&lt;h4 id=&#34;update&#34;&gt;Update&lt;/h4&gt;
-&lt;p&gt;I made a icns version for OSX. You can &lt;a href=&#34;https://ohdoylerules.com/images/vim.icns&#34;&gt;download it here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can change the MacVim icon if you want. I happen to think this one is a little nicer.&lt;/p&gt;
-&lt;h4 id=&#34;update-2&#34;&gt;Update 2&lt;/h4&gt;
-&lt;p&gt;I have found another person who wanted a new vim icon. They added it to the fork of &lt;a href=&#34;https://code.google.com/p/macvim/&#34;&gt;MacVim&lt;/a&gt;. Here is the &lt;a href=&#34;https://github.com/kaishin/macvim/commit/fedcb4579b68439dba85b9d7fa4b076faac7ebad&#34;&gt;commit from his repo&lt;/a&gt; with the new icon.&lt;/p&gt;
-</description>
+      <description>The Vim logo in a vector SVG format. Also includes a ICNS file for OSX.</description>
     </item>
     
     <item>
@@ -427,45 +584,7 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/atom-monokai-dark/</guid>
-      <description>&lt;p&gt;I made a &lt;a href=&#34;http://atom.io/packages/monokai-dark&#34;&gt;dark monokai&lt;/a&gt; syntax theme for &lt;a href=&#34;http://atom.io/&#34;&gt;Atom&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Originally converted from &lt;a href=&#34;https://github.com/kevinsawicki/monokai&#34;&gt;monokai&lt;/a&gt; which in turn came from the &lt;a href=&#34;http://www.monokai.nl/blog/wp-content/asdev/Monokai.tmTheme&#34;&gt;TextMate&lt;/a&gt; theme using the &lt;a href=&#34;http://atom.io/docs/latest/converting-a-text-mate-theme&#34;&gt;TextMate bundle converter&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/atom-monokai-dark.png&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;atom monokai dark screenshot&#34; src=&#34;https://ohdoylerules.com/images/atom-monokai-dark.png&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;I would also suggest editing your main stylesheet and adding the following CSS:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;/* really nice smooth fonts */&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;body&lt;/span&gt; {
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;-webkit-&lt;/span&gt;font-smoothing: antialiased;
-  text-rendering: &lt;span style=&#34;color:#ff79c6&#34;&gt;optimizeLegibility&lt;/span&gt;;
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;-moz-&lt;/span&gt;osx-font-smoothing: grayscale;
-}
-
-&lt;span style=&#34;color:#6272a4&#34;&gt;/* custom scrollbars */&lt;/span&gt;
-.&lt;span style=&#34;color:#50fa7b&#34;&gt;tree-view-resizer&lt;/span&gt; {
-  ::&lt;span style=&#34;color:#ff79c6&#34;&gt;-webkit-&lt;/span&gt;scrollbar {
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;width&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0.5&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;em&lt;/span&gt;;
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;height&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0.5&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;em&lt;/span&gt;;
-  }
-
-  ::-webkit-scrollbar-track {
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;background-color&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;#303030&lt;/span&gt;;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;background-color&lt;/span&gt;: &lt;span style=&#34;color:#50fa7b&#34;&gt;lighten&lt;/span&gt;(&lt;span style=&#34;color:#bd93f9&#34;&gt;#303030&lt;/span&gt;, &lt;span style=&#34;color:#bd93f9&#34;&gt;15&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;%&lt;/span&gt;);
-  }
-}
-
-&lt;span style=&#34;color:#6272a4&#34;&gt;/* fix website scroll styling flash */&lt;/span&gt;
-.&lt;span style=&#34;color:#50fa7b&#34;&gt;tree-view-scroller&lt;/span&gt; {
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;overflow&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;hidden&lt;/span&gt;;
-  &amp;amp;:hover {
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;overflow&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;auto&lt;/span&gt;;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This adds some nicer smoothing and also adds some custom scrollbars to both panes. This gets rid of the ugly strange white ones. I would also suggest checking out &lt;a href=&#34;https://ohdoylerules.com/web/source-code-pro-sublime&#34;&gt;Source Code Pro&lt;/a&gt; for your font!&lt;/p&gt;
-&lt;p&gt;You can download the theme on &lt;a href=&#34;http://atom.io/packages/monokai-dark&#34;&gt;Atom&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Dark Monokai theme for the Github Atom editor</description>
     </item>
     
     <item>
@@ -474,56 +593,16 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/the-alternative-cms/</guid>
-      <description>&lt;p&gt;The Explode Code presentation was last night. I spoke about &lt;a href=&#34;https://ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;The Alternative CMS&lt;/a&gt;. It was about the problems with Wordpress, why &lt;em&gt;WYSIWYG&lt;/em&gt; is hard, and why Flat File and Markdown could be the solution you are looking for.&lt;/p&gt;
-&lt;p&gt;Pretty good reception overall. Some of the things people asked were about complexity. The real answer is if you are doing things that are super complex, you should&amp;rsquo;nt really use a flat-file cms.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;the idea is really more 60% client and 40% developer&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I don&amp;rsquo;t mention this in the slides, but the idea is really more 60% client and 40% developer. Using that flat-file is much faster to develop, but it makes it easier to manage for the client.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;Here is the download&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here are some of the links to things I mentioned in the talk:&lt;/p&gt;
-&lt;h4 id=&#34;flat-file-cmss&#34;&gt;Flat File CMSs&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/PhileCMS/Phile&#34;&gt;https://github.com/PhileCMS/Phile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gilbitron/Pico&#34;&gt;https://github.com/gilbitron/Pico&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://assemble.io/&#34;&gt;http://assemble.io/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ghost.org/features/&#34;&gt;https://ghost.org/features/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://getkirby.com/&#34;&gt;http://getkirby.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://jekyllrb.com/&#34;&gt;http://jekyllrb.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://octopress.org/&#34;&gt;http://octopress.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;markdown-editors&#34;&gt;Markdown Editors&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://mouapp.com/&#34;&gt;http://mouapp.com/&lt;/a&gt; &amp;ndash; OSX Only&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://pad.haroopress.com/&#34;&gt;http://pad.haroopress.com/&lt;/a&gt; &amp;ndash; Node Webkit&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackedit.io/&#34;&gt;https://stackedit.io/&lt;/a&gt; &amp;ndash; Online&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://dillinger.io/&#34;&gt;http://dillinger.io/&lt;/a&gt; &amp;ndash; Online&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sublimetext.com/&#34;&gt;http://www.sublimetext.com/&lt;/a&gt; &amp;ndash; Duh&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://macromates.com/&#34;&gt;http://macromates.com/&lt;/a&gt; &amp;ndash; TextMate&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/plasticboy/vim-markdown&#34;&gt;https://github.com/plasticboy/vim-markdown&lt;/a&gt; &amp;ndash; Vim markdown&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://jblevins.org/projects/markdown-mode/&#34;&gt;http://jblevins.org/projects/markdown-mode/&lt;/a&gt; &amp;ndash; Emacs&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/james2doyle/9045390&#34;&gt;https://gist.github.com/james2doyle/9045390&lt;/a&gt; &amp;ndash; Markdown Cheatsheet&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/james2doyle/6540193&#34;&gt;https://gist.github.com/james2doyle/6540193&lt;/a&gt; &amp;ndash; Mou Markdown Cheatsheet&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;full-cmss-with-markdown-support&#34;&gt;Full CMSs With Markdown Support&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://anchorcms.com/&#34;&gt;http://anchorcms.com/&lt;/a&gt; &amp;ndash; markdown only&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://buildwithcraft.com/&#34;&gt;http://buildwithcraft.com/&lt;/a&gt; &amp;ndash; wysiwyg, markdown, simple/text&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.pyrocms.com/&#34;&gt;https://www.pyrocms.com/&lt;/a&gt; &amp;ndash; wysiwyg, markdown, simple/text&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wordpress.org/plugins/wp-markdown/screenshots/&#34;&gt;http://wordpress.org/plugins/wp-markdown/screenshots/&lt;/a&gt; &amp;ndash; who knows&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://dropplets.com/&#34;&gt;http://dropplets.com/&lt;/a&gt; &amp;ndash; markdown and simple/text&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;inline-editors-content-editable&#34;&gt;Inline Editors (Content Editable)&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://jakiestfu.github.io/Medium.js/docs/&#34;&gt;http://jakiestfu.github.io/Medium.js/docs/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.zenpen.io/&#34;&gt;http://www.zenpen.io/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://mattduvall.com/grande.js/&#34;&gt;http://mattduvall.com/grande.js/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ckeditor.com/demo#inline&#34;&gt;http://ckeditor.com/demo#inline&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://sofish.github.io/pen/&#34;&gt;http://sofish.github.io/pen/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://goo.gl/b4ECsb&#34;&gt;http://goo.gl/b4ECsb&lt;/a&gt; &amp;ndash; pen, grande, medium breakdown&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Again you can find the &lt;a href=&#34;https://ohdoylerules.com/images/the-alternative-cms.pdf&#34; title=&#34;The Alternative CMS PDF&#34;&gt;PDF here&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Presentation for The Alternative Cms</description>
+    </item>
+    
+    <item>
+      <title>Randomly Generate A Password In Bash</title>
+      <link>https://ohdoylerules.com/snippets/bash-random-password-generation/</link>
+      <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/bash-random-password-generation/</guid>
+      <description>Randomly generate a password of specified length and then copy it to the clipboard</description>
     </item>
     
     <item>
@@ -532,25 +611,7 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/php-websocket-chat/</guid>
-      <description>&lt;p&gt;About 6 months ago, I made a little &lt;a href=&#34;https://github.com/james2doyle/socket-chat-example&#34;&gt;socket.io chat app&lt;/a&gt;. At the time, this was really only possible with Node.js because the &lt;a href=&#34;http://caniuse.com/#feat=websockets&#34;&gt;HTML5 WebSocket support&lt;/a&gt; was too low.&lt;/p&gt;
-&lt;p&gt;But now, months later, the support for WebSockets is actually very good.Looking at &lt;a href=&#34;http://caniuse.com&#34;&gt;caniuse.com&lt;/a&gt; right now, there is better support for WebSocket than there is WebGL. I would argue that WebGL support is actually more important than the WebSocket support, but I digress. Here is a non-jargon-laden explanation from &lt;a href=&#34;http://www.html5rocks.com/en/tutorials/websockets/basics/#toc-introduction-sockets&#34;&gt;HTML5Rocks&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The WebSocket specification defines an API establishing &amp;ldquo;socket&amp;rdquo; connections between a web browser and a server. In plain words: There is an persistent connection between the client and the server and both parties can start sending data at any time.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Here is a little more technical explanation.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A WebSocket creates a TCP connection to server, and keeps it as long as needed. The Server or client can easily close it. It uses Bidirectional communication - so server and client can exchange data both directions at any time. It is very efficient if the application requires frequent messages. WebSockets have data framing that includes masking for each message sent from client to server so data is simply encrypted.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;If you want a technically in-depth overview, checkout &lt;a href=&#34;http://www.websocket.org/quantum.html&#34;&gt;websocket.org&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Anyway, I made a &lt;a href=&#34;https://github.com/james2doyle/php-socket-chat&#34;&gt;little chat app&lt;/a&gt; with &lt;a href=&#34;http://socketo.me/&#34;&gt;Ratchet&lt;/a&gt;. People knock PHP for all the bad things it does. But getting the WebSocket example running, actually wasn&amp;rsquo;t that bad. Apparently Apache doesn&amp;rsquo;t play nice with Ratchet (not sure about &lt;em&gt;pure&lt;/em&gt; WebSockets) so you have to use the &lt;a href=&#34;http://www.php.net/manual/en/features.commandline.webserver.php&#34;&gt;built-in PHP server&lt;/a&gt; which comes with PHP 5.4.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/php-socket-animation.gif&#34; target=&#34;_blank&#34; title=&#34;php ratchet socket server form example&#34;&gt;&lt;img alt=&#34;php ratchet socket server form example&#34; src=&#34;https://ohdoylerules.com/images/php-socket-animation.gif&#34; width=&#34;252&#34; height=&#34;246&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;The app I made is pretty much a copy paste from the &lt;a href=&#34;http://socketo.me/docs/hello-world&#34;&gt;Rachet Hello World Example&lt;/a&gt; but tried to make the simplest chat app I could. The server is actually pretty close the Hello World code, just with a bunch of extra client-side javascript.&lt;/p&gt;
-&lt;p&gt;Once you &lt;a href=&#34;https://github.com/james2doyle/php-socket-chat&#34;&gt;download the app&lt;/a&gt;, if you have PHP properly installed and in your path, you can use &lt;code&gt;php bin/chat-server.php&lt;/code&gt; in the root folder to start the server. You can then hit the index page and see the green connection message. You will also see some information in your terminal.&lt;/p&gt;
-&lt;p&gt;You can then open a new browser (or incognito/private window) and &amp;ldquo;create&amp;rdquo; another user to chat with.&lt;/p&gt;
-&lt;p&gt;You can see your messages going back and forth. Pretty slick. With the way I develop things at &lt;a href=&#34;http://warpaintmedia.ca&#34;&gt;WARPAINT Media&lt;/a&gt;, I really can&amp;rsquo;t wait to create some sites and apps that use the WebSocket server.&lt;/p&gt;
-</description>
+      <description>PHP websocket chat application example</description>
     </item>
     
     <item>
@@ -559,22 +620,16 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/phile-intro-video/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/PhileCMS/Phile&#34;&gt;PhileCMS&lt;/a&gt; now has a &lt;a href=&#34;http://www.youtube.com/watch?v=8GLMe371RuI&#34;&gt;new instructional video&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here are some of the points I hit on in the video:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Installation&lt;/li&gt;
-&lt;li&gt;Differences To Pico&lt;/li&gt;
-&lt;li&gt;About Twig&lt;/li&gt;
-&lt;li&gt;Creating Content&lt;/li&gt;
-&lt;li&gt;Using Meta Data&lt;/li&gt;
-&lt;li&gt;Themes&lt;/li&gt;
-&lt;li&gt;Conditional Navigations&lt;/li&gt;
-&lt;li&gt;Plugins&lt;/li&gt;
-&lt;li&gt;Tricks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The video is about 35 minutes. So there is quite a lot of stuff in there. I plan on making a few more videos. One about making themes and using the &lt;a href=&#34;https://github.com/PhileCMS/phileGruntThemeing&#34;&gt;phileGruntThemeing&lt;/a&gt; project, and creating plugins with the events system.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=8GLMe371RuI&#34;&gt;Watch it on YouTube&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>All About PhileCMS Video</description>
+    </item>
+    
+    <item>
+      <title>Font Awesome SVG Icons</title>
+      <link>https://ohdoylerules.com/web/font-awesome-svg-icons/</link>
+      <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/font-awesome-svg-icons/</guid>
+      <description>A sprite sheet of all the font-awesome icons from version 4.0.2</description>
     </item>
     
     <item>
@@ -583,12 +638,7 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Fri, 24 Jan 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/groupon-green-logo-svg/</guid>
-      <description>&lt;p&gt;Lo and behold, a new vector. This one is for the Groupon logo. This is actually based on another logo that was black. It wasn&amp;rsquo;t very nice, so I picked the Groupon greens from their site and applied them to the background gradient. I also removed the gaudy font gradient and left them as flat white.&lt;/p&gt;
-&lt;p&gt;Below is the source SVG for download.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/groupon.svg&#34; title=&#34;groupon svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;groupon svg vector&#34; src=&#34;https://ohdoylerules.com/images/groupon.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-</description>
+      <description>groupon logo in vector svg</description>
     </item>
     
     <item>
@@ -597,17 +647,34 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/chrome-reverse-geocode/</guid>
-      <description>&lt;p&gt;I have created a new app (with the help of &lt;a href=&#34;https://twitter.com/beatricelaw&#34;&gt;Beatrice Law&lt;/a&gt;) called &lt;a href=&#34;http://goo.gl/Z15Teh&#34; title=&#34;Reverse Geocode on the Chrome Web Store&#34;&gt;Reverse Geocode&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;In the process of building the site for &lt;a href=&#34;http://textbooksforchange.ca/&#34;&gt;Textbooks For Change&lt;/a&gt;, a &lt;a href=&#34;http://warpaintmedia.ca&#34;&gt;WARPAINT Media&lt;/a&gt; client, I realized I needed an easy way for them to reverse geocode an address for their map listings.&lt;/p&gt;
-&lt;p&gt;The site is built on &lt;a href=&#34;http://philecms.github.io/Phile/&#34;&gt;PhileCMS&lt;/a&gt; so it is very fast, but requires a little more savvy-ness than normal. I added the static Google Map that is based on the list of coordinates they enter in.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;http://goo.gl/Z15Teh&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;chrome reverse geocode app screenshot&#34; src=&#34;https://ohdoylerules.com/images/reverse-geocode.png&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;It is very easy to update, but not quite that easy to get the coordinates. There is a Google tool to do this, but it is actually not as nice (but I have an obvious bias).&lt;/p&gt;
-&lt;p&gt;The app allows you to enter in an address, then they app goes and gets the latitude and longitude. Then, because this is a &lt;a href=&#34;http://developer.chrome.com/apps/about_apps.html&#34;&gt;Chrome Packaged App&lt;/a&gt;, you can copy it right to your clipboard with a single click!&lt;/p&gt;
-&lt;p&gt;You can download the app on the &lt;a href=&#34;http://goo.gl/Z15Teh&#34; title=&#34;Reverse Geocode on the Chrome Web Store&#34;&gt;Chrome Web Store&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The app &lt;a href=&#34;https://github.com/WARPAINTMedia/chrome-reverse-geocode&#34; title=&#34;Reverse Geocode on Github&#34;&gt;is also on github&lt;/a&gt; so anyone can submit some changes and improvements.&lt;/p&gt;
-</description>
+      <description>Chrome Reverse Geocode App</description>
+    </item>
+    
+    <item>
+      <title>IICRC Vector Logo</title>
+      <link>https://ohdoylerules.com/web/iicrc-vector-logo/</link>
+      <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/iicrc-vector-logo/</guid>
+      <description>IICRC Vector Logo</description>
+    </item>
+    
+    <item>
+      <title>List File Permission Numbers</title>
+      <link>https://ohdoylerules.com/snippets/list-file-permission-numbers/</link>
+      <pubDate>Sun, 08 Dec 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/list-file-permission-numbers/</guid>
+      <description>Easily list the chmod numbers for all the files in a folder</description>
+    </item>
+    
+    <item>
+      <title>Easy Command Line Reverse Geocoding</title>
+      <link>https://ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</link>
+      <pubDate>Wed, 27 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/easy-command-line-reverse-geocoding/</guid>
+      <description>Easily reverse geocode an address using the command line and the google maps API</description>
     </item>
     
     <item>
@@ -616,94 +683,43 @@ mv luvit /usr/local/bin/luvit
       <pubDate>Mon, 25 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/grunt-highlight/</guid>
-      <description>&lt;p&gt;Over the weekend, in a couple hours, I wrote this grunt plugin for &lt;a href=&#34;http://highlightjs.org&#34;&gt;Highlight.js&lt;/a&gt;. I know that &lt;a href=&#34;https://github.com/chjj/marked&#34;&gt;marked&lt;/a&gt; does an excellent job of parsing markdown, and can also use highlight, but I wanted something I could use in &lt;a href=&#34;https://github.com/assemble/assemble/&#34;&gt;assemble&lt;/a&gt; for HTML parsing or full css/js files.&lt;/p&gt;
-&lt;p&gt;This was made much easier thanks to the &lt;a href=&#34;https://github.com/yeoman/generator-gruntplugin&#34;&gt;yeoman-gruntplugin&lt;/a&gt; project.&lt;/p&gt;
-&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
-&lt;p&gt;This plugin requires Grunt.&lt;/p&gt;
-&lt;p&gt;If you haven&amp;rsquo;t used &lt;a href=&#34;http://gruntjs.com/&#34;&gt;Grunt&lt;/a&gt; before, be sure to check out the &lt;a href=&#34;http://gruntjs.com/getting-started&#34;&gt;Getting Started&lt;/a&gt; guide, as it explains how to create a &lt;a href=&#34;http://gruntjs.com/sample-gruntfile&#34;&gt;Gruntfile&lt;/a&gt; as well as install and use Grunt plugins. Once you&amp;rsquo;re familiar with that process, you may install this plugin with this command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;npm install grunt-highlight --save-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;grunt.loadNpmTasks(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;grunt-highlight&amp;#39;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;the-highlight-task&#34;&gt;The &amp;ldquo;highlight&amp;rdquo; task&lt;/h3&gt;
-&lt;h4 id=&#34;overview&#34;&gt;Overview&lt;/h4&gt;
-&lt;p&gt;In your project&amp;rsquo;s Gruntfile, add a section named &lt;code&gt;highlight&lt;/code&gt; to the data object passed into &lt;code&gt;grunt.initConfig()&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;grunt.initConfig({
-  highlight&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-    task&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-      options&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        &lt;span style=&#34;color:#6272a4&#34;&gt;// Task-specific options go here.
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;      },
-      your_target&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        &lt;span style=&#34;color:#6272a4&#34;&gt;// Target-specific file lists and/or options go here.
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;      }
-    }
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;options&#34;&gt;Options&lt;/h4&gt;
-&lt;h5 id=&#34;optionslang&#34;&gt;options.lang&lt;/h5&gt;
-&lt;p&gt;Type: &lt;code&gt;Boolean&lt;/code&gt;
-Default value: &lt;code&gt;false&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If you know the highlight language, use this.&lt;/p&gt;
-&lt;h5 id=&#34;optionsusecheerio&#34;&gt;options.useCheerio&lt;/h5&gt;
-&lt;p&gt;Type: &lt;code&gt;Boolean&lt;/code&gt;
-Default value: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;You target files are HTML and you want to parse over them and highlight code blocks. &lt;em&gt;Turn off for raw code input&lt;/em&gt;.&lt;/p&gt;
-&lt;h5 id=&#34;optionsselector&#34;&gt;options.selector&lt;/h5&gt;
-&lt;p&gt;Type: &lt;code&gt;Boolean&lt;/code&gt;
-Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This is what cheerio will be looking for as code block in your HTML. &lt;em&gt;Only used when useCheerio is true&lt;/em&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;usage-examples&#34;&gt;Usage Examples&lt;/h4&gt;
-&lt;h5 id=&#34;default-options&#34;&gt;Default Options&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;grunt.initConfig({
-  highlight&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-    task&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-      options&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {},
-      files&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;dest/out.html&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;src/in.html&amp;#39;&lt;/span&gt;],
-      }
-    }
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;full-code-files&#34;&gt;Full Code Files&lt;/h5&gt;
-&lt;p&gt;If you want to highlight an entire file then use the following:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;grunt.initConfig({
-  highlight&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-    task&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-      options&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        useCheerio&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
-        lang&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;javascript&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#6272a4&#34;&gt;// treat the file as a javascript file
-&lt;/span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;      },
-      files&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;dest/highlighted.html&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;src/bunch-o-javascript.js&amp;#39;&lt;/span&gt;],
-      }
-    }
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;many-files&#34;&gt;Many Files&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;grunt.initConfig({
-  highlight&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-    scripts&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-      options&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        useCheerio&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
-        lang&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;javascript&amp;#39;&lt;/span&gt;
-      },
-      files&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;javascript.html&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;src/script.js&amp;#39;&lt;/span&gt;]
-      }
-    },
-    styles&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-      options&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        useCheerio&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
-        lang&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;css&amp;#39;&lt;/span&gt;
-      },
-      files&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;stylesheet.html&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;src/style.css&amp;#39;&lt;/span&gt;]
-      }
-    }
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check out the project &lt;a href=&#34;https://github.com/james2doyle/grunt-highlight&#34;&gt;on github&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Grunt task for running Highlight.js over files or blocks of code</description>
+    </item>
+    
+    <item>
+      <title>Decrypt-Encrypt Functions From Command Line</title>
+      <link>https://ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/openssl-encrypt-decrypt-functions/</guid>
+      <description>Functions to encrypt and then decrypt files from the command line with OpenSSL</description>
+    </item>
+    
+    <item>
+      <title>Get Wordpress via Command Line</title>
+      <link>https://ohdoylerules.com/snippets/wordpress-via-command-line/</link>
+      <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/wordpress-via-command-line/</guid>
+      <description>Download and unzip the latest Wordpress version, all via command line</description>
+    </item>
+    
+    <item>
+      <title>HostMonster PHPMailer Settings</title>
+      <link>https://ohdoylerules.com/snippets/hostmonster-phpmailer/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/hostmonster-phpmailer/</guid>
+      <description>How to setup PHPMailer on a HostMonster hosting server</description>
+    </item>
+    
+    <item>
+      <title>GoDaddy Email on Digital Ocean</title>
+      <link>https://ohdoylerules.com/demo/godaddy-digital-ocean/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/godaddy-digital-ocean/</guid>
+      <description>How to use GoDaddy Email on Digital Ocean</description>
     </item>
     
     <item>
@@ -712,30 +728,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Sun, 17 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/github-wiki-to-html/</guid>
-      <description>&lt;p&gt;Have you ever wanted to convert a Github wiki to a set of HTML pages? This can be an easy way to generate new gh-pages (github web pages) based on the projects Wiki.&lt;/p&gt;
-&lt;p&gt;As of &lt;a href=&#34;https://github.com/blog/699-making-github-more-open-git-backed-wikis&#34;&gt;August 2010&lt;/a&gt;, you can actually clone a repositories wiki to your local machine just by adding .wiki at the end.&lt;/p&gt;
-&lt;p&gt;This pulls down all the wiki pages in their current format, by default this is &lt;code&gt;.md&lt;/code&gt; files.&lt;/p&gt;
-&lt;p&gt;Now what can you do with these files? Well how about converting them to HTML so that you can use them in your gh-pages repo?&lt;/p&gt;
-&lt;p&gt;After cloning the &lt;em&gt;.wiki&lt;/em&gt; repo to your local, you can create a script to convert all the files to HTML.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;first &lt;a href=&#34;https://github.com/chjj/marked&#34;&gt;install marked globally&lt;/a&gt; via NPM&lt;/li&gt;
-&lt;li&gt;make a directory called &lt;code&gt;html&lt;/code&gt; in the root of the repo&lt;/li&gt;
-&lt;li&gt;create a file called &lt;code&gt;convert.sh&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;run &lt;code&gt;chmod +x convert.sh&lt;/code&gt; on that file to allow execution&lt;/li&gt;
-&lt;li&gt;paste the following into the file:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#6272a4&#34;&gt;# for each md file in the directory&lt;/span&gt;
-&lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; file in *.md
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;do&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;# convert each file to html and place it in the html directory&lt;/span&gt;
-    &lt;span style=&#34;color:#6272a4&#34;&gt;# --gfm == use github flavoured markdown&lt;/span&gt;
-    marked -o html/&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$file&lt;/span&gt;.html &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;$file&lt;/span&gt; --gfm
-&lt;span style=&#34;color:#ff79c6&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now if you look in the &lt;code&gt;html&lt;/code&gt; directory, you will see all the markdown files have been converted and are in that folder.&lt;/p&gt;
-&lt;p&gt;In the next week or so, I will write a new post about how to use this method and the &lt;a href=&#34;https://github.com/assemble/assemble&#34; title=&#34;Grunt Assemble Project&#34;&gt;grunt assemble&lt;/a&gt; plugin to make simple pages.&lt;/p&gt;
-</description>
+      <description>Github Wiki To HTML</description>
     </item>
     
     <item>
@@ -744,30 +737,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/phile-cms/</guid>
-      <description>&lt;p&gt;After being a upset at the progress with Pico, myself and a developer from Germany(&lt;a href=&#34;https://twitter.com/neoblack&#34; title=&#34;Frank Twitter&#34;&gt;Frank&lt;/a&gt;) have developed a fork project.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;http://philecms.github.io/Phile/&#34; title=&#34;PhileCMS Homepage&#34;&gt;
-    &lt;img src=&#34;https://ohdoylerules.com/images/phile-logo.png&#34; alt=&#34;PhileCMS Logo&#34;&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;The project is &lt;a href=&#34;http://philecms.github.io/Phile/&#34; title=&#34;PhileCMS Homepage&#34;&gt;PhileCMS&lt;/a&gt;. It maintains the philosophy of Pico, being fast and small, but it makes a lot of improvements on the core. Most the project is now OOP based with classes and models.&lt;/p&gt;
-&lt;p&gt;Also the parser and the template engine have been pushed into services. Which means they can be overloaded and replaced with different ones. Don&amp;rsquo;t like Markdown? Use a plugin for TextTile instead. Don&amp;rsquo;t like &lt;a href=&#34;twig.sensiolabs.org&#34;&gt;Twig&lt;/a&gt;? Replace it with &lt;a href=&#34;https://github.com/pyrocms/lex&#34;&gt;Lex&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;The hooks system was completely replaced with an Evented system. The plugins have also changed. They now have a config.php file that is used instead of having to write your own file reader for each plugin.&lt;/p&gt;
-&lt;h3 id=&#34;so-why-use-this-over-pico&#34;&gt;So why use this over Pico?&lt;/h3&gt;
-&lt;p&gt;Here is a small list of differences in design from Pico:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;OOP based (Classes)&lt;/li&gt;
-&lt;li&gt;Events system&lt;/li&gt;
-&lt;li&gt;Parser Overloading&lt;/li&gt;
-&lt;li&gt;Template Engine Overloading&lt;/li&gt;
-&lt;li&gt;Performance Improvements (&lt;em&gt;33% to 65% speed increase&lt;/em&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The main increase in speed is when there are multiple pages. Once you get to 20 pages you see a minumum of a 50% increase in load times.&lt;/p&gt;
-&lt;p&gt;I have actually converted this site to run on Phile. It is probably the first site in production to be using it. I also use the &lt;a href=&#34;https://github.com/PhileCMS/Sundown-Parser-Plugin&#34;&gt;Sundown Plugin&lt;/a&gt; I wrote since I have &lt;a href=&#34;https://github.com/chobie/php-sundown&#34;&gt;PHP-Sundown&lt;/a&gt; installed on my server.&lt;/p&gt;
-&lt;p&gt;Anyway, check out the project. It is pretty cool and I am very happy with the work of Frank.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/PhileCMS/Phile&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://philecms.github.io/Phile/&#34; title=&#34;PhileCMS Homepage&#34;&gt;Homepage&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Phile is flat-file CMS based on Pico</description>
     </item>
     
     <item>
@@ -776,11 +746,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/google-drive-svg-logo/</guid>
-      <description>&lt;p&gt;Recently we needed a bunch of vector logos for a blog post. So again, in typical fashion, I had to craft a vector logo from scratch. Luckily the Google Drive logo is pretty simple. Just 3 shapes. All trapezoids (?).&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/google-drive.svg&#34; target=&#34;_blank&#34; title=&#34;google drive svg vector&#34;&gt;&lt;img width=&#34;300&#34; alt=&#34;google drive svg vector&#34; src=&#34;https://ohdoylerules.com/images/google-drive.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-</description>
+      <description>Google Drive Flat SVG Logo</description>
     </item>
     
     <item>
@@ -789,12 +755,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Thu, 31 Oct 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/docracy-logo-svg/</guid>
-      <description>&lt;p&gt;The other founder of my company (&lt;a href=&#34;http://warpaintmedia.ca&#34; title=&#34;WARPAINT Media Homepage&#34;&gt;WARPAINT Media&lt;/a&gt;) was working on a blog post where we list all the PAAS/SAAS tools that we use. One of them is &lt;a href=&#34;https://www.docracy.com/&#34; title=&#34;Docracy Homepage&#34;&gt;Docracy&lt;/a&gt;. It is a site that shares free legal documents. You can modify and fork them to your own account, they have signing features as well.&lt;/p&gt;
-&lt;p&gt;Well again, I was unable to find the vector logo of their icon. So in my typical fashion, I recreated it. You can see it below.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/docracy.svg&#34; title=&#34;docracy svg vector&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;docracy svg vector&#34; src=&#34;https://ohdoylerules.com/images/docracy.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-</description>
+      <description>Docracy logo in vector svg</description>
     </item>
     
     <item>
@@ -803,48 +764,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/assemble-starter/</guid>
-      <description>&lt;p&gt;Assemble starter is my starting point for any of my static &lt;a href=&#34;http://assemble.io/&#34; title=&#34;Grunt Assemble Homepage&#34;&gt;assemble sites&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can find the &lt;a href=&#34;https://github.com/james2doyle/assemble-starter&#34; title=&#34;Assemble Starter Repo&#34;&gt;project on Github&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I often use assemble when I am building themes. The reason being you can do quick templating (thanks to &lt;a href=&#34;http://handlebarsjs.com/&#34; title=&#34;Handlebars Homepage&#34;&gt;Handlebars&lt;/a&gt;), it compiles fast, requires no server, and I am using &lt;a href=&#34;http://gruntjs.com/&#34; title=&#34;Grunt Homepage&#34;&gt;Grunt&lt;/a&gt; anyway.&lt;/p&gt;
-&lt;p&gt;Extra grunt tasks:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;grunt-contrib-watch &amp;ndash; &lt;em&gt;live reload and compiles on save&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;grunt-sass &amp;ndash; &lt;em&gt;C lib SASS action&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;grunt-contrib-concat &amp;ndash; &lt;em&gt;combine things&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;grunt-autoprefixer &amp;ndash; &lt;em&gt;prefix that ugliness&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Modernizr Checks:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;cssanimations&lt;/li&gt;
-&lt;li&gt;csstransforms&lt;/li&gt;
-&lt;li&gt;csstransforms3d&lt;/li&gt;
-&lt;li&gt;svg&lt;/li&gt;
-&lt;li&gt;touch&lt;/li&gt;
-&lt;li&gt;shiv&lt;/li&gt;
-&lt;li&gt;cssclasses&lt;/li&gt;
-&lt;li&gt;teststyles&lt;/li&gt;
-&lt;li&gt;testprop&lt;/li&gt;
-&lt;li&gt;testallprops&lt;/li&gt;
-&lt;li&gt;prefixes&lt;/li&gt;
-&lt;li&gt;domprefixes&lt;/li&gt;
-&lt;li&gt;css_filters&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Other Libs:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://swipejs.com/&#34; title=&#34;Swipe.js Homepage&#34;&gt;swipe.js&lt;/a&gt; &amp;ndash; &lt;em&gt;awesome slider lib&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://github.com/james2doyle/saltjs&#34;&gt;salt.js&lt;/a&gt; &amp;ndash; &lt;em&gt;my micro selector lib&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Javascript Goodies:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;prefix() &amp;ndash; &lt;em&gt;detect the js/css prefixes for different browsers&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;xhr() &amp;ndash; &lt;em&gt;function for no-jQuery AJAX&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;CSS Goodies:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;normalize.scss&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You can find the &lt;a href=&#34;https://github.com/james2doyle/assemble-starter&#34; title=&#34;Assemble Starter Repo&#34;&gt;project on Github&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Assemble for Grunt.js Starter template</description>
     </item>
     
     <item>
@@ -853,20 +773,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Wed, 18 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pico-download-plugin/</guid>
-      <description>&lt;p&gt;I created a plugin to force files to download in &lt;a href=&#34;http://pico.dev7studios.com&#34;&gt;PicoCMS&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I needed this because I wanted to PDFs to download and not just render in the browser.&lt;/p&gt;
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-&lt;p&gt;Place your files in the content folder. Then replace the word &lt;code&gt;content/&lt;/code&gt; in the url with the word &lt;code&gt;download/&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The download folder can be controlled in the plugin file. Default for downloading is &lt;code&gt;content/&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-&lt;p&gt;If you wanted to render the file in the browser:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;http://localhost:8888/Pico/content/sub/page.md&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Now with this plugin installed, you can force a download:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;http://localhost:8888/Pico/download/sub/page.md&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;more-info&#34;&gt;More info&lt;/h3&gt;
-&lt;p&gt;I have added quite a few comments in the plugin so just take a look. It&amp;rsquo;s nothing new, just bringing different snippets together.&lt;/p&gt;
-&lt;p&gt;You can find the project &lt;a href=&#34;https://github.com/james2doyle/pico_download&#34; title=&#34;james2doyle/pico_download&#34;&gt;here on Github&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>I created a plugin to force files to download in PicoCMS</description>
     </item>
     
     <item>
@@ -875,44 +782,16 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pico-useragent/</guid>
-      <description>&lt;p&gt;I created another plugin for &lt;a href=&#34;http://pico.dev7studios.com/&#34;&gt;Pico CMS&lt;/a&gt;. It is esentially a clone of my &lt;a href=&#34;https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin&#34;&gt;pyro-sniffer-plugin&lt;/a&gt; for &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;Pyro CMS Homepage&#34;&gt;PyroCMS&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/james2doyle/pico_useragent&#34;&gt;Github project&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This plugin allows you to parse the user agent of the current visitor and then expose that information in an easy to use variable in your twig templates.&lt;/p&gt;
-&lt;p&gt;Hopefully that makese sense.&lt;/p&gt;
-&lt;h3 id=&#34;output&#34;&gt;Output&lt;/h3&gt;
-&lt;p&gt;When using the plugin, you get a new variable called &lt;code&gt;browser&lt;/code&gt;. The browser variable has the following properties in it when dumped from my computer:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$browser = array (
-  &amp;#39;useragent&amp;#39;   =&amp;gt; &amp;#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.37 Safari/537.36&amp;#39; // full ua string
-  &amp;#39;name&amp;#39;        =&amp;gt; &amp;#39;Google Chrome&amp;#39; // name of the browser
-  &amp;#39;browser&amp;#39;     =&amp;gt; &amp;#39;google-chrome&amp;#39; // CSS safe browser name
-  &amp;#39;version&amp;#39;     =&amp;gt; &amp;#39;30.0.1599.37&amp;#39; // bowser version
-  &amp;#39;type&amp;#39;        =&amp;gt; &amp;#39;desktop&amp;#39; // device form factor
-  &amp;#39;platform&amp;#39;    =&amp;gt; &amp;#39;mac&amp;#39; // OS platform
-  &amp;#39;pattern&amp;#39;     =&amp;gt; &amp;#39;#(?Version|Chrome|other)[/ ]+(?[0-9.|a-zA-Z.]*)#&amp;#39; // match pattern
-);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
-&lt;p&gt;I use this example when I want to make small modifications to my CSS. Not unlike how Modernizr is supposed to work. Except modernizr doesn&amp;rsquo;t give you browser information.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#ff79c6&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;\{\{ browser.browser \}\} \{\{ browser.platform \}\} \{\{ browser.type \}\}&amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is the output for that html tag:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#ff79c6&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;google-chrome mac desktop&amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I usually use it to normalize issues across different browsers. Like something looking weird in Firefox, so I know I can modify some CSS by using a &lt;code&gt;.firefox&lt;/code&gt; parent.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;.&lt;span style=&#34;color:#50fa7b&#34;&gt;button&lt;/span&gt; {
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;padding&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0.25&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;em&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;em&lt;/span&gt;;
-}
-&lt;span style=&#34;color:#6272a4&#34;&gt;/* fix padding in FF */&lt;/span&gt;
-.&lt;span style=&#34;color:#50fa7b&#34;&gt;firefox&lt;/span&gt; .&lt;span style=&#34;color:#50fa7b&#34;&gt;button&lt;/span&gt; {
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;padding&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0.28&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;em&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;em&lt;/span&gt;;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;conditional content&lt;/li&gt;
-&lt;li&gt;conditional styles/scripts&lt;/li&gt;
-&lt;li&gt;layout modifications&lt;/li&gt;
-&lt;li&gt;serving specific images&lt;/li&gt;
-&lt;li&gt;Modernizr-esque CSS classes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/james2doyle/pico_useragent&#34;&gt;Github project&lt;/a&gt; again.&lt;/p&gt;
-</description>
+      <description>A plugin for pico that allows you to list the useragent</description>
+    </item>
+    
+    <item>
+      <title>compare multiple md5 hashes</title>
+      <link>https://ohdoylerules.com/snippets/compare-multiple-md5-hashes/</link>
+      <pubDate>Sun, 15 Sep 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/compare-multiple-md5-hashes/</guid>
+      <description>compare multiple md5 hashes</description>
     </item>
     
     <item>
@@ -921,33 +800,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Mon, 09 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/jquery-doodal-js/</guid>
-      <description>&lt;p&gt;jQuery.doodal.js is a very simplistic modal plugin for jQuery. It has custom events, allows stacking, and is powered by CSS transitions&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://james2doyle.github.io/jquery.doodal.js/&#34;&gt;See the demo&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-&lt;p&gt;Instatiate a new doodal.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$(&#39;.doodal&#39;).doodal({
-  type: &#39;modal&#39;,
-  closeclass: &#39;.doodal-close&#39;,
-  trueclass: &#39;.doodal-true&#39;,
-  falseclass: &#39;.doodal-false&#39;,
-  showclass: &#39;showing&#39;
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Those are all the default options so in this specific example I am not actually overwriting anything.&lt;/p&gt;
-&lt;p&gt;Now trigger an &lt;code&gt;open&lt;/code&gt; to see it:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$(&#39;#doodal1&#39;).trigger(&#39;open&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;custom-events&#34;&gt;Custom Events&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;open&lt;/em&gt;: - when the modal starts to open&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;afteropen&lt;/em&gt;: - after the animation is over and it is open&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;ontrue&lt;/em&gt;: - for confirms yes button&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;onfalse&lt;/em&gt;: - for confirms no button&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;close&lt;/em&gt;: - when the close is clicked&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;afterclose&lt;/em&gt;: - after the animation is over and it is hidden&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You can also view the &lt;a href=&#34;https://github.com/james2doyle/jquery.doodal.js&#34;&gt;project on Github&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>jQuery-doodal-js</description>
     </item>
     
     <item>
@@ -956,66 +809,25 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Sun, 08 Sep 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/grunt-sundown/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;grunt-sundown&lt;/strong&gt; is a wrapper for &lt;a href=&#34;https://github.com/benmills/robotskirt&#34;&gt;robotskirt&lt;/a&gt;(&lt;a href=&#34;https://github.com/vmg/sundown&#34;&gt;Sundown&lt;/a&gt;) - a C implementation of &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
-&lt;p&gt;This plugin requires Grunt &lt;code&gt;~0.4.1&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If you haven&amp;rsquo;t used &lt;a href=&#34;http://gruntjs.com/&#34;&gt;Grunt&lt;/a&gt; before, be sure to check out the &lt;a href=&#34;http://gruntjs.com/getting-started&#34;&gt;Getting Started&lt;/a&gt; guide, as it explains how to create a &lt;a href=&#34;http://gruntjs.com/sample-gruntfile&#34;&gt;Gruntfile&lt;/a&gt; as well as install and use Grunt plugins. Once you&amp;rsquo;re familiar with that process, you may install this plugin with this command:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install grunt-sundown --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;grunt.loadNpmTasks(&#39;grunt-sundown&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You can find the project &lt;a href=&#34;https://github.com/james2doyle/grunt-sundown&#34; title=&#34;grunt-sundown on Github&#34;&gt;on Github&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;the-sundown-task&#34;&gt;The &amp;ldquo;sundown&amp;rdquo; task&lt;/h3&gt;
-&lt;h4 id=&#34;overview&#34;&gt;Overview&lt;/h4&gt;
-&lt;p&gt;In your project&amp;rsquo;s Gruntfile, add a section named &lt;code&gt;sundown&lt;/code&gt; to the data object passed into &lt;code&gt;grunt.initConfig()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;grunt.initConfig({
-  sundown: {
-    target: {
-      options: {
-        extensions: {
-          fenced_code: true
-        },
-        render_flags: {
-          skip_html: true
-        }
-      },
-      files: {
-        &#39;output.html&#39;: [&#39;input1.md&#39;, &#39;input2.md&#39;]
-      }
-    }
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;options&#34;&gt;Options&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;options: {
-  extensions: {
-    autolink: false,
-    fenced_code: false,
-    lax_html_blocks: false,
-    no_intra_emphasis: false,
-    space_headers: false,
-    strikethrough: false,
-    tables: false
-  },
-  render_flags: {
-    skip_html: false,
-    skip_style: false,
-    skip_images: false,
-    skip_links: false,
-    expand_tabs: false,
-    safelink: false,
-    toc: false,
-    hard_wrap: false,
-    use_xhtml: false,
-    escape: false
-  },
-  separator: &#39;\n\n&#39; // concat option for multiple files
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;more-information&#34;&gt;More Information&lt;/h4&gt;
-&lt;p&gt;You can try your luck on the &lt;a href=&#34;https://github.com/vmg/sundown&#34;&gt;Sundown&lt;/a&gt; homepage. Or check out some of the &lt;a href=&#34;https://github.com/vmg/sundown#bindings&#34;&gt;other wrappers&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Grunt Sundown</description>
+    </item>
+    
+    <item>
+      <title>Simple HTML5 Notifications</title>
+      <link>https://ohdoylerules.com/snippets/simple-html5-notification/</link>
+      <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/simple-html5-notification/</guid>
+      <description>Simple HTML5 Notifications</description>
+    </item>
+    
+    <item>
+      <title>Render PHP File With Data</title>
+      <link>https://ohdoylerules.com/snippets/render-php-with-data/</link>
+      <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/render-php-with-data/</guid>
+      <description>Render PHP File With Data</description>
     </item>
     
     <item>
@@ -1024,17 +836,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Thu, 08 Aug 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pyro-twitter-widget/</guid>
-      <description>&lt;p&gt;I created another widget for PyroCMS. This one is for Twitter. I didn&amp;rsquo;t find one that I liked or thought was very good, so I created my own. This widget actually uses a 3rd party sub-module, for the Twitter authentication, called &lt;a href=&#34;https://github.com/J7mbo/twitter-api-php&#34; title=&#34;J7mbo/twitter-api-php&#34;&gt;twitter-api-php&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here are the current supported (basically just tested) API endpoints:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;statuses/mentions_timeline&lt;/li&gt;
-&lt;li&gt;statuses/user_timeline&lt;/li&gt;
-&lt;li&gt;statuses/home_timeline&lt;/li&gt;
-&lt;li&gt;statuses/retweetsofme&lt;/li&gt;
-&lt;li&gt;favorites/list&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/james2doyle/pyro-twitter-widget&#34; title=&#34;james2doyle/pyro-twitter-widget&#34;&gt;widget on Github&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Pyro Twitter Widget</description>
     </item>
     
     <item>
@@ -1043,8 +845,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pico-get-by-filename-plugin/</guid>
-      <description>&lt;p&gt;I wrote another small plugin for PicoCMS that actually lets you load files based on the filename. I called it &lt;a href=&#34;https://github.com/james2doyle/pico_get_by_filename&#34; title=&#34;james2doyle/pico_get_by_filename&#34;&gt;pico_get_by_filename&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>I wrote another small plugin for PicoCMS that actually lets you load files based on the filename</description>
     </item>
     
     <item>
@@ -1053,11 +854,25 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/markdown-logo-vector-svg/</guid>
-      <description>&lt;p&gt;The markdown logo in SVG vector format. I found this was not that easy to find. So I whipped one up of my own.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/markdown.svg&#34; target=&#34;_blank&#34; title=&#34;Markdown Vector SVG logo&#34;&gt;&lt;img alt=&#34;Markdown Vector SVG logo&#34; src=&#34;https://ohdoylerules.com/images/markdown.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-</description>
+      <description>Markdown Logo Vector SVG</description>
+    </item>
+    
+    <item>
+      <title>CMS Watch List</title>
+      <link>https://ohdoylerules.com/web/cms-watch-list/</link>
+      <pubDate>Fri, 26 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/cms-watch-list/</guid>
+      <description>CMS Watch List</description>
+    </item>
+    
+    <item>
+      <title>The $100 Website</title>
+      <link>https://ohdoylerules.com/web/the-100-dollar-website/</link>
+      <pubDate>Tue, 23 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/the-100-dollar-website/</guid>
+      <description>I wrote a post on WARPAINT Media about people who ask about getting a website for $100.</description>
     </item>
     
     <item>
@@ -1066,10 +881,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/kube-in-stylrework/</guid>
-      <description>&lt;p&gt;I finally finished the conversion of the &lt;a href=&#34;http://imperavi.com/kube/&#34;&gt;Kube CSS Framework&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The original is written in &lt;a href=&#34;http://lesscss.org/&#34; title=&#34;LESSCSS Homepage&#34;&gt;LESS&lt;/a&gt; and I have rewrote it to work with &lt;a href=&#34;https://github.com/visionmedia/styl&#34; title=&#34;visionmedia/styl&#34;&gt;Styl&lt;/a&gt; and &lt;a href=&#34;https://github.com/visionmedia/rework&#34; title=&#34;visionmedia/rework&#34;&gt;Rework&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/kube-styl&#34; title=&#34;james2doyle/kube-styl&#34;&gt;Here is the github repo&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Kube in Styl/Rework</description>
     </item>
     
     <item>
@@ -1078,8 +890,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pico-slider-plugin/</guid>
-      <description>&lt;p&gt;I wrote a small plugin for the Pico CMS. I recently discovered a very cool PHP-based CMS called, &lt;a href=&#34;http://pico.dev7studios.com/&#34; title=&#34;Pico CMS Homepage&#34;&gt;Pico CMS&lt;/a&gt;. This CMS is a no-database flat-file CMS. It is really fast and very easy. There was no real way to handle images in the base version. So I developed a plugin that can list images in a folder. I named it pico_slider but it could probably be named pico_image_list because all it really does is expose an image array to the front-end variables. &lt;a href=&#34;https://github.com/james2doyle/pico_slider&#34; title=&#34;james2doyle/pico_slider&#34;&gt;Here it is on Github&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>a plugin for Pico that allows you to create a Slider</description>
     </item>
     
     <item>
@@ -1088,9 +899,16 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/npm-logo-svg/</guid>
-      <description>&lt;p&gt;I made a vector version of the logo for &lt;a href=&#34;http://npmjs.org&#34; title=&#34;NPM Homepage&#34;&gt;NPM&lt;/a&gt;. Here is the vector version as a SVG.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ohdoylerules.com/images/npm-logo.svg&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/npm-logo.svg&#34; alt=&#34;npm vector svg logo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>The NPM logo as a SVG</description>
+    </item>
+    
+    <item>
+      <title>Apax apache theme in htdocs</title>
+      <link>https://ohdoylerules.com/snippets/apax-in-htdocs/</link>
+      <pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/apax-in-htdocs/</guid>
+      <description>Apax apache theme in htdocs</description>
     </item>
     
     <item>
@@ -1099,158 +917,7 @@ Default value: &lt;code&gt;pre code&lt;/code&gt;&lt;/p&gt;
       <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/disqus-comments/</guid>
-      <description>&lt;p&gt;I have finally added a decent comment system to this site. I installed Disqus. It is pretty awesome. I have used it before and it is a great system. I have enabled comments on &lt;em&gt;every&lt;/em&gt; post on the site.&lt;/p&gt;
-&lt;p&gt;I may go back and turn some off but for the most part they are enabled by default. You could be really meta and comment on this post about the new comments! &lt;em&gt;wink wink!&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Pyro Github Markdown Field Type</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-github-markdown/</link>
-      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
-      <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-github-markdown/</guid>
-      <description>&lt;p&gt;Github flavoured markdown field type for PyroCMS.&lt;/p&gt;
-&lt;p&gt;Here is the link to the &lt;a href=&#34;https://github.com/james2doyle/pyro-github-markdown&#34; title=&#34;pyro-github-markdown field type&#34;&gt;Github
-Repo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Most of the work for this repo is taken from &lt;a href=&#34;https://github.com/evansolomon/wp-github-flavored-markdown-comments&#34;&gt;GitHub-Flavored Markdown Comments&lt;/a&gt; plugin for Wordpress. That repository is also based on &lt;a href=&#34;https://github.com/michelf/php-markdown/&#34;&gt;Michel Fortin&amp;rsquo;s PHP markdown library&lt;/a&gt; with added features from &lt;a href=&#34;https://github.com/github/github-flavored-markdown&#34;&gt;GitHub-flavored Markdown&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;All I did was just bring it all together and make it play nice with
-Pyro.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;usageusage&#34;&gt;&lt;a href=&#34;#usage&#34;&gt;&lt;/a&gt;Usage&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Install the field type as normal.&lt;/li&gt;
-&lt;li&gt;Add the field type to a page type or stream&lt;/li&gt;
-&lt;li&gt;Enter in your sexy Github Markdown&lt;/li&gt;
-&lt;li&gt;Just use &amp;ldquo;the_field_slug&amp;rdquo; to render the HTML&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;examplesexamples&#34;&gt;&lt;a href=&#34;#examples&#34;&gt;&lt;/a&gt;Examples&lt;/h3&gt;
-&lt;p&gt;Input:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{.prettyprint&#34; data-lang=&#34;{.prettyprint&#34;&gt;GitHub-Flavored Markdown Comments
-=============================
-
-Based on [Michel Fortin&#39;s PHP markdown library](https://github.com/michelf/php-markdown/) with added features from [GitHub-flavored Markdown](https://github.com/github/github-flavored-markdown).
-
-* Single linebreaks are treated as new paragraphs
-* Code &amp;quot;fencing&amp;quot; with three backticks (```)
-
-### Heading 3
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;\&lt;/p&gt;
-&lt;p&gt;Output:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{.prettyprint&#34; data-lang=&#34;{.prettyprint&#34;&gt;&amp;lt;h1&amp;gt;GitHub-Flavored Markdown Comments&amp;lt;/h1&amp;gt;
-
-&amp;lt;p&amp;gt;Based on &amp;lt;a href=&amp;quot;https://github.com/michelf/php-markdown/&amp;quot;&amp;gt;Michel Fortin&#39;s PHP markdown library&amp;lt;/a&amp;gt; with added features from &amp;lt;a href=&amp;quot;https://github.com/github/github-flavored-markdown&amp;quot;&amp;gt;GitHub-flavored Markdown&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
-
-&amp;lt;ul&amp;gt;
-&amp;lt;li&amp;gt;Single linebreaks are treated as new paragraphs&amp;lt;/li&amp;gt;
-&amp;lt;li&amp;gt;Code &amp;quot;fencing&amp;quot; with three backticks (```)&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-
-&amp;lt;h3&amp;gt;Heading 3&amp;lt;/h3&amp;gt;
-
-&amp;lt;p&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&amp;lt;/p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;more-infomore-info&#34;&gt;&lt;a href=&#34;#more-info&#34;&gt;&lt;/a&gt;More Info!&lt;/h3&gt;
-&lt;p&gt;If you need to know more about the caveats of this plugin, please &lt;a href=&#34;https://github.com/evansolomon/wp-github-flavored-markdown-comments/blob/master/README.md&#34;&gt;see
-the
-README&lt;/a&gt;
-for the original lib.&lt;/p&gt;
-&lt;h3 id=&#34;update&#34;&gt;UPDATE&lt;/h3&gt;
-&lt;p&gt;I added the ability to preview your results too!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/james2doyle/pyro-github-markdown&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/write.png&#34; alt=&#34;pyro github markdown writepreview&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://github.com/james2doyle/pyro-github-markdown&#34;&gt;&lt;img src=&#34;https://ohdoylerules.com/images/preview.png&#34; alt=&#34;pyro github markdownpreview&#34;&gt;&lt;/a&gt;
-Go check out this badboy!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>PyroCMS UA Sniffer Plugin</title>
-      <link>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
-      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
-      <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
-      <description>&lt;p&gt;This plugin lets you sniff information from the user agent for use in the frontend. I use it for adding classes or conditional loading of partials and templates.&lt;/p&gt;
-&lt;p&gt;You can see the &lt;a href=&#34;https://github.com/james2doyle/pyro-sniffer-plugin&#34; title=&#34;pyro-sniffer-plugin github&#34;&gt;github repository here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This plugin is &lt;strong&gt;not&lt;/strong&gt; built on the &lt;a href=&#34;http://ellislab.com/codeigniter/user-guide/libraries/user_agent.html&#34;&gt;CodeIgniter User Agent Library&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The reason I did not use the built in CodeIgniter lib, was because Pyro is only going to have CodeIgniter for a few more months(right?!?!), and I also want to have the information returned in a different way. This plugin is pretty small and only really gets information that is helpful to be used in CSS and Javascript (CSS custom classes and js feature detection/fallbacks).&lt;/p&gt;
-&lt;p&gt;If you are looking for a plugin that uses the user agent library, check out &lt;a href=&#34;https://www.pyrocms.com/store/details/agent_plugin&#34;&gt;this plugin called Agent&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;usageusage&#34;&gt;&lt;a href=&#34;#usage&#34;&gt;&lt;/a&gt;Usage&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;body class=&amp;quot;\{\{ sniffer:get key=&amp;quot;browser|platform|type&amp;quot; \}\}&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;On my Mac running Google Chrome, this would return:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;body class=&amp;quot; google-chrome mac desktop&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;On my iPhone, this would return:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;body class=&amp;quot; apple-mobile-safari ios mobile&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;conditional-contentconditional-content&#34;&gt;&lt;a href=&#34;#conditional-content&#34;&gt;&lt;/a&gt;conditional content&lt;/h4&gt;
-&lt;p&gt;This works in 2.2/develop. Not sure about 2.3 or 2.1.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;\{\{ if \{ sniffer:get key=&amp;quot;type&amp;quot; \} == &#39;desktop&#39; \}\}
-&amp;lt;div class=&amp;quot;huge-slider&amp;quot;&amp;gt;
-  &amp;lt;div class=&amp;quot;slide&amp;quot;&amp;gt;
-    &amp;lt;img src=&amp;quot;img/kitten1.jpg&amp;quot; width=&amp;quot;1400&amp;quot; height=&amp;quot;500&amp;quot;&amp;gt;
-  &amp;lt;/div&amp;gt;
-  &amp;lt;div class=&amp;quot;slide&amp;quot;&amp;gt;
-    &amp;lt;img src=&amp;quot;img/puppy1.jpg&amp;quot; width=&amp;quot;1400&amp;quot; height=&amp;quot;500&amp;quot;&amp;gt;
-  &amp;lt;/div&amp;gt;
-  &amp;lt;div class=&amp;quot;slide&amp;quot;&amp;gt;
-    &amp;lt;img src=&amp;quot;img/snake1.jpg&amp;quot; width=&amp;quot;1400&amp;quot; height=&amp;quot;500&amp;quot;&amp;gt;
-  &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-\{\{ else \}\}
-&amp;lt;div class=&amp;quot;mobile-logo&amp;quot;&amp;gt;
-  &amp;lt;img src=&amp;quot;img/mobile-logo.png&amp;quot; width=&amp;quot;200&amp;quot; height=&amp;quot;200&amp;quot;&amp;gt;
-&amp;lt;/div&amp;gt;
-\{\{ endif \}\}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;here is the full dump of the &lt;code&gt;$results&lt;/code&gt; object for my machine:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$results = array (
-  [&#39;useragent&#39;] =&amp;gt; &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.44 Safari/537.36&#39; // full ua string
-  [&#39;name&#39;] =&amp;gt; &#39;Google Chrome&#39; // name of the browser
-  [&#39;browser&#39;] =&amp;gt; &#39;google-chrome&#39; // CSS safe browser name
-  [&#39;version&#39;] =&amp;gt; &#39;28.0.1500.44&#39; // bowser version
-  [&#39;type&#39;] =&amp;gt; &#39;desktop&#39; // device form factor
-  [&#39;platform&#39;] =&amp;gt; &#39;mac&#39; // OS platform
-  [&#39;pattern&#39;] =&amp;gt; &#39;#(?Version|Chrome|other)[/ ]+(?[0-9.|a-zA-Z.]*)#&#39; // match pattern
-);
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>rework-math</title>
-      <link>https://ohdoylerules.com/personal-project/rework-math/</link>
-      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
-      <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/rework-math/</guid>
-      <description>&lt;p&gt;I created a plugin for &lt;a href=&#34;https://github.com/visionmedia/rework&#34; title=&#34;rework&#34;&gt;Rework&lt;/a&gt; CSS preprocessor to do math. Here is the &lt;a href=&#34;https://github.com/james2doyle/rework-math&#34; title=&#34;rework-math&#34;&gt;github repo&lt;/a&gt;. It is also my first ever NPM package and it can be found on the website &lt;a href=&#34;https://npmjs.org/package/rework-math&#34; title=&#34;rework-math on NPM&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{.prettyprint&#34; data-lang=&#34;{.prettyprint&#34;&gt;/* input */
-div {
-  padding: math(5+5px);
-}
-/* output */
-div {
-  padding: 10px;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It also works with the rework-vars plugin.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{.prettyprint&#34; data-lang=&#34;{.prettyprint&#34;&gt;/* input */
-:root {
-  var-fontSize: 10px;
-}
-
-div {
-  padding: math((var(fontSize) * 2) + 10px);
-}
-
-/* output */
-:root {
-  var-fontSize: 10px;
-}
-
-div {
-  padding: 30px;
-}
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>Adding Disqus Comments to the website</description>
     </item>
     
     <item>
@@ -1259,45 +926,43 @@ div {
       <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/rework-shade/</guid>
-      <description>&lt;p&gt;I created another plugin for Rework that makes it easy to do lighten and darken functions. I called it &lt;a href=&#34;https://github.com/james2doyle/rework-shade&#34; title=&#34;rework-shade github&#34;&gt;rework-shade&lt;/a&gt;. This package is also available &lt;a href=&#34;https://npmjs.org/package/rework-shade&#34; title=&#34;rework-shade on NPM&#34;&gt;on NPM here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here is the basic usage.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{.prettyprint&#34; data-lang=&#34;{.prettyprint&#34;&gt;/* input */
-body {
-  padding: 10px;
-  background: shade(rgba(0, 0, 0, 0.5), 5);
-}
-
-/* using points */
-.stuff {
-  color: shade(rgb(0, 200, 50), 1.3);
-}
-
-.bright {
-  background: shade(#004080, 30);
-}
-
-.dark {
-  background: shade(#fff, -50);
-}
-
-/* output */
-body {
-  padding: 10px;
-  background: rgb(13, 13, 13, 0.5);
-}
-
-.stuff {
-  color: rgb(3, 203, 53, 1);
-}
-
-.bright {
-  background: rgb(77, 141, 205, 1);
-}
-
-.dark {
-  background: rgb(128, 128, 128, 1);
-}
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>A package for rework that allows a shade function</description>
+    </item>
+    
+    <item>
+      <title>rework-math</title>
+      <link>https://ohdoylerules.com/personal-project/rework-math/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/rework-math/</guid>
+      <description>I created a plugin for rework that allows you to do simple math</description>
+    </item>
+    
+    <item>
+      <title>PyroCMS UA Sniffer Plugin</title>
+      <link>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin/</guid>
+      <description>A plugin for PyroCMS that allows UA Sniffing</description>
+    </item>
+    
+    <item>
+      <title>Pyro Github Markdown Field Type</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-github-markdown/</link>
+      <pubDate>Sun, 23 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-github-markdown/</guid>
+      <description>Pyro Github Markdown Field Type</description>
+    </item>
+    
+    <item>
+      <title>grunt terminal-notifier setup</title>
+      <link>https://ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</link>
+      <pubDate>Fri, 07 Jun 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/grunt-terminal-notifier-setup/</guid>
+      <description>grunt terminal-notifier setup</description>
     </item>
     
     <item>
@@ -1306,60 +971,16 @@ body {
       <pubDate>Tue, 04 Jun 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/nudeproject/</guid>
-      <description>&lt;p&gt;NudeProject is meant to be a starting point for new landing pages, single-page sites, or even just basic mockups. The point is to get me off the ground quickly. It only provides the most basic things that I need most of the time. These include &lt;a href=&#34;http://gruntjs.com/&#34; title=&#34;gruntjs homepage&#34;&gt;grunt tasks&lt;/a&gt;, &lt;a href=&#34;http://necolas.github.io/normalize.css/&#34; title=&#34;normalize css&#34;&gt;normalized CSS&lt;/a&gt;, &lt;a href=&#34;http://modernizr.com&#34; title=&#34;modernizr&#34;&gt;modernizr&lt;/a&gt;, and a &lt;a href=&#34;https://gist.github.com/james2doyle/5659710&#34; title=&#34;modernizr-svg-replace.js&#34;&gt;SVG fallback snippet&lt;/a&gt; in javascript. Check out the project &lt;a href=&#34;https://github.com/james2doyle/nudeproject&#34; title=&#34;james2doyle/nudeproject&#34;&gt;on github&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;grunt&#34;&gt;grunt&lt;/h4&gt;
-&lt;p&gt;included grunt taks&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;clean &amp;ndash; removing files before tasks run&lt;/li&gt;
-&lt;li&gt;cssmin &amp;ndash; minify and concat css files&lt;/li&gt;
-&lt;li&gt;imagemin &amp;ndash; compress images and jpeg&lt;/li&gt;
-&lt;li&gt;svgmin &amp;ndash; compress svg files&lt;/li&gt;
-&lt;li&gt;uglify &amp;ndash; minify and concat js&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;stylesheets&#34;&gt;stylesheets&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;normalize.css&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;javascript&#34;&gt;javascript&lt;/h4&gt;
-&lt;p&gt;modernizr custom build&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;cssanimations&lt;/li&gt;
-&lt;li&gt;csstransforms&lt;/li&gt;
-&lt;li&gt;csstransforms3d&lt;/li&gt;
-&lt;li&gt;csstransitions&lt;/li&gt;
-&lt;li&gt;canvas&lt;/li&gt;
-&lt;li&gt;audio&lt;/li&gt;
-&lt;li&gt;video&lt;/li&gt;
-&lt;li&gt;localstorage&lt;/li&gt;
-&lt;li&gt;svg&lt;/li&gt;
-&lt;li&gt;touch&lt;/li&gt;
-&lt;li&gt;webgl&lt;/li&gt;
-&lt;li&gt;shiv&lt;/li&gt;
-&lt;li&gt;cssclasses&lt;/li&gt;
-&lt;li&gt;teststyles&lt;/li&gt;
-&lt;li&gt;testprop&lt;/li&gt;
-&lt;li&gt;testallprops&lt;/li&gt;
-&lt;li&gt;prefixes&lt;/li&gt;
-&lt;li&gt;domprefixes&lt;/li&gt;
-&lt;li&gt;css_boxsizing&lt;/li&gt;
-&lt;li&gt;script_async&lt;/li&gt;
-&lt;li&gt;script_defer&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>NudeProject - a starting point for simple websites</description>
     </item>
     
     <item>
-      <title>CrunchBase SVG logo</title>
-      <link>https://ohdoylerules.com/personal-project/crunchbase-svg/</link>
-      <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
+      <title>Detect Animation Events in Javascript</title>
+      <link>https://ohdoylerules.com/snippets/animation-events-in-javascript/</link>
+      <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/crunchbase-svg/</guid>
-      <description>&lt;p&gt;I needed the CrunchBase logo in a vector so I had to create it from
-scratch.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/crunchbase.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;crunchbase svg vector&#34; src=&#34;https://ohdoylerules.com/images/crunchbase.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-</description>
+      <guid>https://ohdoylerules.com/snippets/animation-events-in-javascript/</guid>
+      <description>Detect Animation Events in Javascript</description>
     </item>
     
     <item>
@@ -1368,14 +989,52 @@ scratch.&lt;/p&gt;
       <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/startup-canada-svg/</guid>
-      <description>&lt;p&gt;I had to create these SVGs for the new &lt;a href=&#34;http://spotlander.com&#34; title=&#34;Spotlander&#34;&gt;Spotlander&lt;/a&gt; website. They are 2 of them, one for the parent company; Startup Canada. The last one is for the divisions, in this case: Startup London. I figured I would share.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/startupcanada.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;startupcanada svg vector&#34; src=&#34;https://ohdoylerules.com/images/startupcanada.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;a href=&#34;https://ohdoylerules.com/images/startuplondon.svg&#34; target=&#34;_blank&#34;&gt;&lt;img alt=&#34;startuplondon svg vector&#34; src=&#34;https://ohdoylerules.com/images/startuplondon.svg&#34; &gt;&lt;/a&gt;
-&lt;/div&gt;
-</description>
+      <description>All the Startup Canada SVG logos</description>
+    </item>
+    
+    <item>
+      <title>CrunchBase SVG logo</title>
+      <link>https://ohdoylerules.com/personal-project/crunchbase-svg/</link>
+      <pubDate>Wed, 29 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/crunchbase-svg/</guid>
+      <description>CrunchBase SVG logo</description>
+    </item>
+    
+    <item>
+      <title>Modernizr SVG Fallback to PNG</title>
+      <link>https://ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</link>
+      <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/modernizr-svg-fallback-to-png/</guid>
+      <description>Modernizr SVG Fallback to PNG</description>
+    </item>
+    
+    <item>
+      <title>Custom Google Forms</title>
+      <link>https://ohdoylerules.com/web/custom-google-forms/</link>
+      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/custom-google-forms/</guid>
+      <description>I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something</description>
+    </item>
+    
+    <item>
+      <title>Salt.js micro selector library</title>
+      <link>https://ohdoylerules.com/snippets/salt-js-mirco-selector-library/</link>
+      <pubDate>Sun, 12 May 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/salt-js-mirco-selector-library/</guid>
+      <description>salt.js is micro DOM selector library. Minified, it comes in at 255 bytes</description>
+    </item>
+    
+    <item>
+      <title>CSS3 badge logo in SVG</title>
+      <link>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/css3-badge-logo-in-svg/</guid>
+      <description>CSS3 badge logo in SVG</description>
     </item>
     
     <item>
@@ -1384,36 +1043,16 @@ scratch.&lt;/p&gt;
       <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/april-2013-redesign/</guid>
-      <description>&lt;p&gt;Another redesign. This one is completely by me, with a little help from the &lt;a href=&#34;http://html5blank.com&#34; title=&#34;html5blank wordpress theme&#34;&gt;html5blank&lt;/a&gt; Wordpress template. I am using SVGs exclusively. Although I only have 2 images for the entire site, the logo and the mobile nav hamburger/menu button. I think the best part is the new code highlighter. It has some cool features.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// here is some javascript
-var item = document.getElementById(&#39;#item&#39;);
-item.style.background = &#39;red&#39;;
-item.setAttribute(&#39;data-index&#39;, 1);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There it is. If you inspect you will see something, strange. I used the new CSS3 generated content. It allows you to use element attributes as css content attributes. Here is the special CSS for prettyprint, highlighted with prettyprint. How meta.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;pre[title]:before {
-  font-family: &#39;Source Code Pro&#39;,monospace;
-  font-weight: 700;
-  display: block;
-  position: relative;
-  top: -10px;
-  left: -25px;
-  content: attr(title);
-  width: auto;
-  height: 20px;
-  color: #FFF;
-  padding: .1em 1.5em .3em;
-  background: #91B6C7;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The special part of this style is the &lt;code&gt;content: attr(title);&lt;/code&gt;. This grabs the title attribute, and its value, and sets it as the content. This is pretty cool. Also the support is high, IE7 and down. Let me know what you think in the newly enabled comments section!&lt;/p&gt;
-</description>
+      <description>Another redesign. This one is completely by me, with a little help from the html5blank Wordpress template. I am using SVGs exclusively.</description>
+    </item>
+    
+    <item>
+      <title>AngularJS Hangout - Promises Promises</title>
+      <link>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</link>
+      <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/angularjs-hangout-promises-promises/</guid>
+      <description>AngularJS Hangout - Promises Promises</description>
     </item>
     
     <item>
@@ -1422,29 +1061,7 @@ item.setAttribute(&#39;data-index&#39;, 1);
       <pubDate>Sun, 14 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/switching-to-svg-on-grey-nimbus/</guid>
-      <description>&lt;p&gt;So I recently bought the &lt;a href=&#34;http://www.bohemiancoding.com/sketch/&#34; title=&#34;Sketch Website&#34;&gt;Sketch app&lt;/a&gt; for Mac. I am using it because I don&amp;rsquo;t have illustrator. But to be honest, it is much better at doing small things. It&amp;rsquo;s been about 2 hours switching the whole thing over and I have to say it is worth it.&lt;/p&gt;
-&lt;p&gt;I also found a &lt;a href=&#34;https://github.com/svg/svgo&#34; title=&#34;svg/svgo&#34;&gt;SVG minifier&lt;/a&gt; that I will definitely be using in the future. It managed to save about 50-60% on each image. Which, for compression, is very good. After all is said and done, I saved about 10kb. Now this is not a lot but I also eliminated the use of retina.js. Which cause a second request for each image that has an @2x version. So on mobile I have made the site much faster.&lt;/p&gt;
-&lt;p&gt;Also, because of the way that FuelPHP does it&amp;rsquo;s caching, I was not able to cache the images. Because it would append a query at the end for the cache and retina.js would not be able to find the retina version. That means that any retina device would take double(approximately) requests to get the full page.&lt;/p&gt;
-&lt;p&gt;I did something I think is rather clever. What I did was, since SVG support is high, I sniffed the user agent to see if it is one of the browsers that doesn&amp;rsquo;t support SVG. Then I set a global and used that to define the extension I was going to use.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;#welcome&amp;quot;&amp;gt;
-  &amp;lt;?php echo Asset::img(&#39;nimbus&#39;.$ext, array(&amp;quot;width&amp;quot;=&amp;gt;&amp;quot;275&amp;quot;, &amp;quot;height&amp;quot;=&amp;gt;&amp;quot;57&amp;quot;, &amp;quot;alt&amp;quot;=&amp;gt;&amp;quot;Grey Nimbus Logo&amp;quot;)); ?&amp;gt;
-&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now $ext would be equal to &amp;ldquo;.png&amp;rdquo; or &amp;ldquo;.svg&amp;rdquo; depending on the browser you were in. Now the changes are live so you can see that everything is all SVG! It should also look quite pretty on retina screens. &lt;a href=&#34;http://greynimbus.com&#34; title=&#34;Grey Nimbus Website&#34;&gt;Have a look&lt;/a&gt;. The site still loads in under 1 second. Which, according to Google, is a good thing.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Pyro Swipe.js Module</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</link>
-      <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
-      <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</guid>
-      <description>&lt;p&gt;Yep, another module. This one is for the awesome &lt;a href=&#34;https://github.com/bradbirdsall/Swipe&#34; title=&#34;bradbirdsall/Swipe&#34;&gt;Swipe.js library&lt;/a&gt;. Swipe is amazing because it is touch-capable, lightweight and has no dependencies(no jQuery). This module allows users to create multiple slideshows just by choosing a folder they want to pull the images from.&lt;/p&gt;
-&lt;p&gt;Then using the modules plugin, they can call it anywhere on a page.&lt;/p&gt;
-&lt;p&gt;Here is is &lt;a href=&#34;https://github.com/james2doyle/pyro-swipe-module&#34; title=&#34;james2doyle/pyro-swipe-module&#34;&gt;on github&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;It should also make it to the PyroCMS store.&lt;/p&gt;
-</description>
+      <description>Switching to SVG for all images on my website</description>
     </item>
     
     <item>
@@ -1453,24 +1070,25 @@ item.setAttribute(&#39;data-index&#39;, 1);
       <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pyro-module-generator/</guid>
-      <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/pmgh.png&#34; alt=&#34;PyroCMS Module generator header image&#34;&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;update&#34;&gt;UPDATE&lt;/h3&gt;
-&lt;p&gt;I created a &lt;a href=&#34;http://pyromg.aws.af.cm/&#34; title=&#34;Hosted Pyro Module Generator&#34;&gt;hosted version&lt;/a&gt; of the module generator.&lt;/p&gt;
-&lt;p&gt;FINALLY!! I finished my module generator. It lets you create modules by just filling in a simple form. The module it generates can be used with 2.2. There is no support for any other version at this time.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=g7moZUqIwHU&#34; title=&#34;Pyro Module generator video&#34;&gt;See the Video&lt;/a&gt; or go to the &lt;a href=&#34;https://github.com/james2doyle/pyro-module-generator&#34; title=&#34;james2doyle/pyro-module-generator&#34;&gt;github repo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The “app” is just installed to your localhost. It uses no database and relies strictly on writing files and reading files.&lt;/p&gt;
-&lt;p&gt;It is built using &lt;a href=&#34;http://laravel.com/&#34; title=&#34;Laravel Homepage&#34;&gt;Laravel&lt;/a&gt; because Pyro is eventually going to move to Laravel. It is kind of funny that a Laravel based app is building a CodeIgniter based CMS! Hehehee.&lt;/p&gt;
-&lt;p&gt;There is a lot of extra junk in there now just because I may create a dedicated site for it. I also want to make it more dynamic for when you are creating dropdown/multiselect and radio/checkbox inputs. But that depends. Right now it can just run locally and be used/customized that way.&lt;/p&gt;
-&lt;p&gt;This is actually my fourth iteration of the generator. I created one with no framework, just straight PHP. That was rough. Then I made one with just CodeIgniter. It was a little better. Next, I went kind of crazy and made a PHP command line tool. It can actually make plugins and widgets quite nicely.&lt;/p&gt;
-&lt;p&gt;In the end I chose Laravel because I might as well start learning it and it was pretty easy to use. Sp please &lt;a href=&#34;https://github.com/james2doyle/pyro-module-generator&#34; title=&#34;james2doyle/pyro-module-generator&#34;&gt;check it out&lt;/a&gt; and help clean it up if you can.&lt;/p&gt;
-&lt;p&gt;Some little screenshots:&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/pmg1.png&#34; alt=&#34;PyroCMS Module generator input form&#34;&gt;
-  &lt;img src=&#34;https://ohdoylerules.com/images/pmg2.png&#34; alt=&#34;PyroCMS Module generator field input&#34;&gt;
-&lt;/div&gt;
-</description>
+      <description>PyroCMS Module Generator that can generate modules for pyrocms</description>
+    </item>
+    
+    <item>
+      <title>Pyro Swipe.js Module</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</link>
+      <pubDate>Sat, 13 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-swipe-js-module/</guid>
+      <description>A module for Pyro CMS that wraps up the Swipe.js Module</description>
+    </item>
+    
+    <item>
+      <title>Grey Nimbus website</title>
+      <link>https://ohdoylerules.com/portfolio/grey-nimbus-website/</link>
+      <pubDate>Thu, 11 Apr 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/grey-nimbus-website/</guid>
+      <description>My old Grey Nimbus website</description>
     </item>
     
     <item>
@@ -1479,12 +1097,25 @@ item.setAttribute(&#39;data-index&#39;, 1);
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pyro-image-select-field/</guid>
-      <description>&lt;p&gt;Another &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;PyroCMS Website&#34;&gt;PyroCMS&lt;/a&gt; field type. This one is called Image Select. Why? Because it does exactly that. It lets you select images. But wait! There is already an image field type. Yes, but that is for uploading images. Sometimes you just want to choose and image you already have. An image drop down is good for this.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;pyro image select screen3&#34; src=&#34;https://ohdoylerules.com/images/screen3.png&#34; &gt;
-&lt;/div&gt;
-&lt;p&gt;I think a nice grid with thumbnail previews is even better!! I have the project &lt;a href=&#34;https://github.com/james2doyle/pyro-image-select&#34; title=&#34;pyro image select github page&#34;&gt;hosted on github&lt;/a&gt;. It will also be submitted to the PyroCMS store.&lt;/p&gt;
-</description>
+      <description>A field for Pyro CMS that allows you to select images from your uploads</description>
+    </item>
+    
+    <item>
+      <title>jQuery Plugin Snippets for Sublime Text 2</title>
+      <link>https://ohdoylerules.com/snippets/jquery-plugin-snippets/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/jquery-plugin-snippets/</guid>
+      <description>jQuery Plugin Snippets for Sublime Text 2</description>
+    </item>
+    
+    <item>
+      <title>PHP Variables in strings</title>
+      <link>https://ohdoylerules.com/demo/php-variables-in-strings/</link>
+      <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/php-variables-in-strings/</guid>
+      <description>A list of all the ways you can put PHP Variables in strings</description>
     </item>
     
     <item>
@@ -1493,43 +1124,25 @@ item.setAttribute(&#39;data-index&#39;, 1);
       <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pyro-blurb-field/</guid>
-      <description>&lt;p&gt;I created another new field type for &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;PyroCMS Website&#34;&gt;PyroCMS&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.39-PM.png&#34; &gt;
-&lt;/div&gt;
-&lt;p&gt;This one is for doing little &amp;ldquo;blurb&amp;rdquo; sections. Essentially I keep seeing little title+image+body components. Like testimonials, user profiles, portfolio snippets. These all follow a title+image+body format. So I built a little field type to provide an easy way to manage these in your page types.&lt;/p&gt;
-&lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;pyro-blurb-field&#34; src=&#34;https://ohdoylerules.com/images/Screen-Shot-2013-03-13-at-3.38.21-PM.png&#34; &gt;
-&lt;/div&gt;
-&lt;p&gt;I also put the &lt;a href=&#34;https://github.com/james2doyle/pyro-blurb-field&#34; title=&#34;pyro-blurb field github&#34;&gt;project on github&lt;/a&gt; so that you can see it. It will also be on the PyroCMS Store.&lt;/p&gt;
-</description>
+      <description>A field for Pyrocms that allows you to create little blurbs in a list</description>
     </item>
     
     <item>
-      <title>canadian-provinces-field</title>
+      <title>Canadian Provinces Field</title>
       <link>https://ohdoylerules.com/personal-project/canadian-provinces-field/</link>
       <pubDate>Fri, 15 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/canadian-provinces-field/</guid>
-      <description>&lt;p&gt;Created another &lt;a href=&#34;http://pyrocms.com&#34; title=&#34;PyroCMS website&#34;&gt;PyroCMS&lt;/a&gt; field.
-This one is for Canadian Provinces and Territories. Here is &lt;a href=&#34;https://github.com/james2doyle/canadian-provinces-field&#34; title=&#34;canadian-provinces-field&#34;&gt;the github
-page&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Canadian Provinces Field</description>
     </item>
     
     <item>
-      <title>git-website-workflow</title>
+      <title>Git Website Workflow</title>
       <link>https://ohdoylerules.com/personal-project/git-website-workflow/</link>
       <pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/git-website-workflow/</guid>
-      <description>&lt;div class=&#34;center&#34;&gt;
-  &lt;img alt=&#34;Amazon Web Services Logo&#34; src=&#34;https://ohdoylerules.com/images/awslogo.png&#34;&gt;
-&lt;/div&gt;
-&lt;p&gt;I recently switched to using Amazon Web Services for my hosting. It is awesome. Because it(EC2) is just a cloud computer, I can install anything I want and set up any workflow I desire. I recently found &lt;a href=&#34;http://goo.gl/0L3E6&#34; title=&#34;A web-focused Git workflow&#34;&gt;an article&lt;/a&gt; that was about a website git workflow.&lt;/p&gt;
-&lt;p&gt;I finally got the flow down, but it was taking a little too long to start a project. So I decided to &lt;a href=&#34;https://github.com/james2doyle/git-website-workflow&#34; title=&#34;git-websit-workflow bash script&#34;&gt;make it into a script&lt;/a&gt;.This works with any cloud computer workflow. It doesn&amp;rsquo;t have to be just Amazon.&lt;/p&gt;
-&lt;p&gt;With a little help from &lt;a href=&#34;https://plus.google.com/109231487156400680487/postsWzueZxHuP7b&#34; title=&#34;google plus bash community post&#34;&gt;some people on google+&lt;/a&gt; I finally got it down. Check out the &lt;a href=&#34;http://goo.gl/0L3E6&#34; title=&#34;A web-focused Git workflow&#34;&gt;original article&lt;/a&gt; on how itworks and the philosophy of why.&lt;/p&gt;
-</description>
+      <description>Git Website Workflow</description>
     </item>
     
     <item>
@@ -1538,9 +1151,7 @@ page&lt;/a&gt;.&lt;/p&gt;
       <pubDate>Tue, 05 Mar 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pyrocms-pagewidgets-field-type/</guid>
-      <description>&lt;p&gt;I created another field type for &lt;a href=&#34;https://www.pyrocms.com/&#34; title=&#34;PyroCMS Website&#34;&gt;PyroCMS&lt;/a&gt;. This one is so you can add widgets on a page-by-page basis instead of area-by-area.&lt;/p&gt;
-&lt;p&gt;I kept getting asked by clients for this feature, and with the advent of the new page type and field types this is a lot easier. The source is on &lt;a href=&#34;https://github.com/james2doyle/pyro-pagewidgets-field&#34; title=&#34;pyro-pagewidgets-field&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>PyroCMS PageWidgets Field Type</description>
     </item>
     
     <item>
@@ -1549,8 +1160,7 @@ page&lt;/a&gt;.&lt;/p&gt;
       <pubDate>Sun, 24 Feb 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/clean-css-updated/</guid>
-      <description>&lt;p&gt;I updated my Chrome packaged app, Clean CSS. Here is &lt;a href=&#34;http://james2doyle.github.com/clean-css-chrome-app/&#34; title=&#34;Clean CSS Chrome App&#34;&gt;the website&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Clean CSS Chrome app Updated</description>
     </item>
     
     <item>
@@ -1559,18 +1169,7 @@ page&lt;/a&gt;.&lt;/p&gt;
       <pubDate>Sat, 23 Feb 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/pyro-list-field/</guid>
-      <description>&lt;p&gt;I created a list field type for PyroCMS. It allows users to easily add and manage list content. The source code is up &lt;a href=&#34;https://github.com/james2doyle/pyro-list-field&#34; title=&#34;Pyro List Field&#34;&gt;on github&lt;/a&gt; and avaliable on the &lt;a href=&#34;https://www.pyrocms.com/store/details/list_field_type&#34; title=&#34;PyroCMS Store List Field Type&#34;&gt;PyroCMS store&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Pyro Image Widget</title>
-      <link>https://ohdoylerules.com/personal-project/pyro-image-widget/</link>
-      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
-      <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/personal-project/pyro-image-widget/</guid>
-      <description>&lt;p&gt;I created a small image widget for PyroCMS. It allows a user to choose any image in the files as a widget. It also allows you to add a link and a target so it can be opened in a new tab. Here is &lt;a href=&#34;https://github.com/james2doyle/pyro-image-widget&#34; title=&#34;Pyro Image Widget Github&#34;&gt;the github link&lt;/a&gt; and the &lt;a href=&#34;https://www.pyrocms.com/store/details/pyro_image_widget&#34; title=&#34;Pyro Image Widget&#34;&gt;PyroCMS store link&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>A field for Pyro CMS that allows the creation of Lists</description>
     </item>
     
     <item>
@@ -1579,8 +1178,25 @@ page&lt;/a&gt;.&lt;/p&gt;
       <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/zepto-drag-swap/</guid>
-      <description>&lt;p&gt;I created a little plugin for zepto.js called Drag &amp;amp; Swap. Here is the &lt;a href=&#34;http://james2doyle.github.com/zepto-dragswap/&#34; title=&#34;Zepto Dragswap&#34;&gt;github link&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Create a drag and drop list with Zepto</description>
+    </item>
+    
+    <item>
+      <title>Pyro Image Widget</title>
+      <link>https://ohdoylerules.com/personal-project/pyro-image-widget/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/personal-project/pyro-image-widget/</guid>
+      <description>A widget for Pyro CMS for creating Image sections</description>
+    </item>
+    
+    <item>
+      <title>Making a socket.io app and how socket.io works</title>
+      <link>https://ohdoylerules.com/demo/socketio-works-howto/</link>
+      <pubDate>Sun, 13 Jan 2013 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/socketio-works-howto/</guid>
+      <description>Making a socket.io app and how socket.io works</description>
     </item>
     
     <item>
@@ -1589,12 +1205,52 @@ page&lt;/a&gt;.&lt;/p&gt;
       <pubDate>Wed, 19 Dec 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/clean-css-in-office-hours/</guid>
-      <description>&lt;h3 id=&#34;clean-css-made-it-into-a-chrome-apps-office-hours&#34;&gt;Clean CSS made it into a Chrome Apps Office hours!!&lt;/h3&gt;
-&lt;p&gt;So my chrome app &lt;a href=&#34;http://james2doyle.github.com/clean-css-chrome-app/&#34; title=&#34;Clean CSS Chrome App&#34;&gt;Clean CSS&lt;/a&gt; made it onto one of the Chrome Apps Office Hours.&lt;/p&gt;
-&lt;p&gt;The Office Hours is a series of videos by Google where developers talk to the community about Google technology, software and programming. The way I got on was I saw Paul Kinlan, a Google Chrome developer advocate, make a post about the live office hours being held that day.&lt;/p&gt;
-&lt;p&gt;I managed to get a link to my app and he then reviewed it on the show!&lt;/p&gt;
-&lt;p&gt;The app &lt;a href=&#34;https://github.com/james2doyle/clean-css-chrome-app/&#34; title=&#34;Clean CSS on Github&#34;&gt;is also on github&lt;/a&gt; so anyone can submit some changes and improvements.  You can download the app on the &lt;a href=&#34;http://goo.gl/D9F7u&#34; title=&#34;Clean CSS on Chrome Web Store&#34;&gt;Chrome Web Store&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>So my chrome app Clean CSS made it onto one of the Chrome Apps Office Hours.</description>
+    </item>
+    
+    <item>
+      <title>View Folder Tree in MacOSX Terminal</title>
+      <link>https://ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</link>
+      <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/view-folder-tree-in-macosx-terminal/</guid>
+      <description>View Folder Tree in MacOSX Terminal</description>
+    </item>
+    
+    <item>
+      <title>New business cards</title>
+      <link>https://ohdoylerules.com/portfolio/new-business-cards/</link>
+      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/new-business-cards/</guid>
+      <description>Check out my new business cards</description>
+    </item>
+    
+    <item>
+      <title>Flexbox Demo</title>
+      <link>https://ohdoylerules.com/demo/flexbox-demo/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/flexbox-demo/</guid>
+      <description>A demo of CSS Flexbox</description>
+    </item>
+    
+    <item>
+      <title>WYSIWYG in PyroCMS Widgets</title>
+      <link>https://ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</link>
+      <pubDate>Sat, 10 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/wysiwyg-in-pyrocms-widgets/</guid>
+      <description>WYSIWYG in PyroCMS Widgets</description>
+    </item>
+    
+    <item>
+      <title>Letterpress loader in CSS</title>
+      <link>https://ohdoylerules.com/demo/letterpress-loader-in-css/</link>
+      <pubDate>Sun, 04 Nov 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/letterpress-loader-in-css/</guid>
+      <description>Create the Letterpress loader in CSS</description>
     </item>
     
     <item>
@@ -1603,12 +1259,178 @@ page&lt;/a&gt;.&lt;/p&gt;
       <pubDate>Sun, 21 Oct 2012 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/personal-project/kube-node-express/</guid>
-      <description>&lt;p&gt;I have released my first node.js-based public repo! It is called &lt;a href=&#34;https://github.com/james2doyle/kube-node-express&#34; title=&#34;Kube-Node-Express&#34;&gt;Kube-Node-Express&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://ohdoylerules.com/images/Screen-Shot-2012-10-20-at-3.46.33-PM11.png&#34; alt=&#34;Kube CSS Framework&#34; &gt;&lt;/p&gt;
-&lt;p&gt;This is based off of the &lt;a href=&#34;http://imperavi.com/kube/&#34; title=&#34;Kube CSS Framework&#34;&gt;Kube CSS Framework by Imperavi&lt;/a&gt;. It uses the &lt;a href=&#34;http://expressjs.com/&#34; title=&#34;expressjs&#34;&gt;express&lt;/a&gt; framework for node. This was inspired by a similar project I saw that was &lt;a href=&#34;https://github.com/robrighter/node-boilerplate&#34; title=&#34;node boilerplate&#34;&gt;based on the HTML5 Boilerplate&lt;/a&gt;. I will probably end up stealing more ideas from that project too.&lt;/p&gt;
-&lt;h4 id=&#34;disclaimer&#34;&gt;disclaimer&lt;/h4&gt;
-&lt;p&gt;I did not create any of these frameworks, I just combined them all together.&lt;/p&gt;
-</description>
+      <description>Kube-Node-Express</description>
+    </item>
+    
+    <item>
+      <title>Source Code Pro on Sublime Text</title>
+      <link>https://ohdoylerules.com/web/source-code-pro-sublime/</link>
+      <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/source-code-pro-sublime/</guid>
+      <description>Download and install Source Code Pro on Sublime Text</description>
+    </item>
+    
+    <item>
+      <title>Generated Content Article Title</title>
+      <link>https://ohdoylerules.com/demo/generated-content-title/</link>
+      <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/generated-content-title/</guid>
+      <description>Use Generated Content in CSS to show an Article link in plain text</description>
+    </item>
+    
+    <item>
+      <title>Array.prototype.range()</title>
+      <link>https://ohdoylerules.com/fiddle/array-prototype-range/</link>
+      <pubDate>Thu, 18 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/array-prototype-range/</guid>
+      <description>How to create Array.prototype.range in Javascript</description>
+    </item>
+    
+    <item>
+      <title>No Javascript CSS Accordion</title>
+      <link>https://ohdoylerules.com/demo/no-javascript-accordion/</link>
+      <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/no-javascript-accordion/</guid>
+      <description>Build an Accordion with just CSS and no Javascript</description>
+    </item>
+    
+    <item>
+      <title>Dancing Music Bars</title>
+      <link>https://ohdoylerules.com/fiddle/dancing-music-bars/</link>
+      <pubDate>Tue, 16 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/dancing-music-bars/</guid>
+      <description>Create a Dancing Music Bar animation in CSS and SVG</description>
+    </item>
+    
+    <item>
+      <title>zsh new file &amp;&amp; open file function</title>
+      <link>https://ohdoylerules.com/snippets/zsh-new-open-function/</link>
+      <pubDate>Sat, 13 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/zsh-new-open-function/</guid>
+      <description>zsh new file &amp;&amp; open file function</description>
+    </item>
+    
+    <item>
+      <title>Target Mozilla-only in CSS</title>
+      <link>https://ohdoylerules.com/snippets/target-mozilla-only-in-css/</link>
+      <pubDate>Thu, 11 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/target-mozilla-only-in-css/</guid>
+      <description>Target Mozilla-only in CSS</description>
+    </item>
+    
+    <item>
+      <title>My Old Website</title>
+      <link>https://ohdoylerules.com/portfolio/my-old-website/</link>
+      <pubDate>Thu, 04 Oct 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/portfolio/my-old-website/</guid>
+      <description>See my old website</description>
+    </item>
+    
+    <item>
+      <title>CSS3 Pagebend</title>
+      <link>https://ohdoylerules.com/fiddle/css3-pagebend/</link>
+      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/css3-pagebend/</guid>
+      <description>Create a Pagebend effect using CSS</description>
+    </item>
+    
+    <item>
+      <title>CSS Date Card</title>
+      <link>https://ohdoylerules.com/fiddle/css-date-card/</link>
+      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/css-date-card/</guid>
+      <description>Create a Date Card using CSS transitions, animations, and gradients</description>
+    </item>
+    
+    <item>
+      <title>nodelist.each</title>
+      <link>https://ohdoylerules.com/snippets/nodelist-each/</link>
+      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/nodelist-each/</guid>
+      <description>nodelist.prototype.each in javascript</description>
+    </item>
+    
+    <item>
+      <title>Mozilla Dev Derby</title>
+      <link>https://ohdoylerules.com/demo/mozilla-dev-derby/</link>
+      <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/demo/mozilla-dev-derby/</guid>
+      <description>James Doyle runner up in Mozilla Dev Derby September 2012</description>
+    </item>
+    
+    <item>
+      <title>No-Js Image Preview</title>
+      <link>https://ohdoylerules.com/fiddle/no-js-image-preview/</link>
+      <pubDate>Mon, 27 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/no-js-image-preview/</guid>
+      <description>Create a No-Js Image Preview with only CSS</description>
+    </item>
+    
+    <item>
+      <title>Styling Radios and Checkboxes. Redux.</title>
+      <link>https://ohdoylerules.com/web/styling-input-redux/</link>
+      <pubDate>Sun, 19 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/styling-input-redux/</guid>
+      <description>Styling Radios and Checkboxes. Redux.</description>
+    </item>
+    
+    <item>
+      <title>WordPress Plugin Swipe.js</title>
+      <link>https://ohdoylerules.com/web/wordpress-plugin-swipe-js/</link>
+      <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/wordpress-plugin-swipe-js/</guid>
+      <description>WordPress Plugin Swipe.js</description>
+    </item>
+    
+    <item>
+      <title>Making Checkboxes in WordPress options pages</title>
+      <link>https://ohdoylerules.com/web/checkboxes-options/</link>
+      <pubDate>Sat, 11 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/checkboxes-options/</guid>
+      <description>Making Checkboxes in WordPress options pages</description>
+    </item>
+    
+    <item>
+      <title>Styling radio and checkbox inputs</title>
+      <link>https://ohdoylerules.com/web/radio-checkboxes/</link>
+      <pubDate>Tue, 07 Aug 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/radio-checkboxes/</guid>
+      <description>Styling inputs can be pretty annoying. I don’t think I really have any consistent way of making custom inputs</description>
+    </item>
+    
+    <item>
+      <title>Generated content in CSS</title>
+      <link>https://ohdoylerules.com/fiddle/generated-content-in-css/</link>
+      <pubDate>Fri, 27 Jul 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/fiddle/generated-content-in-css/</guid>
+      <description>How to use Generated content in CSS</description>
+    </item>
+    
+    <item>
+      <title>Installing Android 4.1.1 Jelly Bean for Nexus S</title>
+      <link>https://ohdoylerules.com/android/jellybean-nexuss/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/android/jellybean-nexuss/</guid>
+      <description>How to flash jelly bean onto a nexus s</description>
     </item>
     
   </channel>

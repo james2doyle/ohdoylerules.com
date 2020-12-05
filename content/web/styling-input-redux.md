@@ -1,5 +1,6 @@
 ---
 Title: "Styling Radios and Checkboxes. Redux."
+Description: "Styling Radios and Checkboxes. Redux."
 Date: "2012-08-19"
 Category: "Web"
 Template: "post"

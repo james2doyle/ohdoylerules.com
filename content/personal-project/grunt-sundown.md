@@ -1,5 +1,6 @@
 ---
 Title: "Grunt Sundown"
+Description: "Grunt Sundown"
 Date: "2013-09-08"
 Category: "Personal Project"
 Template: "post"

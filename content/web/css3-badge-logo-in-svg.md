@@ -1,5 +1,6 @@
 ---
 Title: "CSS3 badge logo in SVG"
+Description: "CSS3 badge logo in SVG"
 Date: "2013-04-21"
 Category: "Web"
 Template: "post"
@@ -27,4 +28,3 @@ Here is the HTML5 logo in-case you need it:
 ### References
 
 I found the logos on [this website](http://www.bobbyberberyan.com/2012/03/html-5-css-3-logos/ "bobby berberyan - html-5-css-3-logos"). They were in one single SVG file and I split them up.
-

@@ -1,5 +1,6 @@
 ---
 Title: "jQuery-doodal-js"
+Description: "jQuery-doodal-js"
 Date: "2013-09-09"
 Category: "Personal Project"
 Template: "post"

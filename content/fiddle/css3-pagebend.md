@@ -1,6 +1,6 @@
 ---
 Title: "CSS3 Pagebend"
-Title: "Create a Pagebend effect using CSS"
+Description: "Create a Pagebend effect using CSS"
 Date: "2012-09-18"
 Category: "Fiddle"
 Template: "post"

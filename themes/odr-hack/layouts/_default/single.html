@@ -8,7 +8,7 @@
     </header>
     <p><a href="{{ .Site.BaseURL }}" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         {{ if .Params.Date }}
         <span class="post-date" itemprop="datePublished">🕒 {{ dateFormat .Site.Params.Date_format .Params.Date }}</span>
         {{ end }}
@@ -19,7 +19,7 @@
         {{ if .Params.Category }}
         <span class="post-category" itemprop="genre about">🏷 {{ .Params.Category }}</span>
         {{ end }}
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content">{{ .Content }}</div>
       <p><a href="{{ .Site.BaseURL }}" title="Go Back Home">Go home</a></p>
       <hr>

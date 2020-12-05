@@ -1,5 +1,6 @@
 ---
 Title: "Github Wiki To HTML"
+Description: "Github Wiki To HTML"
 Date: "2013-11-17"
 Category: "Personal Project"
 Template: "post"

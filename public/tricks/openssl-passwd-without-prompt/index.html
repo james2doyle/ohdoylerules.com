@@ -213,7 +213,7 @@
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         
         <span class="post-date" itemprop="datePublished">🕒 November 22, 2016</span>
         
@@ -222,7 +222,7 @@
         
         <span class="post-category" itemprop="genre about">🏷 Tricks</span>
         
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content"><p>Have you ever wanted to generate a password using the <code>openssl passwd</code> command, but didn&rsquo;t want the prompt?</p>
 <p>I encountered this problem when I was writing <a href="https://github.com/invokemedia/ansible-basicauth-nginx">an Ansible role for setting up Nginx basic auth</a>. I didn&rsquo;t want the prompt since I had no way for ansible to handle that gracefully. After some Googling, and some <code>man</code> page grepping, I found the answer.</p>
 <p>You can generate a password without a prompt by piping text into <code>openssl</code> and passing a new flag. For example:</p>
@@ -258,13 +258,11 @@
     </div>
   </div>
 </div>
-
-
 <script defer>
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?352-96');
+    navigator.serviceWorker.register('/sw.js?2020-09-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

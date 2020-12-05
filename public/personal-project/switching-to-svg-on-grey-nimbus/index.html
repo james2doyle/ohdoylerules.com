@@ -213,7 +213,7 @@
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         
         <span class="post-date" itemprop="datePublished">🕒 April 14, 2013</span>
         
@@ -222,7 +222,7 @@
         
         <span class="post-category" itemprop="genre about">🏷 Personal Project</span>
         
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content"><p>So I recently bought the <a href="http://www.bohemiancoding.com/sketch/" title="Sketch Website">Sketch app</a> for Mac. I am using it because I don&rsquo;t have illustrator. But to be honest, it is much better at doing small things. It&rsquo;s been about 2 hours switching the whole thing over and I have to say it is worth it.</p>
 <p>I also found a <a href="https://github.com/svg/svgo" title="svg/svgo">SVG minifier</a> that I will definitely be using in the future. It managed to save about 50-60% on each image. Which, for compression, is very good. After all is said and done, I saved about 10kb. Now this is not a lot but I also eliminated the use of retina.js. Which cause a second request for each image that has an @2x version. So on mobile I have made the site much faster.</p>
 <p>Also, because of the way that FuelPHP does it&rsquo;s caching, I was not able to cache the images. Because it would append a query at the end for the cache and retina.js would not be able to find the retina version. That means that any retina device would take double(approximately) requests to get the full page.</p>
@@ -258,13 +258,11 @@
     </div>
   </div>
 </div>
-
-
 <script defer>
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?352-96');
+    navigator.serviceWorker.register('/sw.js?2020-09-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

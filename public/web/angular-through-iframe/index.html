@@ -213,7 +213,7 @@
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
-      <div class="post-info">
+      <p class="post-info">
         
         <span class="post-date" itemprop="datePublished">🕒 April 29, 2018</span>
         
@@ -222,7 +222,7 @@
         
         <span class="post-category" itemprop="genre about">🏷 Web</span>
         
-      </div>
+      </p>
       <div itemprop="ArticleBody text" class="main-content"><p><strong>Note</strong>: This is an older project/repo that uses the previous version of Angular (v1.x) so keep that in mind.</p>
 <p>I was working on a project that required users to generate content that had dynamic templates. The goal was to make the entire thing was just a javascript client application and not have to worry about adding a server for handling the updates. Even better, if we could avoid AJAX requests for each keypress to update the content of the template, that would be even better.</p>
 <p>This was a perfect problem for an iframe to solve as we had remote HTML files that would be loaded into an editor and then you can edit the data insde them. When you were finished, you could generate a PDF from the content inside the iframe. It was pretty sweet and worked really well.</p>
@@ -274,13 +274,11 @@ iframe.contentWindow.update(dataFromParent);
     </div>
   </div>
 </div>
-
-
 <script defer>
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?352-96');
+    navigator.serviceWorker.register('/sw.js?2020-09-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);
