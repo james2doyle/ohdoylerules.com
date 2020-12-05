@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -247,7 +250,7 @@
 <h5 id="enctype">Enctype</h5>
 <p>Here is the weird part. If you are familiar with file uploads, you already know that in order to properly handling files, you need to make sure your request is using the correct encoding. Here is a description from the <a href="https://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#adef-enctype">HTML Spec</a>:</p>
 <blockquote>
-<p>This attribute specifies the content type used to submit the form to the server (when the value of method is &ldquo;post&rdquo;). The default value for this attribute is &ldquo;application/x-www-form-urlencoded&rdquo;. The value &ldquo;multipart/form-data&rdquo; should be used in combination with the INPUT element, type=&quot;file&rdquo;.</p>
+<p>This attribute specifies the content type used to submit the form to the server (when the value of method is &ldquo;post&rdquo;). The default value for this attribute is &ldquo;application/x-www-form-urlencoded&rdquo;. The value &ldquo;multipart/form-data&rdquo; should be used in combination with the INPUT element, type=&ldquo;file&rdquo;.</p>
 </blockquote>
 <p>So there you go. Use this for files.</p>
 <h5 id="caveats">Caveats</h5>
@@ -283,7 +286,7 @@
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

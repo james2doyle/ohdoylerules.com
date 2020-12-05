@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -236,7 +239,7 @@
 );
 </code></pre></div><p>This statement will update the sqlite database with the required table and columns. This SQL is the same statement that runs when the cache migrations are created via the <code>artisan</code> command. To see that the SQL statement worked, you can run the <code>.tables</code> command. You should see <code>cache</code> in the list. To close out of the sqlite cli, run <code>.exit</code>.</p>
 <p>Now that everything is all setup, here is the class that implements the <code>SqliteStore</code> that allows for a sqlite driver:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
 <span style="color:#6272a4">// put in app\Extensions
 </span><span style="color:#6272a4"></span><span style="color:#ff79c6">namespace</span> App\Extensions;
 
@@ -271,17 +274,17 @@
 }
 </code></pre></div><p>You may need to run <code>composer dumpautoload</code> in order for the new class to be picked up if you are creating the <code>app/Extensions</code> folder for the first time.</p>
 <p>Then, add the following to your <code>AppServiceProvider@boot</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// AppServiceProvider@boot
-\Cache::extend(&#39;sqlite&#39;, function ($app) {
-    return \Cache::repository(new \App\Extensions\SqliteStore);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#6272a4">// AppServiceProvider@boot
+</span><span style="color:#6272a4"></span>\Cache<span style="color:#ff79c6">::</span><span style="color:#50fa7b">extend</span>(<span style="color:#f1fa8c">&#39;sqlite&#39;</span>, <span style="color:#ff79c6">function</span> (<span style="color:#8be9fd;font-style:italic">$app</span>) {
+    <span style="color:#ff79c6">return</span> \Cache<span style="color:#ff79c6">::</span><span style="color:#50fa7b">repository</span>(<span style="color:#ff79c6">new</span> \App\Extensions\SqliteStore);
 });
 </code></pre></div><p>That&rsquo;s it for the code side. But we still need to setup the config so the driver details exist. Open up the <code>config/cache.php</code> file. Add these details so the config can be properly loaded:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// ... the rest of config/cache.php
-&#39;sqlite&#39; =&gt; [
-    &#39;driver&#39; =&gt; &#39;sqlite&#39;,
-    &#39;table&#39; =&gt; &#39;cache&#39;,
-    &#39;database&#39; =&gt; env(&#39;CACHE_DATABASE&#39;, database_path(&#39;cache.sqlite&#39;)),
-    &#39;prefix&#39; =&gt; &#39;&#39;,
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#6272a4">// ... the rest of config/cache.php
+</span><span style="color:#6272a4"></span><span style="color:#f1fa8c">&#39;sqlite&#39;</span> <span style="color:#ff79c6">=&gt;</span> [
+    <span style="color:#f1fa8c">&#39;driver&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;sqlite&#39;</span>,
+    <span style="color:#f1fa8c">&#39;table&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;cache&#39;</span>,
+    <span style="color:#f1fa8c">&#39;database&#39;</span> <span style="color:#ff79c6">=&gt;</span> env(<span style="color:#f1fa8c">&#39;CACHE_DATABASE&#39;</span>, database_path(<span style="color:#f1fa8c">&#39;cache.sqlite&#39;</span>)),
+    <span style="color:#f1fa8c">&#39;prefix&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;&#39;</span>,
 ],
 </code></pre></div><p>You can then update your <code>.env</code> to have <code>CACHE_DRIVER=sqlite</code> and everything should be good!</p>
 </div>
@@ -314,7 +317,7 @@
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

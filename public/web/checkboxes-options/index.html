@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -227,7 +230,7 @@
 <p>WordPress has a function called <a href="http://codex.wordpress.org/Function_Reference/checked" title="WordPress Codex For Checked Function">checked()</a>. This basically returns a true checked attribute if the conditions it is passed are met. Here is how I used it:</p>
 <pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;my_options&quot; &lt;?php checked( get_option('my_option') == 'on',true); ?&gt; /&gt;
 </code></pre>
-<p>What I found is that when the option was getting updated it was being stored as &lsquo;on&rsquo;. So this little PHP snippet says: &ldquo;If the option named &lsquo;my_option&rsquo; is equal to &lsquo;on&rsquo; then add a checked=&quot;checked&rdquo; attribute to this input tag.&rdquo; Anyway, I found it quite hard to get a straight up answer to this problem. Since the reason I made this blog is to share my discoveries; here you go.</p>
+<p>What I found is that when the option was getting updated it was being stored as &lsquo;on&rsquo;. So this little PHP snippet says: &ldquo;If the option named &lsquo;my_option&rsquo; is equal to &lsquo;on&rsquo; then add a checked=&ldquo;checked&rdquo; attribute to this input tag.&rdquo; Anyway, I found it quite hard to get a straight up answer to this problem. Since the reason I made this blog is to share my discoveries; here you go.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -258,7 +261,7 @@
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

@@ -12,6 +12,24 @@
     <atom:link href="https://ohdoylerules.com/category/fiddle/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Vue Omnibar Component</title>
+      <link>https://ohdoylerules.com/web/vue-omnibar-component/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/vue-omnibar-component/</guid>
+      <description>A Vue component that is used to create modal popups that emulate omnibar, command palette, open anywhere, or other search functions/features</description>
+    </item>
+    
+    <item>
+      <title>Vue Toggle Component</title>
+      <link>https://ohdoylerules.com/web/vue-toggle-component/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/web/vue-toggle-component/</guid>
+      <description>A Vue component that is used to create simple switches, toggles, and show/hide experiences</description>
+    </item>
+    
+    <item>
       <title>Tailwind Screens In JS</title>
       <link>https://ohdoylerules.com/snippets/tailwind-screens-in-js/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>

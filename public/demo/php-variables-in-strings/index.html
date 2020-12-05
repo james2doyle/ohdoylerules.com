@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -224,17 +227,17 @@
         
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I have been getting quite annoyed lately when escaping a string to output a PHP variable. So I decided to make a little test so I could see what the best way to tackle this was.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">// tested on PHP 5.4.4
-$var = &#34;variable value&#34;;
-echo &#34;tell me the &#34;.$var.&#34; please&#34;; // variable value
-echo &#34;tell me the &#34;,$var,&#34; please&#34;; // variable value
-echo &#34;tell me the $var please&#34;; // variable value
-echo &#34;tell me the {$var} please&#34;; // variable value
-echo &#39;tell me the &#39;,$var,&#39; please&#39;; // variable value
-echo &#39;tell me the $var please&#39;; // $var
-echo &#39;tell me the {$var} please&#39;; // {$var}
-</code></pre></div><p>Maybe I am a little dumb for not knowing this. But I would always escape my strings like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">echo &#34;my little &#34;.$var.&#34; went to the market.&#34;;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#6272a4">// tested on PHP 5.4.4
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$var</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;variable value&#34;</span>;
+<span style="color:#ff79c6">echo</span> <span style="color:#f1fa8c">&#34;tell me the &#34;</span><span style="color:#ff79c6">.</span><span style="color:#8be9fd;font-style:italic">$var</span><span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34; please&#34;</span>; <span style="color:#6272a4">// variable value
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">echo</span> <span style="color:#f1fa8c">&#34;tell me the &#34;</span>,<span style="color:#8be9fd;font-style:italic">$var</span>,<span style="color:#f1fa8c">&#34; please&#34;</span>; <span style="color:#6272a4">// variable value
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">echo</span> <span style="color:#f1fa8c">&#34;tell me the </span><span style="color:#f1fa8c">$var</span><span style="color:#f1fa8c"> please&#34;</span>; <span style="color:#6272a4">// variable value
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">echo</span> <span style="color:#f1fa8c">&#34;tell me the </span><span style="color:#f1fa8c">{</span><span style="color:#8be9fd;font-style:italic">$var</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> please&#34;</span>; <span style="color:#6272a4">// variable value
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">echo</span> <span style="color:#f1fa8c">&#39;tell me the &#39;</span>,<span style="color:#8be9fd;font-style:italic">$var</span>,<span style="color:#f1fa8c">&#39; please&#39;</span>; <span style="color:#6272a4">// variable value
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">echo</span> <span style="color:#f1fa8c">&#39;tell me the $var please&#39;</span>; <span style="color:#6272a4">// $var
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">echo</span> <span style="color:#f1fa8c">&#39;tell me the {$var} please&#39;</span>; <span style="color:#6272a4">// {$var}
+</span></code></pre></div><p>Maybe I am a little dumb for not knowing this. But I would always escape my strings like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">echo</span> <span style="color:#f1fa8c">&#34;my little &#34;</span><span style="color:#ff79c6">.</span><span style="color:#8be9fd;font-style:italic">$var</span><span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34; went to the market.&#34;</span>;
 </code></pre></div><p>when I could have just used &ldquo;$var&rdquo; with double quotes&hellip; Everything in single quotes is treated as a plain string and anything with double is interpreted. I saw something saying that some of these will not output properly in older versions of PHP.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
@@ -266,7 +269,7 @@ echo &#39;tell me the {$var} please&#39;; // {$var}
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

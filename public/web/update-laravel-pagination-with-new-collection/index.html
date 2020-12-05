@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -226,7 +229,7 @@
       <div itemprop="ArticleBody text" class="main-content"><p>Have you even done a database search (using the <code>DB</code> facade) and got back an array of results that wasn&rsquo;t wrapped in lovely little Eloquent Models? After some googling, I am sure you probably found out about the <a href="http://commandz.io/create-models-from-query-builder/">hydrate</a> method. Using <code>hydrate</code>, you can turn an array of results from the database into real models from your application. This works phenomenally.</p>
 <p>But what if you want to return paginated results? How do you used the results after they are already paginated? Well there is a method called <code>setCollection</code> on the <a href="https://laravel.com/api/5.4/Illuminate/Pagination/LengthAwarePaginator.html">LengthAwarePaginator</a> class. What it will let you do actually set the results of the pagination to a new collection.</p>
 <p>Here is an example of how that works in practice:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
 <span style="color:#f1fa8c">/**
 </span><span style="color:#f1fa8c"> * Hydrates the paginated results for the query
 </span><span style="color:#f1fa8c"> */</span>
@@ -276,7 +279,7 @@
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

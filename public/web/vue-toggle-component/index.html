@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
   
-    <title>James Doyle | Pico-Useragent Plugin</title>
+    <title>James Doyle | Vue Toggle Component</title>
   
   <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
   <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
   
   <meta itemprop="name" content="James Doyle">
   <meta property="og:site_name" content="ohdoylerules">
-  <meta itemprop="url" content="https://ohdoylerules.com/personal-project/pico-useragent/">
+  <meta itemprop="url" content="https://ohdoylerules.com/web/vue-toggle-component/">
   <meta itemprop="email" content="james2doyle@gmail.com">
-  <meta property="og:url" content="https://ohdoylerules.com/personal-project/pico-useragent/">
+  <meta property="og:url" content="https://ohdoylerules.com/web/vue-toggle-component/">
   <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
   <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
   <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
@@ -37,7 +37,7 @@
   <meta name="theme-color" content="#333333">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@james2doyle">
-  <meta name="twitter:title" content="Pico-Useragent Plugin">
+  <meta name="twitter:title" content="Vue Toggle Component">
   <meta name="twitter:creator" content="@james2doyle">
   <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
   <meta name="twitter:domain" content="https://ohdoylerules.com/">
@@ -46,23 +46,23 @@
   
     <link rel="dns-prefetch" href="https://c.disquscdn.com">
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Pico-Useragent Plugin">
+    <meta property="og:title" content="Vue Toggle Component">
     <meta property="article:author" content="James Doyle" />
-    <meta property="article:section" content="Personal Project" />
-    <meta property="article:tag" content="pico, cms, useragent, parse, plugin, ua, sniffer, twig, templates, conditional, modernizr" />
-    <meta itemprop="keywords" content="pico, cms, useragent, parse, plugin, ua, sniffer, twig, templates, conditional, modernizr">
-    <meta property="og:keywords" content="pico, cms, useragent, parse, plugin, ua, sniffer, twig, templates, conditional, modernizr">
+    <meta property="article:section" content="Web" />
+    <meta property="article:tag" content="vue, component, toggle, ui, state, switch" />
+    <meta itemprop="keywords" content="vue, component, toggle, ui, state, switch">
+    <meta property="og:keywords" content="vue, component, toggle, ui, state, switch">
     
     
-      <meta name="description" content="A plugin for pico that allows you to list the useragent">
-      <meta itemprop="description" content="A plugin for pico that allows you to list the useragent">
-      <meta property="og:description" content="A plugin for pico that allows you to list the useragent">
-      <meta name="twitter:description" content="A plugin for pico that allows you to list the useragent">
+      <meta name="description" content="A Vue component that is used to create simple switches, toggles, and show/hide experiences">
+      <meta itemprop="description" content="A Vue component that is used to create simple switches, toggles, and show/hide experiences">
+      <meta property="og:description" content="A Vue component that is used to create simple switches, toggles, and show/hide experiences">
+      <meta name="twitter:description" content="A Vue component that is used to create simple switches, toggles, and show/hide experiences">
     
   
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
-  <link rel="canonical" href="https://ohdoylerules.com/personal-project/pico-useragent/">
+  <link rel="canonical" href="https://ohdoylerules.com/web/vue-toggle-component/">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
   <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
   <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
@@ -211,58 +211,42 @@
   <div class="container">
     <header class="grid -middle">
       <div class="cell menu">
-        <h1 itemprop="name headline">Pico-Useragent Plugin</h1>
+        <h1 itemprop="name headline">Vue Toggle Component</h1>
       </div>
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
       <p class="post-info">
         
-        <span class="post-date" itemprop="datePublished">🕒 September 15, 2013</span>
+        <span class="post-date" itemprop="datePublished">🕒 December 4, 2020</span>
         
         
         &nbsp;&nbsp;&nbsp;
         
-        <span class="post-category" itemprop="genre about">🏷 Personal Project</span>
+        <span class="post-category" itemprop="genre about">🏷 Web</span>
         
       </p>
-      <div itemprop="ArticleBody text" class="main-content"><p>I created another plugin for <a href="http://pico.dev7studios.com/">Pico CMS</a>. It is esentially a clone of my <a href="https://ohdoylerules.com/personal-project/pyrocms-ua-sniffer-plugin">pyro-sniffer-plugin</a> for <a href="http://pyrocms.com" title="Pyro CMS Homepage">PyroCMS</a>.</p>
-<p>Here is the <a href="https://github.com/james2doyle/pico_useragent">Github project</a>.</p>
-<p>This plugin allows you to parse the user agent of the current visitor and then expose that information in an easy to use variable in your twig templates.</p>
-<p>Hopefully that makese sense.</p>
-<h3 id="output">Output</h3>
-<p>When using the plugin, you get a new variable called <code>browser</code>. The browser variable has the following properties in it when dumped from my computer:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#8be9fd;font-style:italic">$browser</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">array</span> (
-  <span style="color:#f1fa8c">&#39;useragent&#39;</span>   <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.37 Safari/537.36&#39;</span> <span style="color:#6272a4">// full ua string
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;name&#39;</span>        <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;Google Chrome&#39;</span> <span style="color:#6272a4">// name of the browser
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;browser&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;google-chrome&#39;</span> <span style="color:#6272a4">// CSS safe browser name
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;version&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;30.0.1599.37&#39;</span> <span style="color:#6272a4">// bowser version
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;type&#39;</span>        <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;desktop&#39;</span> <span style="color:#6272a4">// device form factor
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;platform&#39;</span>    <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;mac&#39;</span> <span style="color:#6272a4">// OS platform
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;pattern&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;#(?Version|Chrome|other)[/ ]+(?[0-9.|a-zA-Z.]*)#&#39;</span> <span style="color:#6272a4">// match pattern
-</span><span style="color:#6272a4"></span>);
-</code></pre></div><h3 id="example">Example</h3>
-<p>I use this example when I want to make small modifications to my CSS. Not unlike how Modernizr is supposed to work. Except modernizr doesn&rsquo;t give you browser information.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;\{\{ browser.browser \}\} \{\{ browser.platform \}\} \{\{ browser.type \}\}&#34;</span>&gt;
-</code></pre></div><p>Here is the output for that html tag:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;google-chrome mac desktop&#34;</span>&gt;
-</code></pre></div><p>I usually use it to normalize issues across different browsers. Like something looking weird in Firefox, so I know I can modify some CSS by using a <code>.firefox</code> parent.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#50fa7b">button</span> {
-  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0.25</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
-}
-<span style="color:#6272a4">/* fix padding in FF */</span>
-.<span style="color:#50fa7b">firefox</span> .<span style="color:#50fa7b">button</span> {
-  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0.28</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
-}
-</code></pre></div><h3 id="use-cases">Use Cases</h3>
-<ul>
-<li>conditional content</li>
-<li>conditional styles/scripts</li>
-<li>layout modifications</li>
-<li>serving specific images</li>
-<li>Modernizr-esque CSS classes</li>
-</ul>
-<p>Here is the <a href="https://github.com/james2doyle/pico_useragent">Github project</a> again.</p>
+      <div itemprop="ArticleBody text" class="main-content"><p>Have you ever created a switch component that just shows and hides an element? How about an accordion? Or maybe a slider? If you distill down these components into their core offering, it is really just a simple state toggle that is either a <code>boolean</code> or a index/key value that is being used.</p>
+<p>I created this component because it is something I use all the time. I wanted to share it with other people so I released it as a package. The state can be either a <code>boolean</code> or a <code>string</code>. This means you can use it to create experiences that are not just on/off and show/hide.</p>
+<p>With a simple toggle, you can build almost any UI experience. Think about experiences like show/hide, accordions, nested menus, and even sliders, they mostly revolve around a single piece of state.</p>
+<h2 id="demo">Demo</h2>
+<p>Check out <a href="https://james2doyle.github.io/vue-toggle">the website for demos</a>.</p>
+<h2 id="installation">Installation</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install -S vue-ui-toggle
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> Toggle <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#39;vue-ui-toggle&#39;</span>); <span style="color:#6272a4">// es5/node
+</span><span style="color:#6272a4">// import Toggle from &#39;vue-ui-toggle&#39;; // es6
+</span><span style="color:#6272a4"></span>
+Vue.component(<span style="color:#f1fa8c">&#39;toggle&#39;</span>, Toggle);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">import</span> Toggle from <span style="color:#f1fa8c">&#39;vue-ui-toggle&#39;</span>;
+
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>  components<span style="color:#ff79c6">:</span> {
+    Toggle,
+  },
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>};
+</code></pre></div><p>To learn more, check out the <a href="https://james2doyle.github.io/vue-toggle">website for the component</a>.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>

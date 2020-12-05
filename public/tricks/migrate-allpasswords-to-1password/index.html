@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -251,7 +254,7 @@
 </blockquote>
 <p>Here is the ugly one, and how to fix it:</p>
 <blockquote>
-<p>&ldquo;ODR PW&rdquo;,&quot;&rdquo;,&ldquo;super_cool_guy&rdquo;,&ldquo;ilovepuppies5000&rdquo;,&rdquo;&rdquo;</p>
+<p>&ldquo;ODR PW&rdquo;,&quot;&quot;,&ldquo;super_cool_guy&rdquo;,&ldquo;ilovepuppies5000&rdquo;,&quot;&quot;</p>
 </blockquote>
 <h3 id="finding-issues">Finding Issues</h3>
 <p>When you are trying to import, you will notice that 1Passwords gives no feedback on what is wrong with the CSV, it will just deny the import.</p>
@@ -287,7 +290,7 @@
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

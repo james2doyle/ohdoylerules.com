@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -276,7 +279,7 @@ SELECT `tagline` FROM `projects` WHERE `name` = &quot;My Project&quot;
 <h3 id="basic-example">Basic Example</h3>
 <p>We are going to whip up this example using PHP and the <code>chinook</code> database <a href="http://www.sqlitetutorial.net/sqlite-sample-database/">from this site</a>. It is insanely easy to get this working using the <code>SQLite3</code> class and a single <code>json_encode</code> call.</p>
 <p>Let&rsquo;s see how to get this done:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
 <span style="color:#6272a4">// be sure to open with `SQLITE3_OPEN_READONLY`
 </span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$db</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> SQLite3(<span style="color:#f1fa8c">&#39;chinook.sqlite&#39;</span>, SQLITE3_OPEN_READONLY);
 <span style="color:#6272a4">// pull out the query from the POST request
@@ -509,7 +512,7 @@ Stack trace:
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

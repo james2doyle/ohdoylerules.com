@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -244,7 +247,7 @@
 <p>They are both going to resolve to the same site right now. That&rsquo;s OK. We need to tweak our <code>wp-config.php</code> to work properly with the requests.</p>
 <p>If we have multisite already setup, we should see some sites in the <code>wp_blogs</code> table of our database. We want each of these &ldquo;sites&rdquo; to reflect the domains on our system. You can update those now and make sure that the domains match the ones we are setting up.</p>
 <p>Then we need to update our <code>wp-config.php</code> with some changes:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
 <span style="color:#6272a4">// wp-config.php
 </span><span style="color:#6272a4"></span>
 <span style="color:#6272a4">// ... there is going to be other stuff in here at the top...
@@ -318,7 +321,7 @@ define(<span style="color:#f1fa8c">&#39;SITECOOKIEPATH&#39;</span>, <span style=
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

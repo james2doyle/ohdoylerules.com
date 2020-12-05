@@ -4,12 +4,32 @@
   
   <url>
     <loc>https://ohdoylerules.com/category/</loc>
-    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ohdoylerules.com/</loc>
-    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ohdoylerules.com/web/vue-omnibar-component/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ohdoylerules.com/category/web/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ohdoylerules.com/web/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ohdoylerules.com/web/vue-toggle-component/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,16 +59,6 @@
   
   <url>
     <loc>https://ohdoylerules.com/web/using-slots-in-vue-js/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ohdoylerules.com/category/web/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ohdoylerules.com/web/</loc>
     <lastmod>2020-05-18T00:00:00+00:00</lastmod>
   </url>
   

@@ -3,12 +3,12 @@ ohdoylerules.com
 
 Site for James Doyle.
 
-Built using [Hugo](https://gohugo.io/). Deploys automatically using [Buddy.works](https://buddy.works/).
+Built using [Hugo](https://gohugo.io/). Deployed using [GitHub Pages](https://pages.github.com/).
 
 ## Build
 
 ```sh
-hugo build
+hugo
 ```
 
 ## Development

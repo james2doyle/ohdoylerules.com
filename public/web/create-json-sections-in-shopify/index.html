@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -266,10 +269,10 @@
 </span><span style="color:#6272a4"> *
 </span><span style="color:#6272a4"> * @returns {Promise&lt;Object&gt;}
 </span><span style="color:#6272a4"> */</span>
-async <span style="color:#8be9fd;font-style:italic">function</span> getSection(section) {
+<span style="color:#ff79c6">async</span> <span style="color:#8be9fd;font-style:italic">function</span> getSection(section) {
   <span style="color:#ff79c6">try</span> {
     <span style="color:#6272a4">// call the rendering API
-</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> data <span style="color:#ff79c6">=</span> await (await fetch(<span style="color:#f1fa8c">`/?section_id=</span><span style="color:#f1fa8c">${</span>section<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>)).text();
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> data <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> (<span style="color:#ff79c6">await</span> fetch(<span style="color:#f1fa8c">`/?section_id=</span><span style="color:#f1fa8c">${</span>section<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>)).text();
     <span style="color:#6272a4">// create a DOMParser and get the inside content of the section
 </span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> parser <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> DOMParser();
     <span style="color:#ff79c6">const</span> node <span style="color:#ff79c6">=</span> parser.parseFromString(data.toString(), <span style="color:#f1fa8c">&#39;text/html&#39;</span>).querySelector(<span style="color:#f1fa8c">&#39;.shopify-section&#39;</span>);
@@ -330,7 +333,7 @@ async <span style="color:#8be9fd;font-style:italic">function</span> getSection(s
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

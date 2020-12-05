@@ -91,6 +91,9 @@
     .dark .show-on-dark {
       display: block;
     }
+    .post-info {
+      margin-bottom: 1rem;
+    }
     a.none {
       color: inherit;
       border: none;
@@ -226,16 +229,16 @@
       <div itemprop="ArticleBody text" class="main-content"><p>I am modifying an open source CMS to use the <a href="phalconphp.com/en/" title="Phalcon PHP Framework">Phalcon PHP framework</a>, as well as the <a href="https://github.com/chobie/php-sundown" title="PHP-Sundown">PHP-Sundown</a> C implimentation of Markdown.</p>
 <p>It is a very simple CMS which previously would just echo out compiled HTML. But I am using the Volt template engine in Phalcon. It renders <code>.volt</code> files to native PHP. This means that I cannot just spit out raw HTML. I need to create a render function that passes an array of data to my PHP file.</p>
 <p>Here is that function:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function renderPhpFile($filename, $vars = null) {
-  if (is_array($vars) &amp;&amp; !empty($vars)) {
-    extract($vars);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">function</span> <span style="color:#50fa7b">renderPhpFile</span>(<span style="color:#8be9fd;font-style:italic">$filename</span>, <span style="color:#8be9fd;font-style:italic">$vars</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span>) {
+  <span style="color:#ff79c6">if</span> (is_array(<span style="color:#8be9fd;font-style:italic">$vars</span>) <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">!</span><span style="color:#ff79c6">empty</span>(<span style="color:#8be9fd;font-style:italic">$vars</span>)) {
+    extract(<span style="color:#8be9fd;font-style:italic">$vars</span>);
   }
   ob_start();
-  include $filename;
-  return ob_get_clean();
+  <span style="color:#ff79c6">include</span> <span style="color:#8be9fd;font-style:italic">$filename</span>;
+  <span style="color:#ff79c6">return</span> ob_get_clean();
 }
-// usage
-echo renderPhpFile(&#39;views/templates/index.php&#39;, $view_data);
+<span style="color:#6272a4">// usage
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">echo</span> renderPhpFile(<span style="color:#f1fa8c">&#39;views/templates/index.php&#39;</span>, <span style="color:#8be9fd;font-style:italic">$view_data</span>);
 </code></pre></div><p>This works! It is a handy little function for passing data into a PHP file.</p>
 <p>If you wanted to use an object, you would need to cast it to an array first.</p>
 </div>
@@ -268,7 +271,7 @@ echo renderPhpFile(&#39;views/templates/index.php&#39;, $view_data);
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2020-09-05');
+    navigator.serviceWorker.register('/sw.js?2020-12-04');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);
