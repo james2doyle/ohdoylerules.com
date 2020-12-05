@@ -19,6 +19,4 @@ hugo server -ws .
 
 ## Deploy
 
-```sh
-git subtree push --prefix public origin gh-pages
-```
+Run the build and make sure the gh-pages settings are set to use the `docs/` folder in the main branch
