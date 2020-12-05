@@ -1,5 +1,8 @@
 baseURL = "https://ohdoylerules.com/"
-# baseURL = "https://james2doyle.github.io/ohdoylerules.com/"
+
+# docs can be used for gh-pages without having to have a gh-pages branch
+publishDir = "docs"
+
 languageCode = "en-us"
 title = "James Doyle"
 
