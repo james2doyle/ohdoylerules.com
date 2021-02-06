@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>Fastmod Codemod For Refactoring</title>
+      <link>https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/</guid>
+      <description>Fastmod is a command line tool that can help you with large-scale codebase refactors</description>
+    </item>
+    
+    <item>
       <title>Create JSON Sections In Shopify</title>
       <link>https://ohdoylerules.com/web/create-json-sections-in-shopify/</link>
       <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | Fastmod Codemod For Refactoring</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="ohdoylerules">
+  <meta itemprop="url" content="https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="Fastmod Codemod For Refactoring">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+    <link rel="dns-prefetch" href="https://c.disquscdn.com">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Fastmod Codemod For Refactoring">
+    <meta property="article:author" content="James Doyle" />
+    <meta property="article:section" content="Tricks" />
+    <meta property="article:tag" content="refactor, code, delete, remove, replace, find, webpack, rewrite, fix, fastmod, codemod" />
+    <meta itemprop="keywords" content="refactor, code, delete, remove, replace, find, webpack, rewrite, fix, fastmod, codemod">
+    <meta property="og:keywords" content="refactor, code, delete, remove, replace, find, webpack, rewrite, fix, fastmod, codemod">
+    
+    
+      <meta name="description" content="Fastmod is a command line tool that can help you with large-scale codebase refactors">
+      <meta itemprop="description" content="Fastmod is a command line tool that can help you with large-scale codebase refactors">
+      <meta property="og:description" content="Fastmod is a command line tool that can help you with large-scale codebase refactors">
+      <meta name="twitter:description" content="Fastmod is a command line tool that can help you with large-scale codebase refactors">
+    
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    .post-info {
+      margin-bottom: 1rem;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid -middle">
+      <div class="cell menu">
+        <h1 itemprop="name headline">Fastmod Codemod For Refactoring</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <p class="post-info">
+        
+        <span class="post-date" itemprop="datePublished">🕒 February 6, 2020</span>
+        
+        
+        &nbsp;&nbsp;&nbsp;
+        
+        <span class="post-category" itemprop="genre about">🏷 Tricks</span>
+        
+      </p>
+      <div itemprop="ArticleBody text" class="main-content"><p>If you have ever encounter a big refactor, you were probably dreading the steps it would take to get all the changes done. You have to find patterns, replace them, remove old code, rename variables, so much work! Well, like most things in the development world, there are tools to help you do this. Yes, you can use find-and-replace, but that approach is very naïve (as in simple) and doesn&rsquo;t take in some of the more nuanced cases that you will come across.</p>
+<p>The tool that I have been using for the last couple of years is <a href="https://github.com/facebookincubator/fastmod">fastmod</a>. <code>fastmod</code> is a flavour of <code>codemod</code> but written in Rust - so it has to be cool right? Here is a description from the <code>codemod</code> repo:</p>
+<blockquote>
+<p>codemod is a tool/library to assist you with large-scale codebase refactors that can be partially automated but still require human oversight and occasional intervention.</p>
+</blockquote>
+<p>What you do is write a &ldquo;match pattern&rdquo; and then a &ldquo;replace pattern&rdquo;. When you run the tool you get a prompt for each match and you can decide what you want to do with the proposed changes. This is a lot like <code>git add -p</code> (which is also a great trick) where you only accept the changes you know are valid.</p>
+<p>One of the best things about this tool is how it provides the interface to the changes you need to apply:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> filter files by extension</li>
+<li><input checked="" disabled="" type="checkbox"> use regex to create matches</li>
+<li><input checked="" disabled="" type="checkbox"> named matches so they can be reordered</li>
+<li><input checked="" disabled="" type="checkbox"> preview of the changes before you commit them</li>
+<li><input checked="" disabled="" type="checkbox"> ability to accept or decline any single change</li>
+<li><input checked="" disabled="" type="checkbox"> ability to edit the changes using <code>$EDITOR</code> (like <code>git commit --verbose</code>)</li>
+<li><input checked="" disabled="" type="checkbox"> accept all changes without previews (&ldquo;fast mode&rdquo;)</li>
+</ul>
+<p><strong>Help With Regex</strong></p>
+<p>If you are terrible at written regex patterns, you&rsquo;re not alone. There are lots of people who despise regex but it isn&rsquo;t going anyway. I actually made a conscious effort a few years ago to acquire a better understanding of how regex works and what the patterns and special characters do. I used <a href="https://regexr.com/">this tool call regexr</a> to help practice as well as learn new patterns. Check it out if you need help building and testing regex patterns.</p>
+<p>Like most purpose-built tools, there is some learning curve to finding how to best use the interface provided. You really need to consider your match strategy and your replace strategy. Let&rsquo;s write some examples based on some real world examples I&rsquo;ve come across.</p>
+<h4 id="css">CSS</h4>
+<p>Here we have a CSS example for a button component. This component can be grouped or have an icon inside it. The naming of the component in CSS is kinda redundant.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#50fa7b">button-group-component</span> {
+  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
+  <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
+  <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">space</span><span style="color:#ff79c6">-</span>between;
+}
+.<span style="color:#50fa7b">button-component</span> {
+  <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
+  <span style="color:#ff79c6">background-color</span>: <span style="color:#ff79c6">black</span>;
+  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">inline</span><span style="color:#ff79c6">-</span><span style="color:#ff79c6">block</span>;
+  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">rem</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">rem</span>;
+}
+.<span style="color:#50fa7b">button-component</span> .<span style="color:#50fa7b">button-icon-component</span> <span style="color:#ff79c6">svg</span> {
+  fill: <span style="color:#ff79c6">currentColor</span>;
+}
+</code></pre></div><p>Let&rsquo;s remove the <code>-component</code> part of the CSS declaration. We don&rsquo;t need it. So we are going to turn <code>.button-group-component</code> into <code>.button-group</code> and so on for the other 2 class declarations. All we need to do is find <code>-component</code> and replace it with nothing/null/empty string.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">fastmod -m --extensions css <span style="color:#f1fa8c">&#39;(\-component)&#39;</span> <span style="color:#f1fa8c">&#39;&#39;</span>
+</code></pre></div><p>Running the above code on in our target folder will prompt us with this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">./example.css:1
+<span style="color:#8b080b">- .button-group-component {
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+ .button-group {
+</span><span style="font-weight:bold"></span>    display: flex;
+    align-items: center;
+Accept change (y = yes [default], n = no, e = edit, A = yes to all, E = yes+edit, q = quit)?
+</code></pre></div><p>Here you can see all the options for the code that is going to be changed as well as a nice diff too. If we move from left to right in the options we get the following choices:</p>
+<ul>
+<li><code>y</code> or <code>enter</code> accepts the changes being shown</li>
+<li><code>n</code> will not change anything and will go to the next change</li>
+<li><code>e</code> will open your <code>$EDITOR</code> <em>without</em> any changes applied</li>
+<li><code>A</code> will accept this change and all of the future changes with reprompting you</li>
+<li><code>E</code> will open your <code>$EDITOR</code> <em>with</em> any changes applied</li>
+<li><code>q</code> will no accept the changes and stop the process</li>
+</ul>
+<p>In this case we can hit <code>enter</code> for each change. We will be prompted 4 times: once for each occurrence of the string <code>-component</code> or we can skip all that and just hit <code>A</code> and everything will be changed.</p>
+<h4 id="webpack-magic-comments">Webpack Magic Comments</h4>
+<p>Recently I was working on a Vue project that had a lot of components in it. I wanted to start using <a href="https://router.vuejs.org/guide/advanced/lazy-loading.html#grouping-components-in-the-same-chunk">webpack chunking</a> in order to split the components up and have single chunks for each component instead of them being wrapped up together. In order to do that, I need to rewrite all my <code>import</code> statements to use &ldquo;dynamic imports&rdquo; with a special magic comment that webpack picks up.</p>
+<p>You can see the example below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#6272a4"># old code: `import MyComponent from &#39;Components/MyComponent.vue&#39;;`</span>
+<span style="color:#6272a4"># new code: `const MyComponent = () =&gt; import(/* webpackChunkName: &#34;MyComponent&#34; */ &#39;Components/MyComponent.vue&#39;);`</span>
+<span style="color:#6272a4"># note: you may need to reorder your imports when using a dynamic import</span>
+
+fastmod -m -d ./ --extensions vue <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>  <span style="color:#f1fa8c">&#39;import (.*?) from \&#39;</span><span style="color:#ff79c6">(</span>.*?<span style="color:#ff79c6">)</span><span style="color:#f1fa8c">\&#39;</span>;<span style="color:#f1fa8c">&#39; \
+</span><span style="color:#f1fa8c">  &#39;</span>const <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">()</span> <span style="color:#ff79c6">=</span>&gt; import<span style="color:#ff79c6">(</span>/* webpackChunkName: <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> */ <span style="color:#f1fa8c">\&#39;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">\&#39;</span><span style="color:#ff79c6">)</span>;&#39;
+</code></pre></div><p>Here you can see the snippet I wrote to do the refactor. The great thing about using <code>fastmod</code> over find-and-replace, is that it allowed me to accept or deny the changes. I didn&rsquo;t want all the components updated this way. Especially imports that were not Vue components. So this approach was ideal.</p>
+<h4 id="more-use-cases">More Use Cases</h4>
+<p>Those are two decent examples but I have used this tool quite a lot for refactoring code. Here are some more examples of what I used it for:</p>
+<ul>
+<li>add/remove classes in HTML</li>
+<li>rename bad variable names on multiple projects</li>
+<li>quickly fix the misspelling of various words in multiple projects</li>
+<li>ran a replace on an exported SQL database backup to change some values in the data (faster than running a query)</li>
+<li><a href="https://gist.github.com/james2doyle/a94542b8ef6f07a689f23698424d1763">refactor <code>isset</code> into <code>array_get</code></a> on a Laravel (PHP) project</li>
+<li>merge down multiple <code>use</code> statement in PHP to a single <code>use</code> line</li>
+<li>rewrite <code>{{ var }}</code> interpolation to <code>v-text=&quot;var&quot;</code> directives in a Vue project</li>
+<li>replace imports with other versions</li>
+<li>upgrade old code to new methods or APIs</li>
+</ul>
+<p>As you can probably already tell, the possibilities are endless! I have used this on database exports and even CSV files. It is a much nicer alternative to find-and-replace. Best of all? It&rsquo;s editor agnostic. So you can use it with any other tools.</p>
+</div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js?2021-02-06');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+
