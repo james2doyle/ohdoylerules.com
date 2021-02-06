@@ -1,7 +1,7 @@
 ---
 Title: "Fastmod Codemod For Refactoring"
 Description: "Fastmod is a command line tool that can help you with large-scale codebase refactors"
-Date: "2020-02-06"
+Date: "2021-02-06"
 Category: "Tricks"
 Template: "post"
 Keywords: ["refactor", "code", "delete", "remove", "replace", "find", "webpack", "rewrite", "fix", "fastmod", "codemod"]
