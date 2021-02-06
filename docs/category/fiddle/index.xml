@@ -12,6 +12,15 @@
     <atom:link href="https://ohdoylerules.com/category/fiddle/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Fastmod Codemod For Refactoring</title>
+      <link>https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/</guid>
+      <description>Fastmod is a command line tool that can help you with large-scale codebase refactors</description>
+    </item>
+    
+    <item>
       <title>Vue Omnibar Component</title>
       <link>https://ohdoylerules.com/web/vue-omnibar-component/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
@@ -63,15 +72,6 @@
       <author>james2doyle@gmail.com (James Doyle)</author>
       <guid>https://ohdoylerules.com/web/using-slots-in-vue-js/</guid>
       <description>If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components</description>
-    </item>
-    
-    <item>
-      <title>Fastmod Codemod For Refactoring</title>
-      <link>https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/</link>
-      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
-      <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/</guid>
-      <description>Fastmod is a command line tool that can help you with large-scale codebase refactors</description>
     </item>
     
     <item>
