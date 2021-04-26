@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <div itemscope itemtype="http://schema.org/BlogPosting">
   <div class="container">
-    <header class="grid -middle">
+    <header class="grid center">
       <div class="cell menu">
         <h1 itemprop="name headline">{{ .Title }}</h1>
       </div>
@@ -10,14 +10,13 @@
     <div class="the-loop">
       <p class="post-info">
         {{ if .Params.Date }}
-        <span class="post-date" itemprop="datePublished">🕒 {{ dateFormat .Site.Params.Date_format .Params.Date }}</span>
+          <span class="post-date" itemprop="datePublished">🕒&nbsp;&nbsp;<span>{{ dateFormat .Site.Params.Date_format .Params.Date }}</span></span>
         {{ end }}
         {{ if .Params.Updated }}
-        &nbsp;<span class="post-date">🕙 Updated: {{ dateFormat .Site.Params.Date_format .Params.Updated }}</span>
+          &nbsp;<span class="post-date">🕙&nbsp;&nbsp;<span>Updated: {{ dateFormat .Site.Params.Date_format .Params.Updated }}</span></span>
         {{ end }}
-        &nbsp;&nbsp;&nbsp;
         {{ if .Params.Category }}
-        <span class="post-category" itemprop="genre about">🏷 {{ .Params.Category }}</span>
+          &nbsp;<span class="post-category" itemprop="genre about">🏷&nbsp;&nbsp;<span>{{ .Params.Category }}</span></span>
         {{ end }}
       </p>
       <div itemprop="ArticleBody text" class="main-content">{{ .Content }}</div>

@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
   {{ if not .Params.Title }}
-    <title>{{ .Site.Title }} | OhDoyleRules</title>
-    <meta name="twitter:title" content="{{ .Site.Title }} | OhDoyleRules">
-    <meta property="og:title" content="{{ .Site.Title }} | OhDoyleRules">
+    <title>{{ .Site.Title }} | {{ .Site.Author.subtitle }}</title>
+    <meta name="twitter:title" content="{{ .Site.Title }} | {{ .Site.Author.subtitle }}">
+    <meta property="og:title" content="{{ .Site.Title }} | {{ .Site.Author.subtitle }}">
   {{ else }}
     <title>{{ .Site.Title }} | {{ .Params.Title }}</title>
   {{ end }}
@@ -19,7 +19,7 @@
     <meta property="og:title" content="{{ .Site.Title }}">
   {{ end }}
   <meta itemprop="name" content="{{ .Site.Title }}">
-  <meta property="og:site_name" content="ohdoylerules">
+  <meta property="og:site_name" content="{{ .Site.Author.subtitle }}">
   <meta itemprop="url" content="{{ .Permalink }}">
   <meta itemprop="email" content="{{ .Site.Params.Email }}">
   <meta property="og:url" content="{{ .Permalink }}">
