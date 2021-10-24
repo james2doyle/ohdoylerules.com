@@ -23,6 +23,7 @@ pygmentsStyle = "dracula"
 [author]
   name = "James Doyle"
   email = "james2doyle@gmail.com"
+  subtitle = "OhDoyleRules"
 
 [permalinks]
   post = "/:title/"
