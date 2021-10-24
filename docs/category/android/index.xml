@@ -12,6 +12,33 @@
     <atom:link href="https://ohdoylerules.com/category/android/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Vue stateful form component</title>
+      <link>https://ohdoylerules.com/snippets/vue-stateful-form-component/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/vue-stateful-form-component/</guid>
+      <description>Create a Vue form that escalates all events to the top level and supports v-model</description>
+    </item>
+    
+    <item>
+      <title>Lodash i18n (translation) function</title>
+      <link>https://ohdoylerules.com/snippets/lodash-translation-function/</link>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/lodash-translation-function/</guid>
+      <description>An incredibly simple i18n (internationalization + translation) function using lodash `get` and `template` functions</description>
+    </item>
+    
+    <item>
+      <title>Lodash memoize with a timeout</title>
+      <link>https://ohdoylerules.com/snippets/lodash-memo-with-timeout/</link>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/lodash-memo-with-timeout/</guid>
+      <description>Use lodash memoize with a TTL/timeout. Allows calls to be cached by time as well as argument values</description>
+    </item>
+    
+    <item>
       <title>Fastmod Codemod For Refactoring</title>
       <link>https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/</link>
       <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
