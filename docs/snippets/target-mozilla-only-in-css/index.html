@@ -232,10 +232,10 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I had some issues in Firefox recently. I was building a complicated “item” in CSS and it looked great in Chrome. I got an email later saying that the sizing was all off for a bunch of things. I thought this was really strange. I went back to the CSS and Chrome and I could not see any issues.</p>
 <p>I then fired up Firefox and, yikes! There was a bunch of weird issues. This is strange because normally Chrome to Firefox translates pretty well. I was using the <code>::first-letter</code> element and a few <code>::before</code> elements. But somehow, someway they got messed up. Anyway, I discovered this little snippet:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#ff79c6">-moz-document</span> <span style="color:#ff79c6">url-prefix</span><span style="color:#ff79c6">()</span> {
-  <span style="color:#6272a4">/* firefox only styles */</span>
-}
-</code></pre></div><p>It works. But what does it mean? The url-prefix() is a way to serve specific styles to a specific URL. In this case, I just want to target a -moz- device. <a href="https://developer.mozilla.org/en-US/docs/CSS/@document?redirectlocale=en-US&amp;redirectslug=CSS%2F%40-moz-document" title="MDN @Document">Here is a more in depth definition</a>. This worked nicely, and so it will stay into production.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#ff79c6">-moz-document</span> <span style="color:#ff79c6">url-prefix</span><span style="color:#ff79c6">()</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/* firefox only styles */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It works. But what does it mean? The url-prefix() is a way to serve specific styles to a specific URL. In this case, I just want to target a -moz- device. <a href="https://developer.mozilla.org/en-US/docs/CSS/@document?redirectlocale=en-US&amp;redirectslug=CSS%2F%40-moz-document" title="MDN @Document">Here is a more in depth definition</a>. This worked nicely, and so it will stay into production.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -266,7 +266,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

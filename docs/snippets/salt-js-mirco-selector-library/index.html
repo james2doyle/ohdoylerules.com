@@ -238,21 +238,21 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Yes, I see that the mapping is slower for newer versions of Chrome. But, almost every other browser and device is slower using <code>querySelectorAll</code> over the mapping method. Also keep in mind the regex used in that example is much more complicated than mine.</p>
 <p>Here are some examples of how you would use the library:</p>
 <h4 id="saltjs-examples">Salt.js Examples</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#6272a4">// get by id
-</span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;#iddiv&#39;</span>);
-<span style="color:#6272a4">// get by class name
-</span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;.classdiv&#39;</span>);
-<span style="color:#6272a4">// get by element name
-</span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;@namediv&#39;</span>);
-<span style="color:#6272a4">// get by element tag name
-</span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;=div&#39;</span>);
-<span style="color:#6272a4">// get element using querySelectorAll
-</span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;*div div.inside&#39;</span>);
-<span style="color:#6272a4">// getAttribute of name
-</span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;#iddiv&#39;</span>).getAttribute(<span style="color:#f1fa8c">&#39;name&#39;</span>);
-<span style="color:#6272a4">// getAttribute of name from nodelist
-</span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;.classdiv&#39;</span>)[<span style="color:#bd93f9">0</span>].getAttribute(<span style="color:#f1fa8c">&#39;name&#39;</span>);
-</code></pre></div><p><a href="https://github.com/james2doyle/saltjs" title="james2doyle/saltjs">Check out the library on Github</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6272a4">// get by id
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;#iddiv&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// get by class name
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;.classdiv&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// get by element name
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;@namediv&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// get by element tag name
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;=div&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// get element using querySelectorAll
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;*div div.inside&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// getAttribute of name
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;#iddiv&#39;</span>).getAttribute(<span style="color:#f1fa8c">&#39;name&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// getAttribute of name from nodelist
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>$(<span style="color:#f1fa8c">&#39;.classdiv&#39;</span>)[<span style="color:#bd93f9">0</span>].getAttribute(<span style="color:#f1fa8c">&#39;name&#39;</span>);
+</span></span></code></pre></div><p><a href="https://github.com/james2doyle/saltjs" title="james2doyle/saltjs">Check out the library on Github</a>.</p>
 <h4 id="update">Update</h4>
 <p>Looks like there are a bunch of better ways to make this smaller! I’ve updated the github to reflect the new libraries. I have also added a <a href="http://jsperf.com/micro-selector-libraries">jsPerf test</a>.</p>
 </div>
@@ -285,7 +285,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

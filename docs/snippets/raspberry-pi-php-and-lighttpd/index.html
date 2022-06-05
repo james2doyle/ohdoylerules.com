@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
   
-    <title>James Doyle | Making a socket.io app and how socket.io works</title>
+    <title>James Doyle | Setup A Raspberry Pi with PHP And Lighttpd</title>
   
   <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
   <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
   
   <meta itemprop="name" content="James Doyle">
   <meta property="og:site_name" content="OhDoyleRules">
-  <meta itemprop="url" content="https://ohdoylerules.com/demo/socketio-works-howto/">
+  <meta itemprop="url" content="https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/">
   <meta itemprop="email" content="james2doyle@gmail.com">
-  <meta property="og:url" content="https://ohdoylerules.com/demo/socketio-works-howto/">
+  <meta property="og:url" content="https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/">
   <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
   <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
   <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
@@ -37,7 +37,7 @@
   <meta name="theme-color" content="#333333">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@james2doyle">
-  <meta name="twitter:title" content="Making a socket.io app and how socket.io works">
+  <meta name="twitter:title" content="Setup A Raspberry Pi with PHP And Lighttpd">
   <meta name="twitter:creator" content="@james2doyle">
   <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
   <meta name="twitter:domain" content="https://ohdoylerules.com/">
@@ -46,23 +46,23 @@
   
     <link rel="dns-prefetch" href="https://c.disquscdn.com">
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Making a socket.io app and how socket.io works">
+    <meta property="og:title" content="Setup A Raspberry Pi with PHP And Lighttpd">
     <meta property="article:author" content="James Doyle" />
-    <meta property="article:section" content="Demo" />
-    <meta property="article:tag" content="socket, io, demo, nodejs, video" />
-    <meta itemprop="keywords" content="socket, io, demo, nodejs, video">
-    <meta property="og:keywords" content="socket, io, demo, nodejs, video">
+    <meta property="article:section" content="Snippets" />
+    <meta property="article:tag" content="raspberry, pi, php, 8.1, composer, lighttpd, apache, web, server" />
+    <meta itemprop="keywords" content="raspberry, pi, php, 8.1, composer, lighttpd, apache, web, server">
+    <meta property="og:keywords" content="raspberry, pi, php, 8.1, composer, lighttpd, apache, web, server">
     
     
-      <meta name="description" content="Making a socket.io app and how socket.io works">
-      <meta itemprop="description" content="Making a socket.io app and how socket.io works">
-      <meta property="og:description" content="Making a socket.io app and how socket.io works">
-      <meta name="twitter:description" content="Making a socket.io app and how socket.io works">
+      <meta name="description" content="Setup a raspberry pi with php 8.1 and the latest lighttpd web server">
+      <meta itemprop="description" content="Setup a raspberry pi with php 8.1 and the latest lighttpd web server">
+      <meta property="og:description" content="Setup a raspberry pi with php 8.1 and the latest lighttpd web server">
+      <meta name="twitter:description" content="Setup a raspberry pi with php 8.1 and the latest lighttpd web server">
     
   
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
-  <link rel="canonical" href="https://ohdoylerules.com/demo/socketio-works-howto/">
+  <link rel="canonical" href="https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
   <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
   <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
@@ -216,24 +216,61 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   <div class="container">
     <header class="grid center">
       <div class="cell menu">
-        <h1 itemprop="name headline">Making a socket.io app and how socket.io works</h1>
+        <h1 itemprop="name headline">Setup A Raspberry Pi with PHP And Lighttpd</h1>
       </div>
     </header>
     <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
     <div class="the-loop">
       <p class="post-info">
         
-          <span class="post-date" itemprop="datePublished">🕒&nbsp;&nbsp;<span>January 13, 2013</span></span>
+          <span class="post-date" itemprop="datePublished">🕒&nbsp;&nbsp;<span>June 5, 2022</span></span>
         
         
         
-          &nbsp;<span class="post-category" itemprop="genre about">🏷&nbsp;&nbsp;<span>Demo</span></span>
+          &nbsp;<span class="post-category" itemprop="genre about">🏷&nbsp;&nbsp;<span>Snippets</span></span>
         
       </p>
-      <div itemprop="ArticleBody text" class="main-content"><p>I made my first video about web development. It is a quick video about socket.io and how it works with node and such.</p>
-<p><a href="http://youtu.be/JfYRGTvMbBA"><img src="/images/vlcsnap-2013-01-12-16h52m23s239.jpg" alt="Socket.io demo app"></a></p>
-<p>It also includes a little demo of a tiny app I built. I may release the source later on depending on the videos popularity.</p>
-<p><a href="http://youtu.be/JfYRGTvMbBA">Making a socket.io app</a></p>
+      <div itemprop="ArticleBody text" class="main-content"><p>I recently got a Raspberry Pi model 4+. I&rsquo;m using it to <a href="https://pimylifeup.com/raspberrypi-minidlna/">run a minidlna server</a> that loads music and movies from an old external hard drive that I have. On top of that, I wanted to run a local web server so that I can write scripts and pages that I can access locally on my network without having to have my laptop open and running.</p>
+<p>I wanted to setup <code>lighttpd</code> as it is more efficient than the default installed <code>apache2</code> - although it has less features. Since I&rsquo;m already running <code>minidlna</code>, I wanted a web server that was more performant and used less memory/resources.</p>
+<p>Finally, I wanted the latest PHP installed given I use it a lot in my day job and it will be great for writing small websites that are only ever accessed through my local network. Unfortunately, the default installed PHP version is quite a bit behind and you need to setup new sources in order to install the latest version of PHP.</p>
+<p>Here is a short list of all the steps you need to setup a newer version of PHP 8.1 as well as the <code>lighttpd</code> server.</p>
+<h4 id="instructions">Instructions</h4>
+<p><em>These instructions assume you&rsquo;re using the default debian-based raspberry pi operating system!</em></p>
+<p>Update the local packages already installed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get update
+</span></span></code></pre></div><p>Install the dependencies needed to add the additional services:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get install lsb-release apt-transport-https ca-certificates
+</span></span></code></pre></div><p>Add the repository for installing the latest version of PHP:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://origin.sury.org/php/apt.gpg
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;deb https://packages.sury.org/php/ </span><span style="color:#ff79c6">$(</span>lsb_release -sc<span style="color:#ff79c6">)</span><span style="color:#f1fa8c"> main&#34;</span> | sudo tee /etc/apt/sources.list.d/php.list
+</span></span></code></pre></div><p>Now we can install all the PHP packages we will need for basic PHP applications:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install -y php8.1 php8.1-cli php8.1-cgi php8.1-intl php8.1-zip
+</span></span></code></pre></div><p>If you need additional PHP extensions then the above command is where you would add those in.</p>
+<p>Since we now have the latest PHP version, we can setup <code>composer</code>. The <code>sha384</code> code may different for your installation based on whatever version is out when you are following these instructions. <a href="https://getcomposer.org/download/">You can find the latest download/install instructions on the Composer download page</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>php -r <span style="color:#f1fa8c">&#34;copy(&#39;https://getcomposer.org/installer&#39;, &#39;composer-setup.php&#39;);&#34;</span>
+</span></span><span style="display:flex;"><span>php -r <span style="color:#f1fa8c">&#34;if (hash_file(&#39;sha384&#39;, &#39;composer-setup.php&#39;) === &#39;55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae&#39;) { echo &#39;Installer verified&#39;; } else { echo &#39;Installer corrupt&#39;; unlink(&#39;composer-setup.php&#39;); } echo PHP_EOL;&#34;</span>
+</span></span><span style="display:flex;"><span>php composer-setup.php
+</span></span><span style="display:flex;"><span>sudo mv composer.phar /usr/local/bin/composer
+</span></span><span style="display:flex;"><span>php -r <span style="color:#f1fa8c">&#34;unlink(&#39;composer-setup.php&#39;);&#34;</span>
+</span></span></code></pre></div><p>We can remove <code>apache2</code>, given we are not going to use it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo systemctl stop apache2.service
+</span></span><span style="display:flex;"><span>sudo apt remove apache2
+</span></span></code></pre></div><p>The last thing to install will be <code>lighttpd</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get install lighttpd lighttpd-doc
+</span></span></code></pre></div><p>We also want to enable the PHP modules inside <code>lighttpd</code> so that we can process <code>.php</code> files:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo lighttpd-enable-mod fastcgi fastcgi-php
+</span></span></code></pre></div><p>In order for the web server to properly run, serve our files, and store logs and caches, we need to make sure the folders have the right ownership rules:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo chown -R www-data:www-data /var/log/lighttpd
+</span></span><span style="display:flex;"><span>sudo chown -R www-data:www-data /var/cache/lighttpd
+</span></span><span style="display:flex;"><span>sudo chown -R www-data:www-data /var/www/html
+</span></span></code></pre></div><p>To test out the server once we are finished, we can setup this simple project that emulates the apache directory listing module. This will just list everything in our <code>/var/www/html</code> folder in a nice display:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone https://github.com/halgatewood/file-directory-list /var/www/html/listing
+</span></span></code></pre></div><p>We can now make sure the <code>lighttpd</code> service is running so it will always start when we restart our pi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo systemctl start lighttpd.service
+</span></span></code></pre></div><p>If you want to test the server on the command line, you can just <code>curl</code> your localhost and see what happens. You should get the source code for the listing page we installed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl http://localhost/listing
+</span></span></code></pre></div><p>Done! That should be all you need to have PHP 8.1 and a light weight web server setup!</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>

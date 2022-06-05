@@ -272,11 +272,11 @@ Listen 127.0.0.1:8080
 <h3 id="varnish-setup">Varnish Setup</h3>
 <p>First, we need to tell Varnish to live on port 80. We do that by editing the settings for the Varnish daemon.</p>
 <p>The file we need to edit is <code>/etc/default/varnish</code>. Scroll down until you see the uncommented lines with code that looks like it does below. We need to it like this:</p>
-<pre tabindex="0"><code>DAEMON_OPTS=&quot;-a :80 \
+<pre tabindex="0"><code>DAEMON_OPTS=&#34;-a :80 \
              -T localhost:6082 \
              -f /etc/varnish/default.vcl \
              -S /etc/varnish/secret \
-             -s malloc,256m&quot;
+             -s malloc,256m&#34;
 </code></pre><p>Most likely, you will only change the <code>-a</code> part to <code>80</code>.</p>
 <p>Our Varnish configuration for our site lives at <code>/etc/varnish/default.vcl</code>, here is the one I am using:</p>
 <script src="https://gist.github.com/james2doyle/0feec6ab77078ad3fdce.js"></script>
@@ -328,7 +328,7 @@ Listen 127.0.0.1:8080
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

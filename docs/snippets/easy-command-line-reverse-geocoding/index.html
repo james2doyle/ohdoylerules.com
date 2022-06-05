@@ -240,18 +240,18 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>It is multi-platform, so no worries for Windows users.</p>
 <p>Here is the meat:</p>
 <h4 id="function">Function</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">function</span> reverse-geocode<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-  <span style="color:#6272a4"># replace spaces with + signs</span>
-  <span style="color:#8be9fd;font-style:italic">STRING</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$1</span> | tr <span style="color:#f1fa8c">&#39; &#39;</span> <span style="color:#f1fa8c">&#39;+&#39;</span><span style="color:#ff79c6">)</span>
-  <span style="color:#6272a4"># save results</span>
-  <span style="color:#8be9fd;font-style:italic">CURLED</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>curl <span style="color:#f1fa8c">&#34;http://maps.googleapis.com/maps/api/geocode/json?address=</span><span style="color:#8be9fd;font-style:italic">$STRING</span><span style="color:#f1fa8c">&amp;sensor=true&#34;</span><span style="color:#ff79c6">)</span>
-  <span style="color:#6272a4"># save lat and lng</span>
-  <span style="color:#8be9fd;font-style:italic">LANG</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$CURLED</span> | jq <span style="color:#f1fa8c">&#39;.results[0].geometry.location.lng&#39;</span><span style="color:#ff79c6">)</span>
-  <span style="color:#8be9fd;font-style:italic">LAT</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$CURLED</span> | jq <span style="color:#f1fa8c">&#39;.results[0].geometry.location.lat&#39;</span><span style="color:#ff79c6">)</span>
-  <span style="color:#6272a4"># echo them out</span>
-  <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Lat: </span><span style="color:#8be9fd;font-style:italic">$LAT</span><span style="color:#f1fa8c">, Lang: </span><span style="color:#8be9fd;font-style:italic">$LANG</span><span style="color:#f1fa8c">&#34;</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><h4 id="usage">Usage:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#ff79c6">function</span> reverse-geocode<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># replace spaces with + signs</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">STRING</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$1</span> | tr <span style="color:#f1fa8c">&#39; &#39;</span> <span style="color:#f1fa8c">&#39;+&#39;</span><span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># save results</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">CURLED</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span>curl <span style="color:#f1fa8c">&#34;http://maps.googleapis.com/maps/api/geocode/json?address=</span><span style="color:#8be9fd;font-style:italic">$STRING</span><span style="color:#f1fa8c">&amp;sensor=true&#34;</span><span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># save lat and lng</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">LANG</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$CURLED</span> | jq <span style="color:#f1fa8c">&#39;.results[0].geometry.location.lng&#39;</span><span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">LAT</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">$(</span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#8be9fd;font-style:italic">$CURLED</span> | jq <span style="color:#f1fa8c">&#39;.results[0].geometry.location.lat&#39;</span><span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4"># echo them out</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;Lat: </span><span style="color:#8be9fd;font-style:italic">$LAT</span><span style="color:#f1fa8c">, Lang: </span><span style="color:#8be9fd;font-style:italic">$LANG</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><h4 id="usage">Usage:</h4>
 <pre><code>reverse-geocode &quot;998 Oxford Street E, London ON, N5Y 3K7&quot;
 </code></pre>
 <p>This return the curl results as well as the Lat and Lang output for the location.</p>
@@ -285,7 +285,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

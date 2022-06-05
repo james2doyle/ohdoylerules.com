@@ -8,8 +8,17 @@
     <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
-    <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ohdoylerules.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setup A Raspberry Pi with PHP And Lighttpd</title>
+      <link>https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/</guid>
+      <description>Setup a raspberry pi with php 8.1 and the latest lighttpd web server</description>
+    </item>
     
     <item>
       <title>Vue stateful form component</title>
@@ -355,10 +364,10 @@
     
     <item>
       <title>Add $.getStylesheet To jQuery</title>
-      <link>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</link>
+      <link>https://ohdoylerules.com/web/add--getstylesheet-to-jquery/</link>
       <pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate>
       <author>james2doyle@gmail.com (James Doyle)</author>
-      <guid>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</guid>
+      <guid>https://ohdoylerules.com/web/add--getstylesheet-to-jquery/</guid>
       <description>Ever wanted to have a CSS/Stylesheet version of $.getScript? Well now you can with $.getStylesheet</description>
     </item>
     

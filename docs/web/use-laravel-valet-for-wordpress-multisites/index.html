@@ -251,47 +251,47 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>They are both going to resolve to the same site right now. That&rsquo;s OK. We need to tweak our <code>wp-config.php</code> to work properly with the requests.</p>
 <p>If we have multisite already setup, we should see some sites in the <code>wp_blogs</code> table of our database. We want each of these &ldquo;sites&rdquo; to reflect the domains on our system. You can update those now and make sure that the domains match the ones we are setting up.</p>
 <p>Then we need to update our <code>wp-config.php</code> with some changes:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
-<span style="color:#6272a4">// wp-config.php
-</span><span style="color:#6272a4"></span>
-<span style="color:#6272a4">// ... there is going to be other stuff in here at the top...
-</span><span style="color:#6272a4"></span>
-<span style="color:#6272a4">// check for HTTPS since valet makes it easy to add HTTPS locally...
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$protocol</span> <span style="color:#ff79c6">=</span> isset(<span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTPS&#39;</span>]) <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTPS&#39;</span>] <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#39;on&#39;</span> <span style="color:#ff79c6">?</span> <span style="color:#f1fa8c">&#39;https://&#39;</span> <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;http://&#39;</span>;
-
-<span style="color:#6272a4">// set the home vars based on the domain that is being used for this request
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_HOME&#39;</span>, <span style="color:#8be9fd;font-style:italic">$protocol</span> <span style="color:#ff79c6">.</span> <span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTP_HOST&#39;</span>]);
-define(<span style="color:#f1fa8c">&#39;WP_SITEURL&#39;</span>, WP_HOME);
-
-<span style="color:#6272a4">// multisite settings, should be the same
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_ALLOW_MULTISITE&#39;</span>, <span style="color:#ff79c6">true</span>);
-define(<span style="color:#f1fa8c">&#39;MULTISITE&#39;</span>, <span style="color:#ff79c6">true</span>);
-
-<span style="color:#6272a4">// grab the domain from the request and just set it as the current site
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;DOMAIN_CURRENT_SITE&#39;</span>, <span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTP_HOST&#39;</span>]);
-
-<span style="color:#6272a4">// we get the IDs from `wp_blogs` table
-</span><span style="color:#6272a4">// and use them here as our domain =&gt; wp_blog.id mappings
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$site</span> <span style="color:#ff79c6">=</span> [
-    <span style="color:#f1fa8c">&#39;my-blog.localhost&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#bd93f9">1</span>,
-    <span style="color:#f1fa8c">&#39;my-other-blog.localhost&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#bd93f9">2</span>,
-][<span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTP_HOST&#39;</span>]];
-
-<span style="color:#6272a4">// we set the active ID here now that we have the right one
-</span><span style="color:#6272a4">// based on the domain we are on in this request
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;SITE_ID_CURRENT_SITE&#39;</span>, <span style="color:#8be9fd;font-style:italic">$site</span>);
-define(<span style="color:#f1fa8c">&#39;BLOG_ID_CURRENT_SITE&#39;</span>, <span style="color:#8be9fd;font-style:italic">$site</span>);
-
-<span style="color:#6272a4">// the rest of the regular stuff
-</span><span style="color:#6272a4">// up to you what you want here
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_DEBUG&#39;</span>, <span style="color:#ff79c6">false</span>);
-define(<span style="color:#f1fa8c">&#39;WP_CACHE&#39;</span>, <span style="color:#ff79c6">false</span>);
-define(<span style="color:#f1fa8c">&#39;PATH_CURRENT_SITE&#39;</span>, <span style="color:#f1fa8c">&#39;/&#39;</span>);
-define(<span style="color:#f1fa8c">&#39;COOKIE_DOMAIN&#39;</span>, <span style="color:#f1fa8c">&#39;&#39;</span>);
-define(<span style="color:#f1fa8c">&#39;ADMIN_COOKIE_PATH&#39;</span>, <span style="color:#f1fa8c">&#39;/&#39;</span>);
-define(<span style="color:#f1fa8c">&#39;COOKIEPATH&#39;</span>, <span style="color:#f1fa8c">&#39;/&#39;</span>);
-define(<span style="color:#f1fa8c">&#39;SITECOOKIEPATH&#39;</span>, <span style="color:#f1fa8c">&#39;/&#39;</span>);
-</code></pre></div><p>So what we are doing here is taking advantage of the way PHP handles requests. Each request runs the entire application. So we can use the request itself as the state of our application. We use the domain to figure out which site we should be loading. Pretty simple.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;?</span>php
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// wp-config.php
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// ... there is going to be other stuff in here at the top...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// check for HTTPS since valet makes it easy to add HTTPS locally...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$protocol</span> <span style="color:#ff79c6">=</span> isset(<span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTPS&#39;</span>]) <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTPS&#39;</span>] <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#39;on&#39;</span> <span style="color:#ff79c6">?</span> <span style="color:#f1fa8c">&#39;https://&#39;</span> <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;http://&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// set the home vars based on the domain that is being used for this request
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_HOME&#39;</span>, <span style="color:#8be9fd;font-style:italic">$protocol</span> <span style="color:#ff79c6">.</span> <span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTP_HOST&#39;</span>]);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;WP_SITEURL&#39;</span>, WP_HOME);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// multisite settings, should be the same
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_ALLOW_MULTISITE&#39;</span>, <span style="color:#ff79c6">true</span>);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;MULTISITE&#39;</span>, <span style="color:#ff79c6">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// grab the domain from the request and just set it as the current site
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;DOMAIN_CURRENT_SITE&#39;</span>, <span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTP_HOST&#39;</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// we get the IDs from `wp_blogs` table
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">// and use them here as our domain =&gt; wp_blog.id mappings
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$site</span> <span style="color:#ff79c6">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;my-blog.localhost&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#bd93f9">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;my-other-blog.localhost&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#bd93f9">2</span>,
+</span></span><span style="display:flex;"><span>][<span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;HTTP_HOST&#39;</span>]];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// we set the active ID here now that we have the right one
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">// based on the domain we are on in this request
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;SITE_ID_CURRENT_SITE&#39;</span>, <span style="color:#8be9fd;font-style:italic">$site</span>);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;BLOG_ID_CURRENT_SITE&#39;</span>, <span style="color:#8be9fd;font-style:italic">$site</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// the rest of the regular stuff
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">// up to you what you want here
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_DEBUG&#39;</span>, <span style="color:#ff79c6">false</span>);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;WP_CACHE&#39;</span>, <span style="color:#ff79c6">false</span>);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;PATH_CURRENT_SITE&#39;</span>, <span style="color:#f1fa8c">&#39;/&#39;</span>);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;COOKIE_DOMAIN&#39;</span>, <span style="color:#f1fa8c">&#39;&#39;</span>);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;ADMIN_COOKIE_PATH&#39;</span>, <span style="color:#f1fa8c">&#39;/&#39;</span>);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;COOKIEPATH&#39;</span>, <span style="color:#f1fa8c">&#39;/&#39;</span>);
+</span></span><span style="display:flex;"><span>define(<span style="color:#f1fa8c">&#39;SITECOOKIEPATH&#39;</span>, <span style="color:#f1fa8c">&#39;/&#39;</span>);
+</span></span></code></pre></div><p>So what we are doing here is taking advantage of the way PHP handles requests. Each request runs the entire application. So we can use the request itself as the state of our application. We use the domain to figure out which site we should be loading. Pretty simple.</p>
 <p>Now we don&rsquo;t have to make multiple copies of the WordPress setup just to test the basic multisite features.</p>
 <p>I understand that you probably don&rsquo;t want to do this as multisite is usually because you want to administrate multiple instances of WordPress at the same time. But when you are just using multisite for managing content. In my case, it was just that the site was multilingual and so we wanted the sites to be identical but the content is swapping in and out. So this is a setup for that instead of having two completely separate folders and copies.</p>
 <p>The nice thing about this is that it also scales nicely. If you have new sites, just <code>valet link</code> the domain, and add to the array of <code>$sites</code>. Done!</p>
@@ -325,7 +325,7 @@ define(<span style="color:#f1fa8c">&#39;SITECOOKIEPATH&#39;</span>, <span style=
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

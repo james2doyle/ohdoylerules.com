@@ -243,14 +243,14 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 {%- capture contentForQuerystring -%}{{- content_for_header -}}{%- endcapture -%}
 
 {% comment %}Use string splitting to pull the value from content_for_header and apply some string clean up{% endcomment %}
-{%- assign pageUrl = contentForQuerystring | split:'&quot;pageurl&quot;:&quot;' | last
-  | split:'&quot;'
+{%- assign pageUrl = contentForQuerystring | split:&#39;&#34;pageurl&#34;:&#34;&#39; | last
+  | split:&#39;&#34;&#39;
   | first
-  | split:'.myshopify.com'
+  | split:&#39;.myshopify.com&#39;
   | last
-  | replace:'\/','/'
-  | replace:'%20',' '
-  | replace:'\u0026','&amp;'
+  | replace:&#39;\/&#39;,&#39;/&#39;
+  | replace:&#39;%20&#39;,&#39; &#39;
+  | replace:&#39;\u0026&#39;,&#39;&amp;&#39;
   | strip
 -%}
 </code></pre><p>The code above is a snippet of the <a href="http://freakdesign.com.au/blogs/news/get-the-url-querystring-values-with-liquid-in-shopify">trick used to detect query strings in liquid</a>. We only need this piece. So let&rsquo;s continue.</p>
@@ -297,7 +297,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

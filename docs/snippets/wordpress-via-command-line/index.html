@@ -232,15 +232,15 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>All the cool kids are using the command line these days. This allows you to run quick commands and little functions that would be too tedious to run with a GUI or just clicking around.</p>
 <p>A while ago I added this little code snippet to be .bashrc file. It means I can run <code>download-wordpress</code> in an empty folder and then it will go and grab the latest archive, unzip it, and remove the junk.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">download-wordpress <span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-  wget http://wordpress.org/latest.tar.gz <span style="color:#6272a4"># get wordpress</span>
-  tar xfz latest.tar.gz <span style="color:#6272a4"># unzip the archive</span>
-  mv wordpress/* ./ <span style="color:#6272a4"># move the files to the root of this directory</span>
-  rmdir ./wordpress/ <span style="color:#6272a4"># delete the empty directory</span>
-  rm -f latest.tar.gz <span style="color:#6272a4"># delete the archive</span>
-  <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#39;wordpress installed&#39;</span> <span style="color:#6272a4"># let me know we are done</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>This is a handy function. You can really use it for any CMS or Zip file you have to grab on the regular. Just remember to run this in an <em>empty directory</em>, or it will overwrite everything and it will make a huge mess.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>download-wordpress <span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  wget http://wordpress.org/latest.tar.gz <span style="color:#6272a4"># get wordpress</span>
+</span></span><span style="display:flex;"><span>  tar xfz latest.tar.gz <span style="color:#6272a4"># unzip the archive</span>
+</span></span><span style="display:flex;"><span>  mv wordpress/* ./ <span style="color:#6272a4"># move the files to the root of this directory</span>
+</span></span><span style="display:flex;"><span>  rmdir ./wordpress/ <span style="color:#6272a4"># delete the empty directory</span>
+</span></span><span style="display:flex;"><span>  rm -f latest.tar.gz <span style="color:#6272a4"># delete the archive</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#39;wordpress installed&#39;</span> <span style="color:#6272a4"># let me know we are done</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>This is a handy function. You can really use it for any CMS or Zip file you have to grab on the regular. Just remember to run this in an <em>empty directory</em>, or it will overwrite everything and it will make a huge mess.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -271,7 +271,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

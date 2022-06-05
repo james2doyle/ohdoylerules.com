@@ -232,7 +232,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>For the last year at <a href="http://warpaintmedia.ca">WARPAINT Media</a>, we have been getting assaulted with spam. Everything from &ldquo;Chinese Jerseys&rdquo; and &ldquo;Super SEO Ultra Elite Package Extreme&rdquo; offers.</p>
 <p>We are using <a href="http://pyrocms.com">PyroCMS</a> for the website. The default contact plugin is pretty awesome. It has some really great features and couldn&rsquo;t be easier to use. There is a little <a href="http://www.sitepoint.com/forums/showthread.php?946120-Spam-Honey-Pot-trap&amp;s=9cfd3419319d5c9bd1f5d597cdfa6113&amp;p=5278832&amp;viewfull=1#post5278832">honeypot</a> for spam bots, but it seems to not be doing a great job, at least for us.</p>
-<p>The great thing about the Pyro contact form is that it lets the developer define some validation without much work. In the past I have added questions like <em>&ldquo;what is one plus one? (use a number)&quot;</em>, other times I have tried <em>&ldquo;are you a human?&quot;</em> with a dropdown. Both seemed fine. But I wanted something a little more transparent and more conventional than strange questions about math or your species.</p>
+<p>The great thing about the Pyro contact form is that it lets the developer define some validation without much work. In the past I have added questions like <em>&ldquo;what is one plus one? (use a number)&rdquo;</em>, other times I have tried <em>&ldquo;are you a human?&rdquo;</em> with a dropdown. Both seemed fine. But I wanted something a little more transparent and more conventional than strange questions about math or your species.</p>
 <p>The solution that I came up with was, 2 email fields. That&rsquo;s it. I have one that is called &ldquo;email&rdquo; and another field that is called &ldquo;check&rdquo;. When the user submits the form, the email and check field and validated. The rules for them are that they need to be identical, <em>but</em> they also need to be valid emails.</p>
 <p>So there is a sort of a double validation going on. They need to be putting in a real email and they need to know that the email needs to match the check field. The label for this second check field is just &ldquo;Enter Your Email Again&rdquo;. Since it comes after the first field with an Email label, people tend to figure it out.</p>
 <p>How about the results? Well we used to get about 10-20 spam per day. Now we get about 1-3 a week and none of them are from our websites contact form.</p>
@@ -268,7 +268,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

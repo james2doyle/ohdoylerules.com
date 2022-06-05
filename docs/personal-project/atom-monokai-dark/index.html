@@ -236,37 +236,37 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   <a href="/images/atom-monokai-dark.png" target="_blank"><img alt="atom monokai dark screenshot" src="/images/atom-monokai-dark.png" ></a>
 </div>
 <p>I would also suggest editing your main stylesheet and adding the following CSS:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#6272a4">/* really nice smooth fonts */</span>
-<span style="color:#ff79c6">body</span> {
-  <span style="color:#ff79c6">-webkit-</span>font-smoothing: antialiased;
-  text-rendering: <span style="color:#ff79c6">optimizeLegibility</span>;
-  <span style="color:#ff79c6">-moz-</span>osx-font-smoothing: grayscale;
-}
-
-<span style="color:#6272a4">/* custom scrollbars */</span>
-.<span style="color:#50fa7b">tree-view-resizer</span> {
-  ::<span style="color:#ff79c6">-webkit-</span>scrollbar {
-    <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">0.5</span><span style="color:#8be9fd">em</span>;
-    <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">0.5</span><span style="color:#8be9fd">em</span>;
-  }
-
-  ::-webkit-scrollbar-track {
-    <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#303030</span>;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    <span style="color:#ff79c6">background-color</span>: <span style="color:#50fa7b">lighten</span>(<span style="color:#bd93f9">#303030</span>, <span style="color:#bd93f9">15</span><span style="color:#8be9fd">%</span>);
-  }
-}
-
-<span style="color:#6272a4">/* fix website scroll styling flash */</span>
-.<span style="color:#50fa7b">tree-view-scroller</span> {
-  <span style="color:#ff79c6">overflow</span>: <span style="color:#ff79c6">hidden</span>;
-  &amp;:hover {
-    <span style="color:#ff79c6">overflow</span>: <span style="color:#ff79c6">auto</span>;
-  }
-}
-</code></pre></div><p>This adds some nicer smoothing and also adds some custom scrollbars to both panes. This gets rid of the ugly strange white ones. I would also suggest checking out <a href="https://ohdoylerules.com/web/source-code-pro-sublime">Source Code Pro</a> for your font!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#6272a4">/* really nice smooth fonts */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">body</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-webkit-</span>font-smoothing: antialiased;
+</span></span><span style="display:flex;"><span>  text-rendering: <span style="color:#ff79c6">optimizeLegibility</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-moz-</span>osx-font-smoothing: grayscale;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* custom scrollbars */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">tree-view-resizer</span> {
+</span></span><span style="display:flex;"><span>  ::<span style="color:#ff79c6">-webkit-</span>scrollbar {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">0.5</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">0.5</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ::-webkit-scrollbar-track {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#303030</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ::-webkit-scrollbar-thumb {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-color</span>: <span style="color:#50fa7b">lighten</span>(<span style="color:#bd93f9">#303030</span>, <span style="color:#bd93f9">15</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* fix website scroll styling flash */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">tree-view-scroller</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">overflow</span>: <span style="color:#ff79c6">hidden</span>;
+</span></span><span style="display:flex;"><span>  &amp;:hover {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">overflow</span>: <span style="color:#ff79c6">auto</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This adds some nicer smoothing and also adds some custom scrollbars to both panes. This gets rid of the ugly strange white ones. I would also suggest checking out <a href="https://ohdoylerules.com/web/source-code-pro-sublime">Source Code Pro</a> for your font!</p>
 <p>You can download the theme on <a href="http://atom.io/packages/monokai-dark">Atom</a>.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
@@ -298,7 +298,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

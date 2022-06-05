@@ -233,50 +233,50 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       <div itemprop="ArticleBody text" class="main-content"><p>If you are working with server-rendered apps (your view is compiled on the server down to HTML), and you are a <a href="https://vuejs.org/">Vue.js</a> user, then you should definitely learn to use a <a href="https://vuejs.org/v2/guide/components-slots.html">Vue feature called slots</a>! Not only will it allow you to make more reusable and flexible components, but you will also improve the rendering performance of your apps as well.</p>
 <h2 id="basic-example">Basic Example</h2>
 <p>Here is the example we will be refactoring later. It is a &ldquo;profile list&rdquo; which takes in an array of users from a prop, and then creates &ldquo;profile cards&rdquo; for each one. Finally, it adds a button in each card that emits an event with the user data when someone clicks on it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#6272a4">&lt;!--
-</span><span style="color:#6272a4">  This is the way you might typically build a component like this
-</span><span style="color:#6272a4"> --&gt;</span>
-&lt;<span style="color:#ff79c6">template</span>&gt;
-  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-list&#34;</span>&gt;
-    &lt;<span style="color:#ff79c6">ul</span>&gt;
-      <span style="color:#6272a4">&lt;!-- loop over all the users and create cards for them --&gt;</span>
-      &lt;<span style="color:#ff79c6">li</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-card&#34;</span> <span style="color:#50fa7b">v-for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user in users&#34;</span> <span style="color:#50fa7b">:key</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.id&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-details&#34;</span>&gt;
-          &lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">:src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.profile_image&#34;</span> <span style="color:#50fa7b">:alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;`${user.username}` profile image&#34;</span>&gt;
-          &lt;<span style="color:#ff79c6">h4</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.username&#34;</span>&gt;&lt;/<span style="color:#ff79c6">h4</span>&gt;
-        &lt;/<span style="color:#ff79c6">div</span>&gt;
-        <span style="color:#6272a4">&lt;!-- we have a button event here --&gt;</span>
-        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;buttonHandler(user)&#34;</span>&gt;View&lt;/<span style="color:#ff79c6">button</span>&gt;
-      &lt;/<span style="color:#ff79c6">li</span>&gt;
-    &lt;/<span style="color:#ff79c6">ul</span>&gt;
-  &lt;/<span style="color:#ff79c6">div</span>&gt;
-&lt;/<span style="color:#ff79c6">template</span>&gt;
-
-&lt;<span style="color:#ff79c6">script</span>&gt;
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
-  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;ProfileList&#39;</span>,
-  props<span style="color:#ff79c6">:</span> {
-    <span style="color:#6272a4">// we take in our list of users
-</span><span style="color:#6272a4"></span>    users<span style="color:#ff79c6">:</span> {
-      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">Array</span>,
-      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
-    }
-  },
-  methods<span style="color:#ff79c6">:</span> {
-    buttonHandler(user) {
-      <span style="color:#ff79c6">this</span>.$emit(<span style="color:#f1fa8c">&#39;profile-change&#39;</span>, user);
-    }
-  }
-};
-&lt;/<span style="color:#ff79c6">script</span>&gt;
-</code></pre></div><p>This is how you might use this component in your server-rendered templates:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#6272a4">&lt;!-- liquid or twig example --&gt;</span>
-&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ users | json | escape }}&#34;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
-<span style="color:#6272a4">&lt;!-- plain php, short echo --&gt;</span>
-&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&lt;?= htmlspecialchars(json_encode($users), ENT_QUOTES, &#39;UTF-8&#39;) ?&gt;&#34;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
-<span style="color:#6272a4">&lt;!-- laravel blade example, note single quotes --&gt;</span>
-&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;@json($users)&#39;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
-</code></pre></div><p>As you can see the main approach here is to encode the users as JSON and pass them to the components <code>users</code> prop. This can create quite a mess of JSON if you look at the source of your pages if you have lots of components that do this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#6272a4">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  This is the way you might typically build a component like this
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-list&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">ul</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#6272a4">&lt;!-- loop over all the users and create cards for them --&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">li</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-card&#34;</span> <span style="color:#50fa7b">v-for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user in users&#34;</span> <span style="color:#50fa7b">:key</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.id&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-details&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">:src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.profile_image&#34;</span> <span style="color:#50fa7b">:alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;`${user.username}` profile image&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#ff79c6">h4</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;user.username&#34;</span>&gt;&lt;/<span style="color:#ff79c6">h4</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- we have a button event here --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;buttonHandler(user)&#34;</span>&gt;View&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">li</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
+</span></span><span style="display:flex;"><span>  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;ProfileList&#39;</span>,
+</span></span><span style="display:flex;"><span>  props<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// we take in our list of users
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    users<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">Array</span>,
+</span></span><span style="display:flex;"><span>      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  methods<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    buttonHandler(user) {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">this</span>.$emit(<span style="color:#f1fa8c">&#39;profile-change&#39;</span>, user);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><p>This is how you might use this component in your server-rendered templates:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- liquid or twig example --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ users | json | escape }}&#34;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- plain php, short echo --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&lt;?= htmlspecialchars(json_encode($users), ENT_QUOTES, &#39;UTF-8&#39;) ?&gt;&#34;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- laravel blade example, note single quotes --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-bind:users</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;@json($users)&#39;</span>&gt;&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
+</span></span></code></pre></div><p>As you can see the main approach here is to encode the users as JSON and pass them to the components <code>users</code> prop. This can create quite a mess of JSON if you look at the source of your pages if you have lots of components that do this.</p>
 <h2 id="why-use-slots">Why Use Slots?</h2>
 <p>As I mentioned, with slots you can create more reusable and flexible components and improve the rendering performance of your apps. I&rsquo;ll outline some of the details below.</p>
 <h4 id="on-reusability-and-flexibility">On Reusability and Flexibility</h4>
@@ -290,127 +290,127 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Although <a href="https://developers.google.com/search/docs/guides/javascript-seo-basics">browers will run your javascript</a>, a by-product of using slots is that you could improve the SEO of your site, as you are trying to fill the page with the most HTML possible.</p>
 <p>Mostly slots are good for making more flexible components. The performance benefit is super helpful though.</p>
 <h2 id="refactored-to-slots">Refactored to Slots</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#6272a4">&lt;!--
-</span><span style="color:#6272a4">  All we need to do is cut that inside layout and replace it with a &#34;default&#34; slot
-</span><span style="color:#6272a4"> --&gt;</span>
-&lt;<span style="color:#ff79c6">template</span>&gt;
-  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-list&#34;</span>&gt;
-    &lt;<span style="color:#ff79c6">ul</span>&gt;
-      <span style="color:#6272a4">&lt;!-- this is a default slot with a binding to the `buttonHandler` function --&gt;</span>
-      &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">:buttonHandler</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;buttonHandler&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
-    &lt;/<span style="color:#ff79c6">ul</span>&gt;
-  &lt;/<span style="color:#ff79c6">div</span>&gt;
-&lt;/<span style="color:#ff79c6">template</span>&gt;
-
-&lt;<span style="color:#ff79c6">script</span>&gt;
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
-  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;ProfileList&#39;</span>,
-  methods<span style="color:#ff79c6">:</span> {
-    buttonHandler(user) {
-      <span style="color:#ff79c6">this</span>.$emit(<span style="color:#f1fa8c">&#39;profile-change&#39;</span>, user);
-    }
-  }
-};
-&lt;/<span style="color:#ff79c6">script</span>&gt;
-</code></pre></div><p>You can now see how we completely remove our inner template and props and replace it with the <code>slot</code> tag. We don&rsquo;t need the props now since we won&rsquo;t be passing in any data. We are going to be passing in the entire block of rendered HTML on our server, and when Vue loads on the client side, the functionality will be hooked up!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#6272a4">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  All we need to do is cut that inside layout and replace it with a &#34;default&#34; slot
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-list&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">ul</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#6272a4">&lt;!-- this is a default slot with a binding to the `buttonHandler` function --&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">:buttonHandler</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;buttonHandler&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
+</span></span><span style="display:flex;"><span>  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;ProfileList&#39;</span>,
+</span></span><span style="display:flex;"><span>  methods<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    buttonHandler(user) {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">this</span>.$emit(<span style="color:#f1fa8c">&#39;profile-change&#39;</span>, user);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><p>You can now see how we completely remove our inner template and props and replace it with the <code>slot</code> tag. We don&rsquo;t need the props now since we won&rsquo;t be passing in any data. We are going to be passing in the entire block of rendered HTML on our server, and when Vue loads on the client side, the functionality will be hooked up!</p>
 <p>This is how you might use this component in your server-rendered templates:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-slot</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;slotProps&#34;</span>&gt;
-  @foreach ($users as $user)
-    &lt;<span style="color:#ff79c6">li</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-card&#34;</span> <span style="color:#50fa7b">key</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.id }}&#34;</span>&gt;
-      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-details&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.profile_image }}&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.username }} profile image&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">h4</span>&gt;{{ $user.username }}&lt;/<span style="color:#ff79c6">h4</span>&gt;
-      &lt;/<span style="color:#ff79c6">div</span>&gt;
-      <span style="color:#6272a4">&lt;!-- we have a button event here --&gt;</span>
-      &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;slotProps.buttonHandler(@json($user))&#39;</span>&gt;View&lt;/<span style="color:#ff79c6">button</span>&gt;
-    &lt;/<span style="color:#ff79c6">li</span>&gt;
-  @endforeach
-&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
-</code></pre></div><p>Now if you view the source of your page in your browser, you will see that the HTML looks more like Vue is <em>decorating</em> your HTML instead of generating it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">profile-list</span> <span style="color:#50fa7b">v-slot</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;slotProps&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  @foreach ($users as $user)
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">li</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-card&#34;</span> <span style="color:#50fa7b">key</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.id }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;profile-details&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.profile_image }}&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $user.username }} profile image&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h4</span>&gt;{{ $user.username }}&lt;/<span style="color:#ff79c6">h4</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#6272a4">&lt;!-- we have a button event here --&gt;</span>
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;slotProps.buttonHandler(@json($user))&#39;</span>&gt;View&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">li</span>&gt;
+</span></span><span style="display:flex;"><span>  @endforeach
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">profile-list</span>&gt;
+</span></span></code></pre></div><p>Now if you view the source of your page in your browser, you will see that the HTML looks more like Vue is <em>decorating</em> your HTML instead of generating it.</p>
 <h4 id="another-example">Another Example</h4>
 <p>Let&rsquo;s create a modal with slots!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">template</span>&gt;
-  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-wrapper&#34;</span>&gt;
-    &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;toggle&#34;</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;openLabel&#34;</span>&gt;&lt;/<span style="color:#ff79c6">button</span>&gt;
-    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-overlay&#34;</span> <span style="color:#50fa7b">v-if</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;open&#34;</span>&gt;
-      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-header&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">h3</span>&gt;
-          <span style="color:#6272a4">&lt;!-- here is a named slot, we can force content right into this spot as long as we use named slots --&gt;</span>
-          &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;header&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
-        &lt;/<span style="color:#ff79c6">h3</span>&gt;
-      &lt;/<span style="color:#ff79c6">div</span>&gt;
-      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-body&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;body&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
-      &lt;/<span style="color:#ff79c6">div</span>&gt;
-      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-footer&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;toggle&#34;</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;closeLabel&#34;</span>&gt;&lt;/<span style="color:#ff79c6">button</span>&gt;
-      &lt;/<span style="color:#ff79c6">div</span>&gt;
-    &lt;/<span style="color:#ff79c6">div</span>&gt;
-  &lt;/<span style="color:#ff79c6">div</span>&gt;
-&lt;/<span style="color:#ff79c6">template</span>&gt;
-
-&lt;<span style="color:#ff79c6">script</span>&gt;
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
-  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Modal&#34;</span>,
-  props<span style="color:#ff79c6">:</span> {
-    openLabel<span style="color:#ff79c6">:</span> {
-      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">String</span>,
-      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-      <span style="color:#ff79c6">default</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Open&#34;</span>
-    },
-    closeLabel<span style="color:#ff79c6">:</span> {
-      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">String</span>,
-      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-      <span style="color:#ff79c6">default</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Close&#34;</span>
-    }
-  },
-  data() {
-    <span style="color:#ff79c6">return</span> {
-      open<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
-    };
-  },
-  methods<span style="color:#ff79c6">:</span> {
-    toggle() {
-      <span style="color:#ff79c6">this</span>.open <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">!</span><span style="color:#ff79c6">this</span>.open;
-    }
-  }
-};
-&lt;/<span style="color:#ff79c6">script</span>&gt;
-</code></pre></div><p>Here we have a component that has 2 slots! One for the header of the modal and another for the body. We are still using props though. We don&rsquo;t want to overwrite the main button that opens the modal, or the <code>modal-footer</code> content that includes our button and the handler.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-wrapper&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;toggle&#34;</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;openLabel&#34;</span>&gt;&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-overlay&#34;</span> <span style="color:#50fa7b">v-if</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;open&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h3</span>&gt;
+</span></span><span style="display:flex;"><span>          <span style="color:#6272a4">&lt;!-- here is a named slot, we can force content right into this spot as long as we use named slots --&gt;</span>
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;header&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">h3</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-body&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">slot</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;body&#34;</span>&gt;&lt;/<span style="color:#ff79c6">slot</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-footer&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> @<span style="color:#50fa7b">click</span>.<span style="color:#50fa7b">prevent</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;toggle&#34;</span> <span style="color:#50fa7b">v-text</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;closeLabel&#34;</span>&gt;&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> {
+</span></span><span style="display:flex;"><span>  name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Modal&#34;</span>,
+</span></span><span style="display:flex;"><span>  props<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    openLabel<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">String</span>,
+</span></span><span style="display:flex;"><span>      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">default</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Open&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    closeLabel<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>      type<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">String</span>,
+</span></span><span style="display:flex;"><span>      required<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">default</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Close&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  data() {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {
+</span></span><span style="display:flex;"><span>      open<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  methods<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    toggle() {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">this</span>.open <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">!</span><span style="color:#ff79c6">this</span>.open;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><p>Here we have a component that has 2 slots! One for the header of the modal and another for the body. We are still using props though. We don&rsquo;t want to overwrite the main button that opens the modal, or the <code>modal-footer</code> content that includes our button and the handler.</p>
 <p>Now we can use this component as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#6272a4">&lt;!-- set our custom labels --&gt;</span>
-&lt;<span style="color:#ff79c6">modal</span> <span style="color:#50fa7b">openLabel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;View Details&#34;</span> <span style="color:#50fa7b">closeLabel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Dismiss&#34;</span>&gt;
-  <span style="color:#6272a4">&lt;!-- pass in our title --&gt;</span>
-  &lt;<span style="color:#ff79c6">template</span> <span style="color:#50fa7b">v-slot:header</span>&gt;Details&lt;/<span style="color:#ff79c6">template</span>&gt;
-  <span style="color:#6272a4">&lt;!-- pass in our body content that will be displayed --&gt;</span>
-  &lt;<span style="color:#ff79c6">template</span> <span style="color:#50fa7b">v-slot:body</span>&gt;
-    &lt;<span style="color:#ff79c6">h3</span>&gt;This is my title&lt;/<span style="color:#ff79c6">h3</span>&gt;
-    &lt;<span style="color:#ff79c6">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare ipsum ligula, id pharetra neque lobortis nec. Mauris varius, felis eget interdum ultricies, libero nulla varius tortor, nec semper tortor leo id nisl. Fusce a est augue. In hac habitasse platea dictumst. Sed pretium egestas vestibulum. Nunc pellentesque aliquam justo, eu rutrum nunc vehicula ac. Nunc feugiat sed ipsum in dapibus. Quisque finibus, dolor at consequat.&lt;/<span style="color:#ff79c6">p</span>&gt;
-  &lt;/<span style="color:#ff79c6">template</span>&gt;
-&lt;/<span style="color:#ff79c6">modal</span>&gt;
-</code></pre></div><p>You can actually conditionally show slots as well. Let&rsquo;s add that:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="font-weight:bold">@@ -2,7 +2,7 @@
-</span><span style="font-weight:bold"></span>   &lt;div class=&#34;modal-wrapper&#34;&gt;
-     &lt;button type=&#34;button&#34; @click.prevent=&#34;toggle&#34; v-text=&#34;openLabel&#34;&gt;&lt;/button&gt;
-     &lt;div class=&#34;modal-overlay&#34; v-if=&#34;open&#34;&gt;
-<span style="color:#f55">-      &lt;div class=&#34;modal-header&#34;&gt;
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+      &lt;div class=&#34;modal-header&#34; v-if=&#34;hasHeaderSlot&#34;&gt;
-</span><span style="color:#50fa7b;font-weight:bold"></span>         &lt;h3&gt;
-           &lt;!-- here is a named slot, we can force content right into this spot as long as we use named slots --&gt;
-           &lt;slot name=&#34;header&#34;&gt;&lt;/slot&gt;
-<span style="font-weight:bold">@@ -38,6 +38,11 @@
-</span><span style="font-weight:bold"></span>       open: false
-     };
-   },
-<span style="color:#50fa7b;font-weight:bold">+  computed: {
-</span><span style="color:#50fa7b;font-weight:bold">+    hasHeaderSlot() {
-</span><span style="color:#50fa7b;font-weight:bold">+      return !this.$slots[&#34;header&#34;];
-</span><span style="color:#50fa7b;font-weight:bold">+    }
-</span><span style="color:#50fa7b;font-weight:bold">+  },
-</span><span style="color:#50fa7b;font-weight:bold"></span>   methods: {
-     toggle() {
-       this.open = !this.open;
-</code></pre></div><p>What we&rsquo;ve done here is hide a slot (the <code>header</code> one) if the slot is not filled in. This allows us to use the <code>body</code> slot even more effectively! We can provide a full content replacement if we want. Nice!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#6272a4">&lt;!-- set our custom labels --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">modal</span> <span style="color:#50fa7b">openLabel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;View Details&#34;</span> <span style="color:#50fa7b">closeLabel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Dismiss&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">&lt;!-- pass in our title --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">template</span> <span style="color:#50fa7b">v-slot:header</span>&gt;Details&lt;/<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">&lt;!-- pass in our body content that will be displayed --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">template</span> <span style="color:#50fa7b">v-slot:body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">h3</span>&gt;This is my title&lt;/<span style="color:#ff79c6">h3</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare ipsum ligula, id pharetra neque lobortis nec. Mauris varius, felis eget interdum ultricies, libero nulla varius tortor, nec semper tortor leo id nisl. Fusce a est augue. In hac habitasse platea dictumst. Sed pretium egestas vestibulum. Nunc pellentesque aliquam justo, eu rutrum nunc vehicula ac. Nunc feugiat sed ipsum in dapibus. Quisque finibus, dolor at consequat.&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">modal</span>&gt;
+</span></span></code></pre></div><p>You can actually conditionally show slots as well. Let&rsquo;s add that:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="font-weight:bold">@@ -2,7 +2,7 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>   &lt;div class=&#34;modal-wrapper&#34;&gt;
+</span></span><span style="display:flex;"><span>     &lt;button type=&#34;button&#34; @click.prevent=&#34;toggle&#34; v-text=&#34;openLabel&#34;&gt;&lt;/button&gt;
+</span></span><span style="display:flex;"><span>     &lt;div class=&#34;modal-overlay&#34; v-if=&#34;open&#34;&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f55">-      &lt;div class=&#34;modal-header&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+      &lt;div class=&#34;modal-header&#34; v-if=&#34;hasHeaderSlot&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>         &lt;h3&gt;
+</span></span><span style="display:flex;"><span>           &lt;!-- here is a named slot, we can force content right into this spot as long as we use named slots --&gt;
+</span></span><span style="display:flex;"><span>           &lt;slot name=&#34;header&#34;&gt;&lt;/slot&gt;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">@@ -38,6 +38,11 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>       open: false
+</span></span><span style="display:flex;"><span>     };
+</span></span><span style="display:flex;"><span>   },
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+  computed: {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    hasHeaderSlot() {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+      return !this.$slots[&#34;header&#34;];
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    }
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+  },
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>   methods: {
+</span></span><span style="display:flex;"><span>     toggle() {
+</span></span><span style="display:flex;"><span>       this.open = !this.open;
+</span></span></code></pre></div><p>What we&rsquo;ve done here is hide a slot (the <code>header</code> one) if the slot is not filled in. This allows us to use the <code>body</code> slot even more effectively! We can provide a full content replacement if we want. Nice!</p>
 <h4 id="accordion-example">Accordion Example</h4>
 <p>Here are a couple more example but done in the Codesandbox editor. They have code comments as well as some more organization:</p>
 <p><strong>Accordion</strong></p>
@@ -461,7 +461,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

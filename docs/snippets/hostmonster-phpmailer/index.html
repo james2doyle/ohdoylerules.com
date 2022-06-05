@@ -233,13 +233,13 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       <div itemprop="ArticleBody text" class="main-content"><p>God Damn!! This one was a b*tch to get right. I have a small plugin for a site that makes doing AJAX contact forms a breeze.</p>
 <p>But, of course, it likes to be a pain in the ass when I am trying to set it up. Also you usually have to be on the correct domain to allow the script to send the right email. So doubly annoying.</p>
 <p>Here is the code that worked for me:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#8be9fd;font-style:italic">$mail</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> PHPMailer; <span style="color:#6272a4">// basic class declaration
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">isSMTP</span>(); <span style="color:#6272a4">// duh!
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">SMTPDebug</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; <span style="color:#6272a4">// no debug
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">SMTPAuth</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>; <span style="color:#6272a4">// yes to auth please
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">Port</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">26</span>; <span style="color:#6272a4">// nope not port 25, 26!!
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">Host</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;host286.hostmonster.com&#39;</span>;
-</code></pre></div><p>Now your host may differ. I used <a href="http://mxtoolbox.com/">this tool</a> to check the MX records for the domain. After the check is complete, you will see a small table showing the hostname, IP address, TTL, and some links. <strong>Click &ldquo;SMTP Test&rdquo;</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$mail</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> PHPMailer; <span style="color:#6272a4">// basic class declaration
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">isSMTP</span>(); <span style="color:#6272a4">// duh!
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">SMTPDebug</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; <span style="color:#6272a4">// no debug
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">SMTPAuth</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>; <span style="color:#6272a4">// yes to auth please
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">Port</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">26</span>; <span style="color:#6272a4">// nope not port 25, 26!!
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$mail</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">Host</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;host286.hostmonster.com&#39;</span>;
+</span></span></code></pre></div><p>Now your host may differ. I used <a href="http://mxtoolbox.com/">this tool</a> to check the MX records for the domain. After the check is complete, you will see a small table showing the hostname, IP address, TTL, and some links. <strong>Click &ldquo;SMTP Test&rdquo;</strong>.</p>
 <p>Once that text completes, you will see another table. The first result is the &ldquo;SMTP Reverse Banner Check&rdquo;. Copy the hostname, which is the domain in that value field.</p>
 <p>Hopefully this works for you. I had a hell of a time getting the correct settings. <em>My pain is your gain</em>.</p>
 </div>
@@ -272,7 +272,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

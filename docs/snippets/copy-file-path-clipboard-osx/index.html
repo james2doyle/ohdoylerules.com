@@ -245,11 +245,11 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 </div>
 <p>Then you need to select <code>files or folders</code> for &ldquo;Service receives selected&rdquo; and choose <code>Finder.app</code> for the second option. The do a search for <code>applescript</code> and drag the <code>Run AppleScript</code> choice into the window on the right.</p>
 <p>You will need to paste the following code into the AppleScript window:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-applescript" data-lang="applescript"><span style="color:#ff79c6">tell</span> <span style="color:#8be9fd;font-style:italic">application</span> <span style="color:#f1fa8c">&#34;Finder&#34;</span>
-  <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">sel</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">the</span> <span style="color:#8be9fd;font-style:italic">selection</span> <span style="color:#ff79c6">as </span><span style="color:#50fa7b">text</span>
-  <span style="color:#8be9fd;font-style:italic">set the clipboard to</span> <span style="color:#8be9fd;font-style:italic">POSIX</span> <span style="color:#50fa7b">path</span> <span style="color:#ff79c6">of</span> <span style="color:#8be9fd;font-style:italic">sel</span>
-<span style="color:#ff79c6">end</span> <span style="color:#ff79c6">tell</span>
-</code></pre></div><p>When that is all done, it should look something like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-applescript" data-lang="applescript"><span style="display:flex;"><span><span style="color:#ff79c6">tell</span> <span style="color:#8be9fd;font-style:italic">application</span> <span style="color:#f1fa8c">&#34;Finder&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">sel</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">the</span> <span style="color:#8be9fd;font-style:italic">selection</span> <span style="color:#ff79c6">as </span><span style="color:#50fa7b">text</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">set the clipboard to</span> <span style="color:#8be9fd;font-style:italic">POSIX</span> <span style="color:#50fa7b">path</span> <span style="color:#ff79c6">of</span> <span style="color:#8be9fd;font-style:italic">sel</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">end</span> <span style="color:#ff79c6">tell</span>
+</span></span></code></pre></div><p>When that is all done, it should look something like this.</p>
 <div class="center">
   <a href="/images/clipboard-2.png" target="_blank" >
     <img src="/images/clipboard-2.png" width="720" />
@@ -305,7 +305,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

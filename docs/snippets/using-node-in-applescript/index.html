@@ -236,33 +236,33 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Here is the trick, you need absolute paths to node and the target module (or bin entry js file) file you are trying to run</p>
 </blockquote>
 <p>Here is the code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-applescript" data-lang="applescript"><span style="color:#6272a4">-- setup some valid extensions for markdown files</span>
-<span style="color:#ff79c6">property</span> <span style="color:#8be9fd;font-style:italic">validExtensions</span> : {<span style="color:#f1fa8c">&#34;md&#34;</span>, <span style="color:#f1fa8c">&#34;markdown&#34;</span>, <span style="color:#f1fa8c">&#34;mdown&#34;</span>}
-<span style="color:#ff79c6">tell</span> <span style="color:#8be9fd;font-style:italic">application</span> <span style="color:#f1fa8c">&#34;Finder&#34;</span>
-  <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">theFile</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">item</span> <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">of</span> (<span style="color:#ff79c6">get</span> <span style="color:#8be9fd;font-style:italic">selection</span>)
-  <span style="color:#6272a4">-- check if the extension is correct</span>
-  <span style="color:#ff79c6">if</span> (<span style="color:#8be9fd;font-style:italic">the</span> <span style="color:#50fa7b">name</span> <span style="color:#8be9fd;font-style:italic">extension</span> <span style="color:#ff79c6">of</span> <span style="color:#8be9fd;font-style:italic">theFile</span> <span style="color:#ff79c6">is in</span> <span style="color:#8be9fd;font-style:italic">the</span> <span style="color:#8be9fd;font-style:italic">validExtensions</span>) <span style="color:#ff79c6">then</span>
-    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">selectedItem</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">the</span> <span style="color:#8be9fd;font-style:italic">selection</span> <span style="color:#ff79c6">as </span><span style="color:#50fa7b">text</span>
-    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">thePath</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">POSIX</span> <span style="color:#50fa7b">path</span> <span style="color:#ff79c6">of</span> <span style="color:#8be9fd;font-style:italic">selectedItem</span>
-    <span style="color:#6272a4">-- created a quoted path in case there are special characters</span>
-    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">nicePath</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">quoted form</span> <span style="color:#ff79c6">of</span> <span style="color:#8be9fd;font-style:italic">thePath</span>
-    <span style="color:#6272a4">-- here is the trick, you need absolute paths to node and the target bin</span>
-    <span style="color:#6272a4">-- just tack on the extension for html</span>
-    <span style="color:#8be9fd;font-style:italic">do shell script</span> <span style="color:#f1fa8c">&#34;/usr/local/bin/node /usr/local/share/npm/bin/marked --gfm &#34;</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#8be9fd;font-style:italic">nicePath</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#f1fa8c">&#34; &gt; &#34;</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#8be9fd;font-style:italic">nicePath</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#f1fa8c">&#34;.html&#34;</span>
-    <span style="color:#6272a4">-- find out what the new file is called</span>
-    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">outName</span> <span style="color:#ff79c6">to</span> (<span style="color:#8be9fd;font-style:italic">do shell script</span> <span style="color:#f1fa8c">&#34;basename &#34;</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#8be9fd;font-style:italic">nicePath</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#f1fa8c">&#34;.html &#34;</span>) <span style="color:#ff79c6">of</span> result
-    <span style="color:#6272a4">-- since there is no progress, let me know when your done</span>
-    <span style="color:#8be9fd;font-style:italic">display</span> <span style="color:#8be9fd;font-style:italic">notification</span> <span style="color:#8be9fd;font-style:italic">outName</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#f1fa8c">&#34; created successfully&#34;</span> <span style="color:#ff79c6">with</span> <span style="color:#50fa7b">title</span> <span style="color:#f1fa8c">&#34;Markdown Conversion Finished&#34;</span>
-    <span style="color:#6272a4">-- allow time for the notification to show</span>
-    <span style="color:#8be9fd;font-style:italic">delay</span> <span style="color:#bd93f9">2</span>
-  <span style="color:#ff79c6">else</span>
-    <span style="color:#6272a4">-- wrong file so show this</span>
-    <span style="color:#8be9fd;font-style:italic">display dialog</span> <span style="color:#f1fa8c">&#34;the file is not a valid Markdown file&#34;</span> <span style="color:#ff79c6">with</span> <span style="color:#50fa7b">title</span> <span style="color:#f1fa8c">&#34;Conversion Error&#34;</span>
-    <span style="color:#6272a4">-- allow time for the notification to show</span>
-    <span style="color:#8be9fd;font-style:italic">delay</span> <span style="color:#bd93f9">2</span>
-  <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">if</span>
-<span style="color:#ff79c6">end</span> <span style="color:#ff79c6">tell</span>
-</code></pre></div><p>Now this can be used in an <em>Automator Service</em>, which you can find out how to make in the <a href="https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx" title="Copy filepath to clipboard in OSX">previous article</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-applescript" data-lang="applescript"><span style="display:flex;"><span><span style="color:#6272a4">-- setup some valid extensions for markdown files</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">property</span> <span style="color:#8be9fd;font-style:italic">validExtensions</span> : {<span style="color:#f1fa8c">&#34;md&#34;</span>, <span style="color:#f1fa8c">&#34;markdown&#34;</span>, <span style="color:#f1fa8c">&#34;mdown&#34;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">tell</span> <span style="color:#8be9fd;font-style:italic">application</span> <span style="color:#f1fa8c">&#34;Finder&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">theFile</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">item</span> <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">of</span> (<span style="color:#ff79c6">get</span> <span style="color:#8be9fd;font-style:italic">selection</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">-- check if the extension is correct</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (<span style="color:#8be9fd;font-style:italic">the</span> <span style="color:#50fa7b">name</span> <span style="color:#8be9fd;font-style:italic">extension</span> <span style="color:#ff79c6">of</span> <span style="color:#8be9fd;font-style:italic">theFile</span> <span style="color:#ff79c6">is in</span> <span style="color:#8be9fd;font-style:italic">the</span> <span style="color:#8be9fd;font-style:italic">validExtensions</span>) <span style="color:#ff79c6">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">selectedItem</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">the</span> <span style="color:#8be9fd;font-style:italic">selection</span> <span style="color:#ff79c6">as </span><span style="color:#50fa7b">text</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">thePath</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">POSIX</span> <span style="color:#50fa7b">path</span> <span style="color:#ff79c6">of</span> <span style="color:#8be9fd;font-style:italic">selectedItem</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">-- created a quoted path in case there are special characters</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">nicePath</span> <span style="color:#ff79c6">to</span> <span style="color:#8be9fd;font-style:italic">quoted form</span> <span style="color:#ff79c6">of</span> <span style="color:#8be9fd;font-style:italic">thePath</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">-- here is the trick, you need absolute paths to node and the target bin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">-- just tack on the extension for html</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">do shell script</span> <span style="color:#f1fa8c">&#34;/usr/local/bin/node /usr/local/share/npm/bin/marked --gfm &#34;</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#8be9fd;font-style:italic">nicePath</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#f1fa8c">&#34; &gt; &#34;</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#8be9fd;font-style:italic">nicePath</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#f1fa8c">&#34;.html&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">-- find out what the new file is called</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">outName</span> <span style="color:#ff79c6">to</span> (<span style="color:#8be9fd;font-style:italic">do shell script</span> <span style="color:#f1fa8c">&#34;basename &#34;</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#8be9fd;font-style:italic">nicePath</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#f1fa8c">&#34;.html &#34;</span>) <span style="color:#ff79c6">of</span> result
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">-- since there is no progress, let me know when your done</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">display</span> <span style="color:#8be9fd;font-style:italic">notification</span> <span style="color:#8be9fd;font-style:italic">outName</span> <span style="color:#ff79c6">&amp;</span> <span style="color:#f1fa8c">&#34; created successfully&#34;</span> <span style="color:#ff79c6">with</span> <span style="color:#50fa7b">title</span> <span style="color:#f1fa8c">&#34;Markdown Conversion Finished&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">-- allow time for the notification to show</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">delay</span> <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">-- wrong file so show this</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">display dialog</span> <span style="color:#f1fa8c">&#34;the file is not a valid Markdown file&#34;</span> <span style="color:#ff79c6">with</span> <span style="color:#50fa7b">title</span> <span style="color:#f1fa8c">&#34;Conversion Error&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">-- allow time for the notification to show</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">delay</span> <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">if</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">end</span> <span style="color:#ff79c6">tell</span>
+</span></span></code></pre></div><p>Now this can be used in an <em>Automator Service</em>, which you can find out how to make in the <a href="https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx" title="Copy filepath to clipboard in OSX">previous article</a>.</p>
 <p>If you modify this for any other cool node tools, please let me know!</p>
 <p><strong>PS</strong>: Keep in mind that this doesn&rsquo;t iterate through multiple files. Only single files.</p>
 </div>
@@ -295,7 +295,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

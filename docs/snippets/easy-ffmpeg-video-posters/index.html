@@ -233,17 +233,17 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       <div itemprop="ArticleBody text" class="main-content"><p>A week ago I was tasked with uploading about 20 different videos to a CMS. Normally for the HTML5 Video element to look nice, you should upload a <a href="http://www.w3.org/TR/2012/WD-html5-20121025/the-video-element.html#attr-video-poster">poster image</a> so that there can be something showing before the video starts to play.</p>
 <p>In my case, I had to generate a poster for each of these 20 videos. This would have taken a long time, so I scripted it using FFmpeg!</p>
 <p>Here is the script:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#ff79c6">#!/usr/bin/env bash
-</span><span style="color:#ff79c6"></span>
-<span style="color:#6272a4"># take in mp4, take screenshot at 5 seconds</span>
-<span style="color:#6272a4"># output same filename, but with jpg extension</span>
-<span style="color:#ff79c6">for</span> FILE in *.mp4
-  <span style="color:#ff79c6">do</span>
-    <span style="color:#6272a4"># save the filename but swap the extension</span>
-    <span style="color:#8be9fd;font-style:italic">NEWFILE</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">FILE</span>%.mp4<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.jpg&#34;</span>
-    ffmpeg -y -i <span style="color:#8be9fd;font-style:italic">$FILE</span> -f mjpeg -vframes <span style="color:#bd93f9">1</span> -ss <span style="color:#bd93f9">5</span> <span style="color:#8be9fd;font-style:italic">$NEWFILE</span>
-<span style="color:#ff79c6">done</span>
-</code></pre></div><p><em>If your videos are not mp4 format, just change the extension.</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#ff79c6">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># take in mp4, take screenshot at 5 seconds</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># output same filename, but with jpg extension</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> FILE in *.mp4
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># save the filename but swap the extension</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">NEWFILE</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">FILE</span>%.mp4<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>    ffmpeg -y -i <span style="color:#8be9fd;font-style:italic">$FILE</span> -f mjpeg -vframes <span style="color:#bd93f9">1</span> -ss <span style="color:#bd93f9">5</span> <span style="color:#8be9fd;font-style:italic">$NEWFILE</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">done</span>
+</span></span></code></pre></div><p><em>If your videos are not mp4 format, just change the extension.</em></p>
 <p>To use this script:</p>
 <ul>
 <li>save this script as <code>poster.sh</code></li>
@@ -282,7 +282,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

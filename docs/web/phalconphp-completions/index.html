@@ -270,10 +270,10 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Here is how I quickly got all these snippets.</p>
 <p>First, I went to the docs for the class, and I looked to see what the code examples were wrapped in. For the all the docs pages, the methods and properties are show in a <code>p.method-signature</code> element.</p>
 <p>So to quickly get the list, I ran the following code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">Array</span>.prototype.slice.call(<span style="color:#8be9fd;font-style:italic">document</span>.querySelectorAll(<span style="color:#f1fa8c">&#34;.method-signature&#34;</span>), <span style="color:#bd93f9">0</span>).map(<span style="color:#8be9fd;font-style:italic">function</span>(item){
-  <span style="color:#ff79c6">return</span> item.textContent.trim();
-}).join(<span style="color:#f1fa8c">&#34;\n&#34;</span>);
-</code></pre></div><p>Then copied the output in the Chrome console, added the class in front (replacing the type info), and pasted it in the <code>sources.txt</code> file. Done!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Array</span>.prototype.slice.call(<span style="color:#8be9fd;font-style:italic">document</span>.querySelectorAll(<span style="color:#f1fa8c">&#34;.method-signature&#34;</span>), <span style="color:#bd93f9">0</span>).map(<span style="color:#8be9fd;font-style:italic">function</span>(item){
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> item.textContent.trim();
+</span></span><span style="display:flex;"><span>}).join(<span style="color:#f1fa8c">&#34;\n&#34;</span>);
+</span></span></code></pre></div><p>Then copied the output in the Chrome console, added the class in front (replacing the type info), and pasted it in the <code>sources.txt</code> file. Done!</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -304,7 +304,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

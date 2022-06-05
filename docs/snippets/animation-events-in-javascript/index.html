@@ -231,43 +231,43 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
         
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>Whenever I am doing animations that have javascript and CSS, most of the time, I want an callback to fire in javascript when the animations are complete. I have used this event for modals and little UI plugins. Normally, I would have a start event(click or touch) that just adds a class that has a CSS animation attached to it. Lets say we have a class called &lsquo;on&rsquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#50fa7b">modal</span>.<span style="color:#50fa7b">on</span> {
-  <span style="color:#ff79c6">animation</span>: showModal <span style="color:#bd93f9">1</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
-}
-@<span style="color:#ff79c6">keyframes</span> <span style="color:#ff79c6">showModal</span> {
-  <span style="color:#ff79c6">0</span><span style="color:#ff79c6">%</span> {
-    <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0</span>;
-  }
-  <span style="color:#ff79c6">100</span><span style="color:#ff79c6">%</span> {
-    <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">1</span>;
-  }
-}
-</code></pre></div><p>So now in javascript I might have a button click that adds &lsquo;on&rsquo; to my modal. In my javascript I would have a function to detect different animation events(start, iterate and end). Here is the code that I modified from a <a href="http://www.sitepoint.com/css3-animation-javascript-event-handlers/" title="Sitepoint">SitePoint Article</a> that was posting about the same topic.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">var</span> pfx <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;webkit&#34;</span>, <span style="color:#f1fa8c">&#34;moz&#34;</span>, <span style="color:#f1fa8c">&#34;MS&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;&#34;</span>];
-<span style="color:#8be9fd;font-style:italic">function</span> doAnim(element, animClass, type, callback) {
-  <span style="color:#8be9fd;font-style:italic">var</span> p <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>, l <span style="color:#ff79c6">=</span> pfx.length;
-  <span style="color:#8be9fd;font-style:italic">function</span> removeAndCall(){
-    <span style="color:#ff79c6">this</span>.removeEventListener(pfx[p]<span style="color:#ff79c6">+</span>type, arguments.callee,<span style="color:#ff79c6">false</span>);
-    callback();
-  }
-  <span style="color:#ff79c6">for</span> (; p <span style="color:#ff79c6">&lt;</span> l; p<span style="color:#ff79c6">++</span>) {
-    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>pfx[p]) {
-      type <span style="color:#ff79c6">=</span> type.toLowerCase();
-    }
-    element.classList.add(animClass);
-    element.addEventListener(pfx[p]<span style="color:#ff79c6">+</span>type, removeAndCall, <span style="color:#ff79c6">false</span>);
-  }
-}
-<span style="color:#6272a4">// doAnim(elem, &#39;show&#39;, &#39;AnimationEnd&#39;, function(){
-</span><span style="color:#6272a4">//   this function will fire when the animation is finished
-</span><span style="color:#6272a4">//   elem.classList.remove(&#39;show&#39;);
-</span><span style="color:#6272a4">// });
-</span></code></pre></div><p>In this particular example I would do:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">doAnim(myModalElement, <span style="color:#f1fa8c">&#39;on&#39;</span>, <span style="color:#f1fa8c">&#39;AnimationEnd&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>(){
-  <span style="color:#6272a4">// this function will fire when the animation is finished
-</span><span style="color:#6272a4"></span>  myModalElement.classList.remove(<span style="color:#f1fa8c">&#39;on&#39;</span>);
-});
-</code></pre></div><p>So now I have a function that will add a class to an element and then fire my callback when the animation is complete.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#50fa7b">modal</span>.<span style="color:#50fa7b">on</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">animation</span>: showModal <span style="color:#bd93f9">1</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>@<span style="color:#ff79c6">keyframes</span> <span style="color:#ff79c6">showModal</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">0</span><span style="color:#ff79c6">%</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">100</span><span style="color:#ff79c6">%</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">1</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>So now in javascript I might have a button click that adds &lsquo;on&rsquo; to my modal. In my javascript I would have a function to detect different animation events(start, iterate and end). Here is the code that I modified from a <a href="http://www.sitepoint.com/css3-animation-javascript-event-handlers/" title="Sitepoint">SitePoint Article</a> that was posting about the same topic.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> pfx <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;webkit&#34;</span>, <span style="color:#f1fa8c">&#34;moz&#34;</span>, <span style="color:#f1fa8c">&#34;MS&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> doAnim(element, animClass, type, callback) {
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">var</span> p <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>, l <span style="color:#ff79c6">=</span> pfx.length;
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">function</span> removeAndCall(){
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">this</span>.removeEventListener(pfx[p]<span style="color:#ff79c6">+</span>type, arguments.callee,<span style="color:#ff79c6">false</span>);
+</span></span><span style="display:flex;"><span>    callback();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">for</span> (; p <span style="color:#ff79c6">&lt;</span> l; p<span style="color:#ff79c6">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>pfx[p]) {
+</span></span><span style="display:flex;"><span>      type <span style="color:#ff79c6">=</span> type.toLowerCase();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    element.classList.add(animClass);
+</span></span><span style="display:flex;"><span>    element.addEventListener(pfx[p]<span style="color:#ff79c6">+</span>type, removeAndCall, <span style="color:#ff79c6">false</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// doAnim(elem, &#39;show&#39;, &#39;AnimationEnd&#39;, function(){
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//   this function will fire when the animation is finished
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">//   elem.classList.remove(&#39;show&#39;);
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">// });
+</span></span></span></code></pre></div><p>In this particular example I would do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>doAnim(myModalElement, <span style="color:#f1fa8c">&#39;on&#39;</span>, <span style="color:#f1fa8c">&#39;AnimationEnd&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>(){
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// this function will fire when the animation is finished
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  myModalElement.classList.remove(<span style="color:#f1fa8c">&#39;on&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>So now I have a function that will add a class to an element and then fire my callback when the animation is complete.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -298,7 +298,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

@@ -236,29 +236,29 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Hopefully that makese sense.</p>
 <h3 id="output">Output</h3>
 <p>When using the plugin, you get a new variable called <code>browser</code>. The browser variable has the following properties in it when dumped from my computer:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#8be9fd;font-style:italic">$browser</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">array</span> (
-  <span style="color:#f1fa8c">&#39;useragent&#39;</span>   <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.37 Safari/537.36&#39;</span> <span style="color:#6272a4">// full ua string
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;name&#39;</span>        <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;Google Chrome&#39;</span> <span style="color:#6272a4">// name of the browser
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;browser&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;google-chrome&#39;</span> <span style="color:#6272a4">// CSS safe browser name
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;version&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;30.0.1599.37&#39;</span> <span style="color:#6272a4">// bowser version
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;type&#39;</span>        <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;desktop&#39;</span> <span style="color:#6272a4">// device form factor
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;platform&#39;</span>    <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;mac&#39;</span> <span style="color:#6272a4">// OS platform
-</span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;pattern&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;#(?Version|Chrome|other)[/ ]+(?[0-9.|a-zA-Z.]*)#&#39;</span> <span style="color:#6272a4">// match pattern
-</span><span style="color:#6272a4"></span>);
-</code></pre></div><h3 id="example">Example</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$browser</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">array</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#39;useragent&#39;</span>   <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.37 Safari/537.36&#39;</span> <span style="color:#6272a4">// full ua string
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;name&#39;</span>        <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;Google Chrome&#39;</span> <span style="color:#6272a4">// name of the browser
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;browser&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;google-chrome&#39;</span> <span style="color:#6272a4">// CSS safe browser name
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;version&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;30.0.1599.37&#39;</span> <span style="color:#6272a4">// bowser version
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;type&#39;</span>        <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;desktop&#39;</span> <span style="color:#6272a4">// device form factor
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;platform&#39;</span>    <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;mac&#39;</span> <span style="color:#6272a4">// OS platform
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#f1fa8c">&#39;pattern&#39;</span>     <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;#(?Version|Chrome|other)[/ ]+(?[0-9.|a-zA-Z.]*)#&#39;</span> <span style="color:#6272a4">// match pattern
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>);
+</span></span></code></pre></div><h3 id="example">Example</h3>
 <p>I use this example when I want to make small modifications to my CSS. Not unlike how Modernizr is supposed to work. Except modernizr doesn&rsquo;t give you browser information.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;\{\{ browser.browser \}\} \{\{ browser.platform \}\} \{\{ browser.type \}\}&#34;</span>&gt;
-</code></pre></div><p>Here is the output for that html tag:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;google-chrome mac desktop&#34;</span>&gt;
-</code></pre></div><p>I usually use it to normalize issues across different browsers. Like something looking weird in Firefox, so I know I can modify some CSS by using a <code>.firefox</code> parent.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#50fa7b">button</span> {
-  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0.25</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
-}
-<span style="color:#6272a4">/* fix padding in FF */</span>
-.<span style="color:#50fa7b">firefox</span> .<span style="color:#50fa7b">button</span> {
-  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0.28</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
-}
-</code></pre></div><h3 id="use-cases">Use Cases</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;\{\{ browser.browser \}\} \{\{ browser.platform \}\} \{\{ browser.type \}\}&#34;</span>&gt;
+</span></span></code></pre></div><p>Here is the output for that html tag:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;google-chrome mac desktop&#34;</span>&gt;
+</span></span></code></pre></div><p>I usually use it to normalize issues across different browsers. Like something looking weird in Firefox, so I know I can modify some CSS by using a <code>.firefox</code> parent.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#50fa7b">button</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0.25</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* fix padding in FF */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">firefox</span> .<span style="color:#50fa7b">button</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0.28</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="use-cases">Use Cases</h3>
 <ul>
 <li>conditional content</li>
 <li>conditional styles/scripts</li>
@@ -297,7 +297,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

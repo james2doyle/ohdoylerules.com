@@ -236,61 +236,61 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Before you set this all up, make sure you create the empty database. From the root of your project run: <code>touch database/cache.sqlite</code>. This creates an empty file that sqlite will mount as the database. To learn more about sqlite and how the file works, check out the page at the sqlite site about the <a href="https://www.sqlite.org/onefile.html">Single-file Cross-platform Database</a>.</p>
 <p>For the next step, you will need to make sure that the <code>sqlite3</code> command line tool is installed. If you need help getting that going, <a href="https://www.sqlite.org/download.html">check out the download page for the tool</a>. Once that is installed, or if you already have it, you can then connect to the database file via the sqlite cli: <code>sqlite3 database/cache.sqlite</code>. If you want more info about the CLI tool, <a href="https://www.sqlite.org/cli.html">check out the sqlite docs</a>.</p>
 <p>Finally, you need to setup that sqlite database by executing the following SQL statement:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> <span style="color:#ff79c6">`</span><span style="color:#ff79c6">cache</span><span style="color:#ff79c6">`</span> (
-   <span style="color:#ff79c6">`</span><span style="color:#ff79c6">key</span><span style="color:#ff79c6">`</span> STRING <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span>,
-   <span style="color:#ff79c6">`</span>value<span style="color:#ff79c6">`</span> <span style="color:#8be9fd;font-style:italic">TEXT</span> <span style="color:#ff79c6">NOT</span> <span style="color:#ff79c6">NULL</span>,
-   <span style="color:#ff79c6">`</span>expiration<span style="color:#ff79c6">`</span> <span style="color:#8be9fd;font-style:italic">INT</span> <span style="color:#ff79c6">DEFAULT</span> <span style="color:#bd93f9">0</span>
-);
-</code></pre></div><p>This statement will update the sqlite database with the required table and columns. This SQL is the same statement that runs when the cache migrations are created via the <code>artisan</code> command. To see that the SQL statement worked, you can run the <code>.tables</code> command. You should see <code>cache</code> in the list. To close out of the sqlite cli, run <code>.exit</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> <span style="color:#ff79c6">`</span><span style="color:#ff79c6">cache</span><span style="color:#ff79c6">`</span> (
+</span></span><span style="display:flex;"><span>   <span style="color:#ff79c6">`</span><span style="color:#ff79c6">key</span><span style="color:#ff79c6">`</span> STRING <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span>,
+</span></span><span style="display:flex;"><span>   <span style="color:#ff79c6">`</span>value<span style="color:#ff79c6">`</span> <span style="color:#8be9fd;font-style:italic">TEXT</span> <span style="color:#ff79c6">NOT</span> <span style="color:#ff79c6">NULL</span>,
+</span></span><span style="display:flex;"><span>   <span style="color:#ff79c6">`</span>expiration<span style="color:#ff79c6">`</span> <span style="color:#8be9fd;font-style:italic">INT</span> <span style="color:#ff79c6">DEFAULT</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>This statement will update the sqlite database with the required table and columns. This SQL is the same statement that runs when the cache migrations are created via the <code>artisan</code> command. To see that the SQL statement worked, you can run the <code>.tables</code> command. You should see <code>cache</code> in the list. To close out of the sqlite cli, run <code>.exit</code>.</p>
 <p>Now that everything is all setup, here is the class that implements the <code>SqliteStore</code> that allows for a sqlite driver:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
-<span style="color:#6272a4">// put in app\Extensions
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">namespace</span> App\Extensions;
-
-<span style="color:#ff79c6">use</span> Illuminate\Cache\DatabaseStore;
-<span style="color:#ff79c6">use</span> Illuminate\Support\Facades\Config;
-
-<span style="color:#f1fa8c">/**
-</span><span style="color:#f1fa8c"> * SqliteStore delegates to DatabaseStore but with an sqlite connection instead
-</span><span style="color:#f1fa8c"> */</span>
-<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">SqliteStore</span> <span style="color:#ff79c6">extends</span> DatabaseStore
-{
-    <span style="color:#ff79c6">public</span> <span style="color:#ff79c6">function</span> __construct()
-    {
-        <span style="color:#6272a4">// load the config or use the default
-</span><span style="color:#6272a4"></span>        <span style="color:#8be9fd;font-style:italic">$config</span> <span style="color:#ff79c6">=</span> config(<span style="color:#f1fa8c">&#39;cache.stores.sqlite&#39;</span>, [
-            <span style="color:#f1fa8c">&#39;driver&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;sqlite&#39;</span>,
-            <span style="color:#f1fa8c">&#39;table&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;cache&#39;</span>,
-            <span style="color:#f1fa8c">&#39;database&#39;</span> <span style="color:#ff79c6">=&gt;</span> env(<span style="color:#f1fa8c">&#39;CACHE_DATABASE&#39;</span>, database_path(<span style="color:#f1fa8c">&#39;cache.sqlite&#39;</span>)),
-            <span style="color:#f1fa8c">&#39;prefix&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;&#39;</span>,
-        ]);
-
-        <span style="color:#6272a4">// Set the temporary configuration
-</span><span style="color:#6272a4"></span>        Config<span style="color:#ff79c6">::</span><span style="color:#50fa7b">set</span>(<span style="color:#f1fa8c">&#39;database.connections.sqlite_cache&#39;</span>, [
-            <span style="color:#f1fa8c">&#39;driver&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;sqlite&#39;</span>,
-            <span style="color:#f1fa8c">&#39;database&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#8be9fd;font-style:italic">$config</span>[<span style="color:#f1fa8c">&#39;database&#39;</span>],
-            <span style="color:#f1fa8c">&#39;prefix&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#8be9fd;font-style:italic">$config</span>[<span style="color:#f1fa8c">&#39;prefix&#39;</span>],
-        ]);
-
-        <span style="color:#8be9fd;font-style:italic">$connection</span> <span style="color:#ff79c6">=</span> app(<span style="color:#f1fa8c">&#39;db&#39;</span>)<span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">connection</span>(<span style="color:#f1fa8c">&#39;sqlite_cache&#39;</span>);
-        <span style="color:#ff79c6">parent</span><span style="color:#ff79c6">::</span><span style="color:#50fa7b">__construct</span>(<span style="color:#8be9fd;font-style:italic">$connection</span>, <span style="color:#8be9fd;font-style:italic">$config</span>[<span style="color:#f1fa8c">&#39;table&#39;</span>], <span style="color:#8be9fd;font-style:italic">$config</span>[<span style="color:#f1fa8c">&#39;prefix&#39;</span>]);
-    }
-}
-</code></pre></div><p>You may need to run <code>composer dumpautoload</code> in order for the new class to be picked up if you are creating the <code>app/Extensions</code> folder for the first time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;?</span>php
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// put in app\Extensions
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">namespace</span> App\Extensions;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">use</span> Illuminate\Cache\DatabaseStore;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">use</span> Illuminate\Support\Facades\Config;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> * SqliteStore delegates to DatabaseStore but with an sqlite connection instead
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">SqliteStore</span> <span style="color:#ff79c6">extends</span> DatabaseStore
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">public</span> <span style="color:#ff79c6">function</span> __construct()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// load the config or use the default
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#8be9fd;font-style:italic">$config</span> <span style="color:#ff79c6">=</span> config(<span style="color:#f1fa8c">&#39;cache.stores.sqlite&#39;</span>, [
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;driver&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;sqlite&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;table&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;cache&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;database&#39;</span> <span style="color:#ff79c6">=&gt;</span> env(<span style="color:#f1fa8c">&#39;CACHE_DATABASE&#39;</span>, database_path(<span style="color:#f1fa8c">&#39;cache.sqlite&#39;</span>)),
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;prefix&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>        ]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Set the temporary configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        Config<span style="color:#ff79c6">::</span><span style="color:#50fa7b">set</span>(<span style="color:#f1fa8c">&#39;database.connections.sqlite_cache&#39;</span>, [
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;driver&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;sqlite&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;database&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#8be9fd;font-style:italic">$config</span>[<span style="color:#f1fa8c">&#39;database&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;prefix&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#8be9fd;font-style:italic">$config</span>[<span style="color:#f1fa8c">&#39;prefix&#39;</span>],
+</span></span><span style="display:flex;"><span>        ]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">$connection</span> <span style="color:#ff79c6">=</span> app(<span style="color:#f1fa8c">&#39;db&#39;</span>)<span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">connection</span>(<span style="color:#f1fa8c">&#39;sqlite_cache&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">parent</span><span style="color:#ff79c6">::</span><span style="color:#50fa7b">__construct</span>(<span style="color:#8be9fd;font-style:italic">$connection</span>, <span style="color:#8be9fd;font-style:italic">$config</span>[<span style="color:#f1fa8c">&#39;table&#39;</span>], <span style="color:#8be9fd;font-style:italic">$config</span>[<span style="color:#f1fa8c">&#39;prefix&#39;</span>]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You may need to run <code>composer dumpautoload</code> in order for the new class to be picked up if you are creating the <code>app/Extensions</code> folder for the first time.</p>
 <p>Then, add the following to your <code>AppServiceProvider@boot</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#6272a4">// AppServiceProvider@boot
-</span><span style="color:#6272a4"></span>\Cache<span style="color:#ff79c6">::</span><span style="color:#50fa7b">extend</span>(<span style="color:#f1fa8c">&#39;sqlite&#39;</span>, <span style="color:#ff79c6">function</span> (<span style="color:#8be9fd;font-style:italic">$app</span>) {
-    <span style="color:#ff79c6">return</span> \Cache<span style="color:#ff79c6">::</span><span style="color:#50fa7b">repository</span>(<span style="color:#ff79c6">new</span> \App\Extensions\SqliteStore);
-});
-</code></pre></div><p>That&rsquo;s it for the code side. But we still need to setup the config so the driver details exist. Open up the <code>config/cache.php</code> file. Add these details so the config can be properly loaded:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#6272a4">// ... the rest of config/cache.php
-</span><span style="color:#6272a4"></span><span style="color:#f1fa8c">&#39;sqlite&#39;</span> <span style="color:#ff79c6">=&gt;</span> [
-    <span style="color:#f1fa8c">&#39;driver&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;sqlite&#39;</span>,
-    <span style="color:#f1fa8c">&#39;table&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;cache&#39;</span>,
-    <span style="color:#f1fa8c">&#39;database&#39;</span> <span style="color:#ff79c6">=&gt;</span> env(<span style="color:#f1fa8c">&#39;CACHE_DATABASE&#39;</span>, database_path(<span style="color:#f1fa8c">&#39;cache.sqlite&#39;</span>)),
-    <span style="color:#f1fa8c">&#39;prefix&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;&#39;</span>,
-],
-</code></pre></div><p>You can then update your <code>.env</code> to have <code>CACHE_DRIVER=sqlite</code> and everything should be good!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#6272a4">// AppServiceProvider@boot
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>\Cache<span style="color:#ff79c6">::</span><span style="color:#50fa7b">extend</span>(<span style="color:#f1fa8c">&#39;sqlite&#39;</span>, <span style="color:#ff79c6">function</span> (<span style="color:#8be9fd;font-style:italic">$app</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> \Cache<span style="color:#ff79c6">::</span><span style="color:#50fa7b">repository</span>(<span style="color:#ff79c6">new</span> \App\Extensions\SqliteStore);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>That&rsquo;s it for the code side. But we still need to setup the config so the driver details exist. Open up the <code>config/cache.php</code> file. Add these details so the config can be properly loaded:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#6272a4">// ... the rest of config/cache.php
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#f1fa8c">&#39;sqlite&#39;</span> <span style="color:#ff79c6">=&gt;</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;driver&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;sqlite&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;table&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;cache&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;database&#39;</span> <span style="color:#ff79c6">=&gt;</span> env(<span style="color:#f1fa8c">&#39;CACHE_DATABASE&#39;</span>, database_path(<span style="color:#f1fa8c">&#39;cache.sqlite&#39;</span>)),
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#39;prefix&#39;</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>],
+</span></span></code></pre></div><p>You can then update your <code>.env</code> to have <code>CACHE_DRIVER=sqlite</code> and everything should be good!</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -321,7 +321,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

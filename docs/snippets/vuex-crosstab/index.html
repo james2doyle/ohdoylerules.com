@@ -239,20 +239,20 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   <a href="/images/vuex-crosstab.gif" target="_blank" title="vuex crosstab demo"><img alt="laravel multi-lingual site demo" src="/images/vuex-crosstab.gif"></a>
 </div>
 <p>You can use the plugin like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// es6
-</span><span style="color:#6272a4">// import CrossTab from &#39;vuex-crosstab&#39;;
-</span><span style="color:#6272a4">// commonjs
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> CrossTab <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#39;vuex-crosstab&#39;</span>);
-
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#ff79c6">new</span> Vuex.Store({
-  <span style="color:#6272a4">// ...
-</span><span style="color:#6272a4"></span>  plugins<span style="color:#ff79c6">:</span> [
-    <span style="color:#6272a4">// your other plugins...
-</span><span style="color:#6272a4"></span>    CrossTab({ recover<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span> })
-  ],
-  <span style="color:#6272a4">// ...
-</span><span style="color:#6272a4"></span>});
-</code></pre></div><p>There is a simple config object you can pass to control some things like the &ldquo;recovery&rdquo; which will check the localstorage to see if there was state already in there. You can <a href="https://github.com/james2doyle/vuex-crosstab#options">read more on the Github page</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">// es6
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">// import CrossTab from &#39;vuex-crosstab&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">// commonjs
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> CrossTab <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#39;vuex-crosstab&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#ff79c6">new</span> Vuex.Store({
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  plugins<span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// your other plugins...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    CrossTab({ recover<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span> })
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>});
+</span></span></code></pre></div><p>There is a simple config object you can pass to control some things like the &ldquo;recovery&rdquo; which will check the localstorage to see if there was state already in there. You can <a href="https://github.com/james2doyle/vuex-crosstab#options">read more on the Github page</a>.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -283,7 +283,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

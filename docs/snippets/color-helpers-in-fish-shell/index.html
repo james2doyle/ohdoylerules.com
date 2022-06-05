@@ -234,25 +234,25 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Working with the prompt to output the correct colors can be a bit of a pain. I manage to find a nice way to handle both colorizing backgrounds for the text as well as the actual text color. You can see an example below:</p>
 <script src="https://gist.github.com/james2doyle/acb8c065c8b4d63f557d44a77a356d59.js"></script>
 <p>Once you add the code into your <code>fish config</code>. You will then be able to colorize your output using this simple helper function:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#50fa7b">color_print</span> <span style="color:#8be9fd;font-style:italic">$COLOR_R</span> <span style="color:#f1fa8c">&#34;I am red text.&#34;</span>
-</code></pre></div><p>You can also do a background color:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#50fa7b">color_print</span> <span style="color:#8be9fd;font-style:italic">$BG_G</span> <span style="color:#f1fa8c">&#34;I am on a green background.&#34;</span>
-</code></pre></div><p>I use this helper function in my other functions to colorize output when showing different results or handling different exit codes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#50fa7b">color_print</span> <span style="color:#8be9fd;font-style:italic">$COLOR_R</span> <span style="color:#f1fa8c">&#34;I am red text.&#34;</span>
+</span></span></code></pre></div><p>You can also do a background color:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#50fa7b">color_print</span> <span style="color:#8be9fd;font-style:italic">$BG_G</span> <span style="color:#f1fa8c">&#34;I am on a green background.&#34;</span>
+</span></span></code></pre></div><p>I use this helper function in my other functions to colorize output when showing different results or handling different exit codes.</p>
 <p>Here is an exmple of a little function that moves a file and timestamps it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fish" data-lang="fish"><span style="color:#ff79c6">function</span> <span style="color:#50fa7b">amv</span>
-  <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">source</span> <span style="color:#8be9fd;font-style:italic">$argv</span><span style="color:#ff79c6">[</span><span style="color:#bd93f9">1</span><span style="color:#ff79c6">]</span>
-  <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#8be9fd;font-style:italic">$source</span> <span style="color:#ff79c6">]</span>
-    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">stamp</span> <span style="color:#ff79c6">(</span><span style="color:#50fa7b">date</span> +%Y<span style="color:#50fa7b">-%m-</span>%d<span style="color:#50fa7b">-%H-</span>%M<span style="color:#50fa7b">-%S</span><span style="color:#ff79c6">)</span>
-    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">dest</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$stamp</span><span style="color:#f1fa8c">-</span><span style="color:#8be9fd;font-style:italic">$source</span><span style="color:#f1fa8c">&#34;</span>
-    <span style="color:#50fa7b">mv</span> <span style="color:#8be9fd;font-style:italic">$source</span> <span style="color:#8be9fd;font-style:italic">$dest</span>
-    <span style="color:#6272a4"># output will be blue text
-</span><span style="color:#6272a4"></span>    <span style="color:#50fa7b">color_print</span> <span style="color:#8be9fd;font-style:italic">$COLOR_B</span> <span style="color:#f1fa8c">&#34;Moved </span><span style="color:#8be9fd;font-style:italic">$source</span><span style="color:#f1fa8c"> to an archive at </span><span style="color:#8be9fd;font-style:italic">$dest</span><span style="color:#f1fa8c">&#34;</span>
-  <span style="color:#ff79c6">else</span>
-    <span style="color:#6272a4"># output will be yellow text
-</span><span style="color:#6272a4"></span>    <span style="color:#50fa7b">color_print</span> <span style="color:#8be9fd;font-style:italic">$COLOR_Y</span> <span style="color:#f1fa8c">&#34;Help: amv source.zip {timestamp}-source.zip&#34;</span>
-  <span style="color:#ff79c6">end</span>
-<span style="color:#ff79c6">end</span>
-</code></pre></div><p>So you can see where this can be really helpful for when you just want to simply color some text. Instead of worrying about the color codes and escape sequences, you can use this handy helper function now.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff79c6">function</span> <span style="color:#50fa7b">amv</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">source</span> <span style="color:#8be9fd;font-style:italic">$argv</span><span style="color:#ff79c6">[</span><span style="color:#bd93f9">1</span><span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">[</span> <span style="color:#8be9fd;font-style:italic">$source</span> <span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">stamp</span> <span style="color:#ff79c6">(</span><span style="color:#50fa7b">date</span> +%Y-%m-%d-%H-%M-%S<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">dest</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$stamp</span><span style="color:#f1fa8c">-</span><span style="color:#8be9fd;font-style:italic">$source</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">mv</span> <span style="color:#8be9fd;font-style:italic">$source</span> <span style="color:#8be9fd;font-style:italic">$dest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># output will be blue text
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#50fa7b">color_print</span> <span style="color:#8be9fd;font-style:italic">$COLOR_B</span> <span style="color:#f1fa8c">&#34;Moved </span><span style="color:#8be9fd;font-style:italic">$source</span><span style="color:#f1fa8c"> to an archive at </span><span style="color:#8be9fd;font-style:italic">$dest</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># output will be yellow text
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#50fa7b">color_print</span> <span style="color:#8be9fd;font-style:italic">$COLOR_Y</span> <span style="color:#f1fa8c">&#34;Help: amv source.zip {timestamp}-source.zip&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">end</span>
+</span></span></code></pre></div><p>So you can see where this can be really helpful for when you just want to simply color some text. Instead of worrying about the color codes and escape sequences, you can use this handy helper function now.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -283,7 +283,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

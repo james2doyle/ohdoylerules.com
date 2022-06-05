@@ -233,28 +233,28 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       <div itemprop="ArticleBody text" class="main-content"><p>The other day I was working on a custom form that had a lot of javascript interaction. It got a little too far before I realized I should have been using something like <a href="http://angularjs.org/">Angular.js</a>. I was looking for a simple one-way databinding library, but I couldn&rsquo;t find anything that wasn&rsquo;t overkill.</p>
 <p>So I created <a href="http://james2doyle.github.io/simplebinder/">Simple Binder</a>. Simple Binder is a zero dependency one-way databinder for javascript. The great thing about it is that, not only is it very simple, but it is super small as well. No dependencies is also nice.</p>
 <p>Using the lib is pretty straightforward. Here is the markup required for a simplebinder element:</p>
-<pre tabindex="0"><code>&lt;p data-model=&quot;number&quot;&gt;number&lt;/p&gt;
-&lt;input type=&quot;number&quot; data-controller=&quot;number&quot; /&gt;
+<pre tabindex="0"><code>&lt;p data-model=&#34;number&#34;&gt;number&lt;/p&gt;
+&lt;input type=&#34;number&#34; data-controller=&#34;number&#34; /&gt;
 </code></pre><p>As you can see, you must have a <em>data-model</em> and a <em>data-controller</em> set on your items. Models are like the destination for the data-controllers value.</p>
 <p>This would be the javascript for this element:</p>
-<pre tabindex="0"><code>var sb = SimpleBinder('number', function(input, model) {
+<pre tabindex="0"><code>var sb = SimpleBinder(&#39;number&#39;, function(input, model) {
   console.log(input.value);
 });
 </code></pre><p>Now the <code>sb</code> variable it a simplebinder object. It has a few nice methods that you can use now:</p>
 <p>Destroy a simplebinder element.</p>
 <pre tabindex="0"><code>sb.destroy();
 </code></pre><p>Add a new controller to a simplebinder element.</p>
-<pre tabindex="0"><code>sb.addController('new-controller-name');
+<pre tabindex="0"><code>sb.addController(&#39;new-controller-name&#39;);
 </code></pre><p>Add a new model to a simplebinder element.</p>
-<pre tabindex="0"><code>sb.addModel('new-model-name');
+<pre tabindex="0"><code>sb.addModel(&#39;new-model-name&#39;);
 </code></pre><p>See all models on a simplebinder element. Returns an arrary of strings with querySelectorAll queries.</p>
 <pre tabindex="0"><code>sb.models;
 </code></pre><p>See all controllers on a simplebinder element. Returns an arrary of strings with querySelectorAll queries.</p>
 <pre tabindex="0"><code>sb.controllers;
 </code></pre><p>Custom events and attributes</p>
-<pre tabindex="0"><code>var sb = SimpleBinder('modelname', {
-  watch: 'value', // what controller attribute are we watching?
-  change: 'className' // the attribute to change on the model, default = textContent
+<pre tabindex="0"><code>var sb = SimpleBinder(&#39;modelname&#39;, {
+  watch: &#39;value&#39;, // what controller attribute are we watching?
+  change: &#39;className&#39; // the attribute to change on the model, default = textContent
 }, function(input, model) {
   console.log(input.value);
 });
@@ -290,7 +290,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

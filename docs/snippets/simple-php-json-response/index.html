@@ -237,17 +237,17 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>This function converts PHP arrays, strings, and objects, into a JSON safe string. This makes it simple for you to create safe responses that can be handled by your javascript.</p>
 <h4 id="use-content-type">Use Content-Type</h4>
 <p>This is usually the magic command that allows you to <em>receive</em> JSON from your script. If you don&rsquo;t set the header, PHP will simple return a string. Then in your javascript, you have to use <code>JSON.parse</code> in order to get the object that javascript can use.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">header(<span style="color:#f1fa8c">&#39;Content-Type: application/json&#39;</span>);
-</code></pre></div><p>No more strings! The request is now treated accordingly and is parsed for you. I am sure everyone has encountered this in the beginning.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>header(<span style="color:#f1fa8c">&#39;Content-Type: application/json&#39;</span>);
+</span></span></code></pre></div><p>No more strings! The request is now treated accordingly and is parsed for you. I am sure everyone has encountered this in the beginning.</p>
 <h4 id="use-status">Use Status</h4>
 <p>Here is another header that you need to set in order for things to work smoothly. By setting the status, you can tell your javascript, as well as your browser, what the status of the request it. By default, the requests are treated as <code>200 OK</code>. So although you may have sent a response with a failing message, with setting a failed status (usually 300 codes and above) the browser, and your javascript, think everything is fine.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">header(<span style="color:#f1fa8c">&#39;Status: 400 Bad Request&#39;</span>);
-</code></pre></div><p>This becomes very apparent in jQuery when using <code>$.get</code> or <code>$.post</code>. If you are using a Promise style request (using <code>$.get().then( ... )</code>), your error handler never gets called.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>header(<span style="color:#f1fa8c">&#39;Status: 400 Bad Request&#39;</span>);
+</span></span></code></pre></div><p>This becomes very apparent in jQuery when using <code>$.get</code> or <code>$.post</code>. If you are using a Promise style request (using <code>$.get().then( ... )</code>), your error handler never gets called.</p>
 <p>If you want to find the perfect header for your fantastic error, check out the Wikipedia for the <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status codes</a>.</p>
 <h4 id="example">Example</h4>
 <p>Here is an example of a simple script I might use when testing an AJAX response, or when building a flat-file site. I would place this somewhere in my websites directory, and then hit it directly with an AJAX request.</p>
 <p>If my local path to my site was <code>http://localhost:8888/website</code>, I would save this script as <code>json.php</code>. Then I would then use the following jQuery to test the script:</p>
-<pre tabindex="0"><code>$.get(&quot;http://localhost:8888/website/json.php&quot;)
+<pre tabindex="0"><code>$.get(&#34;http://localhost:8888/website/json.php&#34;)
 .done(function(response){
   console.log(response);
 });
@@ -285,7 +285,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

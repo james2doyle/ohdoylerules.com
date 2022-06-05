@@ -248,31 +248,31 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 -----| _id.vue
 --| index.vue
 </code></pre><p>And this will generate the following routes automatically:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">router: {
-  routes: [
-    {
-      name: &#39;index&#39;,
-      path: &#39;/&#39;,
-      component: &#39;pages/index.vue&#39;
-    },
-    {
-      name: &#39;users-id&#39;,
-      path: &#39;/users/:id?&#39;,
-      component: &#39;pages/users/_id.vue&#39;
-    },
-    {
-      name: &#39;slug&#39;,
-      path: &#39;/:slug&#39;,
-      component: &#39;pages/_slug/index.vue&#39;
-    },
-    {
-      name: &#39;slug-comments&#39;,
-      path: &#39;/:slug/comments&#39;,
-      component: &#39;pages/_slug/comments.vue&#39;
-    }
-  ]
-}
-</code></pre></div><p>You can then call <code>this.$route.params.slug</code>  (for slug-comments) or <code>this.$route.params.id</code> (for users-id) inside the components or pages that are on that route.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>router: {
+</span></span><span style="display:flex;"><span>  routes: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      name: &#39;index&#39;,
+</span></span><span style="display:flex;"><span>      path: &#39;/&#39;,
+</span></span><span style="display:flex;"><span>      component: &#39;pages/index.vue&#39;
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      name: &#39;users-id&#39;,
+</span></span><span style="display:flex;"><span>      path: &#39;/users/:id?&#39;,
+</span></span><span style="display:flex;"><span>      component: &#39;pages/users/_id.vue&#39;
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      name: &#39;slug&#39;,
+</span></span><span style="display:flex;"><span>      path: &#39;/:slug&#39;,
+</span></span><span style="display:flex;"><span>      component: &#39;pages/_slug/index.vue&#39;
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      name: &#39;slug-comments&#39;,
+</span></span><span style="display:flex;"><span>      path: &#39;/:slug/comments&#39;,
+</span></span><span style="display:flex;"><span>      component: &#39;pages/_slug/comments.vue&#39;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can then call <code>this.$route.params.slug</code>  (for slug-comments) or <code>this.$route.params.id</code> (for users-id) inside the components or pages that are on that route.</p>
 <p>Pretty slick right?</p>
 <p>So Nuxt is cool. It lets me quickly create an SPA (single-page app) without worrying about setting up an elaborate route object or worrying about how to organize my projects folders and logic. You just toss files in folders, and everything pretty much works.</p>
 <p>Some people <strong>hate this</strong> but I find the structure liberating. I plan to use that additional time/energy to focus on building my app and not organizing configs or fiddling with route logic.</p>
@@ -325,7 +325,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

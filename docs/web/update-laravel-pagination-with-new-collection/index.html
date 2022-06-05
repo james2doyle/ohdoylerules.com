@@ -233,26 +233,26 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       <div itemprop="ArticleBody text" class="main-content"><p>Have you even done a database search (using the <code>DB</code> facade) and got back an array of results that wasn&rsquo;t wrapped in lovely little Eloquent Models? After some googling, I am sure you probably found out about the <a href="http://commandz.io/create-models-from-query-builder/">hydrate</a> method. Using <code>hydrate</code>, you can turn an array of results from the database into real models from your application. This works phenomenally.</p>
 <p>But what if you want to return paginated results? How do you used the results after they are already paginated? Well there is a method called <code>setCollection</code> on the <a href="https://laravel.com/api/5.4/Illuminate/Pagination/LengthAwarePaginator.html">LengthAwarePaginator</a> class. What it will let you do actually set the results of the pagination to a new collection.</p>
 <p>Here is an example of how that works in practice:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
-<span style="color:#f1fa8c">/**
-</span><span style="color:#f1fa8c"> * Hydrates the paginated results for the query
-</span><span style="color:#f1fa8c"> */</span>
-<span style="color:#ff79c6">public</span> <span style="color:#ff79c6">function</span> <span style="color:#50fa7b">simpleSearchQuery</span>()
-{
-    <span style="color:#6272a4">// contrived example of a &#34;DB search&#34;
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">$results</span> <span style="color:#ff79c6">=</span> DB<span style="color:#ff79c6">::</span><span style="color:#50fa7b">table</span>(<span style="color:#f1fa8c">&#39;users&#39;</span>)
-        <span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">select</span>(<span style="color:#f1fa8c">&#39;name&#39;</span>)
-        <span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">where</span>(<span style="color:#f1fa8c">&#39;email&#39;</span>, <span style="color:#f1fa8c">&#39;LIKE&#39;</span>, <span style="color:#f1fa8c">&#39;%@gmail.com%&#39;</span>)
-        <span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">orderBy</span>(<span style="color:#f1fa8c">&#39;created_at&#39;</span>)
-        <span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">paginate</span>(<span style="color:#bd93f9">15</span>);
-
-    <span style="color:#6272a4">// we can hydrate a model with the results from a DB call
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">$hydrated</span> <span style="color:#ff79c6">=</span> User<span style="color:#ff79c6">::</span><span style="color:#50fa7b">hydrate</span>(<span style="color:#8be9fd;font-style:italic">$results</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">all</span>());
-
-    <span style="color:#6272a4">// updates the pagination with a new collection of models instead of raw DB array results
-</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">$results</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">setCollection</span>(<span style="color:#8be9fd;font-style:italic">$hydrated</span>);
-}
-</code></pre></div><p>Now this is a pretty simple example of how this could be used. I used this feature to search across a couple tables that didn&rsquo;t have models. The results were for a specific model type, but I wanted the results to be real models so that I can use nice methods on them to get relationships, trigger mutations, etc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;?</span>php
+</span></span><span style="display:flex;"><span><span style="color:#f1fa8c">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> * Hydrates the paginated results for the query
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">public</span> <span style="color:#ff79c6">function</span> <span style="color:#50fa7b">simpleSearchQuery</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// contrived example of a &#34;DB search&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">$results</span> <span style="color:#ff79c6">=</span> DB<span style="color:#ff79c6">::</span><span style="color:#50fa7b">table</span>(<span style="color:#f1fa8c">&#39;users&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">select</span>(<span style="color:#f1fa8c">&#39;name&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">where</span>(<span style="color:#f1fa8c">&#39;email&#39;</span>, <span style="color:#f1fa8c">&#39;LIKE&#39;</span>, <span style="color:#f1fa8c">&#39;%@gmail.com%&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">orderBy</span>(<span style="color:#f1fa8c">&#39;created_at&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">paginate</span>(<span style="color:#bd93f9">15</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// we can hydrate a model with the results from a DB call
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">$hydrated</span> <span style="color:#ff79c6">=</span> User<span style="color:#ff79c6">::</span><span style="color:#50fa7b">hydrate</span>(<span style="color:#8be9fd;font-style:italic">$results</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">all</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// updates the pagination with a new collection of models instead of raw DB array results
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">$results</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">setCollection</span>(<span style="color:#8be9fd;font-style:italic">$hydrated</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now this is a pretty simple example of how this could be used. I used this feature to search across a couple tables that didn&rsquo;t have models. The results were for a specific model type, but I wanted the results to be real models so that I can use nice methods on them to get relationships, trigger mutations, etc.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -283,7 +283,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

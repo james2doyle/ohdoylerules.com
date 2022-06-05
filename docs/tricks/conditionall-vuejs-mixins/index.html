@@ -233,33 +233,33 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       <div itemprop="ArticleBody text" class="main-content"><p>When building more traditional Vue.js applications, I tend to use mixins a lot. It helps split up code, speparate concerns, and can allow for some cool tricks. One that i keep using is conditionally requiring a mixin based on the details of the page.</p>
 <p>Here is an example. The first module is a function that, like <code>require</code>, will load a file into the script it is being called from. The thing is, this <code>require</code> function also takes a new parameter for checking if the page URL contains a particular string or <em>array of strings</em>.</p>
 <h4 id="conditionalrequirejs">conditionalRequire.js</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// loads mixins based on the current URL
-</span><span style="color:#6272a4"></span>module.exports <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>(name, filename) {
-  <span style="color:#6272a4">// name can be an array or single string value
-</span><span style="color:#6272a4"></span>  name <span style="color:#ff79c6">=</span> (<span style="color:#ff79c6">typeof</span>(name) <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#39;object&#39;</span>) <span style="color:#ff79c6">?</span> <span style="color:#8be9fd;font-style:italic">Array</span>.from(name) <span style="color:#ff79c6">:</span> [name];
-  <span style="color:#6272a4">// are there any matches?
-</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">const</span> check <span style="color:#ff79c6">=</span> name.filter((n) =&gt; <span style="color:#8be9fd;font-style:italic">window</span>.location.pathname.includes(n)).length;
-
-  <span style="color:#6272a4">// return a no-op function for better compatibility with traditional require
-</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">return</span> check <span style="color:#ff79c6">?</span> require(filename) <span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span>() { <span style="color:#ff79c6">return</span> {}; };
-};
-</code></pre></div><p>The next code block below would be for you main app file. This would be the file included in all of the footers on your site. Some things to assume is these modules exist in a folder called <code>mixins/</code> and that the source files in there are returning a valid object that works as a mixin.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">// loads mixins based on the current URL
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>module.exports <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>(name, filename) {
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// name can be an array or single string value
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  name <span style="color:#ff79c6">=</span> (<span style="color:#ff79c6">typeof</span>(name) <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#39;object&#39;</span>) <span style="color:#ff79c6">?</span> <span style="color:#8be9fd;font-style:italic">Array</span>.from(name) <span style="color:#ff79c6">:</span> [name];
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// are there any matches?
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">const</span> check <span style="color:#ff79c6">=</span> name.filter((n) =&gt; <span style="color:#8be9fd;font-style:italic">window</span>.location.pathname.includes(n)).length;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// return a no-op function for better compatibility with traditional require
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">return</span> check <span style="color:#ff79c6">?</span> require(filename) <span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span>() { <span style="color:#ff79c6">return</span> {}; };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>The next code block below would be for you main app file. This would be the file included in all of the footers on your site. Some things to assume is these modules exist in a folder called <code>mixins/</code> and that the source files in there are returning a valid object that works as a mixin.</p>
 <h4 id="indexjs">index.js</h4>
 <pre tabindex="0"><code>// include the module from the above snippet
-const conditionalRequire = require('conditionalRequire');
+const conditionalRequire = require(&#39;conditionalRequire&#39;);
 
 // create our Vue app
 const app = new Vue({
-  el: &quot;#app&quot;,
+  el: &#34;#app&#34;,
   data: {
     // ...
   },
   mixins: [
-    require('mixins/global'), // a regular module - loaded always
-    require('mixins/navigation'), // a regular module - loaded always
-    conditionalRequire('home', 'mixins/home'), // only load when on the &quot;/home&quot; page
-    conditionalRequire('profile', 'mixins/profile'), // only load when on the &quot;/profile&quot; page
-    conditionalRequire(['about', 'contact'], 'mixins/forms') // load on &quot;/about&quot; and &quot;/contact&quot;
+    require(&#39;mixins/global&#39;), // a regular module - loaded always
+    require(&#39;mixins/navigation&#39;), // a regular module - loaded always
+    conditionalRequire(&#39;home&#39;, &#39;mixins/home&#39;), // only load when on the &#34;/home&#34; page
+    conditionalRequire(&#39;profile&#39;, &#39;mixins/profile&#39;), // only load when on the &#34;/profile&#34; page
+    conditionalRequire([&#39;about&#39;, &#39;contact&#39;], &#39;mixins/forms&#39;) // load on &#34;/about&#34; and &#34;/contact&#34;
   ]
 });
 </code></pre><p>So you can see this can be a handy trick. You don&rsquo;t load code on pages you don&rsquo;t need it. There are ways to do this using components and <code>v-if</code> but it is a lot &ldquo;softer&rdquo; than simply never running/including code that you know is not needed.</p>
@@ -293,7 +293,7 @@ const app = new Vue({
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

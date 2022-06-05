@@ -232,23 +232,23 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I was doing a project in vanilla javascript that used querySelectorAll, which returns a nodelist object. I wanted the jQuery each function so that I could add an event listener to each element. It was a school project and no jQuery allowed so I did some research and came up with this little prototype.</p>
 <p>Here is the result:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">Object</span>.prototype.each <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>(callback) {
-  <span style="color:#6272a4">// new empty array
-</span><span style="color:#6272a4"></span>  <span style="color:#8be9fd;font-style:italic">var</span> a <span style="color:#ff79c6">=</span> [];
-  <span style="color:#6272a4">// iterate through the nodelist
-</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">var</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> <span style="color:#ff79c6">this</span>.length; i<span style="color:#ff79c6">++</span>) {
-    <span style="color:#6272a4">// put the objects into the array
-</span><span style="color:#6272a4"></span>    a[i] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span>[i];
-    <span style="color:#6272a4">// callback the new array
-</span><span style="color:#6272a4"></span>    callback(a[i]);
-  }
-}
-<span style="color:#6272a4">// USAGE
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> x <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.querySelectorAll(<span style="color:#f1fa8c">&#39;li&#39;</span>);
-x.each(<span style="color:#8be9fd;font-style:italic">function</span>(elem) {
-    elem.style.background <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;red&#39;</span>;
-});
-</code></pre></div><p>Pretty cool. <a href="http://jsfiddle.net/james2doyle/nrhgr/" title="each prototype">Here is the fiddle</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Object</span>.prototype.each <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>(callback) {
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// new empty array
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd;font-style:italic">var</span> a <span style="color:#ff79c6">=</span> [];
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// iterate through the nodelist
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">var</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> <span style="color:#ff79c6">this</span>.length; i<span style="color:#ff79c6">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// put the objects into the array
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    a[i] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span>[i];
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// callback the new array
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    callback(a[i]);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// USAGE
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> x <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.querySelectorAll(<span style="color:#f1fa8c">&#39;li&#39;</span>);
+</span></span><span style="display:flex;"><span>x.each(<span style="color:#8be9fd;font-style:italic">function</span>(elem) {
+</span></span><span style="display:flex;"><span>    elem.style.background <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;red&#39;</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>Pretty cool. <a href="http://jsfiddle.net/james2doyle/nrhgr/" title="each prototype">Here is the fiddle</a></p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -279,7 +279,7 @@ x.each(<span style="color:#8be9fd;font-style:italic">function</span>(elem) {
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

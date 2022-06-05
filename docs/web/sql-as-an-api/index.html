@@ -242,21 +242,21 @@ type Project {
 
 # Ask for what you want
 {
-  project(name: &quot;My Project&quot;) {
+  project(name: &#34;My Project&#34;) {
     tagline
   }
 }
 
 # Get predictable results
 {
-  &quot;project&quot;: {
-    &quot;tagline&quot;: &quot;A query language for APIs&quot;
+  &#34;project&#34;: {
+    &#34;tagline&#34;: &#34;A query language for APIs&#34;
   }
 }
 </code></pre><p>Pretty straightforward. You create a model of your data that describes it, write a query that matches the model, and get the results.</p>
 <p>Although, this should already look familiar to anyone that has used a relational database before. What if we massage this example so it fits a more classic datastore:</p>
 <pre tabindex="0"><code># Describe your data
-CREATE TABLE &quot;project&quot;
+CREATE TABLE &#34;project&#34;
 (
     [name] NVARCHAR(40),
     [tagline] NVARCHAR(120),
@@ -264,12 +264,12 @@ CREATE TABLE &quot;project&quot;
 );
 
 # Ask for what you want
-SELECT `tagline` FROM `projects` WHERE `name` = &quot;My Project&quot;
+SELECT `tagline` FROM `projects` WHERE `name` = &#34;My Project&#34;
 
 # Get predictable results
 [
   {
-    &quot;tagline&quot;: &quot;A query language for APIs&quot;
+    &#34;tagline&#34;: &#34;A query language for APIs&#34;
   }
 ]
 </code></pre><p>So this really is just another way to store and query your data. We describe the structure, query it using the specified query language with our expected structure, and print out the results.</p>
@@ -283,206 +283,206 @@ SELECT `tagline` FROM `projects` WHERE `name` = &quot;My Project&quot;
 <h3 id="basic-example">Basic Example</h3>
 <p>We are going to whip up this example using PHP and the <code>chinook</code> database <a href="http://www.sqlitetutorial.net/sqlite-sample-database/">from this site</a>. It is insanely easy to get this working using the <code>SQLite3</code> class and a single <code>json_encode</code> call.</p>
 <p>Let&rsquo;s see how to get this done:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
-<span style="color:#6272a4">// be sure to open with `SQLITE3_OPEN_READONLY`
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$db</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> SQLite3(<span style="color:#f1fa8c">&#39;chinook.sqlite&#39;</span>, SQLITE3_OPEN_READONLY);
-<span style="color:#6272a4">// pull out the query from the POST request
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$rows</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$db</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">query</span>(<span style="color:#8be9fd;font-style:italic">$_POST</span>[<span style="color:#f1fa8c">&#39;query&#39;</span>]);
-<span style="color:#8be9fd;font-style:italic">$results</span> <span style="color:#ff79c6">=</span> [];
-<span style="color:#ff79c6">while</span> (<span style="color:#8be9fd;font-style:italic">$row</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$rows</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">fetchArray</span>(SQLITE3_ASSOC)) {
-    <span style="color:#8be9fd;font-style:italic">$results</span>[] <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$row</span>;
-}
-<span style="color:#ff79c6">echo</span> json_encode(<span style="color:#8be9fd;font-style:italic">$results</span>);
-</code></pre></div><p>OK. That was easy. This is all we need to support calls to this &ldquo;server&rdquo;. Let&rsquo;s save this to <code>index.php</code>. And start a webserver on port <code>8000</code>. If you didn&rsquo;t know this, PHP has a built-in server just like the one python has. We can start it like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">php -S localhost:8000
-</code></pre></div><p>You should see some output information about what the server is doing. Now we can make calls to this API:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT LastName FROM employees&#39;</span>
-</code></pre></div><p>We should see the following output in our console:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
-  {
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
-  }
-]
-</code></pre></div><h3 id="getting-fancier">Getting fancier</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;?</span>php
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// be sure to open with `SQLITE3_OPEN_READONLY`
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$db</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> SQLite3(<span style="color:#f1fa8c">&#39;chinook.sqlite&#39;</span>, SQLITE3_OPEN_READONLY);
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// pull out the query from the POST request
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">$rows</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$db</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">query</span>(<span style="color:#8be9fd;font-style:italic">$_POST</span>[<span style="color:#f1fa8c">&#39;query&#39;</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$results</span> <span style="color:#ff79c6">=</span> [];
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> (<span style="color:#8be9fd;font-style:italic">$row</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$rows</span><span style="color:#ff79c6">-&gt;</span><span style="color:#50fa7b">fetchArray</span>(SQLITE3_ASSOC)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">$results</span>[] <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">$row</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">echo</span> json_encode(<span style="color:#8be9fd;font-style:italic">$results</span>);
+</span></span></code></pre></div><p>OK. That was easy. This is all we need to support calls to this &ldquo;server&rdquo;. Let&rsquo;s save this to <code>index.php</code>. And start a webserver on port <code>8000</code>. If you didn&rsquo;t know this, PHP has a built-in server just like the one python has. We can start it like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>php -S localhost:8000
+</span></span></code></pre></div><p>You should see some output information about what the server is doing. Now we can make calls to this API:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl --request POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT LastName FROM employees&#39;</span>
+</span></span></code></pre></div><p>We should see the following output in our console:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><h3 id="getting-fancier">Getting fancier</h3>
 <p>Nice! So this works. Let&rsquo;s try to do something a little more fancy:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT printf(&#34;%s %s&#34;, FirstName, LastName) AS FullName, FirstName, LastName FROM employees&#39;</span>
-</code></pre></div><p>Our output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
-  {
-    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew Adams&#34;</span>,
-    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew&#34;</span>,
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>,
-    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy&#34;</span>,
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Jane Peacock&#34;</span>,
-    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Jane&#34;</span>,
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret Park&#34;</span>,
-    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret&#34;</span>,
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Steve Johnson&#34;</span>,
-    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Steve&#34;</span>,
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>,
-    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Michael&#34;</span>,
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Robert King&#34;</span>,
-    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Robert&#34;</span>,
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Laura Callahan&#34;</span>,
-    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Laura&#34;</span>,
-    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
-  }
-]
-</code></pre></div><p>How about a little example that searches a users name?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT printf (&#34;%s %s&#34;, employees.FirstName, employees.LastName) AS full_name FROM employees WHERE full_name LIKE &#34;an%&#34;&#39;</span>
-</code></pre></div><p>We see that we found the user:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
-  {
-    <span style="color:#ff79c6">&#34;full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew Adams&#34;</span>
-  }
-]
-</code></pre></div><p>Let&rsquo;s do an even more sophisticated example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT e2.EmployeeId AS employee_id, e2.ReportsTo AS reports_to, printf (&#34;%s %s&#34;, e2.FirstName, e2.LastName) AS employee_full_name, printf (&#34;%s %s&#34;, e1.FirstName, e1.LastName) AS reports_to_full_name FROM employees e1 INNER JOIN employees e2 ON e1.EmployeeId = e2.ReportsTo WHERE e1.ReportsTo IS NOT NULL&#39;</span>
-</code></pre></div><p>And our output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
-  {
-    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">3</span>,
-    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
-    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Jane Peacock&#34;</span>,
-    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">4</span>,
-    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
-    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret Park&#34;</span>,
-    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">5</span>,
-    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
-    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Steve Johnson&#34;</span>,
-    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">7</span>,
-    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">6</span>,
-    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Robert King&#34;</span>,
-    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>
-  },
-  {
-    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">8</span>,
-    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">6</span>,
-    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Laura Callahan&#34;</span>,
-    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>
-  }
-]
-</code></pre></div><p>Awesome! As you can see this is pretty great! We have a basic API that we can use not only to read but to handle relationships as well. Sweet!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl --request POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT printf(&#34;%s %s&#34;, FirstName, LastName) AS FullName, FirstName, LastName FROM employees&#39;</span>
+</span></span></code></pre></div><p>Our output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew Adams&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Jane Peacock&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Jane&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret Park&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Steve Johnson&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Steve&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Michael&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Robert King&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Robert&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FullName&#34;</span>: <span style="color:#f1fa8c">&#34;Laura Callahan&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;FirstName&#34;</span>: <span style="color:#f1fa8c">&#34;Laura&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>How about a little example that searches a users name?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl --request POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT printf (&#34;%s %s&#34;, employees.FirstName, employees.LastName) AS full_name FROM employees WHERE full_name LIKE &#34;an%&#34;&#39;</span>
+</span></span></code></pre></div><p>We see that we found the user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Andrew Adams&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>Let&rsquo;s do an even more sophisticated example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl --request POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=SELECT e2.EmployeeId AS employee_id, e2.ReportsTo AS reports_to, printf (&#34;%s %s&#34;, e2.FirstName, e2.LastName) AS employee_full_name, printf (&#34;%s %s&#34;, e1.FirstName, e1.LastName) AS reports_to_full_name FROM employees e1 INNER JOIN employees e2 ON e1.EmployeeId = e2.ReportsTo WHERE e1.ReportsTo IS NOT NULL&#39;</span>
+</span></span></code></pre></div><p>And our output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">3</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Jane Peacock&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">4</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Margaret Park&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">5</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">2</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Steve Johnson&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nancy Edwards&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">7</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">6</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Robert King&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_id&#34;</span>: <span style="color:#bd93f9">8</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to&#34;</span>: <span style="color:#bd93f9">6</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;employee_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Laura Callahan&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;reports_to_full_name&#34;</span>: <span style="color:#f1fa8c">&#34;Michael Mitchell&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>Awesome! As you can see this is pretty great! We have a basic API that we can use not only to read but to handle relationships as well. Sweet!</p>
 <h3 id="handling-malicious-queries">Handling malicious queries</h3>
 <p>Let&rsquo;s try to execute a bad command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl --request POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=INSERT INTO &#34;artists&#34; (&#34;Name&#34;) VALUES (&#34;Philip Glass Ensemble&#34;)&#39;</span>
-</code></pre></div><p>We should see this output from the server:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">br</span> /&gt;
-&lt;<span style="color:#ff79c6">b</span>&gt;Warning&lt;/<span style="color:#ff79c6">b</span>&gt;:  SQLite3::query(): Unable to execute statement: attempt to write a readonly database in &lt;<span style="color:#ff79c6">b</span>&gt;/Users/james/Sites/sqliteapi/index.php&lt;/<span style="color:#ff79c6">b</span>&gt; on line &lt;<span style="color:#ff79c6">b</span>&gt;6&lt;/<span style="color:#ff79c6">b</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
-&lt;<span style="color:#ff79c6">br</span> /&gt;
-&lt;<span style="color:#ff79c6">b</span>&gt;Fatal error&lt;/<span style="color:#ff79c6">b</span>&gt;:  Uncaught Error: Call to a member function fetchArray() on bool in /Users/james/Sites/sqliteapi/index.php:8
-Stack trace:
-#0 {main}
-  thrown in &lt;<span style="color:#ff79c6">b</span>&gt;/Users/james/Sites/sqliteapi/index.php&lt;/<span style="color:#ff79c6">b</span>&gt; on line &lt;<span style="color:#ff79c6">b</span>&gt;8&lt;/<span style="color:#ff79c6">b</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
-</code></pre></div><p>As you can see, we try to execute a bad query that would manipulate the data and we get blocked.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl --request POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --url http://localhost:8000 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --header <span style="color:#f1fa8c">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  --data <span style="color:#f1fa8c">&#39;query=INSERT INTO &#34;artists&#34; (&#34;Name&#34;) VALUES (&#34;Philip Glass Ensemble&#34;)&#39;</span>
+</span></span></code></pre></div><p>We should see this output from the server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">b</span>&gt;Warning&lt;/<span style="color:#ff79c6">b</span>&gt;:  SQLite3::query(): Unable to execute statement: attempt to write a readonly database in &lt;<span style="color:#ff79c6">b</span>&gt;/Users/james/Sites/sqliteapi/index.php&lt;/<span style="color:#ff79c6">b</span>&gt; on line &lt;<span style="color:#ff79c6">b</span>&gt;6&lt;/<span style="color:#ff79c6">b</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">b</span>&gt;Fatal error&lt;/<span style="color:#ff79c6">b</span>&gt;:  Uncaught Error: Call to a member function fetchArray() on bool in /Users/james/Sites/sqliteapi/index.php:8
+</span></span><span style="display:flex;"><span>Stack trace:
+</span></span><span style="display:flex;"><span>#0 {main}
+</span></span><span style="display:flex;"><span>  thrown in &lt;<span style="color:#ff79c6">b</span>&gt;/Users/james/Sites/sqliteapi/index.php&lt;/<span style="color:#ff79c6">b</span>&gt; on line &lt;<span style="color:#ff79c6">b</span>&gt;8&lt;/<span style="color:#ff79c6">b</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span></code></pre></div><p>As you can see, we try to execute a bad query that would manipulate the data and we get blocked.</p>
 <h3 id="super-example">Super example</h3>
 <p>Here is a much more robust example with some error handling, proper status codes, parsing of JSON input, and it also allows you to put the <code>query</code> in a <code>GET</code> or a <code>POST</code> request.</p>
 <script src="https://gist.github.com/james2doyle/9e4b2b4f17e33bfb236fbdaf96c41a4c.js"></script>
 <p>Try running the example above and giving things a test. Here is our new request that uses JSON instead:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -X POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  http://localhost:8000 <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  -H <span style="color:#f1fa8c">&#39;Content-Type: application/json&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  -d <span style="color:#f1fa8c">&#39;{ &#34;query&#34;: &#34;SELECT LastName FROM employees&#34; }&#39;</span>
-</code></pre></div><p>Now we have the following output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#ff79c6">&#34;data&#34;</span>: [
-    {
-      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
-    },
-    {
-      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
-    },
-    {
-      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
-    },
-    {
-      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
-    },
-    {
-      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
-    },
-    {
-      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
-    },
-    {
-      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
-    },
-    {
-      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
-    }
-  ],
-  <span style="color:#ff79c6">&#34;meta&#34;</span>: {
-    <span style="color:#ff79c6">&#34;query&#34;</span>: <span style="color:#f1fa8c">&#34;SELECT LastName FROM employees&#34;</span>,
-    <span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">8</span>
-  }
-}
-</code></pre></div><p>So there you go. A pretty robust solution that has excellent performance, a simple and well-known query language, and supports almost any combination of data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl -X POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  http://localhost:8000 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  -H <span style="color:#f1fa8c">&#39;Content-Type: application/json&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  -d <span style="color:#f1fa8c">&#39;{ &#34;query&#34;: &#34;SELECT LastName FROM employees&#34; }&#39;</span>
+</span></span></code></pre></div><p>Now we have the following output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;data&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Adams&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Edwards&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Peacock&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Park&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Johnson&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Mitchell&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;King&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;LastName&#34;</span>: <span style="color:#f1fa8c">&#34;Callahan&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;meta&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;query&#34;</span>: <span style="color:#f1fa8c">&#34;SELECT LastName FROM employees&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;total&#34;</span>: <span style="color:#bd93f9">8</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>So there you go. A pretty robust solution that has excellent performance, a simple and well-known query language, and supports almost any combination of data.</p>
 <h3 id="in-summation">In summation</h3>
 <p>So this could be a great option for a lot of applications. You can quickly imagine how this could be used for something like a simple search API. You could have an application hook to add data to this special database when your data is changed. Sqlite is a really viable option for a lot of things as it can grow to 140 TB, supports <a href="https://www.sqlite.org/json1.html"><code>json_</code> functions</a>, and even <a href="https://effbot.org/zone/sqlite-blob.htm">binary data</a>.</p>
 <p>Keep in mind that you can&rsquo;t really nest the same way you can in GraphQL. But you might be ok with that depending on your use case.</p>
@@ -516,7 +516,7 @@ Stack trace:
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

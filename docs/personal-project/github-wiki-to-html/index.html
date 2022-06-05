@@ -242,16 +242,16 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <li>run <code>chmod +x convert.sh</code> on that file to allow execution</li>
 <li>paste the following into the file:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">#!/bin/bash
-</span><span style="color:#ff79c6"></span>
-<span style="color:#6272a4"># for each md file in the directory</span>
-<span style="color:#ff79c6">for</span> file in *.md
-  <span style="color:#ff79c6">do</span>
-    <span style="color:#6272a4"># convert each file to html and place it in the html directory</span>
-    <span style="color:#6272a4"># --gfm == use github flavoured markdown</span>
-    marked -o html/<span style="color:#8be9fd;font-style:italic">$file</span>.html <span style="color:#8be9fd;font-style:italic">$file</span> --gfm
-<span style="color:#ff79c6">done</span>
-</code></pre></div><p>Now if you look in the <code>html</code> directory, you will see all the markdown files have been converted and are in that folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#ff79c6">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># for each md file in the directory</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> file in *.md
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># convert each file to html and place it in the html directory</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># --gfm == use github flavoured markdown</span>
+</span></span><span style="display:flex;"><span>    marked -o html/<span style="color:#8be9fd;font-style:italic">$file</span>.html <span style="color:#8be9fd;font-style:italic">$file</span> --gfm
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">done</span>
+</span></span></code></pre></div><p>Now if you look in the <code>html</code> directory, you will see all the markdown files have been converted and are in that folder.</p>
 <p>In the next week or so, I will write a new post about how to use this method and the <a href="https://github.com/assemble/assemble" title="Grunt Assemble Project">grunt assemble</a> plugin to make simple pages.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
@@ -283,7 +283,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

@@ -3,16 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ohdoylerules.com/category/</loc>
-    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/</loc>
-    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/</loc>
+    <lastmod>2022-06-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/category/snippets/</loc>
-    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/snippets/</loc>
-    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/snippets/vue-stateful-form-component/</loc>
     <lastmod>2021-10-24T00:00:00+00:00</lastmod>
@@ -140,7 +143,7 @@
     <loc>https://ohdoylerules.com/web/add-a-counter-for-duplicate-file-uploads/</loc>
     <lastmod>2016-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ohdoylerules.com/web/add-getstylesheet-to-jquery/</loc>
+    <loc>https://ohdoylerules.com/web/add--getstylesheet-to-jquery/</loc>
     <lastmod>2016-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/web/slack-url-meta-data/</loc>

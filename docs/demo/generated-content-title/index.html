@@ -232,49 +232,49 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I like <a href="http://jsfiddle.net/" title="jsFiddle">jsFiddle</a>. I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my <a href="https://ohdoylerules.com/work/" title="Work">work</a> section.</p>
 <p>Since it is just a repeating template, I built the classes and styles in jsFiddle and then just dropped in the PHP <code>echo</code>s. Anyway, here is something I made. It uses generated content. You can use HTML attributes in CSS. This is a classic example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#6272a4">/*! styles for printing */</span>
-@<span style="color:#ff79c6">media</span> <span style="color:#ff79c6">print</span>{
-  <span style="color:#6272a4">/*! all a tags with an href attribute */</span>
-  <span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">href</span><span style="color:#ff79c6">]</span>:after{
-    <span style="color:#6272a4">/*! display that href after the value */</span>
-    <span style="color:#ff79c6">content</span>: <span style="color:#f1fa8c">&#34; (&#34;</span> <span style="color:#8be9fd;font-style:italic">attr</span>(href) <span style="color:#f1fa8c">&#34;)&#34;</span>;
-  }
-}
-</code></pre></div><h3 id="what-does-this-look-like">What does this look like?</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#6272a4">/*! styles for printing */</span>
+</span></span><span style="display:flex;"><span>@<span style="color:#ff79c6">media</span> <span style="color:#ff79c6">print</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">/*! all a tags with an href attribute */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">href</span><span style="color:#ff79c6">]</span>:after{
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/*! display that href after the value */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">content</span>: <span style="color:#f1fa8c">&#34; (&#34;</span> <span style="color:#8be9fd;font-style:italic">attr</span>(href) <span style="color:#f1fa8c">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="what-does-this-look-like">What does this look like?</h3>
 <p>Would render as <a href="www.example.com/">Website (www.example.com/)</a></p>
 <p>So with that in mind, I thought it would be cool to have a button that would render a count. So in practical applications it might be used for something like an inbox button. In the case I built it is a notifications button.</p>
 <div class="center">
   <img src="/images/54368011.png" alt="notifications button" >
 </div>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">button {
-  color: #333;
-  padding: 4px 10px;
-  border: 1px solid #aaa;
-  outline: none;
-  font-weight: bold;
-  font-size: 12px;
-  font-family: &#39;Corbin&#39;;
-  background: #eee;
-  border-radius: 3px;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.5);
-  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
-}
-button:after {
-  content: attr(data-count);
-  border-radius: 10px;
-  display: inline-block;
-  background: #777;
-  padding: 2px 5px;
-  width: 15px;
-  margin: 0 0 0 8px;
-  color: white;
-  font-weight: normal;
-  border: 1px solid #555;
-  box-shadow: inset 0 1px 2px rgba(255,255,255,0.5),
-      inset 0 -1px 2px rgba(0,0,0,0.5);
-  text-shadow: 0 1px 0 rgba(0,0,0,0.6);
-}​
-</code></pre></div><p>If you would like to see that bad boy in action check out <a href="http://jsfiddle.net/james2doyle/LjgzD/" title="jsFiddle css content">this fiddle</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>button {
+</span></span><span style="display:flex;"><span>  color: #333;
+</span></span><span style="display:flex;"><span>  padding: 4px 10px;
+</span></span><span style="display:flex;"><span>  border: 1px solid #aaa;
+</span></span><span style="display:flex;"><span>  outline: none;
+</span></span><span style="display:flex;"><span>  font-weight: bold;
+</span></span><span style="display:flex;"><span>  font-size: 12px;
+</span></span><span style="display:flex;"><span>  font-family: &#39;Corbin&#39;;
+</span></span><span style="display:flex;"><span>  background: #eee;
+</span></span><span style="display:flex;"><span>  border-radius: 3px;
+</span></span><span style="display:flex;"><span>  box-shadow: 0 2px 0 rgba(0,0,0,0.5);
+</span></span><span style="display:flex;"><span>  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>button:after {
+</span></span><span style="display:flex;"><span>  content: attr(data-count);
+</span></span><span style="display:flex;"><span>  border-radius: 10px;
+</span></span><span style="display:flex;"><span>  display: inline-block;
+</span></span><span style="display:flex;"><span>  background: #777;
+</span></span><span style="display:flex;"><span>  padding: 2px 5px;
+</span></span><span style="display:flex;"><span>  width: 15px;
+</span></span><span style="display:flex;"><span>  margin: 0 0 0 8px;
+</span></span><span style="display:flex;"><span>  color: white;
+</span></span><span style="display:flex;"><span>  font-weight: normal;
+</span></span><span style="display:flex;"><span>  border: 1px solid #555;
+</span></span><span style="display:flex;"><span>  box-shadow: inset 0 1px 2px rgba(255,255,255,0.5),
+</span></span><span style="display:flex;"><span>      inset 0 -1px 2px rgba(0,0,0,0.5);
+</span></span><span style="display:flex;"><span>  text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+</span></span><span style="display:flex;"><span>}​
+</span></span></code></pre></div><p>If you would like to see that bad boy in action check out <a href="http://jsfiddle.net/james2doyle/LjgzD/" title="jsFiddle css content">this fiddle</a>.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -305,7 +305,7 @@ button:after {
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

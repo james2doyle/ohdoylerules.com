@@ -233,21 +233,21 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       <div itemprop="ArticleBody text" class="main-content"><p>If you are using the awesome <code>money_format</code> function in PHP, you may have noticed a difference between servers or environments regarding the output.</p>
 <p>Sometimes you do get the trailing zeros. Sometimes not.</p>
 <p>If you are ever trying to figure out what is going on here, it usually has to do with the current locale of the application. In Laravel, you can make this change in the <code>AppServiceProvider</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">AppServiceProvider</span> <span style="color:#ff79c6">extends</span> ServiceProvider
-{
-    <span style="color:#f1fa8c">/**
-</span><span style="color:#f1fa8c">     * Bootstrap any application services.
-</span><span style="color:#f1fa8c">     *
-</span><span style="color:#f1fa8c">     * @return void
-</span><span style="color:#f1fa8c">     */</span>
-    <span style="color:#ff79c6">public</span> <span style="color:#ff79c6">function</span> <span style="color:#50fa7b">boot</span>()
-    {
-        <span style="color:#6272a4">// set the money locale for money_format to work nicely
-</span><span style="color:#6272a4"></span>        setlocale(LC_MONETARY, <span style="color:#f1fa8c">&#39;en_US.UTF-8&#39;</span>);
-    }
-
-    <span style="color:#6272a4">// ... rest of the provider
-</span></code></pre></div><p>And that should be it. Now when using <code>money_format</code>, the output should be normalized.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">AppServiceProvider</span> <span style="color:#ff79c6">extends</span> ServiceProvider
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">     * Bootstrap any application services.
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">     *
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">     * @return void
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">public</span> <span style="color:#ff79c6">function</span> <span style="color:#50fa7b">boot</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// set the money locale for money_format to work nicely
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        setlocale(LC_MONETARY, <span style="color:#f1fa8c">&#39;en_US.UTF-8&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ... rest of the provider
+</span></span></span></code></pre></div><p>And that should be it. Now when using <code>money_format</code>, the output should be normalized.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -278,7 +278,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

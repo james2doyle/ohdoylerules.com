@@ -297,10 +297,10 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>I will use <a href="http://expressjs.com/3x/api.html">Express</a> as an example since it isn&rsquo;t in here.</p>
 <p>First I went to the docs for the framework, and I looked to see what the code examples were wrapped in.</p>
 <p>For the <a href="http://expressjs.com/3x/api.html">express</a> docs site, the codes are shown in <code>section h3</code> tags. So to quickly get the list, I ran the following code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">Array</span>.prototype.slice.call(<span style="color:#8be9fd;font-style:italic">document</span>.querySelectorAll(<span style="color:#f1fa8c">&#34;section h3&#34;</span>), <span style="color:#bd93f9">0</span>).map(<span style="color:#8be9fd;font-style:italic">function</span>(item){
-  <span style="color:#ff79c6">return</span> item.textContent.trim();
-}).join(<span style="color:#f1fa8c">&#34;\n&#34;</span>);
-</code></pre></div><p>Then copied the output and pasted it in the <code>sources.txt</code> file. Done!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Array</span>.prototype.slice.call(<span style="color:#8be9fd;font-style:italic">document</span>.querySelectorAll(<span style="color:#f1fa8c">&#34;section h3&#34;</span>), <span style="color:#bd93f9">0</span>).map(<span style="color:#8be9fd;font-style:italic">function</span>(item){
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> item.textContent.trim();
+</span></span><span style="display:flex;"><span>}).join(<span style="color:#f1fa8c">&#34;\n&#34;</span>);
+</span></span></code></pre></div><p>Then copied the output and pasted it in the <code>sources.txt</code> file. Done!</p>
 <h5 id="cool-feature">Cool Feature</h5>
 <p><strong>The word <code>callback</code> will automagically be converted into a function.</strong></p>
 <h2 id="building">Building</h2>
@@ -311,12 +311,12 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <pre tabindex="0"><code>setTimeout(${1:fun}, ${2:delay})${0}
 </code></pre><p>When the word <code>callback</code> appears, it will convert it to the standard
 <code>fun</code> snippet.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">fs.readdir(path, callback)
-</code></pre></div><p>will become</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">fs.readdir(${<span style="color:#bd93f9">1</span><span style="color:#ff79c6">:</span>path}, <span style="color:#8be9fd;font-style:italic">function</span>(${<span style="color:#bd93f9">2</span><span style="color:#ff79c6">:</span>args}){
-  ${<span style="color:#bd93f9">3</span><span style="color:#ff79c6">:</span><span style="color:#6272a4">// body}
-</span><span style="color:#6272a4"></span>})${<span style="color:#bd93f9">0</span>}
-</code></pre></div><h2 id="sourcestxt">sources.txt</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>fs.readdir(path, callback)
+</span></span></code></pre></div><p>will become</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>fs.readdir(${<span style="color:#bd93f9">1</span><span style="color:#ff79c6">:</span>path}, <span style="color:#8be9fd;font-style:italic">function</span>(${<span style="color:#bd93f9">2</span><span style="color:#ff79c6">:</span>args}){
+</span></span><span style="display:flex;"><span>  ${<span style="color:#bd93f9">3</span><span style="color:#ff79c6">:</span><span style="color:#6272a4">// body}
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>})${<span style="color:#bd93f9">0</span>}
+</span></span></code></pre></div><h2 id="sourcestxt">sources.txt</h2>
 <p>This file is cool.</p>
 <p>It is just a line-by-line output of the node docs functions. This is the file that is raked over to generate the snippets.</p>
 <h2 id="running-the-build">Running The Build</h2>
@@ -358,7 +358,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

@@ -233,12 +233,12 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       <div itemprop="ArticleBody text" class="main-content"><p>Have you ever been writing a search for MySQL and had an issue where the search wouldn&rsquo;t handle spaces properly?</p>
 <p>I was writing a search for a <code>users</code> table and wanted to find a user by their first name or last name or a combination of both.</p>
 <p>I started with a query like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>
-  <span style="color:#ff79c6">WHERE</span> <span style="color:#ff79c6">LOWER</span>(<span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>.<span style="color:#ff79c6">`</span>first_name<span style="color:#ff79c6">`</span>)
-      <span style="color:#ff79c6">LIKE</span> <span style="color:#ff79c6">LOWER</span>(:searchTerm)
-    <span style="color:#ff79c6">OR</span> <span style="color:#ff79c6">LOWER</span>(<span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>.<span style="color:#ff79c6">`</span>last_name<span style="color:#ff79c6">`</span>)
-      <span style="color:#ff79c6">LIKE</span> <span style="color:#ff79c6">LOWER</span>(:searchTerm)
-</code></pre></div><p>Here is the list for the matches, given that there is a user with the <code>first_name</code> of &ldquo;James&rdquo; and <code>last_name</code> of &ldquo;Doyle&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span> <span style="color:#ff79c6">LOWER</span>(<span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>.<span style="color:#ff79c6">`</span>first_name<span style="color:#ff79c6">`</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">LIKE</span> <span style="color:#ff79c6">LOWER</span>(:searchTerm)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">OR</span> <span style="color:#ff79c6">LOWER</span>(<span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>.<span style="color:#ff79c6">`</span>last_name<span style="color:#ff79c6">`</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">LIKE</span> <span style="color:#ff79c6">LOWER</span>(:searchTerm)
+</span></span></code></pre></div><p>Here is the list for the matches, given that there is a user with the <code>first_name</code> of &ldquo;James&rdquo; and <code>last_name</code> of &ldquo;Doyle&rdquo;:</p>
 <ul>
 <li>&ldquo;%james%&rdquo; - <strong>match</strong></li>
 <li>&ldquo;%doyle%&rdquo; - <strong>match</strong></li>
@@ -250,11 +250,11 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Well, I found this trick where you can create fake columns using the <code>CONCAT</code> and then replace any space character with <code>%</code>.</p>
 <p>So if I queried like this: <code>%james doyle%</code>, that will actually become <code>%james%doyle%</code> when it gets to the actual SQL WHERE query.</p>
 <p>This allows you to <em>get a better match more often</em> if the user types in more content in a query with a space.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>
-  <span style="color:#ff79c6">WHERE</span>
-    <span style="color:#ff79c6">LOWER</span>(CONCAT(<span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>.<span style="color:#ff79c6">`</span>first_name<span style="color:#ff79c6">`</span>,<span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>.<span style="color:#ff79c6">`</span>last_name<span style="color:#ff79c6">`</span>))
-      <span style="color:#ff79c6">LIKE</span> <span style="color:#ff79c6">LOWER</span>(<span style="color:#ff79c6">REPLACE</span>(:searchTerm, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;%&#34;</span>))
-</code></pre></div><p>Here is a list of terms that will be matched in this query:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">WHERE</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">LOWER</span>(CONCAT(<span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>.<span style="color:#ff79c6">`</span>first_name<span style="color:#ff79c6">`</span>,<span style="color:#ff79c6">`</span>users<span style="color:#ff79c6">`</span>.<span style="color:#ff79c6">`</span>last_name<span style="color:#ff79c6">`</span>))
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">LIKE</span> <span style="color:#ff79c6">LOWER</span>(<span style="color:#ff79c6">REPLACE</span>(:searchTerm, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;%&#34;</span>))
+</span></span></code></pre></div><p>Here is a list of terms that will be matched in this query:</p>
 <ul>
 <li>&ldquo;%james%&rdquo; - <strong>match</strong></li>
 <li>&ldquo;%doyle%&rdquo; - <strong>match</strong></li>
@@ -295,7 +295,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

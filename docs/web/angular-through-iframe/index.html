@@ -241,18 +241,18 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>All we need to do is access the <code>contentWindow</code> (on our parent iframe) property and call functions that exist in the <code>window</code> of the child iframe.</p>
 <p>This looks like the following:</p>
 <p><strong>Parent page:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// somewhere in the parent main js file probably another controller
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> iframe <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;iframe&#39;</span>);
-iframe.contentWindow.update(dataFromParent);
-</code></pre></div><p><strong>Child iframe page:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// inside the iframe controller
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">window</span>.update <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>(dataFromParent) {
-  $scope.$apply(<span style="color:#8be9fd;font-style:italic">function</span>() {
-    <span style="color:#6272a4">// replace the scope with an object from the parent
-</span><span style="color:#6272a4"></span>    $scope <span style="color:#ff79c6">=</span> dataFromParent;
-  });
-};
-</code></pre></div><p>As you can see, this is incredibly simple and allows for <em>write-only</em> control of an iframe.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">// somewhere in the parent main js file probably another controller
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> iframe <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;iframe&#39;</span>);
+</span></span><span style="display:flex;"><span>iframe.contentWindow.update(dataFromParent);
+</span></span></code></pre></div><p><strong>Child iframe page:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">// inside the iframe controller
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">window</span>.update <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>(dataFromParent) {
+</span></span><span style="display:flex;"><span>  $scope.$apply(<span style="color:#8be9fd;font-style:italic">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// replace the scope with an object from the parent
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    $scope <span style="color:#ff79c6">=</span> dataFromParent;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>As you can see, this is incredibly simple and allows for <em>write-only</em> control of an iframe.</p>
 <p>What I did to integrate with Angular was use that window function inside the iframes controller to call <code>$scope.$apply</code> with the new data.</p>
 <p>You can <a href="https://james2doyle.github.io/angular-through-iframe">see a live demo</a> of the technique or <a href="https://github.com/james2doyle/angular-through-iframe">visit the demo project on Github</a>.</p>
 </div>
@@ -285,7 +285,7 @@ iframe.contentWindow.update(dataFromParent);
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

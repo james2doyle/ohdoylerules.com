@@ -232,20 +232,20 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>Ever wanted to permanently remove a file from a repo and it&rsquo;s history?</p>
 <p>Add this snippet to the end of your <code>.bashrc</code> (or <code>.zshrc</code> if you are a cool guy developer):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#6272a4"># remove a file from the repo and from the history</span>
-git-purge<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">FN</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;git rm --cached --ignore-unmatch </span><span style="color:#8be9fd;font-style:italic">$1</span><span style="color:#f1fa8c">&#34;</span>
-  git filter-branch --force --index-filter <span style="color:#8be9fd;font-style:italic">$FN</span> --prune-empty --tag-name-filter cat -- --all
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>This was taken from the <a href="https://help.github.com/articles/remove-sensitive-data" title="Github - Remove Sensitive Data">Github article about removing files</a>. Here is what they said about the function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># remove a file from the repo and from the history</span>
+</span></span><span style="display:flex;"><span>git-purge<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">FN</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;git rm --cached --ignore-unmatch </span><span style="color:#8be9fd;font-style:italic">$1</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span>  git filter-branch --force --index-filter <span style="color:#8be9fd;font-style:italic">$FN</span> --prune-empty --tag-name-filter cat -- --all
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>This was taken from the <a href="https://help.github.com/articles/remove-sensitive-data" title="Github - Remove Sensitive Data">Github article about removing files</a>. Here is what they said about the function:</p>
 <blockquote>
 <p>Run git filter-branch, forcing (&ndash;force) Git to process—but not check out (&ndash;index-filter)—the entire history of every branch and tag (&ndash;tag-name-filter cat &ndash; &ndash;all), removing the specified file (&lsquo;git rm &ndash;cached &ndash;ignore-unmatch MYFILE&rsquo;) and any empty commits generated as a result (&ndash;prune-empty). Note that you need to specify the path to the file you want to remove, not just its filename. Be careful! This will overwrite your existing tags.</p>
 </blockquote>
 <p>You should also add the file to your <code>.gitignore</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;MYFILE&#34;</span> &gt;&gt; .gitignore
-git add .gitignore
-git commit -m <span style="color:#f1fa8c">&#34;Add MYFILE to .gitignore&#34;</span>
-</code></pre></div><p>Then to update the live repo, run <code>git push origin master --force</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;MYFILE&#34;</span> &gt;&gt; .gitignore
+</span></span><span style="display:flex;"><span>git add .gitignore
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;Add MYFILE to .gitignore&#34;</span>
+</span></span></code></pre></div><p>Then to update the live repo, run <code>git push origin master --force</code>.</p>
 <p>This process will remove the file from your repo, and from the history. This is in-case you committed a sensitive file. If you get in a real pickle, you can use the <a href="http://rtyley.github.io/bfg-repo-cleaner/" title="BFG Repo-Cleaner">BFG Repo-Cleaner</a>.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
@@ -277,7 +277,7 @@ git commit -m <span style="color:#f1fa8c">&#34;Add MYFILE to .gitignore&#34;</sp
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

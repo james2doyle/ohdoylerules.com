@@ -253,7 +253,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>This is my number one place to spend all your time. Doing database tweaks early on is not too hard. But once you start getting a few hundred thousand rows, data in the gigabytes, or distributed databases, migrations become super painful. They need to be meticulously programmed, tested, and then timed properly in order not to break things or take the service down.</p>
 <p>I don&rsquo;t have much experience with no-SQL databases at scale. So I can&rsquo;t really speak to much on them. But generally, I think the advice is similar to relational database design: big migrations are painful. So try to make sure you have a scalable and sustainable design is important.</p>
 <p>Regarding relation data stores, my advice is mostly about relationships. Too often I see things like <code>address1</code>, <code>address2</code>, <code>address3</code>, etc. You get the deal. Instead of using a pivot table, someone decided it was too much work. So now you are growing the table horizontally and with each row instead of, get this, <em>being relational</em>.</p>
-<p>Another one I&rsquo;ve been bit by is using one-to-many relationships instead of designing for many-to-many with a <code>LIMIT 1</code> by default. It is so much easier to turn a many-to-many into a one-to-many than it is to do the reverse. How many times have you made something and then a week or a month later someone from product development or business asks <em>&ldquo;how hard it would be to make it so that X could have many Y&rsquo;s?&quot;</em> Only to be met with you screaming at the top of your lungs because you need to not only migrate the existing database but update all the code as well.</p>
+<p>Another one I&rsquo;ve been bit by is using one-to-many relationships instead of designing for many-to-many with a <code>LIMIT 1</code> by default. It is so much easier to turn a many-to-many into a one-to-many than it is to do the reverse. How many times have you made something and then a week or a month later someone from product development or business asks <em>&ldquo;how hard it would be to make it so that X could have many Y&rsquo;s?&rdquo;</em> Only to be met with you screaming at the top of your lungs because you need to not only migrate the existing database but update all the code as well.</p>
 <h3 id="in-summation">In Summation</h3>
 <p>I&rsquo;ve really become a fan of &ldquo;where should we hide our garbage?&rdquo;. It&rsquo;s always going to happen so we should figure out where to put the mess so that it&rsquo;s either easy to clean up or it isn&rsquo;t somewhere critical.</p>
 </div>
@@ -286,7 +286,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

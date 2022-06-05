@@ -254,49 +254,49 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <li>Select &ldquo;Method request passthrough&rdquo; from the &ldquo;Generate template&rdquo; dropdown</li>
 <li>Put the following content in the textarea:</li>
 </ul>
-<pre tabindex="0"><code>##  Ripped from &quot;https://stackoverflow.com/a/52705985/1170664&quot;
+<pre tabindex="0"><code>##  Ripped from &#34;https://stackoverflow.com/a/52705985/1170664&#34;
 {
-    &quot;body-json&quot; : $input.json('$'),
-    &quot;params&quot; : {
-        #foreach( $token in $input.path('$').split('&amp;') )
-            #set( $keyVal = $token.split('=') )
+    &#34;body-json&#34; : $input.json(&#39;$&#39;),
+    &#34;params&#34; : {
+        #foreach( $token in $input.path(&#39;$&#39;).split(&#39;&amp;&#39;) )
+            #set( $keyVal = $token.split(&#39;=&#39;) )
             #set( $keyValSize = $keyVal.size() )
             #if( $keyValSize &gt;= 1 )
                 #set( $key = $util.urlDecode($keyVal[0]) )
                 #if( $keyValSize &gt;= 2 )
                     #set( $val = $util.urlDecode($keyVal[1]) )
                 #else
-                    #set( $val = '' )
+                    #set( $val = &#39;&#39; )
                 #end
-                &quot;$key&quot;: &quot;$util.escapeJavaScript($val)&quot;#if($foreach.hasNext),#end
+                &#34;$key&#34;: &#34;$util.escapeJavaScript($val)&#34;#if($foreach.hasNext),#end
             #end
         #end
     },
-    &quot;stage-variables&quot; : {
+    &#34;stage-variables&#34; : {
         #foreach($key in $stageVariables.keySet())
-        &quot;$key&quot; : &quot;$util.escapeJavaScript($stageVariables.get($key))&quot;
+        &#34;$key&#34; : &#34;$util.escapeJavaScript($stageVariables.get($key))&#34;
             #if($foreach.hasNext),#end
         #end
     },
-    &quot;context&quot; : {
-        &quot;account-id&quot; : &quot;$context.identity.accountId&quot;,
-        &quot;api-id&quot; : &quot;$context.apiId&quot;,
-        &quot;api-key&quot; : &quot;$context.identity.apiKey&quot;,
-        &quot;authorizer-principal-id&quot; : &quot;$context.authorizer.principalId&quot;,
-        &quot;caller&quot; : &quot;$context.identity.caller&quot;,
-        &quot;cognito-authentication-provider&quot; : &quot;$context.identity.cognitoAuthenticationProvider&quot;,
-        &quot;cognito-authentication-type&quot; : &quot;$context.identity.cognitoAuthenticationType&quot;,
-        &quot;cognito-identity-id&quot; : &quot;$context.identity.cognitoIdentityId&quot;,
-        &quot;cognito-identity-pool-id&quot; : &quot;$context.identity.cognitoIdentityPoolId&quot;,
-        &quot;http-method&quot; : &quot;$context.httpMethod&quot;,
-        &quot;stage&quot; : &quot;$context.stage&quot;,
-        &quot;source-ip&quot; : &quot;$context.identity.sourceIp&quot;,
-        &quot;user&quot; : &quot;$context.identity.user&quot;,
-        &quot;user-agent&quot; : &quot;$context.identity.userAgent&quot;,
-        &quot;user-arn&quot; : &quot;$context.identity.userArn&quot;,
-        &quot;request-id&quot; : &quot;$context.requestId&quot;,
-        &quot;resource-id&quot; : &quot;$context.resourceId&quot;,
-        &quot;resource-path&quot; : &quot;$context.resourcePath&quot;
+    &#34;context&#34; : {
+        &#34;account-id&#34; : &#34;$context.identity.accountId&#34;,
+        &#34;api-id&#34; : &#34;$context.apiId&#34;,
+        &#34;api-key&#34; : &#34;$context.identity.apiKey&#34;,
+        &#34;authorizer-principal-id&#34; : &#34;$context.authorizer.principalId&#34;,
+        &#34;caller&#34; : &#34;$context.identity.caller&#34;,
+        &#34;cognito-authentication-provider&#34; : &#34;$context.identity.cognitoAuthenticationProvider&#34;,
+        &#34;cognito-authentication-type&#34; : &#34;$context.identity.cognitoAuthenticationType&#34;,
+        &#34;cognito-identity-id&#34; : &#34;$context.identity.cognitoIdentityId&#34;,
+        &#34;cognito-identity-pool-id&#34; : &#34;$context.identity.cognitoIdentityPoolId&#34;,
+        &#34;http-method&#34; : &#34;$context.httpMethod&#34;,
+        &#34;stage&#34; : &#34;$context.stage&#34;,
+        &#34;source-ip&#34; : &#34;$context.identity.sourceIp&#34;,
+        &#34;user&#34; : &#34;$context.identity.user&#34;,
+        &#34;user-agent&#34; : &#34;$context.identity.userAgent&#34;,
+        &#34;user-arn&#34; : &#34;$context.identity.userArn&#34;,
+        &#34;request-id&#34; : &#34;$context.requestId&#34;,
+        &#34;resource-id&#34; : &#34;$context.resourceId&#34;,
+        &#34;resource-path&#34; : &#34;$context.resourcePath&#34;
     }
 }
 </code></pre><ul>
@@ -341,7 +341,7 @@ npm run test
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

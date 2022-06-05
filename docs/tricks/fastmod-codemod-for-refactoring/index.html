@@ -251,30 +251,30 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Like most purpose-built tools, there is some learning curve to finding how to best use the interface provided. You really need to consider your match strategy and your replace strategy. Let&rsquo;s write some examples based on some real world examples I&rsquo;ve come across.</p>
 <h4 id="css">CSS</h4>
 <p>Here we have a CSS example for a button component. This component can be grouped or have an icon inside it. The naming of the component in CSS is kinda redundant.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#50fa7b">button-group-component</span> {
-  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
-  <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
-  <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">space-between</span>;
-}
-.<span style="color:#50fa7b">button-component</span> {
-  <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
-  <span style="color:#ff79c6">background-color</span>: <span style="color:#ff79c6">black</span>;
-  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">inline-block</span>;
-  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">rem</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">rem</span>;
-}
-.<span style="color:#50fa7b">button-component</span> .<span style="color:#50fa7b">button-icon-component</span> <span style="color:#ff79c6">svg</span> {
-  fill: <span style="color:#ff79c6">currentColor</span>;
-}
-</code></pre></div><p>Let&rsquo;s remove the <code>-component</code> part of the CSS declaration. We don&rsquo;t need it. So we are going to turn <code>.button-group-component</code> into <code>.button-group</code> and so on for the other 2 class declarations. All we need to do is find <code>-component</code> and replace it with nothing/null/empty string.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">fastmod -m --extensions css <span style="color:#f1fa8c">&#39;(\-component)&#39;</span> <span style="color:#f1fa8c">&#39;&#39;</span>
-</code></pre></div><p>Running the above code on in our target folder will prompt us with this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">./example.css:1
-<span style="color:#f55">- .button-group-component {
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+ .button-group {
-</span><span style="color:#50fa7b;font-weight:bold"></span>    display: flex;
-    align-items: center;
-Accept change (y = yes [default], n = no, e = edit, A = yes to all, E = yes+edit, q = quit)?
-</code></pre></div><p>Here you can see all the options for the code that is going to be changed as well as a nice diff too. If we move from left to right in the options we get the following choices:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#50fa7b">button-group-component</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">space-between</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">button-component</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-color</span>: <span style="color:#ff79c6">black</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">inline-block</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">rem</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">rem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">button-component</span> .<span style="color:#50fa7b">button-icon-component</span> <span style="color:#ff79c6">svg</span> {
+</span></span><span style="display:flex;"><span>  fill: <span style="color:#ff79c6">currentColor</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Let&rsquo;s remove the <code>-component</code> part of the CSS declaration. We don&rsquo;t need it. So we are going to turn <code>.button-group-component</code> into <code>.button-group</code> and so on for the other 2 class declarations. All we need to do is find <code>-component</code> and replace it with nothing/null/empty string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>fastmod -m --extensions css <span style="color:#f1fa8c">&#39;(\-component)&#39;</span> <span style="color:#f1fa8c">&#39;&#39;</span>
+</span></span></code></pre></div><p>Running the above code on in our target folder will prompt us with this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>./example.css:1
+</span></span><span style="display:flex;"><span><span style="color:#f55">- .button-group-component {
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+ .button-group {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>    display: flex;
+</span></span><span style="display:flex;"><span>    align-items: center;
+</span></span><span style="display:flex;"><span>Accept change (y = yes [default], n = no, e = edit, A = yes to all, E = yes+edit, q = quit)?
+</span></span></code></pre></div><p>Here you can see all the options for the code that is going to be changed as well as a nice diff too. If we move from left to right in the options we get the following choices:</p>
 <ul>
 <li><code>y</code> or <code>enter</code> accepts the changes being shown</li>
 <li><code>n</code> will not change anything and will go to the next change</li>
@@ -287,14 +287,14 @@ Accept change (y = yes [default], n = no, e = edit, A = yes to all, E = yes+edit
 <h4 id="webpack-magic-comments">Webpack Magic Comments</h4>
 <p>Recently I was working on a Vue project that had a lot of components in it. I wanted to start using <a href="https://router.vuejs.org/guide/advanced/lazy-loading.html#grouping-components-in-the-same-chunk">webpack chunking</a> in order to split the components up and have single chunks for each component instead of them being wrapped up together. In order to do that, I need to rewrite all my <code>import</code> statements to use &ldquo;dynamic imports&rdquo; with a special magic comment that webpack picks up.</p>
 <p>You can see the example below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#6272a4"># old code: `import MyComponent from &#39;Components/MyComponent.vue&#39;;`</span>
-<span style="color:#6272a4"># new code: `const MyComponent = () =&gt; import(/* webpackChunkName: &#34;MyComponent&#34; */ &#39;Components/MyComponent.vue&#39;);`</span>
-<span style="color:#6272a4"># note: you may need to reorder your imports when using a dynamic import</span>
-
-fastmod -m -d ./ --extensions vue <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  <span style="color:#f1fa8c">&#39;import (.*?) from \&#39;</span><span style="color:#ff79c6">(</span>.*?<span style="color:#ff79c6">)</span><span style="color:#f1fa8c">\&#39;</span>;<span style="color:#f1fa8c">&#39; \
-</span><span style="color:#f1fa8c">  &#39;</span>const <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">()</span> <span style="color:#ff79c6">=</span>&gt; import<span style="color:#ff79c6">(</span>/* webpackChunkName: <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> */ <span style="color:#f1fa8c">\&#39;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">\&#39;</span><span style="color:#ff79c6">)</span>;&#39;
-</code></pre></div><p>Here you can see the snippet I wrote to do the refactor. The great thing about using <code>fastmod</code> over find-and-replace, is that it allowed me to accept or deny the changes. I didn&rsquo;t want all the components updated this way. Especially imports that were not Vue components. So this approach was ideal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#6272a4"># old code: `import MyComponent from &#39;Components/MyComponent.vue&#39;;`</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># new code: `const MyComponent = () =&gt; import(/* webpackChunkName: &#34;MyComponent&#34; */ &#39;Components/MyComponent.vue&#39;);`</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># note: you may need to reorder your imports when using a dynamic import</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fastmod -m -d ./ --extensions vue <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  <span style="color:#f1fa8c">&#39;import (.*?) from \&#39;</span><span style="color:#ff79c6">(</span>.*?<span style="color:#ff79c6">)</span><span style="color:#f1fa8c">\&#39;</span>;<span style="color:#f1fa8c">&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">  &#39;</span>const <span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">()</span> <span style="color:#ff79c6">=</span>&gt; import<span style="color:#ff79c6">(</span>/* webpackChunkName: <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">1</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span> */ <span style="color:#f1fa8c">\&#39;</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">2</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">\&#39;</span><span style="color:#ff79c6">)</span>;&#39;
+</span></span></code></pre></div><p>Here you can see the snippet I wrote to do the refactor. The great thing about using <code>fastmod</code> over find-and-replace, is that it allowed me to accept or deny the changes. I didn&rsquo;t want all the components updated this way. Especially imports that were not Vue components. So this approach was ideal.</p>
 <h4 id="more-use-cases">More Use Cases</h4>
 <p>Those are two decent examples but I have used this tool quite a lot for refactoring code. Here are some more examples of what I used it for:</p>
 <ul>
@@ -339,7 +339,7 @@ fastmod -m -d ./ --extensions vue <span style="color:#f1fa8c">\
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

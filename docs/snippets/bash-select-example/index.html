@@ -234,22 +234,22 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Since we have dynamic IPs setup in the office, and I have the same at my house, I needed to be able to connect using the MAC address of the pi. I ended up writing a little script to get the IP based on the MAC Address, and then ssh into the computer. Pretty slick.</p>
 <p>To make my life easier I used the <code>select</code> command in bash. The <a href="http://www.gnu.org/software/bash/manual/bashref.html#Conditional-Constructs">documentation for select</a> leaves a lot to be desired. So I had to fiddle with it until I got it right. Here is a simple boilerplate for a bash script using select:</p>
 <h4 id="function">Function</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">#!/usr/bin/env bash
-</span><span style="color:#ff79c6"></span>
-speak<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$1</span><span style="color:#f1fa8c"> </span><span style="color:#8be9fd;font-style:italic">$2</span><span style="color:#f1fa8c">&#34;</span>
-  break; <span style="color:#6272a4"># we are done</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;What do you want me to say?&#34;</span>
-<span style="color:#ff79c6">select</span> ab in <span style="color:#f1fa8c">&#34;Hello&#34;</span> <span style="color:#f1fa8c">&#34;Bonjour&#34;</span>;
-<span style="color:#ff79c6">do</span>
-  <span style="color:#ff79c6">case</span> <span style="color:#8be9fd;font-style:italic">$ab</span> in
-    <span style="color:#f1fa8c">&#34;Hello&#34;</span><span style="color:#ff79c6">)</span> speak <span style="color:#f1fa8c">&#34;Hello&#34;</span> <span style="color:#f1fa8c">&#34;my friend&#34;</span>;;
-    <span style="color:#f1fa8c">&#34;Bonjour&#34;</span><span style="color:#ff79c6">)</span> speak <span style="color:#f1fa8c">&#34;Bonjour&#34;</span> <span style="color:#f1fa8c">&#34;mon ami&#34;</span>;;
-    *<span style="color:#ff79c6">)</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;invalid option&#34;</span>;; <span style="color:#6272a4"># you picked anything but 1 or 2</span>
-  <span style="color:#ff79c6">esac</span>
-<span style="color:#ff79c6">done</span>
-</code></pre></div><p>Save that in a file called <code>say-hello.sh</code> and change the rights to allow execution by using <code>chmod +x say-hello.sh</code>. Then you can run it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#ff79c6">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span>speak<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">$1</span><span style="color:#f1fa8c"> </span><span style="color:#8be9fd;font-style:italic">$2</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span>  break; <span style="color:#6272a4"># we are done</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;What do you want me to say?&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">select</span> ab in <span style="color:#f1fa8c">&#34;Hello&#34;</span> <span style="color:#f1fa8c">&#34;Bonjour&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">case</span> <span style="color:#8be9fd;font-style:italic">$ab</span> in
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;Hello&#34;</span><span style="color:#ff79c6">)</span> speak <span style="color:#f1fa8c">&#34;Hello&#34;</span> <span style="color:#f1fa8c">&#34;my friend&#34;</span>;;
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;Bonjour&#34;</span><span style="color:#ff79c6">)</span> speak <span style="color:#f1fa8c">&#34;Bonjour&#34;</span> <span style="color:#f1fa8c">&#34;mon ami&#34;</span>;;
+</span></span><span style="display:flex;"><span>    *<span style="color:#ff79c6">)</span> <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;invalid option&#34;</span>;; <span style="color:#6272a4"># you picked anything but 1 or 2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">esac</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">done</span>
+</span></span></code></pre></div><p>Save that in a file called <code>say-hello.sh</code> and change the rights to allow execution by using <code>chmod +x say-hello.sh</code>. Then you can run it:</p>
 <h4 id="output">Output:</h4>
 <pre tabindex="0"><code>$ ./say-hello.sh
   1) Hello
@@ -288,7 +288,7 @@ $
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

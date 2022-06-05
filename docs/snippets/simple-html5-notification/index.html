@@ -232,23 +232,23 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I was playing around with HTML5 Notifications the other day. They are pretty slick! It allows you to essentially send growl notifications to your desktop from the browser.</p>
 <p>This little function would be used during an event to request permission for notifications and then display it with a simple abstraction of the native API.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">function</span> notify(title, body, timeout) {
-  timeout <span style="color:#ff79c6">=</span> (timeout) <span style="color:#ff79c6">?</span> timeout <span style="color:#ff79c6">:</span> <span style="color:#bd93f9">3000</span>;
-  Notification.requestPermission(<span style="color:#8be9fd;font-style:italic">function</span> () {
-    <span style="color:#8be9fd;font-style:italic">var</span> nf <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Notification(title, {
-      body<span style="color:#ff79c6">:</span> body,
-      iconUrl<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;test.png&#34;</span>
-    });
-    nf.onshow <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span> () {
-      setTimeout(<span style="color:#8be9fd;font-style:italic">function</span> () {
-        nf.close()
-      }, timeout)
-    };
-  });
-}
-<span style="color:#6272a4">// usage
-</span><span style="color:#6272a4"></span>notify(<span style="color:#f1fa8c">&#39;My Title&#39;</span>, <span style="color:#f1fa8c">&#39;My hot body with a bunch of lorem in it&#39;</span>);
-</code></pre></div><p>It will then ask for permission, if your page doesn&rsquo;t have it already, then show the notification. Right now it just shows a small grey box for the test image.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> notify(title, body, timeout) {
+</span></span><span style="display:flex;"><span>  timeout <span style="color:#ff79c6">=</span> (timeout) <span style="color:#ff79c6">?</span> timeout <span style="color:#ff79c6">:</span> <span style="color:#bd93f9">3000</span>;
+</span></span><span style="display:flex;"><span>  Notification.requestPermission(<span style="color:#8be9fd;font-style:italic">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">var</span> nf <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Notification(title, {
+</span></span><span style="display:flex;"><span>      body<span style="color:#ff79c6">:</span> body,
+</span></span><span style="display:flex;"><span>      iconUrl<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;test.png&#34;</span>
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    nf.onshow <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span> () {
+</span></span><span style="display:flex;"><span>      setTimeout(<span style="color:#8be9fd;font-style:italic">function</span> () {
+</span></span><span style="display:flex;"><span>        nf.close()
+</span></span><span style="display:flex;"><span>      }, timeout)
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// usage
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>notify(<span style="color:#f1fa8c">&#39;My Title&#39;</span>, <span style="color:#f1fa8c">&#39;My hot body with a bunch of lorem in it&#39;</span>);
+</span></span></code></pre></div><p>It will then ask for permission, if your page doesn&rsquo;t have it already, then show the notification. Right now it just shows a small grey box for the test image.</p>
 <p>The last parameter is for a custom timeout. I like the default of 3 seconds but if you need to you can override it without modifying the function.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
@@ -280,7 +280,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

@@ -236,19 +236,19 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>Eventually she gave me her log in, which had a <em>super simple password</em>, and I logged in to see what was up. Nothing seemed to be wrong, no crazy plugins or weird issues.</p>
 <p>I then logged into the FTP server to sniff around. Checked the <code>.htaccess</code>, nothing was wrong. I checked the <code>index.php</code>, didn&rsquo;t see anything weird.</p>
 <p>I opened the <code>wp-config.php</code> and added all the <a href="https://codex.wordpress.org/Debugging_in_WordPress#Example_wp-config.php_for_Debugging">debugging constants</a>, here there are for laziness:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#6272a4">// Enable WP_DEBUG mode
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_DEBUG&#39;</span>, <span style="color:#ff79c6">true</span>);
-
-<span style="color:#6272a4">// Enable Debug logging to the /wp-content/debug.log file
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_DEBUG_LOG&#39;</span>, <span style="color:#ff79c6">true</span>);
-
-<span style="color:#6272a4">// Disable display of errors and warnings
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_DEBUG_DISPLAY&#39;</span>, <span style="color:#ff79c6">false</span>);
-<span style="color:#ff79c6">@</span>ini_set(<span style="color:#f1fa8c">&#39;display_errors&#39;</span>, <span style="color:#bd93f9">0</span>);
-
-<span style="color:#6272a4">// Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
-</span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;SCRIPT_DEBUG&#39;</span>, <span style="color:#ff79c6">true</span>);
-</code></pre></div><p>I then navigated around the site. The content (text, database data) was loading fine, but all the assets were busted. There was a map plugin that was hitting Google Maps and that loaded fine. I then knew it was this specific site.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#6272a4">// Enable WP_DEBUG mode
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_DEBUG&#39;</span>, <span style="color:#ff79c6">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Enable Debug logging to the /wp-content/debug.log file
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_DEBUG_LOG&#39;</span>, <span style="color:#ff79c6">true</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Disable display of errors and warnings
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;WP_DEBUG_DISPLAY&#39;</span>, <span style="color:#ff79c6">false</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">@</span>ini_set(<span style="color:#f1fa8c">&#39;display_errors&#39;</span>, <span style="color:#bd93f9">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>define(<span style="color:#f1fa8c">&#39;SCRIPT_DEBUG&#39;</span>, <span style="color:#ff79c6">true</span>);
+</span></span></code></pre></div><p>I then navigated around the site. The content (text, database data) was loading fine, but all the assets were busted. There was a map plugin that was hitting Google Maps and that loaded fine. I then knew it was this specific site.</p>
 <p>After poking around some more, I noticed an <code>index.php</code> and a <code>.htaccess</code> in the root of <code>/wp-content</code>.</p>
 <h4 id="the-fix">The Fix</h4>
 <p>Well, I have come across this problem before. <strong>Wordpress was hacked</strong>. Hacked might be a strong word, since the password was really weak. A bot probably had that password in it&rsquo;s script and guessed it without issue.</p>
@@ -294,7 +294,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

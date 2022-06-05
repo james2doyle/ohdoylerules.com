@@ -240,10 +240,10 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>There is a <a href="https://www.digitalocean.com/community/tutorials/how-to-target-your-users-with-nginx-analytics-and-a-b-testing">great article at DigitalOcean</a> about getting <code>split_clients</code> setup.</p>
 <p>Nginx will allow you to apply certain variables to a segment of your traffic. For example:</p>
 <pre tabindex="0"><code>http {
-    split_clients &quot;${remote_addr}&quot; $variant {
+    split_clients &#34;${remote_addr}&#34; $variant {
             0.5%    .one;
             2.0%    .two;
-            *       &quot;&quot;;
+            *       &#34;&#34;;
     }
 
     server {
@@ -255,11 +255,11 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 </blockquote>
 <p>Although this is perfect for serving static content, what about dynamic content? I figured this would be better if it set a <em>custom header</em> that could then be handled in a response middleware and applied to my views. Here is the resulting code for that:</p>
 <h4 id="etcnginxconfdsplit-clientsconf-file"><code>/etc/nginx/conf.d/split-clients.conf</code> file</h4>
-<pre tabindex="0"><code>split_clients &quot;${remote_addr}&quot; $ab_test {
-    # 50% of the traffic is &quot;A&quot; traffic
-    50%     &quot;A&quot;;
-    # the remaining traffic (the other 50%) will be set to &quot;B&quot;
-    *       &quot;B&quot;;
+<pre tabindex="0"><code>split_clients &#34;${remote_addr}&#34; $ab_test {
+    # 50% of the traffic is &#34;A&#34; traffic
+    50%     &#34;A&#34;;
+    # the remaining traffic (the other 50%) will be set to &#34;B&#34;
+    *       &#34;B&#34;;
 }
 </code></pre><p>If your Nginx is setup with the default <code>nginx.conf</code>, then there is an include that will autoload all <code>.conf</code> files in <code>/etc/nginx/conf.d/</code> folder.</p>
 <p>So you can put files in there that you want to be globally loaded in the main <code>http {}</code> block.</p>
@@ -310,7 +310,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

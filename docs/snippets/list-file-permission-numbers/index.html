@@ -234,11 +234,11 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>I found the following code:</p>
 <h4 id="function">Function</h4>
 <p>Add the following to your .bashrc (or .zshrc file if you are cool) and then reload the source of your terminal.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">function</span> show-permissions<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-  ls -l | awk <span style="color:#f1fa8c">&#39;{k=0;for(i=0;i&lt;=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
-</span><span style="color:#f1fa8c">            *2^(8-i));if(k)printf(&#34;%0o &#34;,k);print}&#39;</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><h4 id="usage">Usage:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#ff79c6">function</span> show-permissions<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  ls -l | awk <span style="color:#f1fa8c">&#39;{k=0;for(i=0;i&lt;=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">            *2^(8-i));if(k)printf(&#34;%0o &#34;,k);print}&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><h4 id="usage">Usage:</h4>
 <pre><code>show-permissions
 644 -rw-r--r--   1 james2doyle   README.md
 644 -rw-r--r--   1 james2doyle   LICENSE
@@ -278,7 +278,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

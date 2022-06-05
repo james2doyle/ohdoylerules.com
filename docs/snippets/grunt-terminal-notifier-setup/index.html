@@ -232,30 +232,30 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I just downloaded the new Mountain Lion, finally. One of the biggest new things is the cool little native notifications akin to growl. I thought it would be cool to get a nice notification when my &ldquo;grunt watch&rdquo; task finished. First things first. You need to install <a href="https://github.com/alloy/terminal-notifier" title="alloy/terminal notifier">terminal-notifier</a>. This allows you to interact with the native OSX notifications system.</p>
 <p>There is a ruby gem and a standalone &ldquo;.app&rdquo;. Once this is installed, you will need to grab the <a href="https://github.com/alextucker/grunt-growl" title="alextucker/grunt-growl">grunt-growl</a> plugin. There are more instructions there for the terminal-notifier app. Now you will need to setup a new task in your gruntfile:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">growl<span style="color:#ff79c6">:</span> {
-  css<span style="color:#ff79c6">:</span> {
-    title<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;STYLUS BUILT&#39;</span>,
-    message<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;css/style.css has been created&#39;</span>
-  },
-  js<span style="color:#ff79c6">:</span> {
-    title<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;JAVASCRIPT BUILT&#39;</span>,
-    message<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;dist/js/scripts.js has been created&#39;</span>
-  }
-}
-</code></pre></div><p>Now my watch task looks like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">watch<span style="color:#ff79c6">:</span> {
-  scripts<span style="color:#ff79c6">:</span> {
-    files<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#39;&lt;%= concat.dist.src %&gt;&#39;</span>],
-    tasks<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#39;jshint&#39;</span>, <span style="color:#f1fa8c">&#39;concat&#39;</span>, <span style="color:#f1fa8c">&#39;growl:js&#39;</span>],
-    options<span style="color:#ff79c6">:</span> {}
-  },
-  styles<span style="color:#ff79c6">:</span> {
-    files<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#39;css/*.styl&#39;</span>],
-    tasks<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#39;stylus&#39;</span>, <span style="color:#f1fa8c">&#39;growl:css&#39;</span>],
-    options<span style="color:#ff79c6">:</span> {}
-  }
-}
-</code></pre></div><p>You can see that the growl task runs after the initial stylus and javascript watch tasks.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>growl<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>  css<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    title<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;STYLUS BUILT&#39;</span>,
+</span></span><span style="display:flex;"><span>    message<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;css/style.css has been created&#39;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  js<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    title<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;JAVASCRIPT BUILT&#39;</span>,
+</span></span><span style="display:flex;"><span>    message<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;dist/js/scripts.js has been created&#39;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now my watch task looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>watch<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>  scripts<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    files<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#39;&lt;%= concat.dist.src %&gt;&#39;</span>],
+</span></span><span style="display:flex;"><span>    tasks<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#39;jshint&#39;</span>, <span style="color:#f1fa8c">&#39;concat&#39;</span>, <span style="color:#f1fa8c">&#39;growl:js&#39;</span>],
+</span></span><span style="display:flex;"><span>    options<span style="color:#ff79c6">:</span> {}
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  styles<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    files<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#39;css/*.styl&#39;</span>],
+</span></span><span style="display:flex;"><span>    tasks<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#39;stylus&#39;</span>, <span style="color:#f1fa8c">&#39;growl:css&#39;</span>],
+</span></span><span style="display:flex;"><span>    options<span style="color:#ff79c6">:</span> {}
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can see that the growl task runs after the initial stylus and javascript watch tasks.</p>
 </div>
       <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
       <hr>
@@ -286,7 +286,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

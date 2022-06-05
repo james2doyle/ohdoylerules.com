@@ -236,195 +236,195 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>So in order to get that subdomain setup locally, we just go to our site folder and run <code>valet link fr.multisite</code>. This will allow <code>fr.multisite.localhost</code> to route to the same Laravel setup as <code>multisite.localhost</code>. Beauty!</p>
 <p>Well, first things first. Let&rsquo;s make a helper to grab the subdomain from the request. This will come in handy for a lot of the future logic switching or setting application state on a per-request basis.</p>
 <p>Let&rsquo;s use a <code>macro</code> to add a new method to the <code>Request</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f55">--- a/app/Providers/AppServiceProvider.php
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/Providers/AppServiceProvider.php
-</span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -3,6 +3,7 @@
-</span><span style="font-weight:bold"></span> namespace App\Providers;
-
- use Illuminate\Support\ServiceProvider;
-<span style="color:#50fa7b;font-weight:bold">+use Illuminate\Http\Request;
-</span><span style="color:#50fa7b;font-weight:bold"></span>
- class AppServiceProvider extends ServiceProvider
- {
-<span style="font-weight:bold">@@ -13,7 +14,14 @@ class AppServiceProvider extends ServiceProvider
-</span><span style="font-weight:bold"></span>      */
-     public function register()
-     {
-<span style="color:#f55">-        //
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+        // nice helper for getting the current subdomain
-</span><span style="color:#50fa7b;font-weight:bold">+        Request::macro(&#39;subdomain&#39;, function () {
-</span><span style="color:#50fa7b;font-weight:bold">+            $domain = request()-&gt;server-&gt;get(&#39;HTTP_HOST&#39;);
-</span><span style="color:#50fa7b;font-weight:bold">+            $split = explode(&#39;.&#39;, $domain, 3);
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+            // get the subdomain or return null
-</span><span style="color:#50fa7b;font-weight:bold">+            return array_get($split, &#39;0&#39;, &#39;&#39;);
-</span><span style="color:#50fa7b;font-weight:bold">+        });
-</span><span style="color:#50fa7b;font-weight:bold"></span>     }
-</code></pre></div><p>Now any &ldquo;request&rdquo; instance will have a new <code>subdomain</code> method that we can call.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f55">--- a/app/Providers/AppServiceProvider.php
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/Providers/AppServiceProvider.php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -3,6 +3,7 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span> namespace App\Providers;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> use Illuminate\Support\ServiceProvider;
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+use Illuminate\Http\Request;
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span> class AppServiceProvider extends ServiceProvider
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">@@ -13,7 +14,14 @@ class AppServiceProvider extends ServiceProvider
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>      */
+</span></span><span style="display:flex;"><span>     public function register()
+</span></span><span style="display:flex;"><span>     {
+</span></span><span style="display:flex;"><span><span style="color:#f55">-        //
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+        // nice helper for getting the current subdomain
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        Request::macro(&#39;subdomain&#39;, function () {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            $domain = request()-&gt;server-&gt;get(&#39;HTTP_HOST&#39;);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            $split = explode(&#39;.&#39;, $domain, 3);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            // get the subdomain or return null
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            return array_get($split, &#39;0&#39;, &#39;&#39;);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        });
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>     }
+</span></span></code></pre></div><p>Now any &ldquo;request&rdquo; instance will have a new <code>subdomain</code> method that we can call.</p>
 <p>We need a way to organize the details of each domain. We can use a <code>config</code> for this. So we are going to make a new one and fill it with some details:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f55">--- /dev/null
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/config/multisite.php
-</span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -0,0 +1,25 @@
-</span><span style="font-weight:bold"></span><span style="color:#50fa7b;font-weight:bold">+&lt;?php
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+return [
-</span><span style="color:#50fa7b;font-weight:bold">+    // we are going to set this in a future middleware
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;active&#39; =&gt; null,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;sites&#39; =&gt; [
-</span><span style="color:#50fa7b;font-weight:bold">+        &#39;en&#39; =&gt; [
-</span><span style="color:#50fa7b;font-weight:bold">+            &#39;default&#39; =&gt; true,
-</span><span style="color:#50fa7b;font-weight:bold">+            &#39;locale&#39; =&gt; &#39;en&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+            &#39;domain&#39; =&gt; &#39;http://multisite.localhost&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+            &#39;label&#39; =&gt; &#39;English&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+        ],
-</span><span style="color:#50fa7b;font-weight:bold">+        &#39;fr&#39; =&gt; [
-</span><span style="color:#50fa7b;font-weight:bold">+            &#39;locale&#39; =&gt; &#39;fr&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+            &#39;domain&#39; =&gt; &#39;http://fr.multisite.localhost&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+            &#39;label&#39; =&gt; &#39;Français&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+        ],
-</span><span style="color:#50fa7b;font-weight:bold">+    ],
-</span><span style="color:#50fa7b;font-weight:bold">+];
-</span></code></pre></div><p>Now, we need a way to map the requested domain to the correct locale. We take in our subdomain and then map it to the correct config item. In order to make this happen, we need to make a middleware. A middleware manipulates the request as it moves through our app. We aren&rsquo;t going to manipulate the request, we are just going to use the details in the request to set up more config settings.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f55">--- /dev/null
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/config/multisite.php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -0,0 +1,25 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="color:#50fa7b;font-weight:bold">+&lt;?php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+return [
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    // we are going to set this in a future middleware
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;active&#39; =&gt; null,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;sites&#39; =&gt; [
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        &#39;en&#39; =&gt; [
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            &#39;default&#39; =&gt; true,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            &#39;locale&#39; =&gt; &#39;en&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            &#39;domain&#39; =&gt; &#39;http://multisite.localhost&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            &#39;label&#39; =&gt; &#39;English&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        ],
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        &#39;fr&#39; =&gt; [
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            &#39;locale&#39; =&gt; &#39;fr&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            &#39;domain&#39; =&gt; &#39;http://fr.multisite.localhost&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+            &#39;label&#39; =&gt; &#39;Français&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        ],
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    ],
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+];
+</span></span></span></code></pre></div><p>Now, we need a way to map the requested domain to the correct locale. We take in our subdomain and then map it to the correct config item. In order to make this happen, we need to make a middleware. A middleware manipulates the request as it moves through our app. We aren&rsquo;t going to manipulate the request, we are just going to use the details in the request to set up more config settings.</p>
 <p>Here we go:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f55">--- /dev/null
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/Http/Middleware/MultisiteMiddleware.php
-</span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -0,0 +1,36 @@
-</span><span style="font-weight:bold"></span><span style="color:#50fa7b;font-weight:bold">+&lt;?php
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+namespace App\Http\Middleware;
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+use Illuminate\Support\Facades\App;
-</span><span style="color:#50fa7b;font-weight:bold">+use Closure;
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+class MultisiteMiddleware
-</span><span style="color:#50fa7b;font-weight:bold">+{
-</span><span style="color:#50fa7b;font-weight:bold">+    /**
-</span><span style="color:#50fa7b;font-weight:bold">+     * Handle an incoming request.
-</span><span style="color:#50fa7b;font-weight:bold">+     *
-</span><span style="color:#50fa7b;font-weight:bold">+     * @param  \Illuminate\Http\Request  $request
-</span><span style="color:#50fa7b;font-weight:bold">+     * @param  \Closure  $next
-</span><span style="color:#50fa7b;font-weight:bold">+     * @return mixed
-</span><span style="color:#50fa7b;font-weight:bold">+     */
-</span><span style="color:#50fa7b;font-weight:bold">+    public function handle($request, Closure $next)
-</span><span style="color:#50fa7b;font-weight:bold">+    {
-</span><span style="color:#50fa7b;font-weight:bold">+        $sites = collect(config(&#39;multisite.sites&#39;));
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+        $defaultSite = $sites-&gt;firstWhere(&#39;default&#39;, true);
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+        $currentSite = $sites-&gt;get($request-&gt;subdomain(), $defaultSite);
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+        // put this subdomain in the `env`
-</span><span style="color:#50fa7b;font-weight:bold">+        putenv(&#39;SUBDOMAIN=&#39; . $currentSite[&#39;domain&#39;]);
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+        // make it easier to access the current site config
-</span><span style="color:#50fa7b;font-weight:bold">+        config()-&gt;set(&#39;multisite.active&#39;, $currentSite);
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+        // finally, set the app locale so translations load correctly
-</span><span style="color:#50fa7b;font-weight:bold">+        App::setLocale($currentSite[&#39;locale&#39;]);
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+        return $next($request);
-</span><span style="color:#50fa7b;font-weight:bold">+    }
-</span><span style="color:#50fa7b;font-weight:bold">+}
-</span></code></pre></div><p>We got our new middleware, so we can enable it in the HTTP kernel array:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f55">--- a/app/Http/Kernel.php
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/Http/Kernel.php
-</span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -14,6 +14,7 @@ class Kernel extends HttpKernel
-</span><span style="font-weight:bold"></span>      * @var array
-      */
-     protected $middleware = [
-<span style="color:#50fa7b;font-weight:bold">+        \App\Http\Middleware\MultisiteMiddleware::class,
-</span><span style="color:#50fa7b;font-weight:bold"></span>         \App\Http\Middleware\TrustProxies::class,
-         \App\Http\Middleware\CheckForMaintenanceMode::class,
-         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-</code></pre></div><p>Great! When we make requests now, the <code>config('multisite.active')</code> is going to return a matched value from the multisite config. If the subdomain doesn&rsquo;t match, it will just return the default site config. In our case, the <code>en</code> one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f55">--- /dev/null
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/Http/Middleware/MultisiteMiddleware.php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -0,0 +1,36 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="color:#50fa7b;font-weight:bold">+&lt;?php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+namespace App\Http\Middleware;
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+use Illuminate\Support\Facades\App;
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+use Closure;
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+class MultisiteMiddleware
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+{
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    /**
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+     * Handle an incoming request.
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+     *
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+     * @param  \Illuminate\Http\Request  $request
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+     * @param  \Closure  $next
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+     * @return mixed
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+     */
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    public function handle($request, Closure $next)
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        $sites = collect(config(&#39;multisite.sites&#39;));
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        $defaultSite = $sites-&gt;firstWhere(&#39;default&#39;, true);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        $currentSite = $sites-&gt;get($request-&gt;subdomain(), $defaultSite);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        // put this subdomain in the `env`
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        putenv(&#39;SUBDOMAIN=&#39; . $currentSite[&#39;domain&#39;]);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        // make it easier to access the current site config
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        config()-&gt;set(&#39;multisite.active&#39;, $currentSite);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        // finally, set the app locale so translations load correctly
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        App::setLocale($currentSite[&#39;locale&#39;]);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        return $next($request);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    }
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+}
+</span></span></span></code></pre></div><p>We got our new middleware, so we can enable it in the HTTP kernel array:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f55">--- a/app/Http/Kernel.php
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/Http/Kernel.php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -14,6 +14,7 @@ class Kernel extends HttpKernel
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>      * @var array
+</span></span><span style="display:flex;"><span>      */
+</span></span><span style="display:flex;"><span>     protected $middleware = [
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        \App\Http\Middleware\MultisiteMiddleware::class,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>         \App\Http\Middleware\TrustProxies::class,
+</span></span><span style="display:flex;"><span>         \App\Http\Middleware\CheckForMaintenanceMode::class,
+</span></span><span style="display:flex;"><span>         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+</span></span></code></pre></div><p>Great! When we make requests now, the <code>config('multisite.active')</code> is going to return a matched value from the multisite config. If the subdomain doesn&rsquo;t match, it will just return the default site config. In our case, the <code>en</code> one.</p>
 <p>Since we are setting the locale, we are going to need to make sure there are translations available for all our text. We do this by adding new language files. These files are PHP files that just return plain arrays. These files go under <code>resources/lang/{locale}</code>. So for English (locale is <code>en</code>) we put our files under <code>resources/lang/en</code> and for French (or <code>fr</code>), we put the files under <code>resources/lang/fr</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f55">--- /dev/null
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/resources/lang/en/multisite.php
-</span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -0,0 +1,11 @@
-</span><span style="font-weight:bold"></span><span style="color:#50fa7b;font-weight:bold">+&lt;?php
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+return [
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;site_title&#39; =&gt; &#39;English Multisite&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;site_label&#39; =&gt; &#39;English&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;welcome&#39; =&gt; &#39;Welcome&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;welcome_message&#39; =&gt; &#39;Welcome to the site. You can change the locale by changing to a supported subdomain.&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;switch_site&#39; =&gt; &#39;Switch site&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+];
-</span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f55">--- /dev/null
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/resources/lang/fr/multisite.php
-</span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -0,0 +1,11 @@
-</span><span style="font-weight:bold"></span><span style="color:#50fa7b;font-weight:bold">+&lt;?php
-</span><span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+return [
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;site_title&#39; =&gt; &#39;Multisite Français&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;site_label&#39; =&gt; &#39;Français&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;welcome&#39; =&gt; &#39;Bienvenue&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;welcome_message&#39; =&gt; &#39;Bienvenue sur le site. Vous pouvez changer les paramètres régionaux avec le sous-domaine.&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+    &#39;switch_site&#39; =&gt; &#39;Changer de site&#39;,
-</span><span style="color:#50fa7b;font-weight:bold">+];
-</span></code></pre></div><p>We access these files in a similar way to a <code>config</code> value. We can use the <code>trans</code> function, or we can use the <code>@lang</code> blade directive. Either way, they take a string that represents the path to our array value that we want.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f55">--- /dev/null
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/resources/lang/en/multisite.php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -0,0 +1,11 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="color:#50fa7b;font-weight:bold">+&lt;?php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+return [
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;site_title&#39; =&gt; &#39;English Multisite&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;site_label&#39; =&gt; &#39;English&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;welcome&#39; =&gt; &#39;Welcome&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;welcome_message&#39; =&gt; &#39;Welcome to the site. You can change the locale by changing to a supported subdomain.&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;switch_site&#39; =&gt; &#39;Switch site&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+];
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f55">--- /dev/null
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/resources/lang/fr/multisite.php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -0,0 +1,11 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="color:#50fa7b;font-weight:bold">+&lt;?php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+return [
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;site_title&#39; =&gt; &#39;Multisite Français&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;site_label&#39; =&gt; &#39;Français&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;welcome&#39; =&gt; &#39;Bienvenue&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;welcome_message&#39; =&gt; &#39;Bienvenue sur le site. Vous pouvez changer les paramètres régionaux avec le sous-domaine.&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    &#39;switch_site&#39; =&gt; &#39;Changer de site&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+];
+</span></span></span></code></pre></div><p>We access these files in a similar way to a <code>config</code> value. We can use the <code>trans</code> function, or we can use the <code>@lang</code> blade directive. Either way, they take a string that represents the path to our array value that we want.</p>
 <p>So, if I want to display the <code>site_title</code> from our <code>resources/lang/{locale}/multisite.php</code>, I would need to run <code>trans('multisite.site_title')</code>. Laravel will take care of the rest. If we are in a valid locale, great! We will get the correct language. If we are missing a translation for that key, it will fallback to whatever locale we have set in the <code>config/app.php</code> under the <code>fallback_locale</code> key. The default is <code>en</code>.</p>
 <p>So how about the javascript side? How do we deal with JSON when working with this setup?</p>
 <h4 id="javascript-and-json">JavaScript and JSON</h4>
 <p>Well, if we set things up correctly, the domain should set the locale for us and as long as the URL is correct, we should be good to go!</p>
 <p>We need to add an endpoint to get our JSON from. Let&rsquo;s just toss it into <code>routes/web.php</code> because we are animals like that:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f55">--- a/routes/web.php
-</span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/routes/web.php
-</span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -14,3 +14,7 @@
-</span><span style="font-weight:bold"></span> Route::get(&#39;/&#39;, function () {
-     return view(&#39;welcome&#39;);
- });
-<span style="color:#50fa7b;font-weight:bold">+
-</span><span style="color:#50fa7b;font-weight:bold">+Route::get(&#39;/locale&#39;, function () {
-</span><span style="color:#50fa7b;font-weight:bold">+    return response()-&gt;json(config(&#39;multisite.active&#39;), 200);
-</span><span style="color:#50fa7b;font-weight:bold">+});
-</span></code></pre></div><p>Here, you can see we are just returning whatever the active site is. This will be a JSON object of the active site config. Nice!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f55">--- a/routes/web.php
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/routes/web.php
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -14,3 +14,7 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span> Route::get(&#39;/&#39;, function () {
+</span></span><span style="display:flex;"><span>     return view(&#39;welcome&#39;);
+</span></span><span style="display:flex;"><span> });
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+Route::get(&#39;/locale&#39;, function () {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    return response()-&gt;json(config(&#39;multisite.active&#39;), 200);
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+});
+</span></span></span></code></pre></div><p>Here, you can see we are just returning whatever the active site is. This will be a JSON object of the active site config. Nice!</p>
 <h4 id="in-summation">In Summation</h4>
 <p>Finally, let&rsquo;s update the <code>welcome.blade.php</code> just so we can see our changes in progress:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ str_replace(&#39;_&#39;, &#39;-&#39;, app()-&gt;getLocale()) }}&#34;</span>&gt;
-    &lt;<span style="color:#ff79c6">head</span>&gt;
-        &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;utf-8&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;viewport&#34;</span> <span style="color:#50fa7b">content</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">title</span>&gt;@lang(&#39;multisite.site_title&#39;)&lt;/<span style="color:#ff79c6">title</span>&gt;
-    &lt;/<span style="color:#ff79c6">head</span>&gt;
-    &lt;<span style="color:#ff79c6">body</span>&gt;
-        &lt;<span style="color:#ff79c6">p</span>&gt;
-            @foreach (config(&#39;multisite.sites&#39;) as $site)
-                &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $site[&#39;domain&#39;] }}&#34;</span>&gt;{{ $site[&#39;label&#39;] }}&lt;/<span style="color:#ff79c6">a</span>&gt;
-            @endforeach
-        &lt;/<span style="color:#ff79c6">p</span>&gt;
-        &lt;<span style="color:#ff79c6">h1</span>&gt;@lang(&#39;multisite.welcome&#39;)&lt;/<span style="color:#ff79c6">h1</span>&gt;
-        &lt;<span style="color:#ff79c6">p</span>&gt;@lang(&#39;multisite.welcome_message&#39;)&lt;/<span style="color:#ff79c6">p</span>&gt;
-
-        &lt;<span style="color:#ff79c6">pre</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;ajax&#34;</span>&gt;&lt;/<span style="color:#ff79c6">pre</span>&gt;
-
-        &lt;<span style="color:#ff79c6">script</span>&gt;
-            <span style="color:#8be9fd;font-style:italic">document</span>.addEventListener(<span style="color:#f1fa8c">&#39;DOMContentLoaded&#39;</span>, () =&gt; {
-                <span style="color:#6272a4">// call that endpoint we created in our route
-</span><span style="color:#6272a4"></span>                fetch(<span style="color:#f1fa8c">&#39;/locale&#39;</span>, {
-                    credentials<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;include&#39;</span>,
-                    headers<span style="color:#ff79c6">:</span> {
-                        accept<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;application/json&#39;</span>,
-                        <span style="color:#6272a4">// make sure we set the language explicitly
-</span><span style="color:#6272a4"></span>                        <span style="color:#f1fa8c">&#39;accept-language&#39;</span><span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">document</span>.documentElement.lang
-                    }
-                })
-                <span style="color:#6272a4">// do the fetch dance...
-</span><span style="color:#6272a4"></span>                .then((res) =&gt; res.json())
-                .then((data) =&gt; {
-                    <span style="color:#ff79c6">const</span> ajaxField <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;ajax&#39;</span>);
-
-                    <span style="color:#6272a4">// prepend this to the output
-</span><span style="color:#6272a4"></span>                    ajaxField.innerHTML <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;// loaded via ajax\n&#39;</span>;
-                    <span style="color:#6272a4">// put our JSON in but format it with 2 spaces
-</span><span style="color:#6272a4"></span>                    ajaxField.innerHTML <span style="color:#ff79c6">+=</span> JSON.stringify(data, <span style="color:#ff79c6">null</span>, <span style="color:#bd93f9">2</span>);
-                });
-            });
-        &lt;/<span style="color:#ff79c6">script</span>&gt;
-    &lt;/<span style="color:#ff79c6">body</span>&gt;
-&lt;/<span style="color:#ff79c6">html</span>&gt;
-</code></pre></div><p>We should see something like this when we load up <code>multisite.localhost</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ str_replace(&#39;_&#39;, &#39;-&#39;, app()-&gt;getLocale()) }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;viewport&#34;</span> <span style="color:#50fa7b">content</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">title</span>&gt;@lang(&#39;multisite.site_title&#39;)&lt;/<span style="color:#ff79c6">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>            @foreach (config(&#39;multisite.sites&#39;) as $site)
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ $site[&#39;domain&#39;] }}&#34;</span>&gt;{{ $site[&#39;label&#39;] }}&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>            @endforeach
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h1</span>&gt;@lang(&#39;multisite.welcome&#39;)&lt;/<span style="color:#ff79c6">h1</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">p</span>&gt;@lang(&#39;multisite.welcome_message&#39;)&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">pre</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;ajax&#34;</span>&gt;&lt;/<span style="color:#ff79c6">pre</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">document</span>.addEventListener(<span style="color:#f1fa8c">&#39;DOMContentLoaded&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>                <span style="color:#6272a4">// call that endpoint we created in our route
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>                fetch(<span style="color:#f1fa8c">&#39;/locale&#39;</span>, {
+</span></span><span style="display:flex;"><span>                    credentials<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;include&#39;</span>,
+</span></span><span style="display:flex;"><span>                    headers<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>                        accept<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;application/json&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#6272a4">// make sure we set the language explicitly
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>                        <span style="color:#f1fa8c">&#39;accept-language&#39;</span><span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">document</span>.documentElement.lang
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                })
+</span></span><span style="display:flex;"><span>                <span style="color:#6272a4">// do the fetch dance...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>                .then((res) =&gt; res.json())
+</span></span><span style="display:flex;"><span>                .then((data) =&gt; {
+</span></span><span style="display:flex;"><span>                    <span style="color:#ff79c6">const</span> ajaxField <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;ajax&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#6272a4">// prepend this to the output
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>                    ajaxField.innerHTML <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;// loaded via ajax\n&#39;</span>;
+</span></span><span style="display:flex;"><span>                    <span style="color:#6272a4">// put our JSON in but format it with 2 spaces
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>                    ajaxField.innerHTML <span style="color:#ff79c6">+=</span> JSON.stringify(data, <span style="color:#ff79c6">null</span>, <span style="color:#bd93f9">2</span>);
+</span></span><span style="display:flex;"><span>                });
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span></code></pre></div><p>We should see something like this when we load up <code>multisite.localhost</code>:</p>
 <div class="center">
   <a href="/images/multisite-demo.gif" target="_blank" title="laravel multi-lingual site demo"><img alt="laravel multi-lingual site demo" src="/images/multisite-demo.gif"></a>
 </div>
@@ -459,7 +459,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

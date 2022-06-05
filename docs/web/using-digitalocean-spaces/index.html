@@ -236,13 +236,13 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 <p>I made an example project for how to use Spaces with an S3 node module (<a href="https://github.com/james2doyle/digitalocean-spaces-example">which you can find here</a>) to see what the differences were when actually using the service.</p>
 <p>I was really surprised to find that it was almost identical.</p>
 <p>Here is an example of how you might tweak your config from an S3 project:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  region: &#39;nyc3&#39;, // very familiar setting
-  endpoint: &#39;https://nyc3.digitaloceanspaces.com&#39;, // something you probably ignored before
-  signatureVersion: &#39;v4&#39;, // spaces supports the V4 API
-  s3DisableBodySigning: true // not sure if this is always required...
-}
-</code></pre></div><p>As you can see there is really nothing different. The main thing is <code>endpoint</code>. That controls the service basically. By default in S3 it is set to <code>{service}.{region}.amazonaws.com</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  region: &#39;nyc3&#39;, <span style="color:#6272a4">// very familiar setting
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  endpoint: &#39;https:<span style="color:#6272a4">//nyc3.digitaloceanspaces.com&#39;, // something you probably ignored before
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  signatureVersion: &#39;v4&#39;, <span style="color:#6272a4">// spaces supports the V4 API
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  s3DisableBodySigning: true <span style="color:#6272a4">// not sure if this is always required...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>}
+</span></span></code></pre></div><p>As you can see there is really nothing different. The main thing is <code>endpoint</code>. That controls the service basically. By default in S3 it is set to <code>{service}.{region}.amazonaws.com</code>.</p>
 <p>Other than that, there was really nothing much different from the regular S3 usage. I found that DigitalOcean was <em>much easier</em> to get started with. I created a bucket in a few seconds and generated an API key right away.</p>
 <p>With S3, you usually have a few steps to create the bucket, then create an IAM user for the bucket, then update the policy, and finally, update the CORS configuration to allow the referrers and methods you want. That&rsquo;s a lot of steps.</p>
 <p>If you need that level of control I would still recommend S3. But if you have a simple use-case like a public CDN, I think DigitalOcean Spaces would be a great option.</p>
@@ -276,7 +276,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2021-10-24');
+    navigator.serviceWorker.register('/sw.js?2022-06-05');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);
