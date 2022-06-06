@@ -12,6 +12,15 @@
     <atom:link href="https://ohdoylerules.com/android/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Autocomplete TailwindCSS In Custom Attributes/Strings</title>
+      <link>https://ohdoylerules.com/snippets/autocomplete-tailwind-classes/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/autocomplete-tailwind-classes/</guid>
+      <description>Use tailwindcss autocomplete classes and logic inside non-default attributes or strings</description>
+    </item>
+    
+    <item>
       <title>Setup A Raspberry Pi with PHP And Lighttpd</title>
       <link>https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/</link>
       <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
