@@ -9,7 +9,7 @@ Keywords: ["raspberry", "pi", "php", "8.1", "composer", "lighttpd", "apache", "w
 
 I recently got a Raspberry Pi model 4+. I'm using it to [run a minidlna server](https://pimylifeup.com/raspberrypi-minidlna/) that loads music and movies from an old external hard drive that I have. On top of that, I wanted to run a local web server so that I can write scripts and pages that I can access locally on my network without having to have my laptop open and running.
 
-I wanted to setup `lighttpd` as it is more efficient than the default installed `apache2` - although it has less features. Since I'm already running `minidlna`, I wanted a web server that was more performant and used less memory/resources.
+I wanted to setup `lighttpd` as it is much more efficient than the default installed `apache2`. Since I'm already running `minidlna`, I wanted a web server that was more performant and used less memory/resources.
 
 Finally, I wanted the latest PHP installed given I use it a lot in my day job and it will be great for writing small websites that are only ever accessed through my local network. Unfortunately, the default installed PHP version is quite a bit behind and you need to setup new sources in order to install the latest version of PHP.
 
