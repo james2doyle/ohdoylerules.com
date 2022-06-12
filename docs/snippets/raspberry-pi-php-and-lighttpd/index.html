@@ -231,7 +231,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
         
       </p>
       <div itemprop="ArticleBody text" class="main-content"><p>I recently got a Raspberry Pi model 4+. I&rsquo;m using it to <a href="https://pimylifeup.com/raspberrypi-minidlna/">run a minidlna server</a> that loads music and movies from an old external hard drive that I have. On top of that, I wanted to run a local web server so that I can write scripts and pages that I can access locally on my network without having to have my laptop open and running.</p>
-<p>I wanted to setup <code>lighttpd</code> as it is more efficient than the default installed <code>apache2</code> - although it has less features. Since I&rsquo;m already running <code>minidlna</code>, I wanted a web server that was more performant and used less memory/resources.</p>
+<p>I wanted to setup <code>lighttpd</code> as it is much more efficient than the default installed <code>apache2</code>. Since I&rsquo;m already running <code>minidlna</code>, I wanted a web server that was more performant and used less memory/resources.</p>
 <p>Finally, I wanted the latest PHP installed given I use it a lot in my day job and it will be great for writing small websites that are only ever accessed through my local network. Unfortunately, the default installed PHP version is quite a bit behind and you need to setup new sources in order to install the latest version of PHP.</p>
 <p>Here is a short list of all the steps you need to setup a newer version of PHP 8.1 as well as the <code>lighttpd</code> server.</p>
 <h4 id="instructions">Instructions</h4>
@@ -301,7 +301,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
   
   
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?2022-06-05');
+    navigator.serviceWorker.register('/sw.js?2022-06-12');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);
