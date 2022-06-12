@@ -90,6 +90,8 @@ To test out the server once we are finished, we can setup this simple project th
 git clone https://github.com/halgatewood/file-directory-list /var/www/html/listing
 ```
 
+If you are looking for a more efficient directory browser, or you don't want to use PHP for this, you can [use the built-in `dirlisting` module](https://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModDirlisting) that comes with `lighttpd`.
+
 We can now make sure the `lighttpd` service is running so it will always start when we restart our pi:
 
 ```sh
