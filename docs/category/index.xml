@@ -8,8 +8,17 @@
     <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
-    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Aug 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ohdoylerules.com/category/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bitbucket Weekly Reports Using Make (Integromat)</title>
+      <link>https://ohdoylerules.com/snippets/bitbucket-weekly-reports-using-integromat-make/</link>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/bitbucket-weekly-reports-using-integromat-make/</guid>
+      <description>Use Make (Integromat) to create a nice weekly report in Slack for all the closed pull-requests in a Bitbucket repository</description>
+    </item>
     
     <item>
       <title>Autocomplete TailwindCSS In Custom Attributes/Strings</title>

@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ohdoylerules.com/snippets/bitbucket-weekly-reports-using-integromat-make/</loc>
+    <lastmod>2022-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/category/</loc>
+    <lastmod>2022-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/</loc>
+    <lastmod>2022-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/snippets/</loc>
+    <lastmod>2022-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/category/tricks/</loc>
+    <lastmod>2022-08-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ohdoylerules.com/snippets/autocomplete-tailwind-classes/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ohdoylerules.com/category/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ohdoylerules.com/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ohdoylerules.com/category/snippets/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ohdoylerules.com/snippets/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/</loc>
@@ -30,9 +36,6 @@
     <lastmod>2021-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/tricks/fastmod-codemod-for-refactoring/</loc>
-    <lastmod>2021-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ohdoylerules.com/category/tricks/</loc>
     <lastmod>2021-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/tricks/</loc>
