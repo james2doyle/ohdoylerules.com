@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ohdoylerules.com/snippets/bitbucket-weekly-reports-using-integromat-make/</loc>
-    <lastmod>2022-08-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ohdoylerules.com/category/</loc>
-    <lastmod>2022-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/</loc>
-    <lastmod>2022-08-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/snippets/</loc>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/snippets/using-laravel-when-method-to-support-multiple-queries/</loc>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/category/web/</loc>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/snippets/bitbucket-weekly-reports-using-integromat-make/</loc>
     <lastmod>2022-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/category/tricks/</loc>
@@ -42,9 +48,6 @@
     <lastmod>2021-02-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/web/vue-omnibar-component/</loc>
-    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ohdoylerules.com/category/web/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/web/</loc>

@@ -1,10 +1,12 @@
+{{ $jsTemplate := resources.Get "service-worker.js" }}
+{{ $js := $jsTemplate | resources.ExecuteAsTemplate "sw.js" . }}
 <script defer>
   // register the service worker
   {{ if eq (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
-  console.info('on localhost - not loading service worker. Query: {{ now.Format "2006-01-02" }}');
+  console.info('on localhost - not loading service worker. Query: {{ $js.Permalink }} {{ now.Format "2006-01-02" }}');
   {{ else }}
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js?{{ now.Format "2006-01-02" }}');
+    navigator.serviceWorker.register('{{ $js.Permalink }}');
   }
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30413344-2']);

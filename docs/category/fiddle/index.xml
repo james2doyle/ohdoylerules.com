@@ -12,6 +12,15 @@
     <atom:link href="https://ohdoylerules.com/category/fiddle/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Using Laravel `when` Method To Support Multiple Queries</title>
+      <link>https://ohdoylerules.com/snippets/using-laravel-when-method-to-support-multiple-queries/</link>
+      <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/snippets/using-laravel-when-method-to-support-multiple-queries/</guid>
+      <description>How to use Sqlite as a cache in Laravel</description>
+    </item>
+    
+    <item>
       <title>Bitbucket Weekly Reports Using Make (Integromat)</title>
       <link>https://ohdoylerules.com/snippets/bitbucket-weekly-reports-using-integromat-make/</link>
       <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
