@@ -3,7 +3,7 @@ Title: "Using Laravel `when` Method To Support Multiple Queries"
 Date: "2022-08-14"
 Category: "Web"
 Template: "post"
-Description: "How to use Sqlite as a cache in Laravel"
+Description: "How to use the `when` method on database collections in Laravel to create more flexible and readable code"
 Keywords: ["query", "laravel", "sqlite", "postgres", "sql", "builder", "search", "when", "switch", "case"]
 ---
 
