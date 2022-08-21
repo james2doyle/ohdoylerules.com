@@ -3,13 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ohdoylerules.com/category/</loc>
-    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/</loc>
-    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/category/snippets/</loc>
+    <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/snippets/</loc>
-    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ohdoylerules.com/snippets/versioning-service-workers-in-hugo/</loc>
+    <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/snippets/using-laravel-when-method-to-support-multiple-queries/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
@@ -24,9 +30,6 @@
     <lastmod>2022-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/snippets/autocomplete-tailwind-classes/</loc>
-    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ohdoylerules.com/category/snippets/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ohdoylerules.com/snippets/raspberry-pi-php-and-lighttpd/</loc>
