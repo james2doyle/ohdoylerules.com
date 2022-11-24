@@ -240,7 +240,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#8be9fd;font-style:italic">end</span> <span style="color:#ff79c6">}}</span>
 </span></span><span style="display:flex;"><span>&lt;/script&gt;
-</span></span></code></pre></div><p>That is all you need to read that asset file and create a URL so a &ldquo;compiled&rdquo; version. If you want to see this file, you can just visit the URL it creates: http://localhost:1313/sw.js</p>
+</span></span></code></pre></div><p>That is all you need to read that asset file and create a URL so a &ldquo;compiled&rdquo; version. If you want to see this file, you can just visit the URL it creates: <code>http://localhost:1313/sw.js</code></p>
 <p>And here is the code in <code>assets/service-worker.js</code> that gets parsed as a go html template:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-handlebars" data-lang="handlebars"><span style="display:flex;"><span>// cache name will change to the date of my last deploy
 </span></span><span style="display:flex;"><span>const CACHE_NAME = &#39;ODR-<span style="color:#ff79c6">{{</span> <span style="color:#8be9fd;font-style:italic">now.Format</span> <span style="color:#f1fa8c">&#34;2006-01-02&#34;</span> <span style="color:#ff79c6">}}</span>&#39;;
@@ -284,7 +284,7 @@ body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
 </span></span><span style="display:flex;"><span>    return clients.claim();
 </span></span><span style="display:flex;"><span>  }));
 </span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><p>As you will be able to see if you visited the file that gets generated at http://localhost:1313/sw.js, the <code>CACHE_NAME</code> is now being defined with a value that includes todays date!</p>
+</span></span></code></pre></div><p>As you will be able to see if you visited the file that gets generated at <code>http://localhost:1313/sw.js</code>, the <code>CACHE_NAME</code> is now being defined with a value that includes todays date!</p>
 <p>Something like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">// you should see a real string being assigned now and not a go template interpolation
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> CACHE_NAME <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;ODR-2022-08-21&#39;</span>;
