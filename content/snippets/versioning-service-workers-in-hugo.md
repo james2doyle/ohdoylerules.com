@@ -44,7 +44,7 @@ In this case, it is pipes to the rescue! Here is the code that runs in my `foote
 </script>
 ```
 
-That is all you need to read that asset file and create a URL so a "compiled" version. If you want to see this file, you can just visit the URL it creates: http://localhost:1313/sw.js
+That is all you need to read that asset file and create a URL so a "compiled" version. If you want to see this file, you can just visit the URL it creates: `http://localhost:1313/sw.js`
 
 And here is the code in `assets/service-worker.js` that gets parsed as a go html template:
 
@@ -93,7 +93,7 @@ addEventListener('activate', (event) => {
 });
 ```
 
-As you will be able to see if you visited the file that gets generated at http://localhost:1313/sw.js, the `CACHE_NAME` is now being defined with a value that includes todays date!
+As you will be able to see if you visited the file that gets generated at `http://localhost:1313/sw.js`, the `CACHE_NAME` is now being defined with a value that includes todays date!
 
 Something like this:
 
