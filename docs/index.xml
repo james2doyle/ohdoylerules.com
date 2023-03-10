@@ -8,8 +8,17 @@
     <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
-    <lastBuildDate>Sun, 21 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ohdoylerules.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Using Browser Devtools To Improve Your Bug Reports</title>
+      <link>https://ohdoylerules.com/tricks/using-browser-devtools-to-improve-your-bug-reports/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/using-browser-devtools-to-improve-your-bug-reports/</guid>
+      <description>How to improve your bug reports using the browser dev tools</description>
+    </item>
     
     <item>
       <title>Versioning Service Workers In Hugo</title>

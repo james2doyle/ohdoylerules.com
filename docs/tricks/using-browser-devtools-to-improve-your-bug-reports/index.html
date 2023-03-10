@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  
+    <title>James Doyle | Using Browser Devtools To Improve Your Bug Reports</title>
+  
+  <meta name="google-site-verification" content="KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4" />
+  <link href="https://plus.google.com/109231487156400680487" rel="author publisher" />
+  
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="James Doyle">
+  
+  <meta itemprop="name" content="James Doyle">
+  <meta property="og:site_name" content="OhDoyleRules">
+  <meta itemprop="url" content="https://ohdoylerules.com/tricks/using-browser-devtools-to-improve-your-bug-reports/">
+  <meta itemprop="email" content="james2doyle@gmail.com">
+  <meta property="og:url" content="https://ohdoylerules.com/tricks/using-browser-devtools-to-improve-your-bug-reports/">
+  <meta itemprop="image logo" content="https://ohdoylerules.com/icons/logo.png">
+  <meta property="og:image" content="https://ohdoylerules.com/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://ohdoylerules.com/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://ohdoylerules.com/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://ohdoylerules.com/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://ohdoylerules.com/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://ohdoylerules.com/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://ohdoylerules.com/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://ohdoylerules.com/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://ohdoylerules.com/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ohdoylerules.com/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://ohdoylerules.com/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ohdoylerules.com/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://ohdoylerules.com/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://ohdoylerules.com/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://ohdoylerules.com/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://ohdoylerules.com/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#333333">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@james2doyle">
+  <meta name="twitter:title" content="Using Browser Devtools To Improve Your Bug Reports">
+  <meta name="twitter:creator" content="@james2doyle">
+  <meta name="twitter:image" content="https://ohdoylerules.com/icons/logo.png">
+  <meta name="twitter:domain" content="https://ohdoylerules.com/">
+  <link rel="icon" href="https://ohdoylerules.com/icons/logo.svg">
+  
+  
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="https://ohdoylerules.com/favicon.ico" />
+  <link rel="canonical" href="https://ohdoylerules.com/tricks/using-browser-devtools-to-improve-your-bug-reports/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ohdoylerules.com/sitemap.xml" />
+  <meta id="themes" name="themes" content="https://ohdoylerules.com/css/new.light.css,https://ohdoylerules.com/css/new.dark.css">
+  <link id="stylesheet" rel="stylesheet" href="https://ohdoylerules.com/css/new.light.css">
+  <style type="text/css">
+    body {
+      font-feature-settings: 'lnum' 1;
+      font-variant-numeric: slashed-zero;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      will-change: opacity;
+    }
+    body.light, body.dark {
+      opacity: 1;
+    }
+    .show-on-light,
+    .show-on-dark {
+      display: none;
+    }
+    .light .show-on-light,
+    .dark .show-on-dark {
+      display: block;
+    }
+    .post-info {
+      margin-bottom: 1rem;
+    }
+    a.none {
+      color: inherit;
+      border: none;
+      opacity: 1;
+    }
+    a.none:hover {
+      background: none;
+      opacity: 0.6;
+    }
+    .center {
+      text-align: center;
+    }
+    .center img {
+      max-width: 100%;
+      height: auto;
+    }
+    pre {
+      color: #f8f8f2;
+      background-color: #282a36;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+    }
+    pre code.language-diff span:nth-child(1n + 7) {
+      color: #50fa7b;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 80%;
+    }
+    .switch {
+      position: relative;
+      margin: 0 0.4rem;
+    }
+    .switch input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .switch label {
+      display: flex;
+      border-radius: 9999px;
+      height: 0.8rem;
+      width: 1.8rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch input:checked + label {
+      background-color: #357edd;
+      border: 1px solid #357edd;
+      justify-content: flex-end;
+    }
+    .switch div {
+      width: calc(0.8rem - 2px);
+      height: calc(0.8rem - 2px);
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, .3);
+      background-color: #FFF;
+    }
+     
+    body.dark table.highlight tr:nth-child(even) {
+      background-color: rgb(246, 248, 250);
+    }
+    body.dark table.highlight td,
+    body.dark table.highlight th {
+      border-color: rgba(27,31,35,.3);
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const defaultIndex = window.matchMedia('(prefers-color-scheme)').media !== 'not all' ? '1' : '0';
+      
+      const activeIndex = JSON.parse(window.localStorage.getItem('activeIndex') || defaultIndex);
+
+      const themes = document.getElementById('themes').content.split(',');
+      const stylesheet = document.getElementById('stylesheet');
+      if (stylesheet.href !== themes[activeIndex]) {
+        stylesheet.href = themes[activeIndex];
+      }
+
+      document.body.className = activeIndex === 0 ? 'light' : 'dark';
+
+      const theSwitch = document.getElementById('switch');
+      theSwitch.checked = Boolean(activeIndex);
+      theSwitch.addEventListener('change', function() {
+        const newIndex = Number(this.checked);
+        stylesheet.href = themes[newIndex];
+        document.body.className = newIndex === 0 ? 'light' : 'dark';
+        window.localStorage.setItem('activeIndex', newIndex);
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="switch-wrapper">
+  <div>Light</div>
+  <div class="switch">
+    <input id="switch" type="checkbox" style="display: none" />
+    <label for="switch">
+      <div></div>
+    </label>
+  </div>
+  <div>Dark</div>
+</div>
+
+<style type="text/css" media="screen">
+body.dark .gist table.highlight tr:nth-child(even) { background-color: inherit }
+ 
+.gist{font-size: 18px}.gist-meta, .gist-file, .octotree_toggle, ul.comparison-list > li.title,button.button, a.button, span.button, button.minibutton, a.minibutton,span.minibutton, .clone-url-button > .clone-url-link{background: linear-gradient(#202020, #181818) !important;border-color: #383838 !important;border-radius: 0 0 3px 3px !important;text-shadow: none !important;color: #b5b5b5 !important}.markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,.markdown-body .highlight pre, body.blog pre, #facebox pre, .blob-expanded,.terminal, .copyable-terminal, #notebook .input_area, .blob-code-context,.markdown-format code, body.blog pre > code, .api pre, .api code,.CodeMirror,.highlight{background-color: #1D1F21!important;color: #C5C8C6!important}.gist .blob-code{padding: 1px 10px !important;text-align: left;background: #000;border: 0}::selection{background: #24890d;color: #fff;text-shadow: none}::-moz-selection{background: #24890d;color: #fff;text-shadow: none}.blob-num{padding: 10px 8px 9px;text-align: right;color: #6B6B6B!important;border: 0}.blob-code,.blob-code-inner{color: #C5C8C6!important}.pl-c,.pl-c span{color: #969896!important;font-style: italic!important}.pl-c1{color: #DE935F!important}.pl-cce{color: #DE935F!important}.pl-cn{color: #DE935F!important}.pl-coc{color: #DE935F!important}.pl-cos{color: #B5BD68!important}.pl-e{color: #F0C674!important}.pl-ef{color: #F0C674!important}.pl-en{color: #F0C674!important}.pl-enc{color: #DE935F!important}.pl-enf{color: #F0C674!important}.pl-enm{color: #F0C674!important}.pl-ens{color: #DE935F!important}.pl-ent{color: #B294BB!important}.pl-entc{color: #F0C674!important}.pl-enti{color: #F0C674!important;font-weight: 700!important}.pl-entm{color: #C66!important}.pl-eoa{color: #B294BB!important}.pl-eoac{color: #C66!important}.pl-eoac .pl-pde{color: #C66!important}.pl-eoai{color: #B294BB!important}.pl-eoai .pl-pde{color: #B294BB!important}.pl-eoi{color: #F0C674!important}.pl-k{color: #B294BB!important}.pl-ko{color: #B294BB!important}.pl-kolp{color: #B294BB!important}.pl-kos{color: #DE935F!important}.pl-kou{color: #DE935F!important}.pl-mai .pl-sf{color: #C66!important}.pl-mb{color: #B5BD68!important;font-weight: 700!important}.pl-mc{color: #B294BB!important}.pl-mh .pl-pdh{color: #DE935F!important}.pl-mi{color: #B294BB!important;font-style: italic!important}.pl-ml{color: #B5BD68!important}.pl-mm{color: #C66!important}.pl-mp{color: #81A2BE!important}.pl-mp1 .pl-sf{color: #81A2BE!important}.pl-mq{color: #DE935F!important}.pl-mr{color: #B294BB!important}.pl-ms{color: #B294BB!important}.pl-pdb{color: #B5BD68!important;font-weight: 700!important}.pl-pdc{color: #969896!important;font-style: italic!important}.pl-pdc1{color: #DE935F!important}.pl-pde{color: #DE935F!important}.pl-pdi{color: #B294BB!important;font-style: italic!important}.pl-pds{color: #B5BD68!important}.pl-pdv{color: #C66!important}.pl-pse{color: #DE935F!important}.pl-pse .pl-s2{color: #DE935F!important}.pl-s{color: #B294BB!important}.pl-s1{color: #B5BD68!important}.pl-s2{color: #c5c8c6!important}.pl-mp .pl-s3{color: #B294BB!important}.pl-s3{color: #81a2be!important}.pl-sc{color: #c5c8c6!important}.pl-scp{color: #DE935F!important}.pl-sf{color: #DAD085!important}.pl-smc{color: #F0C674!important}.pl-smi{color: #c5c8c6!important}.pl-smp{color: #c5c8c6!important}.pl-sok{color: #B294BB!important}.pl-sol{color: #B5BD68!important}.pl-som{color: #C66!important}.pl-sr{color: #C66!important}.pl-sra{color: #B294BB!important}.pl-src{color: #B294BB!important}.pl-sre{color: #B294BB!important}.pl-st{color: #B294BB!important}.pl-stj{color: #c5c8c6!important}.pl-stp{color: #DE935F!important}.pl-sv{color: #DE935F!important}.pl-v{color: #DE935F!important}.pl-vi{color: #DE935F!important}.pl-vo{color: #C66!important}.pl-vpf{color: #DE935F!important}.pl-mi1{color: #8F9D6A!important;background: rgba(0,64,0,.5)!important}.pl-mdht{color: #8F9D6A!important;background: rgba(0,64,0,.5)!important}.pl-md{color: #C66!important;background: rgba(64,0,0,.5)!important}.pl-mdhf{color: #C66!important;background: rgba(64,0,0,.5)!important}.pl-mdr{color: #DE935F!important;font-weight: 400!important}.pl-mdh{color: #C66!important;font-weight: 400!important}.pl-mdi{color: #C66!important;font-weight: 400!important}.pl-ib{background-color: #C66!important}.pl-id{background-color: #C66!important;color: #fff!important}.pl-ii{background-color: #C66!important;color: #fff!important}.pl-iu{background-color: #C66!important}.pl-mo{color: #c5c8c6!important}.pl-mri{color: #DE935F!important}.pl-ms1{background-color: #c5c8c6!important}.pl-va{color: #DE935F!important}.pl-vpu{color: #DE935F!important}.pl-entl{color: #c5c8c6!important}.CodeMirror-gutters{background: #222!important;border-right: 1px solid #484848!important}.CodeMirror-guttermarker{color: #fff!important}.CodeMirror-guttermarker-subtle{color: #aaa!important}.CodeMirror-linenumber{color: #aaa!important}.CodeMirror-cursor{border-left: 1px solid #fff!important}.CodeMirror-activeline-background{background: #27282E!important}.CodeMirror-matchingbracket{outline: 1px solid grey!important;color: #fff!important}.cm-keyword{color: #f9ee98!important}.cm-atom{color: #FC0!important}.cm-number{color: #ca7841!important}.cm-def{color: #8DA6CE!important}.cm-variable-2,span.cm-tag{color: #607392!important}.cm-variable-3,span.cm-def{color: #607392!important}.cm-operator{color: #cda869!important}.cm-comment{color: #777!important;font-style: italic!important;font-weight: 400!important}.cm-string{color: #8f9d6a!important}.cm-string-2{color: #bd6b18!important}.cm-meta{background-color: #141414!important;color: #f7f7f7!important}.cm-builtin{color: #cda869!important}.cm-tag{color: #997643!important}.cm-attribute{color: #d6bb6d!important}.cm-header{color: #FF6400!important}.cm-hr{color: #AEAEAE!important}.cm-link{color: #ad9361!important;font-style: italic!important;text-decoration: none!important}.cm-error{border-bottom: 1px solid red!important}#notebook .highlight table{background: #1d1f21!important;color: #c5c8c6!important}.highlight .hll{background-color: #373b41!important}.highlight .c{color: #969896!important}.highlight .err{color: #c66!important}.highlight .k{color: #b294bb!important}.highlight .l{color: #de935f!important}.highlight .h,.highlight .n{color: #c5c8c6!important}.highlight .o{color: #8abeb7!important}.highlight .p{color: #c5c8c6!important}.highlight .cm{color: #969896!important}.highlight .cp{color: #969896!important}.highlight .c1{color: #969896!important}.highlight .cs{color: #969896!important}.highlight .gd{color: #c66!important}.highlight .ge{font-style: italic!important}.highlight .gh{color: #c5c8c6!important;font-weight: 700!important}.highlight .gi{color: #b5bd68!important}.highlight .gp{color: #969896!important;font-weight: 700!important}.highlight .gs{font-weight: 700!important}.highlight .gu{color: #8abeb7!important;font-weight: 700!important}.highlight .kc{color: #b294bb!important}.highlight .kd{color: #b294bb!important}.highlight .kn{color: #8abeb7!important}.highlight .kp{color: #b294bb!important}.highlight .kr{color: #b294bb!important}.highlight .kt{color: #f0c674!important}.highlight .ld{color: #b5bd68!important}.highlight .m{color: #de935f!important}.highlight .s{color: #b5bd68!important}.highlight .na{color: #81a2be!important}.highlight .nb{color: #c5c8c6!important}.highlight .nc{color: #f0c674!important}.highlight .no{color: #c66!important}.highlight .nd{color: #8abeb7!important}.highlight .ni{color: #c5c8c6!important}.highlight .ne{color: #c66!important}.highlight .nf{color: #81a2be!important}.highlight .nl{color: #c5c8c6!important}.highlight .nn{color: #f0c674!important}.highlight .nx{color: #81a2be!important}.highlight .py{color: #c5c8c6!important}.highlight .nt{color: #8abeb7!important}.highlight .nv{color: #c66!important}.highlight .ow{color: #8abeb7!important}.highlight .w{color: #c5c8c6!important}.highlight .mf{color: #de935f!important}.highlight .mh{color: #de935f!important}.highlight .mi{color: #de935f!important}.highlight .mo{color: #de935f!important}.highlight .sb{color: #b5bd68!important}.highlight .sc{color: #c5c8c6!important}.highlight .sd{color: #969896!important}.highlight .s2{color: #b5bd68!important}.highlight .se{color: #de935f!important}.highlight .sh{color: #b5bd68!important}.highlight .si{color: #de935f!important}.highlight .sx{color: #b5bd68!important}.highlight .sr{color: #b5bd68!important}.highlight .s1{color: #b5bd68!important}.highlight .ss{color: #b5bd68!important}.highlight .bp{color: #c5c8c6!important}.highlight .vc{color: #c66!important}.highlight .vg{color: #c66!important}.highlight .vi{color: #c66!important}.highlight .il{color: #de935f!important}
+</style>
+<div itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <header class="grid center">
+      <div class="cell menu">
+        <h1 itemprop="name headline">Using Browser Devtools To Improve Your Bug Reports</h1>
+      </div>
+    </header>
+    <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+    <div class="the-loop">
+      <p class="post-info">
+        
+          <span class="post-date" itemprop="datePublished">🕒&nbsp;&nbsp;<span>March 9, 2023</span></span>
+        
+        
+        
+          &nbsp;<span class="post-category" itemprop="genre about">🏷&nbsp;&nbsp;<span>Tricks</span></span>
+        
+      </p>
+      <div itemprop="ArticleBody text" class="main-content"><h3 id="good-bug-reports">Good bug reports</h3>
+<p>Reporting bugs can be very difficult when you are not a developer. How do you make sure the bug can be recreated? How do you avoid the &ldquo;it works on my machine&rdquo; rebuttal?</p>
+<p>Well, we can greatly improve bug reports on web apps by using some simple tools built into the browsers we use every day.</p>
+<h3 id="easy-screenshots">Easy Screenshots</h3>
+<p>Did you know you can <a href="https://developer.chrome.com/blog/new-in-devtools-62/#node-screenshots">take screenshots of DOM nodes</a> right from the browser?</p>
+<div class="center">
+  <a href="/images/1-devtools.png" target="_blank" title="take a node screenshot in devtools">
+    <img src="/images/1-devtools.png" alt="take a node screenshot in devtools" />
+  </a>
+</div>
+<p>Handy right? Use this to easy capture a smaller area of the screen and attach that to your bug report. Easy!</p>
+<h3 id="saving-console-output">Saving &ldquo;console output&rdquo;</h3>
+<p>Have you ever seen a blast of red in the console that states an error? You can try to explain what happened and where the error occurs. Or, you can export your console output to a log file and send it along to a developer!</p>
+<div class="center">
+  <a href="/images/2-devtools.png" target="_blank" title="save console output to a file">
+    <img src="/images/2-devtools.png" alt="save console output to a file" />
+  </a>
+</div>
+<p>The output will look something like the following:</p>
+<pre tabindex="0"><code class="language-log" data-lang="log">(index):233 Uncaught Error: Oh no! Something happened
+    at (index):233:9
+(anonymous) @ (index):233
+(index):265 on localhost - not loading service worker. Query: http://localhost:1313/sw.js 2023-03-09
+</code></pre><p>This will make it much easier for the developer to track down the area where the error occurred.</p>
+<h3 id="save-har-content">Save &ldquo;HAR&rdquo; content</h3>
+<p>The ultimate way to report an error with a network call is to use a HAR file to capture the state of the network when the file is created.</p>
+<p>What is a HAR file?</p>
+<blockquote>
+<p>HAR (HTTP Archive) is a file format used by several HTTP session tools to export the captured data. The format is basically a JSON object with a particular set of fields. Note that not all the fields in the HAR format are mandatory, and in many cases, some information won&rsquo;t be saved to the file.</p>
+</blockquote>
+<p>You can capture a HAR file from the network tab in your devtools and then save that file to be attached to your bug report:</p>
+<div class="center">
+  <a href="/images/3-devtools.png" target="_blank" title="save network requests to a HAR file">
+    <img src="/images/3-devtools.png" alt="save network requests to a HAR file" />
+  </a>
+</div>
+<p>A HAR file is just JSON that follows the &ldquo;HTTP Archive&rdquo; specification that allows it to be read in various tools. Here is an example of the error above:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;log&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;1.2&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;creator&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;WebInspector&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;537.36&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;pages&#34;</span>: [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;startedDateTime&#34;</span>: <span style="color:#f1fa8c">&#34;2023-03-10T04:23:47.227Z&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;page_10&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;title&#34;</span>: <span style="color:#f1fa8c">&#34;http://localhost:1313/tricks/using-browser-devtools-to-improve-your-bug-reports/&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;pageTimings&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;onContentLoad&#34;</span>: <span style="color:#bd93f9">282.40099999675294</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;onLoad&#34;</span>: <span style="color:#bd93f9">511.1339999930351</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;entries&#34;</span>: [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;_initiator&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;script&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;stack&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;callFrames&#34;</span>: [
+</span></span><span style="display:flex;"><span>              {
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">&#34;functionName&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">&#34;scriptId&#34;</span>: <span style="color:#f1fa8c">&#34;700&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">&#34;url&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">&#34;lineNumber&#34;</span>: <span style="color:#bd93f9">0</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">&#34;columnNumber&#34;</span>: <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>              }
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;_priority&#34;</span>: <span style="color:#f1fa8c">&#34;High&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;_resourceType&#34;</span>: <span style="color:#f1fa8c">&#34;fetch&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;cache&#34;</span>: {},
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;connection&#34;</span>: <span style="color:#f1fa8c">&#34;121426&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;pageref&#34;</span>: <span style="color:#f1fa8c">&#34;page_10&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;request&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;method&#34;</span>: <span style="color:#f1fa8c">&#34;GET&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;url&#34;</span>: <span style="color:#f1fa8c">&#34;http://localhost:1313/missing-file.json&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;httpVersion&#34;</span>: <span style="color:#f1fa8c">&#34;HTTP/1.1&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;headers&#34;</span>: [
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Accept&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;*/*&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Accept-Encoding&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;gzip, deflate, br&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Accept-Language&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;en-CA,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,nb;q=0.6,ar;q=0.5,fr;q=0.4,la;q=0.3&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Cache-Control&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;no-cache&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Connection&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;keep-alive&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Host&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;localhost:1313&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Pragma&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;no-cache&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Referer&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;http://localhost:1313/tricks/using-browser-devtools-to-improve-your-bug-reports/&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Sec-Fetch-Dest&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;empty&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Sec-Fetch-Mode&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;cors&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Sec-Fetch-Site&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;same-origin&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;User-Agent&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;sec-ch-ua&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;\&#34;Chromium\&#34;;v=\&#34;110\&#34;, \&#34;Not A(Brand\&#34;;v=\&#34;24\&#34;, \&#34;Google Chrome\&#34;;v=\&#34;110\&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;sec-ch-ua-mobile&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;?0&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;sec-ch-ua-platform&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;\&#34;macOS\&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;sec-gpc&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          ],
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;queryString&#34;</span>: [],
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;cookies&#34;</span>: [],
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;headersSize&#34;</span>: <span style="color:#bd93f9">701</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;bodySize&#34;</span>: <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;response&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#bd93f9">404</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;statusText&#34;</span>: <span style="color:#f1fa8c">&#34;Not Found&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;httpVersion&#34;</span>: <span style="color:#f1fa8c">&#34;HTTP/1.1&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;headers&#34;</span>: [
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Content-Type&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;text/html; charset=utf-8&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Date&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;Fri, 10 Mar 2023 04:23:55 GMT&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Transfer-Encoding&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;chunked&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          ],
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;cookies&#34;</span>: [],
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;content&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;size&#34;</span>: <span style="color:#bd93f9">8321</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;mimeType&#34;</span>: <span style="color:#f1fa8c">&#34;text/html&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;compression&#34;</span>: <span style="color:#bd93f9">-20</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;text&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;!DOCTYPE html&gt;\n&lt;html lang=\&#34;en\&#34; class=\&#34;no-js\&#34;&gt;\n&lt;head&gt;&lt;script src=\&#34;/livereload.js?mindelay=10&amp;amp;v=2&amp;amp;port=1313&amp;amp;path=livereload\&#34; data-no-instant defer&gt;&lt;/script&gt;\n  &lt;meta charset=\&#34;utf-8\&#34;&gt;\n  &lt;meta http-equiv=\&#34;Cache-control\&#34; content=\&#34;public\&#34;&gt;\n  &lt;meta http-equiv=\&#34;X-UA-Compatible\&#34; content=\&#34;IE=edge\&#34;&gt;\n  &lt;meta name=\&#34;viewport\&#34; content=\&#34;width=device-width,initial-scale=1,maximum-scale=5\&#34;&gt;\n  \n    &lt;title&gt;James Doyle | OhDoyleRules&lt;/title&gt;\n    &lt;meta name=\&#34;twitter:title\&#34; content=\&#34;James Doyle | OhDoyleRules\&#34;&gt;\n    &lt;meta property=\&#34;og:title\&#34; content=\&#34;James Doyle | OhDoyleRules\&#34;&gt;\n  \n  &lt;meta name=\&#34;google-site-verification\&#34; content=\&#34;KM-5h_iJ7JJsGeUp4ncEoYCBKft1ko1A4gBpjIzT0p4\&#34; /&gt;\n  &lt;link href=\&#34;https://plus.google.com/109231487156400680487\&#34; rel=\&#34;author publisher\&#34; /&gt;\n  \n    &lt;meta property=\&#34;og:type\&#34; content=\&#34;website\&#34; /&gt;\n    &lt;meta property=\&#34;og:title\&#34; content=\&#34;James Doyle\&#34;&gt;\n  \n  &lt;meta itemprop=\&#34;name\&#34; content=\&#34;James Doyle\&#34;&gt;\n  &lt;meta property=\&#34;og:site_name\&#34; content=\&#34;OhDoyleRules\&#34;&gt;\n  &lt;meta itemprop=\&#34;url\&#34; content=\&#34;http://localhost:1313/404.html\&#34;&gt;\n  &lt;meta itemprop=\&#34;email\&#34; content=\&#34;james2doyle@gmail.com\&#34;&gt;\n  &lt;meta property=\&#34;og:url\&#34; content=\&#34;http://localhost:1313/404.html\&#34;&gt;\n  &lt;meta itemprop=\&#34;image logo\&#34; content=\&#34;http://localhost:1313/icons/logo.png\&#34;&gt;\n  &lt;meta property=\&#34;og:image\&#34; content=\&#34;http://localhost:1313/icons/logo.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;57x57\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-57x57.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;60x60\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-60x60.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;72x72\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-72x72.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;76x76\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-76x76.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;114x114\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-114x114.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;120x120\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-120x120.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;144x144\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-144x144.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;152x152\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-152x152.png\&#34;&gt;\n  &lt;link rel=\&#34;apple-touch-icon\&#34; sizes=\&#34;180x180\&#34; href=\&#34;http://localhost:1313/icons/apple-icon-180x180.png\&#34;&gt;\n  &lt;link rel=\&#34;icon\&#34; type=\&#34;image/png\&#34; sizes=\&#34;192x192\&#34;  href=\&#34;http://localhost:1313/icons/android-icon-192x192.png\&#34;&gt;\n  &lt;link rel=\&#34;icon\&#34; type=\&#34;image/png\&#34; sizes=\&#34;32x32\&#34; href=\&#34;http://localhost:1313/icons/favicon-32x32.png\&#34;&gt;\n  &lt;link rel=\&#34;icon\&#34; type=\&#34;image/png\&#34; sizes=\&#34;96x96\&#34; href=\&#34;http://localhost:1313/icons/favicon-96x96.png\&#34;&gt;\n  &lt;link rel=\&#34;icon\&#34; type=\&#34;image/png\&#34; sizes=\&#34;16x16\&#34; href=\&#34;http://localhost:1313/icons/favicon-16x16.png\&#34;&gt;\n  &lt;link rel=\&#34;manifest\&#34; href=\&#34;http://localhost:1313/manifest.json\&#34;&gt;\n  &lt;meta name=\&#34;msapplication-TileColor\&#34; content=\&#34;#ffffff\&#34;&gt;\n  &lt;meta name=\&#34;msapplication-TileImage\&#34; content=\&#34;http://localhost:1313/icons/ms-icon-144x144.png\&#34;&gt;\n  &lt;meta name=\&#34;theme-color\&#34; content=\&#34;#333333\&#34;&gt;\n  &lt;meta name=\&#34;twitter:card\&#34; content=\&#34;summary\&#34;&gt;\n  &lt;meta name=\&#34;twitter:site\&#34; content=\&#34;@james2doyle\&#34;&gt;\n  \n  &lt;meta name=\&#34;twitter:creator\&#34; content=\&#34;@james2doyle\&#34;&gt;\n  &lt;meta name=\&#34;twitter:image\&#34; content=\&#34;http://localhost:1313/icons/logo.png\&#34;&gt;\n  &lt;meta name=\&#34;twitter:domain\&#34; content=\&#34;http://localhost:1313/\&#34;&gt;\n  &lt;link rel=\&#34;icon\&#34; href=\&#34;http://localhost:1313/icons/logo.svg\&#34;&gt;\n  \n  \n  &lt;link rel=\&#34;dns-prefetch\&#34; href=\&#34;https://www.google-analytics.com\&#34;&gt;\n  &lt;link rel=\&#34;shortcut icon\&#34; href=\&#34;http://localhost:1313/favicon.ico\&#34; /&gt;\n  &lt;link rel=\&#34;canonical\&#34; href=\&#34;http://localhost:1313/404.html\&#34;&gt;\n  &lt;link rel=\&#34;sitemap\&#34; type=\&#34;application/xml\&#34; title=\&#34;Sitemap\&#34; href=\&#34;http://localhost:1313/sitemap.xml\&#34; /&gt;\n  &lt;meta id=\&#34;themes\&#34; name=\&#34;themes\&#34; content=\&#34;http://localhost:1313/css/new.light.css,http://localhost:1313/css/new.dark.css\&#34;&gt;\n  &lt;link id=\&#34;stylesheet\&#34; rel=\&#34;stylesheet\&#34; href=\&#34;http://localhost:1313/css/new.light.css\&#34;&gt;\n  &lt;style type=\&#34;text/css\&#34;&gt;\n    body {\n      font-feature-settings: &#39;lnum&#39; 1;\n      font-variant-numeric: slashed-zero;\n      text-rendering: geometricPrecision;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;\n      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n      -webkit-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n      opacity: 0;\n      transition: opacity 0.2s ease;\n      will-change: opacity;\n    }\n    body.light, body.dark {\n      opacity: 1;\n    }\n    .show-on-light,\n    .show-on-dark {\n      display: none;\n    }\n    .light .show-on-light,\n    .dark .show-on-dark {\n      display: block;\n    }\n    .post-info {\n      margin-bottom: 1rem;\n    }\n    a.none {\n      color: inherit;\n      border: none;\n      opacity: 1;\n    }\n    a.none:hover {\n      background: none;\n      opacity: 0.6;\n    }\n    .center {\n      text-align: center;\n    }\n    .center img {\n      max-width: 100%;\n      height: auto;\n    }\n    pre {\n      color: #f8f8f2;\n      background-color: #282a36;\n      -moz-tab-size: 4;\n      -o-tab-size: 4;\n      tab-size: 4;\n    }\n    pre code.language-diff span:nth-child(1n + 7) {\n      color: #50fa7b;\n    }\n    .switch-wrapper {\n      display: flex;\n      align-items: center;\n      position: absolute;\n      top: 1rem;\n      right: 2rem;\n      font-size: 80%;\n    }\n    .switch {\n      position: relative;\n      margin: 0 0.4rem;\n    }\n    .switch input {\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      z-index: 1;\n      opacity: 0;\n      cursor: pointer;\n    }\n    .switch label {\n      display: flex;\n      border-radius: 9999px;\n      height: 0.8rem;\n      width: 1.8rem;\n      background-color: rgba(0, 0, 0, .1);\n      border: 1px solid rgba(0, 0, 0, .3);\n    }\n    .switch input:checked + label {\n      background-color: #357edd;\n      border: 1px solid #357edd;\n      justify-content: flex-end;\n    }\n    .switch div {\n      width: calc(0.8rem - 2px);\n      height: calc(0.8rem - 2px);\n      border-radius: 9999px;\n      border: 1px solid rgba(0, 0, 0, .3);\n      background-color: #FFF;\n    }\n     \n    body.dark table.highlight tr:nth-child(even) {\n      background-color: rgb(246, 248, 250);\n    }\n    body.dark table.highlight td,\n    body.dark table.highlight th {\n      border-color: rgba(27,31,35,.3);\n    }\n  &lt;/style&gt;\n  &lt;script type=\&#34;text/javascript\&#34; charset=\&#34;utf-8\&#34; defer&gt;\n    document.addEventListener(&#39;DOMContentLoaded&#39;, function() {\n      \n      const defaultIndex = window.matchMedia(&#39;(prefers-color-scheme)&#39;).media !== &#39;not all&#39; ? &#39;1&#39; : &#39;0&#39;;\n      \n      const activeIndex = JSON.parse(window.localStorage.getItem(&#39;activeIndex&#39;) || defaultIndex);\n\n      const themes = document.getElementById(&#39;themes&#39;).content.split(&#39;,&#39;);\n      const stylesheet = document.getElementById(&#39;stylesheet&#39;);\n      if (stylesheet.href !== themes[activeIndex]) {\n        stylesheet.href = themes[activeIndex];\n      }\n\n      document.body.className = activeIndex === 0 ? &#39;light&#39; : &#39;dark&#39;;\n\n      const theSwitch = document.getElementById(&#39;switch&#39;);\n      theSwitch.checked = Boolean(activeIndex);\n      theSwitch.addEventListener(&#39;change&#39;, function() {\n        const newIndex = Number(this.checked);\n        stylesheet.href = themes[newIndex];\n        document.body.className = newIndex === 0 ? &#39;light&#39; : &#39;dark&#39;;\n        window.localStorage.setItem(&#39;activeIndex&#39;, newIndex);\n      });\n    });\n  &lt;/script&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div class=\&#34;switch-wrapper\&#34;&gt;\n  &lt;div&gt;Light&lt;/div&gt;\n  &lt;div class=\&#34;switch\&#34;&gt;\n    &lt;input id=\&#34;switch\&#34; type=\&#34;checkbox\&#34; style=\&#34;display: none\&#34; /&gt;\n    &lt;label for=\&#34;switch\&#34;&gt;\n      &lt;div&gt;&lt;/div&gt;\n    &lt;/label&gt;\n  &lt;/div&gt;\n  &lt;div&gt;Dark&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div class=\&#34;container\&#34;&gt;\n  &lt;header class=\&#34;grid -middle -center\&#34;&gt;\n    &lt;p&gt;\n      &lt;a href=\&#34;http://localhost:1313/\&#34; title=\&#34;James Doyle\&#34; class=\&#34;none\&#34;&gt;\n        &lt;img class=\&#34;show-on-light\&#34; src=\&#34;/icons/logo-light.svg\&#34; alt=\&#34;James Doyle Logo\&#34; width=\&#34;113\&#34; height=\&#34;57\&#34;&gt;\n        &lt;img class=\&#34;show-on-dark\&#34; src=\&#34;/icons/logo-dark.svg\&#34; alt=\&#34;James Doyle Logo\&#34; width=\&#34;113\&#34; height=\&#34;57\&#34;&gt;\n      &lt;/a&gt;\n    &lt;/p&gt;\n  &lt;/header&gt;\n  &lt;div class=\&#34;the-loop\&#34;&gt;\n    &lt;article&gt;\n      &lt;h2&gt;404 Page Not Found&lt;/h2&gt;\n      &lt;div class=\&#34;post-intro\&#34;&gt;\n        &lt;p&gt;The page you are looking for cannot be found. Please &lt;a href=\&#34;/\&#34; title=\&#34;Homepage\&#34;&gt;return to the homepage&lt;/a&gt;.&lt;/p&gt;\n      &lt;/div&gt;\n   &lt;/article&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n\n&lt;script defer&gt;\n  \n  \n  console.info(&#39;on localhost - not loading service worker. Query: http:\\/\\/localhost:1313\\/sw.js 2023-03-09&#39;);\n  \n&lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n\n&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;redirectURL&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;headersSize&#34;</span>: <span style="color:#bd93f9">131</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;bodySize&#34;</span>: <span style="color:#bd93f9">8341</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;_transferSize&#34;</span>: <span style="color:#bd93f9">8472</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;_error&#34;</span>: <span style="color:#ff79c6">null</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;serverIPAddress&#34;</span>: <span style="color:#f1fa8c">&#34;127.0.0.1&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;startedDateTime&#34;</span>: <span style="color:#f1fa8c">&#34;2023-03-10T04:23:55.706Z&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;time&#34;</span>: <span style="color:#bd93f9">5.828000001201872</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;timings&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;blocked&#34;</span>: <span style="color:#bd93f9">3.4279999995124526</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;dns&#34;</span>: <span style="color:#bd93f9">-1</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;ssl&#34;</span>: <span style="color:#bd93f9">-1</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;connect&#34;</span>: <span style="color:#bd93f9">-1</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;send&#34;</span>: <span style="color:#bd93f9">0.08699999999999997</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;wait&#34;</span>: <span style="color:#bd93f9">0.28199999806331477</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;receive&#34;</span>: <span style="color:#bd93f9">2.0310000036261044</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;_blocked_queueing&#34;</span>: <span style="color:#bd93f9">1.5889999995124526</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>To read a HAR file that has already been exported, you can just <strong>drag it into the network panel</strong> of your devtools:</p>
+<div class="center">
+  <video width="100%" autoplay loop muted preload="auto" poster="/images/5-devtools-poster.jpg">
+    <source src="/images/5-devtools.mp4" type="video/mp4">
+    <p>Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="/images/5-devtools.mp4" download>download it</a> and watch it with your favourite video player!</p>
+  </video>
+</div>
+<p>This will recreate the state of the world when the HAR file was captured.</p>
+<p>You can also use a tool like the <a href="https://toolbox.googleapps.com/apps/har_analyzer/">Google Admin Toolbox HAR Analyzer</a> to view HAR files on a webpage:</p>
+<div class="center">
+  <a href="/images/4-devtools.png" target="_blank" title="save console output to a file">
+    <img src="/images/4-devtools.png" alt="save console output to a file" />
+  </a>
+</div>
+<p>If you want to read more about capturing HAR files, just check out <a href="https://www.ibm.com/support/pages/how-generate-har-file-troubleshoot-issues">this great list of steps on the IBM site</a> - of all places.</p>
+<h3 id="in-summation">In Summation</h3>
+<p>Hopefully these simple tips help improve your bug reports and make it easier for your team members to report them but also recreate them. Happy bug hunting!</p>
+</div>
+      <p><a href="https://ohdoylerules.com/" title="Go Back Home">Go home</a></p>
+      <hr>
+      <div class="media grid">
+        <div class="media-left">
+          <a href="https://twitter.com/james2doyle" target="_blank" class="post-author-link">
+            <img src="https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&amp;d=mm&amp;r=g" alt="James Doyle Profile Picture" width="120" height="120">
+          </a>
+        </div>
+        <div class="media-body cell -9of12">
+          <div class="media-heading"><h3 itemprop="author publisher creator provider">James Doyle</h3></div>
+          <div class="media-content">
+            <p>I'm a full-stack developer, co-organizer of <a href="https://www.meetup.com/vancouver-php" title="PHP Vancouver" target="_blank">PHP Vancouver</a> meetup, and winner of a <a href="http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/" title="Canadian Developer 30 under 30 award" target="_blank">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+        <div id="disqus_thread" itemprop="comment"></div>
+        <script type="text/javascript">(function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//ohdoylerules.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })();</script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  </div>
+</div>
+
+
+<script defer>
+  
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('https:\/\/ohdoylerules.com\/sw.js');
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30413344-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+</body>
+</html>
+

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ODR-2022-11-24';
+const CACHE_NAME = 'ODR-2023-03-09';
 const expectedCaches = [CACHE_NAME];
 
 // the list of files that need to be cached
