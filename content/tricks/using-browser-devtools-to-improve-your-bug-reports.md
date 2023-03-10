@@ -2,7 +2,7 @@
 Title: "Using Browser Devtools To Improve Your Bug Reports"
 Date: "2023-03-09"
 Category: "Tricks"
-Template: "posts"
+Template: "post"
 Description: "How to improve your bug reports using the browser dev tools"
 Keywords: ["browser", "devtools", "bug", "reports", "screenshots", "har", "console", "output", "chrome", "firefox", "safari", "edge"]
 ---

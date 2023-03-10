@@ -2,7 +2,7 @@
 Title: "Versioning Service Workers In Hugo"
 Date: "2022-08-21"
 Category: "Snippets"
-Template: "posts"
+Template: "post"
 Description: "How to use Hugo pipes and resources to version your service worker scripts"
 Keywords: ["hugo", "sw", "service worker", "version", "bust", "clear", "script", "resources", "pipes"]
 ---
