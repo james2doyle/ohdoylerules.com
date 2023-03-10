@@ -8,8 +8,17 @@
     <managingEditor>james2doyle@gmail.com (James Doyle)</managingEditor>
     <webMaster>james2doyle@gmail.com (James Doyle)</webMaster>
     <copyright>This work is licensed under The MIT License (MIT).</copyright>
-    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ohdoylerules.com/category/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Use Your Numberpad To Control Google Hangouts/Meet</title>
+      <link>https://ohdoylerules.com/tricks/hammerspoon-number-pad-shortcuts/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/hammerspoon-number-pad-shortcuts/</guid>
+      <description>Using Hammerspoon to create shortcuts on a number pad that can control Google Hangouts/Meet</description>
+    </item>
     
     <item>
       <title>Using Browser Devtools To Improve Your Bug Reports</title>

@@ -12,6 +12,15 @@
     <atom:link href="https://ohdoylerules.com/fiddle/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Use Your Numberpad To Control Google Hangouts/Meet</title>
+      <link>https://ohdoylerules.com/tricks/hammerspoon-number-pad-shortcuts/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      <author>james2doyle@gmail.com (James Doyle)</author>
+      <guid>https://ohdoylerules.com/tricks/hammerspoon-number-pad-shortcuts/</guid>
+      <description>Using Hammerspoon to create shortcuts on a number pad that can control Google Hangouts/Meet</description>
+    </item>
+    
+    <item>
       <title>Using Browser Devtools To Improve Your Bug Reports</title>
       <link>https://ohdoylerules.com/tricks/using-browser-devtools-to-improve-your-bug-reports/</link>
       <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
