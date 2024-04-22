@@ -1,12 +1,5 @@
-name = "ODR-Hack"
-license = "MIT"
-licenselink = "https://github.com/james2doyle/ohdoylerules/blob/master/LICENSE.md"
+name = "hack"
 description = ""
-homepage = "https://www.ohdoylerules.com/"
-tags = []
-features = []
-min_version = "0.72"
+license = "MIT"
 
-[author]
-  name = "James Doyle"
-  homepage = "https://www.ohdoylerules.com/"
+[extra]

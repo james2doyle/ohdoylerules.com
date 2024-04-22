@@ -1,11 +1,12 @@
----
-Title: "Randomly Generate A Password In Bash"
-Description: "Randomly generate a password of specified length and then copy it to the clipboard"
-Date: "2014-02-16"
-Category: "Snippets"
-Template: "post"
-Keywords: ["password", "random", "generate", "base64", "bash", "openssl", "cli", "terminal", "shell", "command line", "pbcopy", "clipboard", "osx", "mac"]
----
++++
+title = "Randomly Generate A Password In Bash"
+description = "Randomly generate a password of specified length and then copy it to the clipboard"
+date = "2014-02-16"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["password", "random", "generate", "base64", "bash", "openssl", "cli", "terminal", "shell", "command line", "pbcopy", "clipboard", "osx", "mac"]
++++
 
 When installing or setting up frameworks, in this case I was playing around with [Laravel](http://laravel.com/), you usually need to set a session/secret/encryption key.
 
@@ -30,7 +31,7 @@ I put a check in there if the argument is not a number. This is just for the dum
 
 You are probably on Linux. I found [this little snippet](http://whereswalden.com/2009/10/23/pbcopy-and-pbpaste-for-linux/ "pbcopy and pbpaste for Linux") for the lazy. This way you can forget about translating it each time.
 
-```shell
+```sh
 alias pbcopy="xsel --clipboard --input"
 alias pbpaste="xsel --clipboard --output"
 ```
@@ -39,7 +40,7 @@ Now for the actual shell function:
 
 ### Code
 
-```shell
+```sh
 # if the argument is a number
 # cut the string so that there is no base64 padding
 # generate a random password of the specified length
@@ -63,7 +64,7 @@ Here is how you would use it, and what the results would look like:
 
 ### Output
 
-```shell
+```sh
 ~ ❯ password 32
 gY4zLES+WWF5+iNWo0FYx+os6EmDwecf
 Password copied to clipboard

@@ -1,11 +1,12 @@
----
-Title: "Disqus Comments"
-Description: "Adding Disqus Comments to the website"
-Date: "2013-06-27"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["post", "disqus", "content", "comments"]
----
++++
+title = "Disqus Comments"
+description = "Adding Disqus Comments to the website"
+date = "2013-06-27"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["post", "disqus", "content", "comments"]
++++
 
 I have finally added a decent comment system to this site. I installed Disqus. It is pretty awesome. I have used it before and it is a great system. I have enabled comments on *every* post on the site.
 

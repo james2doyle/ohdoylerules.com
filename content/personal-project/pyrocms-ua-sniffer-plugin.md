@@ -1,11 +1,12 @@
----
-Title: "PyroCMS UA Sniffer Plugin"
-Description: "A plugin for PyroCMS that allows UA Sniffing"
-Date: "2013-06-23"
-Category: "Personal Project,Web"
-Template: "post"
-Keywords: ["pyrocms", "plugin", "sniff", "useragent", "php", "code igniter"]
----
++++
+title = "PyroCMS UA Sniffer Plugin"
+description = "A plugin for PyroCMS that allows UA Sniffing"
+date = "2013-06-23"
+category = "Personal Project,Web"
+template = "post.html"
+[taxonomies]
+keywords = ["pyrocms", "plugin", "sniff", "useragent", "php", "code igniter"]
++++
 
 This plugin lets you sniff information from the user agent for use in the frontend. I use it for adding classes or conditional loading of partials and templates.
 

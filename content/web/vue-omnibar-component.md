@@ -1,11 +1,12 @@
----
-Title: "Vue Omnibar Component"
-Description: "A Vue component that is used to create modal popups that emulate omnibar, command palette, open anywhere, or other search functions/features"
-Date: "2020-12-05"
-Category: "Web"
-Template: "post"
-Keywords: ["vue", "component", "modal", "omnibar", "command palette", "open anywhere"]
----
++++
+title = "Vue Omnibar Component"
+description = "A Vue component that is used to create modal popups that emulate omnibar, command palette, open anywhere, or other search functions/features"
+date = "2020-12-05"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["vue", "component", "modal", "omnibar", "command palette", "open anywhere"]
++++
 
 I'm working on a project right now that requires us to have a search modal. The feature is actually inspired by the ["Quick Search" experience in Notion](https://www.notion.so/Searching-with-Quick-Find-af945b6e69b64437afba2d143e4b546f). I looked around for a component that was already created that would do this for me. I couldn't find one, so I wrote my own!
 

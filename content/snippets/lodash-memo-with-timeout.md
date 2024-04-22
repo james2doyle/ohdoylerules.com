@@ -1,11 +1,12 @@
----
-Title: "Lodash memoize with a timeout"
-Description: "Use lodash memoize with a TTL/timeout. Allows calls to be cached by time as well as argument values"
-Date: "2021-10-20"
-Category: "Snippets"
-Template: "post"
-Keywords: ["lodash", "memo", "ttl", "timeout", "cache", "function", "memoize"]
----
++++
+title = "Lodash memoize with a timeout"
+description = "Use lodash memoize with a TTL/timeout. Allows calls to be cached by time as well as argument values"
+date = "2021-10-20"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["lodash", "memo", "ttl", "timeout", "cache", "function", "memoize"]
++++
 
 If you are familiar with [lodash](https://lodash.com/docs/4.17.15) you may also be familiar with one of the very handy functions called `[memoize](https://lodash.com/docs/4.17.15#memoize)`.
 
@@ -29,7 +30,7 @@ So how do you implement a custom cache backend for lodash `memoize`? Easy! The `
 
 I've done the work for you and made a simple version in TypeScript that uses the current minute as a tracker for when the last call was:
 
-<script src="https://gist.github.com/james2doyle/2a7428e6e740279f8cc7fbd2dd7b4f75.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/2a7428e6e740279f8cc7fbd2dd7b4f75.js") }}
 
 You can see in this function that we take in the arguments and add a time to the end. We then serialize that object as JSON and use that as our cache key. When lodash runs our new `memo` function, it will first compare the cached keys and see if they are different. If they are, then the function will actually run and the cached results will not be used and instead our original function will run, and the result of that run, will be cached. Subsequent calls repeat the whole process.
 

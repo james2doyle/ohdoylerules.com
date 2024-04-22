@@ -1,11 +1,12 @@
----
-Title: "Pyro Image Select Field"
-Description: "A field for Pyro CMS that allows you to select images from your uploads"
-Date: "2013-03-28"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["pyrocms", "image", "field", "select", "thumbnail", "display", "picker", "chooser", "pyro", "php"]
----
++++
+title = "Pyro Image Select Field"
+description = "A field for Pyro CMS that allows you to select images from your uploads"
+date = "2013-03-28"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["pyrocms", "image", "field", "select", "thumbnail", "display", "picker", "chooser", "pyro", "php"]
++++
 
 Another [PyroCMS](http://pyrocms.com "PyroCMS Website") field type. This one is called Image Select. Why? Because it does exactly that. It lets you select images. But wait! There is already an image field type. Yes, but that is for uploading images. Sometimes you just want to choose and image you already have. An image drop down is good for this.
 

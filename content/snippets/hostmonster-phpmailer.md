@@ -1,11 +1,12 @@
----
-Title: "HostMonster PHPMailer Settings"
-Description: "How to setup PHPMailer on a HostMonster hosting server"
-Date: "2013-11-19"
-Category: "Snippets"
-Template: "post"
-Keywords: ["hostmonster", "phpmailer", "smtp", "hosting", "mail", "host", "monster", "setup"]
----
++++
+title = "HostMonster PHPMailer Settings"
+description = "How to setup PHPMailer on a HostMonster hosting server"
+date = "2013-11-19"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["hostmonster", "phpmailer", "smtp", "hosting", "mail", "host", "monster", "setup"]
++++
 
 God Damn!! This one was a b\*tch to get right. I have a small plugin for a site that makes doing AJAX contact forms a breeze.
 

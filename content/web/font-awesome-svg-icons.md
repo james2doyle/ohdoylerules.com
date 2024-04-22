@@ -1,11 +1,12 @@
----
-Title: "Font Awesome SVG Icons"
-Date: "2014-02-06"
-Category: "Web"
-Template: "post"
-Keywords: ["font-awesome", "font", "awesome", "vector", "logo", "svg", "eps", "icons", "sprite", "sheet"]
-Description: "A sprite sheet of all the font-awesome icons from version 4.0.2"
----
++++
+title = "Font Awesome SVG Icons"
+description = "A sprite sheet of all the font-awesome icons from version 4.0.2"
+date = "2014-02-06"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["font-awesome", "font", "awesome", "vector", "logo", "svg", "eps", "icons", "sprite", "sheet"]
++++
 
 This one was kind of annoying. I was looking for all the [font-awesome icons](http://fontawesome.io/) in a nice sheet so that [WARPAINT](warpaintmedia.ca) could design some mockups for a client. Well, of course this sheet doesn't exists.
 

@@ -1,11 +1,12 @@
----
-Title: "Flexbox Demo"
-Description: "A demo of CSS Flexbox"
-Date: "2012-11-14"
-Category: "Demo"
-Template: "post"
-Keywords: ["flexbox", "webkit", "demo", "layout"]
----
++++
+title = "Flexbox Demo"
+description = "A demo of CSS Flexbox"
+date = "2012-11-14"
+category = "Demo"
+template = "post.html"
+[taxonomies]
+keywords = ["flexbox", "webkit", "demo", "layout"]
++++
 
 An old flexbox demo I made a while back. It may not be the latest syntax so beware!!
 

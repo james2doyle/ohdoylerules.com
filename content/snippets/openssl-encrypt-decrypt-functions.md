@@ -1,11 +1,12 @@
----
-Title: "Decrypt-Encrypt Functions From Command Line"
-Description: "Functions to encrypt and then decrypt files from the command line with OpenSSL"
-Date: "2013-11-22"
-Category: "Snippets"
-Template: "post"
-Keywords: ["encrypt", "decrypt", "openssl", "cli", "terminal", "shell", "command line", "shred", "rc4"]
----
++++
+title = "Decrypt-Encrypt Functions From Command Line"
+description = "Functions to encrypt and then decrypt files from the command line with OpenSSL"
+date = "2013-11-22"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["encrypt", "decrypt", "openssl", "cli", "terminal", "shell", "command line", "shred", "rc4"]
++++
 
 ### Preamble
 
@@ -19,7 +20,7 @@ The best thing you can do for this type of encryption is [pick a good password](
 
 ### Code
 
-```shell
+```sh
 # take in a file and output an encrypted one
 function encrypt() {
   # take in a file and output a new one with a `.enc` extension
@@ -43,7 +44,7 @@ for even very expensive hardware probing to recover the data.
 
 Here is the function that I found to be pretty good:
 
-```shell
+```sh
 # overwrite 'my-unsafe-file.txt' 3 times, with zeros (nulls) and then remove the file
 gshred --iterations=3 --zero --remove my-unsafe-file.txt
 ```

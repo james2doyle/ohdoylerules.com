@@ -1,11 +1,12 @@
----
-Title: "Switching to SVG on Grey Nimbus"
-Description: "Switching to SVG for all images on my website"
-Date: "2013-04-14"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["svg", "grey", "nimbus", "fuelphp", "static", "user agent sniffing", "vector", "retina", "minify", "minifier", "fuel", "extension"]
----
++++
+title = "Switching to SVG on Grey Nimbus"
+description = "Switching to SVG for all images on my website"
+date = "2013-04-14"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["svg", "grey", "nimbus", "fuelphp", "static", "user agent sniffing", "vector", "retina", "minify", "minifier", "fuel", "extension"]
++++
 
 So I recently bought the [Sketch app](http://www.bohemiancoding.com/sketch/ "Sketch Website") for Mac. I am using it because I don't have illustrator. But to be honest, it is much better at doing small things. It's been about 2 hours switching the whole thing over and I have to say it is worth it.
 

@@ -1,11 +1,12 @@
----
-Title: "My Old Website"
-Description: "See my old website"
-Date: "2012-10-04"
-Category: "Portfolio"
-Template: "post"
-Keywords: ["chrome 18", "firefox 10", "web", "site", "archive"]
----
++++
+title = "My Old Website"
+description = "See my old website"
+date = "2012-10-04"
+category = "Portfolio"
+template = "post.html"
+[taxonomies]
+keywords = ["chrome 18", "firefox 10", "web", "site", "archive"]
++++
 
 I decided to host my old website because I wanted to show some work with Modernizr.
 

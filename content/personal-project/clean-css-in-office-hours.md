@@ -1,11 +1,12 @@
----
-Title: "Clean CSS in Chrome Apps Office Hours"
-Description: "So my chrome app Clean CSS made it onto one of the Chrome Apps Office Hours."
-Date: "2012-12-19"
-Category: "Web"
-Template: "post"
-Keywords: ["clean", "css", "chrome", "apps", "office", "hours"]
----
++++
+title = "Clean CSS in Chrome Apps Office Hours"
+description = "So my chrome app Clean CSS made it onto one of the Chrome Apps Office Hours."
+date = "2012-12-19"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["clean", "css", "chrome", "apps", "office", "hours"]
++++
 
 ### Clean CSS made it into a Chrome Apps Office hours!!
 

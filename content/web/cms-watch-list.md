@@ -1,11 +1,12 @@
----
-Title: "CMS Watch List"
-Description: "CMS Watch List"
-Date: "2013-07-26"
-Category: "Web"
-Template: "post"
-Keywords: ["cms", "watch", "list", "warpaint", "media", "article"]
----
++++
+title = "CMS Watch List"
+description = "CMS Watch List"
+date = "2013-07-26"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["cms", "watch", "list", "warpaint", "media", "article"]
++++
 
 I created a new post on WARPAINT about some of the upcoming CMS platforms you may not have heard of.
 

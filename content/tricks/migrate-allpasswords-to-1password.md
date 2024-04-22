@@ -1,11 +1,12 @@
----
-Title: "Migrate AllPasswords To 1Password"
-Description: "How to import your allpasswords csv into 1password"
-Date: "2014-10-11"
-Category: "Tricks"
-Template: "post"
-Keywords: ["1password", "allpasswords", "export", "import", "csv", "format", "osx"]
----
++++
+title = "Migrate AllPasswords To 1Password"
+description = "How to import your allpasswords csv into 1password"
+date = "2014-10-11"
+category = "Tricks"
+template = "post.html"
+[taxonomies]
+keywords = ["1password", "allpasswords", "export", "import", "csv", "format", "osx"]
++++
 
 [AllPasswords](https://itunes.apple.com/ca/app/allpasswords-handy-personal/id588258846?mt=12) is an awesome, free, app for [iPhone](https://itunes.apple.com/ca/app/allpasswords/id578246311?mt=8) and [OSX](https://itunes.apple.com/ca/app/allpasswords-handy-personal/id588258846?mt=12). It has a nice, simple interface, there is an awesome password generator, and it has iCloud sync.
 

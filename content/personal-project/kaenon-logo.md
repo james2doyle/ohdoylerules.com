@@ -1,11 +1,12 @@
----
-Title: "Kaenon Vector Logo"
-Date: "2014-04-10"
-Category: "Personal Project"
-Template: "post"
-Description: "The Kaenon logo in a vector SVG format"
-Keywords: ["Kaenon", "logo", "vector", "svg", "ai", "image", "macvim", "icon", "icns"]
----
++++
+title = "Kaenon Vector Logo"
+date = "2014-04-10"
+category = "Personal Project"
+template = "post.html"
+description = "The Kaenon logo in a vector SVG format"
+[taxonomies]
+keywords = ["Kaenon", "logo", "vector", "svg", "ai", "image", "macvim", "icon", "icns"]
++++
 
 Here is another logo. This one is for the Kaenon sunglasses brand. This was very hard to find. It doesn't include the little gradient on the original logo. Maybe I will add that in the future.
 

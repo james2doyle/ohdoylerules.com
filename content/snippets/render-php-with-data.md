@@ -1,13 +1,14 @@
----
-Title: "Render PHP File With Data"
-Description: "Render PHP File With Data"
-Date: "2013-08-29"
-Category: "Snippets"
-Template: "post"
-Keywords: ["php", "render", "file", "data", "view", "array", "template"]
----
++++
+title = "Render PHP File With Data"
+description = "Render PHP File With Data"
+date = "2013-08-29"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["php", "render", "file", "data", "view", "array", "template"]
++++
 
-I am modifying an open source CMS to use the [Phalcon PHP framework](phalconphp.com/en/ "Phalcon PHP Framework"), as well as the [PHP-Sundown](https://github.com/chobie/php-sundown "PHP-Sundown") C implimentation of Markdown.
+I am modifying an open source CMS to use the [Phalcon PHP framework](phalconphp.com/en/ "Phalcon PHP Framework"), as well as the [PHP-Sundown](https://github.com/chobie/php-sundown "PHP-Sundown") C implementation of Markdown.
 
 It is a very simple CMS which previously would just echo out compiled HTML. But I am using the Volt template engine in Phalcon. It renders `.volt` files to native PHP. This means that I cannot just spit out raw HTML. I need to create a render function that passes an array of data to my PHP file.
 

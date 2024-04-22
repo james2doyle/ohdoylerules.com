@@ -1,11 +1,12 @@
----
-Title: "Tailwind Screens In JS"
-Description: "Detect if a tailwind screen value matches the current window"
-Date: "2020-09-05"
-Category: "Snippets"
-Template: "post"
-Keywords: ["tailwind", "css", "screens", "js"]
----
++++
+title = "Tailwind Screens In JS"
+description = "Detect if a tailwind screen value matches the current window"
+date = "2020-09-05"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["tailwind", "css", "screens", "js"]
++++
 
 If you haven't heard of [Tailwindcss](https://tailwindcss.com/) before, what is going on? It is the hot new CSS framework for building custom designs.
 
@@ -21,7 +22,7 @@ So why might you want to use these values in JS? Well, if you are building compo
 
 Here is the code I used to accomplish this:
 
-<script src="https://gist.github.com/james2doyle/c1306ace82cfe9e22a4ecfff13c6595b.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/c1306ace82cfe9e22a4ecfff13c6595b.js") }}
 
 You can use the function like so:
 

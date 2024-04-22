@@ -1,11 +1,12 @@
----
-Title: "Conditional Vue.js Mixins"
-Description: "How to use commonjs modules as vue.js mixins and how to conditionally load mixins on a per-page-basis."
-Date: "2017-05-25"
-Category: "Tricks"
-Template: "post"
-Keywords: ["nodejs", "vuejs", "require", "mixin", "conditional"]
----
++++
+title = "Conditional Vue.js Mixins"
+description = "How to use commonjs modules as vue.js mixins and how to conditionally load mixins on a per-page-basis."
+date = "2017-05-25"
+category = "Tricks"
+template = "post.html"
+[taxonomies]
+keywords = ["nodejs", "vuejs", "require", "mixin", "conditional"]
++++
 
 When building more traditional Vue.js applications, I tend to use mixins a lot. It helps split up code, speparate concerns, and can allow for some cool tricks. One that i keep using is conditionally requiring a mixin based on the details of the page.
 

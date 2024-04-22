@@ -1,11 +1,12 @@
----
-Title: "Easy Command Line Reverse Geocoding"
-Description: "Easily reverse geocode an address using the command line and the google maps API"
-Date: "2013-11-27"
-Category: "Snippets"
-Template: "post"
-Keywords: ["reverse", "geocode", "command", "line", "cli", "terminal", "json", "google", "maps"]
----
++++
+title = "Easy Command Line Reverse Geocoding"
+description = "Easily reverse geocode an address using the command line and the google maps API"
+date = "2013-11-27"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["reverse", "geocode", "command", "line", "cli", "terminal", "json", "google", "maps"]
++++
 
 Using this function you can easily reverse geocode an address into a *lat and lang* position. This uses the [jq executable](http://stedolan.github.io/jq/) and the [Google Maps API](https://developers.google.com/maps/documentation/geocoding/#GeocodingRequests).
 
@@ -23,7 +24,7 @@ Here is the meat:
 
 #### Function
 
-```shell
+```sh
 function reverse-geocode() {
   # replace spaces with + signs
   STRING=$(echo $1 | tr ' ' '+')

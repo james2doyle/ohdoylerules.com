@@ -1,11 +1,12 @@
----
-Title: "Angular (v1.x) Through iFrame"
-Date: "2018-04-29"
-Category: "Web"
-Template: "post"
-Description: "How to use angular.js (v1.x) through an iframe when the iframe URL is dynamically swapped"
-Keywords: ["angular", "iframe", "sanitize", "contentWindow"]
----
++++
+title = "Angular (v1.x) Through iFrame"
+date = "2018-04-29"
+category = "Web"
+template = "post.html"
+description = "How to use angular.js (v1.x) through an iframe when the iframe URL is dynamically swapped"
+[taxonomies]
+keywords = ["angular", "iframe", "sanitize", "contentWindow"]
++++
 
 **Note**: This is an older project/repo that uses the previous version of Angular (v1.x) so keep that in mind.
 

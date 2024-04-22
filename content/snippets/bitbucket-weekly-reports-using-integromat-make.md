@@ -1,11 +1,12 @@
----
-Title: "Bitbucket Weekly Reports Using Make (Integromat)"
-Description: "Use Make (Integromat) to create a nice weekly report in Slack for all the closed pull-requests in a Bitbucket repository"
-Date: "2022-08-06"
-Category: "Tricks"
-Template: "post"
-Keywords: ["make", "Integromat", "Bitbucket", "report", "git", "slack", "pagination"]
----
++++
+title = "Bitbucket Weekly Reports Using Make (Integromat)"
+description = "Use Make (Integromat) to create a nice weekly report in Slack for all the closed pull-requests in a Bitbucket repository"
+date = "2022-08-06"
+category = "Tricks"
+template = "post.html"
+[taxonomies]
+keywords = ["make", "Integromat", "Bitbucket", "report", "git", "slack", "pagination"]
++++
 
 At my job, we like to keep our team updated with all the dev work we do each week. This means we have meetings every Monday to review the work that has happened since the previous week.
 

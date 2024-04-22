@@ -1,11 +1,12 @@
----
-Title: "Setup A Raspberry Pi with PHP And Lighttpd"
-Description: "Setup a raspberry pi with php 8.1 and the latest lighttpd web server"
-Date: "2022-06-05"
-Category: "Snippets"
-Template: "post"
-Keywords: ["raspberry", "pi", "php", "8.1", "composer", "lighttpd", "apache", "web", "server"]
----
++++
+title = "Setup A Raspberry Pi with PHP And Lighttpd"
+description = "Setup a raspberry pi with php 8.1 and the latest lighttpd web server"
+date = "2022-06-05"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["raspberry", "pi", "php", "8.1", "composer", "lighttpd", "apache", "web", "server"]
++++
 
 I recently got a Raspberry Pi model 4+. I'm using it to [run a minidlna server](https://pimylifeup.com/raspberrypi-minidlna/) that loads music and movies from an old external hard drive that I have. On top of that, I wanted to run a local web server so that I can write scripts and pages that I can access locally on my network without having to have my laptop open and running.
 

@@ -1,11 +1,12 @@
----
-Title: "Docracy SVG logo"
-Date: "2013-10-31"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["docracy", "documents", "legal", "svg", "vector", "ai", "image", "logo"]
-Description: "Docracy logo in vector svg"
----
++++
+title = "Docracy SVG logo"
+description = "Docracy logo in vector svg"
+date = "2013-10-31"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["docracy", "documents", "legal", "svg", "vector", "ai", "image", "logo"]
++++
 
 The other founder of my company ([WARPAINT Media](http://warpaintmedia.ca "WARPAINT Media Homepage")) was working on a blog post where we list all the PAAS/SAAS tools that we use. One of them is [Docracy](https://www.docracy.com/ "Docracy Homepage"). It is a site that shares free legal documents. You can modify and fork them to your own account, they have signing features as well.
 

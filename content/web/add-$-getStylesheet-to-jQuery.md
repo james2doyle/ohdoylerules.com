@@ -1,11 +1,12 @@
----
-Title: "Add $.getStylesheet To jQuery"
-Date: "2016-02-05"
-Category: "Web"
-Template: "post"
-Description: "Ever wanted to have a CSS/Stylesheet version of $.getScript? Well now you can with $.getStylesheet"
-Keywords: ["javascript", "jquery", "getScript", "getStylesheet", "getCss", "plugin", "function", "deferred"]
----
++++
+title = "Add $.getStylesheet To jQuery"
+date = "2016-02-05"
+category = "Web"
+template = "post.html"
+description = "Ever wanted to have a CSS/Stylesheet version of $.getScript? Well now you can with $.getStylesheet"
+[taxonomies]
+keywords = ["javascript", "jquery", "getScript", "getStylesheet", "getCss", "plugin", "function", "deferred"]
++++
 
 Have you ever wanted to do this?
 
@@ -24,6 +25,6 @@ It implements the [$.Deferred](https://api.jquery.com/jQuery.Deferred/) object, 
 
 Here is the little function for [$.getStylesheet](https://gist.github.com/james2doyle/9456c3e145f8d0afbe25). It is just hosted on Github gist, so I can update it if I need to:
 
-<script src="https://gist.github.com/james2doyle/9456c3e145f8d0afbe25.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/9456c3e145f8d0afbe25.js") }}
 
 You can see this is pretty simple. Just add the function after your jQuery script, or somewhere in your main script file.

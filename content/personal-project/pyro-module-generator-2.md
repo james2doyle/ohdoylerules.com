@@ -1,11 +1,12 @@
----
-Title: "PyroCMS Module Generator 2.0"
-Date: "2014-11-16"
-Category: "Personal Project"
-Template: "post"
-Description: "The Pyro Module Generator allows you to rapidly create modules for Pyro 2.2 and up"
-Keywords: ["Phalcon", "generator", "Github", "module", "open source", "PHP", "Pyro", "tool", "build", "live", "demo"]
----
++++
+title = "PyroCMS Module Generator 2.0"
+date = "2014-11-16"
+category = "Personal Project"
+template = "post.html"
+description = "The Pyro Module Generator allows you to rapidly create modules for Pyro 2.2 and up"
+[taxonomies]
+keywords = ["Phalcon", "generator", "Github", "module", "open source", "PHP", "Pyro", "tool", "build", "live", "demo"]
++++
 
 Finally, I found a good excuse to re-write my old [Pyro Module Generator](https://ohdoylerules.com/personal-project/pyro-module-generator).
 

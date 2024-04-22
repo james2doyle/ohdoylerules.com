@@ -1,17 +1,18 @@
----
-Title: "Copy filepath to clipboard in OSX"
-Description: "How to copy a filepath to the clipboard in OSX"
-Date: "2014-07-10"
-Category: "Snippets"
-Template: "post"
-Keywords: ["osx", "apple", "mavericks", "10.9.3", "applescript", "automator", "finder", "clipboard", "copy", "paste", "shortcut"]
----
++++
+title = "Copy filepath to clipboard in OSX"
+description = "How to copy a filepath to the clipboard in OSX"
+date = "2014-07-10"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["osx", "apple", "mavericks", "10.9.3", "applescript", "automator", "finder", "clipboard", "copy", "paste", "shortcut"]
++++
 
 At [WARPAINT](http://warpaintmedia.ca "WARPAINT Media"), we use [Dropbox](https://www.dropbox.com "Dropbox Homepage") for collaborating on our files. This is awesome, but a lot of the times you get some pretty nasty file paths. Especially when you are trying to guide someone to a place where you saved a file.
 
 I wanted to solve this problem by creating an AppleScript service that would allow everyone to **Copy the selected file's path to the clipboard**. Here is how I did it.
 
----
++++
 
 We are going to be using [Automator](http://en.wikipedia.org/wiki/Automator_(software)) to create a new service. Here is the description of Automator in case you don't know what it is:
 

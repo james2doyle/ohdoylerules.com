@@ -1,11 +1,12 @@
----
-Title: "Pyro Github Markdown Field Type"
-Description: "Pyro Github Markdown Field Type"
-Date: "2013-06-23"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["pyrocms", "github", "markdownd", "field", "php", "codeigniter"]
----
++++
+title = "Pyro Github Markdown Field Type"
+description = "Pyro Github Markdown Field Type"
+date = "2013-06-23"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["pyrocms", "github", "markdownd", "field", "php", "codeigniter"]
++++
 
 Github flavoured markdown field type for PyroCMS.
 
@@ -28,7 +29,7 @@ Pyro.*
 
 Input:
 
-~~~~ {.prettyprint .lang-markdown}
+```markdown
 GitHub-Flavored Markdown Comments
 =============================
 
@@ -40,13 +41,11 @@ Based on [Michel Fortin's PHP markdown library](https://github.com/michelf/php-m
 ### Heading 3
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-~~~~
-
-\
+```
 
 Output:
 
-~~~~ {.prettyprint .lang-html}
+```html
 <h1>GitHub-Flavored Markdown Comments</h1>
 
 <p>Based on <a href="https://github.com/michelf/php-markdown/">Michel Fortin's PHP markdown library</a> with added features from <a href="https://github.com/github/github-flavored-markdown">GitHub-flavored Markdown</a>.</p>
@@ -59,7 +58,7 @@ Output:
 <h3>Heading 3</h3>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-~~~~
+```
 
 ### [](#more-info)More Info!
 

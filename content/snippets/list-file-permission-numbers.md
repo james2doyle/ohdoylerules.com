@@ -1,11 +1,12 @@
----
-Title: "List File Permission Numbers"
-Description: "Easily list the chmod numbers for all the files in a folder"
-Date: "2013-12-08"
-Category: "Snippets"
-Template: "post"
-Keywords: ["chmod", "permissions", "file", "numbers", "command", "line", "cli", "terminal"]
----
++++
+title = "List File Permission Numbers"
+description = "Easily list the chmod numbers for all the files in a folder"
+date = "2013-12-08"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["chmod", "permissions", "file", "numbers", "command", "line", "cli", "terminal"]
++++
 
 I wanted to see the chmod numbers for the files in a directory. So I can copy them to the other files. Since I don't want to do that dumb chmod math, I looked for a way to do it easily.
 
@@ -15,7 +16,7 @@ I found the following code:
 
 Add the following to your .bashrc (or .zshrc file if you are cool) and then reload the source of your terminal.
 
-```shell
+```sh
 function show-permissions() {
   ls -l | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
             *2^(8-i));if(k)printf("%0o ",k);print}'

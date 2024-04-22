@@ -1,11 +1,12 @@
----
-Title: "Fastmod Codemod For Refactoring"
-Description: "Fastmod is a command line tool that can help you with large-scale codebase refactors"
-Date: "2021-02-06"
-Category: "Tricks"
-Template: "post"
-Keywords: ["refactor", "code", "delete", "remove", "replace", "find", "webpack", "rewrite", "fix", "fastmod", "codemod"]
----
++++
+title = "Fastmod Codemod For Refactoring"
+description = "Fastmod is a command line tool that can help you with large-scale codebase refactors"
+date = "2021-02-06"
+category = "Tricks"
+template = "post.html"
+[taxonomies]
+keywords = ["refactor", "code", "delete", "remove", "replace", "find", "webpack", "rewrite", "fix", "fastmod", "codemod"]
++++
 
 If you have ever encounter a big refactor, you were probably dreading the steps it would take to get all the changes done. You have to find patterns, replace them, remove old code, rename variables, so much work! Well, like most things in the development world, there are tools to help you do this. Yes, you can use find-and-replace, but that approach is very naïve (as in simple) and doesn't take in some of the more nuanced cases that you will come across.
 

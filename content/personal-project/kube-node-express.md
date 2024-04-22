@@ -1,11 +1,12 @@
----
-Title: "Kube-Node-Express"
-Description: "Kube-Node-Express"
-Date: "2012-10-21"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["kube", "node", "express", "css", "framework", "middleware", "stylus", "jade"]
----
++++
+title = "Kube-Node-Express"
+description = "Kube-Node-Express"
+date = "2012-10-21"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["kube", "node", "express", "css", "framework", "middleware", "stylus", "jade"]
++++
 
 I have released my first node.js-based public repo! It is called [Kube-Node-Express](https://github.com/james2doyle/kube-node-express "Kube-Node-Express").
 

@@ -1,11 +1,12 @@
----
-Title: "No Javascript CSS Accordion"
-Description: "Build an Accordion with just CSS and no Javascript"
-Date: "2012-10-17"
-Category: "Demo"
-Template: "post"
-Keywords: ["no", "javascript", "accordion", "target", "css", "only", "codepen", "fiddle"]
----
++++
+title = "No Javascript CSS Accordion"
+description = "Build an Accordion with just CSS and no Javascript"
+date = "2012-10-17"
+category = "Demo"
+template = "post.html"
+[taxonomies]
+keywords = ["no", "javascript", "accordion", "target", "css", "only", "codepen", "fiddle"]
++++
 
 I made this today. It's a little CSS-only accordion. It uses the `:target` selector. The `:target` selector is rather new. It also has some quirks. It is almost like an onclick without the javascript.
 

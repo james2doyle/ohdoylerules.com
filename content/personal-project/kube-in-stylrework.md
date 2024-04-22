@@ -1,11 +1,12 @@
----
-Title: "Kube in Styl/Rework"
-Description: "Kube in Styl/Rework"
-Date: "2013-07-19"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["kube", "css", "styl", "rework", "stylus", "less", "imperavi"]
----
++++
+title = "Kube in Styl/Rework"
+description = "Kube in Styl/Rework"
+date = "2013-07-19"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["kube", "css", "styl", "rework", "stylus", "less", "imperavi"]
++++
 
 I finally finished the conversion of the [Kube CSS Framework](http://imperavi.com/kube/).
 

@@ -1,11 +1,12 @@
----
-Title: "PhalconPHP Completions"
-Date: "2015-03-20"
-Category: "Personal Project"
-Template: "post"
-Description: "A PhalconPHP completions and snippets package for Sublime Text"
-Keywords: ["sublime", "phalcon", "phalconphp", "completions", "snippet", "package"]
----
++++
+title = "PhalconPHP Completions"
+date = "2015-03-20"
+category = "Personal Project"
+template = "post.html"
+description = "A PhalconPHP completions and snippets package for Sublime Text"
+[taxonomies]
+keywords = ["sublime", "phalcon", "phalconphp", "completions", "snippet", "package"]
++++
 
 I have created a package of Sublime Text completions for [Phalcon PHP](http://phalconphp.com/en/) 1.3.\*.
 

@@ -1,11 +1,12 @@
----
-Title: "PHP Variables in strings"
-Description: "A list of all the ways you can put PHP Variables in strings"
-Date: "2013-03-21"
-Category: "Demo"
-Template: "post"
-Keywords: ["php", "variables", "string", "interpolation", "vars", "in", "text", "render"]
----
++++
+title = "PHP Variables in strings"
+description = "A list of all the ways you can put PHP Variables in strings"
+date = "2013-03-21"
+category = "Demo"
+template = "post.html"
+[taxonomies]
+keywords = ["php", "variables", "string", "interpolation", "vars", "in", "text", "render"]
++++
 
 I have been getting quite annoyed lately when escaping a string to output a PHP variable. So I decided to make a little test so I could see what the best way to tackle this was.
 

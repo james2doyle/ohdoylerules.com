@@ -1,11 +1,12 @@
----
-Title: "Simple Binder"
-Date: "2014-03-14"
-Category: "Personal Project"
-Template: "post"
-Description: "simplebinder is a zero dependency one-way databinder for javascript"
-Keywords: ["data", "binding", "javascript", "jquery", "input", "select", "onchange", "oninput", "dependency"]
----
++++
+title = "Simple Binder"
+date = "2014-03-14"
+category = "Personal Project"
+template = "post.html"
+description = "simplebinder is a zero dependency one-way databinder for javascript"
+[taxonomies]
+keywords = ["data", "binding", "javascript", "jquery", "input", "select", "onchange", "oninput", "dependency"]
++++
 
 The other day I was working on a custom form that had a lot of javascript interaction. It got a little too far before I realized I should have been using something like [Angular.js](http://angularjs.org/). I was looking for a simple one-way databinding library, but I couldn't find anything that wasn't overkill.
 

@@ -1,11 +1,12 @@
----
-Title: "SQL As An API"
-Date: "2019-05-12"
-Category: "Web"
-Template: "post"
-Description: "An example of how to use SQL as an API instead of reaching for something like GraphQL"
-Keywords: ["sql", "graphql", "api", "sqlite", "json", "query", "php"]
----
++++
+title = "SQL As An API"
+date = "2019-05-12"
+category = "Web"
+template = "post.html"
+description = "An example of how to use SQL as an API instead of reaching for something like GraphQL"
+[taxonomies]
+keywords = ["sql", "graphql", "api", "sqlite", "json", "query", "php"]
++++
 
 There has been a lot of fanfare around the idea of [GraphQL](https://graphql.org/) lately. For good reason in my opinion.
 
@@ -291,7 +292,7 @@ As you can see, we try to execute a bad query that would manipulate the data and
 
 Here is a much more robust example with some error handling, proper status codes, parsing of JSON input, and it also allows you to put the `query` in a `GET` or a `POST` request.
 
-<script src="https://gist.github.com/james2doyle/9e4b2b4f17e33bfb236fbdaf96c41a4c.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/9e4b2b4f17e33bfb236fbdaf96c41a4c.js") }}
 
 Try running the example above and giving things a test. Here is our new request that uses JSON instead:
 

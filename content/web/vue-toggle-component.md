@@ -1,11 +1,12 @@
----
-Title: "Vue Toggle Component"
-Description: "A Vue component that is used to create simple switches, toggles, and show/hide experiences"
-Date: "2020-12-04"
-Category: "Web"
-Template: "post"
-Keywords: ["vue", "component", "toggle", "ui", "state", "switch"]
----
++++
+title = "Vue Toggle Component"
+description = "A Vue component that is used to create simple switches, toggles, and show/hide experiences"
+date = "2020-12-04"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["vue", "component", "toggle", "ui", "state", "switch"]
++++
 
 Have you ever created a switch component that just shows and hides an element? How about an accordion? Or maybe a slider? If you distill down these components into their core offering, it is really just a simple state toggle that is either a `boolean` or a index/key value that is being used.
 

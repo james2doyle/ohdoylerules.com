@@ -1,11 +1,12 @@
----
-Title: "Generated Content Article Title"
-Description: "Use Generated Content in CSS to show an Article link in plain text"
-Date: "2012-10-18"
-Category: "Demo"
-Template: "post"
-Keywords: ["generated", "content", "article", "title", "jsfiddle", "title", "button", "work"]
----
++++
+title = "Generated Content in CSS"
+description = "Use Generated Content in CSS to show an Article link in plain text"
+date = "2012-10-18"
+category = "Demo"
+template = "post.html"
+[taxonomies]
+keywords = ["generated", "content", "article", "title", "jsfiddle", "title", "button", "work"]
++++
 
 I like [jsFiddle](http://jsfiddle.net/ "jsFiddle"). I often use it for prototyping. I might want to see what I can make in css or maybe I want to build a little template. A perfect example, I used it to mockup my [work](https://ohdoylerules.com/work/ "Work") section.
 

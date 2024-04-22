@@ -1,11 +1,12 @@
----
-Title: "Using DigitalOcean Spaces"
-Date: "2017-11-18"
-Category: "Web"
-Template: "post"
-Description: "An example project for how to use DigitalOcean Spaces with S3 tools"
-Keywords: ["digitalocean", "spaces", "s3", "aws", "object store"]
----
++++
+title = "Using DigitalOcean Spaces"
+date = "2017-11-18"
+category = "Web"
+template = "post.html"
+description = "An example project for how to use DigitalOcean Spaces with S3 tools"
+[taxonomies]
+keywords = ["digitalocean", "spaces", "s3", "aws", "object store"]
++++
 
 If you are a fan of [DigitalOcean](https://m.do.co/c/802f151adea5), or you keep an eye on DevOps news, then you probably heard about the new [DigitalOcean Spaces](https://www.digitalocean.com/products/object-storage/) offering.
 

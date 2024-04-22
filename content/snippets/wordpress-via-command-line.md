@@ -1,11 +1,12 @@
----
-Title: "Get Wordpress via Command Line"
-Description: "Download and unzip the latest Wordpress version, all via command line"
-Date: "2013-11-21"
-Category: "Snippets"
-Template: "post"
-Keywords: ["wordpress", "install", "bash", "shell", "cli", "command", "line", "script"]
----
++++
+title = "Get Wordpress via Command Line"
+description = "Download and unzip the latest Wordpress version, all via command line"
+date = "2013-11-21"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["wordpress", "install", "bash", "shell", "cli", "command", "line", "script"]
++++
 
 All the cool kids are using the command line these days. This allows you to run quick commands and little functions that would be too tedious to run with a GUI or just clicking around.
 

@@ -1,11 +1,12 @@
----
-Title: "Use Laravel Valet for WordPress Multisites"
-Date: "2019-09-01"
-Category: "Web"
-Template: "post"
-Description: "Use Laravel Valet for developing local WordPress multisites"
-Keywords: ["laravel", valet", "php", "subdomain", "wordpress", "multisite", "setup"]
----
++++
+title = "Use Laravel Valet for WordPress Multisites"
+description = "Use Laravel Valet for developing local WordPress multisites"
+date = "2019-09-01"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["laravel", "valet", "php", "subdomain", "wordpress", "multisite", "setup"]
++++
 
 Working with WordPress multisites can sometimes be a pain. Especially if you are not using the amazing [Laravel Valet](https://laravel.com/docs/6.0/valet) tool to manage your local sites.
 

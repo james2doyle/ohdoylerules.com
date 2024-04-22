@@ -1,11 +1,12 @@
----
-Title: "Using Browser Devtools To Improve Your Bug Reports"
-Date: "2023-03-09"
-Category: "Tricks"
-Template: "post"
-Description: "How to improve your bug reports using the browser dev tools"
-Keywords: ["browser", "devtools", "bug", "reports", "screenshots", "har", "console", "output", "chrome", "firefox", "safari", "edge"]
----
++++
+title = "Using Browser Devtools To Improve Your Bug Reports"
+date = "2023-03-09"
+category = "Tricks"
+template = "post.html"
+description = "How to improve your bug reports using the browser dev tools"
+[taxonomies]
+keywords = ["browser", "devtools", "bug", "reports", "screenshots", "har", "console", "output", "chrome", "firefox", "safari", "edge"]
++++
 
 ### Good bug reports
 
@@ -37,7 +38,7 @@ Have you ever seen a blast of red in the console that states an error? You can t
 
 The output will look something like the following:
 
-```log
+```sh
 (index):233 Uncaught Error: Oh no! Something happened
     at (index):233:9
 (anonymous) @ (index):233

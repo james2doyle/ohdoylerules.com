@@ -1,11 +1,12 @@
----
-Title: "Function Currying To Make Reusable Code"
-Date: "2019-02-17"
-Category: "Web"
-Template: "post"
-Description: "Function currying. If you haven't heard of it before, let me introduce you to this magical pattern that can help reduce duplicate code and improve readability"
-Keywords: ["javascript", "currying", "event", "handlers", "react", "state"]
----
++++
+title = "Function Currying To Make Reusable Code"
+date = "2019-02-17"
+category = "Web"
+template = "post.html"
+description = "Function currying. If you haven't heard of it before, let me introduce you to this magical pattern that can help reduce duplicate code and improve readability"
+[taxonomies]
+keywords = ["javascript", "currying", "event", "handlers", "react", "state"]
++++
 
 Function currying. If you haven't heard of it before, let me introduce you to this magical pattern that can help reduce duplicate code and improve readability.
 

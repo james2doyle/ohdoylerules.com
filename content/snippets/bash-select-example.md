@@ -1,11 +1,12 @@
----
-Title: "Bash select example"
-Description: "An example of how to use the select command in bash to pass arguments to functions"
-Date: "2014-04-07"
-Category: "Snippets"
-Template: "post"
-Keywords: ["select", "bash", "command", "line", "cli", "terminal", "function", "arguments"]
----
++++
+title = "Bash select example"
+description = "An example of how to use the select command in bash to pass arguments to functions"
+date = "2014-04-07"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["select", "bash", "command", "line", "cli", "terminal", "function", "arguments"]
++++
 
 I recently bought 2 [raspberry pi computers](http://raspberrypi.org). One is for home, and one is for the office.
 
@@ -15,7 +16,7 @@ To make my life easier I used the `select` command in bash. The [documentation f
 
 #### Function
 
-```shell
+```sh
 #!/usr/bin/env bash
 
 speak() {

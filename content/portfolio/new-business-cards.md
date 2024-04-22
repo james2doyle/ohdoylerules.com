@@ -1,11 +1,12 @@
----
-Title: "New business cards"
-Description: "Check out my new business cards"
-Date: "2012-11-15"
-Category: "Portfolio"
-Template: "post"
-Keywords: ["portfolio", "business", "cards"]
----
++++
+title = "New business cards"
+description = "Check out my new business cards"
+date = "2012-11-15"
+category = "Portfolio"
+template = "post.html"
+[taxonomies]
+keywords = ["portfolio", "business", "cards"]
++++
 
 Picked up my new cards right before [Dig London](http://www.diglondon.ca/). They have my new favourite emoticon on the back too.
 

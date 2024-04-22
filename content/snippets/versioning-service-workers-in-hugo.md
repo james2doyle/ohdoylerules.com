@@ -1,11 +1,12 @@
----
-Title: "Versioning Service Workers In Hugo"
-Date: "2022-08-21"
-Category: "Snippets"
-Template: "post"
-Description: "How to use Hugo pipes and resources to version your service worker scripts"
-Keywords: ["hugo", "sw", "service worker", "version", "bust", "clear", "script", "resources", "pipes"]
----
++++
+title = "Versioning Service Workers In Hugo"
+date = "2022-08-21"
+category = "Snippets"
+template = "post.html"
+description = "How to use Hugo pipes and resources to version your service worker scripts"
+[taxonomies]
+keywords = ["hugo", "sw", "service worker", "version", "bust", "clear", "script", "resources", "pipes"]
++++
 
 I have been running this blog on [Hugo](https://gohugo.io/) for quite some time. It is fast, well supported, and full of features. Until recently, one of the features I was not taking advantage of was the [pipes feature](https://gohugo.io/hugo-pipes/introduction/).
 

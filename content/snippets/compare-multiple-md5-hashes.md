@@ -1,15 +1,16 @@
----
-Title: "compare multiple md5 hashes"
-Description: "compare multiple md5 hashes"
-Date: "2013-09-15"
-Category: "Snippets"
-Template: "post"
-Keywords: ["md5", "hash", "multiple", "files", "shell", "bash", "trim", "compare"]
----
++++
+title = "compare multiple md5 hashes"
+description = "compare multiple md5 hashes"
+date = "2013-09-15"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["md5", "hash", "multiple", "files", "shell", "bash", "trim", "compare"]
++++
 
 Sometimes you need to check a file against a `md5` hash. This can be annoying. Just look at this output:
 
-```shell
+```sh
 # command
 md5 file.xml ~/Downloads/file.xml file2.xml
 
@@ -21,7 +22,7 @@ MD5 (file.xml) = 389a537b7443108f610038b4e4dd549a
 
 Well it would be nice to not see all that junk in front of the hash. If they were lined up then it would be easier to compare them. Like so:
 
-```shell
+```sh
 # command
 md5-check file.xml ~/Downloads/file.xml file2.xml
 
@@ -33,7 +34,7 @@ md5-check file.xml ~/Downloads/file.xml file2.xml
 
 Better. Here is the `md5-check` function I wrote to take an array of arguments and then trim out all the garabage.
 
-```shell
+```sh
 function md5-check() {
   for ARG in "$@"
   do
@@ -45,7 +46,7 @@ function md5-check() {
 
 It is also good for saving the output of a md5 hash:
 
-```shell
+```sh
 # output into file
 md5-check Downloads/logo.jpg | > check.md5
 
@@ -56,7 +57,7 @@ cat check.md5
 
 Or you can read the file contents and compare it to the file's md5 hash:
 
-```shell
+```sh
 md5-check Downloads/logo.jpg && cat check.md5
 ```
 

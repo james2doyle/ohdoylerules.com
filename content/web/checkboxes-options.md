@@ -1,11 +1,12 @@
----
-Title: "Making Checkboxes in WordPress options pages"
-Description: "Making Checkboxes in WordPress options pages"
-Date: "2012-08-11"
-Category: "Web"
-Template: "post"
-Keywords: ["checkbox", "checkboxes", "checked", "HTML", "input", "options", "PHP", "WordPress"]
----
++++
+title = "Making Checkboxes in WordPress options pages"
+description = "Making Checkboxes in WordPress options pages"
+date = "2012-08-11"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["checkbox", "checkboxes", "checked", "HTML", "input", "options", "PHP", "WordPress"]
++++
 
 I am in the process of building my first WordPress plugin. Of course I am wildly researching how to do things. One thing that was particularly hard to find was how to use checkboxes in options pages. Here is the solution I used.
 

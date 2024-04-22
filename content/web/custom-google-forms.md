@@ -1,13 +1,13 @@
----
-Title: "Custom Google Forms"
-Description: "I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something"
-Author: "James Doyle"
-Date: "2013-05-22"
-Updated: "2014-09-20"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["CSS", "custom", "drive", "forms", "Github", "google", "less", "node", "open source", "preprocessors"]
----
++++
+title = "Custom Google Forms"
+description = "I have been complaining about the lack of themes for google forms for a while now. I finally decided to stop crying and do something"
+date = "2013-05-22"
+updated = "2014-09-20"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["CSS", "custom", "drive", "forms", "Github", "google", "less", "node", "open source", "preprocessors"]
++++
 
 <div class="center">
   <img src="/images/googleforms.png" alt="" align="middle">

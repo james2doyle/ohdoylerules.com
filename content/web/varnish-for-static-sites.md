@@ -1,11 +1,12 @@
----
-Title: "Varnish For Static Sites"
-Date: "2015-09-20"
-Category: "Web"
-Template: "post"
-Description: "a small tutorial for how to setup Varnish cache for a flat site running on Apache"
-Keywords: ["varnish", "flat", "file", "site", "apache", "ubuntu", "install", "setup", "config"]
----
++++
+title = "Varnish For Static Sites"
+date = "2015-09-20"
+category = "Web"
+template = "post.html"
+description = "a small tutorial for how to setup Varnish cache for a flat site running on Apache"
+[taxonomies]
+keywords = ["varnish", "flat", "file", "site", "apache", "ubuntu", "install", "setup", "config"]
++++
 
 Recently, [my company](http://warpaintmedia.ca) had a request to build a series of sites that could handle huge bursts of traffic. I asked some friends of mine, what a good solution for this would be. All of them said [Varnish](https://www.varnish-cache.org/).
 
@@ -85,7 +86,7 @@ Most likely, you will only change the `-a` part to `80`.
 
 Our Varnish configuration for our site lives at `/etc/varnish/default.vcl`, here is the one I am using:
 
-<script src="https://gist.github.com/james2doyle/0feec6ab77078ad3fdce.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/0feec6ab77078ad3fdce.js") }}
 
 It is very basic. I really only want to cache text files (HTML, CSS, Javascript/JSON) and images.
 

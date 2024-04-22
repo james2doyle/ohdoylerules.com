@@ -1,11 +1,12 @@
----
-Title: "Build A Multi-lingual Laravel Site With Subdomains"
-Date: "2019-08-25"
-Category: "Web"
-Template: "post"
-Description: "Have you ever wanted to use subdomains in Laravel to control logic, locale, or other functionality? Well, this example might help."
-Keywords: ["laravel", "php", "locale", "subdomain", "routing", "switch", "multisite", "multilingual", "translation"]
----
++++
+title = "Build A Multi-lingual Laravel Site With Subdomains"
+date = "2019-08-25"
+category = "Web"
+template = "post.html"
+description = "Have you ever wanted to use subdomains in Laravel to control logic, locale, or other functionality? Well, this example might help."
+[taxonomies]
+keywords = ["laravel", "php", "locale", "subdomain", "routing", "switch", "multisite", "multilingual", "translation"]
++++
 
 OK, so you want to make Laravel a multi-lingual (or just multi-functional) site based off the subdomain? Cool. Must be an interesting project.
 

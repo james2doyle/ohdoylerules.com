@@ -1,11 +1,12 @@
----
-Title: "CSS3 Pagebend"
-Description: "Create a Pagebend effect using CSS"
-Date: "2012-09-18"
-Category: "Fiddle"
-Template: "post"
-Keywords: ["css3", "page", "bend", "flip", "fold", "animation", "transition", "3d"]
----
++++
+title = "CSS3 Pagebend"
+description = "Create a Pagebend effect using CSS"
+date = "2012-09-18"
+category = "Fiddle"
+template = "post.html"
+[taxonomies]
+keywords = ["css3", "page", "bend", "flip", "fold", "animation", "transition", "3d"]
++++
 
 I crafted [this lil' beauty](http://codepen.io/james2doyle/pen/HpbrL "css3-pagebend") in class today. It turns out that it is really hard to make transforming elements intersect. At least, I couldn't figure it out.
 

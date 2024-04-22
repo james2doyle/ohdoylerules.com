@@ -1,11 +1,12 @@
----
-Title: "Create JSON Sections In Shopify"
-Date: "2020-01-05"
-Category: "Web"
-Template: "post"
-Description: "A demo on how to create a section in Shopify that returns JSON and HTML"
-Keywords: ["shopify", "theme", "editor", "builder", "section", "JSON", "render", "liquid"]
----
++++
+title = "Create JSON Sections In Shopify"
+date = "2020-01-05"
+category = "Web"
+template = "post.html"
+description = "A demo on how to create a section in Shopify that returns JSON and HTML"
+[taxonomies]
+keywords = ["shopify", "theme", "editor", "builder", "section", "JSON", "render", "liquid"]
++++
 
 If you're like me, you're probably constantly running into issues with the flexibility of Shopify themes. There are a lot of issues that come up when trying to squeeze in features and functionality that are "shop-adjacent". Shopify does a good job at running a store but it can be difficult to reach beyond that and make some more interactive experiences.
 
@@ -19,7 +20,7 @@ Well, this is possible by taking advantage of the "page state" when being called
 
 Here is an example of the if statement required:
 
-```liquid
+```jinja2
 {% comment %}https://help.shopify.com/en/themes/development/sections/section-rendering-api{% endcomment %}
 {% comment %}request.page_type will be "index" when using the section rendering API{% endcomment %}
 {% comment %}content_for_header will contain the query string in the request{% endcomment %}

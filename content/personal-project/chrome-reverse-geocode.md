@@ -1,11 +1,12 @@
----
-Title: "Chrome Reverse Geocode App"
-Description: "Chrome Reverse Geocode App"
-Date: "2014-01-08"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["google maps", "reverse", "geocoding", "chrome", "packaged", "app"]
----
++++
+title = "Chrome Reverse Geocode App"
+description = "Chrome Reverse Geocode App"
+date = "2014-01-08"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["google maps", "reverse", "geocoding", "chrome", "packaged", "app"]
++++
 
 I have created a new app (with the help of [Beatrice Law](https://twitter.com/beatricelaw)) called [Reverse Geocode](http://goo.gl/Z15Teh "Reverse Geocode on the Chrome Web Store").
 

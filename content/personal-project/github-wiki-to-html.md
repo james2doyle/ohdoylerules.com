@@ -1,11 +1,12 @@
----
-Title: "Github Wiki To HTML"
-Description: "Github Wiki To HTML"
-Date: "2013-11-17"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["github", "gh pages", "markdown", "md", "wiki", "html", "marked", "node", "export"]
----
++++
+title = "Github Wiki To HTML"
+description = "Github Wiki To HTML"
+date = "2013-11-17"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["github", "gh pages", "markdown", "md", "wiki", "html", "marked", "node", "export"]
++++
 
 Have you ever wanted to convert a Github wiki to a set of HTML pages? This can be an easy way to generate new gh-pages (github web pages) based on the projects Wiki.
 
@@ -23,7 +24,7 @@ After cloning the *.wiki* repo to your local, you can create a script to convert
 * run `chmod +x convert.sh` on that file to allow execution
 * paste the following into the file:
 
-```shell
+```sh
 #!/bin/bash
 
 # for each md file in the directory

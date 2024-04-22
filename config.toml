@@ -1,44 +1,47 @@
-baseURL = "https://ohdoylerules.com/"
-
-# docs can be used for gh-pages without having to have a gh-pages branch
-publishDir = "docs"
-
-languageCode = "en-us"
 title = "James Doyle"
+description = "The personal blog of James Doyle (james2doyle) Web Developer in Canada."
 
-# theme = "odr"
+# The URL the site will be built for
+base_url = "https://ohdoylerules.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+minify_html = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
 theme = "odr-hack"
 
-verbose = true
-verboseLog = true
+generate_feed = true
 
+# For overriding the default output directory `public`, set it to another value (e.g.: "docs")
+output_dir = "docs"
+
+taxonomies = [{ name = "keywords", feed = false, rss = false, render = false, paginate_by = 5 }]
+
+# The default author for pages
+author = "james2doyle@gmail.com (James Doyle)"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+# Put all your custom variables here
 copyright = "This work is licensed under The MIT License (MIT)."
 
-pygmentsCodeFences = true
-pygmentsStyle = "dracula"
+author_name = "James Doyle"
+author_email = "james2doyle@gmail.com"
+author_subtitle = "OhDoyleRules"
 
-[markup.goldmark.renderer]
-  unsafe = true
-
-[author]
-  name = "James Doyle"
-  email = "james2doyle@gmail.com"
-  subtitle = "OhDoyleRules"
-
-[permalinks]
-  post = "/:title/"
-
-[taxonomies]
-  category = "category"
-  tag = "tags"
-
-[params]
-  Description = "The personal blog of James Doyle (james2doyle) Web Developer in Canada."
-  Date_format = "January 2, 2006"
-  Email = "james2doyle@gmail.com"
-  Twitter = "james2doyle"
-  Github = "james2doyle"
-  Googleplus = "109231487156400680487"
-  Referral_code = "https://www.digitalocean.com/?refcode=baa9cb97566c"
-  Author_blurb = "I'm a full-stack developer, co-organizer of <a href=\"https://www.meetup.com/vancouver-php\" title=\"PHP Vancouver\" target=\"_blank\">PHP Vancouver</a> meetup, and winner of a <a href=\"http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/\" title=\"Canadian Developer 30 under 30 award\" target=\"_blank\">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill."
-  Gravatar = "https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&d=mm&r=g"
+params_description = "The personal blog of James Doyle (james2doyle) Web Developer in Canada."
+params_date_format = "January 2, 2006"
+params_email = "james2doyle@gmail.com"
+params_twitter = "james2doyle"
+params_github = "james2doyle"
+params_referral_code = "https://www.digitalocean.com/?refcode=baa9cb97566c"
+params_author_blurb = "I'm a full-stack developer, co-organizer of <a href=\"https://www.meetup.com/vancouver-php\" title=\"PHP Vancouver\" target=\"_blank\">PHP Vancouver</a> meetup, and winner of a <a href=\"http://www.canadianbusiness.com/innovation/developer-30-under-30-gallery/image/20/\" title=\"Canadian Developer 30 under 30 award\" target=\"_blank\">Canadian Developer 30 under 30 award</a>. I'm a huge Open Source advocate and contributor to a lot of projects in my community. When I am not sitting at a computer, I'm trying to perfect some other skill."
+params_gravatar = "https://www.gravatar.com/avatar/b7375c88e1864c4ddf0d7bdab58e4cca?s=120&d=mm&r=g"

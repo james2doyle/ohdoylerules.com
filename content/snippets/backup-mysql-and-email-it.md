@@ -1,11 +1,12 @@
----
-Title: "Backup MySQL And Email It"
-Description: "Don't bother paying for a SaaS that creates MySQL backups and emails them to you on a schedule, you can do this with CRON and a small script"
-Date: "2016-03-24"
-Category: "Snippets"
-Template: "post"
-Keywords: ["mysql", "backup", "email", "mailgun", "curl", "mysqldump", "shell", "script", "cron", "sendmail", "mail"]
----
++++
+title = "Backup MySQL And Email It"
+description = "Don't bother paying for a SaaS that creates MySQL backups and emails them to you on a schedule, you can do this with CRON and a small script"
+date = "2016-03-24"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["mysql", "backup", "email", "mailgun", "curl", "mysqldump", "shell", "script", "cron", "sendmail", "mail"]
++++
 
 Recently, a friend of mine asked me what we use for managing the backups for our clients. I mentioned that we use `mysqldump` running on a `CRON` schedule. He said that he used a paid service for managing all the servers and their backups. He mentioned it sends to an Amazon S3 bucket, and also sends a notification.
 
@@ -37,7 +38,7 @@ So, without spending any money, I can get a SaaS experience using some built-in 
 
 You can see the script here:
 
-<script src="https://gist.github.com/james2doyle/6e471dee73124eddda8c.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/6e471dee73124eddda8c.js") }}
 
 I included some rules for the `crontab` settings. I used `0 0 * * 1 *` which is once a week on Monday at midnight.
 

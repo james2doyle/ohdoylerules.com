@@ -1,11 +1,12 @@
----
-Title: "Kijiji Vector Logo"
-Date: "2014-11-14"
-Category: "Web"
-Template: "post"
-Description: "the kijiji logo as a vector svg file"
-Keywords: ["kijiji", "ebay", "vector", "logo", "svg", "eps", "download"]
----
++++
+title = "Kijiji Vector Logo"
+date = "2014-11-14"
+category = "Web"
+template = "post.html"
+description = "the kijiji logo as a vector svg file"
+[taxonomies]
+keywords = ["kijiji", "ebay", "vector", "logo", "svg", "eps", "download"]
++++
 
 This logo was not only impossible to find, because searching for "kijiji vector logo" returns nothing but people wanting to sell vector logos **on** Kijiji, but it was difficult to trace as well.
 
