@@ -1,9 +1,9 @@
 +++
 title = "Use Your Numberpad To Control Google Hangouts/Meet"
+description = "Using Hammerspoon to create shortcuts on a number pad that can control Google Hangouts/Meet"
 date = "2023-03-10"
 category = "Tricks"
 template = "post.html"
-description = "Using Hammerspoon to create shortcuts on a number pad that can control Google Hangouts/Meet"
 [taxonomies]
 keywords = ["hammerspoon", "number", "pad", "shortcuts", "lua", "google", "hangouts", "meet", "toggle", "mute"]
 +++

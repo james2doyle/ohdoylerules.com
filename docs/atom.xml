@@ -5,8 +5,60 @@
     <link rel="self" type="application/atom+xml" href="https://ohdoylerules.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ohdoylerules.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-03-10T00:00:00+00:00</updated>
+    <updated>2024-04-21T00:00:00+00:00</updated>
     <id>https://ohdoylerules.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Hammerspoon hyper key</title>
+        <published>2024-04-21T00:00:00+00:00</published>
+        <updated>2024-04-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              james2doyle@gmail.com (James Doyle)
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ohdoylerules.com/tricks/hammerspoon-hyper-key/"/>
+        <id>https://ohdoylerules.com/tricks/hammerspoon-hyper-key/</id>
+        
+        <content type="html" xml:base="https://ohdoylerules.com/tricks/hammerspoon-hyper-key/">&lt;p&gt;If you aren&#x27;t using &lt;a href=&quot;https:&#x2F;&#x2F;www.hammerspoon.org&#x2F;&quot;&gt;Hammerspoon&lt;&#x2F;a&gt; on OSX, you are missing out!&lt;&#x2F;p&gt;
+&lt;p&gt;It has some great features that you can use to control your desktop, automate tasks, build small UIs and toolbar apps. It can also trigger key presses and modifiers like shift, alt, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the script I use to create &amp;quot;hyper&amp;quot; key shortcuts. If you aren&#x27;t aware, the hyper key is a modifier key that combines the Shift, Control, Alt, and Command&#x2F;Windows keys simultaneously. Then you can press a regular key and use that for shortcuts.&lt;&#x2F;p&gt;
+&lt;p&gt;I wrote an article a while back to &lt;a href=&quot;&#x2F;tricks&#x2F;hammerspoon-number-pad-shortcuts&#x2F;&quot;&gt;&amp;quot;Use Your Numberpad To Control Google Hangouts&#x2F;Meet&amp;quot;&lt;&#x2F;a&gt; which is pretty handy. It uses a similar trick to play out a combination of keys and trigger actions in Chrome.&lt;&#x2F;p&gt;
+&lt;p&gt;The script below watches the keyboard for the hyper key + another key. In the script below, I just bind the hyper key + some letter keys to trigger apps to focus.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;lua&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-lua &quot;&gt;&lt;code class=&quot;language-lua&quot; data-lang=&quot;lua&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;-- verbose logging
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;-- hs.logger.setGlobalLogLevel(5)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;local &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyperKeyLogger &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hs&lt;&#x2F;span&gt;&lt;span&gt;.logger.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;new&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;hyperkey&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;,&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;debug&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;-- a table of mapping single keys to the apps they open&#x2F;switch to
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;local &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyper_key_shortcuts &lt;&#x2F;span&gt;&lt;span&gt;= {}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyper_key_shortcuts&lt;&#x2F;span&gt;&lt;span&gt;[&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;C&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;] = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Google Chrome&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyper_key_shortcuts&lt;&#x2F;span&gt;&lt;span&gt;[&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;F&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;] = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Finder&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyper_key_shortcuts&lt;&#x2F;span&gt;&lt;span&gt;[&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;S&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;] = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Sublime Text&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyper_key_shortcuts&lt;&#x2F;span&gt;&lt;span&gt;[&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;T&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;] = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;WezTerm&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyper_key_shortcuts&lt;&#x2F;span&gt;&lt;span&gt;[&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;W&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;] = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;WhatsApp&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyper_key_shortcuts&lt;&#x2F;span&gt;&lt;span&gt;[&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Z&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;] = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Zed&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;-- you can add some more apps here
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;-- sort through all the items in the table and add the listeners for them
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hs&lt;&#x2F;span&gt;&lt;span&gt;.fnutils.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sortByKeys&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyper_key_shortcuts&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;do
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hs&lt;&#x2F;span&gt;&lt;span&gt;.hotkey.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bind&lt;&#x2F;span&gt;&lt;span&gt;({&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;cmd&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ctrl&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;option&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;shift&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;}, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyperKeyLogger&lt;&#x2F;span&gt;&lt;span&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;v&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;[hyper &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;..&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;] pressed&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;)
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyperKeyLogger&lt;&#x2F;span&gt;&lt;span&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;v&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;[hyper &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;..&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;] released&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;-- @see https:&#x2F;&#x2F;www.hammerspoon.org&#x2F;docs&#x2F;hs.application.html#open
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;-- this will open the app if it is closed, or focus it if it is open
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hs&lt;&#x2F;span&gt;&lt;span&gt;.application.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;open&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hyperKeyLogger&lt;&#x2F;span&gt;&lt;span&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;v&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;[hyper &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;..&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;] repeated&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;)
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;end
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Use Your Numberpad To Control Google Hangouts&#x2F;Meet</title>
         <published>2023-03-10T00:00:00+00:00</published>
