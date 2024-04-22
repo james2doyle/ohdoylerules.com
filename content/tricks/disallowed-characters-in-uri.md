@@ -1,11 +1,12 @@
----
-Title: "Disallowed Characters In URI"
-Description: "The URI you submitted has disallowed characters"
-Date: "2015-03-31"
-Category: "Tricks"
-Template: "post"
-Keywords: ["php", "codeigniter", "disallowed", "characters", "400", "error", "paragraph ending", "%E2%80%8B"]
----
++++
+title = "Disallowed Characters In URI"
+description = "The URI you submitted has disallowed characters"
+date = "2015-03-31"
+category = "Tricks"
+template = "post.html"
+[taxonomies]
+keywords = ["php", "codeigniter", "disallowed", "characters", "400", "error", "paragraph ending", "%E2%80%8B"]
++++
 
 How to fix "The URI you submitted has disallowed characters" error.
 

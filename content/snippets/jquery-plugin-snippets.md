@@ -1,11 +1,12 @@
----
-Title: "jQuery Plugin Snippets for Sublime Text 2"
-Description: "jQuery Plugin Snippets for Sublime Text 2"
-Date: "2013-03-28"
-Category: "Snippets"
-Template: "post"
-Keywords: ["editor", "Github", "javascript", "jquery", "open source", "Plugin", "snippets", "sublime text"]
----
++++
+title = "jQuery Plugin Snippets for Sublime Text 2"
+description = "jQuery Plugin Snippets for Sublime Text 2"
+date = "2013-03-28"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["editor", "Github", "javascript", "jquery", "open source", "Plugin", "snippets", "sublime text"]
++++
 
 <div class="center">
   <img src="/images/jquery.png" alt="jquery logo">

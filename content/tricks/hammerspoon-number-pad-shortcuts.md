@@ -1,11 +1,12 @@
----
-Title: "Use Your Numberpad To Control Google Hangouts/Meet"
-Date: "2023-03-10"
-Category: "Tricks"
-Template: "post"
-Description: "Using Hammerspoon to create shortcuts on a number pad that can control Google Hangouts/Meet"
-Keywords: ["hammerspoon", "number", "pad", "shortcuts", "lua", "google", "hangouts", "meet", "toggle", "mute"]
----
++++
+title = "Use Your Numberpad To Control Google Hangouts/Meet"
+date = "2023-03-10"
+category = "Tricks"
+template = "post.html"
+description = "Using Hammerspoon to create shortcuts on a number pad that can control Google Hangouts/Meet"
+[taxonomies]
+keywords = ["hammerspoon", "number", "pad", "shortcuts", "lua", "google", "hangouts", "meet", "toggle", "mute"]
++++
 
 ### The number pad
 
@@ -65,7 +66,7 @@ One of the great things about using `cmd+shift+A` is that it will find **tabs ac
 
 I have another shortcut setup on `pad.` that will switch to the hangouts tab and toggle "mute":
 
-```lua {hl_lines=["15-18"]}
+```lua,hl_lines=15-18
 -- "pad." -- focus the Chrome, switch to the hangouts tab, toggle mute
 hs.hotkey.bind({}, "pad.", "Toggle Hangouts Mute", function ()
   shortcutsLogger:d("[pad.] pressed")

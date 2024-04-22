@@ -1,11 +1,12 @@
----
-Title: "Detect Animation Events in Javascript"
-Description: "Detect Animation Events in Javascript"
-Date: "2013-05-31"
-Category: "Snippets"
-Template: "post"
-Keywords: ["detect", "animation", "events", "javascript"]
----
++++
+title = "Detect Animation Events in Javascript"
+description = "Detect Animation Events in Javascript"
+date = "2013-05-31"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["detect", "animation", "events", "javascript"]
++++
 
 Whenever I am doing animations that have javascript and CSS, most of the time, I want an callback to fire in javascript when the animations are complete. I have used this event for modals and little UI plugins. Normally, I would have a start event(click or touch) that just adds a class that has a CSS animation attached to it. Lets say we have a class called 'on'.
 

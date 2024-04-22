@@ -1,11 +1,12 @@
----
-Title: "When And Where To Compromise Your App Design"
-Date: "2018-10-21"
-Category: "Web"
-Template: "post"
-Description: "When initially developing an application or a new feature we are constantly trying to balance best practices in design with delivering a finished product."
-Keywords: ["application", "design", "database", "API", "JSON", "packages", "vendor"]
----
++++
+title = "When And Where To Compromise Your App Design"
+date = "2018-10-21"
+category = "Web"
+template = "post.html"
+description = "When initially developing an application or a new feature we are constantly trying to balance best practices in design with delivering a finished product."
+[taxonomies]
+keywords = ["application", "design", "database", "API", "JSON", "packages", "vendor"]
++++
 
 _**You won't believe number 3!**_
 

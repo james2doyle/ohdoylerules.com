@@ -1,11 +1,12 @@
----
-Title: "WYSIWYG in PyroCMS Widgets"
-Description: "WYSIWYG in PyroCMS Widgets"
-Date: "2012-11-10"
-Category: "Snippets"
-Template: "post"
-Keywords: ["WYSIWYG", "PyroCMS", "Widgets"]
----
++++
+title = "WYSIWYG in PyroCMS Widgets"
+description = "WYSIWYG in PyroCMS Widgets"
+date = "2012-11-10"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["WYSIWYG", "PyroCMS", "Widgets"]
++++
 
 I have been working on a site that uses [PyroCMS](https://www.pyrocms.com/ "PyroCMS Homepage"). I needed to build a custom widget that had a WYSIWYG textarea. This is what worked for me.
 

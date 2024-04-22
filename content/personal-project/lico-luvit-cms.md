@@ -1,11 +1,12 @@
----
-Title: "Lico"
-Date: "2014-08-04"
-Description: "Lico is a re-creation of the PicoCMS for PHP, but written for Luvit for Lua"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["lico", "lua", "luvit", "luajit", "markdown", "flat", "file", "cms", "sltluv", "pico", "php", "template", "node", "joyent", "nodejs", "libuv"]
----
++++
+title = "Lico"
+date = "2014-08-04"
+description = "Lico is a re-creation of the PicoCMS for PHP, but written for Luvit for Lua"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["lico", "lua", "luvit", "luajit", "markdown", "flat", "file", "cms", "sltluv", "pico", "php", "template", "node", "joyent", "nodejs", "libuv"]
++++
 
 I have re-created Pico ([github](https://github.com/picocms/Pico) or [homepage](http://picocms.org/)) using the awesome [Luvit](https://github.com/luvit/luvit) framework. Luvit is a [LuaJIT](http://luajit.org/) wrapper for [libuv](https://github.com/joyent/libuv), of [node.js](http://nodejs.org/) fame. It is called [Lico](https://github.com/james2doyle/Lico "Lico On Github")!
 

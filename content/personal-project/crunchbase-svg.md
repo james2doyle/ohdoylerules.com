@@ -1,11 +1,12 @@
----
-Title: "CrunchBase SVG logo"
-Description: "CrunchBase SVG logo"
-Date: "2013-05-29"
-Category: "Personal Project,Web"
-Template: "post"
-Keywords: ["crunchbase", "logo", "vector", "svg", "ai", "image"]
----
++++
+title = "CrunchBase SVG logo"
+description = "CrunchBase SVG logo"
+date = "2013-05-29"
+category = "Personal Project,Web"
+template = "post.html"
+[taxonomies]
+keywords = ["crunchbase", "logo", "vector", "svg", "ai", "image"]
++++
 
 I needed the CrunchBase logo in a vector so I had to create it from
 scratch.

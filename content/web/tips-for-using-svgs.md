@@ -1,11 +1,12 @@
----
-Title: "Tips For Using SVGs"
-Description: "I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind."
-Date: "2014-05-17"
-Category: "Web"
-Template: "post"
-Keywords: ["svg", "image", "pattern", "base64", "embed", "object", "safari", "issues", "viewbox", "requestAnimationFrame", "mask", "animations", "transitions"]
----
++++
+title = "Tips For Using SVGs"
+description = "I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind."
+date = "2014-05-17"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["svg", "image", "pattern", "base64", "embed", "object", "safari", "issues", "viewbox", "requestAnimationFrame", "mask", "animations", "transitions"]
++++
 
 I found using SVGs can be both amazing and extremely frustrating, so I have to share this information so no one looses their mind.
 

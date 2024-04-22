@@ -1,11 +1,12 @@
----
-Title: "Validate Email With Lua"
-Description: "A verbose email validation function for Lua"
-Date: "2015-09-06"
-Category: "Snippets"
-Template: "post"
-Keywords: ["Lua", "valid", "email", "address", "test"]
----
++++
+title = "Validate Email With Lua"
+description = "A verbose email validation function for Lua"
+date = "2015-09-06"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["Lua", "valid", "email", "address", "test"]
++++
 
 Checking if an email is valid should be easy, right? WRONG.
 
@@ -17,7 +18,7 @@ Looking at the results that Wikipedia gives me for emails that should fail or pa
 
 Here is the final product. I added some nice comments to explain some of the rules as well.
 
-<script src="https://gist.github.com/james2doyle/67846afd05335822c149.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/67846afd05335822c149.js") }}
 
 You can see there is a lot more logic than expected. I also made this function have multiple returns.
 

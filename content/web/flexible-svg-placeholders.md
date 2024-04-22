@@ -1,11 +1,12 @@
----
-Title: "Flexible SVG Placeholder Images"
-Description: "Replace a service like placehold.it with your own local version that serves SVG images"
-Date: "2014-05-24"
-Category: "Web"
-Template: "post"
-Keywords: ["php", "svg", "image", "placeholder", "placehold.it", "vector", "center", "text", "server", "placekitten"]
----
++++
+title = "Flexible SVG Placeholder Images"
+description = "Replace a service like placehold.it with your own local version that serves SVG images"
+date = "2014-05-24"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["php", "svg", "image", "placeholder", "placehold.it", "vector", "center", "text", "server", "placekitten"]
++++
 
 Do you use [placehold.it](http://placehold.it "Placehold.it Homepage")? It is a great service. The only thing is when you are offline, or you are testing a page that needs a lot of placeholders, it may not be the greatest solution.
 
@@ -21,7 +22,7 @@ Here are the properties you can set:
 
 Here is the actual SVG file. As you can see it is a PHP file, but you are serving it as an SVG (see the `Content-Type` part?). Here we grab the URL arguments and assign them to the SVG.
 
-<script src="https://gist.github.com/3aad1d22163c3c3e5cfd.js?file=placeholder-svg.php" type="text/javascript"></script>
+{{ gist(src="https://gist.github.com/3aad1d22163c3c3e5cfd.js?file=placeholder-svg.php") }}
 
 If you saved the file as `placeholder-svg.php` then it would be used like so:
 

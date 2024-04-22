@@ -1,11 +1,12 @@
----
-Title: "Simple Benchmarks With Apache AB"
-Date: "2015-09-22"
-Category: "Web"
-Template: "post"
-Description: "a tutorial for generating simple benchmarks using the Apache ab tool"
-Keywords: ["ab", "apache", "bench", "load", "test", "request", "mock", "performance", "response"]
----
++++
+title = "Simple Benchmarks With Apache AB"
+date = "2015-09-22"
+category = "Web"
+template = "post.html"
+description = "a tutorial for generating simple benchmarks using the Apache ab tool"
+[taxonomies]
+keywords = ["ab", "apache", "bench", "load", "test", "request", "mock", "performance", "response"]
++++
 
 ### Why Benchmark?
 
@@ -27,7 +28,7 @@ I found [a great article on this site](https://www.devside.net/wamp-server/load-
 
 I used the following script, based on that article above, that tests a site in succession and prints the results to a file.
 
-<script src="https://gist.github.com/james2doyle/1b77386317af93a0e5b2.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/1b77386317af93a0e5b2.js") }}
 
 To run the script, download it and unzip it. Then run `chmod +x bench.sh` to allow the script to run. Then you can use `./bench` and the script will begin.
 

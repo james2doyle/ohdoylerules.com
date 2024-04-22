@@ -1,11 +1,12 @@
----
-Title: "Vuex Crosstab Plugin"
-Description: "CrossTab syncs Vuex state across same-origin tabs. Converted from storeon crosstab"
-Date: "2020-09-03"
-Category: "Snippets"
-Template: "post"
-Keywords: ["vue", "vuex", "plugin", "store", "sync", "tab", "window", "event", "bus", "localstorage", "storage"]
----
++++
+title = "Vuex Crosstab Plugin"
+description = "CrossTab syncs Vuex state across same-origin tabs. Converted from storeon crosstab"
+date = "2020-09-03"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["vue", "vuex", "plugin", "store", "sync", "tab", "window", "event", "bus", "localstorage", "storage"]
++++
 
 Did you know that you can use localstorage as an event bus between same-origin tabs?
 

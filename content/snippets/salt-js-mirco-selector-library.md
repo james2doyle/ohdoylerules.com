@@ -1,12 +1,12 @@
----
-Title: "Salt.js micro selector library"
-Description: "Salt.js micro selector library"
-Date: "2013-05-12"
-Category: "Personal Project"
-Template: "post"
-Description: "salt.js is micro DOM selector library. Minified, it comes in at 255 bytes"
-Keywords: ["dom", "html5", "javascript", "js", "micro", "mini", "$", "querySelectorAll", "sizzle", "matching", "mapping"]
----
++++
+title = "Salt.js micro selector library"
+description = "salt.js is micro DOM selector library. Minified, it comes in at 255 bytes"
+date = "2013-05-12"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["dom", "html5", "javascript", "js", "micro", "mini", "$", "querySelectorAll", "sizzle", "matching", "mapping"]
++++
 
 <div class="center">
   <img src="/images/saltjs.png" alt="Slat.js Logo">

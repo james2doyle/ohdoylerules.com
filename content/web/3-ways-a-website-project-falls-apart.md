@@ -1,11 +1,12 @@
----
-Title: "3 Ways A Website Project Falls Apart"
-Description: "Over the last 7 years, I have been a part of hundreds of website projects. Here are some of the most common ways I have seen a project fail."
-Date: "2017-07-29"
-Category: "Web"
-Template: "post"
-Keywords: ["website", "fail", "project", "fall apart", "success", "content", "responsibilities", "deadlines"]
----
++++
+title = "3 Ways A Website Project Falls Apart"
+description = "Over the last 7 years, I have been a part of hundreds of website projects. Here are some of the most common ways I have seen a project fail."
+date = "2017-07-29"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["website", "fail", "project", "fall apart", "success", "content", "responsibilities", "deadlines"]
++++
 
 <div class="center">
   <img src="/images/broken-glass.jpg" alt="Mens shoes on broken glass. Photo by veeterzy on Unsplash">

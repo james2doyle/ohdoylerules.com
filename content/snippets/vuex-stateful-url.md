@@ -1,11 +1,12 @@
----
-Title: "Vuex Stateful URL Plugin"
-Description: "StatefulURL is a Vuex plugin that can read and write the state from a query string"
-Date: "2020-09-03"
-Category: "Snippets"
-Template: "post"
-Keywords: ["vue", "vuex", "plugin", "store", "sync", "url", "query", "string"]
----
++++
+title = "Vuex Stateful URL Plugin"
+description = "StatefulURL is a Vuex plugin that can read and write the state from a query string"
+date = "2020-09-03"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["vue", "vuex", "plugin", "store", "sync", "url", "query", "string"]
++++
 
 Have you ever used permalinks on a site? These links store the state of the page in the URL. They can be super useful for simple single-page-apps (SPAs) for bringing users back to where they were when they left the page or just adding the ability to share that page state with someone else without requiring logins or anything like that.
 

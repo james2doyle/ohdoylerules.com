@@ -1,11 +1,12 @@
----
-Title: "Update Laravel Pagination With New Collection"
-Description: "Did you know you can update a Laravel pagination with a new collection?"
-Date: "2017-06-04"
-Category: "Web"
-Template: "post"
-Keywords: ["php", "laravel", "pagination", "db", "results", "database", "query", "model", "hydrate"]
----
++++
+title = "Update Laravel Pagination With New Collection"
+description = "Did you know you can update a Laravel pagination with a new collection?"
+date = "2017-06-04"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["php", "laravel", "pagination", "db", "results", "database", "query", "model", "hydrate"]
++++
 
 Have you even done a database search (using the `DB` facade) and got back an array of results that wasn't wrapped in lovely little Eloquent Models? After some googling, I am sure you probably found out about the [hydrate](http://commandz.io/create-models-from-query-builder/) method. Using `hydrate`, you can turn an array of results from the database into real models from your application. This works phenomenally.
 

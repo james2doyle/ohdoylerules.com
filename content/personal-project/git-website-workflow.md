@@ -1,11 +1,12 @@
----
-Title: "Git Website Workflow"
-Description: "Git Website Workflow"
-Date: "2013-03-13"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["git", "website", "workflow", "web", "hub", "source", "server", "version", "control", "aws", "amazon web services", "bash", "shell", "scripting"]
----
++++
+title = "Git Website Workflow"
+description = "Git Website Workflow"
+date = "2013-03-13"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["git", "website", "workflow", "web", "hub", "source", "server", "version", "control", "aws", "amazon web services", "bash", "shell", "scripting"]
++++
 
 <div class="center">
   <img alt="Amazon Web Services Logo" src="/images/awslogo.png">

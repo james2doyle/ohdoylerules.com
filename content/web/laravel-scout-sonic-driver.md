@@ -1,11 +1,12 @@
----
-Title: "Laravel Scout Sonic Driver"
-Date: "2019-04-12"
-Category: "Web"
-Template: "post"
-Description: "A Laravel Scout driver for the Sonic search tool"
-Keywords: ["php", "laravel", "scout", "search", "sonic", "elasticsearch", "rust", "index"]
----
++++
+title = "Laravel Scout Sonic Driver"
+date = "2019-04-12"
+category = "Web"
+template = "post.html"
+description = "A Laravel Scout driver for the Sonic search tool"
+[taxonomies]
+keywords = ["php", "laravel", "scout", "search", "sonic", "elasticsearch", "rust", "index"]
++++
 
 If you haven't heard about the cool new search indexer [Sonic](https://github.com/valeriansaliou/sonic) you must be living under a rock! If you want to read about Sonic directly from the author, [check out his blog post](https://journal.valeriansaliou.name/announcing-sonic-a-super-light-alternative-to-elasticsearch/) on why and how they went on building the tool.
 

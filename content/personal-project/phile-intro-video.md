@@ -1,11 +1,12 @@
----
-Title: "All About PhileCMS Video"
-Description: "All About PhileCMS Video"
-Date: "2014-02-07"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["philecms", "phile", "video", "intro", "introduction", "about", "tutorial", "instruction", "markdown", "flat", "file"]
----
++++
+title = "All About PhileCMS Video"
+description = "All About PhileCMS Video"
+date = "2014-02-07"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["philecms", "phile", "video", "intro", "introduction", "about", "tutorial", "instruction", "markdown", "flat", "file"]
++++
 
 [PhileCMS](https://github.com/PhileCMS/Phile) now has a [new instructional video](http://www.youtube.com/watch?v=8GLMe371RuI).
 

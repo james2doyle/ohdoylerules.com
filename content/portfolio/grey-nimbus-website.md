@@ -1,11 +1,12 @@
----
-Title: "Grey Nimbus website"
-Description: "My old Grey Nimbus website"
-Date: "2013-04-11"
-Category: "Portfolio"
-Template: "post"
-Keywords: ["grey", "nimbus", "design", "updates", "retina", "js", "no jquery", "fuelphp", "php", "static", "single page", "parallax"]
----
++++
+title = "Grey Nimbus website"
+description = "My old Grey Nimbus website"
+date = "2013-04-11"
+category = "Portfolio"
+template = "post.html"
+[taxonomies]
+keywords = ["grey", "nimbus", "design", "updates", "retina", "js", "no jquery", "fuelphp", "php", "static", "single page", "parallax"]
++++
 
 Finally took the time and initiative to launch [Grey Nimbus](http://greynimbus.com "Grey Nimbus Website"), my business. The website itself is built using [FuelPHP](http://fuelphp.com "FuelPHP"). The reason I chose it was because I was curious and it was pretty light weight.
 

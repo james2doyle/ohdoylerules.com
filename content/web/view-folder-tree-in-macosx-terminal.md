@@ -1,11 +1,12 @@
----
-Title: "View Folder Tree in MacOSX Terminal"
-Description: "View Folder Tree in MacOSX Terminal"
-Date: "2012-11-19"
-Category: "Web"
-Template: "post"
-Keywords: ["view", "folder", "tree", "macosx", "terminal", "bash", "shell", "command"]
----
++++
+title = "View Folder Tree in MacOSX Terminal"
+description = "View Folder Tree in MacOSX Terminal"
+date = "2012-11-19"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["view", "folder", "tree", "macosx", "terminal", "bash", "shell", "command"]
++++
 
 [View Folder Tree in MacOSX Terminal](https://coderwall.com/p/owb6eg "terminal tree command")
 

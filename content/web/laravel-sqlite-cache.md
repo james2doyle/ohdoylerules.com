@@ -1,11 +1,12 @@
----
-Title: "Using Sqlite As A Cache In Laravel"
-Date: "2018-10-04"
-Category: "Web"
-Template: "post"
-Description: "How to use Sqlite as a cache in Laravel"
-Keywords: ["cache", "laravel", "sqlite", "store"]
----
++++
+title = "Using Sqlite As A Cache In Laravel"
+date = "2018-10-04"
+category = "Web"
+template = "post.html"
+description = "How to use Sqlite as a cache in Laravel"
+[taxonomies]
+keywords = ["cache", "laravel", "sqlite", "store"]
++++
 
 I was playing with a new project using [Laravel 5.7](https://laravel.com/docs/5.7) and I wanted to use [sqlite](https://www.sqlite.org/index.html) for the [cache feature](https://laravel.com/docs/5.7/cache) that comes with the framework. If you didn't know, Laravel allows you to choose a cache "driver" and Laravel will handle writes, reads, and even locks, using that cache.
 

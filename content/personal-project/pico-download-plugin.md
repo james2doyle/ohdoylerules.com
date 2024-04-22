@@ -1,11 +1,12 @@
----
-Title: "pico-download plugin"
-Description: "I created a plugin to force files to download in PicoCMS"
-Date: "2013-09-18"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["pico", "cms", "markdown", "php", "plugin", "download", "force"]
----
++++
+title = "pico-download plugin"
+description = "I created a plugin to force files to download in PicoCMS"
+date = "2013-09-18"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["pico", "cms", "markdown", "php", "plugin", "download", "force"]
++++
 
 I created a plugin to force files to download in [PicoCMS](http://pico.dev7studios.com).
 

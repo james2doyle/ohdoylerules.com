@@ -1,11 +1,12 @@
----
-Title: "Simple PHP JSON Response"
-Description: "Create a simple JSON response using PHP"
-Date: "2015-08-04"
-Category: "Snippets"
-Template: "post"
-Keywords: ["PHP", "json", "response", "headers", "status", "encoding", "parse", "stringify"]
----
++++
+title = "Simple PHP JSON Response"
+description = "Create a simple JSON response using PHP"
+date = "2015-08-04"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["PHP", "json", "response", "headers", "status", "encoding", "parse", "stringify"]
++++
 
 This is little snippet I use all the time when I am building simple flat sites that need a single route for an AJAX request.
 
@@ -56,6 +57,6 @@ If everything was organized correctly, I should get a successful response with t
 
 Here is the script:
 
-<script src="https://gist.github.com/james2doyle/33794328675a6c88edd6.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/33794328675a6c88edd6.js") }}
 
 You could always add more HTTP status codes, or use different key names for the array response. I like `status` and `message` because I may have a successful response, but I know something else went wrong when the `status` is false. I usually put whatever data I need in `message`. If message is a string, I know there is actually a message and not data I need to handle.

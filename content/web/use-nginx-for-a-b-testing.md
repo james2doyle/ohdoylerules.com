@@ -1,11 +1,12 @@
----
-Title: "Use Nginx for A/B Testing"
-Date: "2016-08-28"
-Category: "Web"
-Template: "post"
-Description: "Use Nginx to set custom headers in your HTTP responses so you can serve conditional content"
-Keywords: ["nginx", "server", "middleware", "a", "b", "test", "content", "conditional", "header", "marketing"]
----
++++
+title = "Use Nginx for A/B Testing"
+date = "2016-08-28"
+category = "Web"
+template = "post.html"
+description = "Use Nginx to set custom headers in your HTTP responses so you can serve conditional content"
+[taxonomies]
+keywords = ["nginx", "server", "middleware", "a", "b", "test", "content", "conditional", "header", "marketing"]
++++
 
 I was starting a new project the other day that had a heavy marketing influence. The team was wondering about possibly A/B testing the main content section of the website.
 

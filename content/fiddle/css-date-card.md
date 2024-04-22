@@ -1,11 +1,12 @@
----
-Title: "CSS Date Card"
-Description: "Create a Date Card using CSS transitions, animations, and gradients"
-Date: "2012-09-18"
-Category: "Fiddle"
-Template: "post"
-Keywords: ["css", "date", "card", "animations", "gradients", "dabblet"]
----
++++
+title = "CSS Date Card"
+description = "Create a Date Card using CSS transitions, animations, and gradients"
+date = "2012-09-18"
+category = "Fiddle"
+template = "post.html"
+[taxonomies]
+keywords = ["css", "date", "card", "animations", "gradients", "dabblet"]
++++
 
 I am trying to make up for not posting in the last few days. Here is another thing I have been working on. It is a replication of [another dribbble post](http://dribbble.com/shots/713807-Extended "Event Card").
 

@@ -1,11 +1,12 @@
----
-Title: "Detect Theme Editor In Shopify Liquid Templates"
-Date: "2020-01-04"
-Category: "Web"
-Template: "post"
-Description: "A demo on how to detect when a template is running in the Shopify theme and section builder"
-Keywords: ["shopify", "theme", "editor", "builder", "section", "detect", "liquid"]
----
++++
+title = "Detect Theme Editor In Shopify Liquid Templates"
+date = "2020-01-04"
+category = "Web"
+template = "post.html"
+description = "A demo on how to detect when a template is running in the Shopify theme and section builder"
+[taxonomies]
+keywords = ["shopify", "theme", "editor", "builder", "section", "detect", "liquid"]
++++
 
 So you may already know that you cannot detect if an liquid page is running in the theme editor. You can however, [detect this in Javascript](https://help.shopify.com/en/themes/development/theme-editor/other-theme-files#detecting-the-theme-editor-with-javascript).
 
@@ -19,7 +20,7 @@ Shopify says you can't do this though. I'm here to tell you they are incorrect.
 
 Before I continue, you will need to understand [this hack used to detect query strings in liquid](http://freakdesign.com.au/blogs/news/get-the-url-querystring-values-with-liquid-in-shopify). Once read up on that snippet, you'll see how we build on that to detect the theme editor.
 
-```liquid
+```jinja2
 {%- comment -%}
   http://freakdesign.com.au/blogs/news/get-the-url-querystring-values-with-liquid-in-shopify
   Capture the content for header containing the tracking data
@@ -41,7 +42,7 @@ Before I continue, you will need to understand [this hack used to detect query s
 
 The code above is a snippet of the [trick used to detect query strings in liquid](http://freakdesign.com.au/blogs/news/get-the-url-querystring-values-with-liquid-in-shopify). We only need this piece. So let's continue.
 
-```liquid
+```jinja2
 {% comment %}When in the theme editor, the pageUrl variable is malformed/empty{% endcomment %}
 {% if pageUrl contains page.handle %}
   We are in the frontend of the website

@@ -1,11 +1,12 @@
----
-Title: "Slack Meta Data For URLs and Links"
-Date: "2015-10-31"
-Category: "Web"
-Template: "post"
-Description: "Tips to get Slack to resolve the correct meta data for your website URL"
-Keywords: ["slack", "meta", "data", "website", "tag", "url", "link", "image", "issues", "fixes", "list", "test"]
----
++++
+title = "Slack Meta Data For URLs and Links"
+date = "2015-10-31"
+category = "Web"
+template = "post.html"
+description = "Tips to get Slack to resolve the correct meta data for your website URL"
+[taxonomies]
+keywords = ["slack", "meta", "data", "website", "tag", "url", "link", "image", "issues", "fixes", "list", "test"]
++++
 
 If you use [Slack](https://slack.com/), then you have probably noticed the awesome feature they have for generating nice meta data whenever you paste a URL or an image.
 

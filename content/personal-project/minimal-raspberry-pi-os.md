@@ -1,12 +1,13 @@
----
-Title: "Minimal Raspberry Pi OS"
-Date: "2015-03-14"
-Updated: "2015-03-20"
-Category: "Personal Project"
-Template: "post"
-Description: "Setup and improve the Moebius OS for the Raspberry Pi"
-Keywords: ["Moebius", "debian", "linux", "raspberry", "pi", "os", "operating system", "minimal", "small", "tiny"]
----
++++
+title = "Minimal Raspberry Pi OS"
+description = "Setup and improve the Moebius OS for the Raspberry Pi"
+date = "2015-03-14"
+updated = "2015-03-20"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["Moebius", "debian", "linux", "raspberry", "pi", "os", "operating system", "minimal", "small", "tiny"]
++++
 
 ## Introduction
 

@@ -1,11 +1,12 @@
----
-Title: "Simple Slack Slash Supplier"
-Date: "2019-05-13"
-Category: "Web"
-Template: "post"
-Description: "A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses"
-Keywords: ["slack", "slash", "commands", "node", "lambda"]
----
++++
+title = "Simple Slack Slash Supplier"
+date = "2019-05-13"
+category = "Web"
+template = "post.html"
+description = "A lambda function that provides a simple mechanism for mapping Slack slash commands to pre-built responses"
+[taxonomies]
+keywords = ["slack", "slash", "commands", "node", "lambda"]
++++
 
 *This is a reprint of the README from my project [simple-slack-slash-supplier](https://github.com/james2doyle/simple-slack-slash-supplier).*
 

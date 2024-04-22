@@ -1,11 +1,12 @@
----
-Title: "PyroCMS Module Generator"
-Description: "PyroCMS Module Generator that can generate modules for pyrocms"
-Date: "2013-04-13"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["CodeIgniter", "generator", "Github", "laravel", "module", "open source", "PHP", "PyroCMS", "tool"]
----
++++
+title = "PyroCMS Module Generator"
+description = "PyroCMS Module Generator that can generate modules for pyrocms"
+date = "2013-04-13"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["CodeIgniter", "generator", "Github", "laravel", "module", "open source", "PHP", "PyroCMS", "tool"]
++++
 
 <div class="center">
   <img src="/images/pmgh.png" alt="PyroCMS Module generator header image">

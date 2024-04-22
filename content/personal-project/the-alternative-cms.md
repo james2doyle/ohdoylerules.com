@@ -1,11 +1,12 @@
----
-Title: "The Alternative Cms"
-Description: "Presentation for The Alternative Cms"
-Date: "2014-02-26"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["presentation", "explode", "code", "cms", "phile", "alternative", "flat", "file", "markdown", "PHP", "twig"]
----
++++
+title = "The Alternative Cms"
+description = "Presentation for The Alternative Cms"
+date = "2014-02-26"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["presentation", "explode", "code", "cms", "phile", "alternative", "flat", "file", "markdown", "PHP", "twig"]
++++
 
 The Explode Code presentation was last night. I spoke about [The Alternative CMS](/images/the-alternative-cms.pdf "The Alternative CMS PDF"). It was about the problems with Wordpress, why *WYSIWYG* is hard, and why Flat File and Markdown could be the solution you are looking for.
 

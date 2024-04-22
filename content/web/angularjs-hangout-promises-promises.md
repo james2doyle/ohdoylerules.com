@@ -1,11 +1,12 @@
----
-Title: "AngularJS Hangout - Promises Promises"
-Description: "AngularJS Hangout - Promises Promises"
-Date: "2013-04-17"
-Category: "Web"
-Template: "post"
-Keywords: ["angularjs", "hangout", "promises", "google", "youtube"]
----
++++
+title = "AngularJS Hangout - Promises Promises"
+description = "AngularJS Hangout - Promises Promises"
+date = "2013-04-17"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["angularjs", "hangout", "promises", "google", "youtube"]
++++
 
 I somehow managed to find my way into an [AngularJS hangout](https://plus.google.com/u/0/events/cljavmi7kpup1fso43k3fkpk2eg "AngularJS Promises").
 

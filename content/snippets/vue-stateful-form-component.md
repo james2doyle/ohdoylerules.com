@@ -1,11 +1,12 @@
----
-Title: "Vue stateful form component"
-Description: "Create a Vue form that escalates all events to the top level and supports v-model"
-Date: "2021-10-24"
-Category: "Snippets"
-Template: "post"
-Keywords: ["vue", "state", "form", "render", "component", "v-model", "event"]
----
++++
+title = "Vue stateful form component"
+description = "Create a Vue form that escalates all events to the top level and supports v-model"
+date = "2021-10-24"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["vue", "state", "form", "render", "component", "v-model", "event"]
++++
 
 Recently, I needed to create a app that could recreate a form from static JSON and then fill it with values from another source. This was pretty difficult as storing a form in JSON is very hard. You can't add handlers or events given you only can store string, numbers, booleans, and arrays. No functions.
 

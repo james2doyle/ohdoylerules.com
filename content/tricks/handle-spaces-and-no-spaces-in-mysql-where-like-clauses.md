@@ -1,11 +1,12 @@
----
-Title: "Handle spaces and no-spaces in MySQL where-like clauses"
-Description: "Have you ever wanted to write a WHERE LIKE for a query with and without spaces? Well, now you can with this trick!"
-Date: "2017-07-08"
-Category: "Tricks"
-Template: "post"
-Keywords: ["mysql", "like", "where", "spaces", "no spaces", "concat"]
----
++++
+title = "Handle spaces and no-spaces in MySQL where-like clauses"
+description = "Have you ever wanted to write a WHERE LIKE for a query with and without spaces? Well, now you can with this trick!"
+date = "2017-07-08"
+category = "Tricks"
+template = "post.html"
+[taxonomies]
+keywords = ["mysql", "like", "where", "spaces", "no spaces", "concat"]
++++
 
 Have you ever been writing a search for MySQL and had an issue where the search wouldn't handle spaces properly?
 

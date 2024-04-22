@@ -1,11 +1,12 @@
----
-Title: "Using Node.js in an AppleScript"
-Description: "How to use Node.js in an AppleScript"
-Date: "2014-07-12"
-Category: "Snippets"
-Template: "post"
-Keywords: ["osx", "apple", "applescript", "automator", "finder", "node", "javascript", "js", "marked", "markdown", "md", "scpt"]
----
++++
+title = "Using Node.js in an AppleScript"
+description = "How to use Node.js in an AppleScript"
+date = "2014-07-12"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["osx", "apple", "applescript", "automator", "finder", "node", "javascript", "js", "marked", "markdown", "md", "scpt"]
++++
 
 A few days ago, I wrote an article about [how to create a service in Automator to copy the selected file's path to the clipboard while in the Finder.app](https://ohdoylerules.com/snippets/copy-file-path-clipboard-osx "Copy filepath to clipboard in OSX").
 

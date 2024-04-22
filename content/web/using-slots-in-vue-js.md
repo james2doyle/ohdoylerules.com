@@ -1,11 +1,12 @@
----
-Title: "Using slots in Vue js"
-Description: "If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components"
-Date: "2020-05-18"
-Category: "Web"
-Template: "post"
-Keywords: ["vue", "slots", "server", "rendered", "reusable", "flexible", "components", "liquid", "blade"]
----
++++
+title = "Using slots in Vue js"
+description = "If you are working with server-rendered apps, using Vue slots can help you create more reusable and flexible components"
+date = "2020-05-18"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["vue", "slots", "server", "rendered", "reusable", "flexible", "components", "liquid", "blade"]
++++
 
 If you are working with server-rendered apps (your view is compiled on the server down to HTML), and you are a [Vue.js](https://vuejs.org/) user, then you should definitely learn to use a [Vue feature called slots](https://vuejs.org/v2/guide/components-slots.html)! Not only will it allow you to make more reusable and flexible components, but you will also improve the rendering performance of your apps as well.
 

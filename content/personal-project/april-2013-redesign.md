@@ -1,11 +1,12 @@
----
-Title: "April 2013 Redesign!"
-Description: "Another redesign. This one is completely by me, with a little help from the html5blank Wordpress template. I am using SVGs exclusively."
-Date: "2013-04-17"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["april", "2013", "redesign", "ohdoylerules", "james2doyle", "website", "generated", "content", "css3", "ie7"]
----
++++
+title = "April 2013 Redesign!"
+description = "Another redesign. This one is completely by me, with a little help from the html5blank Wordpress template. I am using SVGs exclusively."
+date = "2013-04-17"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["april", "2013", "redesign", "ohdoylerules", "james2doyle", "website", "generated", "content", "css3", "ie7"]
++++
 
 Another redesign. This one is completely by me, with a little help from the [html5blank](http://html5blank.com "html5blank wordpress theme") Wordpress template. I am using SVGs exclusively. Although I only have 2 images for the entire site, the logo and the mobile nav hamburger/menu button. I think the best part is the new code highlighter. It has some cool features.
 

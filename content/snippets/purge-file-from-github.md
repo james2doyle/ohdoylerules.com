@@ -1,11 +1,12 @@
----
-Title: "Purge A File From A Github Repo"
-Description: "How to permanently remove a file from a repo and it's history"
-Date: "2014-05-18"
-Category: "Snippets"
-Template: "post"
-Keywords: ["github", "git", "bash", "command", "line", "cli", "terminal", "function", "arguments", "remove", "repo", "purge", "history"]
----
++++
+title = "Purge A File From A Github Repo"
+description = "How to permanently remove a file from a repo and it's history"
+date = "2014-05-18"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["github", "git", "bash", "command", "line", "cli", "terminal", "function", "arguments", "remove", "repo", "purge", "history"]
++++
 
 Ever wanted to permanently remove a file from a repo and it's history?
 

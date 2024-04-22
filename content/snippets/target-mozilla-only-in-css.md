@@ -1,11 +1,12 @@
----
-Title: "Target Mozilla-only in CSS"
-Description: "Target Mozilla-only in CSS"
-Date: "2012-10-11"
-Category: "Snippets"
-Template: "post"
-Keywords: ["CSS", "document", "firefox", "media queries", "mozilla", "url-prefix"]
----
++++
+title = "Target Mozilla-only in CSS"
+description = "Target Mozilla-only in CSS"
+date = "2012-10-11"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["CSS", "document", "firefox", "media queries", "mozilla", "url-prefix"]
++++
 
 I had some issues in Firefox recently. I was building a complicated “item” in CSS and it looked great in Chrome. I got an email later saying that the sizing was all off for a bunch of things. I thought this was really strange. I went back to the CSS and Chrome and I could not see any issues.
 

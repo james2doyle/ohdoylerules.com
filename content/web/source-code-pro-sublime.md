@@ -1,11 +1,12 @@
----
-Title: "Source Code Pro on Sublime Text"
-Description: "Download and install Source Code Pro on Sublime Text"
-Date: "2012-10-19"
-Category: "Web"
-Template: "post"
-Keywords: ["adobe", "font", "source code pro", "sublime", "syntax", "text"]
----
++++
+title = "Source Code Pro on Sublime Text"
+description = "Download and install Source Code Pro on Sublime Text"
+date = "2012-10-19"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["adobe", "font", "source code pro", "sublime", "syntax", "text"]
++++
 
 
 <div class="center">

@@ -1,0 +1,28 @@
+{# {% if config.base_url is containing("127.0.0.1") %} #}
+{# <script>console.info('on localhost - not loading service worker. Cache key: ODR-{{ now() | date(format="%Y-%m-%d") }}');</script> #}
+{# currently, there is no way to generate sw.js files #}
+{#
+<script defer>
+  // register the service worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('{{ get_url(path="sw/index.js") }}');
+  }
+</script>
+#}
+<script src="https://unpkg.com/swup@4.6.1/dist/Swup.umd.js"></script>
+<script>
+const swup = new Swup({
+  native: true,
+});
+function handleGists() {
+  const scripts = document.querySelectorAll('.iframes');
+  [...scripts].forEach(function(iframe) {
+    iframe.onload = function() {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+  });
+}
+document.addEventListener('DOMContentLoaded', handleGists);
+swup.hooks.on('visit:end', handleGists, { priority: 100 });
+</script>

@@ -1,11 +1,12 @@
----
-Title: "Using Zapier Webhooks for HTML forms"
-Date: "2019-09-28"
-Category: "Web"
-Template: "post"
-Description: "You can use Zapier webhooks to handle HTML form submissions - if you know how to set up your form"
-Keywords: ["zapier", "webhook", "html", "form", "post", "hook", "submit", "static", "headless"]
----
++++
+title = "Using Zapier Webhooks for HTML forms"
+date = "2019-09-28"
+category = "Web"
+template = "post.html"
+description = "You can use Zapier webhooks to handle HTML form submissions - if you know how to set up your form"
+[taxonomies]
+keywords = ["zapier", "webhook", "html", "form", "post", "hook", "submit", "static", "headless"]
++++
 
 If you don't know about [Zapier](https://zapier.com/), it's a service that allows you to "automate everything". I've been using it for over 4 years to automate tons of different things like posting daily Trello tasks to Slack, activity in Intercom to Emails, and even a custom scheduled job that gives me task information for the current day.
 

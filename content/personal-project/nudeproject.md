@@ -1,11 +1,12 @@
----
-Title: "NudeProject - a starting point for simple websites"
-Description: "NudeProject - a starting point for simple websites"
-Date: "2013-06-04"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["nudeproject", "css", "js", "javascript", "template", "boilerplater", "starter", "project"]
----
++++
+title = "NudeProject - a starting point for simple websites"
+description = "NudeProject - a starting point for simple websites"
+date = "2013-06-04"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["nudeproject", "css", "js", "javascript", "template", "boilerplater", "starter", "project"]
++++
 
 NudeProject is meant to be a starting point for new landing pages, single-page sites, or even just basic mockups. The point is to get me off the ground quickly. It only provides the most basic things that I need most of the time. These include [grunt tasks](http://gruntjs.com/ "gruntjs homepage"), [normalized CSS](http://necolas.github.io/normalize.css/ "normalize css"), [modernizr](http://modernizr.com "modernizr"), and a [SVG fallback snippet](https://gist.github.com/james2doyle/5659710 "modernizr-svg-replace.js") in javascript. Check out the project [on github](https://github.com/james2doyle/nudeproject "james2doyle/nudeproject").
 

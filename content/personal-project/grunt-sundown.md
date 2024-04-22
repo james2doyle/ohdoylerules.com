@@ -1,11 +1,12 @@
----
-Title: "Grunt Sundown"
-Description: "Grunt Sundown"
-Date: "2013-09-08"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["grunt", "sundown", "markdown", "plugin", "node", "robotskirt", "c", "library"]
----
++++
+title = "Grunt Sundown"
+description = "Grunt Sundown"
+date = "2013-09-08"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["grunt", "sundown", "markdown", "plugin", "node", "robotskirt", "c", "library"]
++++
 
 **grunt-sundown** is a wrapper for [robotskirt](https://github.com/benmills/robotskirt)([Sundown](https://github.com/vmg/sundown)) - a C implementation of [Markdown](http://daringfireball.net/projects/markdown/)
 

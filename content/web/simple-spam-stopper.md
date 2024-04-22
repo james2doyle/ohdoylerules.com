@@ -1,11 +1,12 @@
----
-Title: "The Simple Spam Stopper"
-Description: "For the last year at WARPAINT Media, we have been getting assaulted with spam."
-Date: "2014-05-27"
-Category: "Web"
-Template: "post"
-Keywords: ["spam", "email", "contact", "form", "captcha", "recaptcha", "fields", "validation", "honey", "pot"]
----
++++
+title = "The Simple Spam Stopper"
+description = "For the last year at WARPAINT Media, we have been getting assaulted with spam."
+date = "2014-05-27"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["spam", "email", "contact", "form", "captcha", "recaptcha", "fields", "validation", "honey", "pot"]
++++
 
 For the last year at [WARPAINT Media](http://warpaintmedia.ca), we have been getting assaulted with spam. Everything from "Chinese Jerseys" and "Super SEO Ultra Elite Package Extreme" offers.
 

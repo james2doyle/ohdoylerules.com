@@ -1,11 +1,12 @@
----
-Title: "CSS3 badge logo in SVG"
-Description: "CSS3 badge logo in SVG"
-Date: "2013-04-21"
-Category: "Web"
-Template: "post"
-Keywords: ["badge", "css3", "html5", "logo", "svg", "vector"]
----
++++
+title = "CSS3 badge logo in SVG"
+description = "CSS3 badge logo in SVG"
+date = "2013-04-21"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["badge", "css3", "html5", "logo", "svg", "vector"]
++++
 
 I have been trying to find the CSS3 badge in a SVG format but it wasn’t that easy. The HTML5 one was the first result on Google. Now finally I found one. I am posting it here because now I will never lose it!
 

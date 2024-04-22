@@ -1,11 +1,12 @@
----
-Title: "Autocomplete TailwindCSS In Custom Attributes/Strings"
-Description: "Use tailwindcss autocomplete classes and logic inside non-default attributes or strings"
-Date: "2022-06-06"
-Category: "Snippets"
-Template: "post"
-Keywords: ["tailwind", "css", "class", "classname", "tw", "twin.macro", "twinmacro", "template", "literal", "react", "vue", "attributes", "props"]
----
++++
+title = "Autocomplete TailwindCSS In Custom Attributes/Strings"
+description = "Use tailwindcss autocomplete classes and logic inside non-default attributes or strings"
+date = "2022-06-06"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["tailwind", "css", "class", "classname", "tw", "twin.macro", "twinmacro", "template", "literal", "react", "vue", "attributes", "props"]
++++
 
 If you are using [TailwindCSS](https://tailwindcss.com/) along with [their extension for completing tailwind classes](https://github.com/tailwindlabs/tailwindcss-intellisense) but you are using styled components, custom attributes/props for class names, or packages like [twin.macro](https://github.com/ben-rogerson/twin.macro), then autocomplete for class names might not work properly for you.
 

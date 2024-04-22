@@ -1,17 +1,18 @@
----
-Title: "Color Helpers In Fish Shell"
-Description: "How to easily create a color function for printing colorized output"
-Date: "2017-06-03"
-Category: "Snippets"
-Template: "post"
-Keywords: ["color", "fish", "shell", "prompt", "output", "stdout"]
----
++++
+title = "Color Helpers In Fish Shell"
+description = "How to easily create a color function for printing colorized output"
+date = "2017-06-03"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["color", "fish", "shell", "prompt", "output", "stdout"]
++++
 
 I am one of those people who likes a lot of colors in my shell. When there is a failure, I like to see red. If there is something stuccessful, I like to see green.
 
 Working with the prompt to output the correct colors can be a bit of a pain. I manage to find a nice way to handle both colorizing backgrounds for the text as well as the actual text color. You can see an example below:
 
-<script src="https://gist.github.com/james2doyle/acb8c065c8b4d63f557d44a77a356d59.js"></script>
+{{ gist(src="https://gist.github.com/james2doyle/acb8c065c8b4d63f557d44a77a356d59.js") }}
 
 Once you add the code into your `fish config`. You will then be able to colorize your output using this simple helper function:
 

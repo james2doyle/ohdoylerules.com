@@ -1,11 +1,12 @@
----
-Title: "Installing Android 4.1.1 Jelly Bean for Nexus S"
-Date: "2012-07-20"
-Category: "Android"
-Template: "post"
-Keywords: ["jelly bean", "nexus", "s", "android", "root", "hack", "ROM", "flash"]
-Description: "How to flash jelly bean onto a nexus s"
----
++++
+title = "Installing Android 4.1.1 Jelly Bean for Nexus S"
+description = "How to flash jelly bean onto a nexus s"
+date = "2012-07-20"
+category = "Android"
+template = "post.html"
+[taxonomies]
+keywords = ["jelly bean", "nexus", "s", "android", "root", "hack", "ROM", "flash"]
++++
 
 So I have been flashing ROMs for a while now. I recently installed Jelly Bean 4.1. I used the OTA(Over The Air) version from [here](http://forum.xda-developers.com/showthread.php?t=1784497 "here"). Just make sure you also flash the Simple-Root.zip file. I did not. So I had to root my phone again and then install it. Which wasn't too bad but still annoying.
 

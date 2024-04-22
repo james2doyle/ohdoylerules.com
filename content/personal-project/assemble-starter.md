@@ -1,11 +1,12 @@
----
-Title: "Assemble Starter"
-Description: "Assemble for Grunt.js Starter template"
-Date: "2013-10-17"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["grunt", "assemble", "template", "starting", "tasks", "gruntfile", "node", "livereload", "sass", "css", "javascript", "handlebars"]
----
++++
+title = "Assemble Starter"
+description = "Assemble for Grunt.js Starter template"
+date = "2013-10-17"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["grunt", "assemble", "template", "starting", "tasks", "gruntfile", "node", "livereload", "sass", "css", "javascript", "handlebars"]
++++
 
 Assemble starter is my starting point for any of my static [assemble sites](http://assemble.io/ "Grunt Assemble Homepage").
 

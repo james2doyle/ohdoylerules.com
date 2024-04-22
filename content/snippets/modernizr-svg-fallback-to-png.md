@@ -1,11 +1,12 @@
----
-Title: "Modernizr SVG Fallback to PNG"
-Description: "Modernizr SVG Fallback to PNG"
-Date: "2013-05-27"
-Category: "Snippets"
-Template: "post"
-Keywords: ["CodeIgniter", "generator", "Github", "laravel", "module", "open source", "PHP", "PyroCMS", "tool"]
----
++++
+title = "Modernizr SVG Fallback to PNG"
+description = "Modernizr SVG Fallback to PNG"
+date = "2013-05-27"
+category = "Snippets"
+template = "post.html"
+[taxonomies]
+keywords = ["CodeIgniter", "generator", "Github", "laravel", "module", "open source", "PHP", "PyroCMS", "tool"]
++++
 
 <div class="center">
   <img src="/images/githubgistlogo.png" alt="Github Gists Logo">

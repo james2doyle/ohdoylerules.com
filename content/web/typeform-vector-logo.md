@@ -1,11 +1,12 @@
----
-Title: "Typeform Vector Logo"
-Description: "Another difficult logo to find. This one is for the fun new Typeform service. Typeform allows you to create dynamic and fun forms for clients, events, and other general uses."
-Date: "2014-07-31"
-Category: "Web"
-Template: "post"
-Keywords: ["Typeform", "vector", "logo", "svg", "eps", "black"]
----
++++
+title = "Typeform Vector Logo"
+description = "Another difficult logo to find. This one is for the fun new Typeform service. Typeform allows you to create dynamic and fun forms for clients, events, and other general uses."
+date = "2014-07-31"
+category = "Web"
+template = "post.html"
+[taxonomies]
+keywords = ["Typeform", "vector", "logo", "svg", "eps", "black"]
++++
 
 Another difficult logo to find. This one is for the fun new Typeform service. Typeform allows you to create dynamic and fun forms for clients, events, and other general uses.
 

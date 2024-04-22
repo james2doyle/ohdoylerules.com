@@ -1,11 +1,12 @@
----
-Title: "GoDaddy Email on Digital Ocean"
-Description: "How to use GoDaddy Email on Digital Ocean"
-Date: "2013-11-18"
-Category: "Demo"
-Template: "post"
-Keywords: ["godaddy", "email", "digital ocean", "hosting", "mx", "records", "dns", "settings"]
----
++++
+title = "GoDaddy Email on Digital Ocean"
+description = "How to use GoDaddy Email on Digital Ocean"
+date = "2013-11-18"
+category = "Demo"
+template = "post.html"
+[taxonomies]
+keywords = ["godaddy", "email", "digital ocean", "hosting", "mx", "records", "dns", "settings"]
++++
 
 I was recently trying to send an email to a domain I had purchased on GoDaddy but had hosting on [Digital Ocean](https://www.digitalocean.com/?refcode=802f151adea5).
 

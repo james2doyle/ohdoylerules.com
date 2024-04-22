@@ -1,11 +1,12 @@
----
-Title: "Nuxt Firebase Starter"
-Date: "2017-12-21"
-Category: "Web"
-Template: "post"
-Description: "An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles"
-Keywords: ["firebase", "nuxt", "vue", "auth", "serverless", "single page app", "spa"]
----
++++
+title = "Nuxt Firebase Starter"
+date = "2017-12-21"
+category = "Web"
+template = "post.html"
+description = "An example project that uses nuxt.js and Firebase for simple auth (social or email/pass) and account profiles"
+[taxonomies]
+keywords = ["firebase", "nuxt", "vue", "auth", "serverless", "single page app", "spa"]
++++
 
 Over the past few weeks, I have been working on [a boilerplate/starting template for using the Nuxt.js framework with Firebase](https://github.com/james2doyle/nuxt-firebase-auth).
 
@@ -15,7 +16,7 @@ If you already know about Nuxt and Firebase, I suggest just checking out the pro
 
 If you are unfamiliar with the tools, keep reading!
 
----
++++
 
 ### Nuxt
 

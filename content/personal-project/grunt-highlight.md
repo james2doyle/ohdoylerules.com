@@ -1,11 +1,12 @@
----
-Title: "Grunt Highlight Plugin"
-Description: "Grunt task for running Highlight.js over files or blocks of code"
-Date: "2013-11-25"
-Category: "Personal Project"
-Template: "post"
-Keywords: ["grunt", "highlight.js", "prettyprint", "plugin", "node"]
----
++++
+title = "Grunt Highlight Plugin"
+description = "Grunt task for running Highlight.js over files or blocks of code"
+date = "2013-11-25"
+category = "Personal Project"
+template = "post.html"
+[taxonomies]
+keywords = ["grunt", "highlight.js", "prettyprint", "plugin", "node"]
++++
 
 Over the weekend, in a couple hours, I wrote this grunt plugin for [Highlight.js](http://highlightjs.org). I know that [marked](https://github.com/chjj/marked) does an excellent job of parsing markdown, and can also use highlight, but I wanted something I could use in [assemble](https://github.com/assemble/assemble/) for HTML parsing or full css/js files.
 
@@ -16,7 +17,7 @@ This plugin requires Grunt.
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
-```shell
+```sh
 npm install grunt-highlight --save-dev
 ```
 
