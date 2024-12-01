@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+{{ super() }}
+<link rel="dns-prefetch" href="https://c.disquscdn.com">
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title }} | {{ config.extra.author_subtitle }}">
+<meta property="article:author" content="{{ config.extra.author_email }} {{ config.extra.author_name }}" />
+{# <meta property="article:section" content="{{ page.category }}" /> #}
+{% if page.updated %}
+<meta itemprop="dateModified" content="{{ page.updated }}" />
+{% endif %}
+{% if page.taxonomies.keywords %}
+<meta itemprop="keywords" content="{{ page.taxonomies.keywords | join(sep=", ") }}">
+<meta property="article:tag" content="{{ page.taxonomies.keywords | join(sep=", ") }}" />
+<meta property="og:keywords" content="{{ page.taxonomies.keywords | join(sep=", ") }}">
+{% endif %}
+{% endblock meta %}
+
+{% block styles %}
+{% endblock styles %}
+
+{% block content %}
+<div>
+  <div class="container">
+    <header class="grid center">
+      <div class="cell menu">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </header>
+    <main class="the-loop">
+      <div class="main-content">{{ page.content | safe }}</div>
+    </main>
+  </div>
+</div>
+{% endblock content %}
