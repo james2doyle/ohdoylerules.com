@@ -3,7 +3,7 @@ ohdoylerules.com
 
 Site for James Doyle.
 
-Built using [Zola](https://www.getzola.org/). Deployed using [GitHub Pages](https://pages.github.com/).
+Built using [Zola 0.18.0](https://www.getzola.org/). Deployed using [GitHub Pages](https://pages.github.com/).
 
 ## Build
 
