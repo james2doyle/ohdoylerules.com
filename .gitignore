@@ -69,3 +69,4 @@ typings/
 # dotenv environment variables file
 .env
 .hugo_build.lock
+zola
