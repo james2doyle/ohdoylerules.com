@@ -14,7 +14,6 @@ My response: there is? Because I still think Sublime Text holds up as a great ed
 
 *Table Of Contents*
 
-<!--toc:start-->
 - [It fast](#it-fast)
 - [LSP](#lsp)
 - [Snippets](#snippets)
@@ -24,7 +23,6 @@ My response: there is? Because I still think Sublime Text holds up as a great ed
 - [Key/mouse bindings](#key-mouse-bindings)
 - [Included niceness](#included-niceness)
 - [Wish List](#wish-list)
-<!--toc:end-->
 
 I started with Sublime Text 2 back in 2010/2011 while I was in college. I mainly started using it because it was free, cross-platform, and came as a "portable app" that I could put on a USB and just use.
 
@@ -502,4 +500,4 @@ Simple one here. It would be nice to have key and mouse bindings on a project le
 
 I like Sublime. I think it is still incredibly capable in 2025. If you are in search of something a little snappier, classier, and not riddled with AI slop, then give it a try.
 
-I doubt I can pry your Vim from your `HJKL` riddled right hand, but if you use VS Code, you might find Sublime still has a lot to offer.
+I doubt I can pry your Vim from your `HJKL` riddled right hand, but if you have been let down or uninspired by the latest offerings when it comes to editors, you might find Sublime still has a lot to offer.
