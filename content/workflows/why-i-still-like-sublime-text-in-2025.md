@@ -501,3 +501,5 @@ Simple one here. It would be nice to have key and mouse bindings on a project le
 I like Sublime. I think it is still incredibly capable in 2025. If you are in search of something a little snappier, classier, and not riddled with AI slop, then give it a try.
 
 I doubt I can pry your Vim from your `HJKL` riddled right hand, but if you have been let down or uninspired by the latest offerings when it comes to editors, you might find Sublime still has a lot to offer.
+
+*Note: if any of my information is wrong or outdated, I will update it accordingly*
