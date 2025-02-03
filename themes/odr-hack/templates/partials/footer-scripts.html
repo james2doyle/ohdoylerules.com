@@ -18,9 +18,9 @@ function handleGists() {
   const scripts = document.querySelectorAll('.iframes');
   [...scripts].forEach(function(iframe) {
     iframe.onload = function() {
-      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
     }
-    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
   });
 }
 document.addEventListener('DOMContentLoaded', handleGists);
