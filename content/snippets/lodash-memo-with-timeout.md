@@ -8,7 +8,7 @@ template = "post.html"
 keywords = ["lodash", "memo", "ttl", "timeout", "cache", "function", "memoize"]
 +++
 
-If you are familiar with [lodash](https://lodash.com/docs/4.17.15) you may also be familiar with one of the very handy functions called `[memoize](https://lodash.com/docs/4.17.15#memoize)`.
+If you are familiar with [lodash](https://lodash.com/docs/4.17.15) you may also be familiar with one of the very handy functions called [memoize](https://lodash.com/docs/4.17.15#memoize).
 
 The definition of `memoize` on the lodash site is quite verbose. So I will use the [definition on wikipedia](https://en.wikipedia.org/wiki/Memoization):
 
