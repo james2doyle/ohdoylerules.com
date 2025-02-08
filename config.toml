@@ -26,6 +26,12 @@ taxonomies = [
 # The default author for pages
 author = "james2doyle@gmail.com (James Doyle)"
 
+# When set to "false", Sitemap.xml is not generated
+generate_sitemap = true
+
+# When set to "false", robots.txt is not generated
+generate_robots_txt = true
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
