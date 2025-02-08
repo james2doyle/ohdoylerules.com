@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="1182px" height="1026px" viewBox="0 0 1182 1026" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <title>google drive</title>
-    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M789.505013,684 L1181.88497,684 L788,1 L393,1 L789.505013,684 Z M789.505013,684" id="Rectangle-1" fill="#FFCF63" sketch:type="MSShapeGroup"></path>
-        <path d="M690.831433,1196.34721 L1083.21139,1196.34721 L689.32642,513.347214 L294.32642,513.347214 L690.831433,1196.34721 Z M690.831433,1196.34721" id="Rectangle-1-copy" fill="#2C62DF" sketch:type="MSShapeGroup" transform="translate(688.768907, 854.847214) rotate(-60.000000) translate(-688.768907, -854.847214) "></path>
-        <path d="M297.419418,854.394572 L689.799379,854.394572 L295.914405,171.394572 L-99.085595,171.394572 L297.419418,854.394572 Z M297.419418,854.394572" id="Rectangle-1-copy" fill="#199B4E" sketch:type="MSShapeGroup" transform="translate(295.356892, 512.894572) rotate(-300.000000) translate(-295.356892, -512.894572) "></path>
-    </g>
-</svg>
+<svg height="1026" viewBox="0 0 1182 1026" width="1182" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m789.505013 684h392.379957l-393.88497-683h-395zm0 0" fill="#ffcf63"/><path d="m690.831433 1196.34721h392.379957l-393.88497-682.999996h-395zm0 0" fill="#2c62df" transform="matrix(.5 -.8660254 .8660254 .5 -395.93495 1023.914978)"/><path d="m297.419418 854.394572h392.379961l-393.884974-683h-395zm0 0" fill="#199b4e" transform="matrix(.5 .8660254 -.8660254 .5 591.858175 .660714)"/></g></svg>
