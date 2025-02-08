@@ -27,17 +27,23 @@
 {% block content %}
 <div class="the-loop">
   {% for page in section.pages %}
+    <h2><a href="{{ page.permalink | safe }}" title="{{ page.title }}">{{ page.title }}</a></h2>
+    <section class="post-info">
+      <span itemprop="datePublished">
+        🕒&nbsp;&nbsp;
+        <time datetime="{{ page.date | date(format="%Y-%m-%dT%H:%M:%S") }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+      </span>
+      {% if page.updated %}
+        &nbsp;<span itemprop="dateUpdated">
+          🕙&nbsp;&nbsp;
+          <time datetime="{{ page.updated | date(format="%Y-%m-%dT%H:%M:%S") }}">Updated: {{ page.updated | date(format="%B %d, %Y") }}</time>
+        </span>
+      {% endif %}
+      {% if page.extra.category %}
+        &nbsp;<span itemprop="genre about">🏷&nbsp;&nbsp;<span>{{ page.extra.category }}</span></span>
+      {% endif %}
+    </section>
     <article>
-      <h2><a href="{{ page.permalink | safe }}" title="{{ page.title }}">{{ page.title }}</a></h2>
-      <p class="post-info">
-        <span class="post-date" itemprop="datePublished">🕒&nbsp;&nbsp;<span>{{ page.date | date(format="%B %d, %Y") }}</span></span>
-        {% if page.updated %}
-          &nbsp;<span class="post-date">🕙&nbsp;&nbsp;<span>Updated: {{ page.updated | date(format="%B %d, %Y") }}</span></span>
-        {% endif %}
-        {% if page.extra.category %}
-          &nbsp;<span class="post-category" itemprop="genre about">🏷&nbsp;&nbsp;<span>{{ page.extra.category }}</span></span>
-        {% endif %}
-      </p>
       <div class="post-intro">
         <p>{{ page.description }}</p>
         <p><a href="{{ page.permalink | safe }}" class="read-more" title="Read {{ page.title }}">Read More <i class="icon icon-arrow-right"></i></a></p>

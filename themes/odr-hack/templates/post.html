@@ -19,62 +19,58 @@
 
 {% block styles %}
 <style type="text/css">
+.post-info {
+  margin-bottom: 1rem;
+}
 .center img {
   max-width: 100%;
   height: auto;
 }
-pre {
-  color: #f8f8f2;
-  background-color: #282a36;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-}
 pre code.language-diff span:nth-child(1n + 7) {
   color: #50fa7b;
 }
-article blockquote p {
-  margin-bottom: 0;
+iframe {border:0;margin:0;min-height:300px}
+.gist-iframe {
+  background-color: white; /* will be inverted  */
+  /* https://gist.github.com/adimancv/eb2f4b46d3c95e6b8fe4dd52375236b2?permalink_comment_id=5370549#gistcomment-5370549  */
+  filter: invert(1) hue-rotate(180deg) brightness(1);
 }
-body table.highlight tr:nth-child(even) { background-color: inherit }
-@media (prefers-color-scheme: dark) {
-  .gist-iframe {
-    /* https://gist.github.com/adimancv/eb2f4b46d3c95e6b8fe4dd52375236b2?permalink_comment_id=5370549#gistcomment-5370549  */
-    filter: invert(1) hue-rotate(180deg) brightness(1);
-  }
-  /* keep the colors on github gist embeds */
-  body table.highlight tr:nth-child(even) {
-    background-color: rgb(246, 248, 250);
-  }
-  body table.highlight td,
-  body table.highlight th {
-    border-color: rgba(27,31,35,.3);
-  }
+/* keep the colors on github gist embeds */
+body table.highlight tr:nth-child(even) {
+  background-color: rgb(246, 248, 250);
+}
+body table.highlight td,
+body table.highlight th {
+  border-color: rgba(27,31,35,.3);
 }
 </style>
 {% endblock styles %}
 
+{% block header %}
+<header class="center">
+    <h1 itemprop="name headline">{{ page.title }}</h1>
+</header>
+{% endblock %}
 {% block content %}
 <div itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="container">
-    <header class="grid center">
-      <div class="cell menu">
-        <h1 itemprop="name headline">{{ page.title }}</h1>
-      </div>
-    </header>
+  <div>
     <p><a href="{{ config.base_url }}" title="Go Back Home">Go home</a></p>
-    <article class="the-loop">
-      <p class="post-info">
-        {% if page.date %}
-          <span class="post-date" itemprop="datePublished">🕒&nbsp;&nbsp;<span>{{ page.date | date(format="%B %d, %Y") }}</span></span>
-        {% endif %}
+    <article>
+      <section class="post-info">
+        <span itemprop="datePublished">
+          🕒&nbsp;&nbsp;
+          <time datetime="{{ page.date | date(format="%Y-%m-%dT%H:%M:%S") }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+        </span>
         {% if page.updated %}
-          &nbsp;<span class="post-date">🕙&nbsp;&nbsp;<span>Updated: {{ page.updated | date(format="%B %d, %Y") }}</span></span>
+          &nbsp;<span itemprop="dateUpdated">
+            🕙&nbsp;&nbsp;
+            <time datetime="{{ page.updated | date(format="%Y-%m-%dT%H:%M:%S") }}">Updated: {{ page.updated | date(format="%B %d, %Y") }}</time>
+          </span>
         {% endif %}
-        {% if page.category %}
-          &nbsp;<span class="post-category" itemprop="genre about">🏷&nbsp;&nbsp;<span>{{ page.updated }}</span></span>
+        {% if page.extra.category %}
+          &nbsp;<span itemprop="genre about">🏷&nbsp;&nbsp;<span>{{ page.extra.category }}</span></span>
         {% endif %}
-      </p>
+      </section>
       <div itemprop="ArticleBody text" class="main-content">{{ page.content | safe }}</div>
       <p><a href="{{ config.base_url }}" title="Go Back Home">Go home</a></p>
       <hr>

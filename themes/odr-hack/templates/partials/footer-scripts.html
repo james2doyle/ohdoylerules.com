@@ -9,20 +9,22 @@
   }
 </script>
 #}
-<script src="https://unpkg.com/swup@4.6.1/dist/Swup.umd.js"></script>
+<script src="https://unpkg.com/swup@4.8.1/dist/Swup.umd.js" defer></script>
 <script>
-const swup = new Swup({
-  native: true,
-});
 function handleGists() {
   const scripts = document.querySelectorAll('.iframes');
   [...scripts].forEach(function(iframe) {
     iframe.onload = function() {
-      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 16 + 'px';
     }
-    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 16 + 'px';
   });
 }
-document.addEventListener('DOMContentLoaded', handleGists);
-swup.hooks.on('visit:end', handleGists, { priority: 100 });
+document.addEventListener('DOMContentLoaded', function() {
+  handleGists();
+  const swup = new Swup({
+    native: true,
+  });
+  swup.hooks.on('visit:end', handleGists, { priority: 100 });
+});
 </script>

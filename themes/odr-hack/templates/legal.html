@@ -20,17 +20,14 @@
 {% block styles %}
 {% endblock styles %}
 
+{% block header %}
+<header class="center">
+  <h1>{{ page.title }}</h1>
+</header>
+{% endblock %}
+
 {% block content %}
-<div>
-  <div class="container">
-    <header class="grid center">
-      <div class="cell menu">
-        <h1>{{ page.title }}</h1>
-      </div>
-    </header>
-    <main class="the-loop">
-      <div class="main-content">{{ page.content | safe }}</div>
-    </main>
-  </div>
-</div>
+<main>
+  <article>{{ page.content | safe }}</article>
+</main>
 {% endblock content %}
