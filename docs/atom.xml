@@ -5,8 +5,202 @@
     <link rel="self" type="application/atom+xml" href="https://ohdoylerules.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ohdoylerules.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-01-27T00:00:00+00:00</updated>
+    <updated>2025-02-08T00:00:00+00:00</updated>
     <id>https://ohdoylerules.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Things I like about Dart</title>
+        <published>2025-02-08T00:00:00+00:00</published>
+        <updated>2025-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              james2doyle@gmail.com (James Doyle)
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ohdoylerules.com/workflows/things-i-like-about-dart/"/>
+        <id>https://ohdoylerules.com/workflows/things-i-like-about-dart/</id>
+        
+        <content type="html" xml:base="https://ohdoylerules.com/workflows/things-i-like-about-dart/">
+&lt;div class=&quot;center&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-logo.png&quot; title=&quot;Dart logo&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-logo.98e7b03e7c5c0bd4.webp&quot;
+        alt=&quot;Dart logo&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;&lt;h3 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h3&gt;
+&lt;p&gt;The main perspective here is comparing Node.js to Dart.&lt;&#x2F;p&gt;
+&lt;p&gt;If you take the temperature of JS developers today, you&#x27;ll likely find frustration. Common complaints include dependency management, build systems, framework bloat, upgrade woes, and the increasing expectation of using TypeScript over plain JS, which adds its own tooling and cognitive overhead.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;wait-what-about-bun-deno-etc&quot;&gt;Wait! What about Bun, Deno, etc?&lt;&#x2F;h3&gt;
+&lt;p&gt;I have used both just to play with and see how they work. A major advantage of both Bun and Deno is their built-in TypeScript support, eliminating configuration hassles. This is a significant win for developer experience.&lt;&#x2F;p&gt;
+&lt;p&gt;I really like what Bun is trying to do. I think their goal of including things you need to make &quot;web&quot; projects (&quot;serve&quot; API, database support, file API, &quot;S3&quot; API, etc.) is the right move. I&#x27;d like if they added more built-in tooling to eliminate the need for separate linters and formatters.&lt;&#x2F;p&gt;
+&lt;p&gt;In &lt;em&gt;Deno land&lt;&#x2F;em&gt;, I think their &quot;secure by default&quot; approach is smart. Especially since we are seeing a lot of packages get &quot;backdoored&quot; (taken over, maliciously modified, then published as a new version) or taken over by malicious actors. I&#x27;m not sure how much of a difference that will make, as many Node projects I&#x27;ve worked on require extensive permissions due to the limited out-of-the-box experience.&lt;&#x2F;p&gt;
+&lt;p&gt;Deno does have a linter (&lt;code&gt;lint&lt;&#x2F;code&gt;, &lt;code&gt;check&lt;&#x2F;code&gt;), formatter (&lt;code&gt;fmt&lt;&#x2F;code&gt;), test runner, bench tool, and package manager built-in. So that allows you to remove a lot of cruft from your &lt;code&gt;package.json&lt;&#x2F;code&gt; and get a lot done with a single command. They even have a built-in LSP... just like Dart - wink wink.&lt;&#x2F;p&gt;
+&lt;p&gt;Unlike Bun, Deno has a hosted standard library. While I understand the approach, I&#x27;m hesitant to add more packages to install and manage. It would be preferable to have basic functionality like JSON support included by default instead of relying on external packages.&lt;&#x2F;p&gt;
+&lt;p&gt;Ultimately, until platforms like Vercel and Netlify offer Bun and Deno as engine version options alongside Node LTS, it&#x27;s difficult to fully commit to them. Hopefully, that will change soon.&lt;&#x2F;p&gt;
+&lt;p&gt;All that being said, let me tell you about this Dart thing...&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;all-inclusive&quot;&gt;All Inclusive&lt;&#x2F;h3&gt;
+&lt;p&gt;I&#x27;m not even going to try to convince anyone to use Dart. I like it. I think it makes sense for writing servers and apps. I think the language&#x27;s simple approach to types can be frustrating but also satisfying when it finally clicks.&lt;&#x2F;p&gt;
+&lt;p&gt;I really want to focus on the &lt;em&gt;Developer Experience&lt;&#x2F;em&gt; for now. Because I think that is the thing that really shines when using it.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;dart&lt;&#x2F;code&gt; command does a lot. Of course it can build and run your programs, but that is just a part of what you would want when developing modern apps and programs.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;$ dart --help
+&lt;&#x2F;span&gt;&lt;span&gt;A command-line utility for Dart development.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Usage: dart &amp;lt;command|dart-file&amp;gt; [arguments]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Global options:
+&lt;&#x2F;span&gt;&lt;span&gt;-v, --verbose               Show additional command output.
+&lt;&#x2F;span&gt;&lt;span&gt;    --version               Print the Dart SDK version.
+&lt;&#x2F;span&gt;&lt;span&gt;    --enable-analytics      Enable analytics.
+&lt;&#x2F;span&gt;&lt;span&gt;    --disable-analytics     Disable analytics.
+&lt;&#x2F;span&gt;&lt;span&gt;    --suppress-analytics    Disallow analytics for this `dart *` run without
+&lt;&#x2F;span&gt;&lt;span&gt;                              changing the analytics configuration.
+&lt;&#x2F;span&gt;&lt;span&gt;-h, --help                  Print this usage information.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Available commands:
+&lt;&#x2F;span&gt;&lt;span&gt;  analyze    Analyze Dart code in a directory.
+&lt;&#x2F;span&gt;&lt;span&gt;  compile    Compile Dart to various formats.
+&lt;&#x2F;span&gt;&lt;span&gt;  create     Create a new Dart project.
+&lt;&#x2F;span&gt;&lt;span&gt;  devtools   Open DevTools (optionally connecting to an existing application).
+&lt;&#x2F;span&gt;&lt;span&gt;  doc        Generate API documentation for Dart projects.
+&lt;&#x2F;span&gt;&lt;span&gt;  fix        Apply automated fixes to Dart source code.
+&lt;&#x2F;span&gt;&lt;span&gt;  format     Idiomatically format Dart source code.
+&lt;&#x2F;span&gt;&lt;span&gt;  info       Show diagnostic information about the installed tooling.
+&lt;&#x2F;span&gt;&lt;span&gt;  pub        Work with packages.
+&lt;&#x2F;span&gt;&lt;span&gt;  run        Run a Dart program.
+&lt;&#x2F;span&gt;&lt;span&gt;  test       Run tests for a project.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Run &amp;quot;dart help &amp;lt;command&amp;gt;&amp;quot; for more information about a command.
+&lt;&#x2F;span&gt;&lt;span&gt;See https:&#x2F;&#x2F;dart.dev&#x2F;tools&#x2F;dart-tool for detailed documentation.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Here is just a short list:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;manage-packages-install-uninstall-upgrade-etc&quot;&gt;Manage packages (install, uninstall, upgrade, etc.)&lt;&#x2F;h3&gt;
+&lt;p&gt;Pretty self-explanatory here. You can manage your dependencies with the &lt;code&gt;dart&lt;&#x2F;code&gt; command without any additional tools. The specific command is &lt;code&gt;dart pub&lt;&#x2F;code&gt;. If you wanted to install a package you would run &lt;code&gt;dart pub add jiffy&lt;&#x2F;code&gt; and that would install &lt;code&gt;jiffy&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;In case you aren&#x27;t aware, in the Node.js world, you need to pick your flavour of package manager. Be it &lt;code&gt;npm&lt;&#x2F;code&gt;, &lt;code&gt;pnpm&lt;&#x2F;code&gt;, or &lt;code&gt;yarn&lt;&#x2F;code&gt;, just to name the popular ones. Using &lt;code&gt;npm&lt;&#x2F;code&gt; has for all intents and purposes become the default. I see &lt;code&gt;pnpm&lt;&#x2F;code&gt; out there a lot more now but still a 3rd place to &lt;code&gt;yarn&lt;&#x2F;code&gt; in my experience.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;formatting-linting-and-code-analysis&quot;&gt;Formatting, linting, and code analysis&lt;&#x2F;h3&gt;
+&lt;p&gt;Dart has 3 different commands for doing checks on your code. Dart has &lt;code&gt;dart format&lt;&#x2F;code&gt;, &lt;code&gt;dart analyse&lt;&#x2F;code&gt;, and &lt;code&gt;dart fix&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Key Differences Summarized&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Feature&lt;&#x2F;th&gt;&lt;th&gt;&lt;code&gt;dart analyze&lt;&#x2F;code&gt;&lt;&#x2F;th&gt;&lt;th&gt;&lt;code&gt;dart fix&lt;&#x2F;code&gt;&lt;&#x2F;th&gt;&lt;th&gt;&lt;code&gt;dart format&lt;&#x2F;code&gt;&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Primary Focus&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td&gt;Correctness, type safety, null safety, errors&lt;&#x2F;td&gt;&lt;td&gt;Automated code fixes for analysis issues&lt;&#x2F;td&gt;&lt;td&gt;Code formatting, consistency, uniformity&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Detects&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td&gt;Errors, warnings, hints, lint violations&lt;&#x2F;td&gt;&lt;td&gt;Issues that have associated automated fixes&lt;&#x2F;td&gt;&lt;td&gt;Formatting inconsistencies&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Fixes&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td&gt;No (reports issues)&lt;&#x2F;td&gt;&lt;td&gt;Yes (automatically applies fixes)&lt;&#x2F;td&gt;&lt;td&gt;Yes (automatically reformats code)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Goal&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td&gt;Prevent runtime errors and ensure code reliability&lt;&#x2F;td&gt;&lt;td&gt;Reduce manual effort in fixing common issues&lt;&#x2F;td&gt;&lt;td&gt;Automate code formatting and enforce a consistent style&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Configuration&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;analysis_options.yaml&lt;&#x2F;code&gt; (general analysis)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;analysis_options.yaml&lt;&#x2F;code&gt; (uses analysis settings)&lt;&#x2F;td&gt;&lt;td&gt;Minimal configuration (line length)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;So already, without any additional dependencies, you can skip your &lt;code&gt;prettier&lt;&#x2F;code&gt;, &lt;code&gt;eslint&lt;&#x2F;code&gt;, and all associated plugins for that.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;center&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-format-analyse.gif&quot; title=&quot;Dart format and analyse demo&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;&amp;#x2F;images&amp;#x2F;dart-format-analyse.gif&quot;
+        alt=&quot;Dart format and analyse demo&quot;
+        width=&quot;670&quot;
+        style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;
+        loading=&quot;lazy&quot; fetchpriority=&quot;low&quot;
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;One of the great things about having these features centralized in the tool, is that there is a common interface for those tools. When you install a Dart package, that package can also register its own analysis options and fix rules! Very handy!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;running-tests&quot;&gt;Running tests&lt;&#x2F;h3&gt;
+&lt;p&gt;Dart has a test runner included in it&#x27;s tool chest.&lt;&#x2F;p&gt;
+&lt;p&gt;It is just another thing you don&#x27;t need to think about. Node.js has a few popular projects like Jest and Vitest, but again, more things to install and learn. Also, want linting and code fixes in your tests? Oh good! Just install &lt;code&gt;eslint-plugin-jest&lt;&#x2F;code&gt; (or &lt;code&gt;eslint-plugin-vitest&lt;&#x2F;code&gt;) as well!&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;center&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-test.gif&quot; title=&quot;Dart test demo&quot; target=&quot;_blank&quot;&gt;&lt;img
+        src=&quot;&amp;#x2F;images&amp;#x2F;dart-test.gif&quot;
+        alt=&quot;Dart test demo&quot;
+        width=&quot;670&quot;
+        style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;
+        loading=&quot;lazy&quot; fetchpriority=&quot;low&quot;
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;&lt;h3 id=&quot;scaffolding-new-projects&quot;&gt;Scaffolding new projects&lt;&#x2F;h3&gt;
+&lt;p&gt;With Dart, you can run &lt;code&gt;dart create&lt;&#x2F;code&gt; and it will scaffold a new project for you. They have a few included templates:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;[cli]                  A command-line application with basic argument parsing.
+&lt;&#x2F;span&gt;&lt;span&gt;[console] (default)    A command-line application.
+&lt;&#x2F;span&gt;&lt;span&gt;[package]              A package containing shared Dart libraries.
+&lt;&#x2F;span&gt;&lt;span&gt;[server-shelf]         A server app using package:shelf.
+&lt;&#x2F;span&gt;&lt;span&gt;[web]                  A web app that uses only core Dart libraries.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;These can be run offline and without downloading additional dependencies.&lt;&#x2F;p&gt;
+&lt;p&gt;Comparing this with the equivalent on the Node side, &lt;code&gt;npx&lt;&#x2F;code&gt;, I think it is more specific and less capable than &lt;code&gt;npx&lt;&#x2F;code&gt;, but again, not another command to install&#x2F;learn. Just the same old predictable tool.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;generating-documentation&quot;&gt;Generating documentation&lt;&#x2F;h3&gt;
+&lt;p&gt;This one is pretty underappreciated in my experience. Just run &lt;code&gt;dart doc&lt;&#x2F;code&gt; and you can generate a documentation for your project. How great is that?&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;dart doc&lt;&#x2F;code&gt; command actually generates a whole static HTML site. Complete with a dark mode and a search feature!&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;center&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-doc.png&quot; title=&quot;Dart doc demo&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-doc.0715d8ce257f94cb.webp&quot;
+        alt=&quot;Dart doc demo&quot;
+        
+          style=&quot;content-visibility: auto; contain-intrinsic-size: auto 279px;&quot;
+          loading=&quot;lazy&quot; fetchpriority=&quot;low&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;If you want to see an example, just check out Dart&#x27;s own documentation. It is generated with &lt;code&gt;dart doc&lt;&#x2F;code&gt;: &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;api.dart.dev&#x2F;&quot;&gt;https:&#x2F;&#x2F;api.dart.dev&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;devtools&quot;&gt;Devtools&lt;&#x2F;h3&gt;
+&lt;p&gt;The Dart devtools have to be one of the best parts about using Dart. They work a lot like the Chrome devtools. When you run &lt;code&gt;dart devtools&lt;&#x2F;code&gt; or run a Dart program, a website is automatically served locally for you to use the tool at. It is super similar to the Chrome devtools if you&#x27;ve used those before.&lt;&#x2F;p&gt;
+&lt;p&gt;
+&lt;div class=&quot;center&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-devtools-1.png&quot; title=&quot;Dart devtools demo debugger&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-devtools-1.28d2687b286f4814.webp&quot;
+        alt=&quot;Dart devtools demo debugger&quot;
+        
+          style=&quot;content-visibility: auto; contain-intrinsic-size: auto 617px;&quot;
+          loading=&quot;lazy&quot; fetchpriority=&quot;low&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div class=&quot;center&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-devtools-2.png&quot; title=&quot;Dart devtools demo memory&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-devtools-2.eb08941877a0114b.webp&quot;
+        alt=&quot;Dart devtools demo memory&quot;
+        
+          style=&quot;content-visibility: auto; contain-intrinsic-size: auto 619px;&quot;
+          loading=&quot;lazy&quot; fetchpriority=&quot;low&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Have you tried to use the Node devtools? I have found them to be nothing but frustrating. Usually there are multiple Node processes running and I never know which one to use. It seems to randomly stop listening to my debugger statements or will just hang. It has been endlessly frustrating.&lt;&#x2F;p&gt;
+&lt;p&gt;I am really quite shocked about how bad the devtools experience is in Node. If you know, you know.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;built-in-language-server-protocol-lsp&quot;&gt;Built in Language Server Protocol (LSP)&lt;&#x2F;h3&gt;
+&lt;p&gt;Having an LSP included in the tool is also a modern nicety. If you aren&#x27;t aware of what an LSP is, well it is basically a server that runs in the background and gives your editor extra information about your code. It powers all those nice pop-ups and code actions you see in your editor.&lt;&#x2F;p&gt;
+&lt;p&gt;Node.js doesn&#x27;t natively include an LSP and it is something that needs to be setup separately. Usually people will just run the TypeScript language server over their projects even when it isn&#x27;t using TypeScript. Just because that is easier and it is a high quality solution.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-does-this-all-matter&quot;&gt;Why does this all matter?&lt;&#x2F;h3&gt;
+&lt;p&gt;There is one really simple reason that having all these tools bundled together under the one umbrella, and that is versioning.&lt;&#x2F;p&gt;
+&lt;p&gt;If you have a project written with Dart 3.3, you can install Dart 3.3 and be pretty confident that the project will run and work as it did the last time you used Dart 3.3 on that project. You can format, lint, test, fix, etc. etc. the way you did when you had Dart 3.3 last time.&lt;&#x2F;p&gt;
+&lt;p&gt;Node however, well, it depends.&lt;&#x2F;p&gt;
+&lt;p&gt;You need to make sure the Node version matches, the NPM version matches (remember when NPM changed lock file and peer dependencies?), and also that all the dependencies in your &lt;code&gt;package.json&lt;&#x2F;code&gt; were pinned at the correct versions and a lock file was present.&lt;&#x2F;p&gt;
+&lt;p&gt;The sad thing about returning to some project that are developed using Node is that they can be really hard to reboot after being left alone for a while. The site or app still works perfectly fine in the deployed environment, but it has become a real chore to actually restart development on.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;in-summation&quot;&gt;In Summation&lt;&#x2F;h3&gt;
+&lt;p&gt;Dart isn&#x27;t perfect. It has some real warts (code gen, &lt;code&gt;build_runner&lt;&#x2F;code&gt;) but I find that when using Dart, I feel a lot more secure and focused on building towards the actual solution in my head and not just playing &lt;strong&gt;dependency conductor&lt;&#x2F;strong&gt; trying to get all the parts to work in harmony.&lt;&#x2F;p&gt;
+&lt;p&gt;I can just work and know that the tools I need to build work that I can confidently deploy.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Why I still like Sublime Text in 2025</title>
         <published>2025-01-27T00:00:00+00:00</published>
@@ -1362,6 +1556,7 @@
 &lt;p&gt;I was working on a site that needed to use dynamic translations. The way this is done today is usually through a function that is loaded in your components and called with a key that then gets mapped to whatever language you are using.&lt;&#x2F;p&gt;
 &lt;p&gt;You can pass in variables to the function in order to translate sentences that include placeholders. For example, you might want to have a welcome message like &quot;Hello {name_of_user}!&quot;. Pretty common use case as you can imagine.&lt;&#x2F;p&gt;
 &lt;p&gt;I managed to get a simple version of an &lt;code&gt;intl&lt;&#x2F;code&gt; function working by using a combination of &lt;code&gt;get&lt;&#x2F;code&gt;, &lt;code&gt;template&lt;&#x2F;code&gt;, and &lt;code&gt;memoize&lt;&#x2F;code&gt; functions in lodash.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;d00e06a5f4963a539e3aa0b2d5283d11.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;d00e06a5f4963a539e3aa0b2d5283d11.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;What we are doing here is using first getting a value from our translation file. We use the &lt;code&gt;template&lt;&#x2F;code&gt; function to parse the value we find from our translation function using a pattern that looks for single words wrapped with curly braces. Like &lt;code&gt;{this}&lt;&#x2F;code&gt;. We can then pass in any variables we wanted to replace in that string. Finally, we use &lt;code&gt;memoize&lt;&#x2F;code&gt; to avoid recompiling the template on each additional call. This will just return the cached results of any translations instead of grabbing the value and parsing the string again.&lt;&#x2F;p&gt;
 &lt;p&gt;If you find yourself needing a simple translation function, this could be a good option if you already have lodash in your project.&lt;&#x2F;p&gt;
@@ -1397,6 +1592,7 @@
 &lt;p&gt;TTL (time to live) is the amount of time that needs to elapse before the cache needs to be refreshed. If you are familiar with the HTTP protocol, you may have come across this term when learning about cache headers.&lt;&#x2F;p&gt;
 &lt;p&gt;So how do you implement a custom cache backend for lodash &lt;code&gt;memoize&lt;&#x2F;code&gt;? Easy! The &lt;code&gt;memoize&lt;&#x2F;code&gt; function allows you to write your own resolver function that lets you decide when to fetch from the cache or run the function again.&lt;&#x2F;p&gt;
 &lt;p&gt;I&#x27;ve done the work for you and made a simple version in TypeScript that uses the current minute as a tracker for when the last call was:&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;2a7428e6e740279f8cc7fbd2dd7b4f75.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;2a7428e6e740279f8cc7fbd2dd7b4f75.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;You can see in this function that we take in the arguments and add a time to the end. We then serialize that object as JSON and use that as our cache key. When lodash runs our new &lt;code&gt;memo&lt;&#x2F;code&gt; function, it will first compare the cached keys and see if they are different. If they are, then the function will actually run and the cached results will not be used and instead our original function will run, and the result of that run, will be cached. Subsequent calls repeat the whole process.&lt;&#x2F;p&gt;
 &lt;p&gt;In this case, we only cache the results for one minute. So any calls to our new &lt;code&gt;memo&lt;&#x2F;code&gt; function that are over a minute old will run. This will allow some inefficient code that calls an endpoint too often to only make those calls if at least a minute has passed.&lt;&#x2F;p&gt;
@@ -1646,6 +1842,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;p&gt;One of the configuration settings is for what screen sizes and breakpoints are supported. One of the benefits of these values being defined in JS is that you can then use them in JS as well. You can &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tailwindcss.com&#x2F;docs&#x2F;breakpoints&quot;&gt;read more about them in the docs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;So why might you want to use these values in JS? Well, if you are building components that have conditional content based on the screen size, having access to these values can be super handy. You can check the screen size and show&#x2F;hide different content, conditional load different sizes elements, or even disable an entire swath of features&#x2F;functionality. All while keep your JS code in sync with your CSS code. You can reuse the variable names.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the code I used to accomplish this:&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;c1306ace82cfe9e22a4ecfff13c6595b.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;c1306ace82cfe9e22a4ecfff13c6595b.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;You can use the function like so:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; es6
@@ -2847,6 +3044,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;p&gt;As you can see, we try to execute a bad query that would manipulate the data and we get blocked.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;super-example&quot;&gt;Super example&lt;&#x2F;h3&gt;
 &lt;p&gt;Here is a much more robust example with some error handling, proper status codes, parsing of JSON input, and it also allows you to put the &lt;code&gt;query&lt;&#x2F;code&gt; in a &lt;code&gt;GET&lt;&#x2F;code&gt; or a &lt;code&gt;POST&lt;&#x2F;code&gt; request.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;9e4b2b4f17e33bfb236fbdaf96c41a4c.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;9e4b2b4f17e33bfb236fbdaf96c41a4c.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;Try running the example above and giving things a test. Here is our new request that uses JSON instead:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;curl -X&lt;&#x2F;span&gt;&lt;span&gt; POST \
@@ -3556,6 +3754,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
         <content type="html" xml:base="https://ohdoylerules.com/web/wordpress-browser-body-class/">&lt;p&gt;Sometimes, browsers just don&#x27;t behave. While working on a WordPress site, I had a particular styling issue that was affecting Safari. I was wondering what the best way to target the browser was.&lt;&#x2F;p&gt;
 &lt;p&gt;If you didn&#x27;t know, there are some primitive &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;codex.wordpress.org&#x2F;Global_Variables#Browser_Detection_Booleans&quot;&gt;browser detection booleans&lt;&#x2F;a&gt; that are built into WordPress.&lt;&#x2F;p&gt;
 &lt;p&gt;Using those primitives, I was able to whip up a little snippet that adds classes to the body tag depending on the browser - no plugins required.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;979b09fc7c676baf3283bdb113b3db6d.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;979b09fc7c676baf3283bdb113b3db6d.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;As you can see, we simply loop over each one of those browser booleans and append them to the output.&lt;&#x2F;p&gt;
 &lt;p&gt;Easy, and no plugin needed. Just add that code to your &lt;code&gt;functions.php&lt;&#x2F;code&gt; file.&lt;&#x2F;p&gt;
@@ -3623,6 +3822,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
         
         <content type="html" xml:base="https://ohdoylerules.com/snippets/color-helpers-in-fish-shell/">&lt;p&gt;I am one of those people who likes a lot of colors in my shell. When there is a failure, I like to see red. If there is something stuccessful, I like to see green.&lt;&#x2F;p&gt;
 &lt;p&gt;Working with the prompt to output the correct colors can be a bit of a pain. I manage to find a nice way to handle both colorizing backgrounds for the text as well as the actual text color. You can see an example below:&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;acb8c065c8b4d63f557d44a77a356d59.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;acb8c065c8b4d63f557d44a77a356d59.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;Once you add the code into your &lt;code&gt;fish config&lt;&#x2F;code&gt;. You will then be able to colorize your output using this simple helper function:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;color_print &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;COLOR_R &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;I am red text.&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
@@ -3722,6 +3922,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
         
         <content type="html" xml:base="https://ohdoylerules.com/snippets/install-latest-nodejs-on-amazon-linux/">&lt;p&gt;Installing the latest version of Node.js on the Amazon linux AMI can actually be a little painful.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is a script for doing just that.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;a1f0b415dee4e69b3595b7af1d07e7c1.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;a1f0b415dee4e69b3595b7af1d07e7c1.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;Hopefully, sometime soon, Amazon will stop using &lt;code&gt;0.10.*&lt;&#x2F;code&gt; and start using a &lt;code&gt;x.*&lt;&#x2F;code&gt; version by default.&lt;&#x2F;p&gt;
 </content>
@@ -3745,6 +3946,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
         
         <content type="html" xml:base="https://ohdoylerules.com/snippets/running-go-in-docker/">&lt;p&gt;Lately, I have been trying to learn golang. This means playing with a lot of tools and busting up my local environment.&lt;&#x2F;p&gt;
 &lt;p&gt;In order to keep things simple, I have been using Docker container to run my applications when I am ready to deploy or build them.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;6489d3e60d994222ce0404c8cd500a93.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;6489d3e60d994222ce0404c8cd500a93.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;I use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;zeit.co&#x2F;now&quot;&gt;now.sh&lt;&#x2F;a&gt; to deploy the applications. Since now.sh support deploying Docker, using the Dockerfile approach makes it really simple to deploy.&lt;&#x2F;p&gt;
 </content>
@@ -3971,6 +4173,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;So, without spending any money, I can get a SaaS experience using some built-in tools.&lt;&#x2F;p&gt;
 &lt;p&gt;You can see the script here:&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;6e471dee73124eddda8c.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;6e471dee73124eddda8c.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;I included some rules for the &lt;code&gt;crontab&lt;&#x2F;code&gt; settings. I used &lt;code&gt;0 0 * * 1 *&lt;&#x2F;code&gt; which is once a week on Monday at midnight.&lt;&#x2F;p&gt;
 &lt;p&gt;You can still run the script above &lt;em&gt;without using &lt;code&gt;CRON&lt;&#x2F;code&gt;&lt;&#x2F;em&gt;. Just put it somewhere on your server and run it like you normally would: &lt;code&gt;.&#x2F;backup-mysql-db.sh&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
@@ -4003,6 +4206,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Well, now you can! I have used this little script a couple times to remove any conflicting filenames when uploading files with the same name.&lt;&#x2F;p&gt;
 &lt;p&gt;I use this in &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;laravel.com&quot;&gt;Laravel&lt;&#x2F;a&gt; (with an instance of &lt;code&gt;Symfony\Component\HttpFoundation\File\UploadedFile&lt;&#x2F;code&gt; which extends &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;http:&#x2F;&#x2F;php.net&#x2F;SplFileInfo&quot;&gt;SplFileInfo&lt;&#x2F;a&gt;) but it can easily be modified for any other framework or system.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;516483af423d4643ac83.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;516483af423d4643ac83.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;If you are OCD, and wanted to all files to start with a number, just remove the if statement for the &lt;code&gt;$client_name&lt;&#x2F;code&gt;, only leaving the string concatenate line, and it will always add a the counter when the file is new.&lt;&#x2F;p&gt;
 &lt;p&gt;So give it a shot, and if you modify it for some other framework, post the link in the comments.&lt;&#x2F;p&gt;
@@ -4036,6 +4240,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;p&gt;Well, now you can! I have created an alternative to &lt;code&gt;$.getScript&lt;&#x2F;code&gt; that handles stylesheets. I called it &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;9456c3e145f8d0afbe25&quot;&gt;$.getStylesheet&lt;&#x2F;a&gt; for obvious reasons.&lt;&#x2F;p&gt;
 &lt;p&gt;It implements the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;api.jquery.com&#x2F;jQuery.Deferred&#x2F;&quot;&gt;$.Deferred&lt;&#x2F;a&gt; object, which allows for chaining and pseudo-promises-style code. Just like &lt;code&gt;$.ajax&lt;&#x2F;code&gt;, &lt;code&gt;$.post&lt;&#x2F;code&gt;, and &lt;code&gt;$.get&lt;&#x2F;code&gt;. This also means you would have access to all the other methods on that object too, this means: &lt;code&gt;.then()&lt;&#x2F;code&gt;, &lt;code&gt;.always()&lt;&#x2F;code&gt;, &lt;code&gt;.done()&lt;&#x2F;code&gt;, and &lt;code&gt;.fail()&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the little function for &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;9456c3e145f8d0afbe25&quot;&gt;$.getStylesheet&lt;&#x2F;a&gt;. It is just hosted on Github gist, so I can update it if I need to:&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;9456c3e145f8d0afbe25.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;9456c3e145f8d0afbe25.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;You can see this is pretty simple. Just add the function after your jQuery script, or somewhere in your main script file.&lt;&#x2F;p&gt;
 </content>
@@ -4180,6 +4385,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;h3 id=&quot;testing&quot;&gt;Testing&lt;&#x2F;h3&gt;
 &lt;p&gt;I found &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; title=&quot;Load testing apache with ab apache bench&quot; href=&quot;https:&#x2F;&#x2F;www.devside.net&#x2F;wamp-server&#x2F;load-testing-apache-with-ab-apache-bench&quot;&gt;a great article on this site&lt;&#x2F;a&gt; that explains a lot of details about using ab, setting up Apache, configuring PHP, and information about the results. You should check it out.&lt;&#x2F;p&gt;
 &lt;p&gt;I used the following script, based on that article above, that tests a site in succession and prints the results to a file.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;1b77386317af93a0e5b2.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;1b77386317af93a0e5b2.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;To run the script, download it and unzip it. Then run &lt;code&gt;chmod +x bench.sh&lt;&#x2F;code&gt; to allow the script to run. Then you can use &lt;code&gt;.&#x2F;bench&lt;&#x2F;code&gt; and the script will begin.&lt;&#x2F;p&gt;
 &lt;p&gt;The article I linked to above mentioned using a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; title=&quot;Load testing apache with ab apache bench&quot; href=&quot;https:&#x2F;&#x2F;www.devside.net&#x2F;wamp-server&#x2F;load-testing-apache-with-ab-apache-bench&quot;&gt;delay of 4 minutes&lt;&#x2F;a&gt; between running &lt;code&gt;ab&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
@@ -4266,6 +4472,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Most likely, you will only change the &lt;code&gt;-a&lt;&#x2F;code&gt; part to &lt;code&gt;80&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Our Varnish configuration for our site lives at &lt;code&gt;&#x2F;etc&#x2F;varnish&#x2F;default.vcl&lt;&#x2F;code&gt;, here is the one I am using:&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;0feec6ab77078ad3fdce.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;0feec6ab77078ad3fdce.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;It is very basic. I really only want to cache text files (HTML, CSS, Javascript&#x2F;JSON) and images.&lt;&#x2F;p&gt;
 &lt;p&gt;To restart Varnish, use &lt;code&gt;service varnish restart&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
@@ -4309,6 +4516,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;p&gt;If you didn&#x27;t know, the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Email_address#Examples&quot;&gt;spec for email&lt;&#x2F;a&gt; is actually pretty complex. It allows a lot more than just a web-safe prefix and a domain sandwiched between an &lt;code&gt;@&lt;&#x2F;code&gt; symbol. You can use quotes, brackets, escapes, and more &lt;code&gt;@&lt;&#x2F;code&gt; symbols.&lt;&#x2F;p&gt;
 &lt;p&gt;Looking at the results that Wikipedia gives me for emails that should fail or pass a validation, I knew this would require more than just a simple pattern match.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the final product. I added some nice comments to explain some of the rules as well.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;67846afd05335822c149.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;67846afd05335822c149.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;You can see there is a lot more logic than expected. I also made this function have multiple returns.&lt;&#x2F;p&gt;
 &lt;p&gt;If the email passes the function returns &lt;code&gt;true&lt;&#x2F;code&gt; and &lt;code&gt;nil&lt;&#x2F;code&gt;, but if it fails, it will return &lt;code&gt;nil&lt;&#x2F;code&gt; and the reason that the validation failed. Pretty slick!&lt;&#x2F;p&gt;
@@ -4358,6 +4566,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;If everything was organized correctly, I should get a successful response with the information I wanted.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the script:&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;33794328675a6c88edd6.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;33794328675a6c88edd6.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;You could always add more HTTP status codes, or use different key names for the array response. I like &lt;code&gt;status&lt;&#x2F;code&gt; and &lt;code&gt;message&lt;&#x2F;code&gt; because I may have a successful response, but I know something else went wrong when the &lt;code&gt;status&lt;&#x2F;code&gt; is false. I usually put whatever data I need in &lt;code&gt;message&lt;&#x2F;code&gt;. If message is a string, I know there is actually a message and not data I need to handle.&lt;&#x2F;p&gt;
 </content>
@@ -4695,6 +4904,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
         
         <content type="html" xml:base="https://ohdoylerules.com/snippets/phalconphp-crop-to-fit/">&lt;p&gt;I was trying to find out how to crop-to-fit an image with &lt;code&gt;GD&lt;&#x2F;code&gt;. But there were no examples with Phalcon. There was one post that mentioned using &lt;code&gt;Imagick&lt;&#x2F;code&gt;. The only problem was that you needed to compiled Imagick with &lt;code&gt;--lrf&lt;&#x2F;code&gt; in order to use &lt;code&gt;liquidRescale&lt;&#x2F;code&gt;. This may not be an option on many hosting platforms. For that reason, I wanted to use &lt;code&gt;GD&lt;&#x2F;code&gt; instead.&lt;&#x2F;p&gt;
 &lt;p&gt;I &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; title=&quot;Crop-To-Fit an Image Using ASP&#x2F;PHP&quot; href=&quot;http:&#x2F;&#x2F;salman-w.blogspot.com&#x2F;2009&#x2F;04&#x2F;crop-to-fit-image-using-aspphp.html&quot;&gt;found this post&lt;&#x2F;a&gt; after a quick Google search. It helped me create the base for my Phalcon version of the function. This may seem pretty easy for some people, but I found enough people asking, that I figured I would share the whole code.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;james2doyle&#x2F;13a36401d6249729d017.js&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;james2doyle&amp;#x2F;13a36401d6249729d017.js&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;If you really wanted to use Imagick, then you could just replace GD in the constructor (&lt;code&gt;Phalcon\Image\Adapter\Imagick($source)&lt;&#x2F;code&gt;) and it should work fine. This way you don&#x27;t need to compile Imagick from source in order to get &lt;code&gt;liquidRescale&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 </content>
@@ -5118,6 +5328,7 @@ uses slots for best flexibility&lt;&#x2F;li&gt;
 &lt;li&gt;font-size&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;Here is the actual SVG file. As you can see it is a PHP file, but you are serving it as an SVG (see the &lt;code&gt;Content-Type&lt;&#x2F;code&gt; part?). Here we grab the URL arguments and assign them to the SVG.&lt;&#x2F;p&gt;
+
 &lt;iframe class=&quot;gist-iframe iframes&quot; id=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;3aad1d22163c3c3e5cfd.js?file=placeholder-svg.php&quot; src=&quot;about:blank&quot; srcdoc=&quot;&lt;script src=&#x27;https:&amp;#x2F;&amp;#x2F;gist.github.com&amp;#x2F;3aad1d22163c3c3e5cfd.js?file=placeholder-svg.php&#x27;&gt;&lt;&#x2F;script&gt;&quot;&gt;&lt;&#x2F;iframe&gt;
 &lt;p&gt;If you saved the file as &lt;code&gt;placeholder-svg.php&lt;&#x2F;code&gt; then it would be used like so:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;img &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;src&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;placeholder-svg.php?wh=400x400&amp;amp;fill=bada55&amp;amp;color=000000&amp;amp;font=Georgia&amp;amp;size=20&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &#x2F;&amp;gt;
