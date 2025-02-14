@@ -38,6 +38,9 @@
   &lt;&#x2F;a&gt;
 &lt;&#x2F;div&gt;&lt;h3 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h3&gt;
 &lt;p&gt;The main perspective here is comparing Node.js to Dart.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I find that when using Dart, I feel a lot more secure and focused on building towards the actual solution in my head and not just playing &lt;strong&gt;dependency conductor&lt;&#x2F;strong&gt; trying to get all the parts to work in harmony.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;p&gt;If you take the temperature of JS developers today, you&#x27;ll likely find frustration. Common complaints include dependency management, build systems, framework bloat, upgrade woes, and the increasing expectation of using TypeScript over plain JS, which adds its own tooling and cognitive overhead.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;wait-what-about-bun-deno-etc&quot;&gt;Wait! What about Bun, Deno, etc?&lt;&#x2F;h3&gt;
 &lt;p&gt;I have used both just to play with and see how they work. A major advantage of both Bun and Deno is their built-in TypeScript support, eliminating configuration hassles. This is a significant win for developer experience.&lt;&#x2F;p&gt;
