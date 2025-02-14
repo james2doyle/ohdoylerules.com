@@ -5,12 +5,12 @@
     <link rel="self" type="application/atom+xml" href="https://ohdoylerules.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ohdoylerules.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-02-08T00:00:00+00:00</updated>
+    <updated>2025-02-14T00:00:00+00:00</updated>
     <id>https://ohdoylerules.com/atom.xml</id>
     <entry xml:lang="en">
-        <title>Things I like about Dart</title>
-        <published>2025-02-08T00:00:00+00:00</published>
-        <updated>2025-02-08T00:00:00+00:00</updated>
+        <title>Things I like about Dart (Compared to Node.js)</title>
+        <published>2025-02-14T00:00:00+00:00</published>
+        <updated>2025-02-14T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -24,7 +24,7 @@
         <id>https://ohdoylerules.com/workflows/things-i-like-about-dart/</id>
         
         <content type="html" xml:base="https://ohdoylerules.com/workflows/things-i-like-about-dart/">
-&lt;div class=&quot;center&quot;&gt;
+&lt;div class=&quot;center&quot; style=&quot;max-width:80%;margin:0 auto&quot;&gt;
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-logo.png&quot; title=&quot;Dart logo&quot; target=&quot;_blank&quot;&gt;
       
       &lt;img
@@ -100,7 +100,7 @@
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;p&gt;So already, without any additional dependencies, you can skip your &lt;code&gt;prettier&lt;&#x2F;code&gt;, &lt;code&gt;eslint&lt;&#x2F;code&gt;, and all associated plugins for that.&lt;&#x2F;p&gt;
 
-&lt;div class=&quot;center&quot;&gt;
+&lt;div class=&quot;center&quot; &gt;
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-format-analyse.gif&quot; title=&quot;Dart format and analyse demo&quot; target=&quot;_blank&quot;&gt;&lt;img
         src=&quot;&amp;#x2F;images&amp;#x2F;dart-format-analyse.gif&quot;
         alt=&quot;Dart format and analyse demo&quot;
@@ -116,7 +116,7 @@
 &lt;p&gt;Dart has a test runner included in it&#x27;s tool chest.&lt;&#x2F;p&gt;
 &lt;p&gt;It is just another thing you don&#x27;t need to think about. Node.js has a few popular projects like Jest and Vitest, but again, more things to install and learn. Also, want linting and code fixes in your tests? Oh good! Just install &lt;code&gt;eslint-plugin-jest&lt;&#x2F;code&gt; (or &lt;code&gt;eslint-plugin-vitest&lt;&#x2F;code&gt;) as well!&lt;&#x2F;p&gt;
 
-&lt;div class=&quot;center&quot;&gt;
+&lt;div class=&quot;center&quot; &gt;
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-test.gif&quot; title=&quot;Dart test demo&quot; target=&quot;_blank&quot;&gt;&lt;img
         src=&quot;&amp;#x2F;images&amp;#x2F;dart-test.gif&quot;
         alt=&quot;Dart test demo&quot;
@@ -140,7 +140,7 @@
 &lt;p&gt;This one is pretty underappreciated in my experience. Just run &lt;code&gt;dart doc&lt;&#x2F;code&gt; and you can generate a documentation for your project. How great is that?&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;code&gt;dart doc&lt;&#x2F;code&gt; command actually generates a whole static HTML site. Complete with a dark mode and a search feature!&lt;&#x2F;p&gt;
 
-&lt;div class=&quot;center&quot;&gt;
+&lt;div class=&quot;center&quot; &gt;
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-doc.png&quot; title=&quot;Dart doc demo&quot; target=&quot;_blank&quot;&gt;
       
       &lt;img
@@ -158,7 +158,7 @@
 &lt;h3 id=&quot;devtools&quot;&gt;Devtools&lt;&#x2F;h3&gt;
 &lt;p&gt;The Dart devtools have to be one of the best parts about using Dart. They work a lot like the Chrome devtools. When you run &lt;code&gt;dart devtools&lt;&#x2F;code&gt; or run a Dart program, a website is automatically served locally for you to use the tool at. It is super similar to the Chrome devtools if you&#x27;ve used those before.&lt;&#x2F;p&gt;
 &lt;p&gt;
-&lt;div class=&quot;center&quot;&gt;
+&lt;div class=&quot;center&quot; &gt;
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-devtools-1.png&quot; title=&quot;Dart devtools demo debugger&quot; target=&quot;_blank&quot;&gt;
       
       &lt;img
@@ -173,7 +173,7 @@
   &lt;&#x2F;a&gt;
 &lt;&#x2F;div&gt;
 
-&lt;div class=&quot;center&quot;&gt;
+&lt;div class=&quot;center&quot; &gt;
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-devtools-2.png&quot; title=&quot;Dart devtools demo memory&quot; target=&quot;_blank&quot;&gt;
       
       &lt;img
