@@ -1,5 +1,5 @@
-{# {{ image(title="Dart format and analyse demo", src="/images/dart-format-analyse.gif") }} #}
-<div class="center">
+{# {{ image(title="Dart format and analyse demo", src="/images/dart-format-analyse.gif", lazy=true, style="max-width:80%") }} #}
+<div class="center" {% if style %}style="{{ style }}"{% endif %}>
   <a href="{{ src }}" title="{{ title }}" target="_blank">
     {%- if src is matching("[.](gif)$") -%}
       <img
