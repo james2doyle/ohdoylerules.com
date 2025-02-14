@@ -1,14 +1,14 @@
 +++
-title = "Things I like about Dart"
-description = ""
-date = "2025-02-08"
+title = "Things I like about Dart (Compared to Node.js)"
+description = "Things I like about Dart when compared to the Node.js ecosystem"
+date = "2025-02-14"
 category = "Workflows"
 template = "post.html"
 [taxonomies]
 keywords = ["dart", "typescript", "javascript", "node", "frontend", "server", "flutter"]
 +++
 
-{{ image(title="Dart logo", src="/images/dart-logo.png") }}
+{{ image(title="Dart logo", src="/images/dart-logo.png", style="max-width:80%;margin:0 auto") }}
 
 ### Preface
 
