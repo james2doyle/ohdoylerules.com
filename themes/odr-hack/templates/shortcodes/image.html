@@ -1,0 +1,26 @@
+{# {{ image(title="Dart format and analyse demo", src="/images/dart-format-analyse.gif") }} #}
+<div class="center">
+  <a href="{{ src }}" title="{{ title }}" target="_blank">
+    {%- if src is matching("[.](gif)$") -%}
+      <img
+        src="{{ src }}"
+        alt="{{ title }}"
+        width="670"
+        style="content-visibility: auto; contain-intrinsic-size: auto 450px;"
+        loading="lazy" fetchpriority="low"
+        decoding="async" />
+    {% else %}
+      {% set image = resize_image(path=src, width=670, op="fit_width", format="webp", quality=85) %}
+      <img
+        src="{{ image.url }}"
+        alt="{{ title }}"
+        {% if lazy %}
+          style="content-visibility: auto; contain-intrinsic-size: auto {{ image.height }}px;"
+          loading="lazy" fetchpriority="low"
+        {% else %}
+          loading="eager" fetchpriority="high"
+        {% endif %}
+        decoding="async" />
+    {% endif %}
+  </a>
+</div>
