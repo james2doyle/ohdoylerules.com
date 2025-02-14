@@ -10,17 +10,33 @@ keywords = ["dart", "typescript", "javascript", "node", "frontend", "server", "f
 
 {{ image(title="Dart logo", src="/images/dart-logo.png", style="max-width:80%;margin:0 auto") }}
 
-### Preface
+### My Recent Use Case
 
-The main perspective here is comparing Node.js to Dart.
+I recently had to make a small sever that would be the endpoint for a webhook from Twilio. The server just puts entries into a database or checks to see if there are entries. So two endpoints.
 
-> I find that when using Dart, I feel a lot more secure and focused on building towards the actual solution in my head and not just playing **dependency conductor** trying to get all the parts to work in harmony.
+Not a very complicated project. Creating simple servers is really where Node.js should shine. But I found myself dreading getting a Node.js project going just for this simple server project. Why is that?
+
+I've used Node.js before for servers. I've been using Node since 2013 or something like that. When TJ Holowaychuk wrote all your packages. These days however, a "simple server" can quickly balloon into a wild and untamed beast.
+
+You need to pick a Node version, a package manager, and then a framework for the handling of the request/response pattern. Also, probably TypeScript (newer versions of Node have "native" support for it), and Prettier. Most likely ESLint too (although I've been using [Biome](https://biomejs.dev/) lately) with a couple plugins.
+
+Just making this checklist of things I would want to have to make sure this project is really solid... made me *annoyed*. You can say "you don't need all this". Which is true. However, these packages have become incredibly common in Node projects. It is just a part of writing modern JavaScript for Node.
 
 If you take the temperature of JS developers today, you'll likely find frustration. Common complaints include dependency management, build systems, framework bloat, upgrade woes, and the increasing expectation of using TypeScript over plain JS, which adds its own tooling and cognitive overhead.
 
+I find myself not wanting to do all this ritual just to have 2 endpoints and a couple DB calls. How about something else?
+
+I have been using Flutter and Dart lately to build a mobile app. So I figured I could give Dart a shot for building this type of server.
+
+> I find that when using Dart, I feel a lot more secure and focused on building towards the actual solution in my head and not just playing **dependency conductor** trying to get all the parts to work in harmony.
+
+I ended up using [Dart Frog](https://dartfrog.vgv.dev/) for the actual server implementation and [Globe.dev](https://globe.dev/) for hosting. I have to say that the experience was fantastic.
+
 ### Wait! What about Bun, Deno, etc?
 
-I have used both just to play with and see how they work. A major advantage of both Bun and Deno is their built-in TypeScript support, eliminating configuration hassles. This is a significant win for developer experience.
+I have used both just to play with and see how they work. A major advantage of both [Bun](https://bun.sh/) and [Deno](https://deno.com/) is their built-in TypeScript support, eliminating configuration hassles. This is a significant win for developer experience.
+
+Node has recently added support for TypeScript via their "type stripping" approach. This feature is a "lightweight approach to running TypeScript code". You can read [more about it here](https://nodejs.org/api/typescript.html#type-stripping).
 
 I really like what Bun is trying to do. I think their goal of including things you need to make "web" projects ("serve" API, database support, file API, "S3" API, etc.) is the right move. I'd like if they added more built-in tooling to eliminate the need for separate linters and formatters.
 
