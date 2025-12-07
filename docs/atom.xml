@@ -5,8 +5,140 @@
     <link rel="self" type="application/atom+xml" href="https://ohdoylerules.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ohdoylerules.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-08-05T00:00:00+00:00</updated>
+    <updated>2025-12-07T00:00:00+00:00</updated>
     <id>https://ohdoylerules.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>A MCP for the Godot documentation</title>
+        <published>2025-12-07T00:00:00+00:00</published>
+        <updated>2025-12-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              james2doyle@gmail.com (James Doyle)
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ohdoylerules.com/workflows/mcp-for-the-godot-documentation/"/>
+        <id>https://ohdoylerules.com/workflows/mcp-for-the-godot-documentation/</id>
+        
+        <content type="html" xml:base="https://ohdoylerules.com/workflows/mcp-for-the-godot-documentation/">&lt;p&gt;I have been playing with game development lately and have found it to be a really refreshing break from working in the web development space. It is so different from the way that websites are built. That being said, I have some web dev habits I wanted to bring to my game development workflow.&lt;&#x2F;p&gt;
+&lt;p&gt;I have been using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;godotengine.org&#x2F;&quot;&gt;Godot&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;defold.com&#x2F;&quot;&gt;Defold&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;love2d.org&#x2F;&quot;&gt;Love2D&lt;&#x2F;a&gt;, and even playing with &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.raylib.com&#x2F;&quot;&gt;Raylib&lt;&#x2F;a&gt; a bit, to get the hang of things and try out a bunch of really different workflows.&lt;&#x2F;p&gt;
+&lt;p&gt;I found that AI tools are generally pretty good at writing &lt;code&gt;gdscript&lt;&#x2F;code&gt;. But I did find that they often lack a proper understanding of what nodes are currently available in the version of Godot that I am working in.&lt;&#x2F;p&gt;
+&lt;p&gt;I figured an MCP that only serves valid documentation for the version of Godot you are using would be great.&lt;&#x2F;p&gt;
+&lt;p&gt;There are a couple of them out there. I really wanted something that was an HTTP MCP and &lt;strong&gt;just the docs&lt;&#x2F;strong&gt;. That combo didn’t seem to exist. So I thought it might be cool to try and write my own and a great chance to try out the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;developers.cloudflare.com&#x2F;agents&#x2F;&quot;&gt;hosted Cloudflare Agents framework&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;After about half a day, I had a working MCP that can:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Look up documentation in Godot using fuzz search&lt;&#x2F;li&gt;
+&lt;li&gt;Fetch specific pages of documentation&lt;&#x2F;li&gt;
+&lt;li&gt;Lock the documentation version to one you specify&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;screenshots&quot;&gt;Screenshots&lt;&#x2F;h3&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;godot-mcp-1.png&quot; title=&quot;godot mcp example screenshot 1&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;godot-mcp-1.33b1d74beab3b6df.webp&quot;
+        alt=&quot;godot mcp example screenshot 1&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;godot-mcp-2.png&quot; title=&quot;godot mcp example screenshot 2&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;godot-mcp-2.03698381a8fc5f73.webp&quot;
+        alt=&quot;godot mcp example screenshot 2&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;godot-mcp-3.png&quot; title=&quot;godot mcp example screenshot 3&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;godot-mcp-3.13b421ac928c882a.webp&quot;
+        alt=&quot;godot mcp example screenshot 3&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;godot-mcp-4.png&quot; title=&quot;godot mcp example screenshot 4&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;godot-mcp-4.44ad5d9d17ea8e2b.webp&quot;
+        alt=&quot;godot mcp example screenshot 4&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;&lt;em&gt;These screenshots are using the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Chevey339&#x2F;kelivo&quot;&gt;Chevey339&#x2F;kelivo&lt;&#x2F;a&gt; app for OSX&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The MCP allows you to look up documentation in &lt;code&gt;stable&lt;&#x2F;code&gt;, &lt;code&gt;latest&lt;&#x2F;code&gt;, &lt;code&gt;4.5&lt;&#x2F;code&gt;, &lt;code&gt;4.4&lt;&#x2F;code&gt;, and &lt;code&gt;4.3&lt;&#x2F;code&gt; versions. The default version is &quot;stable&quot;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tools&quot;&gt;Tools&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;search_docs&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;(searchTerm: string, version: &quot;stable&quot; | &quot;latest&quot; | &quot;4.5&quot; | &quot;4.4&quot; | &quot;4.3&quot; = &quot;stable&quot;)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Search the Godot docs by term. Will return URLs to the documentation for each matching term. The resulting URLs will need to have their page content fetched to see the documentation.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;get_docs_page_for_term&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;(searchTerm: string, version: &quot;stable&quot; | &quot;latest&quot; | &quot;4.5&quot; | &quot;4.4&quot; | &quot;4.3&quot; = &quot;stable&quot;)&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Get the Godot docs content by term. Will return the full documentation page for the first matching result.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;configure-the-mcp-server&quot;&gt;Configure the MCP server&lt;&#x2F;h3&gt;
+&lt;p&gt;To use the hosted HTTP server:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;mcpServers&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: {
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;godot&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: {
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;https:&#x2F;&#x2F;godot-docs-mcp.j2d.workers.dev&#x2F;mcp&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The hosted MCP at &lt;code&gt;https:&#x2F;&#x2F;godot-docs-mcp.j2d.workers.dev&#x2F;mcp&lt;&#x2F;code&gt; is free to use. As long as I don’t get crushed with a huge Cloudflare bill.&lt;&#x2F;p&gt;
+&lt;p&gt;Or, to connect to the MCP server using a &lt;code&gt;stdio&lt;&#x2F;code&gt; server:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;mcpServers&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: {
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;godot&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: {
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;command&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;npx&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;args&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;: [
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;mcp-remote&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;https:&#x2F;&#x2F;godot-docs-mcp.j2d.workers.dev&#x2F;mcp&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      ]
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;how-this-works&quot;&gt;How this works&lt;&#x2F;h3&gt;
+&lt;p&gt;The docs site uses a frontend search tool to handle their docs search. There is a file called &lt;code&gt;searchindex.js&lt;&#x2F;code&gt; in the docs site that contains an index of all the pages (URLs and titles, not content) on the site.&lt;&#x2F;p&gt;
+&lt;p&gt;This project takes advantage of that in the following ways:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;downloads each of those &lt;code&gt;searchindex.js&lt;&#x2F;code&gt; files for each version of the docs&lt;&#x2F;li&gt;
+&lt;li&gt;converts the &lt;code&gt;searchindex.js&lt;&#x2F;code&gt; to a &lt;code&gt;searchindex.js.json&lt;&#x2F;code&gt; that is just json we need&lt;&#x2F;li&gt;
+&lt;li&gt;indexes that new json using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lucaong&#x2F;minisearch&quot;&gt;lucaong&#x2F;minisearch&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;when a docs page is requested, the URL for the page is converted from HTML to markdown&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The project is open source and you can find it on my &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;james2doyle&#x2F;godot-docs-mcp&quot;&gt;on my GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Block 3rd party sign in prompts in Google Chrome</title>
         <published>2025-08-05T00:00:00+00:00</published>
