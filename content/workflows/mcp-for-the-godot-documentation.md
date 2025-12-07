@@ -26,13 +26,13 @@ After about half a day, I had a working MCP that can:
 
 ### Screenshots
 
-{{ image(title="godot mcp example screenshot", src="/images/godot-mcp-1.png", style="max-width:95%") }}
+{{ image(title="godot mcp example screenshot 1", src="/images/godot-mcp-1.png", style="max-width:95%") }}
 
-{{ image(title="godot mcp example screenshot", src="/images/godot-mcp-2.png", style="max-width:95%") }}
+{{ image(title="godot mcp example screenshot 2", src="/images/godot-mcp-2.png", style="max-width:95%") }}
 
-{{ image(title="godot mcp example screenshot", src="/images/godot-mcp-3.png", style="max-width:95%") }}
+{{ image(title="godot mcp example screenshot 3", src="/images/godot-mcp-3.png", style="max-width:95%") }}
 
-{{ image(title="godot mcp example screenshot", src="/images/godot-mcp-4.png", style="max-width:95%") }}
+{{ image(title="godot mcp example screenshot 4", src="/images/godot-mcp-4.png", style="max-width:95%") }}
 
 *These screenshots are using the [Chevey339/kelivo](https://github.com/Chevey339/kelivo) app for OSX*
 
