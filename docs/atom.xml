@@ -5,8 +5,60 @@
     <link rel="self" type="application/atom+xml" href="https://ohdoylerules.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ohdoylerules.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-02-14T00:00:00+00:00</updated>
+    <updated>2025-08-05T00:00:00+00:00</updated>
     <id>https://ohdoylerules.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Block 3rd party sign in prompts in Google Chrome</title>
+        <published>2025-08-05T00:00:00+00:00</published>
+        <updated>2025-08-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              james2doyle@gmail.com (James Doyle)
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ohdoylerules.com/tricks/block-3rd-party-sign-in-prompts-in-chrome/"/>
+        <id>https://ohdoylerules.com/tricks/block-3rd-party-sign-in-prompts-in-chrome/</id>
+        
+        <content type="html" xml:base="https://ohdoylerules.com/tricks/block-3rd-party-sign-in-prompts-in-chrome/">&lt;p&gt;If you have ever seen that annoying popup in Chrome?&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:80%;margin:0 auto&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;2-block-3rd-party-sign-ins.png&quot; title=&quot;3rd party sign in prompts in chrome example&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;2-block-3rd-party-sign-ins.cb9767f2f9cef353.webp&quot;
+        alt=&quot;3rd party sign in prompts in chrome example&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;These things suck right? Well you can block them:&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:80%;margin:0 auto&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;1-block-3rd-party-sign-ins.png&quot; title=&quot;how to block 3rd party sign in prompts in chrome&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;1-block-3rd-party-sign-ins.fff7bada34ad6c62.webp&quot;
+        alt=&quot;how to block 3rd party sign in prompts in chrome&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;If you wanted to visit this setting directly, you can go to &lt;a href=&quot;chrome:&#x2F;&#x2F;settings&#x2F;content&#x2F;federatedIdentityApi&quot;&gt;chrome:&#x2F;&#x2F;settings&#x2F;content&#x2F;federatedIdentityApi&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;You can then set it to &quot;block&quot; these prompts so you never have to see them again!&lt;&#x2F;p&gt;
+&lt;p&gt;There are some other settings in there for blocking specific sites or allowing them too.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Things I like about Dart (Compared to Node.js)</title>
         <published>2025-02-14T00:00:00+00:00</published>
@@ -28,7 +80,7 @@
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-logo.png&quot; title=&quot;Dart logo&quot; target=&quot;_blank&quot;&gt;
       
       &lt;img
-        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-logo.98e7b03e7c5c0bd4.webp&quot;
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-logo.4ab3eb0d825658a3.webp&quot;
         alt=&quot;Dart logo&quot;
         
           loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
@@ -152,7 +204,7 @@
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-doc.png&quot; title=&quot;Dart doc demo&quot; target=&quot;_blank&quot;&gt;
       
       &lt;img
-        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-doc.0715d8ce257f94cb.webp&quot;
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-doc.cfd998f6ac85fec6.webp&quot;
         alt=&quot;Dart doc demo&quot;
         
           style=&quot;content-visibility: auto; contain-intrinsic-size: auto 279px;&quot;
@@ -170,7 +222,7 @@
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-devtools-1.png&quot; title=&quot;Dart devtools demo debugger&quot; target=&quot;_blank&quot;&gt;
       
       &lt;img
-        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-devtools-1.28d2687b286f4814.webp&quot;
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-devtools-1.45ff2fba454bb7b9.webp&quot;
         alt=&quot;Dart devtools demo debugger&quot;
         
           style=&quot;content-visibility: auto; contain-intrinsic-size: auto 617px;&quot;
@@ -185,7 +237,7 @@
   &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;dart-devtools-2.png&quot; title=&quot;Dart devtools demo memory&quot; target=&quot;_blank&quot;&gt;
       
       &lt;img
-        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-devtools-2.eb08941877a0114b.webp&quot;
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;dart-devtools-2.ece7936924c70edd.webp&quot;
         alt=&quot;Dart devtools demo memory&quot;
         
           style=&quot;content-visibility: auto; contain-intrinsic-size: auto 619px;&quot;
