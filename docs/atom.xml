@@ -55,6 +55,123 @@
         
     </entry>
     <entry xml:lang="en">
+        <title>Super Webhooks Chrome Extension</title>
+        <published>2025-12-24T00:00:00+00:00</published>
+        <updated>2025-12-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              james2doyle@gmail.com (James Doyle)
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ohdoylerules.com/personal-project/super-webhooks-chrome-extension/"/>
+        <id>https://ohdoylerules.com/personal-project/super-webhooks-chrome-extension/</id>
+        
+        <content type="html" xml:base="https://ohdoylerules.com/personal-project/super-webhooks-chrome-extension/">&lt;h2 id=&quot;super-webhooks-for-chrome&quot;&gt;Super Webhooks for Chrome&lt;&#x2F;h2&gt;
+&lt;p&gt;I was looking for a way to send details of web pages, or page context, to my automation tools like &lt;strong&gt;n8n&lt;&#x2F;strong&gt;, &lt;strong&gt;Zapier&lt;&#x2F;strong&gt;, or &lt;strong&gt;IFTTT&lt;&#x2F;strong&gt;. Doing this manually is a friction-filled process of copying, switching tabs, and pasting. Ideally, I could use this for simple bug tracking. By using the context of the page and browser, I can easily send additional metadata that can be captured and used by clients for logging bugs.&lt;&#x2F;p&gt;
+&lt;p&gt;So I built &lt;strong&gt;Super Webhooks&lt;&#x2F;strong&gt;, a modern Chrome extension designed to make workflow automation as simple as a right-click.&lt;&#x2F;p&gt;
+&lt;div class=&quot;grid&quot;&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;super-webhooks-1.png&quot; title=&quot;super webhooks chrome extension demo 1&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;super-webhooks-1.9c745944367f8070.webp&quot;
+        alt=&quot;super webhooks chrome extension demo 1&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;super-webhooks-2.png&quot; title=&quot;super webhooks chrome extension demo 2&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;super-webhooks-2.ad8efdacc67cf3f0.webp&quot;
+        alt=&quot;super webhooks chrome extension demo 2&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;super-webhooks-3.png&quot; title=&quot;super webhooks chrome extension demo 3&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;super-webhooks-3.ac83e4613db91fd2.webp&quot;
+        alt=&quot;super webhooks chrome extension demo 3&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;super-webhooks-4.png&quot; title=&quot;super webhooks chrome extension demo 4&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;super-webhooks-4.c2e5c4b378c9ff85.webp&quot;
+        alt=&quot;super webhooks chrome extension demo 4&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+&lt;h3 id=&quot;key-features-at-a-glance&quot;&gt;Key Features at a Glance&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Intelligent Queueing &amp;amp; Rate Limiting&lt;&#x2F;strong&gt;: Avoid API abuse or server crashes by setting per-webhook rate limits. The extension intelligently queues your requests and shows a real-time countdown of when your data will be sent.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Rich Data Payloads&lt;&#x2F;strong&gt;: It sends more than just a URL. Every request includes page metadata (title, description, keywords), timestamps, and device details like OS and browser version.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Custom Fields DSL&lt;&#x2F;strong&gt;: One of the most powerful features is the built-in Domain-Specific Language (DSL) for custom forms. You can define dynamic fields (text, dropdowns, checkboxes) that appear before a webhook is sent, allowing you to add extra context—like notes or categories—on the fly.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;how-is-it-different&quot;&gt;How Is It Different?&lt;&#x2F;h3&gt;
+&lt;p&gt;Super Webhooks allows you to register multiple webhook endpoints and send rich data to them instantly via the context menu. The main way to see a context window is to right-click things on the page. There are custom handlers for each content type. So if you right-click on an image, you get different details than right-clicking on a video.&lt;&#x2F;p&gt;
+&lt;p&gt;The biggest thing that makes it different is the support for custom fields.&lt;&#x2F;p&gt;
+&lt;p&gt;The custom fields support in the extension allows users to dynamically attach additional, user-provided data to a webhook payload before it is sent.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;use-cases&quot;&gt;Use Cases&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Form Generation&lt;&#x2F;strong&gt;: The extension uses a lightweight Domain-Specific Language (DSL) to convert simple text commands into structured web forms.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Per-Webhook Configuration&lt;&#x2F;strong&gt;: Custom fields are configured individually for each webhook, providing flexibility for different automation needs.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Modal Input&lt;&#x2F;strong&gt;: When a webhook with configured custom fields is triggered, a dedicated modal window opens for the user to fill in the data before the request is finalized.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Direct Payload Integration&lt;&#x2F;strong&gt;: The information gathered from these fields is included in the final JSON payload sent to the webhook endpoint under a &lt;code&gt;customFields&lt;&#x2F;code&gt; object.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;supported-field-types&quot;&gt;Supported Field Types&lt;&#x2F;h4&gt;
+&lt;p&gt;The DSL parser supports a variety of standard HTML input types, including:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Text &amp;amp; Textarea&lt;&#x2F;strong&gt;: For single-line or multi-line text input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Selection&lt;&#x2F;strong&gt;: Dropdown menus for choosing from predefined options.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Boolean &amp;amp; Options&lt;&#x2F;strong&gt;: Checkboxes and radio button groups.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Numeric&lt;&#x2F;strong&gt;: Standard number inputs and range sliders.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Specialized&lt;&#x2F;strong&gt;: Support for &lt;code&gt;password&lt;&#x2F;code&gt;, &lt;code&gt;email&lt;&#x2F;code&gt;, &lt;code&gt;date&lt;&#x2F;code&gt;, &lt;code&gt;color&lt;&#x2F;code&gt;, &lt;code&gt;url&lt;&#x2F;code&gt;, and &lt;code&gt;hidden&lt;&#x2F;code&gt; field types.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;dsl-syntax-overview&quot;&gt;DSL Syntax Overview&lt;&#x2F;h4&gt;
+&lt;p&gt;Fields are defined using a human-readable syntax: &lt;code&gt;[input_type][*] [FieldName] [arguments...] &quot;Label or Placeholder&quot;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding an asterisk (e.g., &lt;code&gt;text*&lt;&#x2F;code&gt;) marks a field as required.&lt;&#x2F;li&gt;
+&lt;li&gt;Arguments allow for setting default values, numeric ranges (min&#x2F;max&#x2F;step), or lists of options for select menus.&lt;&#x2F;li&gt;
+&lt;li&gt;The system ignores lines starting with &lt;code&gt;#&lt;&#x2F;code&gt;, allowing for comments within the configuration.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;how-i-use-it&quot;&gt;How I Use It&lt;&#x2F;h3&gt;
+&lt;p&gt;The most basic use case for me is sending the page URL to my n8n instance and storing it in &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;pockethost.io&#x2F;&quot;&gt;my Pockethost database&lt;&#x2F;a&gt;. I have a custom field on that action for &quot;notes&quot; in case I have something to add. My n8n flow will crawl the URL and create a summary of the page content.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h3&gt;
+&lt;p&gt;It is not on the Chrome Webstore yet, so you need to install it manually right now. The instructions are on the GitHub page: &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;james2doyle&#x2F;super-webhooks-extension&quot;&gt;james2doyle&#x2F;super-webhooks-extension&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>A MCP for the Godot documentation</title>
         <published>2025-12-07T00:00:00+00:00</published>
         <updated>2025-12-07T00:00:00+00:00</updated>
