@@ -5,8 +5,55 @@
     <link rel="self" type="application/atom+xml" href="https://ohdoylerules.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ohdoylerules.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-12-07T00:00:00+00:00</updated>
+    <updated>2025-12-24T00:00:00+00:00</updated>
     <id>https://ohdoylerules.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Alpine.js Playground</title>
+        <published>2025-12-24T00:00:00+00:00</published>
+        <updated>2025-12-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              james2doyle@gmail.com (James Doyle)
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ohdoylerules.com/personal-project/alpinejs-playground/"/>
+        <id>https://ohdoylerules.com/personal-project/alpinejs-playground/</id>
+        
+        <content type="html" xml:base="https://ohdoylerules.com/personal-project/alpinejs-playground/">&lt;p&gt;I created a live coding playground for &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;alpinejs.dev&#x2F;&quot;&gt;Alpine.js&lt;&#x2F;a&gt; with Tailwind CSS support.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;alpinejs-playground.png&quot; title=&quot;alpinejs playground screenshot&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;alpinejs-playground.573fdeb3bee8a242.webp&quot;
+        alt=&quot;alpinejs playground screenshot&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;james2doyle.github.io&#x2F;alpinejs-playground&#x2F;&quot;&gt;View the live site&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Live Preview&lt;&#x2F;strong&gt;: See your Alpine.js code render instantly as you type&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Code Sharing&lt;&#x2F;strong&gt;: Generate shareable URLs with compressed code&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Resizable Panes&lt;&#x2F;strong&gt;: Adjust the editor&#x2F;preview split to your preference&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tailwind CSS Support&lt;&#x2F;strong&gt;: Full Tailwind CSS utility classes available&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Actions&lt;&#x2F;strong&gt;: Copy code, reset to default, and save with URL updates&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I wanted this for a while and didn’t see any existing playgrounds out there for this. Sometimes you just want to develop a small component in isolation with &quot;live reload&quot; without having to set much up in your project. This small site can help with that.&lt;&#x2F;p&gt;
+&lt;p&gt;I also wanted to be able to quickly share or save the state of the editor like they have on the Tailwind play site. Since this editor only deals with a single pane and HTML input, it just compresses the HTML input and stores it in the URL.&lt;&#x2F;p&gt;
+&lt;p&gt;Eventually I can put in a nicer editor and I think it would also be handy to be able to enable all the default plugins so that you can make demos with those too.&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the source code here: https:&#x2F;&#x2F;github.com&#x2F;james2doyle&#x2F;alpinejs-playground&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>A MCP for the Godot documentation</title>
         <published>2025-12-07T00:00:00+00:00</published>
