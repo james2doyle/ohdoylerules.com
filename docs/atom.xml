@@ -50,7 +50,7 @@
 &lt;p&gt;I wanted this for a while and didn’t see any existing playgrounds out there for this. Sometimes you just want to develop a small component in isolation with &quot;live reload&quot; without having to set much up in your project. This small site can help with that.&lt;&#x2F;p&gt;
 &lt;p&gt;I also wanted to be able to quickly share or save the state of the editor like they have on the Tailwind play site. Since this editor only deals with a single pane and HTML input, it just compresses the HTML input and stores it in the URL.&lt;&#x2F;p&gt;
 &lt;p&gt;Eventually I can put in a nicer editor and I think it would also be handy to be able to enable all the default plugins so that you can make demos with those too.&lt;&#x2F;p&gt;
-&lt;p&gt;You can find the source code here: https:&#x2F;&#x2F;github.com&#x2F;james2doyle&#x2F;alpinejs-playground&lt;&#x2F;p&gt;
+&lt;p&gt;You can find the source code here: &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;james2doyle&#x2F;alpinejs-playground&quot;&gt;james2doyle&#x2F;alpinejs-playground&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
