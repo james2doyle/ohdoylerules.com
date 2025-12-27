@@ -28,4 +28,4 @@ I also wanted to be able to quickly share or save the state of the editor like t
 
 Eventually I can put in a nicer editor and I think it would also be handy to be able to enable all the default plugins so that you can make demos with those too.
 
-You can find the source code here: https://github.com/james2doyle/alpinejs-playground
+You can find the source code here: [james2doyle/alpinejs-playground](https://github.com/james2doyle/alpinejs-playground)
