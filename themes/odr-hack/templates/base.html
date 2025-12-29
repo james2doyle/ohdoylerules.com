@@ -71,7 +71,12 @@
     <meta name="twitter:description" content="{{ description }}">
   {% endblock %}
 
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  {# No google analytics right now #}
+  {# <link rel="dns-prefetch" href="https://www.google-analytics.com"> #}
+
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="canonical" href="{{ url }}">
   {% block rss %}
