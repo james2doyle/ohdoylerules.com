@@ -5,8 +5,85 @@
     <link rel="self" type="application/atom+xml" href="https://ohdoylerules.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ohdoylerules.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-12-24T00:00:00+00:00</updated>
+    <updated>2025-12-29T00:00:00+00:00</updated>
     <id>https://ohdoylerules.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>a11y Accessibility Checker (2025 update)</title>
+        <published>2025-12-29T00:00:00+00:00</published>
+        <updated>2025-12-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              james2doyle@gmail.com (James Doyle)
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ohdoylerules.com/personal-project/a11y-accessibility-checker/"/>
+        <id>https://ohdoylerules.com/personal-project/a11y-accessibility-checker/</id>
+        
+        <content type="html" xml:base="https://ohdoylerules.com/personal-project/a11y-accessibility-checker/">&lt;p&gt;I recently updated my &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;james2doyle.github.io&#x2F;a11y&#x2F;&quot;&gt;a11y accessibility checker tool&lt;&#x2F;a&gt; with improved accuracy, better logic, and a more polished user experience. This tool helps designers and developers ensure their color combinations meet WCAG accessibility standards.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;a11y-demo-1.png&quot; title=&quot;a11y accessibility checker screenshot 1&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;a11y-demo-1.ee1160a3c819e3a3.webp&quot;
+        alt=&quot;a11y accessibility checker screenshot 1&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;center&quot; style=&quot;max-width:95%&quot;&gt;
+  &lt;a href=&quot;&amp;#x2F;images&amp;#x2F;a11y-demo-2.png&quot; title=&quot;a11y accessibility checker screenshot 2&quot; target=&quot;_blank&quot;&gt;
+      
+      &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;ohdoylerules.com&amp;#x2F;processed_images&amp;#x2F;a11y-demo-2.b4ee190c5d1ff136.webp&quot;
+        alt=&quot;a11y accessibility checker screenshot 2&quot;
+        
+          loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+        
+        decoding=&quot;async&quot; &#x2F;&gt;
+    
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;The a11y accessibility checker is a web-based tool that evaluates color contrast ratios to determine if text is readable against background colors according to WCAG 2.1 standards. It supports both AA and AAA compliance levels and provides real-time feedback.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;real-time-contrast-analysis&quot;&gt;Real-time Contrast Analysis&lt;&#x2F;h3&gt;
+&lt;p&gt;The tool instantly calculates the contrast ratio between text and background colors and compares it against the required ratio for the selected WCAG compliance level (AA or AAA).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;large-text-detection&quot;&gt;Large Text Detection&lt;&#x2F;h3&gt;
+&lt;p&gt;The checker automatically determines if text qualifies as &quot;large text&quot; based on font size and weight:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Normal text&lt;&#x2F;strong&gt;: Text smaller than 18.66px (or 24px for any weight)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Large text&lt;&#x2F;strong&gt;: Text 24px or larger, or 18.66px and bold&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Large text has different contrast requirements than normal text, and the tool handles this distinction automatically.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;smart-color-suggestions&quot;&gt;Smart Color Suggestions&lt;&#x2F;h3&gt;
+&lt;p&gt;When your color combination fails accessibility standards, the tool suggests an alternative text color that would pass the contrast requirements while maintaining readability.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;url-sharing&quot;&gt;URL Sharing&lt;&#x2F;h3&gt;
+&lt;p&gt;The tool generates shareable URLs that preserve your current color settings, making it easy to collaborate with team members or share specific color combinations. I usually run the tool against any suspicious colors and share the results with our team if there are any issues.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;previous-implementation&quot;&gt;Previous Implementation&lt;&#x2F;h3&gt;
+&lt;p&gt;The old site was build with Vue.js 2 and was an single page app. The site had no prerendered content and was just an empty body with a script tag. This is not really ideal for the best experience and this small tool doesn’t require a real &quot;SPA&quot; approach.&lt;&#x2F;p&gt;
+&lt;p&gt;This is why I decided to update it with a simpler stack and try to serve all the page details as soon as possible.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;now-built-with-modern-web-technologies&quot;&gt;Now Built with Modern Web Technologies&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;alpinejs.dev&#x2F;&quot;&gt;Alpine.js&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: A lightweight JavaScript framework for reactive UI components&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;colorjs.io&#x2F;&quot;&gt;Color.js&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: A comprehensive color manipulation library for accurate contrast calculations&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tailwindcss.com&#x2F;&quot;&gt;Tailwind CSS v4&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: Utility-first CSS framework for responsive design&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;vite.dev&#x2F;&quot;&gt;Vite&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;: Modern build tool for fast development and optimized production builds&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The core functionality is implemented in a single Alpine.js component. The controls are wrapped in a form and when that form changes, there is a debounced function that updates the URL. The rest of the code relies on the &lt;code&gt;x-model&lt;&#x2F;code&gt; properties on the inputs to trigger the color validation.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;The updated a11y accessibility checker provides a powerful yet simple tool for ensuring your web designs meet accessibility standards. Whether you&#x27;re a designer choosing color palettes or a developer implementing UI components, this tool helps you create more inclusive digital experiences.&lt;&#x2F;p&gt;
+&lt;p&gt;Try it out: &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;james2doyle.github.io&#x2F;a11y&#x2F;&quot;&gt;https:&#x2F;&#x2F;james2doyle.github.io&#x2F;a11y&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The source code is available on GitHub: &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;james2doyle&#x2F;a11y&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;james2doyle&#x2F;a11y&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Alpine.js Playground</title>
         <published>2025-12-24T00:00:00+00:00</published>
