@@ -1,0 +1,31 @@
+{# {{ video(title="Demo video", src="/videos/demo.mp4", caption="", type="", poster="") }} #}
+<figure>
+  {%- if caption -%}
+  <figcaption class="center">
+    <p><small><em>{{ caption }}</em></small></p>
+  </figcaption>
+  {%- elif title -%}
+  <figcaption class="center">
+    <p><small><em>{{ caption }}</em></small></p>
+  </figcaption>
+  {%- endif -%}
+  <video width="670" controls autoplay loop muted playsinline preload="auto"
+    style="content-visibility: auto; contain-intrinsic-size: auto 450px;"
+    {%- if title -%}title="{{ title }}"{%- endif -%}
+    {%- if poster -%}
+      poster="{{ poster }}"
+    {%- endif -%}
+    >
+    <source
+      src="{{ src }}"
+      {%- if type -%}
+        type="{{ type }}"
+      {%- elif src is matching("[.](mp4)$") -%}
+        type="video/mp4"
+      {%- elif src is matching("[.](webm)$") -%}
+        type="video/webm"
+      {%- endif -%}
+       />
+    <p>Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="{{ src }}" download>download it</a> and watch it with your favorite video player!</p>
+  </video>
+</figure>
