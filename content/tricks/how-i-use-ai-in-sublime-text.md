@@ -141,6 +141,8 @@ A small breakdown:
 
 {{ video(title="Sublime SimpleAI demo video 2", src="/videos/simple-ai-demo-2.mp4", caption="Sublime SimpleAI demo using HTML file") }}
 
+{{ video(title="Sublime SimpleAI demo video 3", src="/videos/simple-ai-demo-3.mp4", caption="Sublime SimpleAI demo using React component in Astro") }}
+
 This may seem like a pretty crude way to use AI given all the new tools, but this approach allows me to reduce the distance I have to travel to get an AI answer for something I am in the middle of working on. This also puts the tool in my editor of choice in the way I prefer.
 
 That is not the only way I use AI, though. I have a variety of other tools I use in the CLI rather than directly in the editor.
