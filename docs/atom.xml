@@ -5,8 +5,185 @@
     <link rel="self" type="application/atom+xml" href="https://ohdoylerules.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ohdoylerules.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-12-29T00:00:00+00:00</updated>
+    <updated>2026-01-02T00:00:00+00:00</updated>
     <id>https://ohdoylerules.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>How I use AI in Sublime Text</title>
+        <published>2026-01-02T00:00:00+00:00</published>
+        <updated>2026-01-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              james2doyle@gmail.com (James Doyle)
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ohdoylerules.com/tricks/how-i-use-ai-in-sublime-text/"/>
+        <id>https://ohdoylerules.com/tricks/how-i-use-ai-in-sublime-text/</id>
+        
+        <content type="html" xml:base="https://ohdoylerules.com/tricks/how-i-use-ai-in-sublime-text/">&lt;h2 id=&quot;my-editor-situation&quot;&gt;My Editor Situation&lt;&#x2F;h2&gt;
+&lt;p&gt;In my &lt;a href=&quot;&#x2F;workflows&#x2F;why-i-still-like-sublime-text-in-2025&#x2F;&quot;&gt;previous article about Sublime Text (Why I Still Like Sublime Text In 2025)&lt;&#x2F;a&gt;, I mentioned all the reasons I still like using Sublime Text over any of the other editors I have tried.&lt;&#x2F;p&gt;
+&lt;p&gt;In quick summary, the overall speed&#x2F;performance, snippets, LSP support, project workspaces, keybinding features, build system, and plugin ecosystem&#x2F;interface are still unrivaled (in my opinion) when compared across the board with other editors.&lt;&#x2F;p&gt;
+&lt;p&gt;Before you mention your favourite editor, I have likely tried it—maybe with the exception of Emacs. Even then, I am unlikely to switch to anything other than &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;zed.dev&#x2F;&quot;&gt;&lt;em&gt;maybe&lt;&#x2F;em&gt; Zed&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-i-use-my-ai&quot;&gt;How I Use My AI&lt;&#x2F;h2&gt;
+
+&lt;figure&gt;&lt;figcaption class=&quot;center&quot;&gt;
+    &lt;p&gt;&lt;small&gt;&lt;em&gt;Sublime SimpleAI demo using TOML file&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+  &lt;&#x2F;figcaption&gt;&lt;video width=&quot;670&quot; controls autoplay loop muted playsinline preload=&quot;auto&quot;
+    style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;title=&quot;Sublime SimpleAI demo video 1&quot;&gt;
+    &lt;source
+      src=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-1.mp4&quot;type=&quot;video&#x2F;mp4&quot;&#x2F;&gt;
+    &lt;p&gt;Sorry, your browser doesn&#x27;t support embedded videos, but don&#x27;t worry, you can &lt;a href=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-1.mp4&quot; download&gt;download it&lt;&#x2F;a&gt; and watch it with your favorite video player!&lt;&#x2F;p&gt;
+  &lt;&#x2F;video&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;I have been a professional web developer since about 2012, so I have quite a bit of experience. The way I use AI is likely very different from someone who only has a couple of years of experience or is only familiar with TypeScript and React.&lt;&#x2F;p&gt;
+&lt;p&gt;During my day job, I do use TypeScript and React most of the time. However, I am also using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;astro.build&#x2F;&quot;&gt;Astro&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;alpinejs.dev&#x2F;&quot;&gt;Alpine.js&lt;&#x2F;a&gt;, various CI&#x2F;CD scripts for BitBucket and GitHub Actions, Dockerfiles, raw CSS, and occasionally Twig, Liquid, and PHP via Laravel with and without Livewire.&lt;&#x2F;p&gt;
+&lt;p&gt;Outside work projects, I am regularly writing fish shell, Lua and Luau, Python, and GDScript. Keep that in mind regarding what my needs are from AI tools.&lt;&#x2F;p&gt;
+&lt;p&gt;I typically &lt;strong&gt;do not want or need&lt;&#x2F;strong&gt; inline autocomplete driven by AI. &quot;AI autocomplete&quot; is really not for me. I prefer to converse with an AI about what I am trying to do and iterate on a snippet of code until it is what I want. Then I bring it into my editor. I have various ways of doing this, which I will cover later.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Checking my hand written code, adding comments, writing tests, PR reviews, generating fake data. These are all things I think it is great at. These are chores I struggle to find the time to do myself. So I will delegate those to the robot for 0.01 cents per million tokens.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I am also someone who still reads the docs. Shocking, I know. But I still think the best way to get started in a framework is to read the entire documentation. Yes, read all the official documentation. I recently did this with Astro and it was incredibly helpful.&lt;&#x2F;p&gt;
+&lt;p&gt;It is not a quick endeavour, but by reading about every detail of the tool, I believe it embeds something in your subconscious that helps you in ways you may not realize. But I digress.&lt;&#x2F;p&gt;
+&lt;p&gt;I will usually try to visit the docs for the thing I am working on to see if there is a solution there before I turn to AI to actually generate the code for me. I think this also primes your prompting to make it more specific and hardened against common pitfalls or outdated LLM knowledge.&lt;&#x2F;p&gt;
+&lt;p&gt;On to how I do use it.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;in-the-editor&quot;&gt;In The Editor&lt;&#x2F;h3&gt;
+&lt;p&gt;Given the proliferation of AI tools, it has never been easier to generate plugins for Sublime. I found an existing plugin that I liked, forked it, and made my own changes. I called the plugin &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;james2doyle&#x2F;sublime-simpleai&quot;&gt;sublime-simpleai&lt;&#x2F;a&gt; and it has two main features: &lt;em&gt;&quot;complete the current line&quot;&lt;&#x2F;em&gt; and &lt;em&gt;&quot;prompt with the current file or selection&quot;&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The way this plugin works is that it supports OpenAI-compatible API endpoints and sends one-off requests to them. The plugin itself is very basic.&lt;&#x2F;p&gt;
+&lt;p&gt;The reason it is not pinned to a specific API is that I like to bounce around to multiple LLMs depending on the task. I also like to test out new releases when they come out. This helps me do that.&lt;&#x2F;p&gt;
+&lt;p&gt;One interesting part is that I used Sublime&#x27;s snippet system for managing the two prompts. This is handy because it allows you to use the &lt;code&gt;$TM_&lt;&#x2F;code&gt; variables (editor context variables like line position, file name, project name, etc.) in your prompt.&lt;&#x2F;p&gt;
+&lt;p&gt;I also insert custom variables that are helpful for writing prompts based on the editor context. One such variable is &lt;code&gt;$SYNTAX&lt;&#x2F;code&gt;, which uses the current syntax that the file is set to instead of a flaky mapping of the file extension to a file type. This takes advantage of how you have your editor set up. Imagine working on a &lt;code&gt;.eslintrc&lt;&#x2F;code&gt; file that you have set to &quot;JSON&quot; syntax. That file should be treated as JSON, and the file extension (of which there is none in this case) has nothing to do with the actual source code.&lt;&#x2F;p&gt;
+&lt;p&gt;I even made it so that you can override any of the plugin settings at the project workspace level, including the prompts and which AI service&#x2F;endpoint and model you are using. This is similar to what you would expect a VSCode-style editor to do if the integration was native.&lt;&#x2F;p&gt;
+&lt;p&gt;The two functions work as follows:&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;complete-the-current-line&quot;&gt;&quot;complete the current line&quot;&lt;&#x2F;h4&gt;
+&lt;p&gt;All this does is try to complete the current line given the entire file as context. The prompt is currently:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;You are a helpful $SYNTAX coding assistant.
+&lt;&#x2F;span&gt;&lt;span&gt;Complete the following code to the best of your ability.
+&lt;&#x2F;span&gt;&lt;span&gt;Do not wrap the output with backticks.
+&lt;&#x2F;span&gt;&lt;span&gt;Do not respond with anything other than the code completion.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Here is the snippet that you will complete:
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;```$SYNTAX
+&lt;&#x2F;span&gt;&lt;span&gt;$SOURCE_CODE
+&lt;&#x2F;span&gt;&lt;span&gt;```
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The idea is to generate a stand-alone snippet that replaces the current line or selection. I almost never use this.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;prompt-with-the-current-file-or-selection&quot;&gt;&quot;prompt with the current file or selection&quot;&lt;&#x2F;h4&gt;
+&lt;p&gt;Using the whole file or a selection, this attaches an additional prompt&#x2F;message and opens a new &quot;scratch&quot; view (like a read-only tab&#x2F;buffer) with the response from the AI.&lt;&#x2F;p&gt;
+&lt;p&gt;The prompt for this one is quite a bit more involved, but I have had very consistent results with it and it gives me what I want most of the time.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;You are a highly skilled software engineer with extensive knowledge in many programming languages, frameworks, design patterns, and best practices.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## Communication
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;1. Be conversational but professional.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2. Refer to the user in the second person and yourself in the first person.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;3. Format your responses in markdown. Use backticks to format file, directory, function, and class names.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;4. NEVER lie or make things up.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;5. Refrain from apologizing all the time when results are unexpected. Instead, just try your best to proceed or explain the circumstances to the user without apologizing.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;6. Never end the response with a question as the user cannot respond.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;You are being tasked with providing a response, but you have no ability to use tools or to read or write any aspect of the user&amp;#39;s system (other than any context the user might have provided to you).
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;As such, if you need the user to perform any actions for you, you must request them explicitly. Bias towards giving a response to the best of your ability, and then making requests for the user to take action (e.g. to give you more context) only optionally.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;The one exception to this is if the user references something you don&amp;#39;t know about - for example, the name of a source code file, function, type, or other piece of code that you have no awareness of. In this case, you MUST NOT MAKE SOMETHING UP, or assume you know what that thing is or how it works. Instead, you must ask the user for clarification rather than giving a response.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## Code Block Formatting
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;You can respond with markdown. Only make changes that are necessary to fulfill the prompt, leave everything else as-is. All surrounding $SYNTAX will be preserved.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Start at the indentation level in the original file in the rewritten $SYNTAX. Don&amp;#39;t stop until you&amp;#39;ve rewritten the entire section, even if you have no more changes to make, always write out the whole section with no unnecessary elisions.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## System Information
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Operating System: $OS
+&lt;&#x2F;span&gt;&lt;span&gt;Default Shell: $SHELL
+&lt;&#x2F;span&gt;&lt;span&gt;Project path: $PROJECT_PATH
+&lt;&#x2F;span&gt;&lt;span&gt;File name: $FILE_NAME
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## User&amp;#39;s Custom Instructions
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;The following additional instructions are provided by the user, and should be followed to the best of your ability.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Generate $SYNTAX based on the following prompt:
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;prompt&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;$INSTRUCTIONS
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;prompt&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;They provided the following $SYNTAX code that they wanted you to act on based on that prompt:
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;```$SYNTAX
+&lt;&#x2F;span&gt;&lt;span&gt;$SOURCE_CODE
+&lt;&#x2F;span&gt;&lt;span&gt;```
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;A small breakdown:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;First, we give it a little help with the role.&lt;&#x2F;li&gt;
+&lt;li&gt;Then we tell it how to format the output.&lt;&#x2F;li&gt;
+&lt;li&gt;Attach some system information, which can be helpful for specific languages or advice.&lt;&#x2F;li&gt;
+&lt;li&gt;Give the &lt;code&gt;$INSTRUCTIONS&lt;&#x2F;code&gt;, which is the content the user provided inside a Sublime dialog.&lt;&#x2F;li&gt;
+&lt;li&gt;Attach the selected code or the entire source code.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+&lt;figure&gt;&lt;figcaption class=&quot;center&quot;&gt;
+    &lt;p&gt;&lt;small&gt;&lt;em&gt;Sublime SimpleAI demo using TOML file&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+  &lt;&#x2F;figcaption&gt;&lt;video width=&quot;670&quot; controls autoplay loop muted playsinline preload=&quot;auto&quot;
+    style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;title=&quot;Sublime SimpleAI demo video 1&quot;&gt;
+    &lt;source
+      src=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-1.mp4&quot;type=&quot;video&#x2F;mp4&quot;&#x2F;&gt;
+    &lt;p&gt;Sorry, your browser doesn&#x27;t support embedded videos, but don&#x27;t worry, you can &lt;a href=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-1.mp4&quot; download&gt;download it&lt;&#x2F;a&gt; and watch it with your favorite video player!&lt;&#x2F;p&gt;
+  &lt;&#x2F;video&gt;
+&lt;&#x2F;figure&gt;
+&lt;figure&gt;&lt;figcaption class=&quot;center&quot;&gt;
+    &lt;p&gt;&lt;small&gt;&lt;em&gt;Sublime SimpleAI demo using HTML file&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+  &lt;&#x2F;figcaption&gt;&lt;video width=&quot;670&quot; controls autoplay loop muted playsinline preload=&quot;auto&quot;
+    style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;title=&quot;Sublime SimpleAI demo video 2&quot;&gt;
+    &lt;source
+      src=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-2.mp4&quot;type=&quot;video&#x2F;mp4&quot;&#x2F;&gt;
+    &lt;p&gt;Sorry, your browser doesn&#x27;t support embedded videos, but don&#x27;t worry, you can &lt;a href=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-2.mp4&quot; download&gt;download it&lt;&#x2F;a&gt; and watch it with your favorite video player!&lt;&#x2F;p&gt;
+  &lt;&#x2F;video&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;This may seem like a pretty crude way to use AI given all the new tools, but this approach allows me to reduce the distance I have to travel to get an AI answer for something I am in the middle of working on. This also puts the tool in my editor of choice in the way I prefer.&lt;&#x2F;p&gt;
+&lt;p&gt;That is not the only way I use AI, though. I have a variety of other tools I use in the CLI rather than directly in the editor.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;outside-the-editor&quot;&gt;Outside The Editor&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;cli-tools&quot;&gt;CLI Tools&lt;&#x2F;h4&gt;
+&lt;p&gt;In order of how often I use them:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;charmbracelet&#x2F;crush&quot;&gt;Crush&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;charmbracelet&#x2F;crush&quot;&gt;Crush&lt;&#x2F;a&gt; perhaps the most out of the AI terminal tools. The UI is super slick and I like that it is integrated with LSP and MCP to help provide the best experience when working on code. It seems like other tools are also going this way, as Claude Code is now using LSP more.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mistralai&#x2F;mistral-vibe&quot;&gt;Vibe&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I have been using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mistralai&#x2F;mistral-vibe&quot;&gt;Vibe&lt;&#x2F;a&gt; since it was released. I really like the speed and it seems well-tuned to following tasks.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;opencode.ai&#x2F;&quot;&gt;OpenCode&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;opencode.ai&#x2F;&quot;&gt;OpenCode&lt;&#x2F;a&gt; a little less than I used to, but they are constantly adding new features. I actually &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;opencode.ai&#x2F;zen&quot;&gt;use their Zen service&lt;&#x2F;a&gt; for Crush—which I’m sure is blasphemy if you know the history between the two.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;block.github.io&#x2F;goose&#x2F;&quot;&gt;Goose&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I find &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;block.github.io&#x2F;goose&#x2F;&quot;&gt;Goose&lt;&#x2F;a&gt; a little hit-or-miss, but I do find their &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;block.github.io&#x2F;goose&#x2F;docs&#x2F;guides&#x2F;recipes&#x2F;&quot;&gt;recipe system&lt;&#x2F;a&gt; to be a nice way to create reusable logic. They had this before &quot;skills&quot; and MCP actually took off.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;geminicli.com&#x2F;&quot;&gt;Gemini CLI&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I sometimes lean on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;geminicli.com&#x2F;&quot;&gt;Gemini CLI&lt;&#x2F;a&gt; as they have a generous free tier and some cool capabilities with their &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;geminicli.com&#x2F;extensions&#x2F;&quot;&gt;&quot;extensions&quot; system&lt;&#x2F;a&gt;. Extensions package up different tools (MCP, prompts, etc.) in one package that makes them easy to install and update.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;aider.chat&#x2F;&quot;&gt;Aider&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I used to use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;aider.chat&#x2F;&quot;&gt;Aider&lt;&#x2F;a&gt; quite a bit, but it fell out of favor given the lack of MCP support. There are a few PRs for this, but as of this post, none are in a current (~0.86.0) release.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ll toss an honorable mention to &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;gptme.org&#x2F;&quot;&gt;gptme&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;llm.datasette.io&#x2F;en&#x2F;stable&#x2F;&quot;&gt;Simon Willison&#x27;s LLM tool&lt;&#x2F;a&gt; with the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;simonw&#x2F;llm-cmd&quot;&gt;llm-cmd plugin&lt;&#x2F;a&gt;. I will often use the llm-cmd plugin to help me write more complicated snippets in the terminal.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;other-tools&quot;&gt;Other tools&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;search.brave.com&#x2F;ask&quot;&gt;Brave &quot;Ask&quot;&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I really like the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;search.brave.com&#x2F;ask&quot;&gt;Brave &quot;Ask&quot;&lt;&#x2F;a&gt; search tool. I have used &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.perplexity.ai&#x2F;&quot;&gt;Perplexity&lt;&#x2F;a&gt; and &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.phind.com&#x2F;&quot;&gt;Phind&lt;&#x2F;a&gt; but have since ditched both for Brave. I like the emphasis it puts on search and references; they make it really easy to find the actual links where the results came from.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;chatwise.app&#x2F;&quot;&gt;ChatWise&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;chatwise.app&#x2F;&quot;&gt;ChatWise&lt;&#x2F;a&gt; as my desktop AI&#x2F;LLM application. It has a simple UI with a solid UX.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;gemini.google.com&#x2F;app&quot;&gt;Gemini App Site&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I will often use the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;gemini.google.com&#x2F;app&quot;&gt;Gemini App Site&lt;&#x2F;a&gt; with the &quot;canvas&quot; tool turned on. I like using this to generate single HTML files. I actually used this workflow to write a couple of Sublime plugins as well. Very handy.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;codex-claude-etc&quot;&gt;Codex, Claude, Etc.&lt;&#x2F;h4&gt;
+&lt;p&gt;I have dabbled with Codex and Claude a little bit. But the costs of those models just turn me off. I would prefer to use OpenRouter and then select the models through there but not be tied to a subscription or have to worry about switching tools or accounts. I just switch the model when I need one of the other ones.&lt;&#x2F;p&gt;
+&lt;p&gt;Since I am employed as a company that is a Google Workspace customer, I have access to Gemini Pro. I have found it to be more than enough for my needs when I really need to churn on something. Especially with Gemini 3.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;for-the-skeptics&quot;&gt;For The Skeptics&lt;&#x2F;h2&gt;
+&lt;p&gt;There is clearly a lot of pressure for people to use these AI tools. Maybe it is because they are all losing money and are in a battle for your monthly payment?&lt;&#x2F;p&gt;
+&lt;p&gt;There are clearly cases where it can be a productivity booster. Checking my hand written code, adding comments, writing tests, PR reviews, generating fake data. These are all things I think it is great at. These are chores I struggle to find the time to do myself. So I will delegate those to the robot for 0.01 cents per million tokens. And that is on the high side depending on which you pick.&lt;&#x2F;p&gt;
+&lt;p&gt;So if you have been skeptical or have been struggling to find a place for AI in your workflow, maybe you are just using the wrong tools. The LLM tools are as ubiquitous as NPM packages these days, so I’m sure you can find one that works for you. Or do as I did, and build your own!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>a11y Accessibility Checker (2025 update)</title>
         <published>2025-12-29T00:00:00+00:00</published>
