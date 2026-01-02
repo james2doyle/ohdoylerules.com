@@ -18,7 +18,7 @@ Before you mention your favourite editor, I have likely tried it—maybe with th
 
 ## How I Use My AI
 
-{{ video(title="Sublime SimpleAI demo video 1", src="/videos/simple-ai-demo-1.mp4", caption="Sublime SimpleAI demo using TOML file") }}
+{{ video(title="Sublime SimpleAI demo video 2", src="/videos/simple-ai-demo-2.mp4", caption="Sublime SimpleAI demo using HTML file") }}
 
 I have been a professional web developer since about 2012, so I have quite a bit of experience. The way I use AI is likely very different from someone who only has a couple of years of experience or is only familiar with TypeScript and React.
 
@@ -137,7 +137,7 @@ A small breakdown:
 - Give the `$INSTRUCTIONS`, which is the content the user provided inside a Sublime dialog.
 - Attach the selected code or the entire source code.
 
-{{ video(title="Sublime SimpleAI demo video 1", src="/videos/simple-ai-demo-1.mp4", caption="Sublime SimpleAI demo using TOML file") }}
+{{ video(title="Sublime SimpleAI demo video 1", src="/videos/simple-ai-demo-1.mp4", caption="Sublime SimpleAI demo using webmanifest file") }}
 
 {{ video(title="Sublime SimpleAI demo video 2", src="/videos/simple-ai-demo-2.mp4", caption="Sublime SimpleAI demo using HTML file") }}
 
