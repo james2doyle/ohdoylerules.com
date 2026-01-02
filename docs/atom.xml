@@ -30,12 +30,12 @@
 &lt;h2 id=&quot;how-i-use-my-ai&quot;&gt;How I Use My AI&lt;&#x2F;h2&gt;
 
 &lt;figure&gt;&lt;figcaption class=&quot;center&quot;&gt;
-    &lt;p&gt;&lt;small&gt;&lt;em&gt;Sublime SimpleAI demo using TOML file&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+    &lt;p&gt;&lt;small&gt;&lt;em&gt;Sublime SimpleAI demo using HTML file&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
   &lt;&#x2F;figcaption&gt;&lt;video width=&quot;670&quot; controls autoplay loop muted playsinline preload=&quot;auto&quot;
-    style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;title=&quot;Sublime SimpleAI demo video 1&quot;&gt;
+    style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;title=&quot;Sublime SimpleAI demo video 2&quot;&gt;
     &lt;source
-      src=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-1.mp4&quot;type=&quot;video&#x2F;mp4&quot;&#x2F;&gt;
-    &lt;p&gt;Sorry, your browser doesn&#x27;t support embedded videos, but don&#x27;t worry, you can &lt;a href=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-1.mp4&quot; download&gt;download it&lt;&#x2F;a&gt; and watch it with your favorite video player!&lt;&#x2F;p&gt;
+      src=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-2.mp4&quot;type=&quot;video&#x2F;mp4&quot;&#x2F;&gt;
+    &lt;p&gt;Sorry, your browser doesn&#x27;t support embedded videos, but don&#x27;t worry, you can &lt;a href=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-2.mp4&quot; download&gt;download it&lt;&#x2F;a&gt; and watch it with your favorite video player!&lt;&#x2F;p&gt;
   &lt;&#x2F;video&gt;
 &lt;&#x2F;figure&gt;
 &lt;p&gt;I have been a professional web developer since about 2012, so I have quite a bit of experience. The way I use AI is likely very different from someone who only has a couple of years of experience or is only familiar with TypeScript and React.&lt;&#x2F;p&gt;
@@ -132,7 +132,7 @@
 &lt;&#x2F;ul&gt;
 
 &lt;figure&gt;&lt;figcaption class=&quot;center&quot;&gt;
-    &lt;p&gt;&lt;small&gt;&lt;em&gt;Sublime SimpleAI demo using TOML file&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+    &lt;p&gt;&lt;small&gt;&lt;em&gt;Sublime SimpleAI demo using webmanifest file&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
   &lt;&#x2F;figcaption&gt;&lt;video width=&quot;670&quot; controls autoplay loop muted playsinline preload=&quot;auto&quot;
     style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;title=&quot;Sublime SimpleAI demo video 1&quot;&gt;
     &lt;source
