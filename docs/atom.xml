@@ -149,6 +149,15 @@
     &lt;p&gt;Sorry, your browser doesn&#x27;t support embedded videos, but don&#x27;t worry, you can &lt;a href=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-2.mp4&quot; download&gt;download it&lt;&#x2F;a&gt; and watch it with your favorite video player!&lt;&#x2F;p&gt;
   &lt;&#x2F;video&gt;
 &lt;&#x2F;figure&gt;
+&lt;figure&gt;&lt;figcaption class=&quot;center&quot;&gt;
+    &lt;p&gt;&lt;small&gt;&lt;em&gt;Sublime SimpleAI demo using React component in Astro&lt;&#x2F;em&gt;&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+  &lt;&#x2F;figcaption&gt;&lt;video width=&quot;670&quot; controls autoplay loop muted playsinline preload=&quot;auto&quot;
+    style=&quot;content-visibility: auto; contain-intrinsic-size: auto 450px;&quot;title=&quot;Sublime SimpleAI demo video 3&quot;&gt;
+    &lt;source
+      src=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-3.mp4&quot;type=&quot;video&#x2F;mp4&quot;&#x2F;&gt;
+    &lt;p&gt;Sorry, your browser doesn&#x27;t support embedded videos, but don&#x27;t worry, you can &lt;a href=&quot;&amp;#x2F;videos&amp;#x2F;simple-ai-demo-3.mp4&quot; download&gt;download it&lt;&#x2F;a&gt; and watch it with your favorite video player!&lt;&#x2F;p&gt;
+  &lt;&#x2F;video&gt;
+&lt;&#x2F;figure&gt;
 &lt;p&gt;This may seem like a pretty crude way to use AI given all the new tools, but this approach allows me to reduce the distance I have to travel to get an AI answer for something I am in the middle of working on. This also puts the tool in my editor of choice in the way I prefer.&lt;&#x2F;p&gt;
 &lt;p&gt;That is not the only way I use AI, though. I have a variety of other tools I use in the CLI rather than directly in the editor.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;outside-the-editor&quot;&gt;Outside The Editor&lt;&#x2F;h3&gt;
