@@ -42,7 +42,7 @@ On to how I do use it.
 
 Given the proliferation of AI tools, it has never been easier to generate plugins for Sublime. I found an existing plugin that I liked, forked it, and made my own changes. I called the plugin [sublime-simpleai](https://github.com/james2doyle/sublime-simpleai) and it has two main features: *"complete the current line"* and *"prompt with the current file or selection"*.
 
-The way this plugin works is that it supports OpenAI-compatible API endpoints and sends one-off requests to them. The plugin itself is very basic.
+The way this plugin works is that it supports OpenAI-compatible API endpoints and sends one-off requests to them. The plugin itself is very basic. I have been using [ZenMux (referral)](https://zenmux.ai/invite/8BNVDF) quite a bit lately as it has access to a lot of the recent open models.
 
 The reason it is not pinned to a specific API is that I like to bounce around to multiple LLMs depending on the task. I also like to test out new releases when they come out. This helps me do that.
 
